@@ -32,7 +32,7 @@ website:
       - text: "GitHub"
         href: github.qmd
     logo: images/st47s.png
-    logo-href: https://sds261-sql.netlify.app/
+    logo-href: https://ds002r-fds.netlify.app/
   page-footer:
     left: |
       [{{< fa book >}}](https://hardin47.netlify.app/research/)
