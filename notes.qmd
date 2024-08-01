@@ -1,17 +1,17 @@
 ---
 title: "Class Notes"
 description: |
-  Daily class notes for SDS 261, Data Science, the SQL, Smith College
+  Daily class notes for DS002R, Foundations of Data Science in R
 format: html
 ---
 
 
-Class notes can be found at <a href="http://st47s.com/SDS261/Notes/" target="_blank">http://st47s.com/SDS261/Notes/</a>.
+Class notes can be found at <a href="http://st47s.com/DS002R/Notes/" target="_blank">http://st47s.com/DS002R/Notes/</a>.
 
 <p>   </p>
 
 
 :::{.column-page}
-<iframe src="https://st47s.com/SDS261/Notes/" title="Class Notes for SDS 261" width="1000" height="500" data-external="1"></iframe>
+<iframe src="https://st47s.com/DS002R/Notes/" title="Class Notes for SDS 261" width="1000" height="500" data-external="1"></iframe>
 :::
 

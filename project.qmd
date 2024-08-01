@@ -1,7 +1,7 @@
 ---
 title: "Project"
 description: |
-  Project details for SDS 261, Data Science, the SQL, Smith College
+  Project details for DS002R, Foundations of Data Science in R
 format: html
 ---
 

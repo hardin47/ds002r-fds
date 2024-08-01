@@ -3,8 +3,8 @@ title: "syllabus"
 format: html
 ---
 
-# Data Science, the SQL
-## SDS 261, January 2024
+# Foundations of Data Science in R
+## DS002R, Fall 2024
 
 Class: daily 10-11:30am  
 Lab: daily (not Fridays) 1:30-3pm  
@@ -20,33 +20,26 @@ knitr::include_graphics("images/tidydata_6.jpg")
 
 ## The course 
 
-**Data Science, the SQL** is a continuation of ideas learned in Foundations of Data Science.  The course develops abilities for using SQL databases within the data science pipeline.  The core of the course will focus on the why and the how associated with writing SELECT queries in SQL.  Additional topics will include subqueries, indexes, keys, and regular expressions. Students will learn how to run SQL queries from both the RStudio IDE as well as from a relational database management system client like MySQL Workbench or DuckDB. 
+**Foundations of Data Science in R** is a first course in data science. Data play an increasingly important role in many fields. Being able to understand data and the ethical implications in data driven decisions is paramount to being an informed member of society. As an introduction to data science with R, this course will introduce students to basic data science concepts. Prerequisite: CSCI004 or CSCI005 or CSCI051 or equivalent experience in programming. 
 
 
 :::{.callout-tip icon=false}
 ## Anonymous Feedback
 
-As someone who is, myself, constantly learning and growing in many ways, I welcome your feedback about the course, the classroom dynamics, or anything else you'd like me to know.  I have emailed you a link to an anonymous feedback form.  Please feel free to provide me with feedback at any time!  
+As someone who is, myself, constantly learning and growing in many ways, I welcome your feedback about the course, the classroom dynamics, or anything else you'd like me to know.  There is a link on Canvas to an anonymous feedback form.  Please feel free to provide me with feedback at any time!  
 :::
 
 ## Student Learning Outcomes.
-By the end of the term, students will:
+By the end of the term, students will be able to:
 
-* **Database Concepts**: be able to explain basic database concepts such as tables, records, fields, and relationships.
-
-* **Introduction to SQL**: gain a fundamental understanding of Structured Query Language (SQL), including its history, purpose, and key components.
-
-* **SQL Querying**:
-  - Writing SQL Queries: learn how to write basic SQL queries to retrieve data from a single table.
-  - Filtering and Sorting Data: be able to use SQL to filter and sort data based on specific criteria.
-  - Joining Tables: understand how to perform inner and outer joins to combine data from multiple tables.
-  
-* **Creating Tables**: be able to create a SQL database with multiple tables that link to one another using **DuckDB**.
-
-* **Inserting and Updating Data**: be able to use SQL to insert new records into a table and update existing records. Use SQL to delete records from a table.
-
-* **Basics of Regular Expressions**: understand the fundamental concepts of regular expressions.  Identify and use basic metacharacters for pattern matching to write simple regular expressions for text search and matching.
-
+* scrape, process, and clean data from the web
+* wrangle data in a variety of formats
+* contextualize variation in data
+* construct point and interval estimates using resampling techniques
+* design accurate, clear and appropriate data graphics
+* query large relational databases (using SQL)
+* work fluently with regular expression
+* communicate data-driven decisions
 
 
 ## Inclusion Goals^[adapted from Monica Linden, Brown University]
@@ -72,7 +65,7 @@ I (like many people) am still in the process of learning about diverse perspecti
 :::{.callout-tip icon=false}
 ## Dates
 
-Final Project due Tuesday, January 23rd 
+ 
 :::
 
 #### R links:

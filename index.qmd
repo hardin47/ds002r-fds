@@ -1,7 +1,7 @@
 ---
 title: "Schedule"
 description: |
-  Schedule for SDS 261, Data Science, the SQL, Interterm 2024, Smith College
+  Schedule for DS002R, Foundations of Data Science in R, Fall 2024
 execute: 
   message: false
   warning: false

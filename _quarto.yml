@@ -14,9 +14,9 @@ website:
   repo-url: https://github.com/hardin47/ds002r-fds/
   page-navigation: true
   navbar:
-    title: "Data Science, the SQL"
+    title: "Foundations of Data Science in R"
     description: |
-      SDS 261, Data Science, the SQL, Smith College
+      DS002R, Foundations of Data Science in R, Fall 2024
     background: success
     foreground: secondary
     search: true
@@ -45,7 +45,7 @@ website:
     center:
       - text: |
           <br> © Jo Hardin, 2024 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
-          SDS 261 -- Data Science, the SQL -- Smith College, Northamptom, MA <br>
+          DS002R -- Foundations of Data Science in R -- Pomona College <br>
 license: "CC BY"
 format:
   html:
