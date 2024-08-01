@@ -1,0 +1,742 @@
+
+# Clicker Questions
+
+to go with <b><a href = "https://mdsr-book.github.io/mdsr3e/" target = "_blank">Modern Data Science with R, 3rd edition</a></b> by Baumer, Kaplan, and Horton.  
+
+Many questions taken directly from 
+* <a href = "https://www.w3schools.com/quiztest/quiztest.asp?qtest=SQL" target = "_blank">w3schools SQL quiz</a>.
+* <a href = "https://www.javaguides.net/2023/07/sql-quiz.html" target = "_blank">Java Guides</a>
+* <a href = "https://study.com/academy/practice/quiz-worksheet-sql-foreign-keys.html" target = "_blank">study.com</a>
+
+<!-- the two formats are html and revealjs -->
+
+
+```{=html}
+<style>
+.reveal ol ol {
+   list-style-type: lower-alpha;
+}
+</style>
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# figure options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+  fig.width = 10, fig.asp = 0.618, out.width = "90%",
+  fig.retina = 3, dpi = 300, fig.align = "center"
+)
+
+library(tidyverse)
+
+# Make sure to put a space before and after every slide break "---"
+
+```
+
+---
+
+1. What is a **SQL** server?.[^1]
+   (a) A relational database management system.
+   (b) A software whose main purpose is to store and retrieve data.
+   (c) A highly secure server and does not allow any database file manipulation during execution.
+   (d) All of the above.
+
+[^1]: a. A relational database management system.
+
+
+---
+
+2. When was **SQL** created?[^2]
+   (a) 1960s
+   (b) 1970s
+   (c) 1980s
+   (d) 1990s
+   (e) 2000s
+
+[^2]: b. The first versions were created in the 1970s and called SEQUEL (Structured English QUEry Language).  c. **SQL** came about in particular systems in the 1980s.
+   
+---
+
+3. What type of databases is **SQL** designed for?[^3]
+   (a) hierarchical database management systems.
+   (b) network database management systems.
+   (c) object-oriented database management systems.
+   (d) relational database management systems.
+
+[^3]: d. relational database management systems.
+
+---
+
+4. Which is bigger:[^4]
+   (a) computer's hard drive / storage
+   (b) computer's memory / RAM
+
+[^4]: a. computer's hard drive / storage
+
+---
+
+5. Where are each stored?[^5]
+   (a) **SQL** `tbl` and **R**  `tibble` both in storage
+   (b) **SQL** `tbl` and **R**  `tibble` both in memory
+   (c) **SQL** `tbl` in storage and **R**  `tibble` in memory
+   (d) **SQL** `tbl` in memory and **R**  `tibble` in storage
+   
+[^5]: c. **SQL** `tbl` in storage and **R**  `tibble` in memory
+
+---
+
+6. Which **SQL** clause is used to extract data from a database?[^6]
+   (a) OPEN
+   (b) EXTRACT
+   (c) SELECT
+   (d) GET
+
+[^6]: c. SELECT
+
+---
+
+7. With SQL, how to you retrieve a column named "FirstName" from a table named "Persons"?[^7]
+   (a) `SELECT` Persons.FirstName
+   (b) EXTRACT FIRSTNAME `FROM` Persons
+   (c) `SELECT` FirstName `FROM` Persons
+   (d) `SELECT` "FirstName" `FROM` "Persons"
+
+[^7]: c. `SELECT` FirstName `FROM` Persons
+
+---
+
+8. With SQL, how do you select all the columns from a table named "Persons"?[^8]
+   (a) `SELECT` Persons
+   (b) `SELECT` * `FROM` Persons
+   (c) `SELECT` [all] `FROM` Persons
+   (d) `SELECT` *.Persons
+
+[^8]: b. `SELECT` * `FROM` Persons
+
+---
+
+9. With **SQL**, how can you return the number of records in the "Persons" table?[^9]
+   (a) `SELECT` `COLUMNS(*)` `FROM` Persons
+   (b) `SELECT` `COUNT(*)` `FROM` Persons
+   (c) `SELECT` `NO(*)` `FROM` Persons
+   (d) `SELECT` `LEN(*)` `FROM` Persons
+
+[^9]: b. `SELECT` `COUNT(*)` `FROM` Persons
+
+---
+
+10. With **SQL**, how do you select all the records from a table named "Persons" where the value of the column "FirstName" is "Peter"?[^10]
+   (a) `SELECT` * `FROM` Persons `WHERE` FirstName <> 'Peter'
+   (b) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter'
+   (c) `SELECT` * `FROM` Persons `WHERE` FirstName == 'Peter'
+   (d) `SELECT` [all] `FROM` Persons `WHERE` FirstName `LIKE` 'Peter'
+   (e) `SELECT` [all] `FROM` Persons `WHERE` FirstName = 'Peter'
+   
+[^10]: b. `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' (d. would also work.)
+
+---
+
+11. With SQL, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?[^11]
+   (a) `SELECT` FirstName = 'Peter', LastName = 'Jackson' `FROM` Persons
+   (b) `SELECT` * `FROM` Persons `WHERE` FirstName <> 'Peter' AND LastName <> 'Jackson'
+   (c) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
+   (d) `SELECT` * `FROM` Persons `WHERE` FirstName == 'Peter' AND LastName == 'Jackson'
+
+[^11]: c. `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
+
+---
+
+12. Which operator selects values within a range?[^12]
+    (a) `BEWTEEN`
+    (b) `WITHIN`
+    (c) `RANGE`
+
+[^12]: a. `BEWTEEN`
+
+---
+
+13. With **SQL**, how do you select all the records from a table named "Persons" where the "LastName" is alphabetically between (and including) "Hansen" and "Pettersen"?[^13]
+    (a) `SELECT` LastName > 'Hansen' AND LastName < 'Pettersen' `FROM` Persons
+    (b) `SELECT` * `FROM` Persons `WHERE` LastName BETWEEN 'Hansen' AND 'Pettersen'
+    (c) `SELECT` * `FROM` Persons `WHERE` LastName > 'Hansen' AND LastName < 'Pettersen'
+
+[^13]: b. `SELECT` * `FROM` Persons `WHERE` LastName BETWEEN 'Hansen' AND 'Pettersen'
+
+---
+
+14. Which **SQL** statement returns only different values?[^14]
+    (a) `SELECT` `UNIQUE`
+    (b) `SELECT` `DISTINCT`
+    (c) `SELECT` `DIFFERENT`
+
+[^14]: b. `SELECT` `DISTINCT`
+
+---
+
+15. Which **SQL** keyword is used to sort the result-set?[^15]
+    (a) `ORDER BY`
+    (b) `ORDER`
+    (c) `SORT`
+    (d) `SORT BY`
+ 
+[^15]: a. `ORDER BY`
+
+---
+
+16. With **SQL**, how can you return all the records from a table named "Persons" sorted descending by "FirstName"?[^16]
+    (a) `SELECT` * `FROM` Persons `ORDER` FirstName `DESC`
+    (b) `SELECT` * `FROM` Persons `SORT` 'FirstName' `DESC`
+    (c) `SELECT` * `FROM` Persons `ORDER BY` FirstName `DESC`
+    (d) `SELECT` * `FROM` Persons `SORT BY` 'FirstName' `DESC`
+
+[^16]: c. `SELECT` * `FROM` Persons ORDER BY FirstName DESC
+
+---
+
+17. The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true.[^17]
+    (a) TRUE
+    (b) FALSE 
+
+[^17]: a. TRUE
+
+---
+
+18. In order to `SELECT` the records with foods that are either green or yellow fruit:[^18] 
+    (a) ... `WHERE` type = 'fruit' AND color = 'yellow' OR color = 'green'  
+    (b) ... `WHERE` (type = 'fruit' AND color = 'yellow') OR color = 'green'  
+    (c) ... `WHERE` type = 'fruit' AND (color = 'yellow' OR color = 'green')  
+    (d) ... `WHERE` type = 'fruit' AND color = 'yellow' AND color = 'green'  
+    (e) ... `WHERE` type = 'fruit' AND (color = 'yellow' AND color = 'green') 
+   
+[^18]: c. ... `WHERE` type = 'fruit' AND (color = 'yellow' OR color = 'green') 
+
+---
+
+19. What is the purpose of a `JOIN`?[^19]  
+    (a) it filters the rows returned by the `SELECT` statement.
+    (b) it specifies the columns to be retrieved.
+    (c) it combines rows from two or more tables based on a related column.
+    (d) it orders the results in ascending or descending order.
+
+[^19]: c. it combines rows from two or more tables based on a related column.
+
+---
+
+20. What is the purpose of the `UNION` operator in SQL?[^20]
+    (a) it combines the results of two or more `SELECT` statements. 
+    (b) it performs a pattern match on a string.
+    (c) it retrieves the maximum value in a column.
+    (d) it filters the rows returned by the `SELECT` statement.
+
+[^20]: a. it combines the results of two or more `SELECT` statements.
+
+---
+
+21. What is the purpose of the `INNER JOIN` in SQL?[^21]
+    (a) it retrieves the maximum value in a column.
+    (b) it combines rows from two or more tables based on a related column. 
+    (c) it filters the rows returned by the `SELECT` statement.
+    (d) it performs a pattern match on a string.
+
+[^21]: b. it combines rows from two or more tables based on a related column.
+
+---
+
+22. What is the purpose of the `LEFT JOIN` in SQL?[^22]
+    (a) it combines rows from two or more tables based on a related column.
+    (b) it retrieves the maximum value in a column.
+    (c) it filters the rows returned by the `SELECT` statement. 
+    (d) it performs a pattern match on a string.
+
+[^22]: a. it combines rows from two or more tables based on a related column.
+
+---
+
+23. `RIGHT JOIN` keeps all the rows in ...?[^23]  
+    (a) the first table.
+    (b) the second table.
+    (c) both tables.
+    (d) neither table
+
+[^23]: a. the first table
+
+---
+
+24. Who is removed in a `RIGHT JOIN`?[^24]
+    (a) Mick
+    (b) John
+    (c) Paul
+    (d) Keith
+
+```{r}
+#| echo: false
+#| out-width: 50%
+
+library(cowplot)
+library(ggpubr)
+
+fig1_path <- "images/members.jpg"
+fig2_path <- "images/instruments.jpg"
+
+fig1 <- ggdraw() + draw_image(fig1_path)
+fig2 <- ggdraw() + draw_image(fig2_path)
+
+ggarrange(fig1, fig2, ncol = 2)
+```
+
+[^24]: a. Mick
+
+---
+
+25. Which variable(s) are removed in a `RIGHT JOIN`?[^25]
+    (a) name
+    (b) band
+    (c) plays
+    (d) none of them
+
+```{r}
+#| echo: false
+#| out-width: 50%
+
+library(cowplot)
+library(ggpubr)
+
+fig1_path <- "images/members.jpg"
+fig2_path <- "images/instruments.jpg"
+
+fig1 <- ggdraw() + draw_image(fig1_path)
+fig2 <- ggdraw() + draw_image(fig2_path)
+
+ggarrange(fig1, fig2, ncol = 2)
+```
+
+[^25]: d. none of them (all variables are kept in all joins)
+ 
+
+---
+
+26. In **SQL**, what happens to Mick's "plays" variables in a `FULL JOIN`?[^26]
+    (a) Mick is removed
+    (b) guitar
+    (c) bass
+    (d) NA
+    (e) `NULL`
+
+```{r}
+#| echo: false
+#| out-width: 40%
+
+library(cowplot)
+library(ggpubr)
+
+fig1_path <- "images/members.jpg"
+fig2_path <- "images/instruments.jpg"
+
+fig1 <- ggdraw() + draw_image(fig1_path)
+fig2 <- ggdraw() + draw_image(fig2_path)
+
+ggarrange(fig1, fig2, ncol = 2)
+```
+
+[^26]: e. `NULL` (it would be NA in **R**)
+ 
+
+---
+
+<!--look at exercises: https://github.com/STAT545-UBC/STAT545-UBC-original-website/blob/master/block022_regular-expression.md
+
+which reg expr matches all countries with "ee"
+
+countries with "i" or "t" and ends in "land"; has "ee"; continents with "o"
+
+can use flights data for cities with particular names-->
+
+
+27. `grep("q[^u]", very.large.word.list)` would not match which of the following?[^27]
+    (a) Iraqi
+    (b) Iraqian
+    (c) Iraq
+    (d) zaqqun (tree that "springs out of the bottom of Hell", in the Quran)
+    (e) Qantas (the Australian airline)
+    
+[^27]: neither c. nor e. would match. Inside the bracket "[^u]" matches anything other than a "u", but it has to match something.
+
+---
+
+28. Which of the following regex would match to both "grey" and "gray"?[^28]
+    (a) "gr[ae]y"
+    (b) "gr(a|e)y"
+    (c) "gray | grey"
+    (d) "gr[a|e]y"
+    (e) some / all of the above -- which ones?
+
+[^28]: e. all of the above. Inside a character class `|` is a normal character and would therefore match "grey" and "gray" and "gr|y".  Which is not what we want, but would work to match both "grey" and "gray".
+
+
+---
+
+29. What will the result be for the following code?[^29]  
+    (a) 10
+    (b) 1
+    (c) 0
+    (d) NA
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("My dog is 10 years old", "\\d")
+``` 
+    
+[^29]: b. 1 (because `\d` matches only a single digit).
+
+
+---
+
+
+30. What will the result be for the following code?[^30]  
+    (a) 10
+    (b) 1
+    (c) 0
+    (d) NA
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("My dog is 10 years old", "\\d+")
+``` 
+    
+[^30]: a. 10 (because `\d+` matches at least one digit).
+
+
+---
+
+31. What will the result be for the following code?[^31]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".")
+```
+
+[^31]: d. E (because `.` matches anything, and returns only a single character).
+
+---
+
+32. What will the result be for the following code?[^32]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".+")
+```
+
+[^32]: b. Episode 2: The pie whisperer. (4 August 2015) (because `.` matches anything, and with the `+` it returns multiple characters).
+
+---
+
+33. What will the result be for the following code?[^33]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", "\\.")
+```
+
+[^33]: a. . (because `\.` matches the period, .).
+
+---
+
+34. How can I pull out just the numerical information in \$47?[^34]
+    (a) "(?<=\\$)\\d"
+    (b) "(?<=\\$)\\d+"
+    (c) "\\d(?=\\$)"
+    (d) "\\d+(?=\\$)"
+
+```{r}
+#| eval: false
+#| echo: false
+str_extract("$47", "(?<=\\$)\\d+")
+```
+
+[^34]: b. "(?<=\\$)\\d+"
+
+
+---
+
+35. You want to know all the types of pies in the text strings.  They are written as, for example "apple pie".[^35]
+    (a) "\\w+(?!pie)"
+    (b) "\\w+(?! pie)"
+    (c) "\\w+(?=pie)"
+    (d) "\\w+(?= pie)"
+
+```{r}
+#| eval: false
+#| echo: false
+str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?= pie)")
+```
+
+[^35]: d. "\\w+(?= pie)"
+
+---
+
+```{r}
+#| echo: true
+str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?= pie)")
+```
+
+```{r}
+#| echo: true
+str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
+```
+
+---
+
+36. We say that lookarounds are "zero-lenghth assertions".  What does that mean?[^36]
+    (a) we return the string in the lookaround
+    (b) we replace the string in the lookaround
+    (c) we return the string at the lookaround
+    (d) we replace the string at the lookaround
+
+[^36]: c. we return the string at the lookaround
+
+
+<!--
+---
+
+37. In **SQL**, which operator is used to search for a specified pattern in a column?[^57]
+    (a) `LIKE`
+    (b) `GET`
+    (c) `FROM`
+
+[^37]: a. `LIKE` (We didn't cover, and **SQL** has it's own characters, for example `%` for wildcard.)-->
+
+---
+
+37. With **SQL**, how do you select all the records from a table named "Persons" where the value of the column "FirstName" starts with an "a"?[^37]
+    (a) `SELECT` * `FROM` Persons `WHERE` FirstName = 'a.*'
+    (b) `SELECT` * `FROM` Persons `WHERE` FirstName = 'a*'
+    (c) `SELECT` * `FROM` Persons `WHERE` FirstName `REGEXP` 'a.*'
+    (d) `SELECT` * `FROM` Persons `WHERE` FirstName `REGEXP` 'a*'
+    (e) `SELECT` * `FROM` Persons `WHERE` FirstName `REGEXP` '(?i)a.*'
+
+[^37]: e. `SELECT` * `FROM` Persons `WHERE` FirstName `REGEXP` '(?i)a.*' (n.b., the `LIKE` function will give you a similar result, with `%` as a wildcard: SELECT` * `FROM` Persons `WHERE` FirstName LIKE 'a%')
+
+---
+
+38. What is the main way to absolutely recognize a record within a database?[^38]
+    (a) Foreign key
+    (b) Primary key
+    (c) Unique key
+    (d) Natural key
+    (e) Alternate key
+
+[^38]: b. Primary key
+
+---
+
+39. What does a foreign key do?[^39]
+    (a) Directly identifies another table
+    (b) Directly identifies another column
+    (c) Gives access to another entire database
+    (d) Translates the database into another language
+    
+[^39]: b. Directly identifies another column
+
+---
+
+40. Which of these would likely be used as a foreign key between a table on student enrollment and student grades?[^40]
+    (a) grades
+    (b) tuition
+    (c) student\_name
+    (d) student\_hometown
+    
+[^40]: c. student\_name
+
+---
+
+41. For the student records (for two tables: enrollment and grades), which is the most likely combination?[^41]
+    (a) name as primary key to both 
+    (b) name as foreign to both
+    (c) name as primary in enrollment and foreign in grades
+    (d) name as foreign in enrollment and primary in grades
+    
+[^41]: c. name as primary in enrollment and foreign in grades (the primary key must uniquely identify the records, and name is unlikely to do that in a grades database.)
+
+---
+
+42. Which **SQL** statement is used to create a database table called 'Customers'?[^42]
+    (a) `CREATE DATABASE TAB` Customers
+    (b) `CREATE DATABASE` Customers
+    (c) `CREATE DATABASE TABLE` Customers
+    (d) `CREATE TABLE` Customers
+    (e) `CREATE DB` Customers
+
+[^42]: d. `CREATE TABLE` Customers
+
+---
+
+43. Which **SQL** statement revises data in a database?[^43]
+    (a) `SAVE AS` 
+    (b) `MODIFY`
+    (c) `SAVE`
+    (d) `UPDATE`
+
+[^43]: d. `UPDATE`
+
+---
+
+44. Which **SQL** statement takes out data from a database?[^44]
+    (a) `REMOVE`
+    (b) `DELETE`
+    (c) `COLLAPSE`
+
+[^44]: b. `DELETE`
+
+---
+
+45. The `NOT NULL` constraint enforces a column to not accept `NULL` values.[^45]
+    (a) FALSE
+    (b) TRUE
+
+[^45]: b. TRUE
+
+---
+
+46. Which **SQL** statement places new data in a database?[^46]
+    (a) `ADD RECORD`
+    (b) `INSERT INTO`
+    (c) `ADD NEW`
+    (d) `INSERT NEW` 
+ 
+[^46]: b. `INSERT INTO`
+
+---
+
+47. With **SQL**, how can you insert a new record into the "Persons" table?[^47]
+    (a) `INSERT` `INTO` Persons VALUES ('Jimmy', 'Jackson')
+    (b) `INSERT` ('Jimmy', 'Jacskon') `INTO` Persons
+    (c) `INSERT` VALUES ('Jimmy', 'Jackson') `INTO` Persons
+
+[^47]: a. `INSERT` `INTO` Persons VALUES ('Jimmy', 'Jackson')
+
+---
+
+48. With **SQL**, how can you insert "Olsen" as the "LastName" in the "Persons" table?[^48]
+    (a) `INSERT` `INTO` Persons (LastName) VALUES ('Olsen')
+    (b) `INSERT` `INTO` Persons ('Olsen) `INTO` LastName
+    (c) `INSERT` ('Olsen') `INTO` Persons (LastName)
+ 
+[^48]: a. `INSERT` `INTO` Persons (LastName) VALUES ('Olsen')
+
+---
+
+49. How can you change "Hansen" into "Nilsen" in the "LastName" column in the Persons table?[^49]
+    (a) `MODIFY` Persons `SET` LastName='Nilsen' `WHERE` LastName='Hansen'
+    (b) `UPDATE` Persons `SET` LastName='Hansen' `INTO` LastName='Nilsen'
+    (c) `MODIFY` Persons `SET` LastName='Hansen' `INTO` LastName='Nilsen'
+    (d) `UPDATE` Persons `SET` LastName='Nilsen' `WHERE` LastName='Hansen' 
+
+[^49]: d. `UPDATE` Persons `SET` LastName='Nilsen' `WHERE` LastName='Hansen' 
+
+---
+
+50. With **SQL**, how can you delete the records where the "FirstName" is "Peter" in the Persons Table?[^50]
+    (a) `DELETE` `FROM` Persons `WHERE` FirstName='Peter'
+    (b) `DELETE` FirstName='Peter' `FROM` Persons
+    (c) `DELETE ROW` FirstName='Peter' `FROM` Persons
+
+[^50]: a. `DELETE` `FROM` Persons `WHERE` FirstName='Peter'
+
+---
+
+51. In the `flights` table, the following `INDEX`es exist: `Tailnum`, `Year`, and `Date`.  How many rows would be looked through if the `WHERE` filter was on `month` only?[^51]
+    (a) more than 6.3 million
+    (b) less than 6.3 million
+    (c) more than 700,000
+    (d) less than 700,000
+    
+[^51]: a. more than 6.3 million. Because there is no index on month (and we don't have a year to incorporate month into the Date index), we need to look through all 48 million rows.
+
+---
+
+52. Which has a larger cardinality, `Tailnum` or `Year`?[^52]
+    (a) `Tailnum`
+    (b) `Year`
+    (c) they have the same cardinality
+    (d) neither has a cardinality
+
+[^52]: a. `Tailnum`. The cardinality is the number of unique values, and there are many more unique planes than years.
+
+
+---
+
+53. Which index takes up more storage space, the one on `Tailnum` or the one on `Year`?[^53]
+    (a) `Tailnum`
+    (b) `Year`
+    (c) they take up the same space
+    (d) you can't index on either variable
+
+[^53]: a. `Tailnum`. Because the cardinality is higher, it will take up much more space in the index.
+
+---
+
+54. Which index is more effective at reducing querying time, the one on `Tailnum` or the one on `Year`?[^54]
+    (a) `Tailnum`
+    (b) `Year`
+    (c) the queries would be the same
+    (d) you can't query on either variable
+    
+[^54]: a. `Tailnum`. Because the index is more complete, it will make the querying more efficient.
+
+---
+
+55. What does the **R** function `ifelse(a, b, c)` do?[^55]
+    (a) a = TRUE option, b = FALSE option, c = question
+    (b) a = FALSE option, b = TRUE option, c = question
+    (c) a = question, b = TRUE option, c = FALSE option
+    (d) a = question, b = FALSE option, c = TRUE option
+
+[^55]: c. a = question, b = TRUE option, c = FALSE option
+
+---
+
+56. What does the **R** function `case_when()` do?[^56]
+    (a) renames a variable
+    (b) changes the data type of a variable
+    (c) partitions a numeric variable
+    (d) creates a new variable by re-coding an original variable
+
+[^56]: d. creates a new variable by re-coding an original variable
+
+---
+
+57. What does the **R** function `cut()` do?[^57]
+    (a) renames a variable
+    (b) changes the data type of a variable
+    (c) partitions a numeric variable
+    (d) creates a new variable by re-coding an original variable
+
+[^57]: c. partitions a numeric variable
+
+---
+
+
+
+
+

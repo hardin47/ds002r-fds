@@ -1,0 +1,228 @@
+---
+title: "Lab 5 - creating databases"
+author: "your name goes here"
+date: "due 10am Wednesday, January 17, 2024"
+format: 
+  unilur-html: default
+  unilur-html+solution:
+    output-file: lab5_creating_db_sds261_j24_sol.html
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| unilur-solution: true
+
+library(tidyverse)
+library(DBI)
+library(RMariaDB)
+library(dbplyr)
+library(mdsr)
+```
+
+Today's lab will provide practice working with creating **SQL** databases using **DuckDB**.  
+
+The goals for lab 5 include:
+
+* copying data into a local folder.
+* identifying keys for identifying unique records.
+* practice with the loading steps: `USE`, `CREATE TABLE`, and `COPY`.
+* running **SQL** queries on the existing data to confirm correct loading.
+* `CREATE INDEX` for a variable of interest.
+
+
+## Advice for turning in the assignment
+
+* Be sure to indicate (in the .qmd file) which problem is being answered with which code.  A sentence or two with each response goes a long way toward your understanding!
+
+* save the .Rproj file somewhere you can find it.  Don't keep everything in your downloads folder.  Maybe make a folder called `SDS261` or something.  That folder could live on your Desktop.  Or maybe in your Dropbox.  
+
+* The **.qmd** document should be saved in the **R** Project as `lab5-sds261-yourlastname-yourfirstname.qmd`. 
+
+* Set up a connection to a database of your naming using **DuckDB**.
+
+```{r}
+#| eval: false
+
+con_college <- DBI::dbConnect(duckdb::duckdb(),
+                             dbdir = "you_name_the_db")
+```
+
+
+##  Assignment
+
+```{r}
+#| unilur-solution: true
+
+con_college <- DBI::dbConnect(duckdb::duckdb(),
+                             dbdir = "collegeDB")
+```
+
+The data we will work with today is on college tuition, pay, and diversity.  The original data source is the US Department of Education, but it has been compiled as part of <a href = "https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-03-10" target = "_blank">TidyTuesday on March 10, 2020</a>.  Tuition and fees are for 2018-19.  Diversity is for 2014.
+
+1. Download the data onto your own computer.  In the interest of time, let's only use three tables: `tuition_cost` and `salary_potential` and `diversity_school`.
+
+```{r}
+#| unilur-solution: true
+tuition_cost <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/tuition_cost.csv')
+
+salary_potential <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/salary_potential.csv')
+
+diversity_school <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-10/diversity_school.csv')
+
+```
+
+2.  Follow the first two steps in the notes: `USE` and `DROP TABLE`.
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+USE collegeDB;
+```
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+DROP TABLE IF EXISTS salary;
+```
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+DROP TABLE IF EXISTS diversity;
+```
+
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+DROP TABLE IF EXISTS tuition;
+```
+
+
+3. For each of the three tables, in the `CREATE TABLE` operation, carefully define variable types and identify any key variables.  Unfortunately, `FOREIGN KEY`s don't work here because there is not referential integrity across the tables.
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+CREATE TABLE tuition (
+  name VARCHAR(255) NOT NULL DEFAULT '',
+  state VARCHAR(255),
+  state_code VARCHAR(255),
+  type VARCHAR(255),
+  degree_length VARCHAR(255),
+  room_and_board VARCHAR(255),
+  in_state_tuition DOUBLE,
+  in_state_total DOUBLE,
+  out_of_state_tuition DOUBLE,
+  out_of_state_total DOUBLE,
+  PRIMARY KEY (name, state)
+);
+```
+
+
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+CREATE TABLE salary (
+  rank DOUBLE,
+  name VARCHAR(255),
+  state_name VARCHAR(255),
+  early_career_pay DOUBLE,
+  mid_career_pay DOUBLE,
+  make_world_better_percent VARCHAR(255),
+  stem_percent DOUBLE
+);
+```
+
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+CREATE TABLE diversity (
+  name VARCHAR(255),
+  total_enrollment DOUBLE,
+  state VARCHAR(255),
+  category VARCHAR(255),
+  enrollment DOUBLE
+);
+```
+
+
+4. Use `COPY` to load the data from your computer.  (Hint: if there is an `NA` value, **SQL** doesn't know that it is actually `NULL` and wants the variable to be loaded as a character string.)
+
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+COPY tuition FROM 'data/tuition_cost.csv' HEADER;
+```
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+COPY salary FROM 'data/salary_potential.csv' HEADER;
+```
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+COPY diversity FROM 'data/diversity_school.csv' HEADER;
+```
+
+
+
+5. Use `SELECT *` (with a `LIMIT`!) to make sure all three tables loaded correctly.
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+SELECT * FROM tuition LIMIT 10;
+```
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+SELECT * FROM salary LIMIT 10;
+```
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+SELECT * FROM diversity LIMIT 10;
+```
+
+6. Add an `INDEX` to the `tuition` table on `state`.  We won't discuss until Thursday, but `state` is better than `state_code` because `state` allows you to join with other tables.  `state` is better than `type` or `degree_length` because `state` has a much higher cardinality.
+
+```{sql}
+#| connection: con_college
+#| unilur-solution: true
+
+CREATE INDEX state_idx ON tuition (state);
+```
+
+
+## Disconnect from the server
+
+
+```{r}
+#| echo: false
+
+dbDisconnect(con_college, shutdown = TRUE)
+```
+

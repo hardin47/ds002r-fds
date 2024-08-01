@@ -1,0 +1,102 @@
+/*-- scss:defaults --*/
+
+// import google fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+
+html {
+  /*-- Main font sizes --*/
+  line-height: 1.65;
+  font-size: 10em;
+  title-size:      50px;
+  body-size:       1.06rem;
+  code-size:       14px;
+  aside-size:      12px;
+  fig-cap-size:    13px;
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  heading-font:     'Quicksand';
+  mono-font:        'Quicksand';
+  body-font:        'Quicksand';
+  navbar-font:      'Quicksand';  /* websites + blogs only */
+}
+
+// fonts
+$font-family-sans-serif: "Quicksand" !default;
+$headings-font-family: "Quicksand" !default;
+
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f7f7f9 !default;
+$gray-300: #eceeef !default;
+$gray-400: #ced4da !default;
+$gray-500: #aaa !default;
+$gray-600: #888 !default;
+$gray-700: #5a5a5a !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #1700ff !default;
+$brickred:  #220D07 !default; 
+$lightred:  #BC4524 !default; 
+$grey:    #676565 !default; 
+$red:     #BB4625 !default; 
+$orange:  #d35836 !default; 
+$yellow:  #FAF9F0 !default; 
+$green:   #F0EDD1 !default; 
+$peach:    #E07A5F !default; 
+$lightwhite:    #F5F3E0 !default; 
+
+$primary:       $peach !default;
+$secondary:     $orange !default;
+$success:       $green !default;
+$info:          $lightwhite !default;
+$warning:       $yellow !default;
+$danger:        $lightred !default;
+$light:         $gray-100 !default;
+$dark:          $black !default;
+
+/*-- scss:rules --*/
+
+// Navbar
+
+a.navbar-brand:hover {
+  color: $black !important;
+} 
+nav ul li a:hover {
+  color: $black !important;
+}
+a:hover {
+  color: $black !important;
+}
+
+
+footer.footer .nav-footer,
+nav{
+  background-color: $green !important;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+
+/* Footnotes --------------------------------------------- */
+
+.popover {
+  max-width: min(100vw, 32rem);
+  font-size: 0.9rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.popover-body {
+  padding: 0.75rem;
+}
+.popover-body p:last-child {
+  margin-bottom: 0;
+}
+
+a.footnote-ref {
+  cursor: pointer;
+}

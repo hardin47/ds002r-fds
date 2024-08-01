@@ -1,0 +1,141 @@
+---
+title: "syllabus"
+format: html
+---
+
+# Data Science, the SQL
+## SDS 261, January 2024
+
+Class: daily 10-11:30am  
+Lab: daily (not Fridays) 1:30-3pm  
+Office hours: daily 11:30-1:30pm 
+
+```{r}
+#| fig.cap: "Artwork by @allison_horst."
+#| fig.alt: A group of personified tables getting together and seemingly very happy to see each other.
+#| preview: TRUE
+#| echo: FALSE
+knitr::include_graphics("images/tidydata_6.jpg")
+```
+
+## The course 
+
+**Data Science, the SQL** is a continuation of ideas learned in Foundations of Data Science.  The course develops abilities for using SQL databases within the data science pipeline.  The core of the course will focus on the why and the how associated with writing SELECT queries in SQL.  Additional topics will include subqueries, indexes, keys, and regular expressions. Students will learn how to run SQL queries from both the RStudio IDE as well as from a relational database management system client like MySQL Workbench or DuckDB. 
+
+
+:::{.callout-tip icon=false}
+## Anonymous Feedback
+
+As someone who is, myself, constantly learning and growing in many ways, I welcome your feedback about the course, the classroom dynamics, or anything else you'd like me to know.  I have emailed you a link to an anonymous feedback form.  Please feel free to provide me with feedback at any time!  
+:::
+
+## Student Learning Outcomes.
+By the end of the term, students will:
+
+* **Database Concepts**: be able to explain basic database concepts such as tables, records, fields, and relationships.
+
+* **Introduction to SQL**: gain a fundamental understanding of Structured Query Language (SQL), including its history, purpose, and key components.
+
+* **SQL Querying**:
+  - Writing SQL Queries: learn how to write basic SQL queries to retrieve data from a single table.
+  - Filtering and Sorting Data: be able to use SQL to filter and sort data based on specific criteria.
+  - Joining Tables: understand how to perform inner and outer joins to combine data from multiple tables.
+  
+* **Creating Tables**: be able to create a SQL database with multiple tables that link to one another using **DuckDB**.
+
+* **Inserting and Updating Data**: be able to use SQL to insert new records into a table and update existing records. Use SQL to delete records from a table.
+
+* **Basics of Regular Expressions**: understand the fundamental concepts of regular expressions.  Identify and use basic metacharacters for pattern matching to write simple regular expressions for text search and matching.
+
+
+
+## Inclusion Goals^[adapted from Monica Linden, Brown University]
+
+In an ideal world, science would be objective. However, much of science is subjective and is historically built on a small subset of privileged voices. In this class, we will make an effort to recognize how science (and data science!) has played a role in both understanding diversity as well as in promoting systems of power and privilege. I acknowledge that there may be both overt and covert biases in the material due to the lens with which it was written, even though the material is primarily of a scientific nature. Integrating a diverse set of experiences is important for a more comprehensive understanding of science. I would like to discuss issues of diversity in statistics as part of the course from time to time.
+
+Please contact me if you have any suggestions to improve the quality of the course materials.
+
+Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:
+
+* If you have a name and/or set of pronouns that differ from those that appear in your official records, please let me know!
+* If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me.  You can also relay information to me via your mentors.  I want to be a resource for you. 
+
+I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.  As a participant in course discussions, you should also strive to honor the diversity of your classmates.
+
+## Technical Details
+
+##### Text: 
+<b> <a href = "https://mdsr-book.github.io/mdsr3e/" target = "_blank">Modern Data Science with R, 3rd edition</a></b> by Baumer, Kaplan, and Horton.
+
+<b><a href = "https://r4ds.hadley.nz/" target = "_blank">R for Data Science, 2nd edition</a></b> by Wickham, Çetinkaya-Rundel, and Grolemund.
+
+:::{.callout-tip icon=false}
+## Dates
+
+Final Project due Tuesday, January 23rd 
+:::
+
+#### R links:
+
+* <a href = "http://cran.r-project.org/web/packages/mosaic/vignettes/V1MinimalR.pdf" target = "_blank">Enough R</a>
+* <a href = "https://pages.pomona.edu/~jsh04747/courses/RTutorial.pdf" target = "_blank">R tutorial</a>
+* Great tutorials through the <a href = "https://ourcodingclub.github.io/tutorials.html" target = "_blank">Coding Club</a>
+* A true beginner's <a href = "https://spielmanlab.github.io/introverse/index.html" target = "_blank">introduction to the tidyverse</a>, the **introverse**.
+* <a href="https://education.rstudio.com/learn/" target="_blank">for a good start</a> to R in general
+* A fantastic <a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/" target="_blank">ggplot2 tutorial</a>
+* Great tutorials through the <a href="https://ourcodingclub.github.io/tutorials/" target="_blank">Coding Club</a>
+* <a href="http://www.rseek.org/" target="_blank">Google for R</a>
+* some <a href = "http://st47s.com/Math150/Notes/rfunc.html" target="_blank">R ideas</a> that I wrote up 
+* Incredibly helpful <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
+   * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf" target="_blank">data wrangling</a>
+   * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf" target="_blank">ggplot2</a>
+   * <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf" target="_blank">R Markdown</a>
+   * <a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf" target="_blank">RStudio IDE</a>
+
+#### SQL links
+
+* W3 schools <a href = "https://www.w3schools.com/sql/sql_intro.asp" target = "_blank">Introduction to SQL</a>
+* W3 schools <a href = "https://www.w3resource.com/sql-exercises/" target = "_blank">SQL Exercises, Practice, Solution</a>
+* <a href = "https://cran.r-project.org/web/views/Databases.html" target = "_blank">R packages</a> for working with databases
+* <a href = "https://dbplyr.tidyverse.org/articles/dbplyr.html" target = "_blank">Introduction to `dbplyr`</a>
+
+#### Regular expression links
+
+* <a href = "https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html" target = "_blank">**stringr** vignette</a>
+* <a href = "https://stringr.tidyverse.org/" target = "_blank">**stringr** package</a>
+* Jenny Bryan et al.'s <a href = "https://stat545.com/character-vectors.html" target = "_blank">STAT 545 notes</a>
+* Hadley Wickham's book <a href = "https://r4ds.had.co.nz/strings.html" target = "_blank">R for Data Science</a>
+* <a href = "http://regexpal.com/" target = "_blank">regexpal</a>   
+* <a href = "http://www.regexr.com/" target = "_blank">RegExr</a>
+* <a href = "https://regexone.com/" target = "_balnk">RegexOne</a>
+
+
+
+
+
+#### Using R (through the RStudio IDE)
+
+R will be used for many assignments.
+You can use R on the Smith server: <a href = "https://rstudio.smith.edu/" target = "_blank">https://rstudio.smith.edu/</a>.
+
+Alternatively, feel free to download both R and RStudio onto your own computer.
+R is freely available at <a href = "http://www.r-project.org/" target = "_blank">http://www.r-project.org/</a>; RStudio is also free and allows you to turn in all R assignments using Quarto <a href = "http://rstudio.org/" target = "_blank">http://rstudio.org/</a>.
+
+#### GitHub
+
+Assignments will be turned in using GitHub.  See <a href = "https://sds261-sql.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website.
+
+## Important Features
+
+#### Prerequisites:
+
+The prerequisite for this class is SDS 192, Introduction to Data Science.
+
+#### Labs:
+
+Labs will take place on most days with the lab write-up due just before the following class period. See <a href = "https://sds261-sql.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website for how to turn in assignments.
+
+#### Grading:
+
+The class expectations are that you show up for class and labs and turn in a final project. A successful final project is required to pass the class.  Additionally, you should not miss more than 1 or 2 classes nor should you miss turning in more than 1 or 2 labs.
+

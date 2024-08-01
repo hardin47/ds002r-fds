@@ -1,0 +1,57 @@
+name: "ds002r-fds"
+
+project:
+  type: website
+  output-dir: _site
+  resources: 
+    - "handout/*"
+  
+website:
+  title: "Foundations of Data Science in R"
+  image: "images/st47s.png"
+  favicon: "images/favicon.ico"
+  site-url: https://ds002r-fds.netlify.app/
+  repo-url: https://github.com/hardin47/ds002r-fds/
+  page-navigation: true
+  navbar:
+    title: "Data Science, the SQL"
+    description: |
+      SDS 261, Data Science, the SQL, Smith College
+    background: success
+    foreground: secondary
+    search: true
+    right:
+      - text: "Syllabus"
+        href: syllabus.qmd
+      - text: "Class Notes"
+        href: notes.qmd
+      - text: "Clicker Q"
+        href: clicker_study.qmd
+      - text: "Final Project"
+        href: project.qmd
+      - text: "GitHub"
+        href: github.qmd
+    logo: images/st47s.png
+    logo-href: https://sds261-sql.netlify.app/
+  page-footer:
+    left: |
+      [{{< fa book >}}](https://hardin47.netlify.app/research/)
+      <a href ="https://hardin47.netlify.app/resume.pdf" target = "_blank"><i class="fa-solid fa-bookmark"></i></a>
+      <a href="mailto:jo.hardin@pomona.edu" target = "_blank"><i class="fa-solid fa-at"></i></a>
+      <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&hl=en" target = "_blank"><i class="fa-brands fa-google-scholar"></i></a>
+      <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target = "_blank"><i class="fa-brands fa-researchgate"></i></a>    
+      <a href="https://github.com/hardin47" target = "_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target = "_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    center:
+      - text: |
+          <br> © Jo Hardin, 2024 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+          SDS 261 -- Data Science, the SQL -- Smith College, Northamptom, MA <br>
+license: "CC BY"
+format:
+  html:
+    theme: 
+      - cosmo
+      - colors.scss
+
+
+

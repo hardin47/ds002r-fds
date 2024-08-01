@@ -1,0 +1,611 @@
+---
+title: SQL clauses
+author: "Jo Hardin"
+date: "January 9, 2024"
+format:
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| include: false
+
+source("../_common.R")
+fontawesome::fa_html_dependency()
+```
+
+
+# Today's example
+
+## NYC Taxis
+
+Consider a database of taxi rides from the <a href = "https://en.wikipedia.org/wiki/Yellow_Cab_Company" target = "_blank">Yellow Cab</a> company in NYC in March of 2014.
+
+```{r}
+#| label: fig-nyc-taxis
+#| out.width: 90%
+#| fig-cap: "image credit: Mariordo (Mario Roberto Durán Ortiz), CC BY-SA 3.0"
+#| fig-alt: Image of yellow taxis in downtown New York City.
+#| echo: false
+knitr::include_graphics("../images/nyc_taxis.jpg")
+```
+
+## Establishing a SQL connection
+
+```{r}
+con_taxi <- DBI::dbConnect(
+  RMariaDB::MariaDB(),
+  dbname = "nyctaxi",
+  host = Sys.getenv("MDSR_HOST"),
+  user = Sys.getenv("MDSR_USER"),
+  password = Sys.getenv("MDSR_PWD")
+)
+```
+
+
+## SHOW TABLES
+
+There is only one table in the `nyctaxi` database.  It is called `yellow_old`.
+
+```{sql}
+#| connection: con_taxi
+#| echo: fenced
+
+SHOW TABLES;
+```
+
+## DESCRIBE tables {.scrollable}
+
+Still using a `{sql}` chunk.  The `DESCRIBE` command shows the 18 field names (variables) in the `yellow_old` table.  Some of the variables are characters (`text`) and some are numeric (either `double` or `bigint`)
+
+```{sql}
+#| connection: con_taxi
+
+DESCRIBE yellow_old;
+```
+
+# **SQL** clauses
+
+## Order of clauses
+
+Queries in **SQL** start with the `SELECT` keyword and consist of several clauses, which must be written in the following order:
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+* `SELECT` 
+* `FROM` 
+* `JOIN` 
+* `WHERE` 
+:::
+
+::: {.column width="50%"}
+* `GROUP BY` 
+* `HAVING` 
+* `ORDER BY` 
+* `LIMIT`
+:::
+
+::::
+
+The clauses are similar to data wrangling verbs in **R**.
+
+
+## SELECT ... FROM
+
+* start with a `SELECT`, include a corresponding `FROM` 
+* columns may be specified or `*` returns every column
+
+The shortest **SQL** query is the following `SELECT` command.  Do not run this command!!! The `yellow_old` table has 15 million rows, and we do not want to look at them simultaneously.
+
+```{r}
+#| eval: false
+
+DO NOT RUN:  SELECT * FROM yellow_old;
+```
+
+## SELECT ... FROM {.scrollable}
+
+Much better for big tables:
+
+```{sql}
+#| connection: con_taxi
+
+SELECT * FROM yellow_old LIMIT 0, 14;
+
+```
+
+
+
+## SELECT ... FROM
+
+How do we know how many taxi rides are recorded?  Two different ways of counting the rows:
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*), SUM(1) FROM yellow_old LIMIT 0, 14;
+
+```
+
+Yikes, more than 15 million taxi rides! 
+
+## SELECT ... FROM
+
+What is the length of a taxi ride (in time)?  ... unfortunately, `pickup_datetime` and `dropoff_datetime` are saved as character strings instead of in DateTime format.
+
+
+```{sql}
+#| connection: con_taxi
+
+SELECT
+      pickup_datetime, dropoff_datetime,
+      STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T") AS pickup,
+      STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T") AS dropoff
+   FROM yellow_old
+   LIMIT 0, 10;
+```
+
+
+## SELECT ... FROM
+
+Why can't we find the difference between the new two time variables?
+
+```{sql}
+#| connection: con_taxi
+#| error: true
+
+SELECT
+      pickup_datetime, dropoff_datetime,
+      STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T") AS pickup,
+      STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T") AS dropoff,
+      TIMEDIFF(pickup, dropoff) AS length_time
+   FROM yellow_old
+   LIMIT 0, 10;
+```
+
+
+## SELECT ... FROM {.scrollable}
+
+Solution 1:  two layers of `SELECT`  
+
+   * first `SELECT` (i.e., inside) layer creates the new variables
+   * second `SELECT` (i.e., outside) layer subtracts the two times
+
+```{sql}
+#| connection: con_taxi
+
+SELECT 
+   pickup,
+   dropoff, 
+   TIMEDIFF(pickup, dropoff) AS length_time 
+FROM (
+   SELECT
+      STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T") AS pickup,
+      STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T") AS dropoff
+   FROM yellow_old)
+   AS subquery_table
+LIMIT 0, 20;
+```
+
+## SELECT ... FROM {.scrollable}
+
+Solution 2: apply the `STR_TO_DATE()` function inside the `TIMEDIFF()` function 
+
+```{sql}
+#| connection: con_taxi
+
+SELECT 
+   pickup_datetime,
+   dropoff_datetime, 
+   TIMEDIFF(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T"), 
+            STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T")) AS length_time 
+FROM yellow_old
+LIMIT 0, 20;
+```
+
+
+## Important note:
+
+There is a distinction between clauses that operate on the *variables of the original table* versus those that operate on the *variables of the results set*.  
+
+`pickup_datetime` and `dropoff_datetime` are columns in the *original table* - they are written to disk on the **SQL** server.  
+
+`pickup`, `dropoff`, and `length_time` exist only in the *results set*, which is passed from the server (**SQL** server) to the client (e.g., **RStudio** or **DBeaver**) and is not written to disk.
+
+## SELECT DISTINCT {.scrollable}
+
+Returns only unique rows.
+
+```{sql}
+#| connection: con_taxi
+
+SELECT DISTINCT payment_type
+FROM yellow_old
+LIMIT 0, 20;
+```
+
+```{sql}
+#| connection: con_taxi
+
+SELECT DISTINCT vendor_id, payment_type
+FROM yellow_old
+LIMIT 0, 20;
+```
+In case you are curious: 
+
+* `VTS` is Verifone Transportation Systems and `CMT` is Mobile Knowledge Systems
+Inc.
+* `CRD` is credit card; `CSH` is cash; `NOC` is no charge; `DIS` is dispute
+
+## WHERE
+
+The `WHERE` clause is analogous to the `filter()` function in **dplyr**.  However, keep in mind that there are two **SQL** commands that resemble the **dplyr** `filter()` function. `WHERE` operates on the original data in the table and `HAVING` operates on the result set. 
+
+## WHERE {.scrollable}
+
+What was the fare for those taxi rides where the `tip_amount` was more than $10 and the person used cash?
+
+Note that in **SQL** the equality logical is `=` and in **R** the equality logical is `==`.
+
+```{sql}
+#| connection: con_taxi
+
+SELECT payment_type, fare_amount, tip_amount, total_amount
+FROM yellow_old
+WHERE tip_amount > 10
+   AND payment_type = "CSH"
+LIMIT 0, 10;
+
+```
+
+
+## WHERE
+
+`BETWEEN` can be used to specify a range of values for a numeric value.  `BETWEEN` is inclusive.
+
+```{sql}
+#| connection: con_taxi
+
+SELECT payment_type, fare_amount, tip_amount, total_amount
+FROM yellow_old
+WHERE tip_amount BETWEEN 10 and 12
+   AND payment_type = "CSH"
+LIMIT 0, 10;
+
+```
+
+## WHERE
+
+`IN` is similar to the **dplyr** `%in%` function which specifies distinct values for the variable.
+
+
+```{sql}
+#| connection: con_taxi
+
+SELECT payment_type, fare_amount, tip_amount, total_amount
+FROM yellow_old
+WHERE tip_amount IN (10, 12)
+   AND payment_type = "CSH"
+LIMIT 0, 10;
+
+```
+
+## WHERE
+
+`AND` takes precedent over `OR` in the order of operations, when there are no parentheses.  
+
+```{sql}
+#| connection: con_taxi
+
+SELECT payment_type, fare_amount, tip_amount, total_amount
+FROM yellow_old
+WHERE tip_amount BETWEEN 10 and 12 OR 
+      total_amount BETWEEN 100 and 112 AND 
+      payment_type = "CSH"
+LIMIT 0, 10;
+```
+
+
+## WHERE
+
+Parentheses take precedent over `AND` and `OR`.
+
+```{sql}
+#| connection: con_taxi
+
+SELECT payment_type, fare_amount, tip_amount, total_amount
+FROM yellow_old
+WHERE (tip_amount BETWEEN 10 and 12 OR 
+      total_amount BETWEEN 100 and 112 ) AND 
+      payment_type = "CSH"
+LIMIT 0, 10;
+```
+
+
+## WHERE
+
+`IS NULL` not `= NULL` (because `NULL` indicates *unknown*)
+
+```{sql}
+#| connection: con_taxi
+
+SELECT payment_type, fare_amount, tip_amount, total_amount
+FROM yellow_old
+WHERE payment_type IS NULL
+LIMIT 0, 10;
+```
+
+```{sql}
+#| connection: con_taxi
+
+SELECT payment_type, fare_amount, tip_amount, total_amount
+FROM yellow_old
+WHERE payment_type = NULL
+LIMIT 0, 10;
+```
+
+
+## A `NULL` example
+
+The logic of `NULL`:^[taken from: https://cs186berkeley.net/notes/note1/#filtering-null-values]
+
+* If you do anything with `NULL`, you'll just get `NULL`. For instance if $x$ is `NULL`, then $x > 3$, $1 = x$, and $x + 4$ all evaluate to `NULL`. Even $x =$ `NULL` evaluates to `NULL`! if you want to check whether $x$ is `NULL`, use `x IS NULL` or `x IS NOT NULL`.
+* `NULL` short-circuits with boolean operators. That means a boolean expression involving `NULL` will evaluate to:
+   * TRUE, if it'd evaluate to TRUE regardless of whether the `NULL` value is really TRUE or FALSE.
+   * FALSE, if it'd evaluate to FALSE regardless of whether the `NULL` value is really TRUE or FALSE.
+   * Or `NULL`, if it depends on the `NULL` value.
+
+## A `NULL` example
+
+Consider the following table and **SQL** query to evaluate `WHERE age <= 20 OR num_dogs = 3`:
+
+
+```{sql}
+#| connection: con_taxi
+
+SELECT * FROM (
+   SELECT 'Ace' AS name, 20 AS age, 4 as num_dogs
+   UNION
+   SELECT 'Ada' AS name, NULL AS age, 3 as num_dogs   
+   UNION
+   SELECT 'Ben' AS name, NULL AS age, NULL as num_dogs
+   UNION
+   SELECT 'Cho' AS name, 27 AS age, NULL as num_dogs
+   ) AS temptable;
+```
+
+## A `NULL` example
+
+Where does the `WHERE` clause do? It tells us that we only want to keep the rows satisfying the `age <= 20` OR `num_dogs = 3`. Let’s consider each row one at a time:
+
+* For Ace, `age <= 20` evaluates to TRUE so the claim is satisfied.
+* For Ada, `age <= 20` evaluates to `NULL` but `num_dogs = 3` evaluates to TRUE so the claim is satisfied.
+* For Ben, `age <= 20` evaluates to `NULL` and `num_dogs = 3` evaluates to `NULL` so the overall expression is `NULL` which has a FALSE value.
+* For Cho, `age <= 20` evaluates to FALSE and `num_dogs = 3` evaluates to `NULL` so the overall expression evaluates to `NULL` (because it depends on the value of the `NULL`).
+
+Thus we keep only Ace and Ada.
+
+## A `NULL` example
+
+
+```{sql}
+#| connection: con_taxi
+
+SELECT * FROM (
+   SELECT 'Ace' AS name, 20 AS age, 4 as num_dogs
+   UNION
+   SELECT 'Ada' AS name, NULL AS age, 3 as num_dogs   
+   UNION
+   SELECT 'Ben' AS name, NULL AS age, NULL as num_dogs
+   UNION
+   SELECT 'Cho' AS name, 27 AS age, NULL as num_dogs
+   ) AS temptable
+WHERE age <= 20 OR num_dogs = 3;
+```
+
+## GROUP BY {.scrollable}
+
+The `GROUP BY` clause will direct **SQL** to carry out the query separately for each category in the grouped variable.  
+
+* aggregate functions include `COUNT()`, `SUM()`, `MAX()`, `MIN()`, and `AVG()`.
+
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*) AS num_transactions, 
+       SUM(1) AS num_transactions_also,
+       SUM(2) AS double_transactions,
+       payment_type 
+FROM yellow_old
+WHERE tip_amount BETWEEN 10 and 20
+GROUP BY payment_type;
+```
+
+## GROUP BY
+
+For those people who tipped between $10 and $20, what was the lowest and highest fare for each of the types of payments?
+
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*) AS num_transactions, 
+       MIN(fare_amount) AS lowest_fare,
+       MAX(fare_amount) AS highest_fare,
+       payment_type 
+FROM yellow_old
+WHERE tip_amount BETWEEN 10 and 20
+GROUP BY payment_type;
+```
+
+
+## GROUP BY {.scrollable}
+
+`GROUP BY` will work applied to multiple columns.  
+
+What is `wday`?
+
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*) AS num_transactions, 
+       MIN(fare_amount) AS lowest_fare,
+       MAX(fare_amount) AS highest_fare,
+       payment_type,
+       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
+FROM yellow_old
+GROUP BY payment_type, wday;
+```
+
+
+## ORDER BY {.scrollable}
+
+`ORDER BY` allows us to look at interesting aspects of the data by sorting the data.
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*) AS num_transactions, 
+       MIN(fare_amount) AS lowest_fare,
+       MAX(fare_amount) AS highest_fare,
+       payment_type,
+       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
+FROM yellow_old
+GROUP BY payment_type, wday
+ORDER BY lowest_fare ASC;
+```
+
+WHAT?!?!!  How in the world was one of the fares -$612.40?
+
+
+## ORDER BY {.scrollable}
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*) AS num_transactions, 
+       MIN(fare_amount) AS lowest_fare,
+       MAX(fare_amount) AS highest_fare,
+       payment_type,
+       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
+FROM yellow_old
+GROUP BY payment_type, wday
+ORDER BY highest_fare DESC;
+```
+
+$950 is a lot to pay for a cab ride!  But in NYC, I'd believe it.
+
+## ORDER BY {.scrollable}
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*) AS num_transactions, 
+       MIN(fare_amount) AS lowest_fare,
+       MAX(fare_amount) AS highest_fare,
+       payment_type,
+       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
+FROM yellow_old
+GROUP BY payment_type, wday
+ORDER BY wday, payment_type;
+```
+
+
+## ORDER BY
+
+::: {.callout-tip appearance="minimal"}
+
+Note that both `GROUP BY` and `ORDER BY` evaluate the data after it has been retrieved.  Therefore, the functions operate on the *results set*, not the original rows of the data. 
+:::
+
+We are able to `GROUP BY` and `ORDER BY` on the new variables we had created, `wday`.
+
+## HAVING
+
+Recall that `WHERE` acts only on the original data.  If we are interested in rides that took place on `Friday`, we need to use the derived variable `wday` instead of the raw variable `pickup_datetime`.  Fortunately, `HAVING` works on the results set.  
+
+## HAVING
+
+```{sql}
+#| connection: con_taxi
+
+SELECT COUNT(*) AS num_transactions, 
+       MIN(fare_amount) AS lowest_fare,
+       MAX(fare_amount) AS highest_fare,
+       payment_type,
+       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
+FROM yellow_old
+GROUP BY payment_type, wday
+HAVING wday = 'Friday';
+```
+
+## HAVING
+
+While it worked out quite well for us that `HAVING` was able to filter the data based on the results set, the use of `HAVING` was quite onerous because the entire data set was considered before the filter was applied.  That is, if the filter can be done on the original data using `WHERE`, the query will be much faster and more efficient.
+
+Note: `HAVING` requires a `GROUP BY` clause.  And the variable(s) used in `HAVING` must also be part of the `GROUP BY` clause.
+
+
+## LIMIT {.scrollable}
+
+`LIMIT` truncates the query to specified rows.  The first number is the offset (i.e., the number of rows to skip), the second number is the (maximum) number of rows to return.  Here, we return rows 15428119 through 15428128.
+
+The first number is optional.
+
+```{sql}
+#| connection: con_taxi
+
+SELECT * FROM yellow_old LIMIT 15428118, 10;
+
+```
+
+
+## Saving **SQL** queries as **R** objects  {.scrollable}
+
+If you are working in **R** to run **SQL** commands, you may want to use the query output for further analysis or visualizations. 
+
+* use `#|output.var: "name_of_variable"` inside the `{sql}` chunk. 
+* `name_of_variable` will then be available to be used in the R environment.
+
+
+```{sql}
+#| connection: con_taxi
+#| label: new-table
+#| output.var: "new_table"
+#| echo: fenced
+
+SELECT *, DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
+FROM yellow_old 
+LIMIT 0, 1000;
+```
+
+## Saving **SQL** queries as **R** objects  {.scrollable}
+
+```{r}
+#| echo: fenced
+
+new_table |>
+  drop_na(wday) |>
+  ggplot(aes(x = fare_amount, y = tip_amount, color = wday)) + 
+  geom_point() 
+```
+
+
+
+## Good practice
+
+Always a good idea to terminate the **SQL** connection when you are done with it.
+
+```{r}
+dbDisconnect(con_taxi, shutdown = TRUE)
+```

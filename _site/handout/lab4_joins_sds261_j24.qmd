@@ -1,0 +1,10 @@
+---
+title: "Lab4 - joins"
+author: "your name goes here"
+date: "due 10am Thursday, January 11, 2024"
+---
+
+
+according to Ben:  Yelp data does not have referential integrity, and you can find reviews written by users who don't exist and/or about restaurants that aren't in the other table. 
+
+

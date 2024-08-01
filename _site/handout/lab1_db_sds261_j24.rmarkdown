@@ -1,0 +1,57 @@
+---
+title: "Lab1 - working with Databases"
+author: "your name goes here"
+date: "due 10am Tuesday, January 9, 2024"
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+library(tidyverse)
+library(DBI)
+library(mdsr)
+```
+
+
+Today's lab will give us some practice working with the different tools we can use to implement SQL code. We haven't covered much SQL syntax, so the focus will be more on the tools than on writing code. You should, however, be trying to understand the SQL code as you go along.
+
+
+The goals for today include:
+
+* using RStudio in three different ways 
+* creating a histogram representing a sampling distribution (which isn't null)
+* summarizing the hypothesis test in words of the problem
+
+
+## Advice for turning in the assignment
+
+* render early and often.  In fact, go ahead and render your .qmd file right now.  Maybe set a timer so that you render every 5 minutes.  Do **not** wait until you are done with the assignment to render
+
+* Save the .Rproj file somewhere you can find it.  Don't keep everything in your downloads folder.  Maybe make a folder called `SDS261` or something.  That folder could live on your Desktop.  Or maybe in your Dropbox.  
+
+
+```
+---
+title: "Lab1 - working with Databases"
+author: "your name goes here"
+date: "due 10am Tuesday, January 9, 2024"
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+```
+
+
+task 3 ways in R plus in DBeaver
+
+reflect
+
+count rows in SQL vs pulling into R
+
+
+
+
+

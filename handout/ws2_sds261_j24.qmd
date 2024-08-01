@@ -1,0 +1,112 @@
+---
+title: "Worksheet 2 - SQL clauses"
+author: "Jo Hardin"
+date: "January 9, 2023"
+format: pdf
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(DBI)
+```
+
+
+
+Your Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+
+Names of people you worked with:  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+* Introduce yourself. What is your favorite type of bread? And, more importantly, have you ever made it yourself?
+
+* How are you feeling about using GitHub for retrieving and submitting assignments?  What is difficult about it?  What is great about it?
+
+
+\medskip
+\medskip
+
+**Task:** 
+
+The airlines SQL database contains information on 48 million flights from the Bureau of Transportation Statistics (you have worked with a small subset of this data in the nycflights13 package). Information from the database can be obtained through SQL queries. For example, the flights database contains the following tables:
+
+```{r}
+#| echo: false
+
+con_air <- DBI::dbConnect(
+  RMariaDB::MariaDB(),
+  dbname = "airlines",
+  host = "mdsr.cdc7tgkkqd0n.us-east-1.rds.amazonaws.com",
+  user = "mdsr_public",
+  password = "ImhsmflMDSwR"
+)
+```
+
+```{sql}
+#| connection: con_air
+
+SHOW TABLES;
+```
+
+\newpage
+## An example query
+
+Below is an SQL query on the database, and the output of the query. Working with your neighbor, try to determine what each piece of the query is doing. What would be the equivalent dplyr code?^[Taken from: https://mdsr-book.github.io/mdsr3e/15-sqlI.html#sec-dplyr-sql]
+
+```{sql}
+#| connection: con_air
+
+SELECT
+  name,
+  SUM(1) AS N,
+  SUM(arr_delay <= 15) / SUM(1) AS pct_ontime
+FROM flights
+JOIN carriers ON flights.carrier = carriers.carrier
+WHERE year = 2016 AND month = 9
+  AND dest = 'BOS'
+GROUP BY name 
+HAVING N >= 100
+ORDER BY pct_ontime DESC
+LIMIT 0, 4;
+```
+
+
+
+\newpage
+**Solution:**
+
+The order of the **SQL** clauses is not necessarily the same as the order in **R** (or as you might say out loud).
+
+* Only flights from September 2016 to 'BOS' are considered.
+* `JOIN` combines the `flights` and `carriers` tables so that the name of the airline is connected to the actual flight.  The function `JOIN` does an inner join (intersection).
+* Looking at each airline separately, count the number of flights and the percent of flights that are on time.
+* Keep only the airlines that have at least 100 flights into 'BOS'.
+* Sort the values according to percent on time, with the highest percent on time listed first.
+* Print the first 4 rows only.
+
+```{r}
+flights <- dplyr::tbl(con_air, "flights")
+carriers <- dplyr::tbl(con_air, "carriers")
+
+flights |> 
+  filter( year == 2016 & month == 9 & dest == 'BOS') |>
+  inner_join(carriers, by = "carrier") |>
+  group_by(name) |>
+  summarize(N = n(), pct_ontime = sum(arr_delay <= 15) / n()) |>
+  filter(N >= 100) |>
+  arrange(desc(pct_ontime)) |>
+  head(4)
+```
+
+
+
+```{r}
+#| echo: false
+
+dbDisconnect(con_air, shutdown = TRUE)
+```
+

@@ -1,0 +1,10 @@
+---
+title: "Lab2 - SQL in R"
+author: "your name goes here"
+date: "due 10am Wednesday, January 10, 2024"
+---
+
+do something with NA / NULL. see hadley's comments in the where section. https://r4ds.hadley.nz/databases#where
+
+do something with distinct()
+

@@ -1,0 +1,122 @@
+---
+title: "Worksheet 6 - creating databases"
+author: "Jo Hardin"
+date: "January 16, 2023"
+format: pdf
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(DBI)
+```
+
+
+
+Your Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+
+Names of people you worked with:  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+* Don't introduce yourself.  Name the people in front of you and behind you. Tell your partner what you did this weekend.
+
+* What ideas do you have for working on the class project?
+
+\medskip
+
+Consider the following fictional tables which exist in a fictional hospital database.^[Example taken from http://cs.iit.edu/~cs425/previous/14fall/]
+
+```{r}
+#| echo: false
+#| out-width: 80%
+#| fig-align: center
+
+library(cowplot)
+library(ggpubr)
+library(patchwork)
+
+fig1_path <- "../images/donor.jpg"
+fig2_path <- "../images/doctor.jpg"
+fig3_path <- "../images/organ.jpg"
+fig4_path <- "../images/patient.jpg"
+fig5_path <- "../images/takecare.jpg"
+
+fig1 <- ggdraw() + draw_image(fig1_path)
+fig2 <- ggdraw() + draw_image(fig2_path)
+fig3 <- ggdraw() + draw_image(fig3_path)
+fig4 <- ggdraw() + draw_image(fig4_path)
+fig5 <- ggdraw() + draw_image(fig5_path)
+
+(fig1 + fig2 + fig3) / (fig4 + fig5)
+```
+
+
+* Variables with black background are the primary keys of a table.
+* The variable `donor` of table `organ` is a foreign key to table `donor`.
+* The variable `patient` of table `takeCare` is a foreign key to table `patient`.
+* The variable `doctor` of table `takeCare` stores doctors. However, it is not a foreign key to table doctor, because the primary key of that table also includes insurance information.
+
+**Task:**
+
+1. Write a **SQL** statement that 
+
+* creates a new table `assignedTo`
+* which stores the `donor` and the donor's `organ` assigned to a `patient`.
+* Furthermore, we want to store a treatment `price` for each such record. 
+* The combination of donor, organ, and patient uniquely identifies a record 
+* `PRIMARY KEY`(s) and `FOREIGN KEY`(s) should be identified.
+* Each record must have a treatment `price` that is bigger than 0 and smaller than 1,000,000 dollars.
+
+
+2. Write a **SQL** statement that creates a table `worksFor` that records which `doctor` works for which `hospital`. For each such relationship between doctors and hospitals we record a `salary` for the doctor. A doctor may work for several hospitals (and obviously a hospital can employ multiple doctors).
+
+Hint: can the table with only the variables `doctor`, `hospital`, and `salary` have any foreign keys?
+
+\newpage
+**Solution:**
+
+
+1. Write a **SQL** statement that creates a new table `assignedTo`, which stores the `donor` and the donor's `organ` assigned to a `patient`. Furthermore, we want to store a treatment `price` for each such record. The combination of donor, organ, and patient uniquely identifies a record. Each record must have a treatment price that is bigger than 0 and smaller than 1,000,000 dollars.
+
+Hint: indicate the primary key(s) as well as the foreign key(s) which link to both the `organ` table and the `patient` table.
+
+
+
+```{sql}
+#| eval: false
+
+CREATE TABLE assignedTo (
+    donor VARCHAR (256),
+    organ VARCHAR (256),
+    patient VARCHAR (256),
+    price NUMERIC (8,2) NOT NULL CHECK (price BETWEEN 1 AND 999999),
+    PRIMARY KEY (donor, organ, patient),
+    FOREIGN KEY (donor, organ) REFERENCES organ(donor, organ),
+    FOREIGN KEY (patient) REFERENCES patient(pName),
+    FOREIGN KEY (donor) REFERENCES donor(dName),
+    FOREIGN KEY (patient, organ) REFERENCES takeCare(patient, organ)
+) ;
+```
+
+
+2. Write a **SQL** statement that creates a table `worksFor` that records which `doctor` works for which `hospital`. For each such relationship between doctors and hospitals we record a `salary` for the doctor. A doctor may work for several hospitals (and obviously a hospital can employ multiple doctors).
+
+
+No foreign keys can be established because none of the variables in `worksFor` match up with primary keys in any of the other tables.
+
+```{sql}
+#| eval: false
+
+
+CREATE TABLE worksFor (
+    doc VARCHAR (255),
+    hospital VARCHAR (255),
+    salary NUMERIC (8),
+    PRIMARY KEY (doc, hospital)
+);
+```
+

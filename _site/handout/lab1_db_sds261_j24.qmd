@@ -1,0 +1,274 @@
+---
+title: "Lab 1 - working with Databases"
+author: "your name goes here"
+date: "Tuesday, January 8, 2024"
+format: 
+  unilur-html: default
+  unilur-html+solution:
+    output-file: lab1_db_sds261_j24_sol.html
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| unilur-solution: true
+
+library(tidyverse)
+library(DBI)
+library(RMariaDB)
+library(dbplyr)
+library(mdsr)
+```
+
+
+Today's lab will provide practice working with the different tools we can use to implement **SQL** code. We haven't covered much **SQL** syntax, so the focus will be more on the tools than on writing code. You should, however, be trying to understand the **SQL** code as you go along.
+
+
+The goals for lab 1 include:
+
+* connecting to GitHub / turning in the lab via GitHub.
+* comparing / contrasting three different ways to implement **SQL** queries in RStudio.
+* writing **SQL** queries in DBeaver.
+
+
+## Advice for turning in the assignment
+
+* render early and often.  In fact, go ahead and render your .qmd file right now.  Maybe set a timer so that you render every 5 minutes.  Do **not** wait until you are done with the assignment to render
+
+* save the .Rproj file somewhere you can find it.  Don't keep everything in your downloads folder.  Maybe make a folder called `SDS261` or something.  That folder could live on your Desktop.  Or maybe in your Dropbox.  
+
+
+
+##  Assignment
+
+Preliminary:  You'll need to create a quarto document.  To do so click on: New file -> quarto document.  
+
+* The document should be saved in the **R** Project as `lab1-sds261-yourlastname-yourfirstname.qmd`.
+* The yaml at the top of the file should look like this (change the author and date fields):
+
+```
+---
+title: 'Lab 1 - working with Databases'
+author: 'your name goes here'
+date: 'due 10am Tuesday, January 9, 2024'
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+```
+
+For much of the assignment, Consider the task of figuring out how many flights came into or flew out of Bradley International Airport (BDL) last year.
+
+1. Set up a connection within an **R** chunk.  See the README file.
+
+```{r}
+#| unilur-solution: true
+#| 
+con_air <- DBI::dbConnect(
+  RMariaDB::MariaDB(),
+  dbname = "airlines",
+  host = Sys.getenv("MDSR_HOST"),
+  user = Sys.getenv("MDSR_USER"),
+  password = Sys.getenv("MDSR_PWD")
+)
+```
+
+2. Pull in the `flights` table as a `tbl` (do *not* use `collect()`!).  Use **dplyr** commands to calculate the number of flights that flew into or out of BDL in 2012.  Then use `dplyr::show_query()` to output the **SQL** query.  (All done inside an **R** chunk.)
+
+```{r}
+#| unilur-solution: true
+
+flights <- tbl(con_air, "flights")
+names(flights)
+```
+
+```{r}
+#| unilur-solution: true
+
+bdl_query <- flights |>
+  filter(year == 2012 & (dest == "BDL" | origin == "BDL")) |>
+  summarize(count = n())
+
+show_query(bdl_query)
+```
+
+```{block}
+#| unilur-solution: true
+
+There were 41,949 flights to or from BDL in 2012.
+```
+
+3. Again, inside an **R** chunk, use `DBI::dbGetQuery()` to run the **SQL** code calculated in the previous question.
+
+```{r}
+#| unilur-solution: true
+
+DBI::dbGetQuery(con_air, "SELECT COUNT(*) AS `count`
+FROM `flights`
+WHERE (`year` = 2012 AND (`dest` = 'BDL' OR `origin` = 'BDL'))")
+```
+
+```{block}
+#| unilur-solution: true
+
+There were 41,949 flights to or from BDL in 2012.
+```
+
+
+4. Now, inside a **SQL** chunk, use the **SQL** commands directly (same task: how many flights in and out of BDL in 2012).
+
+
+```{sql}
+#| connection: con_air
+#| echo: fenced
+#| unilur-solution: true
+
+SELECT COUNT(*) AS `count`
+FROM `flights`
+WHERE (`year` = 2012 AND (`dest` = 'BDL' OR `origin` = 'BDL'))
+```
+
+```{block}
+#| unilur-solution: true
+
+There were 41,949 flights to or from BDL in 2012.
+```
+
+5. Rerun all three scenarios, using the **tictoc** **R** package to see which method calculates the desired number most quickly.  Below is an example of how to use **tictoc**.  For the **SQL** chunk, you'll need to place `tic()` in an **R** chunk before the **SQL** chunk and `toc()` in an **R** chunk after the **SQL** chunk.  Write 1-2 sentences describing the results.
+
+
+```{r}
+library(tictoc)
+
+tic()
+rand_numbers <- rnorm(1000000)
+quantile(rand_numbers)
+toc()
+```
+
+
+* Using **R** on the `tbl`.
+
+```{r}
+#| unilur-solution: true
+
+tic()
+
+flights <- tbl(con_air, "flights")
+
+flights |>
+  filter(year == 2012 & (dest == "BDL" | origin == "BDL")) |>
+  summarize(count = n())
+
+toc()
+```
+
+* Using `dbGetQuery()`.
+
+```{r}
+#| unilur-solution: true
+
+tic()
+
+DBI::dbGetQuery(con_air, "SELECT COUNT(*) AS `count`
+FROM `flights`
+WHERE (`year` = 2012 AND (`dest` = 'BDL' OR `origin` = 'BDL'))")
+
+toc()
+```
+
+* Using **SQL** chunk.
+
+
+```{r}
+#| unilur-solution: true
+
+tic()
+```
+
+
+```{sql}
+#| connection: con_air
+#| echo: fenced
+#| unilur-solution: true
+
+SELECT COUNT(*) AS `count`
+FROM `flights`
+WHERE (`year` = 2012 AND (`dest` = 'BDL' OR `origin` = 'BDL'))
+```
+
+```{r}
+#| unilur-solution: true
+
+toc()
+```
+
+
+```{block}
+#| unilur-solution: true
+
+
+Running the SQL code (either directly through a SQL chunk or by using `DBI::dbGetQuery()`) is faster than when **dbplyr** is used to translate R code into SQL queries.
+```
+
+6. Now create a `tibble` (not a `tbl`) that includes only flights in 2012 either to or from BDL (use `collect()`).  After you have created the `tibble`, summarize the observations to get the count.  Use **tictoc** to evaluate how long the process takes.  Write 1-2 sentences describing the results.
+
+```{r}
+#| unilur-solution: true
+
+tic()
+
+flights_BDL <- flights |>
+  filter(year == 2012 & (dest == "BDL" | origin == "BDL")) |>
+  collect()
+
+flights_BDL |>
+  summarize(count = n())
+
+toc()
+```
+
+```{block}
+#| unilur-solution: true
+
+Pulling the table into R as a dataframe slows down the calculations quite a bit.
+```
+
+7. DBeaver: open DBeaver from your applications.  Following the instructions in the <a href = "https://st47s.com/SDS261/Notes/02-sql-in-R.html#dbeaver" target = "_blank">DBeaver online notes</a>, set up a connection to the **mdsr** **SQL** server. Create a file called `lab1-sds261-yourlastname-yourfirstname.sql` and **SAVE THE FILE in the lab1 R Project folder**. Run the same **SQL** code as above. Did you get the same result?  Were there any adjustments to the SQL code from above?  Explain in a few sentences.
+
+```{block}
+#| unilur-solution: true
+
+Yes, there were still 41,949 flights to and from BDL in 2012.  Whew!  It would have been very odd if there had been a different number because the database itself hasn't changed at all, we are just sending the query using a different client.
+
+I needed to remove the back ticks from the table and variable names.  R uses backticks but DBeaver does not.  Good to remember.
+
+I had set up my connection to the entire **mdsr** database, so I needed to add the line `USE airlines;` to the top of my **SQL** query so that it would be able to find the `flights` table.  I could have also specified where `flights` lives using:  `... FROM airlines.flights...`.
+```
+
+8. Reflect on at least 3 things that you learned during this lab.  It could be about technical aspects. It could be about understanding databases.  It could be about the difference between **R** and **SQL**.  Anything you learned while doing the lab.
+
+```{block}
+#| unilur-solution: true
+
+* there are different ways to run the same SQL commands
+* some approaches are more efficient than other approaches
+* the RStudio IDE is flexible in that it allows both R and SQL code
+* DBeaver is a more typical SQL client in that many lines of SQL code can be written simultaneously, and the SQL connection says in tact for the entire set of queries.
+* the airlines database has a ginormous about of information which exists in four tables: airports, carriers, flights, and planes
+
+```
+
+9. Always a good idea to terminate the **SQL** connection when you are done with it.
+
+```{r}
+dbDisconnect(con_air, shutdown = TRUE)
+```
+
+
+10. render - commit - push to GitHub.  You should push three files, those with extensions .qmd, .html, and .sql. In a browser, look at your GitHub website to make sure that all three files were successfully pushed to the correct repo (yours for lab1).
+
+

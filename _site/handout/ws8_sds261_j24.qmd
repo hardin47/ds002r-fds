@@ -1,0 +1,46 @@
+---
+title: "Worksheet 8 - the median"
+author: "Jo Hardin"
+date: "January 18, 2023"
+format: pdf
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+library(tidyverse)
+library(DBI)
+```
+
+
+
+Your Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+
+Names of people you worked with:  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+* Introduce yourself.  What are you most looking forward to during the spring semester?
+
+* Name one thing you learned in the class that you are looking forward to using in the future.
+
+\medskip
+
+**Task:**
+Today we are going to calculate the mean and the median.  I'll give you a series of numbers.  As I read the numbers, I want you to work at calculating both the mean and the median.
+
+
+Reflection:  which is easier for you to calculate, the mean or the median?  which is easier for the computer to calculate?  Explain.
+
+
+\newpage
+
+**Solution:**
+
+1. If sorting the numbers and then finding the (average of the) middle numbers, the task will take $O(nlog(n))$ time.  That is, a dataset with 1000 records will be $(1000 \cdot log(1000)) / (100 \cdot log(100)) = 10 \cdot log(900)$ times slower than a data set with 100 records.  There are some caveats:  (1) some sorting algorithms are faster, and (2) you don't need to sort every number to get the median.  But generally, sorting is a slow operation!
+
+2. Averaging is just summing, and it happens in linear time, $O(n)$.  That means that a dataset with 1000 records will be $1000/100 = 10$ times slower than a dataset with 100 records.
+
+Generally, for a computer, it is easier to calculate a mean than a median, because of the need to sort in finding the median.

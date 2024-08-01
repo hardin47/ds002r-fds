@@ -1,0 +1,114 @@
+---
+title: "Schedule"
+description: |
+  Schedule for SDS 261, Data Science, the SQL, Interterm 2024, Smith College
+execute: 
+  message: false
+  warning: false
+---
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(kableExtra)
+library(knitr)
+library(fontawesome)
+fontawesome::fa_html_dependency()
+```
+
+Here's your roadmap for the semester! Each day, follow the general process outlined below:
+
+-   Enjoy the notes / text <i class="fas fa-book-open"></i>
+
+-   Attend class, review the <i class="fas fa-pencil-alt"></i> worksheet and solutions if you have any questions after working on it during class.  <i class="fas fa-desktop"></i> Slides from class are linked below. 
+
+-   Complete the Lab assignment (<i class="fa-solid fa-code"></i> html linked below), <i class="fa-solid fa-paper-plane"></i> submit the assignment to GitHub before 10am the following class period.
+
+-   Discuss the reflection questions <i class="fas fa-lightbulb"></i> and ethics considerations <i class="fas fa-balance-scale"></i> (see the <i class="fas fa-book-open"></i> <a href = "https://st47s.com/SDS261/Notes/" target = "_blank">class notes</a>) with your classmates and professor.
+
+-   The textbooks are <b> <a href = "https://mdsr-book.github.io/mdsr3e/" target = "_blank">Modern Data Science with R (MDSR), 3rd edition</a></b> by Baumer, Kaplan, and Horton and <b> <a href = "https://r4ds.hadley.nz/" target = "_blank">R for Data Science (R4DS), 2nd edition</a></b> by Wickham, Çetinkaya-Rundel, and Grolemund.
+
+```{r}
+#| echo: false
+#| eval: false
+#| include: false
+
+In order to use the icons, you need the fontawesome extension, https://github.com/quarto-ext/fontawesome
+
+quarto add quarto-ext/fontawesome
+```
+
+
+```{r echo = FALSE}
+schedule <- tribble(
+  ~`date`, ~topic, ~`in class`, ~`in lab`, ~resources,
+  "Day 1 <br> 1.08.24", 'starting + <br> R + RStudio + <br> SQL + MySQL', 
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/p1-intro-to-sql.html" target = "_blank">Introduction</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html#sec-dplyr-sql" target = "_blank"> MDSR 15.1</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html#database-basics" target = "_blank"> R4DS 21.2</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-08-db.html" target = "_blank"> What is a DB?</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws1_sds261_j24.pdf" target = "_blank">WS 1</a>',
+  '{{< fa code >}} <a href="https://sds261-sql.netlify.app/handout/lab1_db_sds261_j24.html" target = "_blank">Lab 1</a>',
+  '{{< fa comments >}} <a href = "https://dbplyr.tidyverse.org/articles/dbplyr.html" target = "_blank"><b>dbplyr</b> package</a>',
+  
+    "Day 2 <br> 1.09.24", 'SQL clauses',
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/03-sql-verbs.html" target = "_blank">SQL clauses</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html#the-sql-data-manipulation-language" target = "_blank"> MDSR 15.4</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases#sql" target = "_blank"> R4DS 21.5</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-09-clauses.html" target = "_blank"> SQL clauses</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws2_sds261_j24.pdf" target = "_blank">WS 2</a>',
+  '{{< fa code >}} <a href="https://sds261-sql.netlify.app/handout/lab2_clauses_sds261_j24.html" target = "_blank">Lab 2</a>',
+  '',
+  
+    "Day 3 <br> 1.10.24", 'Combining tables',
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/04-sql-joins.html" target = "_blank">SQL joins</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html#join" target = "_blank"> MDSR 15.4.7</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases#subqueries" target = "_blank"> R4DS 21.5.7</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-10-joins.html" target = "_blank"> SQL joins</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws3_sds261_j24.pdf" target = "_blank">WS 3</a>',
+  '{{< fa code >}} <a href="https://sds261-sql.netlify.app/handout/lab3_joins_sds261_j24.html" target = "_blank">Lab 3</a>',
+  '',
+  
+    "Day 4 <br> 1.11.24", 'Regular Expressions I',
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/07-regex.html" target = "_blank">regex I</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/19-text.html" target = "_blank"> MDSR 19</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps" target = "_blank"> R4DS 15</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-11-regex1.html" target = "_blank"> regex I</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws4_sds261_j24.pdf" target = "_blank">WS 4</a>',
+  '{{< fa code >}} <a href="https://sds261-sql.netlify.app/handout/lab4_regex_sds261_j24.html" target = "_blank">Lab 4</a>',
+  '',
+
+  
+    "Day 5 <br> 1.12.24", 'Regular Expressions II',
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/07-regex.html" target = "_blank">regex II</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/19-text.html" target = "_blank"> MDSR 19</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps" target = "_blank"> R4DS 15</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-12-regex2.html" target = "_blank"> regex II</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws5_sds261_j24.pdf" target = "_blank">WS 5</a>',
+  '(no lab)',
+  '{{< fa comments >}} <a href = " https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">reg expr cheat sheet</a>',
+ 
+  
+  "Day 6 <br> 1.16.24", 'Creating a DB',
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/05-creating-db.html" target = "_blank">creating databases</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/16-sqlII.html#creating-new-databases" target = "_blank"> MDSR 16.1.1</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases#dbplyr-basics" target = "_blank"> R4DS 21.4</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-16-creating-db.html" target = "_blank"> creating databases</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws6_sds261_j24.pdf" target = "_blank">WS 6</a>',
+  'email prof with dataset idea for <a href="https://sds261-sql.netlify.app/project" target = "_blank"><i class="fas fa-pencil-alt"></i>project</a> <br> {{< fa code >}} <a href="https://sds261-sql.netlify.app/handout/lab5_creating_db_sds261_j24.html" target = "_blank">Lab 5</a>',
+  '',
+  
+  
+    "Day 7 <br> 1.17.24", 'Changing a DB',
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/06-change-db.html" target = "_blank">creating databases</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/16-sqlII.html#creating-new-databases" target = "_blank"> MDSR 16.1.1</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases#dbplyr-basics" target = "_blank"> R4DS 21.4</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-17-editing-db.html" target = "_blank"> changing databases</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws7_sds261_j24.pdf" target = "_blank">WS 7</a>',
+  '{{< fa code >}} <a href="https://sds261-sql.netlify.app/handout/lab6_editing_db_sds261_j24.html" target = "_blank">Lab 6</a>',
+  '',
+  
+  "Day 8 <br> 1.18.24", 'SQL extras',
+  '{{< fa book-open >}} <a href="https://st47s.com/SDS261/Notes/07-db-etc.html" target = "_blank">creating databases</a> <br> <i class="fas fa-book-open"></i> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/16-sqlII.html#creating-new-databases" target = "_blank"> MDSR 16.1.1</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases#dbplyr-basics" target = "_blank"> R4DS 21.4</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-18-db-etc.html" target = "_blank"> SQL extras</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws8_sds261_j24.pdf" target = "_blank">WS 8</a>',
+  '<a href="https://sds261-sql.netlify.app/project" target = "_blank"><i class="fas fa-pencil-alt"></i> Project</a>',
+  '',  
+  
+    "Day 9 <br> 1.19.24", 
+  '<a href="https://sds261-sql.netlify.app/project" target = "_blank"><i class="fas fa-pencil-alt"></i> Project</a>', 
+  '',
+  '(no lab)',
+  '') 
+  
+```
+
+
+
+```{r}
+#| echo: false
+#| column: body-outset
+# can also use column: screen-inset also the entire page??
+# can use column: page for the entire page
+# can use column: body-outset to bleed outside the center column of text
+schedule %>% 
+  mutate_all(linebreak) %>% # required for linebreaks to work
+  kbl(escape = FALSE, align = c(rep('l',6))) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"),
+                full_width = TRUE) %>%
+  column_spec(1:5,extra_css = "vertical-align:top;")
+```
+
+
+
+

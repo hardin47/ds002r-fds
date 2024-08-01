@@ -1,0 +1,80 @@
+---
+title: "Worksheet 1 - DB, R, SQL, Oh My!"
+author: "Jo Hardin"
+date: "January 8, 2023"
+format: pdf
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r include=FALSE}
+library(tidyverse)
+```
+
+
+
+Your Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+
+Names of people you worked with:  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   
+
+* Introduce yourself. Which dorm do you live in? What is one great thing and one lousy thing about that dorm?
+
+* Name one thing in the Syllabus / website / etc. for this class that either sounds strange/unusual or that you would like to know more about.
+
+**Task:** Consider a large hospital system that coordinates all aspects of health care: doctors, visits, prescriptions, surgeries, billing, etc.  Let's say that the hospital has a database which includes a series of tables linking all the needed information that they routinely collect.
+
+1. Come up with at least five tables which might exist in the hospital database.  For each table indicate a few columns / variables.  
+
+2. Draw arrows between the tables and indicate the variable(s) that link the tables.  No table should be completely isolated.
+
+
+
+\newpage
+**Solution:**
+
+The solution is taken directly from <a href = "https://www.w3resource.com/sql-exercises/hospital-database-exercise/index.php" target = "_blank">w3resource</a>.  Consider the hypothetical SQL schema diagram in @fig-hosp-db.  Some of the tables and respective variables are described below.
+
+* `physician`
+  - employeeid - unique ID of a physician
+  - name - name of physician
+  - position - designation of a physician
+  - ssn - social security number of physician
+  
+* `department`
+  - departmentid - unique ID of the department
+  - name - name of the department
+  - head - ID of the physician who is the head of the department, connects to the employeeid of the table physician
+  
+* `affiliated_with`
+   - physician - ID of the physician, connects to the employeeid of the table `physician`
+   - department - ID of the department, connects to the departmentid of the table `department`
+   - primaryaffiliation - logical column which indicates whether the physicians are affiliated or not
+
+* `procedure`
+   - code - unique ID of the medical procedure
+   - name - name of the medical procedure
+   - cost - cost of the medical procedure
+   
+* `trained_in`
+   - physician - ID of the physician, connects to the employeeid of the table `physician`
+   - treatment - ID of the medical procedure, connects to the code of the `procedure` table
+   - certificationdate - starting date of certification
+   - certificationexpires - expiry date of certification
+   
+* `patient`
+   - ssn - unique ID for each patient
+   - name - name of patient
+   - address - address of patient
+   - phone - phone number of patient
+   
+```{r}
+#| label: fig-hosp-db
+#| out.width: 90%
+#| fig-cap: "SQL schema describing links of tables from a hypothetical hospital database, image credit: https://www.w3resource.com/sql-exercises/hospital-database-exercise/index.php"
+#| fig-alt: Fifteen different hypothetical tables with relevant variables which connect the tables.
+#| echo: false
+knitr::include_graphics("../images/hospital-database.png")
+```
