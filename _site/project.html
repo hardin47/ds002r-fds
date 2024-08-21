@@ -81,10 +81,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="https://sds261-sql.netlify.app/" class="navbar-brand navbar-brand-logo">
+    <a href="https://ds002r-fds.netlify.app/" class="navbar-brand navbar-brand-logo">
     <img src="./images/st47s.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="https://sds261-sql.netlify.app/">
+    <a class="navbar-brand" href="https://ds002r-fds.netlify.app/">
     <span class="navbar-title">Foundations of Data Science in R</span>
     </a>
   </div>
@@ -106,10 +106,41 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./clicker_study.html"> 
 <span class="menu-text">Clicker Q</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./project.html" aria-current="page"> 
-<span class="menu-text">Final Project</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="./project.html">
+ <span class="dropdown-text">semester mini-projects</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./project1.html">
+ <span class="dropdown-text">project 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project2.html">
+ <span class="dropdown-text">project 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project3.html">
+ <span class="dropdown-text">project 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project4.html">
+ <span class="dropdown-text">project 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project5.html">
+ <span class="dropdown-text">project 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://hardin47.netlify.app/courses/data/">
+ <span class="dropdown-text">Data Sources</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./github.html"> 
 <span class="menu-text">GitHub</span></a>
@@ -153,64 +184,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The final project for SDS 261 is meant to bring together concepts from the class. You can choose to focus on one aspect, or you can bring together all of the concepts that we have covered. Each project must include <em>at least one</em> of the following topics:</p>
-<ol type="1">
-<li>Using <strong>SQL</strong> queries and joins to wrangle complicated data tables.</li>
-<li>Writing regular expressions to parse observations.</li>
-<li>Creating a <strong>SQL</strong> database.</li>
-</ol>
-<p>A bold project may incorporate all three topics.</p>
-<section id="big-picture" class="level2">
-<h2 class="anchored" data-anchor-id="big-picture">Big picture</h2>
-<p>Your project is meant to answer a question using data. The vast majority of the work will be on the data wrangling side, but you might hope to have a plot or two at the end to help tie together your ideas.</p>
-<section id="topics" class="level3">
-<h3 class="anchored" data-anchor-id="topics">Topics</h3>
-<p>The topics above are meant to direct the project productively. They are not meant to limit you. If you have an idea for a project that doesn’t quite fit into what is outlined above (but is related to the course content), let’s talk about it! Most likely, your idea will fit into the project goals.</p>
-<p>Expanding on the topics above to get you started…</p>
-<section id="sql-queries" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="sql-queries">1. <strong>SQL</strong> queries</h4>
-<p>Throughout the course, we’ve seen a few different databases. There are more available in the <strong>R</strong> <strong>mdsr</strong> package, and you also have access to some additional <strong>MySQL</strong> server databases through Smith. Additionally, the professor has access to a <strong>MySQL</strong> server that contains all of the <a href="https://openpolicing.stanford.edu/data/" target="_blank">Stanford Open Policing data</a>, and you are welcome to work with it (just ask for login information). So many interesting questions to consider!</p>
-</section>
-<section id="regular-expressions" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="regular-expressions">2. Regular expressions</h4>
-<p>You might think about web scraping to retrieve data (probably using the <strong>rvest</strong> R package). For example, you might scrape details about every <a href="https://en.wikipedia.org/wiki/List_of_songs_by_Taylor_Swift" target="_blank">Taylor Swift song</a> and use regular expressions to format the information in a way that allows easy question asking.</p>
-<p>Or you might find a <a href="https://www.kaggle.com/datasets/julqka/gilmore-girls-lines" target="_blank">dataset on the Gilmore Girls</a> and scrape IMDb to match the ratings for each episode.</p>
-</section>
-<section id="creating-sql-database" class="level4">
-<h4 class="anchored" data-anchor-id="creating-sql-database">3. Creating <strong>SQL</strong> database</h4>
-<p>You can use any of a variety of platforms to create a <strong>SQL</strong> database. As in the class notes and labs, you can create a database using <strong>DuckDB</strong>. Alternatively, you can use Smith’s <strong>MySQL</strong> server. Or, you can use <strong>SQLite</strong> to create a database (in a similar way to <strong>DuckDB</strong>).</p>
-<p>For example, you might create a database using the Saturday Night Live data and update all of the files with more recent episodes.</p>
-<p>Or you might look for a TidyTuesday dataset to upload. For example, consider <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-01-31" target="_blank">data on cats in the UK</a> which references similar datasets in the US, Australia, and New Zealand.</p>
-<p>If you are creating a new <strong>SQL</strong> database, make sure that your database has three or more tables that link to one another.</p>
-</section>
-</section>
-</section>
-<section id="technical-details" class="level2">
-<h2 class="anchored" data-anchor-id="technical-details">Technical details</h2>
-<ul>
-<li>You may work alone or in pairs.</li>
-<li>There must be a narrative to accompany all technical products including code, output tables, visualizations, etc. No naked code or graphs. (Figures and Tables should have captions.)</li>
-<li>The expectation is that you turn in a reproducible Quarto file and accompanying pdf or html file. If you plan to turn in the project in a different format, please check with the professor in advance.</li>
-</ul>
-<section id="due-dates" class="level3">
-<h3 class="anchored" data-anchor-id="due-dates">Due Dates</h3>
-<ul>
-<li><p><strong>Tuesday, January 16</strong>. Email prof with dataset details and idea for project. Include the following:</p>
-<ul>
-<li>Question of interest that you hope to address.</li>
-<li>Holistic description of the dataset(s) (a few sentences).</li>
-<li>Description of the observational units and columns in each data table.</li>
-<li>Full reference for data citation.</li>
-<li>Link to the resources.</li>
-</ul></li>
-<li><p><strong>End of week 2</strong>. We will have some time in class to work on the project.</p></li>
-<li><p><strong>Tuesday, January 23</strong>. Completed project is due.</p></li>
-</ul>
+<p>Some details about the structure and assessment of the projects.</p>
 
 <p>:::</p>
 
-</section>
-</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

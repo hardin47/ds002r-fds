@@ -5,64 +5,7 @@ description: |
 format: html
 ---
 
+Some details about the structure and assessment of the projects.
 
-The final project for SDS 261 is meant to bring together concepts from the class. You can choose to focus on one aspect, or you can bring together all of the concepts that we have covered.  Each project must include *at least one* of the following topics:
-
-1. Using **SQL** queries and joins to wrangle complicated data tables.
-2. Writing regular expressions to parse observations.
-3. Creating a **SQL** database.
-
-A bold project may incorporate all three topics.
-
-
-## Big picture
-
-Your project is meant to answer a question using data.  The vast majority of the work will be on the data wrangling side, but you might hope to have a plot or two at the end to help tie together your ideas.
-
-
-### Topics
-
-The topics above are meant to direct the project productively.  They are not meant to limit you.  If you have an idea for a project that doesn't quite fit into what is outlined above (but is related to the course content), let's talk about it!  Most likely, your idea will fit into the project goals.  
-
-Expanding on the topics above to get you started...
-
-#### 1. **SQL** queries {-}
-
-Throughout the course, we've seen a few different databases.  There are more available in the **R** **mdsr** package, and you also have access to some additional **MySQL** server databases through Smith.  Additionally, the professor has access to a **MySQL** server that contains all of the <a href = "https://openpolicing.stanford.edu/data/" target = "_blank">Stanford Open Policing data</a>, and you are welcome to work with it (just ask for login information).  So many interesting questions to consider!
-
-#### 2. Regular expressions {-}
-
-You might think about web scraping to retrieve data (probably using the **rvest** R package).  For example, you might scrape details about every <a href = "https://en.wikipedia.org/wiki/List_of_songs_by_Taylor_Swift" target = "_blank">Taylor Swift song</a> and use regular expressions to format the information in a way that allows easy question asking.
-
-Or you might find a <a href = "https://www.kaggle.com/datasets/julqka/gilmore-girls-lines" target = "_blank">dataset on the Gilmore Girls</a> and scrape IMDb to match the ratings for each episode.
-
-#### 3. Creating **SQL** database
-
-You can use any of a variety of platforms to create a **SQL** database.  As in the class notes and labs, you can create a database using **DuckDB**.  Alternatively, you can use Smith's **MySQL** server.  Or, you can use **SQLite** to create a database (in a similar way to **DuckDB**).
-
-For example, you might create a database using the Saturday Night Live data and update all of the files with more recent episodes.  
-
-Or you might look for a TidyTuesday dataset to upload.  For example, consider <a href = "https://github.com/rfordatascience/tidytuesday/tree/master/data/2023/2023-01-31" target = "_blank">data on cats in the UK</a> which references similar datasets in the US, Australia, and New Zealand.
-
-If you are creating a new **SQL** database, make sure that your database has three or more tables that link to one another.
-
-## Technical details
-
-* You may work alone or in pairs.
-* There must be a narrative to accompany all technical products including code, output tables, visualizations, etc.  No naked code or graphs.  (Figures and Tables should have captions.)
-* The expectation is that you turn in a reproducible Quarto file and accompanying pdf or html file.  If you plan to turn in the project in a different format, please check with the professor in advance.
-
-
-### Due Dates
-* **Tuesday, January 16**. Email prof with dataset details and idea for project.  Include the following:
-   * Question of interest that you hope to address.
-   * Holistic description of the dataset(s) (a few sentences).
-   * Description of the observational units and columns in each data table. 
-   * Full reference for data citation.
-   * Link to the resources.
-
-* **End of week 2**. We will have some time in class to work on the project.
-
-* **Tuesday, January 23**. Completed project is due.
 
 

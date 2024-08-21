@@ -6,11 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jo Hardin">
-<meta name="author" content="original content by Ben Wiedermann">
-<meta name="description" content="Huge thanks to Ben Wiedermann at HMC for sharing the following.">
+<meta name="description" content="Shiny">
 
-<title>Foundations of Data Science in R - Working on assignments with GitHub</title>
+<title>Foundations of Data Science in R - Project 5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./github.html" aria-current="page"> 
+    <a class="nav-link" href="./github.html"> 
 <span class="menu-text">GitHub</span></a>
   </li>  
 </ul>
@@ -160,44 +158,23 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Working on assignments with GitHub</h1>
+<h1 class="title">Project 5</h1>
 </div>
 
 <div>
   <div class="description">
-    <p>Huge thanks to Ben Wiedermann at HMC for sharing the following.</p>
+    <p>Shiny</p>
   </div>
 </div>
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliations</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://m154-comp-stats.netlify.app/">Jo Hardin</a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Pomona College
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">original content by Ben Wiedermann </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Harvey Mudd College
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
+    
   
     
   </div>
@@ -207,245 +184,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="working-on-assignments-with-github-and-gradescope" class="level1 page-columns page-full">
-<h1>Working on assignments with GitHub and Gradescope</h1>
-<p>In DS002R, we will use GitHub + Gradescope to access and submit assignments. Here is the basic structure of how it will work:</p>
-<ol type="1">
-<li>Get the assignment materials from GitHub.</li>
-<li>Clone the repository to any machine you are using.</li>
-<li>Work on the assignment and push back to GitHub.</li>
-<li>Submit the assignment on Gradescope.</li>
-</ol>
-<aside>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/git_2x.png" class="img-fluid figure-img" width="330"></p>
-<figcaption>image credit: https://xkcd.com/1597/,</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</aside>
-<p>The following diagram lays out the process, and the rest of the document provides a more detailed set of instructions.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/git-workflow.png" class="img-fluid figure-img" width="1025"></p>
-<figcaption>Flowchart of assignment process.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="installing-r-rstudio-git" class="level1 page-columns page-full">
-<h1>Installing R + RStudio + Git</h1>
-<p>Most importantly, please become familiar with <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a>. Happy Git with R is an incredibly user friendly resource which includes help for almost every single thing that might happen when getting started.</p>
-<aside>
-<a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a> is your new best friend.
-</aside>
-<ol type="1">
-<li><p>The first step is to install R + RStudio + Git on your machine. (If you are planning to use Pomona’s RStudio server, R + RStudio + Git are all three already installed for you.)</p></li>
-<li><p>Create an account on GitHub (if you already have one, use it!).</p></li>
-<li><p>Introduce everyone: R + RStudio (should happen automatically); yourself to GitHub (see <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a>); RStudio + GitHub (see <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a>).</p></li>
-<li><p>Follow the rest of the steps that Jenny Bryan spells out in <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a>. Most likely, you only need to work through step 12. Step 15 is detailed below after you have gotten the assignment from GitHub.</p></li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/happygitwithr.png" class="img-fluid figure-img" width="1191"></p>
-<figcaption>The more you read Happy Git with R, the better your life will be.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="get-the-assignment-materials-from-github" class="level1 page-columns page-full">
-<h1>Get the assignment materials from GitHub</h1>
-<p>Each assignment will be provided as a link to GitHub. Click the link. (The link will come to you via an email. If you lose the email, or the email goes to your spam folder, let me know or ask a friend for the link.)</p>
-<aside>
-When you use GitHub classroom for the first time, you’ll be asked to authorize GitHub classroom to access your repositories.
-</aside>
-<p>The homework assignments will be individual assignments. Some other assignments might be a paired assignment. To accept an individual assignment, click the “Accept this assignment” button.</p>
-<p>For all <strong>joint</strong> assignments, you will need to create a team before you can start.</p>
-<ul>
-<li>If you are working with a partner, create a team name that contains both of your GitHub ids. (If you are working by yourself, use your GitHub id as your team name.)</li>
-<li>One partner accepts the assignment and creates the team.</li>
-<li>If you are working with a partner, the person who did <em>not</em> create the team and accept the assignment should now click the GitHub classroom link, find the newly created team, and click the Join button.</li>
-</ul>
-<aside>
-⚠ You may need to add a description of the assignment (for example “HW 2”) to team name. This is because GitHub Classroom does seem to make it easy for some people to work in the same group as a previous assignment while other people form new groups.
-</aside>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/accept-assignment.png" class="img-fluid figure-img" width="675"></p>
-<figcaption>Accept the assignment to create a different repository for every assignment.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>The assignment files will be copied as a private repository that you (and your partner, if applicable) that the professor has access to.</p>
-<p>We will call this version, that lives on your personal GitHub account the <em>GitHub fork</em>.</p>
-</section>
-<section id="clone-the-assignment-or-project-repository-on-to-your-own-computers" class="level1 page-columns page-full">
-<h1>Clone the assignment (or project) repository on to your own computer(s)</h1>
-<p>Once your repository has been created, you should clone the code to whatever computer you are working on. Just like a Google Doc, you can work on the files from different machines at different times. Unlike a Google Doc, you’ll have to make sure to open the repo (<code>clone</code> or <code>pull</code> if you’ve already <code>clone</code>d) and save the repo (<code>commit</code> + <code>push</code>) more deliberately.</p>
-<aside>
-<a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a> is your new best friend.
-</aside>
-<ol type="1">
-<li>Click on the link for the repository.</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/repo-link.png" class="img-fluid figure-img" width="794"></p>
-<figcaption>Clink on the link to your assignment repository to get started.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Click the <code>Clone or download</code> button and copy the URL.</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/repo-clone.png" class="img-fluid figure-img" width="893"></p>
-<figcaption>Copy the HTTPS URL, and use it to create a new project in RStudio.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<ol start="3" type="1">
-<li>On the cloning machine (e.g., your own compute or the RStudio server), create a new R project with the URL copied from above. Follow the steps at https://happygitwithr.com/new-github-first.html (section 15.2 New RStudio Project via git clone).</li>
-</ol>
-</section>
-<section id="work-on-the-assignment-push-back-to-github" class="level1 page-columns page-full">
-<h1>Work on the assignment, push back to GitHub</h1>
-<aside>
-⚠ Always start your work session with a pull to the computer you are working on, and end your session with a push back to GitHub.
-</aside>
-<p>All of the GitHub interaction will take place through the RStudio IDE. The two important steps for getting the assignment back to GitHub are:</p>
-<section id="pull" class="level2">
-<h2 class="anchored" data-anchor-id="pull"><code>pull</code></h2>
-<p>If you are working with a colleague or on different machines it is so incredibly important to get in the habit of immediately clicking on <code>pull</code> when you start your work. (If you are working alone on a single machine <code>pull</code> won’t hurt! You’ll just be told that your files are already up to date.)</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/pull.png" class="img-fluid figure-img" width="379"></p>
-<figcaption>Always pull before you start. pull-work-save-commit-push</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="render-your-work" class="level2">
-<h2 class="anchored" data-anchor-id="render-your-work"><code>Render</code> your work</h2>
-<p>Don’t forget to put your name on the assignment. Also, make sure that you Render to pdf. Render early and often. The more often you Render, the fewer headaches you will have.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/name-render.png" class="img-fluid figure-img" width="796"></p>
-<figcaption>Always pull before you start. pull-work-render-commit-push</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="commit-your-work" class="level2">
-<h2 class="anchored" data-anchor-id="commit-your-work"><code>commit</code> your work</h2>
-<p>You don’t need to commit every file, but you do need to commit files that are integral to the analysis (always commit .qmd, .pdf, data files, images that created the pdf, etc.).</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/choose-commit.png" class="img-fluid figure-img" width="926"></p>
-<figcaption>pull-work-render-commit-push</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="push-your-work-to-github" class="level2">
-<h2 class="anchored" data-anchor-id="push-your-work-to-github"><code>push</code> your work to GitHub</h2>
-<p>It is good practice to use meaningful commit messages to help your future self figure out your past work.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/commit-push.png" class="img-fluid figure-img" width="959"></p>
-<figcaption>pull-work-render-commit-push</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="check-your-work-on-github" class="level2">
-<h2 class="anchored" data-anchor-id="check-your-work-on-github">check your work on GitHub</h2>
-<p>To make sure that the work went through, always check your GitHub repo online to confirm any changes you made.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/check-github.png" class="img-fluid figure-img" width="966"></p>
-<figcaption>Check that your changes are correct.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="submit-the-assignment-on-gradescope" class="level1 page-columns page-full">
-<h1>Submit the assignment on Gradescope</h1>
-<p>You will submit your assignments via Gradescope. To submit your assignment, complete the following steps:</p>
-<aside>
-The first time you submit, you may need to click “Connect to GitHub”, to connect your Gradescope account to your GitHub account.
-</aside>
-<ol type="1">
-<li>Access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method. You must access the course’s Gradescope site via the side menu in Canvas.</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/gradescope-sakai.png" class="img-fluid figure-img" width="476"></p>
-<figcaption>Access Gradescope via Canvas.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<ol start="2" type="1">
-<li>The first time you submit your repository, you will need to authorize Gradescope to access your git repository. Select the appropriate repository and branch (branch will almost always be <code>main</code>).</li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/gradescope-github.png" class="img-fluid figure-img" width="636"></p>
-<figcaption>Submit files directly from GitHub.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<ol start="3" type="1">
-<li>If this is a pair-programming submission, you will need to associate all team members with the submission. After you upload your files, click “Add Group Member” and add your partner to the submission. Add your team member to your Gradescope submission</li>
-</ol>
-<p>You can submit multiple times before the deadline. Your last submission will be assessed.</p>
-<p>Once assignments are assessed, you will be able to see feedback on GitHub. You can <code>pull</code> assignment feedback back onto your own computer.</p>
+<p>more soon.</p>
 
 <p>:::</p>
 
-</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
