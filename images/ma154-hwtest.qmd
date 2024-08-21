@@ -1,0 +1,10 @@
+---
+title: "Math 154 - Test HW"
+author: "Jo Hardin"
+date: "due: Thursday, Sep 2, 2019"
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="author" content="original content by Ben Wiedermann">
 <meta name="description" content="Huge thanks to Ben Wiedermann at HMC for sharing the following.">
 
-<title>Data Science, the SQL - Working on assignments with GitHub</title>
+<title>Foundations of Data Science in R - Working on assignments with GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -51,7 +51,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -60,6 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -73,14 +80,14 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a href="https://sds261-sql.netlify.app/" class="navbar-brand navbar-brand-logo">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://ds002r-fds.netlify.app/" class="navbar-brand navbar-brand-logo">
     <img src="./images/st47s.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="https://sds261-sql.netlify.app/">
-    <span class="navbar-title">Data Science, the SQL</span>
+    <a class="navbar-brand" href="https://ds002r-fds.netlify.app/">
+    <span class="navbar-title">Foundations of Data Science in R</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,29 +97,29 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html" rel="" target="">
- <span class="menu-text">Syllabus</span></a>
+    <a class="nav-link" href="./syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notes.html" rel="" target="">
- <span class="menu-text">Class Notes</span></a>
+    <a class="nav-link" href="./notes.html"> 
+<span class="menu-text">Class Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./clicker_study.html" rel="" target="">
- <span class="menu-text">Clicker Q</span></a>
+    <a class="nav-link" href="./clicker_study.html"> 
+<span class="menu-text">Clicker Q</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project.html" rel="" target="">
- <span class="menu-text">Final Project</span></a>
+    <a class="nav-link" href="./project.html"> 
+<span class="menu-text">Final Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./github.html" rel="" target="" aria-current="page">
- <span class="menu-text">GitHub</span></a>
+    <a class="nav-link active" href="./github.html" aria-current="page"> 
+<span class="menu-text">GitHub</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -142,20 +149,20 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-contents">
     <p class="author"><a href="https://m154-comp-stats.netlify.app/">Jo Hardin</a> </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Pomona College
           </p>
       </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
     <p class="author">original content by Ben Wiedermann </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             Harvey Mudd College
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -165,35 +172,38 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="working-on-assignments-with-github-and-gradescope" class="level1 page-columns page-full">
 <h1>Working on assignments with GitHub and Gradescope</h1>
-<p>In SDS 261, we will use GitHub to access and submit assignments. Here is the basic structure of how it will work:</p>
+<p>In DS002R, we will use GitHub + Gradescope to access and submit assignments. Here is the basic structure of how it will work:</p>
 <ol type="1">
-<li>Get the assignment materials from GitHub classroom.</li>
+<li>Get the assignment materials from GitHub.</li>
 <li>Clone the repository to any machine you are using.</li>
 <li>Work on the assignment and push back to GitHub.</li>
+<li>Submit the assignment on Gradescope.</li>
 </ol>
 <aside>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-1_eafe4389e88556d518bc723ef6c437d2">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/git_2x.png" class="img-fluid figure-img" alt="xkcd comic detailing that Git can be pretty complicated." width="330"></p>
-<figcaption class="figure-caption">image credit: https://xkcd.com/1597/,</figcaption>
+<p><img src="images/git_2x.png" class="img-fluid figure-img" width="330"></p>
+<figcaption>image credit: https://xkcd.com/1597/,</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </aside>
 <p>The following diagram lays out the process, and the rest of the document provides a more detailed set of instructions.</p>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-2_4c6e2b8b3bbc924c13569c550f2de207">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/git-workflow-nogradescope.png" class="img-fluid figure-img" alt="Flowchart demonstrating that assignments are recieved from Git, processed on your computer (iteratively with GitHub), and submitted to Gradescope." width="1113"></p>
-<figcaption class="figure-caption">Flowchart of assignment process.</figcaption>
+<p><img src="images/git-workflow.png" class="img-fluid figure-img" width="1025"></p>
+<figcaption>Flowchart of assignment process.</figcaption>
 </figure>
 </div>
 </div>
@@ -206,29 +216,29 @@ ul.task-list li input[type="checkbox"] {
 <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a> is your new best friend.
 </aside>
 <ol type="1">
-<li><p>The first step is to install R + RStudio + Git on your machine. (If you are planning to use Smith’s RStudio server, R + RStudio + Git are all three already installed for you.)</p></li>
+<li><p>The first step is to install R + RStudio + Git on your machine. (If you are planning to use Pomona’s RStudio server, R + RStudio + Git are all three already installed for you.)</p></li>
 <li><p>Create an account on GitHub (if you already have one, use it!).</p></li>
 <li><p>Introduce everyone: R + RStudio (should happen automatically); yourself to GitHub (see <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a>); RStudio + GitHub (see <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a>).</p></li>
 <li><p>Follow the rest of the steps that Jenny Bryan spells out in <a href="https://happygitwithr.com/" target="_blank">Happy Git and GitHub with R</a>. Most likely, you only need to work through step 12. Step 15 is detailed below after you have gotten the assignment from GitHub.</p></li>
 </ol>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-3_ac317273a607a07687fcbdd9b401205e">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/happygitwithr.png" class="img-fluid figure-img" alt="Screen shot of the Happy Git with R webpage." width="1191"></p>
-<figcaption class="figure-caption">The more you read Happy Git with R, the better your life will be.</figcaption>
+<p><img src="images/happygitwithr.png" class="img-fluid figure-img" width="1191"></p>
+<figcaption>The more you read Happy Git with R, the better your life will be.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="get-the-assignment-materials-from-github-classroom" class="level1 page-columns page-full">
-<h1>Get the assignment materials from GitHub Classroom</h1>
-<p>Each assignment will be provided as a link to GitHub classroom. Click the link. (The link will come to you via an email. If you lose the email, or the email goes to your spam folder, let me know or ask a friend for the link.)</p>
+<section id="get-the-assignment-materials-from-github" class="level1 page-columns page-full">
+<h1>Get the assignment materials from GitHub</h1>
+<p>Each assignment will be provided as a link to GitHub. Click the link. (The link will come to you via an email. If you lose the email, or the email goes to your spam folder, let me know or ask a friend for the link.)</p>
 <aside>
 When you use GitHub classroom for the first time, you’ll be asked to authorize GitHub classroom to access your repositories.
 </aside>
-<p>The lab assignments will be individual assignments. The project will be a paired or an individual assignment. To accept an individual assignment, click the “Accept this assignment” button.</p>
+<p>The homework assignments will be individual assignments. Some other assignments might be a paired assignment. To accept an individual assignment, click the “Accept this assignment” button.</p>
 <p>For all <strong>joint</strong> assignments, you will need to create a team before you can start.</p>
 <ul>
 <li>If you are working with a partner, create a team name that contains both of your GitHub ids. (If you are working by yourself, use your GitHub id as your team name.)</li>
@@ -236,14 +246,14 @@ When you use GitHub classroom for the first time, you’ll be asked to authorize
 <li>If you are working with a partner, the person who did <em>not</em> create the team and accept the assignment should now click the GitHub classroom link, find the newly created team, and click the Join button.</li>
 </ul>
 <aside>
-⚠ You may need to add a description of the assignment (for example “Lab 2”) to team name. This is because GitHub Classroom does seem to make it easy for some people to work in the same group as a previous assignment while other people form new groups.
+⚠ You may need to add a description of the assignment (for example “HW 2”) to team name. This is because GitHub Classroom does seem to make it easy for some people to work in the same group as a previous assignment while other people form new groups.
 </aside>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-4_b671c9ac1eed369acc0eff4cea1527a0">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/accept-assignment.png" class="img-fluid figure-img" alt="Screen shot of GitHub showing where to accept the assignment." width="675"></p>
-<figcaption class="figure-caption">Accept the assignment to create a different repository for every assignment.</figcaption>
+<p><img src="images/accept-assignment.png" class="img-fluid figure-img" width="675"></p>
+<figcaption>Accept the assignment to create a different repository for every assignment.</figcaption>
 </figure>
 </div>
 </div>
@@ -260,12 +270,12 @@ When you use GitHub classroom for the first time, you’ll be asked to authorize
 <ol type="1">
 <li>Click on the link for the repository.</li>
 </ol>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-5_b4c6dac3e1520aa6ee4166690c1cf06b">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/repo-link.png" class="img-fluid figure-img" alt="Screen shot of GitHub showing the new assignment repo." width="794"></p>
-<figcaption class="figure-caption">Clink on the link to your assignment repository to get started.</figcaption>
+<p><img src="images/repo-link.png" class="img-fluid figure-img" width="794"></p>
+<figcaption>Clink on the link to your assignment repository to get started.</figcaption>
 </figure>
 </div>
 </div>
@@ -273,12 +283,12 @@ When you use GitHub classroom for the first time, you’ll be asked to authorize
 <ol start="2" type="1">
 <li>Click the <code>Clone or download</code> button and copy the URL.</li>
 </ol>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-6_c6f0c3f9c6b42021bf8c504b564fda29">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/repo-clone.png" class="img-fluid figure-img" alt="Screen shot of GitHub showing the location of the repo URL." width="893"></p>
-<figcaption class="figure-caption">Copy the HTTPS URL, and use it to create a new project in RStudio.</figcaption>
+<p><img src="images/repo-clone.png" class="img-fluid figure-img" width="893"></p>
+<figcaption>Copy the HTTPS URL, and use it to create a new project in RStudio.</figcaption>
 </figure>
 </div>
 </div>
@@ -296,26 +306,26 @@ When you use GitHub classroom for the first time, you’ll be asked to authorize
 <section id="pull" class="level2">
 <h2 class="anchored" data-anchor-id="pull"><code>pull</code></h2>
 <p>If you are working with a colleague or on different machines it is so incredibly important to get in the habit of immediately clicking on <code>pull</code> when you start your work. (If you are working alone on a single machine <code>pull</code> won’t hurt! You’ll just be told that your files are already up to date.)</p>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-7_2db5c94544710d7fbfac979796013786">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/pull.png" class="img-fluid figure-img" alt="Screen shot of how to pull using the Rstudio IDE." width="379"></p>
-<figcaption class="figure-caption">Always pull before you start. pull-work-save-commit-push</figcaption>
+<p><img src="images/pull.png" class="img-fluid figure-img" width="379"></p>
+<figcaption>Always pull before you start. pull-work-save-commit-push</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
 <section id="render-your-work" class="level2">
-<h2 class="anchored" data-anchor-id="render-your-work"><code>render</code> your work</h2>
-<p>Don’t forget to put your name on the assignment. Also, make sure that you render to pdf. Render early and often. The more often you render, the fewer headaches you will have.</p>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-8_5412981903bff383d320668ce5950407">
+<h2 class="anchored" data-anchor-id="render-your-work"><code>Render</code> your work</h2>
+<p>Don’t forget to put your name on the assignment. Also, make sure that you Render to pdf. Render early and often. The more often you Render, the fewer headaches you will have.</p>
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/name-render.png" class="img-fluid figure-img" alt="Screen shot of how to render using the RStudio IDE." width="796"></p>
-<figcaption class="figure-caption">Always pull before you start. pull-work-render-commit-push</figcaption>
+<p><img src="images/name-render.png" class="img-fluid figure-img" width="796"></p>
+<figcaption>Always pull before you start. pull-work-render-commit-push</figcaption>
 </figure>
 </div>
 </div>
@@ -324,12 +334,12 @@ When you use GitHub classroom for the first time, you’ll be asked to authorize
 <section id="commit-your-work" class="level2">
 <h2 class="anchored" data-anchor-id="commit-your-work"><code>commit</code> your work</h2>
 <p>You don’t need to commit every file, but you do need to commit files that are integral to the analysis (always commit .qmd, .pdf, data files, images that created the pdf, etc.).</p>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-9_3ccfb0f63cb70479fd3a69d2cc7ab93b">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/choose-commit.png" class="img-fluid figure-img" alt="Screen shot of how to commit using the RStudio IDE." width="926"></p>
-<figcaption class="figure-caption">pull-work-render-commit-push</figcaption>
+<p><img src="images/choose-commit.png" class="img-fluid figure-img" width="926"></p>
+<figcaption>pull-work-render-commit-push</figcaption>
 </figure>
 </div>
 </div>
@@ -338,12 +348,12 @@ When you use GitHub classroom for the first time, you’ll be asked to authorize
 <section id="push-your-work-to-github" class="level2">
 <h2 class="anchored" data-anchor-id="push-your-work-to-github"><code>push</code> your work to GitHub</h2>
 <p>It is good practice to use meaningful commit messages to help your future self figure out your past work.</p>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-10_e9f930fed8b2241250e5d7d009e6edd5">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/commit-push.png" class="img-fluid figure-img" alt="Screen shot of how to push using the RStudio IDE." width="959"></p>
-<figcaption class="figure-caption">pull-work-render-commit-push</figcaption>
+<p><img src="images/commit-push.png" class="img-fluid figure-img" width="959"></p>
+<figcaption>pull-work-render-commit-push</figcaption>
 </figure>
 </div>
 </div>
@@ -352,24 +362,61 @@ When you use GitHub classroom for the first time, you’ll be asked to authorize
 <section id="check-your-work-on-github" class="level2">
 <h2 class="anchored" data-anchor-id="check-your-work-on-github">check your work on GitHub</h2>
 <p>To make sure that the work went through, always check your GitHub repo online to confirm any changes you made.</p>
-<div class="cell" data-hash="github_cache/html/unnamed-chunk-11_75cd1fbcc81166d4fd7820091c947ece">
+<div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/check-github.png" class="img-fluid figure-img" alt="Screen shot of checking GitHub changes online." width="966"></p>
-<figcaption class="figure-caption">Check that your changes are correct.</figcaption>
+<p><img src="images/check-github.png" class="img-fluid figure-img" width="966"></p>
+<figcaption>Check that your changes are correct.</figcaption>
 </figure>
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="submit-the-assignment-on-gradescope" class="level1 page-columns page-full">
+<h1>Submit the assignment on Gradescope</h1>
+<p>You will submit your assignments via Gradescope. To submit your assignment, complete the following steps:</p>
+<aside>
+The first time you submit, you may need to click “Connect to GitHub”, to connect your Gradescope account to your GitHub account.
+</aside>
+<ol type="1">
+<li>Access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method. You must access the course’s Gradescope site via the side menu in Canvas.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/gradescope-sakai.png" class="img-fluid figure-img" width="476"></p>
+<figcaption>Access Gradescope via Canvas.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>The first time you submit your repository, you will need to authorize Gradescope to access your git repository. Select the appropriate repository and branch (branch will almost always be <code>main</code>).</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/gradescope-github.png" class="img-fluid figure-img" width="636"></p>
+<figcaption>Submit files directly from GitHub.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>If this is a pair-programming submission, you will need to associate all team members with the submission. After you upload your files, click “Add Group Member” and add your partner to the submission. Add your team member to your Gradescope submission</li>
+</ol>
 <p>You can submit multiple times before the deadline. Your last submission will be assessed.</p>
 <p>Once assignments are assessed, you will be able to see feedback on GitHub. You can <code>pull</code> assignment feedback back onto your own computer.</p>
 
+<p>:::</p>
 
 </section>
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section></div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -449,10 +496,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ds002r-fds\.netlify\.app\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -462,8 +526,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -475,7 +548,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -519,6 +715,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -544,6 +741,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -606,13 +829,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://hardin47.netlify.app/research/"><i class="fa-solid fa-book" aria-label="book"></i></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
-<a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></div>   
+    <div class="nav-footer-left">
+<p><a href="https://hardin47.netlify.app/research/"><i class="fa-solid fa-book" aria-label="book"></i></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
+<a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></p>
+</div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
  <br> © Jo Hardin, 2024 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
-Math 150 -- Methods in Biostatistics -- Pomona College, Claremont, CA <br>
+DS002R -- Foundations of Data Science in R -- Pomona College <br>
   </li>  
 </ul>
     </div>
@@ -621,6 +846,7 @@ Math 150 -- Methods in Biostatistics -- Pomona College, Claremont, CA <br>
     </div>
   </div>
 </footer>
+
 
 
 

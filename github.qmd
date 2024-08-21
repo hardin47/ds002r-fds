@@ -34,11 +34,12 @@ set.seed(4747)
 # Working on assignments with GitHub and Gradescope
 
 
-In SDS 261, we will use GitHub to access and submit assignments.  Here is the basic structure of how it will work:
+In DS002R, we will use GitHub + Gradescope to access and submit assignments.  Here is the basic structure of how it will work:
 
-1. Get the assignment materials from GitHub classroom.
+1. Get the assignment materials from GitHub.
 2. Clone the repository to any machine you are using.
 3. Work on the assignment and push back to GitHub.
+4. Submit the assignment on Gradescope.
 
 <aside>
 ```{r echo = FALSE, fig.cap="image credit: https://xkcd.com/1597/,", fig.alt = "xkcd comic detailing that Git can be pretty complicated."}
@@ -49,7 +50,7 @@ include_graphics("images/git_2x.png")
 The following diagram lays out the process, and the rest of the document provides a more detailed set of instructions.
 
 ```{r echo = FALSE, fig.cap="Flowchart of assignment process.", fig.alt = "Flowchart demonstrating that assignments are recieved from Git, processed on your computer (iteratively with GitHub), and submitted to Gradescope."}
-include_graphics("images/git-workflow-nogradescope.png")
+include_graphics("images/git-workflow.png")
 ```
 
 # Installing R + RStudio + Git
@@ -60,7 +61,7 @@ Most importantly, please become familiar with <a href = "https://happygitwithr.c
 <a href = "https://happygitwithr.com/" target = "_blank">Happy Git and GitHub with R</a> is your new best friend.
 </aside>
 
-1. The first step is to install R + RStudio + Git on your machine.  (If you are planning to use Smith's RStudio server, R + RStudio + Git are all three already installed for you.)
+1. The first step is to install R + RStudio + Git on your machine.  (If you are planning to use Pomona's RStudio server, R + RStudio + Git are all three already installed for you.)
 
 2. Create an account on GitHub (if you already have one, use it!).
 
@@ -72,16 +73,16 @@ Most importantly, please become familiar with <a href = "https://happygitwithr.c
 include_graphics("images/happygitwithr.png")
 ```
 
-# Get the assignment materials from GitHub Classroom
+# Get the assignment materials from GitHub
 
-Each assignment will be provided as a link to GitHub classroom. Click the link.  (The link will come to you via an email. If you lose the email, or the email goes to your spam folder, let me know or ask a friend for the link.)
+Each assignment will be provided as a link to GitHub. Click the link.  (The link will come to you via an email. If you lose the email, or the email goes to your spam folder, let me know or ask a friend for the link.)
 
 <aside>
 When you use GitHub classroom for the first time, you'll be asked to authorize GitHub classroom to access your repositories.
 </aside>
 
-The lab assignments will be individual assignments.
-The project will be a paired or an individual assignment.
+The homework assignments will be individual assignments.
+Some other assignments might be a paired assignment.
 To accept an individual assignment, click the "Accept this assignment" button.
 
 For all **joint** assignments, you will need to create a team before you can start.
@@ -91,7 +92,7 @@ For all **joint** assignments, you will need to create a team before you can sta
 * If you are working with a partner, the person who did *not* create the team and accept the assignment should now click the GitHub classroom link, find the newly created team, and click the Join button.
 
 <aside>
-&#9888; You may need to add a description of the assignment (for example “Lab 2”) to team name. This is because GitHub Classroom does seem to make it easy for some people to work in the same group as a previous assignment while other people form new groups.
+&#9888; You may need to add a description of the assignment (for example “HW 2”) to team name. This is because GitHub Classroom does seem to make it easy for some people to work in the same group as a previous assignment while other people form new groups.
 </aside>
 
 ```{r echo = FALSE, fig.cap="Accept the assignment to create a different repository for every assignment.", fig.alt = "Screen shot of GitHub showing where to accept the assignment."}
@@ -144,11 +145,11 @@ If you are working with a colleague or on different machines it is so incredibly
 include_graphics("images/pull.png")
 ```
 
-## `render` your work
+## `Render` your work
 
-Don't forget to put your name on the assignment.  Also, make sure that you render to pdf.  Render early and often.  The more often you render, the fewer headaches you will have.
+Don't forget to put your name on the assignment.  Also, make sure that you Render to pdf.  Render early and often.  The more often you Render, the fewer headaches you will have.
 
-```{r echo = FALSE, fig.cap="Always pull before you start. pull-work-render-commit-push", fig.alt = "Screen shot of how to render using the RStudio IDE."}
+```{r echo = FALSE, fig.cap="Always pull before you start. pull-work-render-commit-push", fig.alt = "Screen shot of how to Render using the RStudio IDE."}
 include_graphics("images/name-render.png")
 ```
 
@@ -175,6 +176,31 @@ To make sure that the work went through, always check your GitHub repo online to
 ```{r echo = FALSE, fig.cap="Check that your changes are correct.", fig.alt = "Screen shot of checking GitHub changes online."}
 include_graphics("images/check-github.png")
 ```
+
+
+# Submit the assignment on Gradescope
+
+You will submit your assignments via Gradescope.
+To submit your assignment, complete the following steps:
+
+<aside>
+The first time you submit, you may need to click "Connect to GitHub", to connect your Gradescope account to your GitHub account.
+</aside>
+
+1. Access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method.  You must access the course's Gradescope site via the side menu in Canvas.
+
+```{r echo = FALSE, fig.cap="Access Gradescope via Canvas.", fig.alt = "Screen shot of Gradescope connection from inside Canvas."}
+include_graphics("images/gradescope-sakai.png")
+``` 
+
+2. The first time you submit your repository, you will need to authorize Gradescope to access your git repository. Select the appropriate repository and branch (branch will almost always be `main`).
+
+```{r echo = FALSE, fig.cap="Submit files directly from GitHub.", fig.alt = "Screen shot of Gradescope instruction to submit via GitHub."}
+include_graphics("images/gradescope-github.png")
+``` 
+
+3. If this is a pair-programming submission, you will need to associate all team members with the submission. After you upload your files, click "Add Group Member" and add your partner to the submission. Add your team member to your Gradescope submission
+
 
 
 You can submit multiple times before the deadline. Your last submission will be assessed.

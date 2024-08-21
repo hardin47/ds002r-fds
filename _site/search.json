@@ -207,7 +207,7 @@
     "href": "github.html",
     "title": "Working on assignments with GitHub",
     "section": "",
-    "text": "In SDS 261, we will use GitHub to access and submit assignments. Here is the basic structure of how it will work:\n\nGet the assignment materials from GitHub classroom.\nClone the repository to any machine you are using.\nWork on the assignment and push back to GitHub.\n\n\n\n\n\n\n\nimage credit: https://xkcd.com/1597/,\n\n\n\n\n\nThe following diagram lays out the process, and the rest of the document provides a more detailed set of instructions.\n\n\n\n\n\nFlowchart of assignment process."
+    "text": "In DS002R, we will use GitHub + Gradescope to access and submit assignments. Here is the basic structure of how it will work:\n\nGet the assignment materials from GitHub.\nClone the repository to any machine you are using.\nWork on the assignment and push back to GitHub.\nSubmit the assignment on Gradescope.\n\n\n\n\n\n\n\nimage credit: https://xkcd.com/1597/,\n\n\n\n\n\nThe following diagram lays out the process, and the rest of the document provides a more detailed set of instructions.\n\n\n\n\n\nFlowchart of assignment process."
   },
   {
     "objectID": "github.html#pull",
@@ -242,7 +242,7 @@
     "href": "github.html#check-your-work-on-github",
     "title": "Working on assignments with GitHub",
     "section": "check your work on GitHub",
-    "text": "check your work on GitHub\nTo make sure that the work went through, always check your GitHub repo online to confirm any changes you made.\n\n\n\n\n\nCheck that your changes are correct.\n\n\n\n\nYou can submit multiple times before the deadline. Your last submission will be assessed.\nOnce assignments are assessed, you will be able to see feedback on GitHub. You can pull assignment feedback back onto your own computer."
+    "text": "check your work on GitHub\nTo make sure that the work went through, always check your GitHub repo online to confirm any changes you made.\n\n\n\n\n\nCheck that your changes are correct."
   },
   {
     "objectID": "project.html#big-picture",
@@ -416,8 +416,8 @@
     "objectID": "github.html#render-your-work",
     "href": "github.html#render-your-work",
     "title": "Working on assignments with GitHub",
-    "section": "render your work",
-    "text": "render your work\nDon’t forget to put your name on the assignment. Also, make sure that you render to pdf. Render early and often. The more often you render, the fewer headaches you will have.\n\n\n\n\n\nAlways pull before you start. pull-work-render-commit-push"
+    "section": "Render your work",
+    "text": "Render your work\nDon’t forget to put your name on the assignment. Also, make sure that you Render to pdf. Render early and often. The more often you Render, the fewer headaches you will have.\n\n\n\n\n\nAlways pull before you start. pull-work-render-commit-push"
   },
   {
     "objectID": "slides/2024-01-08-db.html#steps-for-weekly-homework",
