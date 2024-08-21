@@ -106,7 +106,7 @@ schedule <- tribble(
   ' ',
   
   
-     "Week 13 <br> 11.18.24", ' ', 
+     "Week 13 <br> 11.18.24", 'Shiny', 
   ' ',
   ' ',
   ' ',

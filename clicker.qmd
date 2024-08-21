@@ -3,11 +3,6 @@
 
 to go with <b><a href = "https://mdsr-book.github.io/mdsr3e/" target = "_blank">Modern Data Science with R, 3rd edition</a></b> by Baumer, Kaplan, and Horton.  
 
-Many questions taken directly from 
-* <a href = "https://www.w3schools.com/quiztest/quiztest.asp?qtest=SQL" target = "_blank">w3schools SQL quiz</a>.
-* <a href = "https://www.javaguides.net/2023/07/sql-quiz.html" target = "_blank">Java Guides</a>
-* <a href = "https://study.com/academy/practice/quiz-worksheet-sql-foreign-keys.html" target = "_blank">study.com</a>
-
 <!-- the two formats are html and revealjs -->
 
 
