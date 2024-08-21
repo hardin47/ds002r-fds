@@ -116,17 +116,17 @@ R is freely available at <a href = "http://www.r-project.org/" target = "_blank"
 
 #### GitHub
 
-Assignments will be turned in using GitHub.  See <a href = "https://sds261-sql.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website.
+Assignments will be turned in using GitHub.  See <a href = "https://ds002r-fds.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website.
 
 ## Important Features
 
 #### Prerequisites:
 
-The prerequisite for this class is SDS 192, Introduction to Data Science.
+The prerequisite for this class is some computer science.
 
 #### Labs:
 
-Labs will take place on most days with the lab write-up due just before the following class period. See <a href = "https://sds261-sql.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website for how to turn in assignments.
+Labs will take place on most days with the lab write-up due just before the following class period. See <a href = "https://ds002r-fds.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website for how to turn in assignments.
 
 #### Grading:
 
