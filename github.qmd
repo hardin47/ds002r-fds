@@ -75,34 +75,17 @@ include_graphics("images/happygitwithr.png")
 
 # Get the assignment materials from GitHub
 
-Each assignment will be provided as a link to GitHub. Click the link.  (The link will come to you via an email. If you lose the email, or the email goes to your spam folder, let me know or ask a friend for the link.)
 
-<aside>
-When you use GitHub classroom for the first time, you'll be asked to authorize GitHub classroom to access your repositories.
-</aside>
+Each assignment will be provided within a separate GitHub repository. You will get to the specific repository via the <a href = "https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">course organization</a>. 
 
-The homework assignments will be individual assignments.
-Some other assignments might be a paired assignment.
-To accept an individual assignment, click the "Accept this assignment" button.
 
-For all **joint** assignments, you will need to create a team before you can start.
-
-* If you are working with a partner, create a team name that contains both of your GitHub ids. (If you are working by yourself, use your GitHub id as your team name.)
-* One partner accepts the assignment and creates the team.
-* If you are working with a partner, the person who did *not* create the team and accept the assignment should now click the GitHub classroom link, find the newly created team, and click the Join button.
-
-<aside>
-&#9888; You may need to add a description of the assignment (for example “HW 2”) to team name. This is because GitHub Classroom does seem to make it easy for some people to work in the same group as a previous assignment while other people form new groups.
-</aside>
-
-```{r echo = FALSE, fig.cap="Accept the assignment to create a different repository for every assignment.", fig.alt = "Screen shot of GitHub showing where to accept the assignment."}
-include_graphics("images/accept-assignment.png")
+```{r echo = FALSE, fig.cap="The course organization which lists all of the assignment repositories.  Click on the repository associated with the specific week's HW assignment.", fig.alt = "Screen shot of GitHub showing what the course organization will look like for a given student."}
+include_graphics("images/hw-repos.png")
 ```
 
-The assignment files will be copied as a private repository that you (and your partner, if applicable) that the professor has access to.
+The assignment files will be copied as a private repository that you (and your partner(s), if applicable) and the course TAs have access to.  Notice that all of the repos are tagged "private."
 
-We will call this version, that lives on your personal GitHub account the *GitHub fork*.
-
+We will call this version, that lives on your personal GitHub account, the *GitHub fork*.
 
 
 # Clone the assignment (or project) repository on to your own computer(s)
@@ -113,13 +96,9 @@ Once your repository has been created, you should clone the code to whatever com
 <a href = "https://happygitwithr.com/" target = "_blank">Happy Git and GitHub with R</a> is your new best friend.
 </aside>
 
-1. Click on the link for the repository.
+1. From the course organization, lick on the link for the correct repository.
 
-```{r echo = FALSE, fig.cap="Clink on the link to your assignment repository to get started.", fig.alt = "Screen shot of GitHub showing the new assignment repo."}
-include_graphics("images/repo-link.png")
-```
-
-2. Click the `Clone or download` button and copy the URL.
+2. Click the green `Code` button and copy the URL.
 
 ```{r echo = FALSE, fig.cap="Copy the HTTPS URL, and use it to create a new project in RStudio.", fig.alt = "Screen shot of GitHub showing the location of the repo URL."}
 include_graphics("images/repo-clone.png")
@@ -180,7 +159,10 @@ include_graphics("images/check-github.png")
 
 # Submit the assignment on Gradescope
 
-You will submit your assignments via Gradescope.
+You will submit your assignments via Gradescope on Canvas.
+
+<span style="color:red">ITS and I are still working through a few kinks getting GitHub and Gradescope to talk to one another on Canvas.  The instructions below are old from Sakai.  They will be updated once the Canvas process is in place.</span>
+
 To submit your assignment, complete the following steps:
 
 <aside>

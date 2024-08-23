@@ -26,6 +26,8 @@ Here's your roadmap for the semester! Each day, follow the general process outli
 
 -   The textbooks are <b> <a href = "https://mdsr-book.github.io/mdsr3e/" target = "_blank">Modern Data Science with R (MDSR), 3rd edition</a></b> by Baumer, Kaplan, and Horton and <b> <a href = "https://r4ds.hadley.nz/" target = "_blank">R for Data Science (R4DS), 2nd edition</a></b> by Wickham, Çetinkaya-Rundel, and Grolemund.
 
+-   Homework assignments are found at the <a href = "https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">GitHub course organization</a>.  Due dates are provided on each assignment (roughly every other week).  See the <a href = "https://ds002r-fds.netlify.app/github">course GitHub page</a> for more information on how to find, complete, and submit assignments.
+
 <!--
 In order to use the icons, you need the fontawesome extension, https://github.com/quarto-ext/fontawesome
 
@@ -36,43 +38,43 @@ quarto add quarto-ext/fontawesome
 ```{r}
 #| echo: false
 schedule <- tribble(
-  ~`date`, ~topic, ~`in class`, ~`in lab`, ~resources,
+  ~`date`, ~topic, ~`class materials`, ~`due dates`, ~resources,
   "Week 1 <br> 8.26.24", 'intro + <br> R + RStudio + <br> GitHub + <br> ggplot', 
   '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html#sec-dplyr-sql" target = "_blank"> MDSR 15.1</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa desktop >}} <a href="https://sds261-sql.netlify.app/slides/2024-01-08-db.html" target = "_blank"> What is a DB?</a> <br> {{< fa pencil >}} <a href="https://sds261-sql.netlify.app/handout/ws1_sds261_j24.pdf" target = "_blank">WS 1</a>',
-  '{{< fa code >}} <a href="https://sds261-sql.netlify.app/handout/lab1_db_sds261_j24.html" target = "_blank">Lab 1</a>',
-  '{{< fa comments >}} <a href = "https://dbplyr.tidyverse.org/articles/dbplyr.html" target = "_blank"><b>dbplyr</b> package</a>',
+  ' ',
+  '{{< fa comments >}} ',
   
    "Week 2 <br> 9.2.24", 'no class Mon <br> ggplot', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 0</a> - due 9.3',
   ' ',
   
    "Week 3 <br> 9.9.24", 'tidyverse', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 1</a> - due 9.10 <br> Quiz 9.11',
   ' ',
 
      "Week 4 <br> 9.16.24", 'tidy strings', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project1" target = "_blank">Project 1</a> - due 9.18',
   ' ',
 
   
      "Week 5 <br> 9.23.24", 'map + <br>functions', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 2</a> - due 9.24 <br> Quiz 9.25',
   ' ',
 
   
      "Week 6 <br> 9.30.24", 'iteration + <br>simulations', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project2" target = "_blank">Project 2</a> - due 10.2',
   ' ',
 
   
      "Week 7 <br> 10.7.24", 'permutation tests ', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 3</a> - due 10.8 <br> Quiz 10.9',
   ' ',
 
   
@@ -84,31 +86,31 @@ schedule <- tribble(
   
      "Week 9 <br> 10.21.24", 'web scraping', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 4</a> - due 10.22 <br> Quiz 10.23',
   ' ',
 
   
      "Week 10 <br> 10.28.24", 'SQL', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project3" target = "_blank">Project 3</a> - due 10.30',
   ' ',
   
   
      "Week 11 <br> 11.4.24", 'regular expressions', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 5</a> - due 11.5 <br> Quiz 11.6',
   ' ',
   
   
      "Week 12 <br> 11.11.24", 'text analysis', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project4" target = "_blank">Project 4</a> - due 11.13',
   ' ',
   
   
      "Week 13 <br> 11.18.24", 'Shiny', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 6</a> - due 11.19 <br> Quiz 11.20',
   ' ',
 
      "Week 14 <br> 11.25.24", 'no class Wed <br>', 
@@ -118,7 +120,8 @@ schedule <- tribble(
 
      "Week 15 <br> 12.2.24", ' ', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project5" target = "_blank">Project 5</a> - due 12.4 <br> + presentations',
+
   ' '
 )
   
