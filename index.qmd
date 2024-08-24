@@ -135,8 +135,8 @@ schedule <- tribble(
 schedule |> 
   gt::gt() |> 
   gt::fmt_markdown(columns = everything()) |> 
-  gt::cols_width(date ~ px(70),
-                 everything() ~ px(200))
+  gt::cols_width(date ~ px(100),
+                 everything() ~ px(300))
 ```
 
 
