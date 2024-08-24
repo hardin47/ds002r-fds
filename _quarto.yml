@@ -27,6 +27,8 @@ website:
         href: notes.qmd
       - text: "Clicker Q"
         href: clicker_study.qmd
+      - text: "R tip"
+        href: R-tip.qmd
       - text: "Project"
         menu: 
          - text: "semester mini-projects"

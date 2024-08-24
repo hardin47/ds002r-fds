@@ -1,0 +1,42 @@
+---
+title: "R tip-of-the-day"
+description: |
+  So many awesome ways to do R.  I'll share some, you'll share some, it will be fun.
+format: html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+<aside>
+```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "At first R and the monster are in a storm, very unhappy. Then R and the monster are happy in the sunshine.", preview = TRUE, echo = FALSE, out.width = "300px"}
+knitr::include_graphics("images/R_first_then.png")
+```
+</aside>
+
+```{r}
+#| echo: false
+schedule <- tribble(
+  ~`number`, ~tip, ~`description`, ~`misc`,
+  "Tip 1", 'cmd + opt + i', 
+  'creates a new R chunk',
+  'cntrl + alt + i <br> for PC',
+)
+```
+
+```{r}
+#| echo: false
+#| column: page
+# can also use column: screen-inset also the entire page??
+# can use column: page for the entire page
+# can use column: body-outset to bleed outside the center column of text
+schedule |> 
+  gt::gt() |> 
+  gt::fmt_markdown(columns = everything()) |> 
+  gt::cols_width(number ~ px(60),
+                 everything() ~ px(150))
+```
+
+
