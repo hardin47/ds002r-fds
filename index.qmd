@@ -128,7 +128,7 @@ schedule <- tribble(
 
 ```{r}
 #| echo: false
-#| column: body-outset
+#| column: screen-inset
 # can also use column: screen-inset also the entire page??
 # can use column: page for the entire page
 # can use column: body-outset to bleed outside the center column of text
