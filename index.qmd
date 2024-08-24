@@ -128,15 +128,15 @@ schedule <- tribble(
 
 ```{r}
 #| echo: false
-#| column: screen-inset
+#| column: page
 # can also use column: screen-inset also the entire page??
 # can use column: page for the entire page
 # can use column: body-outset to bleed outside the center column of text
 schedule |> 
   gt::gt() |> 
   gt::fmt_markdown(columns = everything()) |> 
-  gt::cols_width(date ~ px(100),
-                 everything() ~ px(300))
+  gt::cols_width(date ~ px(200),
+                 everything() ~ px(500))
 ```
 
 
