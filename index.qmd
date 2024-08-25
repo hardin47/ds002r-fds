@@ -40,18 +40,18 @@ quarto add quarto-ext/fontawesome
 schedule <- tribble(
   ~`date`, ~topic, ~`class materials`, ~`due dates`, ~resources,
   "Week 1 <br> 8.26.24", 'intro + <br> R + RStudio + <br> GitHub + <br> ggplot', 
-  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr2e/ch-prologue.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-26-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds002r_f24.pdf" target = "_blank">WS 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds002r_f24.pdf" target = "_blank">WS 2</a>',
+  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr2e/ch-prologue.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-26-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds002r_f24.pdf" target = "_blank">WS 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds002r_f24.pdf" target = "_blank">WS 2</a>',
   ' ',
   '{{< fa comments >}} ',
   
    "Week 2 <br> 9.2.24", 'no class Mon <br> ggplot', 
-  ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 0</a> - due 9.3',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> ',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 1</a> - due 9.3',
   ' ',
   
    "Week 3 <br> 9.9.24", 'tidyverse', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 1</a> - due 9.10 <br> Quiz 9.11',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 2</a> - due 9.10 <br> Quiz 9.11',
   ' ',
 
      "Week 4 <br> 9.16.24", 'tidy strings', 
@@ -62,7 +62,7 @@ schedule <- tribble(
   
      "Week 5 <br> 9.23.24", 'map + <br>functions', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 2</a> - due 9.24 <br> Quiz 9.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 3</a> - due 9.24 <br> Quiz 9.25',
   ' ',
 
   
@@ -74,7 +74,7 @@ schedule <- tribble(
   
      "Week 7 <br> 10.7.24", 'permutation tests ', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 3</a> - due 10.8 <br> Quiz 10.9',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 4</a> - due 10.8 <br> Quiz 10.9',
   ' ',
 
   
@@ -86,7 +86,7 @@ schedule <- tribble(
   
      "Week 9 <br> 10.21.24", 'web scraping', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 4</a> - due 10.22 <br> Quiz 10.23',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 5</a> - due 10.22 <br> Quiz 10.23',
   ' ',
 
   
@@ -98,7 +98,7 @@ schedule <- tribble(
   
      "Week 11 <br> 11.4.24", 'regular expressions', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 5</a> - due 11.5 <br> Quiz 11.6',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 6</a> - due 11.5 <br> Quiz 11.6',
   ' ',
   
   
@@ -110,7 +110,7 @@ schedule <- tribble(
   
      "Week 13 <br> 11.18.24", 'Shiny', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 6</a> - due 11.19 <br> Quiz 11.20',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 7</a> - due 11.19 <br> Quiz 11.20',
   ' ',
 
      "Week 14 <br> 11.25.24", 'no class Wed <br>', 

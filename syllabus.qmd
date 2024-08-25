@@ -6,9 +6,17 @@ format: html
 # Foundations of Data Science in R
 ## DS002R, Fall 2024
 
-Class: daily 10-11:30am  
-Lab: daily (not Fridays) 1:30-3pm  
-Office hours: daily 11:30-1:30pm 
+Jo Hardin
+2351 Estella
+jo.hardin@pomona.edu
+
+**Office Hours: Mon 3:30-4:30pm, Tues 10-11am & 2:30-3:30pm, Thurs 10am-noon**
+
+**Mentor Sessions:**  
+Mon 8-10pm, Tues 8-10pm   
+Estella 1041  
+Mentors: Federica Domecq Lacroze and Z Skigen 
+
 
 ```{r}
 #| fig.cap: "Artwork by @allison_horst."
@@ -57,78 +65,145 @@ I (like many people) am still in the process of learning about diverse perspecti
 
 ## Technical Details
 
-##### Text: 
+#### Text: 
 <b> <a href = "https://mdsr-book.github.io/mdsr3e/" target = "_blank">Modern Data Science with R, 3rd edition</a></b> by Baumer, Kaplan, and Horton.
 
 <b><a href = "https://r4ds.hadley.nz/" target = "_blank">R for Data Science, 2nd edition</a></b> by Wickham, Çetinkaya-Rundel, and Grolemund.
 
-:::{.callout-tip icon=false}
-## Dates
 
- 
+:::{.callout-tip icon=false}
+### Dates
+* Check-in quizzes on 9.11, 9.25, 10.9, 10.23, 11.6, and 11.20 (in class)
+* 9.18.24 Project 1 due
+* 10.2.24 Project 2 due 
+* 10.30.24 Project 3 due
+* 11.13.24 Project 4 due 
+* 12.4.24 Project 5 due 
+* 12.2.24 (4:15pm) Data Science Panel with industry data scientists
+* 12.6.24 (Friday) or 12.9.24 (Monday) Project Presentations (9am-noon) 
+* 12.9.24 Final project(s) write-up due (on GitHub by midnight) 
 :::
 
-#### R links:
+## Links to resources:
 
-* <a href = "http://cran.r-project.org/web/packages/mosaic/vignettes/V1MinimalR.pdf" target = "_blank">Enough R</a>
-* <a href = "https://pages.pomona.edu/~jsh04747/courses/RTutorial.pdf" target = "_blank">R tutorial</a>
-* Great tutorials through the <a href = "https://ourcodingclub.github.io/tutorials.html" target = "_blank">Coding Club</a>
-* A true beginner's <a href = "https://spielmanlab.github.io/introverse/index.html" target = "_blank">introduction to the tidyverse</a>, the **introverse**.
+### Git resources
+
+:::note
+* Best and most comprehensive Git help: <a href="http://happygitwithr.com/" target="_blank">http://happygitwithr.com/</a>
+* <a href="http://swcarpentry.github.io/git-novice/" target="_blank">Version control with Git</a>
+* <a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/#2.4.2." target="_blank">More on Git</a>
+* <a href="https://git-scm.com/book/en/v2" target="_blank">Online Git book</a> with lots of info
+:::
+
+### R resources
+
+:::note
+<!--* <a href="https://rstudio.cloud/learn/primers" target="_blank">interactive tutorials</a> for working through "R for Data Science"
 * <a href="https://education.rstudio.com/learn/" target="_blank">for a good start</a> to R in general
+* some <a href = "someRideas.html" target="_blank">R ideas</a> that I wrote up 
+-->
 * A fantastic <a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/" target="_blank">ggplot2 tutorial</a>
 * Great tutorials through the <a href="https://ourcodingclub.github.io/tutorials/" target="_blank">Coding Club</a>
 * <a href="http://www.rseek.org/" target="_blank">Google for R</a>
-* some <a href = "http://st47s.com/Math150/Notes/rfunc.html" target="_blank">R ideas</a> that I wrote up 
-* Incredibly helpful <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
-   * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf" target="_blank">data wrangling</a>
-   * <a href="https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf" target="_blank">ggplot2</a>
-   * <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf" target="_blank">R Markdown</a>
-   * <a href="https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf" target="_blank">RStudio IDE</a>
+* Incredibly helpful <a href="https://posit.co/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
+   * <a href="https://rstudio.github.io/cheatsheets/html/data-transformation.html" target="_blank">data wrangling</a>
+   * <a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html" target="_blank">ggplot2</a>
+   * <a href="https://rstudio.github.io/cheatsheets/html/shiny.html" target="_blank">Shiny</a>
+   * <a href="https://rstudio.github.io/cheatsheets/html/quarto.html" target="_blank">Quarto</a>
+   * <a href="https://rstudio.github.io/cheatsheets/html/rstudio-ide.html" target="_blank">RStudio IDE</a>
+:::
 
-#### SQL links
+### SQL resources
 
+:::note
 * W3 schools <a href = "https://www.w3schools.com/sql/sql_intro.asp" target = "_blank">Introduction to SQL</a>
 * W3 schools <a href = "https://www.w3resource.com/sql-exercises/" target = "_blank">SQL Exercises, Practice, Solution</a>
 * <a href = "https://cran.r-project.org/web/views/Databases.html" target = "_blank">R packages</a> for working with databases
 * <a href = "https://dbplyr.tidyverse.org/articles/dbplyr.html" target = "_blank">Introduction to `dbplyr`</a>
+:::
 
-#### Regular expression links
+### Regular expression resources
 
+:::note
 * <a href = "https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html" target = "_blank">**stringr** vignette</a>
 * <a href = "https://stringr.tidyverse.org/" target = "_blank">**stringr** package</a>
 * Jenny Bryan et al.'s <a href = "https://stat545.com/character-vectors.html" target = "_blank">STAT 545 notes</a>
-* Hadley Wickham's book <a href = "https://r4ds.had.co.nz/strings.html" target = "_blank">R for Data Science</a>
 * <a href = "http://regexpal.com/" target = "_blank">regexpal</a>   
 * <a href = "http://www.regexr.com/" target = "_blank">RegExr</a>
 * <a href = "https://regexone.com/" target = "_balnk">RegexOne</a>
+:::
 
 
 
+##### HW Grading
+
+Homework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.
+
+[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.  
+[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. **Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers.**  
+[3] Close to all problems completed with less than 75% correct.  
+[2] More than half but fewer than all problems completed and > 75% correct.  
+[1] More than half but fewer than all problems completed and < 75% correct; OR less than half of problems completed.  
+[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub.  
 
 
-#### Using R (through the RStudio IDE)
+## Projects:
 
-R will be used for many assignments.
-You can use R on the Smith server: <a href = "https://rstudio.smith.edu/" target = "_blank">https://rstudio.smith.edu/</a>.
+There will be a semester long group project. Your task is to use data to tell us something interesting. This project is deliberately open-ended to allow you to fully explore your creativity. There are three main rules that must be followed: (1) data centered, (2) tell us something, (3) do something new. Project information is available here: [Math 154 Semester Project](/project/)
 
-Alternatively, feel free to download both R and RStudio onto your own computer.
-R is freely available at <a href = "http://www.r-project.org/" target = "_blank">http://www.r-project.org/</a>; RStudio is also free and allows you to turn in all R assignments using Quarto <a href = "http://rstudio.org/" target = "_blank">http://rstudio.org/</a>.
 
-#### GitHub
+## Computing:
 
-Assignments will be turned in using GitHub.  See <a href = "https://ds002r-fds.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website.
+* GitHub will be used as a way to practice reproducible and collaborative science. There may be a slight learning curve, but knowing Git will be an extremely useful skill as you venture beyond this class.
 
-## Important Features
+* R will be used for all homework assignments. R is freely available at <a href="http://www.r-project.org/" target="_blank">http://www.r-project.org/</a> and is already installed on college computers. Additionally, you need to install R Studio in order to use Quarto, <a href="https://posit.co/downloads/" target="_blank">https://posit.co/downloads/</a>. If you are not already familiar with R, please work through some of the materials provided ASAP. 
 
-#### Prerequisites:
+* You are welcome to use Pomona's R Studio server at <a href="https://rstudio.campus.pomona.edu/" target="_blank">https://rstudio.campus.pomona.edu/</a> (or <a href="https://rstudio.pomona.edu" target="_blank">https://rstudio.pomona.edu</a> if you are off campus). If you use the server, you can connect directly to your Git account without installing Git locally on your own computer. [If you are not a Pomona student, you will need to get an account from Pomona's ITS. Go to ITS, tell them that you are taking a Pomona course, and ask for an account for using RStudio.]
 
-The prerequisite for this class is some computer science.
+## Engagement:
 
-#### Labs:
+* This class will be interactive, and your engagement is expected (every day in class). Although notes will be posted, your engagement is an integral part of the in-class learning process.
 
-Labs will take place on most days with the lab write-up due just before the following class period. See <a href = "https://ds002r-fds.netlify.app/syllabus" target = "_blank">instructions for using GitHub</a> on the course website for how to turn in assignments.
+* In class: after answering one question, wait until 5 other people have spoken before answering another question. [Feel free to ask as many questions as often as you like!]
+ 	
 
-#### Grading:
+## Academic Honesty:
+You are on your honor to present only your work as part of your course  assessments.  Below, I've provided Pomona's academic honesty policy.  But before the policy, I've given some thoughts on cheating which I have taken from Nick Ball's CHEM 147 Collective (thank you, Prof Ball!).  Prof Ball gives us all something to think about when we are learning in a classroom as well as on our journey to become scientists and professionals:
 
-The class expectations are that you show up for class and labs and turn in a final project. A successful final project is required to pass the class.  Additionally, you should not miss more than 1 or 2 classes nor should you miss turning in more than 1 or 2 labs.
+There are many known reasons why we may feel the need to "cheat" on problem sets or exams:
 
+::: {note}
+  * An academic environment that values grades above learning.
+  * Financial aid is critical for remaining in school that places undue pressure on maintaining a high GPA.
+  * Navigating school, work, and/or family obligations that  have diverted focus from class.
+  * Challenges balancing coursework and mental health.
+  * Balancing academic, family, peer, or personal issues.
+:::
+
+Being accused of cheating – whether it has occurred or not – can be devastating for students. The college requires me to respond to potential academic dishonesty with a process that is very long and damaging. As your instructor, I care about you and want to offer alternatives to prevent us from having to go through this process. If you find yourself in a situation where "cheating" seems like the only option:
+
+**Please come talk to me.  We will figure this out together.**
+
+Pomona College is an academic community, all of whose members are expected to abide by ethical standards both in their conduct and in their exercise of responsibilities toward other members of the community. The college expects students to understand and adhere to basic standards of honesty and academic integrity. These standards include, but are not limited to, the following:
+
+:::note
+* In projects and assignments prepared independently, students never represent the ideas or the language of others as their own.
+* Students do not destroy or alter either the work of other students or the educational resources and materials of the College.
+* Students neither give nor receive assistance in examinations.
+* Students do not take unfair advantage of fellow students by representing work completed for one course as original work for another or by deliberately disregarding course rules and regulations.
+* In laboratory or research projects involving the collection of data, students accurately report data observed and do not alter these data for any reason.
+:::
+
+
+## Advice:
+
+Please email and / or set up a time to talk if you have any questions about or difficulty with the material, the computing, or the course.  Talk to me as soon as possible if you find yourself struggling. The material will build on itself, so it will be much easier to catch up if the concepts get clarified earlier rather than later.  **This semester is going to be fun.**  Let's do it.
+
+   
+:::{.callout-tip icon=false}
+## Grading
+  * 30% Homework
+  * 30% Quizzes 
+  * 30% Projects & Final Presentation 
+  * 10% Class engagement 
+:::
