@@ -149,7 +149,7 @@ Homework assignments will be graded out of 5 points, which are based on a combin
 
 ## Projects:
 
-There will be a semester long group project. Your task is to use data to tell us something interesting. This project is deliberately open-ended to allow you to fully explore your creativity. There are three main rules that must be followed: (1) data centered, (2) tell us something, (3) do something new. Project information is available here: [Math 154 Semester Project](/project/)
+There will be 5 mini-projects (due roughly every other week). You will also compile the projects, reflect on the process, and present your work to your classrmates. Project information is available here: [DS 002R Projects](/project/)
 
 
 ## Computing:
