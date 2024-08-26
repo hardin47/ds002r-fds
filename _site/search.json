@@ -2979,13 +2979,356 @@
     "href": "slides/2024-08-26-intro.html#course-structure",
     "title": "Introduction to DS002R",
     "section": "Course structure",
-    "text": "Course structure\n\nweekly HW (to GitHub + Gradescope)\nbi-weekly quizzes + data project\nin-class activities / clickers\nethical considerations"
+    "text": "Course structure\n\nbi-weekly HW (to GitHub + Gradescope)\nbi-weekly quizzes\nmini-projects\nin-class activities / clickers\nethical considerations"
   },
   {
     "objectID": "slides/2024-08-26-intro.html#additional-details",
     "href": "slides/2024-08-26-intro.html#additional-details",
     "title": "Introduction to DS002R",
     "section": "Additional details",
-    "text": "Additional details\n\nCanvas has all the links\nno computers (tablets fine)\nsemester flexibility – good communication"
+    "text": "Additional details\n\nCanvas has all the links\n\ncourse website – almost everything\nclass notes\nCanvas page – solutions and assignments\n\nno computers (tablets fine)\ngood communication\nTidyTuesday"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#syllabus",
+    "href": "slides/2024-08-26-intro.html#syllabus",
+    "title": "Introduction to DS002R",
+    "section": "Syllabus",
+    "text": "Syllabus\n\n\n\noffice hours\nmentor sessions\nanonymous feedback\ndates for assignments\n\n\n\nlinks to resources\nHW grading\nproject information\n\n\n\n\n\n\n\n\n\nImportant\n\n\nI need your GitHub user name - please email it to me."
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#v1.0---drew-conway",
+    "href": "slides/2024-08-26-intro.html#v1.0---drew-conway",
+    "title": "Introduction to DS002R",
+    "section": "V1.0 - Drew Conway",
+    "text": "V1.0 - Drew Conway\n\n2010: http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#v2.0---steve-geringer",
+    "href": "slides/2024-08-26-intro.html#v2.0---steve-geringer",
+    "title": "Introduction to DS002R",
+    "section": "V2.0 - Steve Geringer",
+    "text": "V2.0 - Steve Geringer\n\n2014: http://www.anlytcs.com/2014/01/data-science-venn-diagram-v20.html"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#v3.0---writuparna-banerjee",
+    "href": "slides/2024-08-26-intro.html#v3.0---writuparna-banerjee",
+    "title": "Introduction to DS002R",
+    "section": "V3.0 - Writuparna Banerjee",
+    "text": "V3.0 - Writuparna Banerjee\n\n2020: https://medium.com/@writuparnabanerjee/the-difference-in-the-career-options-in-data-science-data-scientist-vs-data-engineer-vs-data-33209d0ac880"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#v4.0---joel-grus",
+    "href": "slides/2024-08-26-intro.html#v4.0---joel-grus",
+    "title": "Introduction to DS002R",
+    "section": "V4.0 - Joel Grus",
+    "text": "V4.0 - Joel Grus\n\n2013: https://posit.co/wp-content/themes/Posit/public/markdown-blogs/role-of-the-data-scientist/index.html?wtime=%7Bseek_to_second_number%7D"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#data-science-overview",
+    "href": "slides/2024-08-26-intro.html#data-science-overview",
+    "title": "Introduction to DS002R",
+    "section": "Data Science Overview",
+    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#data-science-in-ds-002r",
+    "href": "slides/2024-08-26-intro.html#data-science-in-ds-002r",
+    "title": "Introduction to DS002R",
+    "section": "Data Science in DS 002R",
+    "text": "Data Science in DS 002R\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDS workflow\nin DS002R\nbeyond DS002R\n\n\n\n\ndata acquisition\nweb scraping, relational databases\nAPIs\n\n\ndata exploration\nwrangling, strings, regular expressions\nnatural language processing\n\n\ndata visualization\ngrammar of graphics\nanimations\n\n\ndata conclusions\niteration, permutation tests\npredictive modeling, machine learning, AI\n\n\ndata communication\nyes!\nyes!"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tidy-data",
+    "href": "slides/2024-08-26-intro.html#tidy-data",
+    "title": "Introduction to DS002R",
+    "section": "Tidy data",
+    "text": "Tidy data\n\neach row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#definition-of-datum",
+    "href": "slides/2024-08-26-intro.html#definition-of-datum",
+    "title": "Introduction to DS002R",
+    "section": "Definition of datum",
+    "text": "Definition of datum\nThe definition of datum can be much broader:\n\nDefinition of datum from the Oxford English Dictionary"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tidying-data",
+    "href": "slides/2024-08-26-intro.html#tidying-data",
+    "title": "Introduction to DS002R",
+    "section": "Tidying data",
+    "text": "Tidying data\nHow would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#data-science-in-the-wild",
+    "href": "slides/2024-08-26-intro.html#data-science-in-the-wild",
+    "title": "Introduction to DS002R",
+    "section": "Data Science in the Wild",
+    "text": "Data Science in the Wild\nData science extracts knowledge from within a particular domain of inquiry. Examples from Pomona!\n\nShannon Burns (Psychological Science and Neuroscience) uses data to understand brain processes of social communication.\nAnthony (Tony) Clark uses data to improve the safety and reliability of mobile robots.\nJun Lang (Asian Languages and Literatures) uses data to analyze (1) the intersection of language, gender, and society, and (2) second language acquisition and pedagogy.\nFrank Pericolosi (Physical Education) uses data to improve his team’s chances on the field.\nAmi Radunskaya (Mathematics) uses data to model tumor growth and treatment.\nYuqing Zhu (Neuroscience) uses data to figure out how a jumble of neurons becomes smart."
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#reproducibility",
+    "href": "slides/2024-08-26-intro.html#reproducibility",
+    "title": "Introduction to DS002R",
+    "section": "Reproducibility",
+    "text": "Reproducibility\nWhat does it mean for a data analysis to be “reproducible”?\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#the-reproducible-data-analysis-process",
+    "href": "slides/2024-08-26-intro.html#the-reproducible-data-analysis-process",
+    "title": "Introduction to DS002R",
+    "section": "The reproducible data analysis process",
+    "text": "The reproducible data analysis process\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto (via R Studio)\nVersion control \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#learning-goals",
+    "href": "slides/2024-08-26-intro.html#learning-goals",
+    "title": "Introduction to DS002R",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control), using modern programming tools and techniques"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#reproducibility-checklist",
+    "href": "slides/2024-08-26-intro.html#reproducibility-checklist",
+    "title": "Introduction to DS002R",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#toolkit-for-reproducibility",
+    "href": "slides/2024-08-26-intro.html#toolkit-for-reproducibility",
+    "title": "Introduction to DS002R",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#r-and-rstudio-1",
+    "href": "slides/2024-08-26-intro.html#r-and-rstudio-1",
+    "title": "Introduction to DS002R",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#r-vs.-rstudio",
+    "href": "slides/2024-08-26-intro.html#r-vs.-rstudio",
+    "title": "Introduction to DS002R",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#r-packages",
+    "href": "slides/2024-08-26-intro.html#r-packages",
+    "title": "Introduction to DS002R",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of August 26, 2024, there are 21,145 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tour-r-rstudio",
+    "href": "slides/2024-08-26-intro.html#tour-r-rstudio",
+    "title": "Introduction to DS002R",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tour-recap-r-rstudio",
+    "href": "slides/2024-08-26-intro.html#tour-recap-r-rstudio",
+    "title": "Introduction to DS002R",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/2024-08-26-intro.html#a-short-list-for-now-of-r-essentials",
+    "title": "Introduction to DS002R",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#r-essentials-continued",
+    "href": "slides/2024-08-26-intro.html#r-essentials-continued",
+    "title": "Introduction to DS002R",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tidyverse",
+    "href": "slides/2024-08-26-intro.html#tidyverse",
+    "title": "Introduction to DS002R",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#quarto-1",
+    "href": "slides/2024-08-26-intro.html#quarto-1",
+    "title": "Introduction to DS002R",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you Render, the analysis is run from the beginning\nCode goes in chunks\nNarrative goes outside of chunks"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tour-quarto",
+    "href": "slides/2024-08-26-intro.html#tour-quarto",
+    "title": "Introduction to DS002R",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tour-recap-quarto",
+    "href": "slides/2024-08-26-intro.html#tour-recap-quarto",
+    "title": "Introduction to DS002R",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#environments",
+    "href": "slides/2024-08-26-intro.html#environments",
+    "title": "Introduction to DS002R",
+    "section": "Environments",
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#environments-1",
+    "href": "slides/2024-08-26-intro.html#environments-1",
+    "title": "Introduction to DS002R",
+    "section": "Environments",
+    "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#how-will-we-use-quarto",
+    "href": "slides/2024-08-26-intro.html#how-will-we-use-quarto",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#git-and-github",
+    "href": "slides/2024-08-26-intro.html#git-and-github",
+    "title": "Introduction to DS002R",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#versioning---done-badly",
+    "href": "slides/2024-08-26-intro.html#versioning---done-badly",
+    "title": "Introduction to DS002R",
+    "section": "Versioning - done badly",
+    "text": "Versioning - done badly"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#versioning---done-better",
+    "href": "slides/2024-08-26-intro.html#versioning---done-better",
+    "title": "Introduction to DS002R",
+    "section": "Versioning - done better",
+    "text": "Versioning - done better"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#versioning---done-even-better",
+    "href": "slides/2024-08-26-intro.html#versioning---done-even-better",
+    "title": "Introduction to DS002R",
+    "section": "Versioning - done even better",
+    "text": "Versioning - done even better\nwith human readable messages"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github",
+    "href": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github-1",
+    "href": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github-1",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github-2",
+    "href": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github-2",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github-3",
+    "href": "slides/2024-08-26-intro.html#how-will-we-use-git-and-github-3",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#git-and-github-tips",
+    "href": "slides/2024-08-26-intro.html#git-and-github-tips",
+    "title": "Introduction to DS002R",
+    "section": "Git and GitHub tips",
+    "text": "Git and GitHub tips\n\n\nThere are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.\nWe will be doing Git things and interfacing with GitHub through RStudio, but if you google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#tour-git-github",
+    "href": "slides/2024-08-26-intro.html#tour-git-github",
+    "title": "Introduction to DS002R",
+    "section": "Tour: Git + GitHub",
+    "text": "Tour: Git + GitHub"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#examining-data-visualization",
+    "href": "slides/2024-08-26-intro.html#examining-data-visualization",
+    "title": "Introduction to DS002R",
+    "section": "Examining data visualization",
+    "text": "Examining data visualization\n\n\nDiscuss the following for the visualization.\n\n\n\n\n\nSource: Twitter"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#ae-02-bechdel-dataviz",
+    "href": "slides/2024-08-26-intro.html#ae-02-bechdel-dataviz",
+    "title": "Introduction to DS002R",
+    "section": "ae-02-bechdel-dataviz",
+    "text": "ae-02-bechdel-dataviz\n\n\nGo to the course GitHub org and find your ae repo (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline (end of this week)"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#recap-of-ae",
+    "href": "slides/2024-08-26-intro.html#recap-of-ae",
+    "title": "Introduction to DS002R",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nConstruct plots with ggplot().\nLayers of ggplots are separated by +s.\nThe formula is (almost) always as follows:\n\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n\nAesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user, e.g. color = binary vs. color = \"pink\".\nUse facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables."
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#activity",
+    "href": "slides/2024-08-26-intro.html#activity",
+    "title": "Introduction to DS002R",
+    "section": "Activity",
+    "text": "Activity\n\nWhat problem or task would you like to investigate using data?\nWhat would be hard about executing the project?\nWhat are the potential ethical frameworks to consider?\nHow would you define success?"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#data-science-process",
+    "href": "slides/2024-08-26-intro.html#data-science-process",
+    "title": "Introduction to DS002R",
+    "section": "Data Science Process",
+    "text": "Data Science Process"
+  },
+  {
+    "objectID": "slides/2024-08-26-intro.html#data-science",
+    "href": "slides/2024-08-26-intro.html#data-science",
+    "title": "Introduction to DS002R",
+    "section": "Data Science ",
+    "text": "Data Science"
+  },
+  {
+    "objectID": "slides/2024-09-09-wrangling1.html#tidy-data",
+    "href": "slides/2024-09-09-wrangling1.html#tidy-data",
+    "title": "Data Wrangling",
+    "section": "Tidy data",
+    "text": "Tidy data\n\neach row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell"
+  },
+  {
+    "objectID": "slides/2024-09-09-wrangling1.html#definition-of-datum",
+    "href": "slides/2024-09-09-wrangling1.html#definition-of-datum",
+    "title": "Data Wrangling",
+    "section": "Definition of datum",
+    "text": "Definition of datum\nThe definition of datum can be much broader:\n\nDefinition of datum from the Oxford English Dictionary"
+  },
+  {
+    "objectID": "slides/2024-09-09-wrangling1.html#tidying-data",
+    "href": "slides/2024-09-09-wrangling1.html#tidying-data",
+    "title": "Data Wrangling",
+    "section": "Tidying data",
+    "text": "Tidying data\nHow would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files"
   }
 ]

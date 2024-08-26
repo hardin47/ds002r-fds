@@ -1,0 +1,62 @@
+---
+title: Data Wrangling
+author: "Jo Hardin"
+date: "September 9, 2024"
+format:
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(palmerpenguins)
+```
+
+
+# What are data?
+
+```{r}
+#| echo: false
+head(penguins) |> 
+  gt::gt()
+```
+
+## Tidy data
+
+* each row = a unit of observation (here, a penguin)
+* each column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)
+* each entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell
+
+
+## Definition of `datum`
+
+The definition of **datum** can be much broader:
+
+```{r fig.cap = "Definition of datum from the [Oxford English Dictionary](https://www.oed.com/search/dictionary/?scope=Entries&q=datum)", fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/datum.png")
+```
+
+
+## Tidying data
+
+How would you wrangle each data example into a tidy format?
+
+1. the emails in your inbox  
+2. social media texts  
+3. images  
+4. videos  
+5. audio files
+
+
+
+
+
