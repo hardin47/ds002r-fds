@@ -3063,7 +3063,7 @@
     "href": "slides/2024-08-26-intro.html#data-science-in-the-wild",
     "title": "Introduction to DS002R",
     "section": "Data Science in the Wild",
-    "text": "Data Science in the Wild\nData science extracts knowledge from within a particular domain of inquiry. Examples from Pomona!\n\nShannon Burns (Psychological Science and Neuroscience) uses data to understand brain processes of social communication.\nAnthony (Tony) Clark uses data to improve the safety and reliability of mobile robots.\nManisha Goel (Economics) uses data to understand how people’s identities shape the fortunes of businesses where they work.\nJun Lang (Asian Languages and Literatures) uses data to analyze (1) the intersection of language, gender, and society, and (2) second language acquisition and pedagogy.\nFrank Pericolosi (Physical Education) uses data to improve his team’s chances on the field.\nAmi Radunskaya (Mathematics) uses data to model tumor growth and treatment.\nYuqing Zhu (Neuroscience) uses data to figure out how a jumble of neurons becomes smart."
+    "text": "Data Science in the Wild\nData science extracts knowledge from within a particular domain of inquiry. Examples from Pomona!\n\nShannon Burns (Psychological Science and Neuroscience) uses data to understand brain processes of social communication.\nCharlotte Chang uses data to study and improve earth stewardship.\nAnthony (Tony) Clark (Computer Science) uses data to improve the safety and reliability of mobile robots.\nManisha Goel (Economics) uses data to understand how people’s identities shape the fortunes of businesses where they work.\nJun Lang (Asian Languages and Literatures) uses data to analyze (1) the intersection of language, gender, and society, and (2) second language acquisition and pedagogy.\nFrank Pericolosi (Physical Education) uses data to improve his team’s chances on the field.\nAmi Radunskaya (Mathematics) uses data to model tumor growth and treatment.\nYuqing Zhu (Neuroscience) uses data to figure out how a jumble of neurons becomes smart."
   },
   {
     "objectID": "slides/2024-08-26-intro.html#reproducibility",
@@ -3119,7 +3119,7 @@
     "href": "slides/2024-08-26-intro.html#r-packages",
     "title": "Introduction to DS002R",
     "section": "R packages",
-    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of August 26, 2024, there are 21,145 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+    "text": "R packages\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of August 26, 2024, there are 21,145 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
   },
   {
     "objectID": "slides/2024-08-26-intro.html#tour-r-rstudio",
@@ -3161,7 +3161,7 @@
     "href": "slides/2024-08-26-intro.html#quarto-1",
     "title": "Introduction to DS002R",
     "section": "Quarto",
-    "text": "Quarto\n\n\nFully reproducible reports – each time you Render, the analysis is run from the beginning\nCode goes in chunks\nNarrative goes outside of chunks"
+    "text": "Quarto\n\nFully reproducible reports – each time you Render, the analysis is run from the beginning\nCode goes in chunks\nNarrative goes outside of chunks"
   },
   {
     "objectID": "slides/2024-08-26-intro.html#tour-quarto",
@@ -3196,7 +3196,7 @@
     "href": "slides/2024-08-26-intro.html#how-will-we-use-quarto",
     "title": "Introduction to DS002R",
     "section": "How will we use Quarto?",
-    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+    "text": "How will we use Quarto?\n\nEvery assignment is an Quarto document.\nYou’ll always have a template Quarto document to start with.\nThe amount of scaffolding in the template will decrease over the semester."
   },
   {
     "objectID": "slides/2024-08-26-intro.html#git-and-github",
