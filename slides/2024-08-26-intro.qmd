@@ -135,6 +135,7 @@ Data science extracts knowledge from within a particular domain of inquiry.  Exa
 
 * <a href = "https://www.shannonmburns.com/" target = "_blank">Shannon Burns</a> (Psychological Science and Neuroscience) uses data to understand brain processes of social communication.
 * <a href = "https://cs.pomona.edu/~ajc/" target = "_blank">Anthony (Tony) Clark</a> uses data to improve the safety and reliability of mobile robots.
+* <a href = "https://manishagoel.weebly.com/" target = "_blank">Manisha Goel</a> (Economics) uses data to understand how people’s identities shape the fortunes of businesses where they work. 
 * <a href = "https://www.pomona.edu/directory/people/jun-lang" target = "_blank">Jun Lang</a> (Asian Languages and Literatures) uses data to analyze (1) the intersection of language, gender, and society, and (2) second language acquisition and pedagogy.
 * <a href = "https://magazine.pomona.edu/2020/winter/baseball-by-the-numbers/">Frank Pericolosi</a> (Physical Education) uses data to improve his team's chances on the field.
 * <a href = "https://www.pomona.edu/directory/people/ami-e-radunskaya" target = "_blank">Ami Radunskaya</a> (Mathematics) uses data to model tumor growth and treatment.
