@@ -3314,21 +3314,28 @@
     "objectID": "slides/2024-09-09-wrangling1.html#tidy-data",
     "href": "slides/2024-09-09-wrangling1.html#tidy-data",
     "title": "Data Wrangling",
-    "section": "Tidy data",
-    "text": "Tidy data\n\neach row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell"
+    "section": "",
+    "text": "each row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell"
   },
   {
     "objectID": "slides/2024-09-09-wrangling1.html#definition-of-datum",
     "href": "slides/2024-09-09-wrangling1.html#definition-of-datum",
     "title": "Data Wrangling",
-    "section": "Definition of datum",
-    "text": "Definition of datum\nThe definition of datum can be much broader:\n\nDefinition of datum from the Oxford English Dictionary"
+    "section": "",
+    "text": "The definition of datum can be much broader:\n\n\n\n\n\nDefinition of datum from the Oxford English Dictionary"
   },
   {
     "objectID": "slides/2024-09-09-wrangling1.html#tidying-data",
     "href": "slides/2024-09-09-wrangling1.html#tidying-data",
     "title": "Data Wrangling",
-    "section": "Tidying data",
-    "text": "Tidying data\nHow would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files"
+    "section": "",
+    "text": "How would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files\n\n\n:::"
+  },
+  {
+    "objectID": "slides/2024-09-09-wrangling1.html",
+    "href": "slides/2024-09-09-wrangling1.html",
+    "title": "Data Wrangling",
+    "section": "",
+    "text": "species\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007\n\n\n\n\n\n\n\n\n\n\n\neach row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell\n\n\n\n\nThe definition of datum can be much broader:\n\n\n\n\n\nDefinition of datum from the Oxford English Dictionary\n\n\n\n\n\n\n\nHow would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files\n\n\n:::"
   }
 ]
