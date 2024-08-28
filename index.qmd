@@ -50,7 +50,7 @@ schedule <- tribble(
   ' ',
   
    "Week 3 <br> 9.9.24", 'tidyverse', 
-  ' ',
+  'something',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 2</a> - due 9.10 <br> Quiz 9.11',
   ' ',
 
