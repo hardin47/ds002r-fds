@@ -45,7 +45,7 @@ schedule <- tribble(
   '{{< fa comments >}} ',
   
    "Week 2 <br> 9.2.24", 'no class Mon <br> ggplot', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> ',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">grammar of graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-28-dataviz.html" target = "_blank"> Data Viz</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws3_ds2_f24.pdf" target = "_blank">WS 3</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws4_ds2_f24.pdf" target = "_blank">WS 4</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 1</a> - due 9.3',
   ' ',
   

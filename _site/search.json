@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub +  ggplot\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1   WS 2\n\n\n\n\nWeek 2  9.2.24\nno class Mon  ggplot\n  R4DS Visualize \n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\ntidyverse\n\n HW 2 - due 9.10  Quiz 9.11\n\n\n\nWeek 4  9.16.24\ntidy strings\n\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nmap + functions\n\n HW 3 - due 9.24  Quiz 9.25\n\n\n\nWeek 6  9.30.24\niteration + simulations\n\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\npermutation tests\n\n HW 4 - due 10.8  Quiz 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n\n\n\n\n\nWeek 9  10.21.24\nweb scraping\n\n HW 5 - due 10.22  Quiz 10.23\n\n\n\nWeek 10  10.28.24\nSQL\n\n Project 3 - due 10.30\n\n\n\nWeek 11  11.4.24\nregular expressions\n\n HW 6 - due 11.5  Quiz 11.6\n\n\n\nWeek 12  11.11.24\ntext analysis\n\n Project 4 - due 11.13\n\n\n\nWeek 13  11.18.24\nShiny\n\n HW 7 - due 11.19  Quiz 11.20\n\n\n\nWeek 14  11.25.24\nno class Wed \n\n\n\n\n\nWeek 15  12.2.24\n\n\n Project 5 - due 12.4  + presentations\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub +  ggplot\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1   WS 2\n\n\n\n\nWeek 2  9.2.24\nno class Mon  ggplot\n  R4DS Visualize   grammar of graphics   ggplot    Data Viz   WS 3   WS 4\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\ntidyverse\n\n HW 2 - due 9.10  Quiz 9.11\n\n\n\nWeek 4  9.16.24\ntidy strings\n\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nmap + functions\n\n HW 3 - due 9.24  Quiz 9.25\n\n\n\nWeek 6  9.30.24\niteration + simulations\n\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\npermutation tests\n\n HW 4 - due 10.8  Quiz 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n\n\n\n\n\nWeek 9  10.21.24\nweb scraping\n\n HW 5 - due 10.22  Quiz 10.23\n\n\n\nWeek 10  10.28.24\nSQL\n\n Project 3 - due 10.30\n\n\n\nWeek 11  11.4.24\nregular expressions\n\n HW 6 - due 11.5  Quiz 11.6\n\n\n\nWeek 12  11.11.24\ntext analysis\n\n Project 4 - due 11.13\n\n\n\nWeek 13  11.18.24\nShiny\n\n HW 7 - due 11.19  Quiz 11.20\n\n\n\nWeek 14  11.25.24\nno class Wed \n\n\n\n\n\nWeek 15  12.2.24\n\n\n Project 5 - due 12.4  + presentations\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -3831,6 +3831,503 @@
   {
     "objectID": "slides/2024-08-28-daataviz.html#whats-around-the-corner",
     "href": "slides/2024-08-28-daataviz.html#whats-around-the-corner",
+    "title": "Better Data Visualizations",
+    "section": "What’s around the corner?",
+    "text": "What’s around the corner?\nshiny\n\ninteractive graphics / modeling\nhttps://shiny.rstudio.com/\n\nplotly\n\nPlotly is an R package for creating interactive web-based graphs via plotly’s JavaScript graphing library, plotly.js. The plotly R libary contains the ggplotly function , which will convert ggplot2 figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the style function.\n\n\nhttps://plot.ly/ggplot2/getting-started/\n\ngganimate\n\ngganimate tutorial"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#nssd",
+    "href": "slides/2024-08-28-dataviz.html#nssd",
+    "title": "Better Data Visualizations",
+    "section": "NSSD:",
+    "text": "NSSD:\n\nWhat was Hilary trying to answer in her data collection?\nName two of Hilary’s main hurdles in gathering accurate data.\nWhich is better: high touch (manual) or low touch (automatic) data collection? Why?\nWhat additional covariates are needed / desired? Any problems with them?\nHow much data does she need?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#grammar-of-graphics",
+    "href": "slides/2024-08-28-dataviz.html#grammar-of-graphics",
+    "title": "Better Data Visualizations",
+    "section": "Grammar of graphics",
+    "text": "Grammar of graphics\nYau (2013) gives us nine visual cues, and Wickham (2014) translates them into a language using ggplot2.\n\nVisual Cues: the aspects of the figure where we should focus.\nPosition (numerical) where in relation to other things?\nLength (numerical) how big (in one dimension)?\nAngle (numerical) how wide? parallel to something else?\nDirection (numerical) at what slope? In a time series, going up or down?\nShape (categorical) belonging to what group?\nArea (numerical) how big (in two dimensions)? Beware of improper scaling!\nVolume (numerical) how big (in three dimensions)? Beware of improper scaling!\nShade (either) to what extent? how severely?\nColor (either) to what extent? how severely? Beware of red/green color blindness.\nCoordinate System: rectangular, polar, geographic, etc.\nScale: numeric (linear? logarithmic?), categorical (ordered?), time\nContext: in comparison to what (think back to ideas from Tufte)"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#pieces-of-the-graph",
+    "href": "slides/2024-08-28-dataviz.html#pieces-of-the-graph",
+    "title": "Better Data Visualizations",
+    "section": "Pieces of the Graph",
+    "text": "Pieces of the Graph\n\n\nVisual Cues of Yau (2013):\nPosition (numerical)\nLength (numerical)\nAngle (numerical)\nDirection (numerical)\nShape (categorical)\nArea (numerical)\nVolume (numerical)\nShade (either)\nColor (either)"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#order-matters",
+    "href": "slides/2024-08-28-dataviz.html#order-matters",
+    "title": "Better Data Visualizations",
+    "section": "Order Matters",
+    "text": "Order Matters"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#cues-together",
+    "href": "slides/2024-08-28-dataviz.html#cues-together",
+    "title": "Better Data Visualizations",
+    "section": "Cues Together",
+    "text": "Cues Together"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#attributes",
+    "href": "slides/2024-08-28-dataviz.html#attributes",
+    "title": "Better Data Visualizations",
+    "section": "Attributes",
+    "text": "Attributes\nAttributes can focus your reader’s attention.1\n\nimage credit: Better Data Visualization by Schwabish"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-for-plotting",
+    "href": "slides/2024-08-28-dataviz.html#advice-for-plotting",
+    "title": "Better Data Visualizations",
+    "section": "Advice for Plotting",
+    "text": "Advice for Plotting\n\n\n\nBasic plotting\n\n\n\nAvoid having other graph elements interfere with data\nUse visually prominent symbols\nAvoid over-plotting (One way to avoid over plotting: jitter the values)\nDifferent values of data may obscure each other\nInclude all or nearly all of the data\nFill data region"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-for-plotting-1",
+    "href": "slides/2024-08-28-dataviz.html#advice-for-plotting-1",
+    "title": "Better Data Visualizations",
+    "section": "Advice for Plotting",
+    "text": "Advice for Plotting\n\n\n\nBasic plotting\nEliminate superfluous material\n\n\n\nChart junk & stuff that adds no meaning, e.g. butterflies on top of barplots, background images\nExtra tick marks and grid lines\nUnnecessary text and arrows\nDecimal places beyond the measurement error or the level of difference"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-for-plotting-2",
+    "href": "slides/2024-08-28-dataviz.html#advice-for-plotting-2",
+    "title": "Better Data Visualizations",
+    "section": "Advice for Plotting",
+    "text": "Advice for Plotting\n\n\n\nBasic plotting\nEliminate superfluous material\nFacilitate comparisons\n\n\n\nPut juxtaposed plots on same scale\nMake it easy to distinguish elements of superposed plots (e.g. color)\nEmphasizes the important difference\nComparison: volume, area, height (be careful, volume can seem bigger than you mean it to)"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-for-plotting-3",
+    "href": "slides/2024-08-28-dataviz.html#advice-for-plotting-3",
+    "title": "Better Data Visualizations",
+    "section": "Advice for Plotting",
+    "text": "Advice for Plotting\n\n\n\nBasic plotting\nEliminate superfluous material\nFacilitate comparisons\nChoosing the scale\n\n\n\nKeep scales on x and y axes the same for both plots to facilitate the comparison\nZoom in to focus on the region that contains the bulk of the data\nKeep the scale the same throughout the plot (i.e. don’t change it mid-axis)\nOrigin need not be on the scale\nChoose a scale that improves resolution\nAvoid jiggling the baseline"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-for-plotting-4",
+    "href": "slides/2024-08-28-dataviz.html#advice-for-plotting-4",
+    "title": "Better Data Visualizations",
+    "section": "Advice for Plotting",
+    "text": "Advice for Plotting\n\n\n\nBasic plotting\nEliminate superfluous material\nFacilitate comparisons\nChoosing the scale\nHow to make a plot information rich\n\n\n\nDescribe what you see in the caption\nAdd context with reference markers (lines and points) including text\nAdd legends and labels\nUse color and plotting symbols to add more information\nPlot the same thing more than once in different ways/scales\nReduce clutter"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-for-plotting-5",
+    "href": "slides/2024-08-28-dataviz.html#advice-for-plotting-5",
+    "title": "Better Data Visualizations",
+    "section": "Advice for Plotting",
+    "text": "Advice for Plotting\n\n\n\nBasic plotting\nEliminate superfluous material\nFacilitate comparisons\nChoosing the scale\nHow to make a plot information rich\nCaptions should\n\n\n\nBe comprehensive\nSelf-contained\nDescribe what has been graphed\nDraw attention to important features\nDescribe conclusions drawn from graph"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-for-plotting-6",
+    "href": "slides/2024-08-28-dataviz.html#advice-for-plotting-6",
+    "title": "Better Data Visualizations",
+    "section": "Advice for Plotting",
+    "text": "Advice for Plotting\n\n\n\nBasic plotting\nEliminate superfluous material\nFacilitate comparisons\nChoosing the scale\nHow to make a plot information rich\nCaptions should\nGood Plot Making Practice\n\n\n\nPut major conclusions in graphical form\nProvide reference information\nProof read for clarity and consistency\nGraphing is an iterative process\nMultiplicity is OK, i.e. two plots of the same variable may provide different messages\nMake plots data rich"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#getting-help",
+    "href": "slides/2024-08-28-dataviz.html#getting-help",
+    "title": "Better Data Visualizations",
+    "section": "Getting help",
+    "text": "Getting help\n\nOne of the best ways to get started with ggplot is to Google what you want to do with the word ggplot. Then look through the images that come up. More often than not, the associated code is there. There are also ggplot galleries of images, one of them is here: https://plot.ly/ggplot2/\nLook at the end of this presentation and the syllabus. More help options there."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot",
+    "href": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot",
+    "title": "Better Data Visualizations",
+    "section": "What are the visual cues on this plot?",
+    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color\n\nCoordinate System? Scale?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-1",
+    "href": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-1",
+    "title": "Better Data Visualizations",
+    "section": "What are the visual cues on this plot?",
+    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color\n\nCoordinate System? Scale?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-2",
+    "href": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-2",
+    "title": "Better Data Visualizations",
+    "section": "What are the visual cues on this plot?",
+    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color\n\nCoordinate System? Scale?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#the-grammar-of-graphics-ggplot",
+    "href": "slides/2024-08-28-dataviz.html#the-grammar-of-graphics-ggplot",
+    "title": "Better Data Visualizations",
+    "section": "The grammar of graphics ggplot",
+    "text": "The grammar of graphics ggplot\ngeom: the geometric “shape” used to display data\n\nbar, point, line, ribbon, text, etc.\n\naesthetic: an attribute controlling how geom is displayed with respect to variables\n\nx position, y position, color, fill, shape, size, etc.\n\n\nguide: helps user convert visual data back into raw data (legends, axes)\nstat: a transformation applied to data before geom gets it\n\nexample: histograms work on binned data"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#set-up",
+    "href": "slides/2024-08-28-dataviz.html#set-up",
+    "title": "Better Data Visualizations",
+    "section": "Set up",
+    "text": "Set up\n\nlibrary(mosaic)\ndata(Births78)     # restore fresh version of Births78\nhead(Births78, 3)\n\n        date births wday year month day_of_year day_of_month day_of_week\n1 1978-01-01   7701  Sun 1978     1           1            1           1\n2 1978-01-02   7527  Mon 1978     1           2            2           2\n3 1978-01-03   8825  Tue 1978     1           3            3           3"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nTwo Questions:\n\nWhat do we want R to do? (What is the goal?)\nWhat does R need to know?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-1",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-1",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoal: scatterplot = a plot with points\nWhat does R need to know?\n\ndata source: Births78\naesthetics:\n\ndate -&gt; x\nbirths -&gt; y\npoints (!)"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-2",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-2",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births)) + \n  geom_point() +\n  ggtitle(\"US Births in 1978\")\n\nggplot() +\n  geom_point(data = Births78, \n             aes(x = date, y = births)) +\n  ggtitle(\"US Births in 1978\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-3",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-3",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nWhat has changed?\n\nnew aesthetic: mapping color to day of week\n\nAdding day of week to the data set\nThe wday() function in the lubridate package computes the day of the week from a date."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-4",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-4",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nBirths78 &lt;-  \n  Births78 |&gt; \n  mutate(day_of_week = \n           wday(date, \n                label=TRUE))\n\nggplot(data = Births78,\n       aes(x = date\n           y = births, \n           color = day_of_week)) +\n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-5",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-5",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-6",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-6",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nlines instead of dots!\n\nggplot(data = Births78,\n         aes(x = date, \n             y = births,\n             color = day_of_week)) +\n  geom_line() +\n  ggtitle(\"US Births in 1978\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-7",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-7",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-8",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-8",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nNow there are two layers: one with points and one with lines\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births,\n           color = day_of_week)) + \n  geom_point() +  \n  geom_line()+\n  ggtitle(\"US Births in 1978\")\n\n\nThe layers are placed one on top of the other: the points are below and the lines are above.\ndata and aes specified in ggplot() affect all geoms"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#what-does-this-code-do",
+    "href": "slides/2024-08-28-dataviz.html#what-does-this-code-do",
+    "title": "Better Data Visualizations",
+    "section": "What does this code do?",
+    "text": "What does this code do?\n\nggplot(data = Births78,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#what-does-this-code-do-1",
+    "href": "slides/2024-08-28-dataviz.html#what-does-this-code-do-1",
+    "title": "Better Data Visualizations",
+    "section": "What does this code do?",
+    "text": "What does this code do?\n\nggplot(data = Births78,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point()  +\n  ggtitle(\"US Births in 1978\")\n\n\nThis is mapping the color aesthetic to a new variable with only one value (“navy”).\nSo all the dots get set to the same color, but it’s not navy."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#setting-vs.-mapping",
+    "href": "slides/2024-08-28-dataviz.html#setting-vs.-mapping",
+    "title": "Better Data Visualizations",
+    "section": "Setting vs. Mapping",
+    "text": "Setting vs. Mapping\nIf we want to set the color to be navy for all of the dots, we do it outside the aes() designation:\n\nggplot(data = Births78,\n       aes(x = date, y = births)) +   # map variables \n  geom_point(color = \"navy\")    +   # set attributes\n  ggtitle(\"US Births in 1978\")\n\n\n\nNote that color = \"navy\" is now outside of the aesthetics list. That’s how ggplot2 distinguishes between mapping and setting."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-9",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-9",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-10",
+    "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-10",
+    "title": "Better Data Visualizations",
+    "section": "How do we make this plot?",
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births)) + \n  geom_line(aes(color = day_of_week)) +      \n  geom_point(color = \"navy\")  +         \n  ggtitle(\"US Births in 1978\")\n\n\nggplot() establishes the default data and aesthetics for the geoms, but each geom may change these defaults.\ngood practice: put into ggplot() the things that affect all (or most) of the layers; rest in geom_XXXX()"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#setting-vs.-mapping-again",
+    "href": "slides/2024-08-28-dataviz.html#setting-vs.-mapping-again",
+    "title": "Better Data Visualizations",
+    "section": "Setting vs. Mapping (again)",
+    "text": "Setting vs. Mapping (again)\nInformation gets passed to the plot via:\n\nmap the variable information inside the aes (aesthetic) command\nset the non-variable information outside the aes (aesthetic) command"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#other-geoms",
+    "href": "slides/2024-08-28-dataviz.html#other-geoms",
+    "title": "Better Data Visualizations",
+    "section": "Other geoms",
+    "text": "Other geoms\n\napropos(\"^geom_\")\n\n [1] \"geom_abline\"                  \"geom_area\"                   \n [3] \"geom_ash\"                     \"geom_bar\"                    \n [5] \"geom_bin_2d\"                  \"geom_bin2d\"                  \n [7] \"geom_blank\"                   \"geom_boxplot\"                \n [9] \"geom_bracket\"                 \"geom_col\"                    \n[11] \"geom_contour\"                 \"geom_contour_filled\"         \n[13] \"geom_count\"                   \"geom_crossbar\"               \n[15] \"geom_curve\"                   \"geom_density\"                \n[17] \"geom_density_2d\"              \"geom_density_2d_filled\"      \n[19] \"geom_density_line\"            \"geom_density_ridges\"         \n[21] \"geom_density_ridges_gradient\" \"geom_density_ridges2\"        \n[23] \"geom_density2d\"               \"geom_density2d_filled\"       \n[25] \"geom_dotplot\"                 \"geom_errorbar\"               \n[27] \"geom_errorbarh\"               \"geom_exec\"                   \n[29] \"geom_freqpoly\"                \"geom_function\"               \n[31] \"geom_hex\"                     \"geom_histogram\"              \n[33] \"geom_hline\"                   \"geom_jitter\"                 \n[35] \"geom_label\"                   \"geom_label_repel\"            \n[37] \"geom_line\"                    \"geom_linerange\"              \n[39] \"geom_lm\"                      \"geom_map\"                    \n[41] \"geom_mosaic\"                  \"geom_mosaic_jitter\"          \n[43] \"geom_mosaic_text\"             \"geom_path\"                   \n[45] \"geom_pictogram\"               \"geom_point\"                  \n[47] \"geom_pointrange\"              \"geom_polygon\"                \n[49] \"geom_pwc\"                     \"geom_qq\"                     \n[51] \"geom_qq_line\"                 \"geom_quantile\"               \n[53] \"geom_rangeframe\"              \"geom_raster\"                 \n[55] \"geom_rect\"                    \"geom_ribbon\"                 \n[57] \"geom_ridgeline\"               \"geom_ridgeline_gradient\"     \n[59] \"geom_rug\"                     \"geom_segment\"                \n[61] \"geom_sf\"                      \"geom_sf_label\"               \n[63] \"geom_sf_text\"                 \"geom_signif\"                 \n[65] \"geom_smooth\"                  \"geom_spline\"                 \n[67] \"geom_spoke\"                   \"geom_step\"                   \n[69] \"geom_stripped_cols\"           \"geom_stripped_rows\"          \n[71] \"geom_text\"                    \"geom_text_repel\"             \n[73] \"geom_tile\"                    \"geom_tufteboxplot\"           \n[75] \"geom_violin\"                  \"geom_vline\"                  \n[77] \"geom_vridgeline\"              \"geom_waffle\""
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#other-geoms-1",
+    "href": "slides/2024-08-28-dataviz.html#other-geoms-1",
+    "title": "Better Data Visualizations",
+    "section": "Other geoms",
+    "text": "Other geoms\nhelp pages will tell you their aesthetics, default stats, etc.\n\n?geom_area             # for example"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#lets-try-geom_area",
+    "href": "slides/2024-08-28-dataviz.html#lets-try-geom_area",
+    "title": "Better Data Visualizations",
+    "section": "Let’s try geom_area",
+    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births, \n           fill = day_of_week)) + \n  geom_area()+\n  ggtitle(\"US Births in 1978\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#lets-try-geom_area-1",
+    "href": "slides/2024-08-28-dataviz.html#lets-try-geom_area-1",
+    "title": "Better Data Visualizations",
+    "section": "Let’s try geom_area",
+    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births78,\n       aes(x = date, y = births, fill = day_of_week)) + \n  geom_area()+\n  ggtitle(\"US Births in 1978\")\n\n\n\n\n\n\n\n\n\n… not a good plot\n\noverplotting is hiding much of the data\nextending y-axis to 0 may or may not be desirable."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#side-note-what-makes-a-plot-good",
+    "href": "slides/2024-08-28-dataviz.html#side-note-what-makes-a-plot-good",
+    "title": "Better Data Visualizations",
+    "section": "Side note: what makes a plot good?",
+    "text": "Side note: what makes a plot good?\nMost (all?) graphics are intended to help us make comparisons\n\nHow does something change over time?\nDo my treatments matter? How much?\nDo treatment and control respond the same way?\n\n\n\n\n\n\n\nKey plot metric\n\n\nDoes my plot make the comparisons I am interested in:\n\neasily, and\naccurately?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#time-for-some-different-data",
+    "href": "slides/2024-08-28-dataviz.html#time-for-some-different-data",
+    "title": "Better Data Visualizations",
+    "section": "Time for some different data",
+    "text": "Time for some different data\nHELPrct: Health Evaluation and Linkage to Primary care randomized clinical trial. Subjects admitted for treatment for addiction to one of three substances.\n\nhead(HELPrct)\n\n  age anysubstatus anysub cesd d1 daysanysub dayslink drugrisk e2b female\n1  37            1    yes   49  3        177      225        0  NA      0\n2  37            1    yes   30 22          2       NA        0  NA      0\n3  26            1    yes   39  0          3      365       20  NA      0\n4  39            1    yes   15  2        189      343        0   1      1\n5  32            1    yes   39 12          2       57        0   1      0\n6  47            1    yes    6  1         31      365        0  NA      1\n     sex g1b homeless i1 i2 id indtot linkstatus link   mcs  pcs pss_fr racegrp\n1   male yes   housed 13 26  1     39          1  yes 25.11 58.4      0   black\n2   male yes homeless 56 62  2     43         NA &lt;NA&gt; 26.67 36.0      1   white\n3   male  no   housed  0  0  3     41          0   no  6.76 74.8     13   black\n4 female  no   housed  5  5  4     28          0   no 43.97 61.9     11   white\n5   male  no homeless 10 13  5     38          1  yes 21.68 37.3     10   black\n6 female  no   housed  4  4  6     29          0   no 55.51 46.5      5   black\n  satreat sexrisk substance treat avg_drinks max_drinks hospitalizations\n1      no       4   cocaine   yes         13         26                3\n2      no       7   alcohol   yes         56         62               22\n3      no       2    heroin    no          0          0                0\n4     yes       4    heroin    no          5          5                2\n5      no       6   cocaine    no         10         13               12\n6      no       5   cocaine   yes          4          4                1"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study",
+    "href": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study",
+    "title": "Better Data Visualizations",
+    "section": "Who are the people in the study?",
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance)) + \n  geom_bar()+\n  ggtitle(\"HELP trial\")\n\n\nHmm. What’s up with y?\n\nstat_bin() is being applied to the data before the geom_bar() gets to do its thing. Binning creates the y values."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-1",
+    "href": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-1",
+    "title": "Better Data Visualizations",
+    "section": "Who are the people in the study?",
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar()+\n  ggtitle(\"HELP trial\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-2",
+    "href": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-2",
+    "title": "Better Data Visualizations",
+    "section": "Who are the people in the study?",
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar(position = \"fill\") +\n  ylab(\"actually, percent\")+\n  ggtitle(\"HELP trial\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study",
+    "href": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study",
+    "title": "Better Data Visualizations",
+    "section": "How old are people in the HELP study?",
+    "text": "How old are people in the HELP study?\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram()+\n  ggtitle(\"HELP trial\")\n\nNotice the messages\n\nstat_bin: Histograms are not mapping the raw data but binned data.\nstat_bin() performs the data transformation.\nbinwidth: a default binwidth has been selected, but we should really choose our own."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#setting-the-binwidth-manually",
+    "href": "slides/2024-08-28-dataviz.html#setting-the-binwidth-manually",
+    "title": "Better Data Visualizations",
+    "section": "Setting the binwidth manually",
+    "text": "Setting the binwidth manually\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram(binwidth = 2)+\n  ggtitle(\"HELP trial\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study-other-geoms",
+    "href": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study-other-geoms",
+    "title": "Better Data Visualizations",
+    "section": "How old are people in the HELP study? – Other geoms",
+    "text": "How old are people in the HELP study? – Other geoms\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_freqpoly(binwidth = 2)+\n  ggtitle(\"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_density()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually",
+    "href": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually",
+    "title": "Better Data Visualizations",
+    "section": "Selecting stat and geom manually",
+    "text": "Selecting stat and geom manually\nEvery geom comes with a default stat\n\nfor simple cases, the stat is stat_identity() which does nothing\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_line(stat = \"density\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually-1",
+    "href": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually-1",
+    "title": "Better Data Visualizations",
+    "section": "Selecting stat and geom manually",
+    "text": "Selecting stat and geom manually\nEvery stat comes with a default geom, every geom with a default stat\n\nwe can specify stats instead of geom, if we prefer\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  stat_density(geom = \"line\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#more-combinations",
+    "href": "slides/2024-08-28-dataviz.html#more-combinations",
+    "title": "Better Data Visualizations",
+    "section": "More combinations",
+    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", binwidth = 3) + \n  geom_line(stat = \"bin\", binwidth = 3)  +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#more-combinations-1",
+    "href": "slides/2024-08-28-dataviz.html#more-combinations-1",
+    "title": "Better Data Visualizations",
+    "section": "More combinations",
+    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_area(stat = \"bin\", binwidth = 3)  +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#more-combinations-2",
+    "href": "slides/2024-08-28-dataviz.html#more-combinations-2",
+    "title": "Better Data Visualizations",
+    "section": "More combinations",
+    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", \n             binwidth = 3, \n             aes(size = ..count..)) +\n  geom_line(stat = \"bin\", binwidth = 3) +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-much-drinking-i1",
+    "href": "slides/2024-08-28-dataviz.html#how-much-drinking-i1",
+    "title": "Better Data Visualizations",
+    "section": "How much drinking? (i1)",
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_histogram()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-1",
+    "href": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-1",
+    "title": "Better Data Visualizations",
+    "section": "How much drinking? (i1)",
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_density()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-2",
+    "href": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-2",
+    "title": "Better Data Visualizations",
+    "section": "How much drinking? (i1)",
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_area(stat = \"density\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#covariates-adding-in-more-variables",
+    "href": "slides/2024-08-28-dataviz.html#covariates-adding-in-more-variables",
+    "title": "Better Data Visualizations",
+    "section": "Covariates: Adding in more variables",
+    "text": "Covariates: Adding in more variables\nUsing color and linetype:\n\nggplot(data = HELP_data,\n       aes(x = i1,\n           color = substance,\n           linetype = children)) + \n  geom_line(stat = \"density\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#using-color-and-facets",
+    "href": "slides/2024-08-28-dataviz.html#using-color-and-facets",
+    "title": "Better Data Visualizations",
+    "section": "Using color and facets",
+    "text": "Using color and facets\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( . ~ children )+\n  ggtitle(\"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( children ~ . )+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#boxplots",
+    "href": "slides/2024-08-28-dataviz.html#boxplots",
+    "title": "Better Data Visualizations",
+    "section": "Boxplots",
+    "text": "Boxplots\nBoxplots use stat_quantile() (five number summary).\nThe quantitative variable must be y, and there must be an additional x variable.\n\nHELP_data |&gt; \n  ggplot(aes(x = substance, y = age, color = children)) + \n  geom_boxplot()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#horizontal-boxplots",
+    "href": "slides/2024-08-28-dataviz.html#horizontal-boxplots",
+    "title": "Better Data Visualizations",
+    "section": "Horizontal boxplots",
+    "text": "Horizontal boxplots\nHorizontal boxplots are obtained by flipping the coordinate system:\n\ncoord_flip() may be used with other plots as well to reverse the roles of x and y on the plot.\n\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#axes-scaling-with-boxplots",
+    "href": "slides/2024-08-28-dataviz.html#axes-scaling-with-boxplots",
+    "title": "Better Data Visualizations",
+    "section": "Axes scaling with boxplots",
+    "text": "Axes scaling with boxplots\nWe can scale the continuous axis\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_trans(y = \"exp\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#give-me-some-space",
+    "href": "slides/2024-08-28-dataviz.html#give-me-some-space",
+    "title": "Better Data Visualizations",
+    "section": "Give me some space",
+    "text": "Give me some space\nWe’ve triggered a new feature: dodge (for dodging things left/right). We can control how much if we set the dodge manually.\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot(position = position_dodge(width=1)) +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#issues-with-bigger-data",
+    "href": "slides/2024-08-28-dataviz.html#issues-with-bigger-data",
+    "title": "Better Data Visualizations",
+    "section": "Issues with bigger data",
+    "text": "Issues with bigger data\n\nAlthough we can see a generally positive association (as we would expect), the overplotting may be hiding information.\n\n\nlibrary(NHANES)\ndim(NHANES)\n\n[1] 10000    76\n\nggplot(data = NHANES,\n       aes(x = Height, y = Weight)) +\n  geom_point() + \n  facet_grid( Gender ~ PregnantNow )"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#using-alpha-opacity",
+    "href": "slides/2024-08-28-dataviz.html#using-alpha-opacity",
+    "title": "Better Data Visualizations",
+    "section": "Using alpha (opacity)",
+    "text": "Using alpha (opacity)\nOne way to deal with overplotting is to set the opacity low.\n\nggplot(data = NHANES,\n       aes(x = Height, y = Weight)) +\n  geom_point(alpha=0.01) + \n  facet_grid( Gender ~ PregnantNow )"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#geom_density2d",
+    "href": "slides/2024-08-28-dataviz.html#geom_density2d",
+    "title": "Better Data Visualizations",
+    "section": "geom_density2d",
+    "text": "geom_density2d\nAlternatively (or simultaneously) we might prefer a different geom altogether.\n\nggplot(data = NHANES,\n       aes(x = Height, y = Weight)) +\n  geom_density2d() + \n  facet_grid( Gender ~ PregnantNow )"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#multiple-layers",
+    "href": "slides/2024-08-28-dataviz.html#multiple-layers",
+    "title": "Better Data Visualizations",
+    "section": "Multiple layers",
+    "text": "Multiple layers\n\n\n\nggplot(data = HELP_data, \n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6) +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_jitter(alpha=.6, width = 0.1) +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#multiple-layers-1",
+    "href": "slides/2024-08-28-dataviz.html#multiple-layers-1",
+    "title": "Better Data Visualizations",
+    "section": "Multiple layers",
+    "text": "Multiple layers\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6, \n             position = position_jitter(width=.1, height=0)) +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#things-i-havent-mentioned-much",
+    "href": "slides/2024-08-28-dataviz.html#things-i-havent-mentioned-much",
+    "title": "Better Data Visualizations",
+    "section": "Things I haven’t mentioned (much)",
+    "text": "Things I haven’t mentioned (much)\n\ncoords (coord_flip() is good to know about)\nthemes (for customizing appearance)\nposition (position_dodge(), position_jitterdodge(), position_stack(), etc.)\ntransforming axes"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#themes",
+    "href": "slides/2024-08-28-dataviz.html#themes",
+    "title": "Better Data Visualizations",
+    "section": "themes",
+    "text": "themes\n\nlibrary(ggthemes)\nggplot(Births78, aes(x = date, y = births)) + \n  geom_point() + \n  theme_wsj()"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#jitterdodge",
+    "href": "slides/2024-08-28-dataviz.html#jitterdodge",
+    "title": "Better Data Visualizations",
+    "section": "jitterdodge()",
+    "text": "jitterdodge()\n\nggplot(data = HELP_data, \n       aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge()) +\n  geom_point(aes(color = children, \n                 fill = children), \n             position = position_jitterdodge()) +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#a-little-bit-of-everything",
+    "href": "slides/2024-08-28-dataviz.html#a-little-bit-of-everything",
+    "title": "Better Data Visualizations",
+    "section": "A little bit of everything",
+    "text": "A little bit of everything\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge(width=1)) +\n  geom_point(aes(fill = children), alpha=.5, \n             position = position_jitterdodge(dodge.width=1, jitter.width = 0.2)) + \n  facet_wrap(~homeless)+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#want-to-learn-more",
+    "href": "slides/2024-08-28-dataviz.html#want-to-learn-more",
+    "title": "Better Data Visualizations",
+    "section": "Want to learn more?",
+    "text": "Want to learn more?\n\ndocs.ggplot2.org/\nR for Data Science by Hadley Wickham and Garrett Grolemund"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#whats-around-the-corner",
+    "href": "slides/2024-08-28-dataviz.html#whats-around-the-corner",
     "title": "Better Data Visualizations",
     "section": "What’s around the corner?",
     "text": "What’s around the corner?\nshiny\n\ninteractive graphics / modeling\nhttps://shiny.rstudio.com/\n\nplotly\n\nPlotly is an R package for creating interactive web-based graphs via plotly’s JavaScript graphing library, plotly.js. The plotly R libary contains the ggplotly function , which will convert ggplot2 figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the style function.\n\n\nhttps://plot.ly/ggplot2/getting-started/\n\ngganimate\n\ngganimate tutorial"
