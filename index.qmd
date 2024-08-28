@@ -40,7 +40,7 @@ quarto add quarto-ext/fontawesome
 schedule <- tribble(
   ~`date`, ~topic, ~`class materials`, ~`due dates`, ~resources,
   "Week 1 <br> 8.26.24", 'intro + <br> R + RStudio + <br> GitHub + <br> ggplot', 
-  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr2e/ch-prologue.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-26-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f24.pdf" target = "_blank">WS 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_f24.pdf" target = "_blank">WS 2</a>',
+  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr2e/ch-prologue.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-26-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f24_DSproj.pdf" target = "_blank">WS 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_f24_R.pdf" target = "_blank">WS 2</a>',
   ' ',
   '{{< fa comments >}} ',
   
