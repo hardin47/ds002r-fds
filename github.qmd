@@ -157,34 +157,76 @@ include_graphics("images/check-github.png")
 ```
 
 
+
+
 # Submit the assignment on Gradescope
 
 You will submit your assignments via Gradescope on Canvas.
 
-<span style="color:red">ITS and I are still working through a few kinks getting GitHub and Gradescope to talk to one another on Canvas.  The instructions below are old from Sakai.  They will be updated once the Canvas process is in place.</span>
+
+## Connecting your GitHub account to Gradescope
+
+The first time you go to submit an assignment on Gradescope, you will be asked to connect to GitHub.  Here are the steps to follow to make that connection:
+
+1. Access Gradescope from Canvas: From Canvas, click on **Gradescope** in the Course Navigation menu.  You will be asked to authorize the Gradescope integration.
+
+2. Navigate to Gradescope.com: In a new tab (same browser), navigate to <a href = https://www.gradescope.com/ target = "_blank">https://www.gradescope.com/</a>.  Gradescope should recognize your student user account from the Canvas integration.
+
+3. Go to Gradescope Account Settings: Click on **Account** (bottom left of the screen) and then **Edit Account**.
+
+```{r echo = FALSE, fig.cap="Change your Gradescope account settings.", fig.alt = "Screen shot of Gradescope account changes."}
+include_graphics("images/gradescope_account.png")
+```
+
+This will take you to your **Account Settings** in Gradescope. Here, you’ll have the option to verify your Pomona email address and set up a password.
+
+4. Link Your GitHub Account to Gradescope: Scroll to the bottom of the page to the **Link External Account** menu. Click on **Link a GitHub account**. 
+
+
+```{r echo = FALSE, fig.cap="Linking GitHub to Gradescope.", fig.alt = "Screen shot of how to link GitHub to Gradescope."}
+include_graphics("images/link_github.png")
+```
+
+
+You'll be prompted to authorize GitHub and connect it to Gradescope. In the drop-down menu under Repositories, be sure to select "Public and private" to enable full access.
+
+```{r echo = FALSE, fig.cap="Authorizing Gradescope to talk to GitHub.", fig.alt = "Screen shot of authorizing Gradescope to talk to GitHub."}
+include_graphics("images/authorize_gradescope.png")
+```
+
+When prompted, log in to your GitHub account to complete the process (I don't know if  you need your PAT or your "Go(ubs!" password, try both!).
+
+After your accounts have been linked, you'll see a message that says "Successfully authenticated with GitHub." 
+
+
+```{r echo = FALSE, fig.cap="Successful integration of GitHub and Gradescope", fig.alt = "Screen shot of successful integration between GitHub and Gradescope."}
+include_graphics("images/github_success.png")
+```
+
+
+5. Return to Canvas & Verify the Connection 
+
+Now, you can return to Canvas and navigate back to Gradescope. If you are returning to your previous tab, you may need to refresh the page to make sure your account settings are updated. 
+
+Click on your programming assignment in Gradescope. Verify that the GitHub connection is working, and that you can see a list of your GitHub files in the drop-down menu when you are submitting an assignment.  
+
+```{r echo = FALSE, fig.cap="Submitting HW from GitHub to Gradescope.", fig.alt = "Screen shot of submitting HW from GitHub to Gradescope."}
+include_graphics("images/submitting_gradescope.png")
+```
+
+
+## Submitting assignments after having connected to GitHub
 
 To submit your assignment, complete the following steps:
 
-<aside>
-The first time you submit, you may need to click "Connect to GitHub", to connect your Gradescope account to your GitHub account.
-</aside>
+1. Via Canvas, access the course's Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method. 
 
-1. Access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method.  You must access the course's Gradescope site via the side menu in Canvas.
-
-```{r echo = FALSE, fig.cap="Access Gradescope via Canvas.", fig.alt = "Screen shot of Gradescope connection from inside Canvas."}
-include_graphics("images/gradescope-sakai.png")
-``` 
-
-2. The first time you submit your repository, you will need to authorize Gradescope to access your git repository. Select the appropriate repository and branch (branch will almost always be `main`).
-
-```{r echo = FALSE, fig.cap="Submit files directly from GitHub.", fig.alt = "Screen shot of Gradescope instruction to submit via GitHub."}
-include_graphics("images/gradescope-github.png")
-``` 
-
-3. If this is a pair-programming submission, you will need to associate all team members with the submission. After you upload your files, click "Add Group Member" and add your partner to the submission. Add your team member to your Gradescope submission
+2. Select the appropriate GitHub repository.  The branch will always be "main".
 
 
 
-You can submit multiple times before the deadline. Your last submission will be assessed.
+You can submit multiple times before the deadline. Your last submission will determine your grade.
 
-Once assignments are assessed, you will be able to see feedback on GitHub. You can `pull` assignment feedback back onto your own computer.
+Once assignments are completely graded, you will be able to see your grade and assignment feedback on Gradescope. Grades will also be synced with Canvas.
+
+
