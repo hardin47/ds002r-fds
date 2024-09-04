@@ -4001,7 +4001,7 @@
     "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-4",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78,\n       aes(x = date\n           y = births, \n           color = wday)) +\n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births, \n           color = wday)) +\n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-5",

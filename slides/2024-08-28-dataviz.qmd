@@ -643,7 +643,7 @@ ggplot(data = Births78) +
 #| eval: false
 #| code-line-numbers: "4"
 ggplot(data = Births78,
-       aes(x = date
+       aes(x = date,
            y = births, 
            color = wday)) +
   geom_point() +
