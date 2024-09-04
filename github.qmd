@@ -1,7 +1,7 @@
 ---
 title: "Working on assignments with GitHub"
 description: |
-  Huge thanks to Ben Wiedermann at HMC for sharing the following.  
+  Big thanks to Ben Wiedermann at HMC for inspiring the following.  
 author:
   - name: Jo Hardin 
     url: https://m154-comp-stats.netlify.app/

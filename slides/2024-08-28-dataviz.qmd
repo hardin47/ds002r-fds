@@ -28,8 +28,6 @@ library(tidyverse)
 library(mosaic)
 library(knitr)
 library(ggthemes)
-library(here)
-library(lubridate)
 ```
 
 
@@ -38,7 +36,6 @@ library(lubridate)
 1. GitHub
 2. NSSD
 3. grammar of graphics
-4. ggplot
 
 ::: {.callout-important}
 Before next Wednesday, read: Tufte. 1997. <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
@@ -126,8 +123,16 @@ knitr::include_graphics("../images/Yau_cuestogether.png")
 
 Attributes can focus your reader's attention.^[image credit: Better Data Visualization by Schwabish]
 
+```{r out.width = '80%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/attributes.jpg")
+```
 
-![](../images/attributes.jpg){style="transform: rotate(90deg);" width="80%"}
+
+# Agenda  9/4/24
+
+1. Thoughts on plotting 
+2. ggplot
+3. Tufte
 
 ## Advice for Plotting
 
@@ -267,6 +272,8 @@ Attributes can focus your reader's attention.^[image credit: Better Data Visuali
 ::::
 
 
+
+
 # Goals of `ggplot2`
 
 What I will try to do
@@ -335,7 +342,6 @@ Coordinate System?  Scale?
 
 ```{r echo=FALSE}
 library(mosaic)
-library(lubridate) # package for working with dates
 library(mosaicData)
 ```
 
@@ -426,10 +432,19 @@ Coordinate System?  Scale?
 
 ```{r}
 library(mosaic)
-data(Births78)     # restore fresh version of Births78
-head(Births78, 3)
+data(Births78)
 ```
 
+```{r}
+#| eval: false
+head(Births78)
+```
+
+```{r}
+#| echo: false
+head(Births78) |> 
+  gt::gt()
+```
 
  
 
@@ -487,7 +502,7 @@ ggplot(
 ## How do we make this plot?
    
 :::: {.columns} 
-::: {.column width="50%"}
+::: {.column width="40%"}
 ```{r, echo=FALSE}
 ggplot(
   data = Births78, aes(x = date, y = births)) + 
@@ -496,7 +511,7 @@ ggplot(
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 ```{r}
 #| echo: true
 #| eval: false
@@ -515,15 +530,90 @@ ggplot() +
 :::
 ::::
 
+## Layers
+
+### Layer 1 
+
+:::: {.columns} 
+::: {.column width="40%"}
+```{r, echo=FALSE}
+ggplot(data = Births78, aes(x = date, y = births))
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "1,2"
+ggplot(data = Births78, 
+       aes(x = date, y = births)) 
+```
+
+:::
+::::
+
+## Layers
+
+### Layer 2 
+
+:::: {.columns} 
+::: {.column width="40%"}
+```{r, echo=FALSE}
+ggplot(data = Births78, aes(x = date, y = births)) + 
+  geom_point()
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "3"
+ggplot(data = Births78, 
+       aes(x = date, y = births)) + 
+  geom_point()
+```
+
+:::
+::::
+
+
+## Layers
+
+### Layer 3 
+
+:::: {.columns} 
+::: {.column width="40%"}
+```{r, echo=FALSE}
+ggplot(data = Births78, aes(x = date, y = births)) + 
+  geom_point() +
+  ggtitle("US Births in 1978")
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+ggplot(data = Births78, 
+       aes(x = date, y = births)) + 
+  geom_point() +
+  ggtitle("US Births in 1978")
+```
+
+:::
+::::
+
+
 ## How do we make this plot?
     
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
-Births78 <- 
-  Births78 |> mutate(day_of_week = wday(date, label=TRUE))
 ggplot(data = Births78) +
-  geom_point(aes(x = date, y = births, color = day_of_week)) +
+  geom_point(aes(x = date, y = births, color = wday)) +
   ggtitle("US Births in 1978")
 ```
 :::
@@ -533,10 +623,6 @@ What has changed?
 
  * new aesthetic: mapping color to day of week
 
-Adding day of week to the data set
-
-The `wday()` function in the `lubridate` package computes 
-the day of the week from a date.
 :::
 ::::
 
@@ -545,10 +631,8 @@ the day of the week from a date.
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
-Births78 <- 
-  Births78 |> mutate(day_of_week = wday(date, label=TRUE))
 ggplot(data = Births78) +
-  geom_point(aes(x = date, y = births, color = day_of_week)) +
+  geom_point(aes(x = date, y = births, color = wday)) +
   ggtitle("US Births in 1978")
 ```
 :::
@@ -557,17 +641,11 @@ ggplot(data = Births78) +
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "3"
-Births78 <-  
-  Births78 |> 
-  mutate(day_of_week = 
-           wday(date, 
-                label=TRUE))
-
+#| code-line-numbers: "4"
 ggplot(data = Births78,
        aes(x = date
            y = births, 
-           color = day_of_week)) +
+           color = wday)) +
   geom_point() +
   ggtitle("US Births in 1978")
 ```
@@ -580,7 +658,7 @@ ggplot(data = Births78,
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 ggplot(data = Births78) +
-  geom_line(aes(x = date, y = births, color = day_of_week)) +
+  geom_line(aes(x = date, y = births, color = wday)) +
   ggtitle("US Births in 1978")
 ```
 :::
@@ -592,7 +670,7 @@ ggplot(data = Births78) +
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 ggplot(data = Births78) +
-  geom_line(aes(x = date, y = births, color = day_of_week)) +
+  geom_line(aes(x = date, y = births, color = wday)) +
   ggtitle("US Births in 1978")
 ```
 :::
@@ -607,7 +685,7 @@ lines instead of dots!
 ggplot(data = Births78,
          aes(x = date, 
              y = births,
-             color = day_of_week)) +
+             color = wday)) +
   geom_line() +
   ggtitle("US Births in 1978")
 ```
@@ -621,7 +699,7 @@ ggplot(data = Births78,
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 ggplot(data = Births78, 
-       aes(x = date, y = births, color = day_of_week)) + 
+       aes(x = date, y = births, color = wday)) + 
   geom_point() + 
   geom_line()+
   ggtitle("US Births in 1978")
@@ -636,7 +714,7 @@ ggplot(data = Births78,
 ```{r}
 #| echo: false
 ggplot(data = Births78, 
-       aes(x = date, y = births, color = day_of_week)) + 
+       aes(x = date, y = births, color = wday)) + 
   geom_point() + 
   geom_line()+
   ggtitle("US Births in 1978")
@@ -654,7 +732,7 @@ lines
 ggplot(data = Births78,
        aes(x = date,
            y = births,
-           color = day_of_week)) + 
+           color = wday)) + 
   geom_point() +  
   geom_line()+
   ggtitle("US Births in 1978")
@@ -728,7 +806,7 @@ ggplot(data = Births78,
 ```{r, echo=FALSE}
 ggplot(data = Births78,
        aes(x = date, y = births)) + 
-  geom_line(aes(color = day_of_week)) +       
+  geom_line(aes(color = wday)) +       
   geom_point(color = "navy")  +          
   ggtitle("US Births in 1978")
 ```
@@ -743,7 +821,7 @@ ggplot(data = Births78,
 ggplot(data = Births78,
        aes(x = date,
            y = births)) + 
-  geom_line(aes(color = day_of_week)) +       
+  geom_line(aes(color = wday)) +       
   geom_point(color = "navy") +           
   ggtitle("US Births in 1978")
 ```
@@ -757,7 +835,7 @@ ggplot(data = Births78,
 ggplot(data = Births78,
        aes(x = date,
            y = births)) + 
-  geom_line(aes(color = day_of_week)) +      
+  geom_line(aes(color = wday)) +      
   geom_point(color = "navy")  +         
   ggtitle("US Births in 1978")
 ```
@@ -805,7 +883,7 @@ help pages will tell you their aesthetics, default stats, etc.
 ggplot(data = Births78,
        aes(x = date,
            y = births, 
-           fill = day_of_week)) + 
+           fill = wday)) + 
   geom_area()+
   ggtitle("US Births in 1978")
 ```
@@ -819,7 +897,7 @@ ggplot(data = Births78,
 ::: {.column width="50%"}
 ```{r, eval=TRUE}
 ggplot(data = Births78,
-       aes(x = date, y = births, fill = day_of_week)) + 
+       aes(x = date, y = births, fill = wday)) + 
   geom_area()+
   ggtitle("US Births in 1978")
 ```
@@ -858,7 +936,14 @@ clinical trial.  Subjects admitted for treatment for addiction to one
 of three substances.
 
 ```{r}
+#| eval: false
 head(HELPrct)
+```
+
+```{r}
+#| echo: false
+head(HELPrct) |> 
+  gt::gt()
 ```
 
 ```{r echo = FALSE}
@@ -1462,13 +1547,6 @@ ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
 
 
 
-
-# Agenda  9/7/21
-
-1. Cholera: what went (didn't go) well with the graphics?
-2. Challenger: what didn't go (went) well with the graphics?
-3. Thoughts on plotting 
-
 Tufte (1997) <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
 
 
@@ -1481,6 +1559,7 @@ Tufte (1997) <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "
 
 3. Add information
 
+Nolan & Perrrett, 2016
 
 
 # Preliminaries
@@ -1572,11 +1651,20 @@ knitr::include_graphics("../images/data-ink-bar.gif")
 
 # Simplified
 
-```{r, out.width = "47%", fig.cap = "image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked", fig.alt = "The before and after images with the process of simplifying a barplot.", fig.show='hold', echo=FALSE}
-knitr::include_graphics(c("../images/barplot-gif-before.png", "../images/barplot-gif-after.png"))
+:::: {.columns} 
+::: {.column width="50%"}
+```{r, fig.cap = "", fig.alt = "The before and after images with the process of simplifying a barplot.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("../images/barplot-gif-before.png")
 ``` 
+:::
 
-
+::: {.column width=50%}
+```{r, fig.cap = "", fig.alt = "The before and after images with the process of simplifying a barplot.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("../images/barplot-gif-after.png")
+``` 
+:::
+::::
+image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked
 
 # NYT 9/7/21
 
