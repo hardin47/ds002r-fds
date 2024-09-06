@@ -39,40 +39,40 @@ quarto add quarto-ext/fontawesome
 #| echo: false
 schedule <- tribble(
   ~`date`, ~topic, ~`class materials`, ~`due dates`, ~resources,
-  "Week 1 <br> 8.26.24", 'intro + <br> R + RStudio + <br> GitHub + <br> ggplot', 
+  "Week 1 <br> 8.26.24", 'intro + <br> R + RStudio + <br> GitHub', 
   '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr2e/ch-prologue.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-26-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f24_DSproj.pdf" target = "_blank">WS 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_f24_R.pdf" target = "_blank">WS 2</a>',
   ' ',
   '{{< fa comments >}} ',
   
    "Week 2 <br> 9.2.24", 'no class Mon <br> ggplot', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-28-dataviz.html" target = "_blank"> Data Viz</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws3_ds2_f24_tufte.pdf" target = "_blank">WS 3</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws4_ds2_f24.pdf" target = "_blank">WS 4</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-28-dataviz.html" target = "_blank"> Data Viz</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws3_ds2_f24_tufte.pdf" target = "_blank">WS 3</a> ',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 1</a> - due 9.3',
   ' ',
   
-   "Week 3 <br> 9.9.24", 'tidyverse', 
-  ' ',
+   "Week 3 <br> 9.9.24", 'ggplot', 
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-28-dataviz.html" target = "_blank"> Data Viz</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws4_ds2_f24_ggplot.pdf" target = "_blank">WS 4</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 2</a> - due 9.10 <br> Quiz 9.11',
   ' ',
 
-     "Week 4 <br> 9.16.24", 'tidy strings', 
+     "Week 4 <br> 9.16.24", 'tidyverse', 
   ' ',
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project1">Project 1</a> - due 9.18',
   ' ',
 
   
-     "Week 5 <br> 9.23.24", 'map + <br>functions', 
+     "Week 5 <br> 9.23.24", 'tidy strings', 
   ' ',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 3</a> - due 9.24 <br> Quiz 9.25',
   ' ',
 
   
-     "Week 6 <br> 9.30.24", 'iteration + <br>simulations', 
+     "Week 6 <br> 9.30.24", 'map + <br>functions', 
   ' ',
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 10.2',
   ' ',
 
   
-     "Week 7 <br> 10.7.24", 'permutation tests ', 
+     "Week 7 <br> 10.7.24", 'iteration + <br>simulations', 
   ' ',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 4</a> - due 10.8 <br> Quiz 10.9',
   ' ',
@@ -84,36 +84,36 @@ schedule <- tribble(
   ' ',
 
   
-     "Week 9 <br> 10.21.24", 'web scraping', 
+     "Week 9 <br> 10.21.24", 'permutation tests ', 
   ' ',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 5</a> - due 10.22 <br> Quiz 10.23',
   ' ',
 
   
-     "Week 10 <br> 10.28.24", 'SQL', 
+     "Week 10 <br> 10.28.24", 'web scraping', 
   ' ',
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 10.30',
   ' ',
   
   
-     "Week 11 <br> 11.4.24", 'regular expressions', 
+     "Week 11 <br> 11.4.24", 'SQL', 
   ' ',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 6</a> - due 11.5 <br> Quiz 11.6',
   ' ',
   
   
-     "Week 12 <br> 11.11.24", 'text analysis', 
+     "Week 12 <br> 11.11.24", 'regular expressions', 
   ' ',
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.13',
   ' ',
   
   
-     "Week 13 <br> 11.18.24", 'Shiny', 
+     "Week 13 <br> 11.18.24", 'text analysis', 
   ' ',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 7</a> - due 11.19 <br> Quiz 11.20',
   ' ',
 
-     "Week 14 <br> 11.25.24", 'no class Wed <br>', 
+     "Week 14 <br> 11.25.24", 'Shiny<br> no class Wed', 
   ' ',
   ' ',
   ' ',
