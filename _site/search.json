@@ -2923,7 +2923,7 @@
     "href": "project1.html",
     "title": "Mini-Project 1",
     "section": "",
-    "text": "Overview\nYou will produce a personal website using Quarto that contains, at a minimum, a Home/About page with a picture or image, some basic information about you, and a link to the GitHub repo that contains the R code for your website.\nThen, in the Menu bar, you should have a selection called “Data Viz” with two sub-selections, each being a TidyTuesday analysis.\nFor each analysis, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file). Your YAML may look like this:\n---\ntitle: \"Super Mario Kart\"\ndescription: |\n  Analysis of Super Mario Kart data from TidyTuesday\nauthor: Jo Hardin\ndate: September 18, 2024\nformat: html\n---\n\n\nFERPA\nThe assignment as written asks you to submit a public facing website. Generally, students like the idea of making such a website because employers will be impressed by your work. However, I am sensitive to the fact that you may have reasons to not want to have a public facing website. If this is you, there are two alternative options for the mini-project assignment: 1. Make everything up (including a new GitHub repository, created using a different email address) and don’t include anything personal or anything that would link to you. 2. Complete the assignment using a private repository. None of the information will be publicly available. You must, however, give me access to the repository (invite me as a collaborator), and then I can pull your repo, render it locally, and give you credit for the assignment.\n\n\nTimeline\nMini-Project 1 must be submitted on Canvas by 11:59 PM on Wednesday Septemper 19. All you need to submit is a URL for your website!\n\n:::\n\n\n\nReuseCC BY 4.0"
+    "text": "Overview\nYou will produce a personal website using Quarto that contains, at a minimum, a Home/About page with a picture or image, some basic information about you, and a link to the GitHub repo that contains the R code for your website.\nThen, in the Menu bar, you should have a selection called “Data Viz” with two sub-selections, each being a TidyTuesday analysis.\n\n\nWebsite\nFollow the instructions at\nFor each analysis, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file). Your YAML may look like this:\n---\ntitle: \"Super Mario Kart\"\ndescription: |\n  Analysis of Super Mario Kart data from TidyTuesday\nauthor: Jo Hardin\ndate: September 18, 2024\nformat: html\n---\n\n\nFERPA\nThe assignment as written asks you to submit a public facing website. Generally, students like the idea of making such a website because employers will be impressed by your work. However, I am sensitive to the fact that you may have reasons to not want to have a public facing website. If this is you, there are two alternative options for the mini-project assignment: 1. Make everything up (including a new GitHub repository, created using a different email address) and don’t include anything personal or anything that would link to you. 2. Complete the assignment using a private repository. None of the information will be publicly available. You must, however, give me access to the repository (invite me as a collaborator), and then I can pull your repo, render it locally, and give you credit for the assignment.\n\n\nTimeline\nMini-Project 1 must be submitted on Canvas by 11:59 PM on Wednesday Septemper 19. All you need to submit is a URL for your website!\n\n:::\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "R-tip.html",
@@ -3938,21 +3938,21 @@
     "href": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot",
     "title": "Better Data Visualizations",
     "section": "What are the visual cues on this plot?",
-    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color\n\nCoordinate System? Scale?"
+    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-1",
     "href": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-1",
     "title": "Better Data Visualizations",
     "section": "What are the visual cues on this plot?",
-    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color\n\nCoordinate System? Scale?"
+    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-2",
     "href": "slides/2024-08-28-dataviz.html#what-are-the-visual-cues-on-this-plot-2",
     "title": "Better Data Visualizations",
     "section": "What are the visual cues on this plot?",
-    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color\n\nCoordinate System? Scale?"
+    "text": "What are the visual cues on this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nposition\nlength\nshape\narea/volume\nshade/color"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#the-grammar-of-graphics-ggplot",
