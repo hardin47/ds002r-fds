@@ -329,10 +329,6 @@ SAT |> subset(frac > 50) |>
 *  area/volume
 *  shade/color
 
-
-
-
-Coordinate System?  Scale?
 :::
 ::::
 
@@ -364,9 +360,6 @@ SwimRecords |>
 *  area/volume
 *  shade/color
 
-
-
-Coordinate System?  Scale?
 :::
 ::::
 
@@ -397,8 +390,6 @@ HELPrct |> group_by(substance) |>
 *  area/volume
 *  shade/color
 
-
-Coordinate System?  Scale?
 :::
 ::::
 
