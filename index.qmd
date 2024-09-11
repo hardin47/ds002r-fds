@@ -55,7 +55,8 @@ schedule <- tribble(
   ' ',
 
      "Week 4 <br> 9.16.24", 'tidyverse', 
-  ' ',
+  '{{< fa book-open >}} <a href="https://r4ds.had.co.nz/transform.html" target = "_blank"> R4DS Transform</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/07-wrangling.html" target = "_blank">wrangling</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-11-wrangling1.html" target = "_blank"> Wrangling</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws5_ds2_f24_verbs.pdf" target = "_blank">WS 5</a>',
+
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project1">Project 1</a> - due 9.18',
   ' ',
 
