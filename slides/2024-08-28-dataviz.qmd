@@ -1011,11 +1011,11 @@ ggplot(data = HELP_data,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
-HELP_data |> 
-  ggplot(aes(x = substance, 
-             fill = children)) + 
+ggplot(HELP_data,
+       aes(x = substance,
+           fill = children)) + 
   geom_bar(position = "fill") +
-  scale_y_continuous("percent")+
+  ylab("actually, percent")+
   ggtitle("HELP trial")
 ```
 :::
@@ -1673,7 +1673,7 @@ knitr::include_graphics("../images/vacc-case.png")
 W.E.B. DuBois (1868-1963)
 
 * sociologist
-* data scientist]
+* data scientist
 :::
 
 ::: {.column width="50%"}

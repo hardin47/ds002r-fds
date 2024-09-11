@@ -4366,5 +4366,257 @@
     "title": "Better Data Visualizations",
     "section": "Layers",
     "text": "Layers\nLayer 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births)) + \n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#tidy-data",
+    "href": "slides/2024-09-11-wrangling1.html#tidy-data",
+    "title": "Data Wrangling",
+    "section": "Tidy data",
+    "text": "Tidy data\n\neach row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#definition-of-datum",
+    "href": "slides/2024-09-11-wrangling1.html#definition-of-datum",
+    "title": "Data Wrangling",
+    "section": "Definition of datum",
+    "text": "Definition of datum\nThe definition of datum can be much broader:\n\nDefinition of datum from the Oxford English Dictionary"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#tidying-data",
+    "href": "slides/2024-09-11-wrangling1.html#tidying-data",
+    "title": "Data Wrangling",
+    "section": "Tidying data",
+    "text": "Tidying data\nHow would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#not-tidy-active-duty-military",
+    "href": "slides/2024-09-11-wrangling1.html#not-tidy-active-duty-military",
+    "title": "Data Wrangling",
+    "section": "Not tidy – Active Duty Military",
+    "text": "Not tidy – Active Duty Military\nThe Active Duty data are not tidy! What are the cases? How are the data not tidy? What might the data look like in tidy form? Suppose that the case was “an individual in the armed forces.” What variables would you use to capture the information in the following table?"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#tidy-packages-the-tidyverse",
+    "href": "slides/2024-09-11-wrangling1.html#tidy-packages-the-tidyverse",
+    "title": "Data Wrangling",
+    "section": "Tidy packages: the tidyverse",
+    "text": "Tidy packages: the tidyverse\n\nimage credit: https://www.tidyverse.org/."
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#some-basic-verbs",
+    "href": "slides/2024-09-11-wrangling1.html#some-basic-verbs",
+    "title": "Data Wrangling",
+    "section": "Some Basic Verbs",
+    "text": "Some Basic Verbs\n\nfilter()\narrange()\nselect()\ndistinct()\nmutate()\nsummarize()\nsample_n()"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#filter",
+    "href": "slides/2024-09-11-wrangling1.html#filter",
+    "title": "Data Wrangling",
+    "section": "filter()",
+    "text": "filter()\nAllows you to select a subset of the rows of a data frame. The first argument is the name of the data frame, the following arguments are the filters that you’d like to apply\nFor all flights on January 1st:\n\nfilter(flights, month == 1, day == 1)\n\n# A tibble: 842 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 832 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#constructing-filters",
+    "href": "slides/2024-09-11-wrangling1.html#constructing-filters",
+    "title": "Data Wrangling",
+    "section": "Constructing filters",
+    "text": "Constructing filters\nFilters are constructed of logical operators: &lt;, &gt;, &lt;=, &gt;=, ==, != (and some others).\nAdding them one by one to filter() is akin to saying “this AND that”. To say “this OR that OR both”, use |.\n\nfilter(flights, month == 1 | month == 2)\n\n# A tibble: 51,955 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 51,945 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#practice",
+    "href": "slides/2024-09-11-wrangling1.html#practice",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nConstruct filters to isolate:\n\nFlights that left on St. Patrick’s Day.\nFlights that were destined for Chicago’s primary airport.\nFlights that were destined for Chicago’s primary airport and were operated by United Airlines.\nFlights with flight times more than 2000 miles or that were in the air more than 5 hours."
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#solution",
+    "href": "slides/2024-09-11-wrangling1.html#solution",
+    "title": "Data Wrangling",
+    "section": "Solution",
+    "text": "Solution\n\nFlights that left on St. Patrick’s Day.\nFlights that were destined for Chicago’s primary airport.\nFlights that were destined for Chicago’s primary airport and were operated by United Airlines.\nFlights with flight times more than 2000 miles or that were in the air more than 5 hours.\n\n\nfilter(flights, month == 3, day == 17)\nfilter(flights, dest == \"ORD\")\nfilter(flights, dest == \"ORD\", carrier == \"UA\")\nfilter(flights, distance &gt; 2000 | air_time &gt; 5*60)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#arrange",
+    "href": "slides/2024-09-11-wrangling1.html#arrange",
+    "title": "Data Wrangling",
+    "section": "arrange()",
+    "text": "arrange()\narrange() reorders the rows: It takes a data frame, and a set of column names (or more complicated expressions) to order by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns:\n\narrange(flights, year, month, day)\n\nUse desc() to sort in descending order.\n\narrange(flights, desc(arr_delay))"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#select",
+    "href": "slides/2024-09-11-wrangling1.html#select",
+    "title": "Data Wrangling",
+    "section": "select()",
+    "text": "select()\nOften you work with large datasets with many columns where only a few are actually of interest to you. select() allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:\n\nselect(flights, year, month, day)\n\nYou can exclude columns using - and specify a range using :.\n\nselect(flights, -(year:day))"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#distinct",
+    "href": "slides/2024-09-11-wrangling1.html#distinct",
+    "title": "Data Wrangling",
+    "section": "distinct()",
+    "text": "distinct()\nA common use of select() is to find out which values a set of variables takes. This is particularly useful in conjunction with the distinct() verb which only returns the unique values in a table.\nWhat do the following data correspond to?\n\ndistinct(select(flights, origin, dest))\n\n# A tibble: 224 × 2\n   origin dest \n   &lt;chr&gt;  &lt;chr&gt;\n 1 EWR    IAH  \n 2 LGA    IAH  \n 3 JFK    MIA  \n 4 JFK    BQN  \n 5 LGA    ATL  \n 6 EWR    ORD  \n 7 EWR    FLL  \n 8 LGA    IAD  \n 9 JFK    MCO  \n10 LGA    ORD  \n# ℹ 214 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#mutate",
+    "href": "slides/2024-09-11-wrangling1.html#mutate",
+    "title": "Data Wrangling",
+    "section": "mutate()",
+    "text": "mutate()\nAs well as selecting from the set of existing columns, it’s often useful to add new columns that are functions of existing columns. This is the job of mutate():\n\nselect(mutate(flights, gain = dep_delay - arr_delay), \n       flight, dep_delay, arr_delay, gain)\n\n# A tibble: 336,776 × 4\n   flight dep_delay arr_delay  gain\n    &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;\n 1   1545         2        11    -9\n 2   1714         4        20   -16\n 3   1141         2        33   -31\n 4    725        -1       -18    17\n 5    461        -6       -25    19\n 6   1696        -4        12   -16\n 7    507        -5        19   -24\n 8   5708        -3       -14    11\n 9     79        -3        -8     5\n10    301        -2         8   -10\n# ℹ 336,766 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#summarize-and-sample_n",
+    "href": "slides/2024-09-11-wrangling1.html#summarize-and-sample_n",
+    "title": "Data Wrangling",
+    "section": "summarize() and sample_n()",
+    "text": "summarize() and sample_n()\nsummarize() collapses a data frame to a single row based on some function. It’s not very useful yet, but it will be.\nsample_n() provides you with a random sample of rows.\n\nsummarize(flights, delay = mean(dep_delay, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  delay\n  &lt;dbl&gt;\n1  12.6\n\nsample_n(flights, 10)\n\n# A tibble: 10 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1    13       NA           2125        NA       NA           2240\n 2  2013     2    27     1633           1610        23     1901           1917\n 3  2013     2     7     1533           1535        -2     1800           1743\n 4  2013     4    16     1232           1236        -4     1422           1431\n 5  2013    10     9     1938           1940        -2     2220           2252\n 6  2013     2    24     1114           1115        -1     1422           1425\n 7  2013     1    21     1738           1545       113     1847           1703\n 8  2013    10    29      920            930       -10     1201           1237\n 9  2013     3     2     1412           1350        22     1654           1715\n10  2013     1    16     1859           1900        -1     2004           2015\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#practice-1",
+    "href": "slides/2024-09-11-wrangling1.html#practice-1",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nMutate the data to create a new column that contains the average speed traveled by the plane for each flight.\nSelect the new variable and save it, along with tailnum, as a new data frame object."
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#practice-2",
+    "href": "slides/2024-09-11-wrangling1.html#practice-2",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nMutate the data to create a new column that contains the average speed traveled by the plane for each flight.\nSelect the new variable and save it, along with tailnum, as a new data frame object.\n\nflights2 &lt;- mutate(flights, speed = distance/(air_time/60))\nspeed_data &lt;- select(flights2, tailnum, speed)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#group_by",
+    "href": "slides/2024-09-11-wrangling1.html#group_by",
+    "title": "Data Wrangling",
+    "section": "group_by()",
+    "text": "group_by()\nsummarize() and sample_n() are even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.\nThe group_by() function describes how to break a dataset down into groups of rows."
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#group_by-1",
+    "href": "slides/2024-09-11-wrangling1.html#group_by-1",
+    "title": "Data Wrangling",
+    "section": "group_by()",
+    "text": "group_by()\nFind the fastest airplanes in the bunch, measured as the average speed per airplane.\n\nby_tailnum &lt;- group_by(speed_data, tailnum)\navg_speed &lt;- summarize(by_tailnum, \n                       count = n(), \n                       avg_speed = mean(speed, na.rm = TRUE))\narrange(avg_speed, desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum count avg_speed\n   &lt;chr&gt;   &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA      1      501.\n 2 N315AS      1      499.\n 3 N654UA      1      499.\n 4 N819AW      1      490.\n 5 N382HA     26      486.\n 6 N388HA     36      484.\n 7 N391HA     21      484.\n 8 N777UA      1      483.\n 9 N385HA     28      483.\n10 N392HA     13      482.\n# ℹ 4,034 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#chaining",
+    "href": "slides/2024-09-11-wrangling1.html#chaining",
+    "title": "Data Wrangling",
+    "section": "Chaining",
+    "text": "Chaining\nInstead of applying each verb step-by-step, we can chain them into a single data pipeline, connected with the |&gt; operator. You start the pipeline with a data frame and then pass it to each function in turn.\nThe pipe syntax (|&gt;) takes a data frame and sends it to the argument of a function. The mapping goes to the first available argument in the function. For example:\nx |&gt;  f() is the same as f(x)\nx |&gt;  f(y) is the same as f(x, y)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#mornings",
+    "href": "slides/2024-09-11-wrangling1.html#mornings",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\nme_step1 &lt;- dress(me, what = sports)  \nme_step2 &lt;- exercise(me_step1, how = running)  \nme_step3 &lt;- eat(me_step2, choice = cereal)  \nme_step4 &lt;- dress(me_step3, what = school)  \nme_step5 &lt;- commute(me_step4, transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#mornings-1",
+    "href": "slides/2024-09-11-wrangling1.html#mornings-1",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\ncommute(dress(eat(exercise(dress(me, what = sports), how = running), choice = cereal), what = school), transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#morning",
+    "href": "slides/2024-09-11-wrangling1.html#morning",
+    "title": "Data Wrangling",
+    "section": "Morning",
+    "text": "Morning\n(better??)\n\ncommute(\n  dress(\n    eat(\n      exercise(\n        dress(me, \n              what = sports), \n        how = running), \n      choice = cereal), \n    what = school), \n  transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#mornings-2",
+    "href": "slides/2024-09-11-wrangling1.html#mornings-2",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\nme |&gt; \n  dress(what = sports) |&gt; \n  exercise(how = running) |&gt; \n  eat(choice = cereal) |&gt; \n  dress(what = school) |&gt; \n  commute(transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo",
+    "href": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nFrom Hadley Wickham, how to think about tidy data.\n\nLittle bunny Foo Foo\n\n\nWent hopping through the forest\n\n\nScooping up the field mice\n\n\nAnd bopping them on the head"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-1",
+    "href": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-1",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nThe nursery rhyme could be created by a series of steps where the output from each step is saved as an object along the way.\n\nfoo_foo &lt;- little_bunny()\nfoo_foo_1 &lt;- hop(foo_foo, through = forest)\nfoo_foo_2 &lt;- scoop(foo_foo_2, up = field_mice)\nfoo_foo_3 &lt;- bop(foo_foo_2, on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-2",
+    "href": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-2",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nAnother approach is to concatenate the functions so that there is only one output.\n\nbop(\n   scoop(\n      hop(foo_foo, through = forest),\n      up = field_mice),\n   on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-3",
+    "href": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-3",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nOr even worse, as one line:\n\nbop(scoop(hop(foo_foo, through = forest), up = field_mice), on = head)))"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-4",
+    "href": "slides/2024-09-11-wrangling1.html#little-bunny-foo-foo-4",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nInstead, the code can be written using the pipe in the order in which the function is evaluated:\n\nfoo_foo |&gt; \n   hop(through = forest) |&gt; \n       scoop(up = field_mice) |&gt; \n           bop(on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#flights",
+    "href": "slides/2024-09-11-wrangling1.html#flights",
+    "title": "Data Wrangling",
+    "section": "Flights",
+    "text": "Flights\n\nNo pipePipe\n\n\n\nflights2 &lt;- mutate(flights, speed = distance/(air_time/60))\ntail_speed &lt;- select(flights2, tailnum, speed)\ntail_speed_grp &lt;- group_by(tail_speed, tailnum)\ntail_ave &lt;- summarize(tail_speed_grp, number = n(),\n                      avg_speed = mean(speed, na.rm = TRUE))\narrange(tail_ave, desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows\n\n\n\n\n\nflights |&gt; \n  mutate(speed = distance / (air_time/60)) |&gt; \n  select(tailnum, speed) |&gt; \n  group_by(tailnum) |&gt;  \n  summarize(number = n(), \n            avg_speed = mean(speed, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#practice-3",
+    "href": "slides/2024-09-11-wrangling1.html#practice-3",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nForm a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#practice-4",
+    "href": "slides/2024-09-11-wrangling1.html#practice-4",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nForm a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?\n\nflights |&gt; \n  group_by(carrier) |&gt; \n  summarize(avg_delay = mean(dep_delay, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_delay))\n\n# A tibble: 16 × 2\n   carrier avg_delay\n   &lt;chr&gt;       &lt;dbl&gt;\n 1 F9          20.2 \n 2 EV          20.0 \n 3 YV          19.0 \n 4 FL          18.7 \n 5 WN          17.7 \n 6 9E          16.7 \n 7 B6          13.0 \n 8 VX          12.9 \n 9 OO          12.6 \n10 UA          12.1 \n11 MQ          10.6 \n12 DL           9.26\n13 AA           8.59\n14 AS           5.80\n15 HA           4.90\n16 US           3.78"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#practice-again",
+    "href": "slides/2024-09-11-wrangling1.html#practice-again",
+    "title": "Data Wrangling",
+    "section": "Practice again",
+    "text": "Practice again\nSay you’re curious about the relationship between the number of flights that each plane made in 2013, the mean distance that each of those planes flew, and the mean arrival delay. You also want to exclude the edge cases from your analysis, so focus on the planes that have logged more than 20 flights and flown an average distance of less than 2000 miles. Please form the chain that creates this dataset."
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#solution-1",
+    "href": "slides/2024-09-11-wrangling1.html#solution-1",
+    "title": "Data Wrangling",
+    "section": "Solution",
+    "text": "Solution\n\ndelay_data &lt;- flights |&gt; \n  group_by(tailnum) |&gt; \n  summarize(number = n(),\n            dist = mean(distance, na.rm = TRUE), \n            delay = mean(arr_delay, na.rm = TRUE)) |&gt; \n  filter(number &gt; 20, dist &lt; 2000)"
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#visualizing-the-data",
+    "href": "slides/2024-09-11-wrangling1.html#visualizing-the-data",
+    "title": "Data Wrangling",
+    "section": "Visualizing the data",
+    "text": "Visualizing the data\n\nVizCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndelay_data |&gt; \n ggplot(aes(dist, delay)) +\n geom_point(aes(size = number), \n            alpha = 1/2) +\n geom_smooth() +\n scale_size_area()\n\nWhen scale_size_area is used, the default behavior is to scale the area of points to be proportional to the value."
+  },
+  {
+    "objectID": "slides/2024-09-11-wrangling1.html#pipe",
+    "href": "slides/2024-09-11-wrangling1.html#pipe",
+    "title": "Data Wrangling",
+    "section": "Pipe",
+    "text": "Pipe\n\nflights |&gt; \n  mutate(speed = distance / (air_time/60)) |&gt; \n  select(tailnum, speed) |&gt; \n  group_by(tailnum) |&gt;  \n  summarize(number = n(), \n            avg_speed = mean(speed, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows"
   }
 ]
