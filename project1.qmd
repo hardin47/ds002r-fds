@@ -1,8 +1,69 @@
 ---
-title: "Project 1"
+title: "Mini-Project 1"
 description: |
   Website
 format: html
 ---
+  
+```{r}
+#| include: false
 
-more soon.
+library(tidyverse)
+```
+
+### Overview
+
+Part of being a successful data scientist is communicating your work and demonstrating that you know **how** to communicate your work.  To that end, you will each be creating your own website with some of the course projects (see caveat below!).
+
+You will produce a personal website using Quarto that contains, at a minimum, a Home/About page with a picture or image (doesn't have to be of you, could be some kind of art, etc., but make sure you have permission to post whatever you include), some basic information about you, and a link to the GitHub repo that contains the R code for your website.  
+
+Then, in the Menu bar, you should have a selection called "Data Viz" with two sub-selections, each being a <a href = "" target = "_blank">TidyTuesday</a> analysis.
+
+### Website
+
+To make the website follow the instructions at <a href = "https://ucsb-meds.github.io/creating-quarto-websites/" target = "_blank">Creating your personal website using Quarto</a> by Sam Csik.
+
+### TidyTuesday
+
+For each analysis, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file).  Your YAML might look something like this (note that the format here is html, unlike the pdf that we use for the homework).
+
+````
+---
+title: "Super Mario Kart"
+description: |
+  Analysis of Super Mario Kart data from TidyTuesday
+author: Jo Hardin
+date: September 18, 2024
+format: html
+---
+````
+
+The TidyTuesday analysis can be quite minimal. One scatterplot per analysis is fine, and you don't need to annotate or make it beautiful (of course, you might **want** to make it beautiful...).
+
+Inside your `_quarto.yml` file (see https://ucsb-meds.github.io/creating-quarto-websites/#modify-website-appearance-in-_quarto.yml), you might have something like the following:
+
+````
+website:
+  title: "My phenomenal first website!"
+  navbar:
+    right: 
+      - text: "About Me"
+        href: about.qmd
+      - text: "Data Viz"
+        menu: 
+         - text: "Mario Kart"
+           href: mariokart.html
+         - text: "Campus Pride Index"
+           href: pride.html
+````
+
+### Caveat to personal website / FERPA {#sec-ferpa}
+
+The assignment as written asks you to submit a public facing website. Generally, students like the idea of making such a website because future employers will be impressed by your work. However, I am sensitive to the fact that you may have reasons to not want to have a public facing website.  If this is you (for **any** reason, you don't need to explain yourself), there are two alternative options for the mini-project assignment:
+
+  1. While creating the website, make-up everything (including a new GitHub repository, created using a different email address) and don't include anything personal or anything that would link to you.
+  2. Complete the assignment using a **private** repository.  None of the information will be publicly available (that is, your URL won't be accessible to the public).  You must, however, give me access to the repository (invite me as a collaborator), and then I can pull your repo, render it locally, and give you credit for the assignment by compiling the entire website locally on my computer.
+
+### Timeline
+
+Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday Septemper 19**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!

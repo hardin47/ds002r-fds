@@ -5,7 +5,14 @@ description: |
 format: html
 ---
 
-Some details about the structure and assessment of the projects.
 
+```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "Two monsters working magic to come up with a complete data analysis and presentation.", preview = TRUE, echo = FALSE}
+knitr::include_graphics("images/project.png")
+```
+
+
+Throughout the semester, you will complete a series of mini-projects. The first project is the creation of a website connected to your GitHub account. Subsequent projects will be posted onto the website you create.  
+
+Each individual project has instructions that are given separately, and will be graded according to the specific instructions. However, I encourage you to consider the overall project as a potential deliverable that you could include on a resume, show to future employers, discuss in graduate school interviews, etc. That is, approach the assignment as an opportunity for you to take something away from the class which is bigger than just a grade.
 
 

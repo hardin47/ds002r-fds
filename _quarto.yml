@@ -33,7 +33,7 @@ website:
         menu: 
          - text: "semester mini-projects"
            href: project.html
-         - text: "project 1"
+         - text: "project 1 - website"
            href: project1.html
          - text: "project 2"
            href: project2.html
