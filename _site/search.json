@@ -3987,7 +3987,7 @@
     "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-2",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births)) + \n  geom_point() +\n  ggtitle(\"US Births in 1978\")\n\nggplot() +\n  geom_point(data = Births78, \n             aes(x = date, y = births)) +\n  ggtitle(\"US Births in 1978\")"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births)) + \n  geom_point() +\n  labs(title = \"US Births in 1978\")\n\nggplot() +\n  geom_point(data = Births78, \n             aes(x = date, y = births)) +\n  labs(title = \"US Births in 1978\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-3",
@@ -4001,7 +4001,7 @@
     "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-4",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births, \n           color = wday)) +\n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births, \n           color = wday)) +\n  geom_point() +\n  labs(title = \"US Births in 1978\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-5",
@@ -4015,7 +4015,7 @@
     "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-6",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nlines instead of dots!\n\nggplot(data = Births78,\n         aes(x = date, \n             y = births,\n             color = wday)) +\n  geom_line() +\n  ggtitle(\"US Births in 1978\")"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nlines instead of dots!\n\nggplot(data = Births78,\n         aes(x = date, \n             y = births,\n             color = wday)) +\n  geom_line() +\n  labs(title = \"US Births in 1978\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-7",
@@ -4029,28 +4029,28 @@
     "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-8",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nNow there are two layers: one with points and one with lines\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births,\n           color = wday)) + \n  geom_point() +  \n  geom_line()+\n  ggtitle(\"US Births in 1978\")\n\n\nThe layers are placed one on top of the other: the points are below and the lines are above.\ndata and aes specified in ggplot() affect all geoms"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nNow there are two layers: one with points and one with lines\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births,\n           color = wday)) + \n  geom_point() +  \n  geom_line()+\n  labs(title = \"US Births in 1978\")\n\n\nThe layers are placed one on top of the other: the points are below and the lines are above.\ndata and aes specified in ggplot() affect all geoms"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#what-does-this-code-do",
     "href": "slides/2024-08-28-dataviz.html#what-does-this-code-do",
     "title": "Better Data Visualizations",
     "section": "What does this code do?",
-    "text": "What does this code do?\n\nggplot(data = Births78,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
+    "text": "What does this code do?\n\nggplot(data = Births78,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point() +\n  labs(title = \"US Births in 1978\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#what-does-this-code-do-1",
     "href": "slides/2024-08-28-dataviz.html#what-does-this-code-do-1",
     "title": "Better Data Visualizations",
     "section": "What does this code do?",
-    "text": "What does this code do?\n\nggplot(data = Births78,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point()  +\n  ggtitle(\"US Births in 1978\")\n\n\nThis is mapping the color aesthetic to a new variable with only one value (“navy”).\nSo all the dots get set to the same color, but it’s not navy."
+    "text": "What does this code do?\n\nggplot(data = Births78,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point()  +\n  labs(title = \"US Births in 1978\")\n\n\nThis is mapping the color aesthetic to a new variable with only one value (“navy”).\nSo all the dots get set to the same color, but it’s not navy."
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#setting-vs.-mapping",
     "href": "slides/2024-08-28-dataviz.html#setting-vs.-mapping",
     "title": "Better Data Visualizations",
     "section": "Setting vs. Mapping",
-    "text": "Setting vs. Mapping\nIf we want to set the color to be navy for all of the dots, we do it outside the aes() designation:\n\nggplot(data = Births78,\n       aes(x = date, y = births)) +   # map variables \n  geom_point(color = \"navy\")    +   # set attributes\n  ggtitle(\"US Births in 1978\")\n\n\n\nNote that color = \"navy\" is now outside of the aesthetics list. That’s how ggplot2 distinguishes between mapping and setting."
+    "text": "Setting vs. Mapping\nIf we want to set the color to be navy for all of the dots, we do it outside the aes() designation:\n\nggplot(data = Births78,\n       aes(x = date, y = births)) +   # map variables \n  geom_point(color = \"navy\")    +   # set attributes\n  labs(title = \"US Births in 1978\")\n\n\n\nNote that color = \"navy\" is now outside of the aesthetics list. That’s how ggplot2 distinguishes between mapping and setting."
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-9",
@@ -4064,7 +4064,7 @@
     "href": "slides/2024-08-28-dataviz.html#how-do-we-make-this-plot-10",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births)) + \n  geom_line(aes(color = wday)) +      \n  geom_point(color = \"navy\")  +         \n  ggtitle(\"US Births in 1978\")\n\n\nggplot() establishes the default data and aesthetics for the geoms, but each geom may change these defaults.\ngood practice: put into ggplot() the things that affect all (or most) of the layers; rest in geom_XXXX()"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births)) + \n  geom_line(aes(color = wday)) +      \n  geom_point(color = \"navy\")  +         \n  labs(title = \"US Births in 1978\")\n\n\nggplot() establishes the default data and aesthetics for the geoms, but each geom may change these defaults.\ngood practice: put into ggplot() the things that affect all (or most) of the layers; rest in geom_XXXX()"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#setting-vs.-mapping-again",
@@ -4092,14 +4092,14 @@
     "href": "slides/2024-08-28-dataviz.html#lets-try-geom_area",
     "title": "Better Data Visualizations",
     "section": "Let’s try geom_area",
-    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births, \n           fill = wday)) + \n  geom_area()+\n  ggtitle(\"US Births in 1978\")"
+    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births78,\n       aes(x = date,\n           y = births, \n           fill = wday)) + \n  geom_area()+\n  labs(title = \"US Births in 1978\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#lets-try-geom_area-1",
     "href": "slides/2024-08-28-dataviz.html#lets-try-geom_area-1",
     "title": "Better Data Visualizations",
     "section": "Let’s try geom_area",
-    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births78,\n       aes(x = date, y = births, fill = wday)) + \n  geom_area()+\n  ggtitle(\"US Births in 1978\")\n\n\n\n\n\n\n\n\n\n… not a good plot\n\noverplotting is hiding much of the data\nextending y-axis to 0 may or may not be desirable."
+    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births78,\n       aes(x = date, y = births, fill = wday)) + \n  geom_area()+\n  labs(title = \"US Births in 1978\")\n\n\n\n\n\n\n\n\n\n… not a good plot\n\noverplotting is hiding much of the data\nextending y-axis to 0 may or may not be desirable."
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#side-note-what-makes-a-plot-good",
@@ -4120,140 +4120,140 @@
     "href": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study",
     "title": "Better Data Visualizations",
     "section": "Who are the people in the study?",
-    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance)) + \n  geom_bar()+\n  ggtitle(\"HELP trial\")\n\n\nHmm. What’s up with y?\n\nstat_bin() is being applied to the data before the geom_bar() gets to do its thing. Binning creates the y values."
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance)) + \n  geom_bar()+\n  labs(title = \"HELP trial\")\n\n\nHmm. What’s up with y?\n\nstat_bin() is being applied to the data before the geom_bar() gets to do its thing. Binning creates the y values."
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-1",
     "href": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-1",
     "title": "Better Data Visualizations",
     "section": "Who are the people in the study?",
-    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar()+\n  ggtitle(\"HELP trial\")"
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar()+\n  labs(title = \"HELP trial\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-2",
     "href": "slides/2024-08-28-dataviz.html#who-are-the-people-in-the-study-2",
     "title": "Better Data Visualizations",
     "section": "Who are the people in the study?",
-    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar(position = \"fill\") +\n  ylab(\"actually, percent\")+\n  ggtitle(\"HELP trial\")"
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar(position = \"fill\") +\n  labs(title = \"HELP trial\",\n       y = \"actually, percent\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study",
     "href": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study",
     "title": "Better Data Visualizations",
     "section": "How old are people in the HELP study?",
-    "text": "How old are people in the HELP study?\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram()+\n  ggtitle(\"HELP trial\")\n\nNotice the messages\n\nstat_bin: Histograms are not mapping the raw data but binned data.\nstat_bin() performs the data transformation.\nbinwidth: a default binwidth has been selected, but we should really choose our own."
+    "text": "How old are people in the HELP study?\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram()+\n  labs(title = \"HELP trial\")\n\nNotice the messages\n\nstat_bin: Histograms are not mapping the raw data but binned data.\nstat_bin() performs the data transformation.\nbinwidth: a default binwidth has been selected, but we should really choose our own."
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#setting-the-binwidth-manually",
     "href": "slides/2024-08-28-dataviz.html#setting-the-binwidth-manually",
     "title": "Better Data Visualizations",
     "section": "Setting the binwidth manually",
-    "text": "Setting the binwidth manually\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram(binwidth = 2)+\n  ggtitle(\"HELP trial\")"
+    "text": "Setting the binwidth manually\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram(binwidth = 2)+\n  labs(title = \"HELP trial\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study-other-geoms",
     "href": "slides/2024-08-28-dataviz.html#how-old-are-people-in-the-help-study-other-geoms",
     "title": "Better Data Visualizations",
     "section": "How old are people in the HELP study? – Other geoms",
-    "text": "How old are people in the HELP study? – Other geoms\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_freqpoly(binwidth = 2)+\n  ggtitle(\"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_density()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "How old are people in the HELP study? – Other geoms\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_freqpoly(binwidth = 2)+\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_density()+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually",
     "href": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually",
     "title": "Better Data Visualizations",
     "section": "Selecting stat and geom manually",
-    "text": "Selecting stat and geom manually\nEvery geom comes with a default stat\n\nfor simple cases, the stat is stat_identity() which does nothing\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_line(stat = \"density\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Selecting stat and geom manually\nEvery geom comes with a default stat\n\nfor simple cases, the stat is stat_identity() which does nothing\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_line(stat = \"density\")+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually-1",
     "href": "slides/2024-08-28-dataviz.html#selecting-stat-and-geom-manually-1",
     "title": "Better Data Visualizations",
     "section": "Selecting stat and geom manually",
-    "text": "Selecting stat and geom manually\nEvery stat comes with a default geom, every geom with a default stat\n\nwe can specify stats instead of geom, if we prefer\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  stat_density(geom = \"line\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Selecting stat and geom manually\nEvery stat comes with a default geom, every geom with a default stat\n\nwe can specify stats instead of geom, if we prefer\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  stat_density(geom = \"line\")+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#more-combinations",
     "href": "slides/2024-08-28-dataviz.html#more-combinations",
     "title": "Better Data Visualizations",
     "section": "More combinations",
-    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", binwidth = 3) + \n  geom_line(stat = \"bin\", binwidth = 3)  +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", binwidth = 3) + \n  geom_line(stat = \"bin\", binwidth = 3)  +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#more-combinations-1",
     "href": "slides/2024-08-28-dataviz.html#more-combinations-1",
     "title": "Better Data Visualizations",
     "section": "More combinations",
-    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_area(stat = \"bin\", binwidth = 3)  +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_area(stat = \"bin\", binwidth = 3)  +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#more-combinations-2",
     "href": "slides/2024-08-28-dataviz.html#more-combinations-2",
     "title": "Better Data Visualizations",
     "section": "More combinations",
-    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", \n             binwidth = 3, \n             aes(size = ..count..)) +\n  geom_line(stat = \"bin\", binwidth = 3) +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", \n             binwidth = 3, \n             aes(size = ..count..)) +\n  geom_line(stat = \"bin\", binwidth = 3) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-much-drinking-i1",
     "href": "slides/2024-08-28-dataviz.html#how-much-drinking-i1",
     "title": "Better Data Visualizations",
     "section": "How much drinking? (i1)",
-    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_histogram()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_histogram()+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-1",
     "href": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-1",
     "title": "Better Data Visualizations",
     "section": "How much drinking? (i1)",
-    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_density()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_density()+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-2",
     "href": "slides/2024-08-28-dataviz.html#how-much-drinking-i1-2",
     "title": "Better Data Visualizations",
     "section": "How much drinking? (i1)",
-    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_area(stat = \"density\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_area(stat = \"density\")+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#covariates-adding-in-more-variables",
     "href": "slides/2024-08-28-dataviz.html#covariates-adding-in-more-variables",
     "title": "Better Data Visualizations",
     "section": "Covariates: Adding in more variables",
-    "text": "Covariates: Adding in more variables\nUsing color and linetype:\n\nggplot(data = HELP_data,\n       aes(x = i1,\n           color = substance,\n           linetype = children)) + \n  geom_line(stat = \"density\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Covariates: Adding in more variables\nUsing color and linetype:\n\nggplot(data = HELP_data,\n       aes(x = i1,\n           color = substance,\n           linetype = children)) + \n  geom_line(stat = \"density\")+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#using-color-and-facets",
     "href": "slides/2024-08-28-dataviz.html#using-color-and-facets",
     "title": "Better Data Visualizations",
     "section": "Using color and facets",
-    "text": "Using color and facets\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( . ~ children )+\n  ggtitle(\"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( children ~ . )+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Using color and facets\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( . ~ children )+\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( children ~ . )+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#boxplots",
     "href": "slides/2024-08-28-dataviz.html#boxplots",
     "title": "Better Data Visualizations",
     "section": "Boxplots",
-    "text": "Boxplots\nBoxplots use stat_quantile() (five number summary).\nThe quantitative variable must be y, and there must be an additional x variable.\n\nHELP_data |&gt; \n  ggplot(aes(x = substance, y = age, color = children)) + \n  geom_boxplot()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Boxplots\nBoxplots use stat_quantile() (five number summary).\nThe quantitative variable must be y, and there must be an additional x variable.\n\nHELP_data |&gt; \n  ggplot(aes(x = substance, y = age, color = children)) + \n  geom_boxplot()+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#horizontal-boxplots",
     "href": "slides/2024-08-28-dataviz.html#horizontal-boxplots",
     "title": "Better Data Visualizations",
     "section": "Horizontal boxplots",
-    "text": "Horizontal boxplots\nHorizontal boxplots are obtained by flipping the coordinate system:\n\ncoord_flip() may be used with other plots as well to reverse the roles of x and y on the plot.\n\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Horizontal boxplots\nHorizontal boxplots are obtained by flipping the coordinate system:\n\ncoord_flip() may be used with other plots as well to reverse the roles of x and y on the plot.\n\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_flip()+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#axes-scaling-with-boxplots",
     "href": "slides/2024-08-28-dataviz.html#axes-scaling-with-boxplots",
     "title": "Better Data Visualizations",
     "section": "Axes scaling with boxplots",
-    "text": "Axes scaling with boxplots\nWe can scale the continuous axis\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_trans(y = \"exp\")+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Axes scaling with boxplots\nWe can scale the continuous axis\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_trans(y = \"exp\")+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#give-me-some-space",
     "href": "slides/2024-08-28-dataviz.html#give-me-some-space",
     "title": "Better Data Visualizations",
     "section": "Give me some space",
-    "text": "Give me some space\nWe’ve triggered a new feature: dodge (for dodging things left/right). We can control how much if we set the dodge manually.\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot(position = position_dodge(width=1)) +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Give me some space\nWe’ve triggered a new feature: dodge (for dodging things left/right). We can control how much if we set the dodge manually.\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot(position = position_dodge(width=1)) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#issues-with-bigger-data",
@@ -4281,14 +4281,14 @@
     "href": "slides/2024-08-28-dataviz.html#multiple-layers",
     "title": "Better Data Visualizations",
     "section": "Multiple layers",
-    "text": "Multiple layers\n\n\n\nggplot(data = HELP_data, \n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6) +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_jitter(alpha=.6, width = 0.1) +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Multiple layers\n\n\n\nggplot(data = HELP_data, \n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6) +\n  coord_flip()+\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_jitter(alpha=.6, width = 0.1) +\n  coord_flip()+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#multiple-layers-1",
     "href": "slides/2024-08-28-dataviz.html#multiple-layers-1",
     "title": "Better Data Visualizations",
     "section": "Multiple layers",
-    "text": "Multiple layers\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6, \n             position = position_jitter(width=.1, height=0)) +\n  coord_flip()+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "Multiple layers\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6, \n             position = position_jitter(width=.1, height=0)) +\n  coord_flip()+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#things-i-havent-mentioned-much",
@@ -4309,14 +4309,14 @@
     "href": "slides/2024-08-28-dataviz.html#jitterdodge",
     "title": "Better Data Visualizations",
     "section": "jitterdodge()",
-    "text": "jitterdodge()\n\nggplot(data = HELP_data, \n       aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge()) +\n  geom_point(aes(color = children, \n                 fill = children), \n             position = position_jitterdodge()) +\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "jitterdodge()\n\nggplot(data = HELP_data, \n       aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge()) +\n  geom_point(aes(color = children, \n                 fill = children), \n             position = position_jitterdodge()) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#a-little-bit-of-everything",
     "href": "slides/2024-08-28-dataviz.html#a-little-bit-of-everything",
     "title": "Better Data Visualizations",
     "section": "A little bit of everything",
-    "text": "A little bit of everything\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge(width=1)) +\n  geom_point(aes(fill = children), alpha=.5, \n             position = position_jitterdodge(dodge.width=1, jitter.width = 0.2)) + \n  facet_wrap(~homeless)+\n  ggtitle(\"HELP clinical trial at detoxification unit\")"
+    "text": "A little bit of everything\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge(width=1)) +\n  geom_point(aes(fill = children), alpha=.5, \n             position = position_jitterdodge(dodge.width=1, jitter.width = 0.2)) + \n  facet_wrap(~homeless)+\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#want-to-learn-more",
@@ -4365,7 +4365,7 @@
     "href": "slides/2024-08-28-dataviz.html#layers-2",
     "title": "Better Data Visualizations",
     "section": "Layers",
-    "text": "Layers\nLayer 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births)) + \n  geom_point() +\n  ggtitle(\"US Births in 1978\")"
+    "text": "Layers\nLayer 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births)) + \n  geom_point() +\n  labs(title = \"US Births in 1978\")"
   },
   {
     "objectID": "slides/2024-09-11-wrangling1.html#tidy-data",

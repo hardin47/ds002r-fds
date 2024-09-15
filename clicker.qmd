@@ -223,7 +223,7 @@ data(Births78)
 ggplot(data = Births78, 
        aes(x = date, y = births, color = "navy")) + 
   geom_point() +          
-  ggtitle("US Births in 1978")
+  labs(title = "US Births in 1978")
 ```
 :::
 
@@ -234,7 +234,7 @@ ggplot(data = Births78,
 ggplot(data = Births78, 
        aes(x = date, y = births, color = "navy")) + 
   geom_point() +          
-  ggtitle("US Births in 1978")
+  labs(title = "US Births in 1978")
 ```
 :::
 
@@ -259,7 +259,7 @@ ggplot(data = Births78,
        aes(x = date, y = births)) + 
   geom_line(aes(color = wday)) +       
   geom_point(color = "navy") +          
-  ggtitle("US Births in 1978")
+  labs(title = "US Births in 1978")
 ```
      
 [^15]: a. dot color is specified as "navy", line color is specified as `wday`.
