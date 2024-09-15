@@ -1,0 +1,507 @@
+---
+title: Data Wrangling
+author: "Jo Hardin"
+subtitle: "September 11 + 16, 2024"
+format:
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(palmerpenguins)
+library(nycflights13)
+```
+
+
+# Agenda  9/11/24
+
+1. Tidy data
+2. Data verbs
+
+
+# What are data?
+
+```{r}
+#| echo: false
+head(penguins) |> 
+  gt::gt()
+```
+
+## Tidy data
+
+* each row = a unit of observation (here, a penguin)
+* each column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)
+* each entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell
+
+
+## Definition of `datum`
+
+The definition of **datum** can be much broader:
+
+```{r fig.cap = "Definition of datum from the [Oxford English Dictionary](https://www.oed.com/search/dictionary/?scope=Entries&q=datum)", fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/datum.png")
+```
+
+
+## Tidying data
+
+How would you wrangle each data example into a tidy format?
+
+1. the emails in your inbox  
+2. social media texts  
+3. images  
+4. videos  
+5. audio files
+
+## Not tidy -- Active Duty Military
+
+The Active Duty data are not tidy!  What are the cases?  How are the data not tidy?  What might the data look like in tidy form?  Suppose that the case was "an individual in the armed forces."  What variables would you use to capture the information in the <a href = "https://docs.google.com/spreadsheets/d/1Ow6Cm4z-Z1Yybk3i352msulYCEDOUaOghmo9ALajyHo/edit#gid=1811988794" target = "_blank">following table</a>?
+
+```{r out.width = '100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/activedutyTidy.png")
+```
+
+ 
+## Tidy packages: the tidyverse
+
+
+```{r fig.cap = "image credit: https://www.tidyverse.org/.", fig.alt = "Image of hex stickers for the eight core tidyverse packages including ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, and forcats.", preview = TRUE, echo = FALSE}
+knitr::include_graphics("../images/tidyverse.png")
+```
+
+
+# Verbs
+
+Most data wrangling happens with a set of data verbs.  Verbs are **functions** that act on dataframes.  
+
+The first argument of each data verb is the dataframe.
+
+## Some Basic Verbs
+
+- `filter()`
+- `arrange()`
+- `select()`
+- `distinct()`
+- `mutate()`
+- `summarize()`
+- `sample_n()`
+
+ 
+
+## `filter()`
+
+Allows you to select a subset of the **rows** of a data frame. The first
+argument is the name of the data frame, the following arguments are the
+filters that you'd like to apply
+
+For all flights on January 1st:
+
+```{r message = FALSE, warning = FALSE}
+filter(flights, month == 1, day == 1)
+```
+
+ 
+
+## Constructing filters
+
+Filters are constructed of **logical operators**: `<`, `>`, `<=`, `>=`, `==`,
+`!=` (and some others).
+
+Adding them one by one to `filter()` is akin to saying "this AND that". To say
+"this OR that OR both", use |.
+
+```{r}
+filter(flights, month == 1 | month == 2)
+```
+
+ 
+## Practice
+
+Construct filters to isolate:
+
+1. Flights that left on St. Patrick's Day.
+2. Flights that were destined for Chicago's primary airport.
+3. Flights that were destined for Chicago's primary airport and were operated by United Airlines.
+4. Flights with flight times more than 2000 miles or that were in the air more than 5 hours.
+
+ 
+## Solution
+
+1. Flights that left on St. Patrick's Day.
+2. Flights that were destined for Chicago's primary airport.
+3. Flights that were destined for Chicago's primary airport and were operated by
+United Airlines.
+4. Flights with flight times more than 2000 miles or that were in the air more
+than 5 hours.
+
+```{r eval = FALSE}
+filter(flights, month == 3, day == 17)
+filter(flights, dest == "ORD")
+filter(flights, dest == "ORD", carrier == "UA")
+filter(flights, distance > 2000 | air_time > 5*60)
+```
+
+ 
+
+## `arrange()`
+
+`arrange()` reorders the rows: It takes a data frame, and a set of column 
+names (or more complicated expressions) to order by. If you provide more than 
+one column name, each additional column will be used to break ties in the values
+of preceding columns:
+
+```{r, eval = FALSE}
+arrange(flights, year, month, day)
+```
+
+Use `desc()` to sort in descending order.
+
+```{r, eval = FALSE}
+arrange(flights, desc(arr_delay))
+```
+
+ 
+
+## `select()`
+
+Often you work with large datasets with many columns where only a few are 
+actually of interest to you. `select()` allows you to rapidly zoom in on a useful
+subset using operations that usually only work on numeric variable positions:
+
+```{r eval=FALSE}
+select(flights, year, month, day)
+```
+
+You can exclude columns using `-` and specify a range using `:`.
+
+```{r eval = FALSE}
+select(flights, -(year:day))
+```
+
+
+ 
+
+## `distinct()`
+
+A common use of `select()` is to find out which values a set of variables takes.  This is particularly useful in conjunction with the `distinct()` verb which only  returns the unique values in a table.
+
+What do the following data correspond to?
+
+```{r}
+distinct(select(flights, origin, dest))
+```
+
+ 
+
+## `mutate()`
+
+As well as selecting from the set of existing columns, it's often useful to add 
+new columns that are functions of existing columns. This is the job of `mutate()`:
+
+```{r}
+select(mutate(flights, gain = dep_delay - arr_delay), 
+       flight, dep_delay, arr_delay, gain)
+```
+
+ 
+
+## `summarize()` and `sample_n()`
+
+`summarize()` collapses a data frame to a single row based on some function. It's not very useful yet, but it will be. 
+
+`sample_n()` provides you with a random sample of rows.
+
+```{r}
+summarize(flights, delay = mean(dep_delay, na.rm = TRUE))
+sample_n(flights, 10)
+```
+
+ 
+## Practice
+
+**Mutate** the data to create a new column that contains the average speed traveled by the plane for each flight. 
+
+**Select** the new variable and save it, along with tailnum, as a new data frame object.
+
+ 
+## Practice
+
+**Mutate** the data to create a new column that contains the average speed traveled by the plane for each flight. 
+
+**Select** the new variable and save it, along with tailnum, as a new data frame object.
+
+```{r}
+flights2 <- mutate(flights, speed = distance/(air_time/60))
+speed_data <- select(flights2, tailnum, speed)
+```
+
+ 
+
+## `group_by()`
+
+`summarize()` and `sample_n()` are even more powerful when combined with the idea of  "group by", repeating the operation separately on groups of observations within the dataset. 
+
+The `group_by()` function describes how to break a dataset down into groups of rows.
+
+ 
+
+## `group_by()`
+
+Find the fastest airplanes in the bunch, measured as the average speed per airplane.
+
+```{r}
+by_tailnum <- group_by(speed_data, tailnum)
+avg_speed <- summarize(by_tailnum, 
+                       count = n(), 
+                       avg_speed = mean(speed, na.rm = TRUE))
+arrange(avg_speed, desc(avg_speed))
+```
+
+# Agenda  9/16/24
+
+1. Chaining
+
+## Chaining
+
+Instead of applying each verb step-by-step, we can chain them into a single
+data pipeline, connected with the `|> ` operator. You start the pipeline with
+a data frame and then pass it to each function in turn.
+
+
+The pipe syntax (`|> `) takes a data frame and sends it to the argument of a function.  The mapping goes to the first available argument in the function.  For example:
+
+`x |>  f()` is the same as `f(x)`
+
+`x |>  f(y)` is the same as `f(x, y)`
+
+
+ 
+
+## Mornings
+
+```{r}
+#| eval: false
+me_step1 <- dress(me, what = sports)  
+me_step2 <- exercise(me_step1, how = running)  
+me_step3 <- eat(me_step2, choice = cereal)  
+me_step4 <- dress(me_step3, what = school)  
+me_step5 <- commute(me_step4, transportation = bike)  
+```
+ 
+
+## Mornings
+
+```{r}
+#| eval: false
+commute(dress(eat(exercise(dress(me, what = sports), how = running), choice = cereal), what = school), transportation = bike)
+```
+
+ 
+
+## Morning
+
+(better??)
+
+```{r}
+#| eval: false
+commute(
+  dress(
+    eat(
+      exercise(
+        dress(me, 
+              what = sports), 
+        how = running), 
+      choice = cereal), 
+    what = school), 
+  transportation = bike)
+```
+
+ 
+
+## Mornings
+
+```{r}
+#| eval: false
+me |> 
+  dress(what = sports) |> 
+  exercise(how = running) |> 
+  eat(choice = cereal) |> 
+  dress(what = school) |> 
+  commute(transportation = bike)
+```
+
+
+
+
+
+## <a href = "https://www.youtube.com/watch?v=yTqVltEy4JY" target = "_blank">Little Bunny Foo Foo</a>
+
+From Hadley Wickham, how to think about tidy data.
+
+> Little bunny Foo Foo
+
+> Went hopping through the forest
+
+> Scooping up the field mice
+
+> And bopping them on the head
+
+ 
+
+## Little Bunny Foo Foo
+
+The nursery rhyme could be created by a series of steps where the output from each step is saved as an object along the way.
+
+```{r}
+#| eval: false
+foo_foo <- little_bunny()
+foo_foo_1 <- hop(foo_foo, through = forest)
+foo_foo_2 <- scoop(foo_foo_2, up = field_mice)
+foo_foo_3 <- bop(foo_foo_2, on = head)
+```
+ 
+
+## Little Bunny Foo Foo
+
+Another approach is to concatenate the functions so that there is only one output.  
+
+```{r}
+#| eval: false
+bop(
+   scoop(
+      hop(foo_foo, through = forest),
+      up = field_mice),
+   on = head)
+```
+ 
+
+## Little Bunny Foo Foo
+
+Or even worse, as one line:
+
+```{r}
+#| eval: false
+bop(scoop(hop(foo_foo, through = forest), up = field_mice), on = head)))
+```
+ 
+## Little Bunny Foo Foo
+
+Instead, the code can be written using the pipe in the **order** in which the function is evaluated:
+
+```{r}
+#| eval: false
+foo_foo |> 
+   hop(through = forest) |> 
+       scoop(up = field_mice) |> 
+           bop(on = head)
+```
+
+## Flights
+ 
+ 
+::: {.panel-tabset}
+
+## No pipe
+
+```{r}
+flights2 <- mutate(flights, speed = distance/(air_time/60))
+tail_speed <- select(flights2, tailnum, speed)
+tail_speed_grp <- group_by(tail_speed, tailnum)
+tail_ave <- summarize(tail_speed_grp, number = n(),
+                      avg_speed = mean(speed, na.rm = TRUE))
+arrange(tail_ave, desc(avg_speed))
+```
+
+## Pipe
+
+```{r}
+flights |> 
+  mutate(speed = distance / (air_time/60)) |> 
+  select(tailnum, speed) |> 
+  group_by(tailnum) |>  
+  summarize(number = n(), 
+            avg_speed = mean(speed, na.rm = TRUE)) |> 
+  arrange(desc(avg_speed))
+```
+
+::: 
+
+## Practice
+
+Form a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?
+
+ 
+
+## Practice
+
+Form a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?
+
+```{r}
+flights |> 
+  group_by(carrier) |> 
+  summarize(avg_delay = mean(dep_delay, na.rm = TRUE)) |> 
+  arrange(desc(avg_delay))
+```
+
+ 
+
+## Practice again
+
+Say you're curious about the relationship between the number of flights that each plane made in 2013, the mean distance that each of those planes flew, and the mean arrival delay. You also want to exclude the edge cases from your analysis, so focus on the planes that have logged more than 20 flights and flown an average distance of less than 2000 miles. Please form the chain that creates this dataset.
+
+ 
+
+## Solution
+
+```{r}
+delay_data <- flights |> 
+  group_by(tailnum) |> 
+  summarize(number = n(),
+            dist = mean(distance, na.rm = TRUE), 
+            delay = mean(arr_delay, na.rm = TRUE)) |> 
+  filter(number > 20, dist < 2000)
+```
+
+
+ 
+
+## Visualizing the data
+
+::: {.panel-tabset}
+
+## Viz
+```{r eval = TRUE, message = FALSE, warning = FALSE, echo = FALSE}
+library(ggplot2)
+ggplot(delay_data, aes(dist, delay)) +
+ geom_point(aes(size = number), alpha = 1/2) +
+ geom_smooth() +
+ scale_size_area()
+```
+
+## Code
+```{r eval = FALSE, message = FALSE, warning = FALSE, echo = TRUE}
+delay_data |> 
+ ggplot(aes(dist, delay)) +
+ geom_point(aes(size = number), 
+            alpha = 1/2) +
+ geom_smooth() +
+ scale_size_area()
+```
+When `scale_size_area` is used, the default behavior is to scale the area of points to be proportional to the value.
+:::
+
+
+
+
+
+

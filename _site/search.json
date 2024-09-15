@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1   WS 2\n\n\n\n\nWeek 2  9.2.24\nno class Mon  ggplot\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nggplot\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 4\n HW 2 - due 9.10  Quiz 9.11\n\n\n\nWeek 4  9.16.24\ntidyverse\n  R4DS Transform   wrangling    Wrangling   WS 5\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\ntidy strings\n\n HW 3 - due 9.24  Quiz 9.25\n\n\n\nWeek 6  9.30.24\nmap + functions\n\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\niteration + simulations\n\n HW 4 - due 10.8  Quiz 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n\n\n\n\n\nWeek 9  10.21.24\npermutation tests\n\n HW 5 - due 10.22  Quiz 10.23\n\n\n\nWeek 10  10.28.24\nweb scraping\n\n Project 3 - due 10.30\n\n\n\nWeek 11  11.4.24\nSQL\n\n HW 6 - due 11.5  Quiz 11.6\n\n\n\nWeek 12  11.11.24\nregular expressions\n\n Project 4 - due 11.13\n\n\n\nWeek 13  11.18.24\ntext analysis\n\n HW 7 - due 11.19  Quiz 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\n\n\n Project 5 - due 12.4  + presentations\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  ggplot\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nggplot\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 9.11\n\n\n\nWeek 4  9.16.24\ntidyverse\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\ntidy strings\n\n HW 3 - due 9.24  Quiz 9.25\n\n\n\nWeek 6  9.30.24\nmap + functions\n\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\niteration + simulations\n\n HW 4 - due 10.8  Quiz 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n\n\n\n\n\nWeek 9  10.21.24\npermutation tests\n\n HW 5 - due 10.22  Quiz 10.23\n\n\n\nWeek 10  10.28.24\nweb scraping\n\n Project 3 - due 10.30\n\n\n\nWeek 11  11.4.24\nSQL\n\n HW 6 - due 11.5  Quiz 11.6\n\n\n\nWeek 12  11.11.24\nregular expressions\n\n Project 4 - due 11.13\n\n\n\nWeek 13  11.18.24\ntext analysis\n\n HW 7 - due 11.19  Quiz 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\n\n\n Project 5 - due 12.4  + presentations\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -81,7 +81,7 @@
     "href": "clicker.html",
     "title": "Clicker Questions",
     "section": "",
-    "text": "to go along with \nModern Data Science with R, 3rd edition by Baumer, Kaplan, and Horton\nR for Data Science, 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund\n\n\n\n\nR / R Studio / Quarto1\n\nall good\nstarted, progress is slow and steady\nstarted, very stuck\nhaven’t started yet\nwhat do you mean by “R”?\n\n\n\n\nGit / GitHub2\n\nall good\nstarted, progress is slow and steady\nstarted, very stuck\nhaven’t started yet\nwhat do you mean by “Git”?\n\n\n\n\nWhich of the following includes talking to the remove version of GitHub?3\n\nchanging your name (updating the YAML)\ncommitting the file(s)\npushing the file(s)\nsome of the above\nall of the above\n\n\n\n\nWhat is the error?4\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup2 &lt;-- \"Hello to you!\"\n\n\n\nWhat is the error?5\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\n3shup &lt;-  \"Hello to you!\"\n\n\n\nWhat is the error?6\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup4 &lt;-  \"Hello to you!\n\n\n\nWhat is the error?7\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup5 &lt;-  date()\n\n\n\nWhat is the error?8\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup6 &lt;-  sqrt 10\n\n\n\nDo you keep a calendar / schedule / planner?9\n\nYes\nNo\n\n\n\n\nDo you keep a calendar / schedule / planner? If you answered “Yes” …10\n\nYes, on Google Calendar\nYes, on Calendar for macOS\nYes, on Outlook for Windows\nYes, in some other app\nYes, by hand\n\n\n\n\nWhere should I put things I’ve created for the HW (e.g., data, .ics file, etc.)11\n\nUpload into remote GitHub directory\nIn the local folder which also has the R project\nIn my Downloads\nSomewhere on my Desktop\nIn my Home directory\n\n\n\n\nThe goal of making a figure is…12\n\nTo draw attention to your work.\nTo facilitate comparisons.\nTo provide as much information as possible.\n\n\n\n\nA good reason to make a particular choice of a graph is:13\n\nBecause the journal / field has particular expectations for how the data are presented.\nBecause some variables naturally fit better on some graphs (e.g., numbers on scatter plots).\nBecause that graphic displays the message you want as optimally as possible.\n\n\n\n\nWhy are the points orange?14\n\nR translates “navy” into orange.\ncolor must be specified in geom_point()\ncolor must be specified outside the aes() function\nthe default plot color is orange\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point() +          \n  ggtitle(\"US Births in 1978\")\n\n\n\n\n\nWhy are the dots blue and the lines colored?15\n\ndot color is given as “navy”, line color is given as wday.\nboth colors are specified in the ggplot() function.\ndot coloring takes precedence over line coloring.\nline coloring takes precedence over dot coloring.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting vs. Mapping. If I want information to be passed to all data points (not variable):16\n\nmap the information inside the aes() function.\nset the information outside the aes() function\n\n\n\n\nThe Snow figure was most successful at:17\n\nmaking the data stand out\nfacilitating comparison\nputting the work in context\nsimplifying the story\n\n\n\n\nThe Challenger figure(s) was(were) least successful at:18\n\nmaking the data stand out\nfacilitating comparison\nputting the work in context\nsimplifying the story\n\n\n\n\nThe biggest difference between Snow and the Challenger was:19\n\nThe amount of information portrayed.\nOne was better at displaying cause.\nOne showed the relevant comparison better.\nOne was more artistic.\n\n\n\n\nCaffeine and Calories. What was the biggest concern over the average value axes?20\n\nIt isn’t at the origin.\nThey should have used all the data possible to find averages.\nThere wasn’t a random sample.\nThere wasn’t a label explaining why the axes were where they were.\n\n\n\n\n\nWhat is a SQL server?.21\n\n\nA relational database management system.\nA software whose main purpose is to store and retrieve data.\nA highly secure server and does not allow any database file manipulation during execution.\nAll of the above.\n\n\n\nWhen was SQL created?22\n\n\n1960s\n1970s\n1980s\n1990s\n2000s\n\n\n\nWhat type of databases is SQL designed for?23\n\n\nhierarchical database management systems.\nnetwork database management systems.\nobject-oriented database management systems.\nrelational database management systems.\n\n\n\nWhich is bigger:24\n\n\ncomputer’s hard drive / storage\ncomputer’s memory / RAM\n\n\n\nWhere are each stored?25\n\n\nSQL tbl and R tibble both in storage\nSQL tbl and R tibble both in memory\nSQL tbl in storage and R tibble in memory\nSQL tbl in memory and R tibble in storage\n\n\n\nWhich SQL clause is used to extract data from a database?26\n\n\nOPEN\nEXTRACT\nSELECT\nGET\n\n\n\nWith SQL, how to you retrieve a column named “FirstName” from a table named “Persons”?27\n\n\nSELECT Persons.FirstName\nEXTRACT FIRSTNAME FROM Persons\nSELECT FirstName FROM Persons\nSELECT “FirstName” FROM “Persons”\n\n\n\nWith SQL, how do you select all the columns from a table named “Persons”?28\n\n\nSELECT Persons\nSELECT * FROM Persons\nSELECT [all] FROM Persons\nSELECT *.Persons\n\n\n\nWith SQL, how can you return the number of records in the “Persons” table?29\n\n\nSELECT COLUMNS(*) FROM Persons\nSELECT COUNT(*) FROM Persons\nSELECT NO(*) FROM Persons\nSELECT LEN(*) FROM Persons\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the value of the column “FirstName” is “Peter”?30\n\n\nSELECT * FROM Persons WHERE FirstName &lt;&gt; ‘Peter’\nSELECT * FROM Persons WHERE FirstName = ‘Peter’\nSELECT * FROM Persons WHERE FirstName == ‘Peter’\nSELECT [all] FROM Persons WHERE FirstName LIKE ‘Peter’\nSELECT [all] FROM Persons WHERE FirstName = ‘Peter’\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the “FirstName” is “Peter” and the “LastName” is “Jackson”?31\n\n\nSELECT FirstName = ‘Peter’, LastName = ‘Jackson’ FROM Persons\nSELECT * FROM Persons WHERE FirstName &lt;&gt; ‘Peter’ AND LastName &lt;&gt; ‘Jackson’\nSELECT * FROM Persons WHERE FirstName = ‘Peter’ AND LastName = ‘Jackson’\nSELECT * FROM Persons WHERE FirstName == ‘Peter’ AND LastName == ‘Jackson’\n\n\n\nWhich operator selects values within a range?32 (a) BEWTEEN (b) WITHIN (c) RANGE\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the “LastName” is alphabetically between (and including) “Hansen” and “Pettersen”?33 (a) SELECT LastName &gt; ‘Hansen’ AND LastName &lt; ‘Pettersen’ FROM Persons (b) SELECT * FROM Persons WHERE LastName BETWEEN ‘Hansen’ AND ‘Pettersen’ (c) SELECT * FROM Persons WHERE LastName &gt; ‘Hansen’ AND LastName &lt; ‘Pettersen’\n\n\n\nWhich SQL statement returns only different values?34 (a) SELECT UNIQUE (b) SELECT DISTINCT (c) SELECT DIFFERENT\n\n\n\nWhich SQL keyword is used to sort the result-set?35 (a) ORDER BY (b) ORDER (c) SORT (d) SORT BY\n\n\n\nWith SQL, how can you return all the records from a table named “Persons” sorted descending by “FirstName”?36 (a) SELECT * FROM Persons ORDER FirstName DESC (b) SELECT * FROM Persons SORT ‘FirstName’ DESC (c) SELECT * FROM Persons ORDER BY FirstName DESC (d) SELECT * FROM Persons SORT BY ‘FirstName’ DESC\n\n\n\nThe OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true.37 (a) TRUE (b) FALSE\n\n\n\nIn order to SELECT the records with foods that are either green or yellow fruit:38 (a) … WHERE type = ‘fruit’ AND color = ‘yellow’ OR color = ‘green’\n(b) … WHERE (type = ‘fruit’ AND color = ‘yellow’) OR color = ‘green’\n(c) … WHERE type = ‘fruit’ AND (color = ‘yellow’ OR color = ‘green’)\n(d) … WHERE type = ‘fruit’ AND color = ‘yellow’ AND color = ‘green’\n(e) … WHERE type = ‘fruit’ AND (color = ‘yellow’ AND color = ‘green’)\n\n\n\nWhat is the purpose of a JOIN?39\n(a) it filters the rows returned by the SELECT statement. (b) it specifies the columns to be retrieved. (c) it combines rows from two or more tables based on a related column. (d) it orders the results in ascending or descending order.\n\n\n\nWhat is the purpose of the UNION operator in SQL?40 (a) it combines the results of two or more SELECT statements. (b) it performs a pattern match on a string. (c) it retrieves the maximum value in a column. (d) it filters the rows returned by the SELECT statement.\n\n\n\nWhat is the purpose of the INNER JOIN in SQL?41 (a) it retrieves the maximum value in a column. (b) it combines rows from two or more tables based on a related column. (c) it filters the rows returned by the SELECT statement. (d) it performs a pattern match on a string.\n\n\n\nWhat is the purpose of the LEFT JOIN in SQL?42 (a) it combines rows from two or more tables based on a related column. (b) it retrieves the maximum value in a column. (c) it filters the rows returned by the SELECT statement. (d) it performs a pattern match on a string.\n\n\n\nRIGHT JOIN keeps all the rows in …?43\n(a) the first table. (b) the second table. (c) both tables. (d) neither table\n\n\n\nWho is removed in a RIGHT JOIN?44 (a) Mick (b) John (c) Paul (d) Keith\n\n\n\n\n\n\n\n\n\n\n\n\nWhich variable(s) are removed in a RIGHT JOIN?45 (a) name (b) band (c) plays (d) none of them\n\n\n\n\n\n\n\n\n\n\n\n\nIn SQL, what happens to Mick’s “plays” variables in a FULL JOIN?46 (a) Mick is removed (b) guitar (c) bass (d) NA (e) NULL\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrep(\"q[^u]\", very.large.word.list) would not match which of the following?47 (a) Iraqi (b) Iraqian (c) Iraq (d) zaqqun (tree that “springs out of the bottom of Hell”, in the Quran) (e) Qantas (the Australian airline)\n\n\n\nWhich of the following regex would match to both “grey” and “gray”?48 (a) “gr[ae]y” (b) “gr(a|e)y” (c) “gray | grey” (d) “gr[a|e]y” (e) some / all of the above – which ones?\n\n\n\nWhat will the result be for the following code?49\n(a) 10 (b) 1 (c) 0 (d) NA\n\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d\")\n\n\n\nWhat will the result be for the following code?50\n(a) 10 (b) 1 (c) 0 (d) NA\n\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d+\")\n\n\n\nWhat will the result be for the following code?51 (a) . (b) Episode 2: The pie whisperer. (4 August 2015) (c) Episode (d) E\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".\")\n\n\n\nWhat will the result be for the following code?52 (a) . (b) Episode 2: The pie whisperer. (4 August 2015) (c) Episode (d) E\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".+\")\n\n\n\nWhat will the result be for the following code?53 (a) . (b) Episode 2: The pie whisperer. (4 August 2015) (c) Episode (d) E\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \"\\\\.\")\n\n\n\nHow can I pull out just the numerical information in $47?54 (a) “(?&lt;=\\\\()\\\\d\"\n    (b) \"(?&lt;=\\\\\\))\\d+” (c) “\\d(?=\\\\()\"\n    (d) \"\\\\d+(?=\\\\\\))”\n\n\n\nYou want to know all the types of pies in the text strings. They are written as, for example “apple pie”.55 (a) “\\w+(?!pie)” (b) “\\w+(?! pie)” (c) “\\w+(?=pie)” (d) “\\w+(?= pie)”\n\n\n\nstr_extract(c(\"apple pie\", \"chocolate pie\", \"peach pie\"), \"\\\\w+(?= pie)\")\n\n[1] \"apple\"     \"chocolate\" \"peach\"    \n\n\n\nstr_extract(c(\"apple pie\", \"chocolate pie\", \"peach pie\"), \"\\\\w+(?=pie)\")\n\n[1] NA NA NA\n\n\n\n\nWe say that lookarounds are “zero-lenghth assertions”. What does that mean?56 (a) we return the string in the lookaround (b) we replace the string in the lookaround (c) we return the string at the lookaround (d) we replace the string at the lookaround\n\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the value of the column “FirstName” starts with an “a”?57 (a) SELECT * FROM Persons WHERE FirstName = ‘a.’ (b) SELECT  FROM Persons WHERE FirstName = ’a’ (c) SELECT  FROM Persons WHERE FirstName REGEXP ’a.’ (d) SELECT  FROM Persons WHERE FirstName REGEXP ’a’ (e) SELECT  FROM Persons WHERE FirstName REGEXP’(?i)a.*’\n\n\n\nWhat is the main way to absolutely recognize a record within a database?58 (a) Foreign key (b) Primary key (c) Unique key (d) Natural key (e) Alternate key\n\n\n\nWhat does a foreign key do?59 (a) Directly identifies another table (b) Directly identifies another column (c) Gives access to another entire database (d) Translates the database into another language\n\n\n\nWhich of these would likely be used as a foreign key between a table on student enrollment and student grades?60 (a) grades (b) tuition (c) student_name (d) student_hometown\n\n\n\nFor the student records (for two tables: enrollment and grades), which is the most likely combination?61 (a) name as primary key to both (b) name as foreign to both (c) name as primary in enrollment and foreign in grades (d) name as foreign in enrollment and primary in grades\n\n\n\nWhich SQL statement is used to create a database table called ‘Customers’?62 (a) CREATE DATABASE TAB Customers (b) CREATE DATABASE Customers (c) CREATE DATABASE TABLE Customers (d) CREATE TABLE Customers (e) CREATE DB Customers\n\n\n\nWhich SQL statement revises data in a database?63 (a) SAVE AS (b) MODIFY (c) SAVE (d) UPDATE\n\n\n\nWhich SQL statement takes out data from a database?64 (a) REMOVE (b) DELETE (c) COLLAPSE\n\n\n\nThe NOT NULL constraint enforces a column to not accept NULL values.65 (a) FALSE (b) TRUE\n\n\n\nWhich SQL statement places new data in a database?66 (a) ADD RECORD (b) INSERT INTO (c) ADD NEW (d) INSERT NEW\n\n\n\nWith SQL, how can you insert a new record into the “Persons” table?67 (a) INSERT INTO Persons VALUES (‘Jimmy’, ‘Jackson’) (b) INSERT (‘Jimmy’, ‘Jacskon’) INTO Persons (c) INSERT VALUES (‘Jimmy’, ‘Jackson’) INTO Persons\n\n\n\nWith SQL, how can you insert “Olsen” as the “LastName” in the “Persons” table?68 (a) INSERT INTO Persons (LastName) VALUES (‘Olsen’) (b) INSERT INTO Persons (‘Olsen) INTO LastName (c) INSERT (’Olsen’) INTO Persons (LastName)\n\n\n\nHow can you change “Hansen” into “Nilsen” in the “LastName” column in the Persons table?69 (a) MODIFY Persons SET LastName=‘Nilsen’ WHERE LastName=‘Hansen’ (b) UPDATE Persons SET LastName=‘Hansen’ INTO LastName=‘Nilsen’ (c) MODIFY Persons SET LastName=‘Hansen’ INTO LastName=‘Nilsen’ (d) UPDATE Persons SET LastName=‘Nilsen’ WHERE LastName=‘Hansen’\n\n\n\nWith SQL, how can you delete the records where the “FirstName” is “Peter” in the Persons Table?70 (a) DELETE FROM Persons WHERE FirstName=‘Peter’ (b) DELETE FirstName=‘Peter’ FROM Persons (c) DELETE ROW FirstName=‘Peter’ FROM Persons\n\n\n\nIn the flights table, the following INDEXes exist: Tailnum, Year, and Date. How many rows would be looked through if the WHERE filter was on month only?71 (a) more than 6.3 million (b) less than 6.3 million (c) more than 700,000 (d) less than 700,000\n\n\n\nWhich has a larger cardinality, Tailnum or Year?72 (a) Tailnum (b) Year (c) they have the same cardinality (d) neither has a cardinality\n\n\n\nWhich index takes up more storage space, the one on Tailnum or the one on Year?73 (a) Tailnum (b) Year (c) they take up the same space (d) you can’t index on either variable\n\n\n\nWhich index is more effective at reducing querying time, the one on Tailnum or the one on Year?74 (a) Tailnum (b) Year (c) the queries would be the same (d) you can’t query on either variable\n\n\n\nWhat does the R function ifelse(a, b, c) do?75 (a) a = TRUE option, b = FALSE option, c = question (b) a = FALSE option, b = TRUE option, c = question (c) a = question, b = TRUE option, c = FALSE option (d) a = question, b = FALSE option, c = TRUE option\n\n\n\nWhat does the R function case_when() do?76 (a) renames a variable (b) changes the data type of a variable (c) partitions a numeric variable (d) creates a new variable by re-coding an original variable\n\n\n\nWhat does the R function cut() do?77 (a) renames a variable (b) changes the data type of a variable (c) partitions a numeric variable (d) creates a new variable by re-coding an original variable\n\n\n\n:::"
+    "text": "to go along with \nModern Data Science with R, 3rd edition by Baumer, Kaplan, and Horton\nR for Data Science, 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund\n\n\n\n\nR / R Studio / Quarto1\n\nall good\nstarted, progress is slow and steady\nstarted, very stuck\nhaven’t started yet\nwhat do you mean by “R”?\n\n\n\n\nGit / GitHub2\n\nall good\nstarted, progress is slow and steady\nstarted, very stuck\nhaven’t started yet\nwhat do you mean by “Git”?\n\n\n\n\nWhich of the following includes talking to the remove version of GitHub?3\n\nchanging your name (updating the YAML)\ncommitting the file(s)\npushing the file(s)\nsome of the above\nall of the above\n\n\n\n\nWhat is the error?4\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup2 &lt;-- \"Hello to you!\"\n\n\n\nWhat is the error?5\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\n3shup &lt;-  \"Hello to you!\"\n\n\n\nWhat is the error?6\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup4 &lt;-  \"Hello to you!\n\n\n\nWhat is the error?7\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup5 &lt;-  date()\n\n\n\nWhat is the error?8\n\npoor assignment operator\nunmatched quotes\nimproper syntax for function argument\ninvalid object name\nno mistake\n\n\n\nshup6 &lt;-  sqrt 10\n\n\n\nDo you keep a calendar / schedule / planner?9\n\nYes\nNo\n\n\n\n\nDo you keep a calendar / schedule / planner? If you answered “Yes” …10\n\nYes, on Google Calendar\nYes, on Calendar for macOS\nYes, on Outlook for Windows\nYes, in some other app\nYes, by hand\n\n\n\n\nWhere should I put things I’ve created for the HW (e.g., data, .ics file, etc.)11\n\nUpload into remote GitHub directory\nIn the local folder which also has the R project\nIn my Downloads\nSomewhere on my Desktop\nIn my Home directory\n\n\n\n\nThe goal of making a figure is…12\n\nTo draw attention to your work.\nTo facilitate comparisons.\nTo provide as much information as possible.\n\n\n\n\nA good reason to make a particular choice of a graph is:13\n\nBecause the journal / field has particular expectations for how the data are presented.\nBecause some variables naturally fit better on some graphs (e.g., numbers on scatter plots).\nBecause that graphic displays the message you want as optimally as possible.\n\n\n\n\nWhy are the points orange?14\n\nR translates “navy” into orange.\ncolor must be specified in geom_point()\ncolor must be specified outside the aes() function\nthe default plot color is orange\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births78, \n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point() +          \n  labs(title = \"US Births in 1978\")\n\n\n\n\n\nWhy are the dots blue and the lines colored?15\n\ndot color is given as “navy”, line color is given as wday.\nboth colors are specified in the ggplot() function.\ndot coloring takes precedence over line coloring.\nline coloring takes precedence over dot coloring.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetting vs. Mapping. If I want information to be passed to all data points (not variable):16\n\nmap the information inside the aes() function.\nset the information outside the aes() function\n\n\n\n\nThe Snow figure was most successful at:17\n\nmaking the data stand out\nfacilitating comparison\nputting the work in context\nsimplifying the story\n\n\n\n\nThe Challenger figure(s) was(were) least successful at:18\n\nmaking the data stand out\nfacilitating comparison\nputting the work in context\nsimplifying the story\n\n\n\n\nThe biggest difference between Snow and the Challenger was:19\n\nThe amount of information portrayed.\nOne was better at displaying cause.\nOne showed the relevant comparison better.\nOne was more artistic.\n\n\n\n\nCaffeine and Calories. What was the biggest concern over the average value axes?20\n\nIt isn’t at the origin.\nThey should have used all the data possible to find averages.\nThere wasn’t a random sample.\nThere wasn’t a label explaining why the axes were where they were.\n\n\n\n\n\nWhat is a SQL server?.21\n\n\nA relational database management system.\nA software whose main purpose is to store and retrieve data.\nA highly secure server and does not allow any database file manipulation during execution.\nAll of the above.\n\n\n\nWhen was SQL created?22\n\n\n1960s\n1970s\n1980s\n1990s\n2000s\n\n\n\nWhat type of databases is SQL designed for?23\n\n\nhierarchical database management systems.\nnetwork database management systems.\nobject-oriented database management systems.\nrelational database management systems.\n\n\n\nWhich is bigger:24\n\n\ncomputer’s hard drive / storage\ncomputer’s memory / RAM\n\n\n\nWhere are each stored?25\n\n\nSQL tbl and R tibble both in storage\nSQL tbl and R tibble both in memory\nSQL tbl in storage and R tibble in memory\nSQL tbl in memory and R tibble in storage\n\n\n\nWhich SQL clause is used to extract data from a database?26\n\n\nOPEN\nEXTRACT\nSELECT\nGET\n\n\n\nWith SQL, how to you retrieve a column named “FirstName” from a table named “Persons”?27\n\n\nSELECT Persons.FirstName\nEXTRACT FIRSTNAME FROM Persons\nSELECT FirstName FROM Persons\nSELECT “FirstName” FROM “Persons”\n\n\n\nWith SQL, how do you select all the columns from a table named “Persons”?28\n\n\nSELECT Persons\nSELECT * FROM Persons\nSELECT [all] FROM Persons\nSELECT *.Persons\n\n\n\nWith SQL, how can you return the number of records in the “Persons” table?29\n\n\nSELECT COLUMNS(*) FROM Persons\nSELECT COUNT(*) FROM Persons\nSELECT NO(*) FROM Persons\nSELECT LEN(*) FROM Persons\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the value of the column “FirstName” is “Peter”?30\n\n\nSELECT * FROM Persons WHERE FirstName &lt;&gt; ‘Peter’\nSELECT * FROM Persons WHERE FirstName = ‘Peter’\nSELECT * FROM Persons WHERE FirstName == ‘Peter’\nSELECT [all] FROM Persons WHERE FirstName LIKE ‘Peter’\nSELECT [all] FROM Persons WHERE FirstName = ‘Peter’\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the “FirstName” is “Peter” and the “LastName” is “Jackson”?31\n\n\nSELECT FirstName = ‘Peter’, LastName = ‘Jackson’ FROM Persons\nSELECT * FROM Persons WHERE FirstName &lt;&gt; ‘Peter’ AND LastName &lt;&gt; ‘Jackson’\nSELECT * FROM Persons WHERE FirstName = ‘Peter’ AND LastName = ‘Jackson’\nSELECT * FROM Persons WHERE FirstName == ‘Peter’ AND LastName == ‘Jackson’\n\n\n\nWhich operator selects values within a range?32 (a) BEWTEEN (b) WITHIN (c) RANGE\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the “LastName” is alphabetically between (and including) “Hansen” and “Pettersen”?33 (a) SELECT LastName &gt; ‘Hansen’ AND LastName &lt; ‘Pettersen’ FROM Persons (b) SELECT * FROM Persons WHERE LastName BETWEEN ‘Hansen’ AND ‘Pettersen’ (c) SELECT * FROM Persons WHERE LastName &gt; ‘Hansen’ AND LastName &lt; ‘Pettersen’\n\n\n\nWhich SQL statement returns only different values?34 (a) SELECT UNIQUE (b) SELECT DISTINCT (c) SELECT DIFFERENT\n\n\n\nWhich SQL keyword is used to sort the result-set?35 (a) ORDER BY (b) ORDER (c) SORT (d) SORT BY\n\n\n\nWith SQL, how can you return all the records from a table named “Persons” sorted descending by “FirstName”?36 (a) SELECT * FROM Persons ORDER FirstName DESC (b) SELECT * FROM Persons SORT ‘FirstName’ DESC (c) SELECT * FROM Persons ORDER BY FirstName DESC (d) SELECT * FROM Persons SORT BY ‘FirstName’ DESC\n\n\n\nThe OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true.37 (a) TRUE (b) FALSE\n\n\n\nIn order to SELECT the records with foods that are either green or yellow fruit:38 (a) … WHERE type = ‘fruit’ AND color = ‘yellow’ OR color = ‘green’\n(b) … WHERE (type = ‘fruit’ AND color = ‘yellow’) OR color = ‘green’\n(c) … WHERE type = ‘fruit’ AND (color = ‘yellow’ OR color = ‘green’)\n(d) … WHERE type = ‘fruit’ AND color = ‘yellow’ AND color = ‘green’\n(e) … WHERE type = ‘fruit’ AND (color = ‘yellow’ AND color = ‘green’)\n\n\n\nWhat is the purpose of a JOIN?39\n(a) it filters the rows returned by the SELECT statement. (b) it specifies the columns to be retrieved. (c) it combines rows from two or more tables based on a related column. (d) it orders the results in ascending or descending order.\n\n\n\nWhat is the purpose of the UNION operator in SQL?40 (a) it combines the results of two or more SELECT statements. (b) it performs a pattern match on a string. (c) it retrieves the maximum value in a column. (d) it filters the rows returned by the SELECT statement.\n\n\n\nWhat is the purpose of the INNER JOIN in SQL?41 (a) it retrieves the maximum value in a column. (b) it combines rows from two or more tables based on a related column. (c) it filters the rows returned by the SELECT statement. (d) it performs a pattern match on a string.\n\n\n\nWhat is the purpose of the LEFT JOIN in SQL?42 (a) it combines rows from two or more tables based on a related column. (b) it retrieves the maximum value in a column. (c) it filters the rows returned by the SELECT statement. (d) it performs a pattern match on a string.\n\n\n\nRIGHT JOIN keeps all the rows in …?43\n(a) the first table. (b) the second table. (c) both tables. (d) neither table\n\n\n\nWho is removed in a RIGHT JOIN?44 (a) Mick (b) John (c) Paul (d) Keith\n\n\n\n\n\n\n\n\n\n\n\n\nWhich variable(s) are removed in a RIGHT JOIN?45 (a) name (b) band (c) plays (d) none of them\n\n\n\n\n\n\n\n\n\n\n\n\nIn SQL, what happens to Mick’s “plays” variables in a FULL JOIN?46 (a) Mick is removed (b) guitar (c) bass (d) NA (e) NULL\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrep(\"q[^u]\", very.large.word.list) would not match which of the following?47 (a) Iraqi (b) Iraqian (c) Iraq (d) zaqqun (tree that “springs out of the bottom of Hell”, in the Quran) (e) Qantas (the Australian airline)\n\n\n\nWhich of the following regex would match to both “grey” and “gray”?48 (a) “gr[ae]y” (b) “gr(a|e)y” (c) “gray | grey” (d) “gr[a|e]y” (e) some / all of the above – which ones?\n\n\n\nWhat will the result be for the following code?49\n(a) 10 (b) 1 (c) 0 (d) NA\n\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d\")\n\n\n\nWhat will the result be for the following code?50\n(a) 10 (b) 1 (c) 0 (d) NA\n\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d+\")\n\n\n\nWhat will the result be for the following code?51 (a) . (b) Episode 2: The pie whisperer. (4 August 2015) (c) Episode (d) E\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".\")\n\n\n\nWhat will the result be for the following code?52 (a) . (b) Episode 2: The pie whisperer. (4 August 2015) (c) Episode (d) E\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".+\")\n\n\n\nWhat will the result be for the following code?53 (a) . (b) Episode 2: The pie whisperer. (4 August 2015) (c) Episode (d) E\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \"\\\\.\")\n\n\n\nHow can I pull out just the numerical information in $47?54 (a) “(?&lt;=\\\\()\\\\d\"\n    (b) \"(?&lt;=\\\\\\))\\d+” (c) “\\d(?=\\\\()\"\n    (d) \"\\\\d+(?=\\\\\\))”\n\n\n\nYou want to know all the types of pies in the text strings. They are written as, for example “apple pie”.55 (a) “\\w+(?!pie)” (b) “\\w+(?! pie)” (c) “\\w+(?=pie)” (d) “\\w+(?= pie)”\n\n\n\nstr_extract(c(\"apple pie\", \"chocolate pie\", \"peach pie\"), \"\\\\w+(?= pie)\")\n\n[1] \"apple\"     \"chocolate\" \"peach\"    \n\n\n\nstr_extract(c(\"apple pie\", \"chocolate pie\", \"peach pie\"), \"\\\\w+(?=pie)\")\n\n[1] NA NA NA\n\n\n\n\nWe say that lookarounds are “zero-lenghth assertions”. What does that mean?56 (a) we return the string in the lookaround (b) we replace the string in the lookaround (c) we return the string at the lookaround (d) we replace the string at the lookaround\n\n\n\n\nWith SQL, how do you select all the records from a table named “Persons” where the value of the column “FirstName” starts with an “a”?57 (a) SELECT * FROM Persons WHERE FirstName = ‘a.’ (b) SELECT  FROM Persons WHERE FirstName = ’a’ (c) SELECT  FROM Persons WHERE FirstName REGEXP ’a.’ (d) SELECT  FROM Persons WHERE FirstName REGEXP ’a’ (e) SELECT  FROM Persons WHERE FirstName REGEXP’(?i)a.*’\n\n\n\nWhat is the main way to absolutely recognize a record within a database?58 (a) Foreign key (b) Primary key (c) Unique key (d) Natural key (e) Alternate key\n\n\n\nWhat does a foreign key do?59 (a) Directly identifies another table (b) Directly identifies another column (c) Gives access to another entire database (d) Translates the database into another language\n\n\n\nWhich of these would likely be used as a foreign key between a table on student enrollment and student grades?60 (a) grades (b) tuition (c) student_name (d) student_hometown\n\n\n\nFor the student records (for two tables: enrollment and grades), which is the most likely combination?61 (a) name as primary key to both (b) name as foreign to both (c) name as primary in enrollment and foreign in grades (d) name as foreign in enrollment and primary in grades\n\n\n\nWhich SQL statement is used to create a database table called ‘Customers’?62 (a) CREATE DATABASE TAB Customers (b) CREATE DATABASE Customers (c) CREATE DATABASE TABLE Customers (d) CREATE TABLE Customers (e) CREATE DB Customers\n\n\n\nWhich SQL statement revises data in a database?63 (a) SAVE AS (b) MODIFY (c) SAVE (d) UPDATE\n\n\n\nWhich SQL statement takes out data from a database?64 (a) REMOVE (b) DELETE (c) COLLAPSE\n\n\n\nThe NOT NULL constraint enforces a column to not accept NULL values.65 (a) FALSE (b) TRUE\n\n\n\nWhich SQL statement places new data in a database?66 (a) ADD RECORD (b) INSERT INTO (c) ADD NEW (d) INSERT NEW\n\n\n\nWith SQL, how can you insert a new record into the “Persons” table?67 (a) INSERT INTO Persons VALUES (‘Jimmy’, ‘Jackson’) (b) INSERT (‘Jimmy’, ‘Jacskon’) INTO Persons (c) INSERT VALUES (‘Jimmy’, ‘Jackson’) INTO Persons\n\n\n\nWith SQL, how can you insert “Olsen” as the “LastName” in the “Persons” table?68 (a) INSERT INTO Persons (LastName) VALUES (‘Olsen’) (b) INSERT INTO Persons (‘Olsen) INTO LastName (c) INSERT (’Olsen’) INTO Persons (LastName)\n\n\n\nHow can you change “Hansen” into “Nilsen” in the “LastName” column in the Persons table?69 (a) MODIFY Persons SET LastName=‘Nilsen’ WHERE LastName=‘Hansen’ (b) UPDATE Persons SET LastName=‘Hansen’ INTO LastName=‘Nilsen’ (c) MODIFY Persons SET LastName=‘Hansen’ INTO LastName=‘Nilsen’ (d) UPDATE Persons SET LastName=‘Nilsen’ WHERE LastName=‘Hansen’\n\n\n\nWith SQL, how can you delete the records where the “FirstName” is “Peter” in the Persons Table?70 (a) DELETE FROM Persons WHERE FirstName=‘Peter’ (b) DELETE FirstName=‘Peter’ FROM Persons (c) DELETE ROW FirstName=‘Peter’ FROM Persons\n\n\n\nIn the flights table, the following INDEXes exist: Tailnum, Year, and Date. How many rows would be looked through if the WHERE filter was on month only?71 (a) more than 6.3 million (b) less than 6.3 million (c) more than 700,000 (d) less than 700,000\n\n\n\nWhich has a larger cardinality, Tailnum or Year?72 (a) Tailnum (b) Year (c) they have the same cardinality (d) neither has a cardinality\n\n\n\nWhich index takes up more storage space, the one on Tailnum or the one on Year?73 (a) Tailnum (b) Year (c) they take up the same space (d) you can’t index on either variable\n\n\n\nWhich index is more effective at reducing querying time, the one on Tailnum or the one on Year?74 (a) Tailnum (b) Year (c) the queries would be the same (d) you can’t query on either variable\n\n\n\nWhat does the R function ifelse(a, b, c) do?75 (a) a = TRUE option, b = FALSE option, c = question (b) a = FALSE option, b = TRUE option, c = question (c) a = question, b = TRUE option, c = FALSE option (d) a = question, b = FALSE option, c = TRUE option\n\n\n\nWhat does the R function case_when() do?76 (a) renames a variable (b) changes the data type of a variable (c) partitions a numeric variable (d) creates a new variable by re-coding an original variable\n\n\n\nWhat does the R function cut() do?77 (a) renames a variable (b) changes the data type of a variable (c) partitions a numeric variable (d) creates a new variable by re-coding an original variable\n\n\n\n:::"
   },
   {
     "objectID": "clicker_slides.html",
@@ -4330,7 +4330,7 @@
     "href": "slides/2024-08-28-dataviz.html#whats-around-the-corner",
     "title": "Better Data Visualizations",
     "section": "What’s around the corner?",
-    "text": "What’s around the corner?\nshiny\n\ninteractive graphics / modeling\nhttps://shiny.rstudio.com/\n\nplotly\n\nPlotly is an R package for creating interactive web-based graphs via plotly’s JavaScript graphing library, plotly.js. The plotly R libary contains the ggplotly function , which will convert ggplot2 figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the style function.\n\n\nhttps://plot.ly/ggplot2/getting-started/\n\ngganimate\n\ngganimate tutorial\n\nTufte (1997) Visual and Statistical Thinking: Displays of Evidence for Making Decisions. (Use Google to find it.)"
+    "text": "What’s around the corner?\nshiny\n\ninteractive graphics / modeling\nhttps://shiny.rstudio.com/\n\nplotly\n\nPlotly is an R package for creating interactive web-based graphs via plotly’s JavaScript graphing library, plotly.js. The plotly R libary contains the ggplotly function , which will convert ggplot2 figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the style function.\n\n\nhttps://plot.ly/ggplot2/getting-started/\n\ngganimate\n\ngganimate tutorial"
   },
   {
     "objectID": "github.html#connecting-your-github-account-to-gradescope",
@@ -4618,5 +4618,852 @@
     "title": "Data Wrangling",
     "section": "Pipe",
     "text": "Pipe\n\nflights |&gt; \n  mutate(speed = distance / (air_time/60)) |&gt; \n  select(tailnum, speed) |&gt; \n  group_by(tailnum) |&gt;  \n  summarize(number = n(), \n            avg_speed = mean(speed, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#preliminaries",
+    "href": "slides/2024-08-28-dataviz.html#preliminaries",
+    "title": "Better Data Visualizations",
+    "section": "Preliminaries",
+    "text": "Preliminaries\n\nMake the data stand out\nFacilitate comparison\nAdd information\n\n(Nolan & Perrrett, 2016)"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#preliminaries-1",
+    "href": "slides/2024-08-28-dataviz.html#preliminaries-1",
+    "title": "Better Data Visualizations",
+    "section": "Preliminaries",
+    "text": "Preliminaries\nTufte lists two main motivational steps to working with graphics as part of an argument.\n\n“An essential analytic task in making decisions based on evidence is to understand how things work.”\nMaking decisions based on evidence requires the appropriate display of that evidence.”"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#cholera---a-picture-tells-1000-words",
+    "href": "slides/2024-08-28-dataviz.html#cholera---a-picture-tells-1000-words",
+    "title": "Better Data Visualizations",
+    "section": "Cholera - a picture tells 1000 words",
+    "text": "Cholera - a picture tells 1000 words\n\nHow many aspects of this graph can you point out which are relevant to figuring out that cholera infection was coming from a single pump? Are there any distracting aspects?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#cholera---difficult-to-interpret",
+    "href": "slides/2024-08-28-dataviz.html#cholera---difficult-to-interpret",
+    "title": "Better Data Visualizations",
+    "section": "Cholera - difficult to interpret",
+    "text": "Cholera - difficult to interpret\n\nWhy would the outbreak already have begun to decline before the pump handle was removed?"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#challenger---problematic",
+    "href": "slides/2024-08-28-dataviz.html#challenger---problematic",
+    "title": "Better Data Visualizations",
+    "section": "Challenger - Problematic",
+    "text": "Challenger - Problematic\n\nOne of the graphics which was particularly unconvincing in trying to explain that O-rings fail in the cold."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#challenger---better",
+    "href": "slides/2024-08-28-dataviz.html#challenger---better",
+    "title": "Better Data Visualizations",
+    "section": "Challenger - Better????",
+    "text": "Challenger - Better????\n\nA different graph of the Challenger information, now sorted by temperature"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#challenger---improved",
+    "href": "slides/2024-08-28-dataviz.html#challenger---improved",
+    "title": "Better Data Visualizations",
+    "section": "Challenger - Improved",
+    "text": "Challenger - Improved\n\nThe graphic the engineers should have led with in trying to persuade the administrators not to launch. It is evident that the number of O-ring failures is quite highly associated with the ambient temperature. Note the vital information on the x-axis associated with the large number of launches at warm temperatures that had zero O-ring failures.Note that the “improved” Challenger graphic was made by Tufte, not by the engineers working on the problem at the time."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#fonts-matter",
+    "href": "slides/2024-08-28-dataviz.html#fonts-matter",
+    "title": "Better Data Visualizations",
+    "section": "Fonts matter",
+    "text": "Fonts matter"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-on-plotting-specific",
+    "href": "slides/2024-08-28-dataviz.html#advice-on-plotting-specific",
+    "title": "Better Data Visualizations",
+    "section": "Advice on plotting, specific",
+    "text": "Advice on plotting, specific\n\nAvoid having other graph elements interfere with data\nUse visually prominent symbols\nAvoid over-plotting (One way to avoid over plotting: jitter the values)\nDifferent values of data may obscure each other\nInclude all or nearly all of the data\nFill data region"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#advice-on-plotting-general",
+    "href": "slides/2024-08-28-dataviz.html#advice-on-plotting-general",
+    "title": "Better Data Visualizations",
+    "section": "Advice on plotting, general",
+    "text": "Advice on plotting, general\n\nEliminate superfluous material\nFacilitate comparisons\nChoose the best scale\nMake the plot data / information rich\nUse good captions, alt text, conclusions"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#simplify",
+    "href": "slides/2024-08-28-dataviz.html#simplify",
+    "title": "Better Data Visualizations",
+    "section": "Simplify",
+    "text": "Simplify\n\nimage credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#simplified",
+    "href": "slides/2024-08-28-dataviz.html#simplified",
+    "title": "Better Data Visualizations",
+    "section": "Simplified",
+    "text": "Simplified\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nimage credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#nyt-9721",
+    "href": "slides/2024-08-28-dataviz.html#nyt-9721",
+    "title": "Better Data Visualizations",
+    "section": "NYT 9/7/21",
+    "text": "NYT 9/7/21\n\nOne in 5,000, NYT, D. Leonhardt 9/7/21; image credit: https://www.nytimes.com/2021/09/07/briefing/risk-breakthrough-infections-delta.html"
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#worth-a-mention",
+    "href": "slides/2024-08-28-dataviz.html#worth-a-mention",
+    "title": "Better Data Visualizations",
+    "section": "Worth a Mention",
+    "text": "Worth a Mention\n\n\nW.E.B. Du Bois (1868-1963)\n\nsociologist\ndata scientist\n\n\n\n\n\n\n\nimage credit: wikipedia\n\n\n\n\n\n\nIn 1900 Du Bois contributed approximately 60 data visualizations to an exhibit at the Exposition Universelle in Paris, an exhibit designed to illustrate the progress made by African Americans since the end of slavery (only 37 years prior, in 1863)."
+  },
+  {
+    "objectID": "slides/2024-08-28-dataviz.html#beautiful-informative-graphics",
+    "href": "slides/2024-08-28-dataviz.html#beautiful-informative-graphics",
+    "title": "Better Data Visualizations",
+    "section": "Beautiful & Informative Graphics",
+    "text": "Beautiful & Informative Graphics\nhttps://drawingmatter.org/w-e-b-du-bois-visionary-infographics/"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#tidy-data",
+    "href": "slides/2024-09-11-verbs.html#tidy-data",
+    "title": "Data Wrangling",
+    "section": "Tidy data",
+    "text": "Tidy data\n\neach row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#definition-of-datum",
+    "href": "slides/2024-09-11-verbs.html#definition-of-datum",
+    "title": "Data Wrangling",
+    "section": "Definition of datum",
+    "text": "Definition of datum\nThe definition of datum can be much broader:\n\nDefinition of datum from the Oxford English Dictionary"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#tidying-data",
+    "href": "slides/2024-09-11-verbs.html#tidying-data",
+    "title": "Data Wrangling",
+    "section": "Tidying data",
+    "text": "Tidying data\nHow would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#not-tidy-active-duty-military",
+    "href": "slides/2024-09-11-verbs.html#not-tidy-active-duty-military",
+    "title": "Data Wrangling",
+    "section": "Not tidy – Active Duty Military",
+    "text": "Not tidy – Active Duty Military\nThe Active Duty data are not tidy! What are the cases? How are the data not tidy? What might the data look like in tidy form? Suppose that the case was “an individual in the armed forces.” What variables would you use to capture the information in the following table?"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#tidy-packages-the-tidyverse",
+    "href": "slides/2024-09-11-verbs.html#tidy-packages-the-tidyverse",
+    "title": "Data Wrangling",
+    "section": "Tidy packages: the tidyverse",
+    "text": "Tidy packages: the tidyverse\n\nimage credit: https://www.tidyverse.org/."
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#some-basic-verbs",
+    "href": "slides/2024-09-11-verbs.html#some-basic-verbs",
+    "title": "Data Wrangling",
+    "section": "Some Basic Verbs",
+    "text": "Some Basic Verbs\n\nfilter()\narrange()\nselect()\ndistinct()\nmutate()\nsummarize()\nsample_n()"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#filter",
+    "href": "slides/2024-09-11-verbs.html#filter",
+    "title": "Data Wrangling",
+    "section": "filter()",
+    "text": "filter()\nAllows you to select a subset of the rows of a data frame. The first argument is the name of the data frame, the following arguments are the filters that you’d like to apply\nFor all flights on January 1st:\n\nfilter(flights, month == 1, day == 1)\n\n# A tibble: 842 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 832 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#constructing-filters",
+    "href": "slides/2024-09-11-verbs.html#constructing-filters",
+    "title": "Data Wrangling",
+    "section": "Constructing filters",
+    "text": "Constructing filters\nFilters are constructed of logical operators: &lt;, &gt;, &lt;=, &gt;=, ==, != (and some others).\nAdding them one by one to filter() is akin to saying “this AND that”. To say “this OR that OR both”, use |.\n\nfilter(flights, month == 1 | month == 2)\n\n# A tibble: 51,955 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 51,945 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#practice",
+    "href": "slides/2024-09-11-verbs.html#practice",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nConstruct filters to isolate:\n\nFlights that left on St. Patrick’s Day.\nFlights that were destined for Chicago’s primary airport.\nFlights that were destined for Chicago’s primary airport and were operated by United Airlines.\nFlights with flight times more than 2000 miles or that were in the air more than 5 hours."
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#solution",
+    "href": "slides/2024-09-11-verbs.html#solution",
+    "title": "Data Wrangling",
+    "section": "Solution",
+    "text": "Solution\n\nFlights that left on St. Patrick’s Day.\nFlights that were destined for Chicago’s primary airport.\nFlights that were destined for Chicago’s primary airport and were operated by United Airlines.\nFlights with flight times more than 2000 miles or that were in the air more than 5 hours.\n\n\nfilter(flights, month == 3, day == 17)\nfilter(flights, dest == \"ORD\")\nfilter(flights, dest == \"ORD\", carrier == \"UA\")\nfilter(flights, distance &gt; 2000 | air_time &gt; 5*60)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#arrange",
+    "href": "slides/2024-09-11-verbs.html#arrange",
+    "title": "Data Wrangling",
+    "section": "arrange()",
+    "text": "arrange()\narrange() reorders the rows: It takes a data frame, and a set of column names (or more complicated expressions) to order by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns:\n\narrange(flights, year, month, day)\n\nUse desc() to sort in descending order.\n\narrange(flights, desc(arr_delay))"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#select",
+    "href": "slides/2024-09-11-verbs.html#select",
+    "title": "Data Wrangling",
+    "section": "select()",
+    "text": "select()\nOften you work with large datasets with many columns where only a few are actually of interest to you. select() allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:\n\nselect(flights, year, month, day)\n\nYou can exclude columns using - and specify a range using :.\n\nselect(flights, -(year:day))"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#distinct",
+    "href": "slides/2024-09-11-verbs.html#distinct",
+    "title": "Data Wrangling",
+    "section": "distinct()",
+    "text": "distinct()\nA common use of select() is to find out which values a set of variables takes. This is particularly useful in conjunction with the distinct() verb which only returns the unique values in a table.\nWhat do the following data correspond to?\n\ndistinct(select(flights, origin, dest))\n\n# A tibble: 224 × 2\n   origin dest \n   &lt;chr&gt;  &lt;chr&gt;\n 1 EWR    IAH  \n 2 LGA    IAH  \n 3 JFK    MIA  \n 4 JFK    BQN  \n 5 LGA    ATL  \n 6 EWR    ORD  \n 7 EWR    FLL  \n 8 LGA    IAD  \n 9 JFK    MCO  \n10 LGA    ORD  \n# ℹ 214 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#mutate",
+    "href": "slides/2024-09-11-verbs.html#mutate",
+    "title": "Data Wrangling",
+    "section": "mutate()",
+    "text": "mutate()\nAs well as selecting from the set of existing columns, it’s often useful to add new columns that are functions of existing columns. This is the job of mutate():\n\nselect(mutate(flights, gain = dep_delay - arr_delay), \n       flight, dep_delay, arr_delay, gain)\n\n# A tibble: 336,776 × 4\n   flight dep_delay arr_delay  gain\n    &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;\n 1   1545         2        11    -9\n 2   1714         4        20   -16\n 3   1141         2        33   -31\n 4    725        -1       -18    17\n 5    461        -6       -25    19\n 6   1696        -4        12   -16\n 7    507        -5        19   -24\n 8   5708        -3       -14    11\n 9     79        -3        -8     5\n10    301        -2         8   -10\n# ℹ 336,766 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#summarize-and-sample_n",
+    "href": "slides/2024-09-11-verbs.html#summarize-and-sample_n",
+    "title": "Data Wrangling",
+    "section": "summarize() and sample_n()",
+    "text": "summarize() and sample_n()\nsummarize() collapses a data frame to a single row based on some function. It’s not very useful yet, but it will be.\nsample_n() provides you with a random sample of rows.\n\nsummarize(flights, delay = mean(dep_delay, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  delay\n  &lt;dbl&gt;\n1  12.6\n\nsample_n(flights, 10)\n\n# A tibble: 10 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013    10    17     2357           2359        -2      328            350\n 2  2013     3    16     1316           1320        -4     1655           1617\n 3  2013    11    24      825            835       -10     1027           1045\n 4  2013     6    26     1618           1559        19     1920           1914\n 5  2013     6    11     1137           1115        22     1400           1410\n 6  2013    12    27      814            805         9     1127           1111\n 7  2013     8    30     1825           1827        -2     2008           2034\n 8  2013    10    22     1707           1715        -8     1811           1830\n 9  2013     8    11     2137           2140        -3     2254           2300\n10  2013     4    26      956           1003        -7     1313           1322\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#practice-1",
+    "href": "slides/2024-09-11-verbs.html#practice-1",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nMutate the data to create a new column that contains the average speed traveled by the plane for each flight.\nSelect the new variable and save it, along with tailnum, as a new data frame object."
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#practice-2",
+    "href": "slides/2024-09-11-verbs.html#practice-2",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nMutate the data to create a new column that contains the average speed traveled by the plane for each flight.\nSelect the new variable and save it, along with tailnum, as a new data frame object.\n\nflights2 &lt;- mutate(flights, speed = distance/(air_time/60))\nspeed_data &lt;- select(flights2, tailnum, speed)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#group_by",
+    "href": "slides/2024-09-11-verbs.html#group_by",
+    "title": "Data Wrangling",
+    "section": "group_by()",
+    "text": "group_by()\nsummarize() and sample_n() are even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.\nThe group_by() function describes how to break a dataset down into groups of rows."
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#group_by-1",
+    "href": "slides/2024-09-11-verbs.html#group_by-1",
+    "title": "Data Wrangling",
+    "section": "group_by()",
+    "text": "group_by()\nFind the fastest airplanes in the bunch, measured as the average speed per airplane.\n\nby_tailnum &lt;- group_by(speed_data, tailnum)\navg_speed &lt;- summarize(by_tailnum, \n                       count = n(), \n                       avg_speed = mean(speed, na.rm = TRUE))\narrange(avg_speed, desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum count avg_speed\n   &lt;chr&gt;   &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA      1      501.\n 2 N315AS      1      499.\n 3 N654UA      1      499.\n 4 N819AW      1      490.\n 5 N382HA     26      486.\n 6 N388HA     36      484.\n 7 N391HA     21      484.\n 8 N777UA      1      483.\n 9 N385HA     28      483.\n10 N392HA     13      482.\n# ℹ 4,034 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#chaining",
+    "href": "slides/2024-09-11-verbs.html#chaining",
+    "title": "Data Wrangling",
+    "section": "Chaining",
+    "text": "Chaining\nInstead of applying each verb step-by-step, we can chain them into a single data pipeline, connected with the |&gt; operator. You start the pipeline with a data frame and then pass it to each function in turn.\nThe pipe syntax (|&gt;) takes a data frame and sends it to the argument of a function. The mapping goes to the first available argument in the function. For example:\nx |&gt;  f() is the same as f(x)\nx |&gt;  f(y) is the same as f(x, y)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#mornings",
+    "href": "slides/2024-09-11-verbs.html#mornings",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\nme_step1 &lt;- dress(me, what = sports)  \nme_step2 &lt;- exercise(me_step1, how = running)  \nme_step3 &lt;- eat(me_step2, choice = cereal)  \nme_step4 &lt;- dress(me_step3, what = school)  \nme_step5 &lt;- commute(me_step4, transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#mornings-1",
+    "href": "slides/2024-09-11-verbs.html#mornings-1",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\ncommute(dress(eat(exercise(dress(me, what = sports), how = running), choice = cereal), what = school), transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#morning",
+    "href": "slides/2024-09-11-verbs.html#morning",
+    "title": "Data Wrangling",
+    "section": "Morning",
+    "text": "Morning\n(better??)\n\ncommute(\n  dress(\n    eat(\n      exercise(\n        dress(me, \n              what = sports), \n        how = running), \n      choice = cereal), \n    what = school), \n  transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#mornings-2",
+    "href": "slides/2024-09-11-verbs.html#mornings-2",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\nme |&gt; \n  dress(what = sports) |&gt; \n  exercise(how = running) |&gt; \n  eat(choice = cereal) |&gt; \n  dress(what = school) |&gt; \n  commute(transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#little-bunny-foo-foo",
+    "href": "slides/2024-09-11-verbs.html#little-bunny-foo-foo",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nFrom Hadley Wickham, how to think about tidy data.\n\nLittle bunny Foo Foo\n\n\nWent hopping through the forest\n\n\nScooping up the field mice\n\n\nAnd bopping them on the head"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-1",
+    "href": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-1",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nThe nursery rhyme could be created by a series of steps where the output from each step is saved as an object along the way.\n\nfoo_foo &lt;- little_bunny()\nfoo_foo_1 &lt;- hop(foo_foo, through = forest)\nfoo_foo_2 &lt;- scoop(foo_foo_2, up = field_mice)\nfoo_foo_3 &lt;- bop(foo_foo_2, on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-2",
+    "href": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-2",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nAnother approach is to concatenate the functions so that there is only one output.\n\nbop(\n   scoop(\n      hop(foo_foo, through = forest),\n      up = field_mice),\n   on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-3",
+    "href": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-3",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nOr even worse, as one line:\n\nbop(scoop(hop(foo_foo, through = forest), up = field_mice), on = head)))"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-4",
+    "href": "slides/2024-09-11-verbs.html#little-bunny-foo-foo-4",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nInstead, the code can be written using the pipe in the order in which the function is evaluated:\n\nfoo_foo |&gt; \n   hop(through = forest) |&gt; \n       scoop(up = field_mice) |&gt; \n           bop(on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#flights",
+    "href": "slides/2024-09-11-verbs.html#flights",
+    "title": "Data Wrangling",
+    "section": "Flights",
+    "text": "Flights\n\nNo pipePipe\n\n\n\nflights2 &lt;- mutate(flights, speed = distance/(air_time/60))\ntail_speed &lt;- select(flights2, tailnum, speed)\ntail_speed_grp &lt;- group_by(tail_speed, tailnum)\ntail_ave &lt;- summarize(tail_speed_grp, number = n(),\n                      avg_speed = mean(speed, na.rm = TRUE))\narrange(tail_ave, desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows\n\n\n\n\n\nflights |&gt; \n  mutate(speed = distance / (air_time/60)) |&gt; \n  select(tailnum, speed) |&gt; \n  group_by(tailnum) |&gt;  \n  summarize(number = n(), \n            avg_speed = mean(speed, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#practice-3",
+    "href": "slides/2024-09-11-verbs.html#practice-3",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nForm a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#practice-4",
+    "href": "slides/2024-09-11-verbs.html#practice-4",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nForm a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?\n\nflights |&gt; \n  group_by(carrier) |&gt; \n  summarize(avg_delay = mean(dep_delay, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_delay))\n\n# A tibble: 16 × 2\n   carrier avg_delay\n   &lt;chr&gt;       &lt;dbl&gt;\n 1 F9          20.2 \n 2 EV          20.0 \n 3 YV          19.0 \n 4 FL          18.7 \n 5 WN          17.7 \n 6 9E          16.7 \n 7 B6          13.0 \n 8 VX          12.9 \n 9 OO          12.6 \n10 UA          12.1 \n11 MQ          10.6 \n12 DL           9.26\n13 AA           8.59\n14 AS           5.80\n15 HA           4.90\n16 US           3.78"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#practice-again",
+    "href": "slides/2024-09-11-verbs.html#practice-again",
+    "title": "Data Wrangling",
+    "section": "Practice again",
+    "text": "Practice again\nSay you’re curious about the relationship between the number of flights that each plane made in 2013, the mean distance that each of those planes flew, and the mean arrival delay. You also want to exclude the edge cases from your analysis, so focus on the planes that have logged more than 20 flights and flown an average distance of less than 2000 miles. Please form the chain that creates this dataset."
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#solution-1",
+    "href": "slides/2024-09-11-verbs.html#solution-1",
+    "title": "Data Wrangling",
+    "section": "Solution",
+    "text": "Solution\n\ndelay_data &lt;- flights |&gt; \n  group_by(tailnum) |&gt; \n  summarize(number = n(),\n            dist = mean(distance, na.rm = TRUE), \n            delay = mean(arr_delay, na.rm = TRUE)) |&gt; \n  filter(number &gt; 20, dist &lt; 2000)"
+  },
+  {
+    "objectID": "slides/2024-09-11-verbs.html#visualizing-the-data",
+    "href": "slides/2024-09-11-verbs.html#visualizing-the-data",
+    "title": "Data Wrangling",
+    "section": "Visualizing the data",
+    "text": "Visualizing the data\n\nVizCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndelay_data |&gt; \n ggplot(aes(dist, delay)) +\n geom_point(aes(size = number), \n            alpha = 1/2) +\n geom_smooth() +\n scale_size_area()\n\nWhen scale_size_area is used, the default behavior is to scale the area of points to be proportional to the value."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html",
+    "href": "slides/2024-09-18-pivotjoin.html",
+    "title": "Data Wrangling",
+    "section": "",
+    "text": "Tidy data\nData verbs"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#tidy-data",
+    "href": "slides/2024-09-18-pivotjoin.html#tidy-data",
+    "title": "Data Wrangling",
+    "section": "Tidy data",
+    "text": "Tidy data\n\neach row = a unit of observation (here, a penguin)\neach column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)\neach entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#definition-of-datum",
+    "href": "slides/2024-09-18-pivotjoin.html#definition-of-datum",
+    "title": "Data Wrangling",
+    "section": "Definition of datum",
+    "text": "Definition of datum\nThe definition of datum can be much broader:\n\n\n\n\n\nDefinition of datum from the Oxford English Dictionary"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#tidying-data",
+    "href": "slides/2024-09-18-pivotjoin.html#tidying-data",
+    "title": "Data Wrangling",
+    "section": "Tidying data",
+    "text": "Tidying data\nHow would you wrangle each data example into a tidy format?\n\nthe emails in your inbox\n\nsocial media texts\n\nimages\n\nvideos\n\naudio files"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#not-tidy-active-duty-military",
+    "href": "slides/2024-09-18-pivotjoin.html#not-tidy-active-duty-military",
+    "title": "Data Wrangling",
+    "section": "Not tidy – Active Duty Military",
+    "text": "Not tidy – Active Duty Military\nThe Active Duty data are not tidy! What are the cases? How are the data not tidy? What might the data look like in tidy form? Suppose that the case was “an individual in the armed forces.” What variables would you use to capture the information in the following table?"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#tidy-packages-the-tidyverse",
+    "href": "slides/2024-09-18-pivotjoin.html#tidy-packages-the-tidyverse",
+    "title": "Data Wrangling",
+    "section": "Tidy packages: the tidyverse",
+    "text": "Tidy packages: the tidyverse\n\n\n\n\n\nimage credit: https://www.tidyverse.org/."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#some-basic-verbs",
+    "href": "slides/2024-09-18-pivotjoin.html#some-basic-verbs",
+    "title": "Data Wrangling",
+    "section": "Some Basic Verbs",
+    "text": "Some Basic Verbs\n\nfilter()\narrange()\nselect()\ndistinct()\nmutate()\nsummarize()\nsample_n()"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#filter",
+    "href": "slides/2024-09-18-pivotjoin.html#filter",
+    "title": "Data Wrangling",
+    "section": "filter()",
+    "text": "filter()\nAllows you to select a subset of the rows of a data frame. The first argument is the name of the data frame, the following arguments are the filters that you’d like to apply\nFor all flights on January 1st:\n\nfilter(flights, month == 1, day == 1)\n\n# A tibble: 842 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 832 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#constructing-filters",
+    "href": "slides/2024-09-18-pivotjoin.html#constructing-filters",
+    "title": "Data Wrangling",
+    "section": "Constructing filters",
+    "text": "Constructing filters\nFilters are constructed of logical operators: &lt;, &gt;, &lt;=, &gt;=, ==, != (and some others).\nAdding them one by one to filter() is akin to saying “this AND that”. To say “this OR that OR both”, use |.\n\nfilter(flights, month == 1 | month == 2)\n\n# A tibble: 51,955 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 51,945 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#practice",
+    "href": "slides/2024-09-18-pivotjoin.html#practice",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nConstruct filters to isolate:\n\nFlights that left on St. Patrick’s Day.\nFlights that were destined for Chicago’s primary airport.\nFlights that were destined for Chicago’s primary airport and were operated by United Airlines.\nFlights with flight times more than 2000 miles or that were in the air more than 5 hours."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#solution",
+    "href": "slides/2024-09-18-pivotjoin.html#solution",
+    "title": "Data Wrangling",
+    "section": "Solution",
+    "text": "Solution\n\nFlights that left on St. Patrick’s Day.\nFlights that were destined for Chicago’s primary airport.\nFlights that were destined for Chicago’s primary airport and were operated by United Airlines.\nFlights with flight times more than 2000 miles or that were in the air more than 5 hours.\n\n\nfilter(flights, month == 3, day == 17)\nfilter(flights, dest == \"ORD\")\nfilter(flights, dest == \"ORD\", carrier == \"UA\")\nfilter(flights, distance &gt; 2000 | air_time &gt; 5*60)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#arrange",
+    "href": "slides/2024-09-18-pivotjoin.html#arrange",
+    "title": "Data Wrangling",
+    "section": "arrange()",
+    "text": "arrange()\narrange() reorders the rows: It takes a data frame, and a set of column names (or more complicated expressions) to order by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns:\n\narrange(flights, year, month, day)\n\nUse desc() to sort in descending order.\n\narrange(flights, desc(arr_delay))"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#select",
+    "href": "slides/2024-09-18-pivotjoin.html#select",
+    "title": "Data Wrangling",
+    "section": "select()",
+    "text": "select()\nOften you work with large datasets with many columns where only a few are actually of interest to you. select() allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:\n\nselect(flights, year, month, day)\n\nYou can exclude columns using - and specify a range using :.\n\nselect(flights, -(year:day))"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#distinct",
+    "href": "slides/2024-09-18-pivotjoin.html#distinct",
+    "title": "Data Wrangling",
+    "section": "distinct()",
+    "text": "distinct()\nA common use of select() is to find out which values a set of variables takes. This is particularly useful in conjunction with the distinct() verb which only returns the unique values in a table.\nWhat do the following data correspond to?\n\ndistinct(select(flights, origin, dest))\n\n# A tibble: 224 × 2\n   origin dest \n   &lt;chr&gt;  &lt;chr&gt;\n 1 EWR    IAH  \n 2 LGA    IAH  \n 3 JFK    MIA  \n 4 JFK    BQN  \n 5 LGA    ATL  \n 6 EWR    ORD  \n 7 EWR    FLL  \n 8 LGA    IAD  \n 9 JFK    MCO  \n10 LGA    ORD  \n# ℹ 214 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#mutate",
+    "href": "slides/2024-09-18-pivotjoin.html#mutate",
+    "title": "Data Wrangling",
+    "section": "mutate()",
+    "text": "mutate()\nAs well as selecting from the set of existing columns, it’s often useful to add new columns that are functions of existing columns. This is the job of mutate():\n\nselect(mutate(flights, gain = dep_delay - arr_delay), \n       flight, dep_delay, arr_delay, gain)\n\n# A tibble: 336,776 × 4\n   flight dep_delay arr_delay  gain\n    &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;\n 1   1545         2        11    -9\n 2   1714         4        20   -16\n 3   1141         2        33   -31\n 4    725        -1       -18    17\n 5    461        -6       -25    19\n 6   1696        -4        12   -16\n 7    507        -5        19   -24\n 8   5708        -3       -14    11\n 9     79        -3        -8     5\n10    301        -2         8   -10\n# ℹ 336,766 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#summarize-and-sample_n",
+    "href": "slides/2024-09-18-pivotjoin.html#summarize-and-sample_n",
+    "title": "Data Wrangling",
+    "section": "summarize() and sample_n()",
+    "text": "summarize() and sample_n()\nsummarize() collapses a data frame to a single row based on some function. It’s not very useful yet, but it will be.\nsample_n() provides you with a random sample of rows.\n\nsummarize(flights, delay = mean(dep_delay, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  delay\n  &lt;dbl&gt;\n1  12.6\n\nsample_n(flights, 10)\n\n# A tibble: 10 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     3     9     1905           1855        10     2113           2132\n 2  2013     6    20     1052           1057        -5     1312           1338\n 3  2013     5    29     1213           1210         3     1509           1510\n 4  2013     5     8     2150           2030        80        7           2227\n 5  2013     6    13     1429           1419        10     1700           1659\n 6  2013    11    22     1458           1459        -1     1820           1819\n 7  2013     6     8     1836           1753        43     2046           2015\n 8  2013    10    27     1055           1030        25     1335           1324\n 9  2013    11     6     1941           1950        -9     2137           2140\n10  2013     7    23      919            920        -1     1224           1210\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#practice-1",
+    "href": "slides/2024-09-18-pivotjoin.html#practice-1",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nMutate the data to create a new column that contains the average speed traveled by the plane for each flight.\nSelect the new variable and save it, along with tailnum, as a new data frame object."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#practice-2",
+    "href": "slides/2024-09-18-pivotjoin.html#practice-2",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nMutate the data to create a new column that contains the average speed traveled by the plane for each flight.\nSelect the new variable and save it, along with tailnum, as a new data frame object.\n\nflights2 &lt;- mutate(flights, speed = distance/(air_time/60))\nspeed_data &lt;- select(flights2, tailnum, speed)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#group_by",
+    "href": "slides/2024-09-18-pivotjoin.html#group_by",
+    "title": "Data Wrangling",
+    "section": "group_by()",
+    "text": "group_by()\nsummarize() and sample_n() are even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.\nThe group_by() function describes how to break a dataset down into groups of rows."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#group_by-1",
+    "href": "slides/2024-09-18-pivotjoin.html#group_by-1",
+    "title": "Data Wrangling",
+    "section": "group_by()",
+    "text": "group_by()\nFind the fastest airplanes in the bunch, measured as the average speed per airplane.\n\nby_tailnum &lt;- group_by(speed_data, tailnum)\navg_speed &lt;- summarize(by_tailnum, \n                       count = n(), \n                       avg_speed = mean(speed, na.rm = TRUE))\narrange(avg_speed, desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum count avg_speed\n   &lt;chr&gt;   &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA      1      501.\n 2 N315AS      1      499.\n 3 N654UA      1      499.\n 4 N819AW      1      490.\n 5 N382HA     26      486.\n 6 N388HA     36      484.\n 7 N391HA     21      484.\n 8 N777UA      1      483.\n 9 N385HA     28      483.\n10 N392HA     13      482.\n# ℹ 4,034 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#chaining",
+    "href": "slides/2024-09-18-pivotjoin.html#chaining",
+    "title": "Data Wrangling",
+    "section": "Chaining",
+    "text": "Chaining\nInstead of applying each verb step-by-step, we can chain them into a single data pipeline, connected with the |&gt; operator. You start the pipeline with a data frame and then pass it to each function in turn.\nThe pipe syntax (|&gt;) takes a data frame and sends it to the argument of a function. The mapping goes to the first available argument in the function. For example:\nx |&gt;  f() is the same as f(x)\nx |&gt;  f(y) is the same as f(x, y)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#mornings",
+    "href": "slides/2024-09-18-pivotjoin.html#mornings",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\nme_step1 &lt;- dress(me, what = sports)  \nme_step2 &lt;- exercise(me_step1, how = running)  \nme_step3 &lt;- eat(me_step2, choice = cereal)  \nme_step4 &lt;- dress(me_step3, what = school)  \nme_step5 &lt;- commute(me_step4, transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#mornings-1",
+    "href": "slides/2024-09-18-pivotjoin.html#mornings-1",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\ncommute(dress(eat(exercise(dress(me, what = sports), how = running), choice = cereal), what = school), transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#morning",
+    "href": "slides/2024-09-18-pivotjoin.html#morning",
+    "title": "Data Wrangling",
+    "section": "Morning",
+    "text": "Morning\n(better??)\n\ncommute(\n  dress(\n    eat(\n      exercise(\n        dress(me, \n              what = sports), \n        how = running), \n      choice = cereal), \n    what = school), \n  transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#mornings-2",
+    "href": "slides/2024-09-18-pivotjoin.html#mornings-2",
+    "title": "Data Wrangling",
+    "section": "Mornings",
+    "text": "Mornings\n\nme |&gt; \n  dress(what = sports) |&gt; \n  exercise(how = running) |&gt; \n  eat(choice = cereal) |&gt; \n  dress(what = school) |&gt; \n  commute(transportation = bike)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo",
+    "href": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nFrom Hadley Wickham, how to think about tidy data.\n\nLittle bunny Foo Foo\n\n\nWent hopping through the forest\n\n\nScooping up the field mice\n\n\nAnd bopping them on the head"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-1",
+    "href": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-1",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nThe nursery rhyme could be created by a series of steps where the output from each step is saved as an object along the way.\n\nfoo_foo &lt;- little_bunny()\nfoo_foo_1 &lt;- hop(foo_foo, through = forest)\nfoo_foo_2 &lt;- scoop(foo_foo_2, up = field_mice)\nfoo_foo_3 &lt;- bop(foo_foo_2, on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-2",
+    "href": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-2",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nAnother approach is to concatenate the functions so that there is only one output.\n\nbop(\n   scoop(\n      hop(foo_foo, through = forest),\n      up = field_mice),\n   on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-3",
+    "href": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-3",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nOr even worse, as one line:\n\nbop(scoop(hop(foo_foo, through = forest), up = field_mice), on = head)))"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-4",
+    "href": "slides/2024-09-18-pivotjoin.html#little-bunny-foo-foo-4",
+    "title": "Data Wrangling",
+    "section": "Little Bunny Foo Foo",
+    "text": "Little Bunny Foo Foo\nInstead, the code can be written using the pipe in the order in which the function is evaluated:\n\nfoo_foo |&gt; \n   hop(through = forest) |&gt; \n       scoop(up = field_mice) |&gt; \n           bop(on = head)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#flights",
+    "href": "slides/2024-09-18-pivotjoin.html#flights",
+    "title": "Data Wrangling",
+    "section": "Flights",
+    "text": "Flights\n\nNo pipePipe\n\n\n\nflights2 &lt;- mutate(flights, speed = distance/(air_time/60))\ntail_speed &lt;- select(flights2, tailnum, speed)\ntail_speed_grp &lt;- group_by(tail_speed, tailnum)\ntail_ave &lt;- summarize(tail_speed_grp, number = n(),\n                      avg_speed = mean(speed, na.rm = TRUE))\narrange(tail_ave, desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows\n\n\n\n\n\nflights |&gt; \n  mutate(speed = distance / (air_time/60)) |&gt; \n  select(tailnum, speed) |&gt; \n  group_by(tailnum) |&gt;  \n  summarize(number = n(), \n            avg_speed = mean(speed, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_speed))\n\n# A tibble: 4,044 × 3\n   tailnum number avg_speed\n   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 N228UA       1      501.\n 2 N315AS       1      499.\n 3 N654UA       1      499.\n 4 N819AW       1      490.\n 5 N382HA      26      486.\n 6 N388HA      36      484.\n 7 N391HA      21      484.\n 8 N777UA       1      483.\n 9 N385HA      28      483.\n10 N392HA      13      482.\n# ℹ 4,034 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#practice-3",
+    "href": "slides/2024-09-18-pivotjoin.html#practice-3",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nForm a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#practice-4",
+    "href": "slides/2024-09-18-pivotjoin.html#practice-4",
+    "title": "Data Wrangling",
+    "section": "Practice",
+    "text": "Practice\nForm a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?\n\nflights |&gt; \n  group_by(carrier) |&gt; \n  summarize(avg_delay = mean(dep_delay, na.rm = TRUE)) |&gt; \n  arrange(desc(avg_delay))\n\n# A tibble: 16 × 2\n   carrier avg_delay\n   &lt;chr&gt;       &lt;dbl&gt;\n 1 F9          20.2 \n 2 EV          20.0 \n 3 YV          19.0 \n 4 FL          18.7 \n 5 WN          17.7 \n 6 9E          16.7 \n 7 B6          13.0 \n 8 VX          12.9 \n 9 OO          12.6 \n10 UA          12.1 \n11 MQ          10.6 \n12 DL           9.26\n13 AA           8.59\n14 AS           5.80\n15 HA           4.90\n16 US           3.78"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#practice-again",
+    "href": "slides/2024-09-18-pivotjoin.html#practice-again",
+    "title": "Data Wrangling",
+    "section": "Practice again",
+    "text": "Practice again\nSay you’re curious about the relationship between the number of flights that each plane made in 2013, the mean distance that each of those planes flew, and the mean arrival delay. You also want to exclude the edge cases from your analysis, so focus on the planes that have logged more than 20 flights and flown an average distance of less than 2000 miles. Please form the chain that creates this dataset."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#solution-1",
+    "href": "slides/2024-09-18-pivotjoin.html#solution-1",
+    "title": "Data Wrangling",
+    "section": "Solution",
+    "text": "Solution\n\ndelay_data &lt;- flights |&gt; \n  group_by(tailnum) |&gt; \n  summarize(number = n(),\n            dist = mean(distance, na.rm = TRUE), \n            delay = mean(arr_delay, na.rm = TRUE)) |&gt; \n  filter(number &gt; 20, dist &lt; 2000)"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#visualizing-the-data",
+    "href": "slides/2024-09-18-pivotjoin.html#visualizing-the-data",
+    "title": "Data Wrangling",
+    "section": "Visualizing the data",
+    "text": "Visualizing the data\n\nVizCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndelay_data |&gt; \n ggplot(aes(dist, delay)) +\n geom_point(aes(size = number), \n            alpha = 1/2) +\n geom_smooth() +\n scale_size_area()\n\nWhen scale_size_area is used, the default behavior is to scale the area of points to be proportional to the value.\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#from-wide-to-long-and-long-to-wide",
+    "href": "slides/2024-09-18-pivotjoin.html#from-wide-to-long-and-long-to-wide",
+    "title": "Pivoting and Joining",
+    "section": "From wide to long and long to wide",
+    "text": "From wide to long and long to wide\n\npivot_longer() makes the dataframe “longer” – many columns into a few columns (more rows): pivot_longer(data, cols,  names_to = , value_to = )\npivot_wider() makes the dataframe “wider” – a few columns into many columns (fewer rows): pivot_wider(data, names_from = , values_from = )"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#from-wide-to-long-and-long-to-wide-1",
+    "href": "slides/2024-09-18-pivotjoin.html#from-wide-to-long-and-long-to-wide-1",
+    "title": "Pivoting and Joining",
+    "section": "From wide to long and long to wide",
+    "text": "From wide to long and long to wide"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#pivot_longer",
+    "href": "slides/2024-09-18-pivotjoin.html#pivot_longer",
+    "title": "Pivoting and Joining",
+    "section": "pivot_longer",
+    "text": "pivot_longer\npivot_longer will be demonstrated using datasets from GapMinder.\nlitF represents country, year, and female literacy rate.\n\nlibrary(googlesheets4)\ngs4_deauth()\nlitF &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1hDinTIRHQIaZg1RUn6Z_6mo12PtKwEPFIz_mJVF6P5I/pub?gid=0\")\n\nlitF\n\n# A tibble: 260 × 38\n   Adult (15+) literacy rate …¹ `1975` `1976` `1977` `1978` `1979` `1980` `1981`\n   &lt;chr&gt;                         &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1 Afghanistan                      NA     NA     NA     NA   4.99   NA       NA\n 2 Albania                          NA     NA     NA     NA  NA      NA       NA\n 3 Algeria                          NA     NA     NA     NA  NA      NA       NA\n 4 Andorra                          NA     NA     NA     NA  NA      NA       NA\n 5 Angola                           NA     NA     NA     NA  NA      NA       NA\n 6 Anguilla                         NA     NA     NA     NA  NA      NA       NA\n 7 Antigua and Barbuda              NA     NA     NA     NA  NA      NA       NA\n 8 Argentina                        NA     NA     NA     NA  NA      93.6     NA\n 9 Armenia                          NA     NA     NA     NA  NA      NA       NA\n10 Aruba                            NA     NA     NA     NA  NA      NA       NA\n# ℹ 250 more rows\n# ℹ abbreviated name: ¹​`Adult (15+) literacy rate (%). Female`\n# ℹ 30 more variables: `1982` &lt;dbl&gt;, `1983` &lt;dbl&gt;, `1984` &lt;dbl&gt;, `1985` &lt;dbl&gt;,\n#   `1986` &lt;dbl&gt;, `1987` &lt;dbl&gt;, `1988` &lt;dbl&gt;, `1989` &lt;dbl&gt;, `1990` &lt;dbl&gt;,\n#   `1991` &lt;dbl&gt;, `1992` &lt;dbl&gt;, `1993` &lt;dbl&gt;, `1994` &lt;dbl&gt;, `1995` &lt;dbl&gt;,\n#   `1996` &lt;dbl&gt;, `1997` &lt;dbl&gt;, `1998` &lt;dbl&gt;, `1999` &lt;dbl&gt;, `2000` &lt;dbl&gt;,\n#   `2001` &lt;dbl&gt;, `2002` &lt;dbl&gt;, `2003` &lt;dbl&gt;, `2004` &lt;dbl&gt;, `2005` &lt;dbl&gt;, …"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#pivot_longer-1",
+    "href": "slides/2024-09-18-pivotjoin.html#pivot_longer-1",
+    "title": "Pivoting and Joining",
+    "section": "pivot_longer",
+    "text": "pivot_longer\n\nlitF &lt;- litF |&gt; \n  select(country = starts_with(\"Adult\"), everything()) |&gt; \n  pivot_longer(cols = -country,\n               names_to = \"year\", \n               values_to = \"litRateF\") |&gt; \n  filter(!is.na(litRateF))\n\nlitF\n\n# A tibble: 571 × 3\n   country     year  litRateF\n   &lt;chr&gt;       &lt;chr&gt;    &lt;dbl&gt;\n 1 Afghanistan 1979      4.99\n 2 Afghanistan 2011     13   \n 3 Albania     2001     98.3 \n 4 Albania     2008     94.7 \n 5 Albania     2011     95.7 \n 6 Algeria     1987     35.8 \n 7 Algeria     2002     60.1 \n 8 Algeria     2006     63.9 \n 9 Angola      2001     54.2 \n10 Angola      2011     58.6 \n# ℹ 561 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#pivot_longer-2",
+    "href": "slides/2024-09-18-pivotjoin.html#pivot_longer-2",
+    "title": "Pivoting and Joining",
+    "section": "pivot_longer",
+    "text": "pivot_longer\nGDP represents country, year, and gdp (in fixed 2000 US$).\n\nGDP &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1RctTQmKB0hzbm1E8rGcufYdMshRdhmYdeL29nXqmvsc/pub?gid=0\")\n\nGDP &lt;- GDP |&gt;  \n  select(country = starts_with(\"Income\"), everything()) |&gt; \n  pivot_longer(cols = -country, \n               names_to = \"year\",\n               values_to = \"gdp\") |&gt; \n  filter(!is.na(gdp))\n\nGDP\n\n# A tibble: 7,988 × 3\n   country year    gdp\n   &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;\n 1 Albania 1980  1061.\n 2 Albania 1981  1100.\n 3 Albania 1982  1111.\n 4 Albania 1983  1101.\n 5 Albania 1984  1065.\n 6 Albania 1985  1060.\n 7 Albania 1986  1092.\n 8 Albania 1987  1054.\n 9 Albania 1988  1014.\n10 Albania 1989  1092.\n# ℹ 7,978 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#pivot_wider",
+    "href": "slides/2024-09-18-pivotjoin.html#pivot_wider",
+    "title": "Pivoting and Joining",
+    "section": "pivot_wider",
+    "text": "pivot_wider\npivot_wider will be demonstrated using the babynames dataset.\n\nlibrary(babynames)\n\nbabynames\n\n# A tibble: 1,924,665 × 5\n    year sex   name          n   prop\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;\n 1  1880 F     Mary       7065 0.0724\n 2  1880 F     Anna       2604 0.0267\n 3  1880 F     Emma       2003 0.0205\n 4  1880 F     Elizabeth  1939 0.0199\n 5  1880 F     Minnie     1746 0.0179\n 6  1880 F     Margaret   1578 0.0162\n 7  1880 F     Ida        1472 0.0151\n 8  1880 F     Alice      1414 0.0145\n 9  1880 F     Bertha     1320 0.0135\n10  1880 F     Sarah      1288 0.0132\n# ℹ 1,924,655 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#pivot_wider-babynames",
+    "href": "slides/2024-09-18-pivotjoin.html#pivot_wider-babynames",
+    "title": "Pivoting and Joining",
+    "section": "pivot_wider babynames",
+    "text": "pivot_wider babynames\n\nbabynames |&gt;  \n  select(-prop) |&gt; \n  pivot_wider(names_from = sex, values_from = n) \n\n# A tibble: 1,756,284 × 4\n    year name          F     M\n   &lt;dbl&gt; &lt;chr&gt;     &lt;int&gt; &lt;int&gt;\n 1  1880 Mary       7065    27\n 2  1880 Anna       2604    12\n 3  1880 Emma       2003    10\n 4  1880 Elizabeth  1939     9\n 5  1880 Minnie     1746     9\n 6  1880 Margaret   1578    NA\n 7  1880 Ida        1472     8\n 8  1880 Alice      1414    NA\n 9  1880 Bertha     1320    NA\n10  1880 Sarah      1288    NA\n# ℹ 1,756,274 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#pivot_wider-babynames-1",
+    "href": "slides/2024-09-18-pivotjoin.html#pivot_wider-babynames-1",
+    "title": "Pivoting and Joining",
+    "section": "pivot_wider babynames",
+    "text": "pivot_wider babynames\n\nbabynames |&gt;  \n  select(-prop) |&gt;  \n  pivot_wider(names_from = sex, values_from = n) |&gt; \n  filter(!is.na(F), !is.na(M)) |&gt; \n  arrange(desc(year), desc(F))\n\n# A tibble: 168,381 × 4\n    year name          F     M\n   &lt;dbl&gt; &lt;chr&gt;     &lt;int&gt; &lt;int&gt;\n 1  2017 Emma      19738    14\n 2  2017 Olivia    18632    10\n 3  2017 Ava       15902    12\n 4  2017 Isabella  15100    12\n 5  2017 Sophia    14831    17\n 6  2017 Mia       13437    16\n 7  2017 Charlotte 12893     7\n 8  2017 Amelia    11800    11\n 9  2017 Evelyn    10675    11\n10  2017 Abigail   10551     6\n# ℹ 168,371 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#pivot_wider-babynames-2",
+    "href": "slides/2024-09-18-pivotjoin.html#pivot_wider-babynames-2",
+    "title": "Pivoting and Joining",
+    "section": "pivot_wider babynames",
+    "text": "pivot_wider babynames\n\nbabynames |&gt;  \n  pivot_wider(names_from = sex, values_from = n) |&gt; \n  mutate(maxcount = pmax(F, M, na.rm = TRUE)) |&gt; \n  arrange(desc(maxcount))\n\n# A tibble: 1,924,653 × 6\n    year name      prop     F     M maxcount\n   &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;\n 1  1947 Linda   0.0548 99686    NA    99686\n 2  1948 Linda   0.0552 96209    NA    96209\n 3  1947 James   0.0510    NA 94756    94756\n 4  1957 Michael 0.0424    NA 92695    92695\n 5  1947 Robert  0.0493    NA 91642    91642\n 6  1949 Linda   0.0518 91016    NA    91016\n 7  1956 Michael 0.0423    NA 90620    90620\n 8  1958 Michael 0.0420    NA 90520    90520\n 9  1948 James   0.0497    NA 88588    88588\n10  1954 Michael 0.0428    NA 88514    88514\n# ℹ 1,924,643 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#relational-data-multiple-data-frames",
+    "href": "slides/2024-09-18-pivotjoin.html#relational-data-multiple-data-frames",
+    "title": "Pivoting and Joining",
+    "section": "Relational data (multiple data frames)",
+    "text": "Relational data (multiple data frames)\n\nSee the Posit cheatsheets on wrangling & joining and pivoting."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#joining-two-or-more-dataframes",
+    "href": "slides/2024-09-18-pivotjoin.html#joining-two-or-more-dataframes",
+    "title": "Pivoting and Joining",
+    "section": "Joining two (or more) dataframes:",
+    "text": "Joining two (or more) dataframes:\n\nleft_join returns all rows from the left table, and any rows with matching keys from the right table.\ninner_join returns only the rows in which the left table have matching keys in the right table (i.e., matching rows in both sets).\nfull_join returns all rows from both tables, join records from the left which have matching keys in the right table.\n\nGood practice: always specify the by argument when joining data frames."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#women-in-science",
+    "href": "slides/2024-09-18-pivotjoin.html#women-in-science",
+    "title": "Pivoting and Joining",
+    "section": "Women in Science",
+    "text": "Women in Science\n10 women in science who changed the world (source: Discover Magazine)1\n\n\n\n\n\nname\nprofession\n\n\n\n\nAda Lovelace\nMathematician\n\n\nMarie Curie\nPhysicist and Chemist\n\n\nJanaki Ammal\nBotanist\n\n\nChien-Shiung Wu\nPhysicist\n\n\nKatherine Johnson\nMathematician\n\n\nRosalind Franklin\nChemist\n\n\nVera Rubin\nAstronomer\n\n\nGladys West\nMathematician\n\n\nFlossie Wong-Staal\nVirologist and Molecular Biologist\n\n\nJennifer Doudna\nBiochemist\n\n\n\n\n\nExample from DataScience in a Box"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#inputs",
+    "href": "slides/2024-09-18-pivotjoin.html#inputs",
+    "title": "Pivoting and Joining",
+    "section": "Inputs",
+    "text": "Inputs\n\nProfessionsDatesWorks\n\n\n\nprofessions\n\n# A tibble: 10 × 2\n   name               profession                        \n   &lt;chr&gt;              &lt;chr&gt;                             \n 1 Ada Lovelace       Mathematician                     \n 2 Marie Curie        Physicist and Chemist             \n 3 Janaki Ammal       Botanist                          \n 4 Chien-Shiung Wu    Physicist                         \n 5 Katherine Johnson  Mathematician                     \n 6 Rosalind Franklin  Chemist                           \n 7 Vera Rubin         Astronomer                        \n 8 Gladys West        Mathematician                     \n 9 Flossie Wong-Staal Virologist and Molecular Biologist\n10 Jennifer Doudna    Biochemist                        \n\n\n\n\n\ndates\n\n# A tibble: 8 × 3\n  name               birth_year death_year\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;\n1 Janaki Ammal             1897       1984\n2 Chien-Shiung Wu          1912       1997\n3 Katherine Johnson        1918       2020\n4 Rosalind Franklin        1920       1958\n5 Vera Rubin               1928       2016\n6 Gladys West              1930         NA\n7 Flossie Wong-Staal       1947       2020\n8 Jennifer Doudna          1964         NA\n\n\n\n\n\nworks\n\n# A tibble: 9 × 2\n  name               known_for                                                  \n  &lt;chr&gt;              &lt;chr&gt;                                                      \n1 Ada Lovelace       first computer algorithm                                   \n2 Marie Curie        theory of radioactivity,  discovery of elements polonium a…\n3 Janaki Ammal       hybrid species, biodiversity protection                    \n4 Chien-Shiung Wu    confim and refine theory of radioactive beta decy, Wu expe…\n5 Katherine Johnson  calculations of orbital mechanics critical to sending the …\n6 Vera Rubin         existence of dark matter                                   \n7 Gladys West        mathematical modeling of the shape of the Earth which serv…\n8 Flossie Wong-Staal first scientist to clone HIV and create a map of its genes…\n9 Jennifer Doudna    one of the primary developers of CRISPR, a ground-breaking…"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#desired-output",
+    "href": "slides/2024-09-18-pivotjoin.html#desired-output",
+    "title": "Pivoting and Joining",
+    "section": "Desired output",
+    "text": "Desired output\nWe’d like to put together the data to look like:\n\n\n# A tibble: 10 × 5\n   name               profession                 birth_year death_year known_for\n   &lt;chr&gt;              &lt;chr&gt;                           &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    \n 1 Ada Lovelace       Mathematician                      NA         NA first co…\n 2 Marie Curie        Physicist and Chemist              NA         NA theory o…\n 3 Janaki Ammal       Botanist                         1897       1984 hybrid s…\n 4 Chien-Shiung Wu    Physicist                        1912       1997 confim a…\n 5 Katherine Johnson  Mathematician                    1918       2020 calculat…\n 6 Rosalind Franklin  Chemist                          1920       1958 &lt;NA&gt;     \n 7 Vera Rubin         Astronomer                       1928       2016 existenc…\n 8 Gladys West        Mathematician                    1930         NA mathemat…\n 9 Flossie Wong-Staal Virologist and Molecular …       1947       2020 first sc…\n10 Jennifer Doudna    Biochemist                       1964         NA one of t…"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#inputs-reminder",
+    "href": "slides/2024-09-18-pivotjoin.html#inputs-reminder",
+    "title": "Pivoting and Joining",
+    "section": "Inputs, reminder",
+    "text": "Inputs, reminder\n\n\n\nnrow(professions)\n\n[1] 10\n\nnrow(dates)\n\n[1] 8\n\nnrow(works)\n\n[1] 9\n\n\n\n\nnames(professions)\n\n[1] \"name\"       \"profession\"\n\nnames(dates)\n\n[1] \"name\"       \"birth_year\" \"death_year\"\n\nnames(works)\n\n[1] \"name\"      \"known_for\""
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#setup",
+    "href": "slides/2024-09-18-pivotjoin.html#setup",
+    "title": "Pivoting and Joining",
+    "section": "Setup",
+    "text": "Setup\nFor the next few slides…\n\n\n\nx\n\n# A tibble: 3 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 x1     \n2     2 x2     \n3     3 x3     \n\n\n\n\ny\n\n# A tibble: 3 × 2\n     id value_y\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 y1     \n2     2 y2     \n3     4 y4"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#left_join",
+    "href": "slides/2024-09-18-pivotjoin.html#left_join",
+    "title": "Pivoting and Joining",
+    "section": "left_join()",
+    "text": "left_join()\n\n\n\n\n\n\n\nimage credit: https://www.garrickadenbuie.com/project/tidyexplain/\n\n\n\n\n\n\nleft_join(x, y, by = \"id\")\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#left_join-1",
+    "href": "slides/2024-09-18-pivotjoin.html#left_join-1",
+    "title": "Pivoting and Joining",
+    "section": "left_join()",
+    "text": "left_join()\n\nprofessions |&gt; \n  left_join(dates, by = \"name\") \n\n# A tibble: 10 × 4\n   name               profession                         birth_year death_year\n   &lt;chr&gt;              &lt;chr&gt;                                   &lt;dbl&gt;      &lt;dbl&gt;\n 1 Ada Lovelace       Mathematician                              NA         NA\n 2 Marie Curie        Physicist and Chemist                      NA         NA\n 3 Janaki Ammal       Botanist                                 1897       1984\n 4 Chien-Shiung Wu    Physicist                                1912       1997\n 5 Katherine Johnson  Mathematician                            1918       2020\n 6 Rosalind Franklin  Chemist                                  1920       1958\n 7 Vera Rubin         Astronomer                               1928       2016\n 8 Gladys West        Mathematician                            1930         NA\n 9 Flossie Wong-Staal Virologist and Molecular Biologist       1947       2020\n10 Jennifer Doudna    Biochemist                               1964         NA"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#right_join",
+    "href": "slides/2024-09-18-pivotjoin.html#right_join",
+    "title": "Pivoting and Joining",
+    "section": "right_join()",
+    "text": "right_join()\n\n\n\n\n\n\n\nimage credit: https://www.garrickadenbuie.com/project/tidyexplain/\n\n\n\n\n\n\nright_join(x, y, by = \"id\")\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     4 &lt;NA&gt;    y4"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#right_join-1",
+    "href": "slides/2024-09-18-pivotjoin.html#right_join-1",
+    "title": "Pivoting and Joining",
+    "section": "right_join()",
+    "text": "right_join()\n\nprofessions |&gt; \n  right_join(dates, by = \"name\") \n\n# A tibble: 8 × 4\n  name               profession                         birth_year death_year\n  &lt;chr&gt;              &lt;chr&gt;                                   &lt;dbl&gt;      &lt;dbl&gt;\n1 Janaki Ammal       Botanist                                 1897       1984\n2 Chien-Shiung Wu    Physicist                                1912       1997\n3 Katherine Johnson  Mathematician                            1918       2020\n4 Rosalind Franklin  Chemist                                  1920       1958\n5 Vera Rubin         Astronomer                               1928       2016\n6 Gladys West        Mathematician                            1930         NA\n7 Flossie Wong-Staal Virologist and Molecular Biologist       1947       2020\n8 Jennifer Doudna    Biochemist                               1964         NA"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#full_join",
+    "href": "slides/2024-09-18-pivotjoin.html#full_join",
+    "title": "Pivoting and Joining",
+    "section": "full_join()",
+    "text": "full_join()\n\n\n\n\n\n\n\nimage credit: https://www.garrickadenbuie.com/project/tidyexplain/\n\n\n\n\n\n\nfull_join(x, y, by = \"id\")\n\n# A tibble: 4 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n4     4 &lt;NA&gt;    y4"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#full_join-1",
+    "href": "slides/2024-09-18-pivotjoin.html#full_join-1",
+    "title": "Pivoting and Joining",
+    "section": "full_join()",
+    "text": "full_join()\n\ndates |&gt; \n  full_join(works, by = \"name\") \n\n# A tibble: 10 × 4\n   name               birth_year death_year known_for                           \n   &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                               \n 1 Janaki Ammal             1897       1984 hybrid species, biodiversity protec…\n 2 Chien-Shiung Wu          1912       1997 confim and refine theory of radioac…\n 3 Katherine Johnson        1918       2020 calculations of orbital mechanics c…\n 4 Rosalind Franklin        1920       1958 &lt;NA&gt;                                \n 5 Vera Rubin               1928       2016 existence of dark matter            \n 6 Gladys West              1930         NA mathematical modeling of the shape …\n 7 Flossie Wong-Staal       1947       2020 first scientist to clone HIV and cr…\n 8 Jennifer Doudna          1964         NA one of the primary developers of CR…\n 9 Ada Lovelace               NA         NA first computer algorithm            \n10 Marie Curie                NA         NA theory of radioactivity,  discovery…"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#inner_join",
+    "href": "slides/2024-09-18-pivotjoin.html#inner_join",
+    "title": "Pivoting and Joining",
+    "section": "inner_join()",
+    "text": "inner_join()\n\n\n\n\n\n\n\nimage credit: https://www.garrickadenbuie.com/project/tidyexplain/\n\n\n\n\n\n\ninner_join(x, y, by = \"id\")\n\n# A tibble: 2 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#inner_join-1",
+    "href": "slides/2024-09-18-pivotjoin.html#inner_join-1",
+    "title": "Pivoting and Joining",
+    "section": "inner_join()",
+    "text": "inner_join()\n\ndates |&gt; \n  inner_join(works, by = \"name\") \n\n# A tibble: 7 × 4\n  name               birth_year death_year known_for                            \n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                                \n1 Janaki Ammal             1897       1984 hybrid species, biodiversity protect…\n2 Chien-Shiung Wu          1912       1997 confim and refine theory of radioact…\n3 Katherine Johnson        1918       2020 calculations of orbital mechanics cr…\n4 Vera Rubin               1928       2016 existence of dark matter             \n5 Gladys West              1930         NA mathematical modeling of the shape o…\n6 Flossie Wong-Staal       1947       2020 first scientist to clone HIV and cre…\n7 Jennifer Doudna          1964         NA one of the primary developers of CRI…"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#semi_join",
+    "href": "slides/2024-09-18-pivotjoin.html#semi_join",
+    "title": "Pivoting and Joining",
+    "section": "semi_join()",
+    "text": "semi_join()\n\n\n\n\n\n\n\nimage credit: https://www.garrickadenbuie.com/project/tidyexplain/\n\n\n\n\n\n\nsemi_join(x, y, by = \"id\")\n\n# A tibble: 2 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     1 x1     \n2     2 x2"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#semi_join-1",
+    "href": "slides/2024-09-18-pivotjoin.html#semi_join-1",
+    "title": "Pivoting and Joining",
+    "section": "semi_join()",
+    "text": "semi_join()\n\ndates |&gt; \n  semi_join(works, by = \"name\") \n\n# A tibble: 7 × 3\n  name               birth_year death_year\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;\n1 Janaki Ammal             1897       1984\n2 Chien-Shiung Wu          1912       1997\n3 Katherine Johnson        1918       2020\n4 Vera Rubin               1928       2016\n5 Gladys West              1930         NA\n6 Flossie Wong-Staal       1947       2020\n7 Jennifer Doudna          1964         NA"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#anti_join",
+    "href": "slides/2024-09-18-pivotjoin.html#anti_join",
+    "title": "Pivoting and Joining",
+    "section": "anti_join()",
+    "text": "anti_join()\n\n\n\n\n\n\n\nimage credit: https://www.garrickadenbuie.com/project/tidyexplain/\n\n\n\n\n\n\nanti_join(x, y, by = \"id\")\n\n# A tibble: 1 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     3 x3"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#anti_join-1",
+    "href": "slides/2024-09-18-pivotjoin.html#anti_join-1",
+    "title": "Pivoting and Joining",
+    "section": "anti_join()",
+    "text": "anti_join()\n\ndates |&gt; \n  anti_join(works, by = \"name\") \n\n# A tibble: 1 × 3\n  name              birth_year death_year\n  &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt;\n1 Rosalind Franklin       1920       1958"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#putting-it-all-together",
+    "href": "slides/2024-09-18-pivotjoin.html#putting-it-all-together",
+    "title": "Pivoting and Joining",
+    "section": "Putting it all together",
+    "text": "Putting it all together\n\nprofessions |&gt; \n  left_join(dates, by = \"name\") |&gt; \n  left_join(works, by = \"name\")\n\n# A tibble: 10 × 5\n   name               profession                 birth_year death_year known_for\n   &lt;chr&gt;              &lt;chr&gt;                           &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    \n 1 Ada Lovelace       Mathematician                      NA         NA first co…\n 2 Marie Curie        Physicist and Chemist              NA         NA theory o…\n 3 Janaki Ammal       Botanist                         1897       1984 hybrid s…\n 4 Chien-Shiung Wu    Physicist                        1912       1997 confim a…\n 5 Katherine Johnson  Mathematician                    1918       2020 calculat…\n 6 Rosalind Franklin  Chemist                          1920       1958 &lt;NA&gt;     \n 7 Vera Rubin         Astronomer                       1928       2016 existenc…\n 8 Gladys West        Mathematician                    1930         NA mathemat…\n 9 Flossie Wong-Staal Virologist and Molecular …       1947       2020 first sc…\n10 Jennifer Doudna    Biochemist                       1964         NA one of t…"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#practice-litf-and-gdp-from-gapminder.",
+    "href": "slides/2024-09-18-pivotjoin.html#practice-litf-and-gdp-from-gapminder.",
+    "title": "Pivoting and Joining",
+    "section": "Practice litF and GDP from Gapminder.",
+    "text": "Practice litF and GDP from Gapminder."
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#left",
+    "href": "slides/2024-09-18-pivotjoin.html#left",
+    "title": "Pivoting and Joining",
+    "section": "left",
+    "text": "left\n\nlitGDPleft &lt;- left_join(litF, GDP, by=c(\"country\", \"year\"))\ndim(litGDPleft)\n\n[1] 571   4\n\nlitGDPleft\n\n# A tibble: 571 × 4\n   country     year  litRateF   gdp\n   &lt;chr&gt;       &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;\n 1 Afghanistan 1979      4.99   NA \n 2 Afghanistan 2011     13      NA \n 3 Albania     2001     98.3  1282.\n 4 Albania     2008     94.7  1804.\n 5 Albania     2011     95.7  1966.\n 6 Algeria     1987     35.8  1902.\n 7 Algeria     2002     60.1  1872.\n 8 Algeria     2006     63.9  2125.\n 9 Angola      2001     54.2   298.\n10 Angola      2011     58.6   630.\n# ℹ 561 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#right",
+    "href": "slides/2024-09-18-pivotjoin.html#right",
+    "title": "Pivoting and Joining",
+    "section": "right",
+    "text": "right\n\nlitGDPright &lt;- right_join(litF, GDP, by=c(\"country\", \"year\"))\ndim(litGDPright)\n\n[1] 7988    4\n\nlitGDPright\n\n# A tibble: 7,988 × 4\n   country             year  litRateF   gdp\n   &lt;chr&gt;               &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;\n 1 Albania             2001      98.3 1282.\n 2 Albania             2008      94.7 1804.\n 3 Albania             2011      95.7 1966.\n 4 Algeria             1987      35.8 1902.\n 5 Algeria             2002      60.1 1872.\n 6 Algeria             2006      63.9 2125.\n 7 Angola              2001      54.2  298.\n 8 Angola              2011      58.6  630.\n 9 Antigua and Barbuda 2001      99.4 9640.\n10 Antigua and Barbuda 2011      99.4 9978.\n# ℹ 7,978 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#inner",
+    "href": "slides/2024-09-18-pivotjoin.html#inner",
+    "title": "Pivoting and Joining",
+    "section": "inner",
+    "text": "inner\n\nlitGDPinner &lt;- inner_join(litF, GDP, by=c(\"country\", \"year\"))\ndim(litGDPinner)\n\n[1] 505   4\n\nlitGDPinner\n\n# A tibble: 505 × 4\n   country             year  litRateF   gdp\n   &lt;chr&gt;               &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;\n 1 Albania             2001      98.3 1282.\n 2 Albania             2008      94.7 1804.\n 3 Albania             2011      95.7 1966.\n 4 Algeria             1987      35.8 1902.\n 5 Algeria             2002      60.1 1872.\n 6 Algeria             2006      63.9 2125.\n 7 Angola              2001      54.2  298.\n 8 Angola              2011      58.6  630.\n 9 Antigua and Barbuda 2001      99.4 9640.\n10 Antigua and Barbuda 2011      99.4 9978.\n# ℹ 495 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#full",
+    "href": "slides/2024-09-18-pivotjoin.html#full",
+    "title": "Pivoting and Joining",
+    "section": "full",
+    "text": "full\n\nlitGDPfull &lt;- full_join(litF, GDP, by=c(\"country\", \"year\"))\ndim(litGDPfull)\n\n[1] 8054    4\n\nlitGDPfull\n\n# A tibble: 8,054 × 4\n   country     year  litRateF   gdp\n   &lt;chr&gt;       &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;\n 1 Afghanistan 1979      4.99   NA \n 2 Afghanistan 2011     13      NA \n 3 Albania     2001     98.3  1282.\n 4 Albania     2008     94.7  1804.\n 5 Albania     2011     95.7  1966.\n 6 Algeria     1987     35.8  1902.\n 7 Algeria     2002     60.1  1872.\n 8 Algeria     2006     63.9  2125.\n 9 Angola      2001     54.2   298.\n10 Angola      2011     58.6   630.\n# ℹ 8,044 more rows"
+  },
+  {
+    "objectID": "slides/2024-09-18-pivotjoin.html#join-to-merge-two-datasets",
+    "href": "slides/2024-09-18-pivotjoin.html#join-to-merge-two-datasets",
+    "title": "Pivoting and Joining",
+    "section": "join to merge two datasets",
+    "text": "join to merge two datasets\n\nIf you ever need to understand which join is the right join for you, try to find an image that will lay out what the function is doing. I found this one that is quite good and is taken from the Statistics Globe blog."
   }
 ]

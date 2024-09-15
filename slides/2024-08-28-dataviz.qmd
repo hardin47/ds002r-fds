@@ -1538,12 +1538,17 @@ ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
  
 
 
+# Examples in the wild
 
-Tufte (1997) <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
+* Advice
+* Tufte -- Cholera & Challenger
+* Fonts
+* NYT often does data viz quite well
+* W.E.B Du Bois
 
 
 
-# Preliminaries
+## Preliminaries
 
 1. Make the data stand out
 
@@ -1551,10 +1556,10 @@ Tufte (1997) <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "
 
 3. Add information
 
-Nolan & Perrrett, 2016
+(Nolan & Perrrett, 2016)
 
 
-# Preliminaries
+## Preliminaries
 
 Tufte lists two main motivational steps to working with graphics as part of an argument.
 
@@ -1562,9 +1567,12 @@ Tufte lists two main motivational steps to working with graphics as part of an a
 
 2. Making decisions based on evidence requires the appropriate display of that evidence."
 
+# Tufte
+
+Tufte (1997) <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
 
 
-# Cholera - a picture tells 1000 words
+## Cholera - a picture tells 1000 words
 
 ```{r fig.cap = "How many aspects of this graph can you point out which are relevant to figuring out that cholera infection was coming from a single pump?  Are there any distracting aspects?", out.width="65%", fig.align='center', echo=FALSE}
 knitr::include_graphics("../images/cholera1.jpg")
@@ -1572,38 +1580,37 @@ knitr::include_graphics("../images/cholera1.jpg")
 
 
 
-# Cholera - difficult to interpret
+## Cholera - difficult to interpret
 
 ```{r fig.cap = "Why would the outbreak already have begun to decline before the pump handle was removed?", out.width="80%", fig.align='center', echo=FALSE}
 knitr::include_graphics("../images/cholera2.jpg")
 ```
 
 
-# Challenger - Problematic
+## Challenger - Problematic
 
 ```{r fig.cap = "One of the graphics which was particularly unconvincing in trying to explain that O-rings fail in the cold.", out.width = "70%", fig.align='center', echo=FALSE}
 knitr::include_graphics("../images/challenger2.jpg")
 ```
 
 
-
-
-# Challenger - Better????
+## Challenger - Better????
 
 ```{r fig.cap = "A different graph of the Challenger information, now sorted by temperature", fig.align='center', echo=FALSE}
 knitr::include_graphics("../images/challenger1.jpg")
 ```
 
 
-# Challenger - Improved
+## Challenger - Improved
 
 ```{r fig.cap = "The graphic the engineers should have led with in trying to persuade the administrators not to launch.  It is evident that the number of O-ring failures is quite highly associated with the ambient temperature.  Note the *vital* information on the x-axis associated with the large number of launches at warm temperatures that had *zero* O-ring failures.", fig.align='center', echo=FALSE}
 knitr::include_graphics("../images/TuftestemperatureandOringrelationshi.jpg")
 ```
 
+Note that the "improved" Challenger graphic was made by **Tufte**, not by the engineers working on the problem at the time.
 
 
-# Fonts matter
+## Fonts matter
 
 ```{r, out.width = "500px", fig.alt = "image credit: Will Chase RStudio::conf 2020", echo=FALSE,fig.align = 'center'}
 knitr::include_graphics("../images/fontsmatter.png")
@@ -1611,7 +1618,7 @@ knitr::include_graphics("../images/fontsmatter.png")
 
 
 
-# Advice on plotting, specific
+## Advice on plotting, specific
 
 - Avoid having other graph elements interfere with data
 - Use visually prominent symbols
@@ -1622,7 +1629,7 @@ knitr::include_graphics("../images/fontsmatter.png")
 
 
 
-# Advice on plotting, general
+## Advice on plotting, general
 
 - Eliminate superfluous material
 - Facilitate comparisons
@@ -1633,7 +1640,7 @@ knitr::include_graphics("../images/fontsmatter.png")
 
 
 
-# Simplify
+## Simplify
 
 ```{r, out.width = "85%", fig.cap = "image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked", fig.alt = "A gif of a barplot which starts out cluttered with labels and slowly becomes simplified with the relevant information highlighted.", echo=FALSE}
 knitr::include_graphics("../images/data-ink-bar.gif")
@@ -1641,7 +1648,7 @@ knitr::include_graphics("../images/data-ink-bar.gif")
 
 
 
-# Simplified
+## Simplified
 
 :::: {.columns} 
 ::: {.column width="50%"}
@@ -1658,7 +1665,7 @@ knitr::include_graphics("../images/barplot-gif-after.png")
 ::::
 image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked
 
-# NYT 9/7/21
+## NYT 9/7/21
 
 ```{r, out.width = "90%", fig.cap = "One in 5,000, NYT, D. Leonhardt 9/7/21; image credit: https://www.nytimes.com/2021/09/07/briefing/risk-breakthrough-infections-delta.html", fig.alt = "A scatterplot showing that states with higher vaccination rates have lower COVID case rates.  A few states are highlighted in stronger font: NY, CA, MA have low COVID rates and high vaccination rates; SC GA, ID have high COVID rates and low vaccination rates; TX and USA are in the middle with medium vaccination and medium COVID rates.", echo=FALSE}
 knitr::include_graphics("../images/vacc-case.png")
@@ -1666,19 +1673,23 @@ knitr::include_graphics("../images/vacc-case.png")
 
 
 
+# W.E.B. Du Bois
 
-# Worth a Mention
+One of the great early data viz pioneers. Remarkable ability to convey information.
+
+
+## Worth a Mention
 
 :::: {.columns} 
 ::: {.column width="50%"}
-W.E.B. DuBois (1868-1963)
+W.E.B. Du Bois (1868-1963)
 
 * sociologist
 * data scientist
 :::
 
 ::: {.column width="50%"}
-```{r, out.width = "40%", fig.alt = "image of WEB Dubois", fig.cap = "image credit: wikipedia", echo=FALSE}
+```{r, out.width = "40%", fig.alt = "image of WEB Du Bois", fig.cap = "image credit: wikipedia", echo=FALSE}
 knitr::include_graphics("../images/WEB_DuBois_1918.jpg")
 ``` 
 :::
@@ -1688,19 +1699,19 @@ In 1900 Du Bois contributed approximately 60 data visualizations to an exhibit a
 
 
 
-# Beautiful & Informative Graphics
+## Beautiful & Informative Graphics
 
 https://drawingmatter.org/w-e-b-du-bois-visionary-infographics/
 
 :::: {.columns} 
 ::: {.column width="50%"}
-```{r, out.width = "90%", fig.alt = "figures from DuBois's 1900 exhibition", fig.cap = "", echo=FALSE}
+```{r, out.width = "90%", fig.alt = "figures from Du Bois's 1900 exhibition", fig.cap = "", echo=FALSE}
 knitr::include_graphics("../images/dubois-graphs1.png")
 ``` 
 :::
 
 ::: {.column width="50%"}
-```{r, out.width = "90%", fig.alt = "figures from DuBois's 1900 exhibition", echo=FALSE}
+```{r, out.width = "90%", fig.alt = "figures from Du Bois's 1900 exhibition", echo=FALSE}
 knitr::include_graphics("../images/dubois-graphs2.png")
 ``` 
 :::
