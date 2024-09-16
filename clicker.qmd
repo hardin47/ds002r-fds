@@ -598,11 +598,11 @@ GDP |>
                     values_to = Q3)
 ```
 
-[^34]: c. `gdpval`  (if possible, good idea to name variables something different from the name of the dataframe)
+[^34]: c. `gdpval`  (if possible, good idea to name variables something different from the name of the data frame)
 
 ---
 
-35. Response to stimulus (in ms) after only 3 hrs of sleep for 9 days. You want to make a plot with the subject's reaction time (y-axis) vs the number of days of sleep restriction (x-axis) using the following `ggplot()` code. Which dataframe should you use?[^35]
+35. Response to stimulus (in ms) after only 3 hrs of sleep for 9 days. You want to make a plot with the subject's reaction time (y-axis) vs the number of days of sleep restriction (x-axis) using the following `ggplot()` code. Which data frame should you use?[^35]
     a. use raw data
     b. use `pivot_wider()` on raw data
     c. use `pivot_longer()` on raw data

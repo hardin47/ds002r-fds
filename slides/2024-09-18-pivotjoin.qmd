@@ -39,8 +39,13 @@ knitr::include_graphics("../images/tidyr-pivoting.gif")
  
 ## From wide to long and long to wide
 
-* <mark>`pivot_longer()`</mark> makes the dataframe "longer" -- many columns into a few columns (more rows): `pivot_longer(data, cols,  names_to = , value_to = )`
-* <mark>`pivot_wider()`</mark> makes the dataframe "wider" -- a few columns into many columns (fewer rows): `pivot_wider(data, names_from = , values_from = )`
+* <mark>`pivot_longer()`</mark> makes the data frame "longer" -- many columns into a few columns (more rows):
+
+`pivot_longer(data,cols,names_to=,value_to=)`
+
+* <mark>`pivot_wider()`</mark> makes the data frame "wider" -- a few columns into many columns (fewer rows): 
+
+`pivot_wider(data,names_from=,values_from=)`
 
 
 ## From wide to long and long to wide
@@ -156,7 +161,7 @@ See the Posit cheatsheets on <a href = "https://rstudio.github.io/cheatsheets/ht
  
   
   
-## Joining two (or more) dataframes:
+## Joining two (or more) data frames:
   
 * <mark>`left_join`</mark> returns all rows from the left table, and any rows with matching keys from the right table.
 * <mark>`inner_join`</mark> returns only the rows in which the left table have matching keys in the right table (i.e., matching rows in both sets).
@@ -556,7 +561,7 @@ Note that the first argument is always the data object and the second object is 
 
 ### Input
 
-The **input** to a `map` function is always either a *vector* (like a column), a *list* (which can be non-rectangular), or a *dataframe* (like a rectangle).
+The **input** to a `map` function is always either a *vector* (like a column), a *list* (which can be non-rectangular), or a *data frame* (like a rectangle).
 
 A list is a way to hold things which might be very different in shape:
 

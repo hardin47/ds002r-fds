@@ -420,9 +420,13 @@ Jo Hardin
 <section id="from-wide-to-long-and-long-to-wide" class="slide level2">
 <h2>From wide to long and long to wide</h2>
 <ul>
-<li><mark><code>pivot_longer()</code></mark> makes the dataframe “longer” – many columns into a few columns (more rows): <code>pivot_longer(data, cols,  names_to = , value_to = )</code></li>
-<li><mark><code>pivot_wider()</code></mark> makes the dataframe “wider” – a few columns into many columns (fewer rows): <code>pivot_wider(data, names_from = , values_from = )</code></li>
+<li><mark><code>pivot_longer()</code></mark> makes the data frame “longer” – many columns into a few columns (more rows):</li>
 </ul>
+<p><code>pivot_longer(data,cols,names_to=,value_to=)</code></p>
+<ul>
+<li><mark><code>pivot_wider()</code></mark> makes the data frame “wider” – a few columns into many columns (fewer rows):</li>
+</ul>
+<p><code>pivot_wider(data,names_from=,values_from=)</code></p>
 </section>
 <section id="from-wide-to-long-and-long-to-wide-1" class="slide level2">
 <h2>From wide to long and long to wide</h2>
@@ -643,8 +647,8 @@ Jo Hardin
 
 <img data-src="../images/dplyr-joins.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p>See the Posit cheatsheets on <a href="https://rstudio.github.io/cheatsheets/html/data-transformation.html" target="_blank">wrangling &amp; joining</a> and <a href="https://rstudio.github.io/cheatsheets/html/tidyr.html" target="_blank">pivoting</a>.</p>
 </section>
-<section id="joining-two-or-more-dataframes" class="slide level2">
-<h2>Joining two (or more) dataframes:</h2>
+<section id="joining-two-or-more-data-frames" class="slide level2">
+<h2>Joining two (or more) data frames:</h2>
 <ul>
 <li><mark><code>left_join</code></mark> returns all rows from the left table, and any rows with matching keys from the right table.</li>
 <li><mark><code>inner_join</code></mark> returns only the rows in which the left table have matching keys in the right table (i.e., matching rows in both sets).</li>
@@ -1323,7 +1327,7 @@ Note that the first argument is always the data object and the second object is 
 
 ### Input
 
-The **input** to a `map` function is always either a *vector* (like a column), a *list* (which can be non-rectangular), or a *dataframe* (like a rectangle).
+The **input** to a `map` function is always either a *vector* (like a column), a *list* (which can be non-rectangular), or a *data frame* (like a rectangle).
 
 A list is a way to hold things which might be very different in shape:
 
@@ -1610,7 +1614,7 @@ day(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 15
+[1] 16
 ```
 
 
@@ -1623,7 +1627,7 @@ week(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 37
+[1] 38
 ```
 
 
@@ -1684,7 +1688,7 @@ minute(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 13
+[1] 20
 ```
 
 
@@ -1697,7 +1701,7 @@ hour(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 9
+[1] 10
 ```
 
 
@@ -1710,7 +1714,7 @@ yday(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 259
+[1] 260
 ```
 
 
@@ -1723,7 +1727,7 @@ mday(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 15
+[1] 16
 ```
 
 
@@ -1736,7 +1740,7 @@ wday(rightnow, label=FALSE)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 1
+[1] 2
 ```
 
 
@@ -1749,7 +1753,7 @@ wday(rightnow, label=TRUE)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] Sun
+[1] Mon
 Levels: Sun < Mon < Tue < Wed < Thu < Fri < Sat
 ```
 
