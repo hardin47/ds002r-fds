@@ -1667,11 +1667,24 @@ image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-nak
 
 ## NYT 9/7/21
 
+
+::: {.panel-tabset}
+
+## Data Viz
 ```{r, out.width = "90%", fig.cap = "One in 5,000, NYT, D. Leonhardt 9/7/21; image credit: https://www.nytimes.com/2021/09/07/briefing/risk-breakthrough-infections-delta.html", fig.alt = "A scatterplot showing that states with higher vaccination rates have lower COVID case rates.  A few states are highlighted in stronger font: NY, CA, MA have low COVID rates and high vaccination rates; SC GA, ID have high COVID rates and low vaccination rates; TX and USA are in the middle with medium vaccination and medium COVID rates.", echo=FALSE}
 knitr::include_graphics("../images/vacc-case.png")
 ``` 
 
+## What they did well
 
+* lighter grid lines
+* no extra information
+* good caption
+* regression line to give context to the trend
+* y axes labels horizontal, not vertical
+* a few states (and the US) are highlighted to draw the reader's eye
+
+:::
 
 # W.E.B. Du Bois
 
