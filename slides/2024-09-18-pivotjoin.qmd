@@ -27,6 +27,7 @@ library(knitr)
 # Agenda  9/18/24
 
 1. Pivoting
+2. (maybe Joining?)
 
 
 # `pivot`ing
@@ -147,7 +148,8 @@ babynames |>
   arrange(desc(maxcount))
 ```
 
- 
+
+# `_join`ing
 
 ## Relational data (multiple data frames)
 
