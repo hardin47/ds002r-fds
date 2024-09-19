@@ -82,9 +82,9 @@ knitr::include_graphics("../images/tidyverse.png")
 
 # Verbs
 
-Most data wrangling happens with a set of data verbs.  Verbs are **functions** that act on dataframes.  
+Most data wrangling happens with a set of data verbs.  Verbs are **functions** that act on data frames.  
 
-The first argument of each data verb is the dataframe.
+The first argument of each data verb is the data frame.
 
 ## Some Basic Verbs
 

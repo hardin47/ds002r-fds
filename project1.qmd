@@ -66,4 +66,4 @@ The assignment as written asks you to submit a public facing website. Generally,
 
 ### Timeline
 
-Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday Septemper 19**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!
+Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday September 18**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!
