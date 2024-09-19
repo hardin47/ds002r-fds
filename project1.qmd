@@ -48,7 +48,7 @@ website:
   navbar:
     right: 
       - text: "About Me"
-        href: about.qmd
+        href: about.html
       - text: "Data Viz"
         menu: 
          - text: "Mario Kart"
