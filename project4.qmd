@@ -1,7 +1,7 @@
 ---
 title: "Project 4"
 description: |
-  text analysis
+  web scraping
 format: html
 ---
 
