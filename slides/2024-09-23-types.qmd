@@ -1,0 +1,328 @@
+---
+title: Variable Types
+author: "Jo Hardin"
+subtitle: "September 23 + 25, 2024"
+format:
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(openintro)
+```
+
+
+# Variable Types
+
+Some new variable types: 
+
+* character strings
+* factor variables
+* dates
+
+A variable's type determines the values that the variable can take on and the operations that can be performed on it.  Specifying variable types ensures the data's integrity and increases performance. 
+
+
+# Agenda  9/23/24
+
+1. Character strings
+2. `str_*()` functions
+3. Factor variables
+
+
+# Character strings
+
+When working with character strings, we might want to detect, replace, or extract certain patterns. 
+
+Strings are objects of the **character** class (abbreviated as `<chr>` in tibbles). When you print out strings, they display with double quotes:
+
+```{r}
+some_string <- "banana"
+some_string
+```
+
+## Creating strings
+
+Creating strings by hand is useful for testing out regular expressions.
+
+To create a string, type any text in either double quotes `"` or single quotes `'`. Using double or single quotes doesn't matter unless your string itself has single or double quotes.
+
+```{r}
+string1 <- "This is a string"
+string2 <- 'If I want to include a "quote" inside a string, I use single quotes'
+
+string1
+string2
+```
+
+## `str_view()`
+
+We can view these strings "naturally" (without the opening and closing quotes) `with str_view()`:
+
+```{r}
+str_view(string1)
+str_view(string2)
+```
+
+## `str_c`
+
+Similar to `paste()` (gluing strings together), but works well in a tidy pipeline.
+
+```{r}
+df <- tibble(name = c("Flora", "David", "Terra", NA))
+df |> mutate(greeting = str_c("Hi ", name, "!"))
+```
+
+## `str_sub()`
+
+`str_sub(string, start, end)` will extract parts of a `string` where `start` and `end` are the positions where the substring starts ane ends.
+
+```{r}
+fruits <- c("Apple", "Banana", "Pear")
+str_sub(fruits, 1, 3)
+str_sub(fruits, -3, -1)
+```
+
+
+Won't fail if the string is too short.
+
+```{r}
+str_sub(fruits, 1, 5)
+```
+
+## `str_sub()` in a pipeline
+
+We can use the `str_*()` functions inside the `mutate()` function.
+
+```{r}
+#| echo: false
+titanic <- Titanic |> 
+  as.data.frame()
+```
+
+```{r}
+titanic |> 
+  mutate(class1 = str_sub(Class, 1, 1))
+```
+
+
+## `str_replace*()`
+
+`str_replace()` replaces the first match of a pattern. `str_replace_all()` replaces all the matches of a pattern.
+
+```{r}
+fruits
+str_replace(fruits, "a", "x")
+str_replace_all(fruits, "a", "x")
+```
+
+## `str_detect()` 
+
+`str_detect()` used in a `filter()` pipeline.
+
+::: {.panel-tabset}
+
+## original data
+
+```{r}
+starwars |> 
+  select(name, films) |> 
+  str() 
+```
+
+## filtered data
+
+```{r}
+starwars |> 
+  filter(str_detect(films, "Empire")) |> 
+  select(name, films) |> 
+  str()
+```
+:::
+
+## **stringr** functions
+
+The **stringr** package within tidyverse contains lots of functions to help process strings. Letting x be a string variable...
+
+```{r}
+#| echo: false
+
+tribble(
+  ~`str function`, ~arguments, ~returns,
+"`str_replace()`",	"`x`, `pattern`, `replacement`",	"a modified string",
+"`str_replace_all()`",	"`x`, `pattern`, `replacement`", "a modified string",
+"`str_to_lower()`",	"`x`", "a modified string",
+"`str_to_upper()`",	"`x`", "a modified string",
+"`str_sub()`",	"`x`, `start`, `end`", "a modified string",
+"`str_length()`",	"`x`", "a number",
+"`str_detect()`",	"`x`, `pattern`",	"TRUE/FALSE") |> 
+  kableExtra::kable()
+```
+
+Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheatsheet</a>. 
+
+# Factor variables
+
+Factor variables are a special type of character string.
+The computer actually stores them as *integers* (?!?!!?) (abbreviated as `<fct>` in tibbles). 
+
+* categorical variable
+* represented in discrete levels
+
+## Order matters
+
+SurveyUSA poll from 2012 on views of the DREAM Act.
+
+What is off about the data viz part of the report?
+
+::: {.panel-tabset}
+
+## Data
+```{r}
+glimpse(openintro::dream)
+```
+
+## Plot
+```{r}
+dream |> 
+  ggplot(aes(x = ideology, fill = stance)) + 
+  geom_bar()
+```
+:::
+
+## Change the order
+
+We can fix the order of the `ideology` variable.
+
+::: {.panel-tabset}
+
+## Code
+```{r}
+#| eval: false
+dream |> 
+  mutate(ideology = fct_relevel(ideology, 
+                                c("Liberal", "Moderate", "Conservative"))) |> 
+  ggplot(aes(x = ideology, fill = stance)) + 
+  geom_bar()
+```
+
+## Plot
+```{r}
+#| echo: false
+dream |> 
+  mutate(ideology = fct_relevel(ideology, 
+                                c("Liberal", "Moderate", "Conservative"))) |> 
+  ggplot(aes(x = ideology, fill = stance)) + 
+  geom_bar()
+```
+:::
+
+## Factor and character variables
+
+
+::: {.panel-tabset}
+
+## Data
+```{r}
+starbucks |> 
+  select(item, type, calories)
+```
+
+## Plot
+```{r}
+#| echo: false
+starbucks |> 
+  ggplot(aes(x = type, y = calories)) + 
+  geom_point() + 
+  labs(x = "type of food",
+       y = "",
+       title = "Calories for food items at Starbucks")
+```
+:::
+
+
+## Reorder according to another variable
+
+Lets say that we wanted to order the type of food item based on the average number of calories in that food.
+
+
+::: {.panel-tabset}
+
+## Code
+```{r}
+#| eval: false
+starbucks |> 
+  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |> 
+  ggplot(aes(x = type, y = calories)) + 
+  geom_point() + 
+  labs(x = "type of food",
+       y = "",
+       title = "Calories for food items at Starbucks")
+ 
+```
+
+## Plot
+```{r}
+#| echo: false
+starbucks |> 
+  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |> 
+  ggplot(aes(x = type, y = calories)) + 
+  geom_point() + 
+  labs(x = "type of food",
+       y = "",
+       title = "Calories for food items at Starbucks")
+ 
+```
+
+:::
+
+
+## **forcats** functions
+
+The **forcats** package within tidyverse contains lots of functions to help process factor variables Use the <a href = "https://rstudio.github.io/cheatsheets/html/factors.html" target = "_blank">**forcats** cheatsheet</a>. We'll focus on the most common functions. 
+
+* functions for changing the **order** of factor levels
+    - `fct_relevel()` = *manually* reorder levels
+    - `fct_reorder()` = reorder levels according to values of another *variable*
+    - `fct_infreq()` = order levels from highest to lowest frequency
+    - `fct_rev()` = reverse the current order
+
+* functions for changing the **labels** or values of factor levels
+    - `fct_recode()` = *manually* change levels
+    - `fct_lump()` = *group together*  least common levels
+
+
+
+# Agenda  9/25/24
+
+1. Factor variables
+2. Time and data objects
+
+<!--
+
+FOR REGEXP
+
+## **stringr** functions
+
+The following are core **stringr** functions that use regular expressions:
+
+* `str_view()` - View the first occurrence in a string that matches the regex
+* `str_count()` - Count the number of times a regex matches within a string
+* `str_detect()` - Determine if (TRUE/FALSE) the regex is found within string
+* `str_subset()` - Return subset of strings that match the regex
+* `str_extract()`, `str_extract_all()` - Return portion of each string that matches the regex. `str_extract()` extracts the first instance of the match. `str_extract_all()` extracts all matches.
+* `str_replace()`, `str_replace_all()` - Replace portion of string that matches the regex with something else. str_replace() replaces the first instance of the match. `str_replace_all()` replaces all instances of the match.
+* `str_remove()`, `str_remove_all()` - Removes the portion of the string that matches the pattern. Equivalent to `str_replace(x, "THE REGEX PATTERN", "")`
+-->
+
+

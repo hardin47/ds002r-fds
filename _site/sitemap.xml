@@ -154,7 +154,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/index.html</loc>
-    <lastmod>2024-09-20T22:41:41.053Z</lastmod>
+    <lastmod>2024-09-23T16:25:56.740Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/handout/ws1_sds261_j24.html</loc>
@@ -182,15 +182,15 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/project2.html</loc>
-    <lastmod>2024-09-20T22:25:41.081Z</lastmod>
+    <lastmod>2024-09-23T02:45:35.275Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/project3.html</loc>
-    <lastmod>2024-09-20T22:25:43.561Z</lastmod>
+    <lastmod>2024-09-21T21:29:26.361Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/project5.html</loc>
-    <lastmod>2024-08-21T23:48:18.201Z</lastmod>
+    <lastmod>2024-09-21T16:28:53.023Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/images/ma154-hwtest.html</loc>
@@ -235,5 +235,9 @@
   <url>
     <loc>https://ds002r-fds.netlify.app/slides/2024-09-18-pivotjoin.html</loc>
     <lastmod>2024-09-18T17:16:39.490Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2024-09-23-types.html</loc>
+    <lastmod>2024-09-23T16:22:51.345Z</lastmod>
   </url>
 </urlset>

@@ -1,8 +1,27 @@
 ---
 title: "Project 5"
 description: |
-  Shiny
+  Final
 format: html
 ---
 
 more soon.
+
+<!--
+
+update everything about your project.
+
+To get an A:
+  * do something new / expand extensively on one of the previous projects.
+     - add extensive regular expressions to the project on string data
+     - add a shiny or plotly example to the graphs from TidyTuesday
+     
+  * clean up the entire website
+     - no warnings or messages
+     - all plots with good labeling
+     - alt text on all plots
+     - good narrative describing 
+     - making sure that all work, data sources, etc. are documented appropriately
+     
+  * corresponding document (text, Word, Google doc, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects.
+

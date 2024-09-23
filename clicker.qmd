@@ -39,7 +39,7 @@ library(tidyverse)
 
 ---
 
-1. R / R Studio / Quarto[^1]
+(@) R / R Studio / Quarto[^1]
     (a) all good
     (b) started, progress is slow and steady
     (c) started, very stuck
@@ -50,7 +50,7 @@ library(tidyverse)
 
 ---
 
-2. Git / GitHub[^2]
+(@) Git / GitHub[^2]
     (a) all good
     (b) started, progress is slow and steady
     (c) started, very stuck
@@ -61,7 +61,7 @@ library(tidyverse)
 
 ---
 
-3. Which of the following includes talking to the remove version of GitHub?[^3]
+(@) Which of the following includes talking to the remove version of GitHub?[^3]
     (a) changing your name (updating the YAML)
     (b) committing the file(s)
     (c) pushing the file(s)
@@ -72,7 +72,7 @@ library(tidyverse)
 
 ---
 
-4. What is the error?[^4]  
+(@) What is the error?[^4]  
     (a) poor assignment operator
     (b) unmatched quotes
     (c) improper syntax for function argument
@@ -90,7 +90,7 @@ shup2 <-- "Hello to you!"
 
 ---
 
-5. What is the error?[^5]
+(@) What is the error?[^5]
     (a) poor assignment operator
     (b) unmatched quotes
     (c) improper syntax for function argument
@@ -107,7 +107,7 @@ shup2 <-- "Hello to you!"
 
 ---
 
-6. What is the error?[^6]
+(@) What is the error?[^6]
     (a) poor assignment operator
     (b) unmatched quotes
     (c) improper syntax for function argument
@@ -124,7 +124,7 @@ shup4 <-  "Hello to you!
 
 ---
 
-7. What is the error?[^7]
+(@) What is the error?[^7]
     (a) poor assignment operator
     (b) unmatched quotes
     (c) improper syntax for function argument
@@ -141,7 +141,7 @@ shup5 <-  date()
 
 ---
 
-8. What is the error?[^8]
+(@) What is the error?[^8]
     (a) poor assignment operator
     (b) unmatched quotes
     (c) improper syntax for function argument
@@ -158,7 +158,7 @@ shup6 <-  sqrt 10
 
 ---
 
-9. Do you keep a calendar / schedule / planner?[^9]
+(@) Do you keep a calendar / schedule / planner?[^9]
      (a) Yes
      (b) No
      
@@ -166,7 +166,7 @@ shup6 <-  sqrt 10
 
 ---
 
-10.  Do you keep a calendar / schedule / planner?  If you answered "Yes" ...[^10]
+(@) Do you keep a calendar / schedule / planner?  If you answered "Yes" ...[^10]
      (a)	Yes, on Google Calendar
      (b)	Yes, on Calendar for macOS
      (c)	Yes, on Outlook for Windows
@@ -178,7 +178,7 @@ shup6 <-  sqrt 10
 
 ---
 
-11. Where should I put things I've created for the HW (e.g., data, .ics file, etc.)[^11]
+(@) Where should I put things I've created for the HW (e.g., data, .ics file, etc.)[^11]
     (a) Upload into remote GitHub directory
     (b) In the local folder which also has the R project
     (c) In my Downloads
@@ -189,7 +189,7 @@ shup6 <-  sqrt 10
 
 ---
 
-12. The goal of making a figure is...[^12]
+(@) The goal of making a figure is...[^12]
      (a)  To draw attention to your work.
      (b) To facilitate comparisons.
      (c) To provide as much information as possible.
@@ -198,7 +198,7 @@ shup6 <-  sqrt 10
 
 ---
 
-13. A good reason to make a particular choice of a graph is:[^13]
+(@) A good reason to make a particular choice of a graph is:[^13]
      (a) Because the journal / field has particular expectations for how the data are presented.
      (b) Because some variables naturally fit better on some graphs (e.g., numbers on scatter plots).
      (c) Because that graphic displays the message you want as optimally as possible.
@@ -207,7 +207,7 @@ shup6 <-  sqrt 10
 
 ---
 
-14. Why are the points orange?[^14]
+(@) Why are the points orange?[^14]
      (a) R translates "navy" into orange.
      (b) color must be specified in `geom_point()`
      (c) color must be specified **outside** the `aes()` function
@@ -244,7 +244,7 @@ ggplot(data = Births78,
 
 ---
 
-15. Why are the dots blue and the lines colored?[^15]
+(@) Why are the dots blue and the lines colored?[^15]
      (a) dot color is given as "navy", line color is given as `wday`.
      (b) both colors are specified in the `ggplot()` function.
      (c) dot coloring takes precedence over line coloring.
@@ -266,7 +266,7 @@ ggplot(data = Births78,
 
 ---
 
-16. Setting vs. Mapping.  If I want information to be passed to all data points (not variable):[^16]
+(@) Setting vs. Mapping.  If I want information to be passed to all data points (not variable):[^16]
      (a) map the information inside the `aes()` function.
      (b) set the information outside the `aes()` function
      
@@ -274,7 +274,7 @@ ggplot(data = Births78,
 
 ---
 
-17. The Snow figure was most successful at:[^17]
+(@) The Snow figure was most successful at:[^17]
      (a) making the data stand out
      (b) facilitating comparison
      (c) putting the work in context
@@ -284,7 +284,7 @@ ggplot(data = Births78,
 
 ---
 
-18. The Challenger figure(s) was(were) least successful at:[^18]
+(@) The Challenger figure(s) was(were) least successful at:[^18]
     (a) making the data stand out
     (b) facilitating comparison
     (c) putting the work in context
@@ -294,7 +294,7 @@ ggplot(data = Births78,
 
 ---
 
-19. The biggest difference between Snow and the Challenger was:[^19]
+(@) The biggest difference between Snow and the Challenger was:[^19]
     (a)	The **amount** of information portrayed.
     (b)	One was better at displaying **cause**.
     (c)	One showed the relevant **comparison** better.
@@ -304,7 +304,7 @@ ggplot(data = Births78,
 
 ---
  
-20. Caffeine and Calories.  What was the biggest concern over the average value axes?[^20]
+(@) Caffeine and Calories.  What was the biggest concern over the average value axes?[^20]
      (a) It isn’t at the origin.
      (b) They should have used all the data possible to find averages.
      (c) There wasn’t a random sample.
@@ -314,10 +314,7 @@ ggplot(data = Births78,
 
 ---
 
-
----
-
-25. What is wrong with the following code?[^25]
+(@) What is wrong with the following code?[^25]
     (a) should only  be one =
     (b) Sydney should be lower case
     (c) name should not be in quotes
@@ -335,7 +332,7 @@ Result <- |> filter(babynames,
 
 ---
 
-26. Which data represents the ideal format for **ggplot2** and **dplyr**?[^26]
+(@) Which data represents the ideal format for **ggplot2** and **dplyr**?[^26]
 
 ```{r}
 #| echo: false
@@ -376,7 +373,7 @@ tribble_c |> gt::gt(caption = "table c")
 
 ---
 
-27. Each of the statements except one will accomplish the same calculation.  Which one does not match?[^27]
+(@) Each of the statements except one will accomplish the same calculation.  Which one does not match?[^27]
 
 ```{r}
 #| eval: false
@@ -408,7 +405,7 @@ summarize(group_by(babynames, year, sex),
 
 ---
 
-28. Fill in Q1.[^28]
+(@) Fill in Q1.[^28]
     (a) `filter()`
     (b) `arrange()`
     (c) `select()`
@@ -430,7 +427,7 @@ result <- babynames |>
 
 ---
 
-29. Fill in Q2.[^29]
+(@) Fill in Q2.[^29]
     (a) `(year, sex)`
     (b) `(year, name)`
     (c) `(year, num)`
@@ -452,7 +449,7 @@ result <- babynames |>
 
 ---
 
-30. Fill in Q3.[^30]
+(@) Fill in Q3.[^30]
     (a) `n_distinct(name)`
     (b) `n_distinct(n)`
     (c) `sum(name)`
@@ -474,7 +471,7 @@ result <- babynames |>
 
 ---
 
-31. Running the code.[^31]
+(@) Running the code.[^31]
 
 ```{r}
 #| echo: true
@@ -529,7 +526,7 @@ babynames |>
 
 ---
 
-32. Fill in Q1.[^32]
+(@) Fill in Q1.[^32]
      (a) `gdp`
      (b) `year`
      (c) `gdpval`
@@ -558,7 +555,7 @@ GDP |>
 
 ---
 
-33. Fill in Q2.[^33]
+(@) Fill in Q2.[^33]
      (a) `gdp`
      (b) `year`
      (c) `gdpval`
@@ -580,7 +577,7 @@ GDP |>
 
 ---
 
-34. Fill in Q3.[^34]
+(@) Fill in Q3.[^34]
      (a) `gdp`
      (b) `year`
      (c) `gdpval`
@@ -602,7 +599,7 @@ GDP |>
 
 ---
 
-35. Response to stimulus (in ms) after only 3 hrs of sleep for 9 days. You want to make a plot with the subject's reaction time (y-axis) vs the number of days of sleep restriction (x-axis) using the following `ggplot()` code. Which data frame should you use?[^35]
+(@) Response to stimulus (in ms) after only 3 hrs of sleep for 9 days. You want to make a plot with the subject's reaction time (y-axis) vs the number of days of sleep restriction (x-axis) using the following `ggplot()` code. Which data frame should you use?[^35]
     a. use raw data
     b. use `pivot_wider()` on raw data
     c. use `pivot_longer()` on raw data
@@ -637,7 +634,7 @@ sleep_long
 
 ---
 
-36. Consider band members from the Beatles and the Rolling Stones.  Who is removed in a `right_join()`?[^36]
+(@) Consider band members from the Beatles and the Rolling Stones.  Who is removed in a `right_join()`?[^36]
    a. Mick
    b. John
    c. Paul
@@ -671,7 +668,7 @@ band_instruments
 
 ---
 
-37. Consider band members from the Beatles and the Rolling Stones.  Which variables are removed in a `right_join()`?[^37]
+(@) Consider band members from the Beatles and the Rolling Stones.  Which variables are removed in a `right_join()`?[^37]
    a. `name`
    b. `band`
    c. `plays`
@@ -704,7 +701,7 @@ band_instruments
 
 ---
 
-38. What happens to Mick's `plays` variable in a `full_join()`?[^38]
+(@) What happens to Mick's `plays` variable in a `full_join()`?[^38]
    a. Mick is removed
    b. changes to guitar
    c. changes to bass
@@ -745,7 +742,7 @@ band_instruments
 ---
 
 
-101. What is a **SQL** server?.[^101]
+(@) What is a **SQL** server?.[^101]
    (a) A relational database management system.
    (b) A software whose main purpose is to store and retrieve data.
    (c) A highly secure server and does not allow any database file manipulation during execution.
@@ -756,7 +753,7 @@ band_instruments
 
 ---
 
-102. When was **SQL** created?[^102]
+(@) When was **SQL** created?[^102]
    (a) 1960s
    (b) 1970s
    (c) 1980s
@@ -767,7 +764,7 @@ band_instruments
    
 ---
 
-103. What type of databases is **SQL** designed for?[^103]
+(@) What type of databases is **SQL** designed for?[^103]
    (a) hierarchical database management systems.
    (b) network database management systems.
    (c) object-oriented database management systems.
@@ -777,7 +774,7 @@ band_instruments
 
 ---
 
-104. Which is bigger:[^104]
+(@) Which is bigger:[^104]
    (a) computer's hard drive / storage
    (b) computer's memory / RAM
 
@@ -785,7 +782,7 @@ band_instruments
 
 ---
 
-105. Where are each stored?[^105]
+(@) Where are each stored?[^105]
    (a) **SQL** `tbl` and **R**  `tibble` both in storage
    (b) **SQL** `tbl` and **R**  `tibble` both in memory
    (c) **SQL** `tbl` in storage and **R**  `tibble` in memory
@@ -795,7 +792,7 @@ band_instruments
 
 ---
 
-106. Which **SQL** clause is used to extract data from a database?[^106]
+(@) Which **SQL** clause is used to extract data from a database?[^106]
    (a) OPEN
    (b) EXTRACT
    (c) SELECT
@@ -805,7 +802,7 @@ band_instruments
 
 ---
 
-107. With SQL, how to you retrieve a column named "FirstName" from a table named "Persons"?[^107]
+(@) With SQL, how to you retrieve a column named "FirstName" from a table named "Persons"?[^107]
    (a) `SELECT` Persons.FirstName
    (b) EXTRACT FIRSTNAME `FROM` Persons
    (c) `SELECT` FirstName `FROM` Persons
@@ -815,7 +812,7 @@ band_instruments
 
 ---
 
-108. With SQL, how do you select all the columns from a table named "Persons"?[^108]
+(@) With SQL, how do you select all the columns from a table named "Persons"?[^108]
    (a) `SELECT` Persons
    (b) `SELECT` * `FROM` Persons
    (c) `SELECT` [all] `FROM` Persons
@@ -825,7 +822,7 @@ band_instruments
 
 ---
 
-109. With **SQL**, how can you return the number of records in the "Persons" table?[^109]
+(@) With **SQL**, how can you return the number of records in the "Persons" table?[^109]
    (a) `SELECT` `COLUMNS(*)` `FROM` Persons
    (b) `SELECT` `COUNT(*)` `FROM` Persons
    (c) `SELECT` `NO(*)` `FROM` Persons
@@ -835,7 +832,7 @@ band_instruments
 
 ---
 
-110. With **SQL**, how do you select all the records from a table named "Persons" where the value of the column "FirstName" is "Peter"?[^110]
+(@) With **SQL**, how do you select all the records from a table named "Persons" where the value of the column "FirstName" is "Peter"?[^110]
    (a) `SELECT` * `FROM` Persons `WHERE` FirstName <> 'Peter'
    (b) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter'
    (c) `SELECT` * `FROM` Persons `WHERE` FirstName == 'Peter'
@@ -846,7 +843,7 @@ band_instruments
 
 ---
 
-111. With SQL, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?[^111]
+(@) With SQL, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?[^111]
    (a) `SELECT` FirstName = 'Peter', LastName = 'Jackson' `FROM` Persons
    (b) `SELECT` * `FROM` Persons `WHERE` FirstName <> 'Peter' AND LastName <> 'Jackson'
    (c) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
@@ -856,7 +853,7 @@ band_instruments
 
 ---
 
-112. Which operator selects values within a range?[^112]
+(@) Which operator selects values within a range?[^112]
     (a) `BEWTEEN`
     (b) `WITHIN`
     (c) `RANGE`
@@ -865,7 +862,7 @@ band_instruments
 
 ---
 
-113. With **SQL**, how do you select all the records from a table named "Persons" where the "LastName" is alphabetically between (and including) "Hansen" and "Pettersen"?[^113]
+(@) With **SQL**, how do you select all the records from a table named "Persons" where the "LastName" is alphabetically between (and including) "Hansen" and "Pettersen"?[^113]
     (a) `SELECT` LastName > 'Hansen' AND LastName < 'Pettersen' `FROM` Persons
     (b) `SELECT` * `FROM` Persons `WHERE` LastName BETWEEN 'Hansen' AND 'Pettersen'
     (c) `SELECT` * `FROM` Persons `WHERE` LastName > 'Hansen' AND LastName < 'Pettersen'
@@ -874,7 +871,7 @@ band_instruments
 
 ---
 
-114. Which **SQL** statement returns only different values?[^114]
+(@) Which **SQL** statement returns only different values?[^114]
     (a) `SELECT` `UNIQUE`
     (b) `SELECT` `DISTINCT`
     (c) `SELECT` `DIFFERENT`
@@ -883,7 +880,7 @@ band_instruments
 
 ---
 
-115. Which **SQL** keyword is used to sort the result-set?[^115]
+(@) Which **SQL** keyword is used to sort the result-set?[^115]
     (a) `ORDER BY`
     (b) `ORDER`
     (c) `SORT`
@@ -893,7 +890,7 @@ band_instruments
 
 ---
 
-116. With **SQL**, how can you return all the records from a table named "Persons" sorted descending by "FirstName"?[^116]
+(@) With **SQL**, how can you return all the records from a table named "Persons" sorted descending by "FirstName"?[^116]
     (a) `SELECT` * `FROM` Persons `ORDER` FirstName `DESC`
     (b) `SELECT` * `FROM` Persons `SORT` 'FirstName' `DESC`
     (c) `SELECT` * `FROM` Persons `ORDER BY` FirstName `DESC`
@@ -903,7 +900,7 @@ band_instruments
 
 ---
 
-117. The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true.[^117]
+(@) The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true.[^117]
     (a) TRUE
     (b) FALSE 
 
@@ -911,7 +908,7 @@ band_instruments
 
 ---
 
-118. In order to `SELECT` the records with foods that are either green or yellow fruit:[^118] 
+(@) In order to `SELECT` the records with foods that are either green or yellow fruit:[^118] 
     (a) ... `WHERE` type = 'fruit' AND color = 'yellow' OR color = 'green'  
     (b) ... `WHERE` (type = 'fruit' AND color = 'yellow') OR color = 'green'  
     (c) ... `WHERE` type = 'fruit' AND (color = 'yellow' OR color = 'green')  
@@ -922,7 +919,7 @@ band_instruments
 
 ---
 
-119. What is the purpose of a `JOIN`?[^119]  
+(@) What is the purpose of a `JOIN`?[^119]  
     (a) it filters the rows returned by the `SELECT` statement.
     (b) it specifies the columns to be retrieved.
     (c) it combines rows from two or more tables based on a related column.
@@ -932,7 +929,7 @@ band_instruments
 
 ---
 
-120. What is the purpose of the `UNION` operator in SQL?[^120]
+(@) What is the purpose of the `UNION` operator in SQL?[^120]
     (a) it combines the results of two or more `SELECT` statements. 
     (b) it performs a pattern match on a string.
     (c) it retrieves the maximum value in a column.
@@ -942,7 +939,7 @@ band_instruments
 
 ---
 
-121. What is the purpose of the `INNER JOIN` in SQL?[^121]
+(@) What is the purpose of the `INNER JOIN` in SQL?[^121]
     (a) it retrieves the maximum value in a column.
     (b) it combines rows from two or more tables based on a related column. 
     (c) it filters the rows returned by the `SELECT` statement.
@@ -952,7 +949,7 @@ band_instruments
 
 ---
 
-122. What is the purpose of the `LEFT JOIN` in SQL?[^122]
+(@) What is the purpose of the `LEFT JOIN` in SQL?[^122]
     (a) it combines rows from two or more tables based on a related column.
     (b) it retrieves the maximum value in a column.
     (c) it filters the rows returned by the `SELECT` statement. 
@@ -962,7 +959,7 @@ band_instruments
 
 ---
 
-123. `RIGHT JOIN` keeps all the rows in ...?[^123]  
+(@) `RIGHT JOIN` keeps all the rows in ...?[^123]  
     (a) the first table.
     (b) the second table.
     (c) both tables.
@@ -972,7 +969,7 @@ band_instruments
 
 ---
 
-124. Who is removed in a `RIGHT JOIN`?[^124]
+(@) Who is removed in a `RIGHT JOIN`?[^124]
     (a) Mick
     (b) John
     (c) Paul
@@ -998,7 +995,7 @@ ggarrange(fig1, fig2, ncol = 2)
 
 ---
 
-125. Which variable(s) are removed in a `RIGHT JOIN`?[^125]
+(@) Which variable(s) are removed in a `RIGHT JOIN`?[^125]
     (a) name
     (b) band
     (c) plays
@@ -1025,7 +1022,7 @@ ggarrange(fig1, fig2, ncol = 2)
 
 ---
 
-126. In **SQL**, what happens to Mick's "plays" variables in a `FULL JOIN`?[^126]
+(@) In **SQL**, what happens to Mick's "plays" variables in a `FULL JOIN`?[^126]
     (a) Mick is removed
     (b) guitar
     (c) bass
@@ -1062,7 +1059,7 @@ countries with "i" or "t" and ends in "land"; has "ee"; continents with "o"
 can use flights data for cities with particular names-->
 
 
-127. `grep("q[^u]", very.large.word.list)` would not match which of the following?[^127]
+(@) `grep("q[^u]", very.large.word.list)` would not match which of the following?[^127]
     (a) Iraqi
     (b) Iraqian
     (c) Iraq
@@ -1073,7 +1070,7 @@ can use flights data for cities with particular names-->
 
 ---
 
-128. Which of the following regex would match to both "grey" and "gray"?[^128]
+(@) Which of the following regex would match to both "grey" and "gray"?[^128]
     (a) "gr[ae]y"
     (b) "gr(a|e)y"
     (c) "gray | grey"
@@ -1085,7 +1082,7 @@ can use flights data for cities with particular names-->
 
 ---
 
-129. What will the result be for the following code?[^129]  
+(@) What will the result be for the following code?[^129]  
     (a) 10
     (b) 1
     (c) 0
@@ -1103,7 +1100,7 @@ str_extract("My dog is 10 years old", "\\d")
 ---
 
 
-130. What will the result be for the following code?[^130]  
+(@) What will the result be for the following code?[^130]  
     (a) 10
     (b) 1
     (c) 0
@@ -1120,7 +1117,7 @@ str_extract("My dog is 10 years old", "\\d+")
 
 ---
 
-131. What will the result be for the following code?[^131]
+(@) What will the result be for the following code?[^131]
     (a) .
     (b) Episode 2: The pie whisperer. (4 August 2015)
     (c) Episode
@@ -1136,7 +1133,7 @@ str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".")
 
 ---
 
-132. What will the result be for the following code?[^132]
+(@) What will the result be for the following code?[^132]
     (a) .
     (b) Episode 2: The pie whisperer. (4 August 2015)
     (c) Episode
@@ -1152,7 +1149,7 @@ str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".+")
 
 ---
 
-133. What will the result be for the following code?[^133]
+(@) What will the result be for the following code?[^133]
     (a) .
     (b) Episode 2: The pie whisperer. (4 August 2015)
     (c) Episode
@@ -1168,7 +1165,7 @@ str_extract("Episode 2: The pie whisperer. (4 August 2015)", "\\.")
 
 ---
 
-134. How can I pull out just the numerical information in \$47?[^134]
+(@) How can I pull out just the numerical information in \$47?[^134]
     (a) "(?<=\\$)\\d"
     (b) "(?<=\\$)\\d+"
     (c) "\\d(?=\\$)"
@@ -1185,7 +1182,7 @@ str_extract("$47", "(?<=\\$)\\d+")
 
 ---
 
-135. You want to know all the types of pies in the text strings.  They are written as, for example "apple pie".[^135]
+(@) You want to know all the types of pies in the text strings.  They are written as, for example "apple pie".[^135]
     (a) "\\w+(?!pie)"
     (b) "\\w+(?! pie)"
     (c) "\\w+(?=pie)"
@@ -1213,7 +1210,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-136. We say that lookarounds are "zero-lenghth assertions".  What does that mean?[^136]
+(@) We say that lookarounds are "zero-lenghth assertions".  What does that mean?[^136]
     (a) we return the string in the lookaround
     (b) we replace the string in the lookaround
     (c) we return the string at the lookaround
@@ -1225,7 +1222,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 <!--
 ---
 
-137. In **SQL**, which operator is used to search for a specified pattern in a column?[^137]
+(@) In **SQL**, which operator is used to search for a specified pattern in a column?[^137]
     (a) `LIKE`
     (b) `GET`
     (c) `FROM`
@@ -1234,7 +1231,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-137. With **SQL**, how do you select all the records from a table named "Persons" where the value of the column "FirstName" starts with an "a"?[^137]
+(@) With **SQL**, how do you select all the records from a table named "Persons" where the value of the column "FirstName" starts with an "a"?[^137]
     (a) `SELECT` * `FROM` Persons `WHERE` FirstName = 'a.*'
     (b) `SELECT` * `FROM` Persons `WHERE` FirstName = 'a*'
     (c) `SELECT` * `FROM` Persons `WHERE` FirstName `REGEXP` 'a.*'
@@ -1245,7 +1242,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-138. What is the main way to absolutely recognize a record within a database?[^138]
+(@) What is the main way to absolutely recognize a record within a database?[^138]
     (a) Foreign key
     (b) Primary key
     (c) Unique key
@@ -1256,7 +1253,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-139. What does a foreign key do?[^139]
+(@) What does a foreign key do?[^139]
     (a) Directly identifies another table
     (b) Directly identifies another column
     (c) Gives access to another entire database
@@ -1266,7 +1263,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-140. Which of these would likely be used as a foreign key between a table on student enrollment and student grades?[^140]
+(@) Which of these would likely be used as a foreign key between a table on student enrollment and student grades?[^140]
     (a) grades
     (b) tuition
     (c) student\_name
@@ -1276,7 +1273,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-141. For the student records (for two tables: enrollment and grades), which is the most likely combination?[^141]
+(@) For the student records (for two tables: enrollment and grades), which is the most likely combination?[^141]
     (a) name as primary key to both 
     (b) name as foreign to both
     (c) name as primary in enrollment and foreign in grades
@@ -1286,7 +1283,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-142. Which **SQL** statement is used to create a database table called 'Customers'?[^142]
+(@) Which **SQL** statement is used to create a database table called 'Customers'?[^142]
     (a) `CREATE DATABASE TAB` Customers
     (b) `CREATE DATABASE` Customers
     (c) `CREATE DATABASE TABLE` Customers
@@ -1297,7 +1294,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-143. Which **SQL** statement revises data in a database?[^143]
+(@) Which **SQL** statement revises data in a database?[^143]
     (a) `SAVE AS` 
     (b) `MODIFY`
     (c) `SAVE`
@@ -1307,7 +1304,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-144. Which **SQL** statement takes out data from a database?[^144]
+(@) Which **SQL** statement takes out data from a database?[^144]
     (a) `REMOVE`
     (b) `DELETE`
     (c) `COLLAPSE`
@@ -1316,7 +1313,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-145. The `NOT NULL` constraint enforces a column to not accept `NULL` values.[^145]
+(@) The `NOT NULL` constraint enforces a column to not accept `NULL` values.[^145]
     (a) FALSE
     (b) TRUE
 
@@ -1324,7 +1321,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-146. Which **SQL** statement places new data in a database?[^146]
+(@) Which **SQL** statement places new data in a database?[^146]
     (a) `ADD RECORD`
     (b) `INSERT INTO`
     (c) `ADD NEW`
@@ -1334,7 +1331,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-147. With **SQL**, how can you insert a new record into the "Persons" table?[^147]
+(@) With **SQL**, how can you insert a new record into the "Persons" table?[^147]
     (a) `INSERT` `INTO` Persons VALUES ('Jimmy', 'Jackson')
     (b) `INSERT` ('Jimmy', 'Jacskon') `INTO` Persons
     (c) `INSERT` VALUES ('Jimmy', 'Jackson') `INTO` Persons
@@ -1343,7 +1340,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-148. With **SQL**, how can you insert "Olsen" as the "LastName" in the "Persons" table?[^148]
+(@) With **SQL**, how can you insert "Olsen" as the "LastName" in the "Persons" table?[^148]
     (a) `INSERT` `INTO` Persons (LastName) VALUES ('Olsen')
     (b) `INSERT` `INTO` Persons ('Olsen) `INTO` LastName
     (c) `INSERT` ('Olsen') `INTO` Persons (LastName)
@@ -1352,7 +1349,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-149. How can you change "Hansen" into "Nilsen" in the "LastName" column in the Persons table?[^149]
+(@) How can you change "Hansen" into "Nilsen" in the "LastName" column in the Persons table?[^149]
     (a) `MODIFY` Persons `SET` LastName='Nilsen' `WHERE` LastName='Hansen'
     (b) `UPDATE` Persons `SET` LastName='Hansen' `INTO` LastName='Nilsen'
     (c) `MODIFY` Persons `SET` LastName='Hansen' `INTO` LastName='Nilsen'
@@ -1362,7 +1359,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-150. With **SQL**, how can you delete the records where the "FirstName" is "Peter" in the Persons Table?[^150]
+(@) With **SQL**, how can you delete the records where the "FirstName" is "Peter" in the Persons Table?[^150]
     (a) `DELETE` `FROM` Persons `WHERE` FirstName='Peter'
     (b) `DELETE` FirstName='Peter' `FROM` Persons
     (c) `DELETE ROW` FirstName='Peter' `FROM` Persons
@@ -1371,7 +1368,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-151. In the `flights` table, the following `INDEX`es exist: `Tailnum`, `Year`, and `Date`.  How many rows would be looked through if the `WHERE` filter was on `month` only?[^151]
+(@) In the `flights` table, the following `INDEX`es exist: `Tailnum`, `Year`, and `Date`.  How many rows would be looked through if the `WHERE` filter was on `month` only?[^151]
     (a) more than 6.3 million
     (b) less than 6.3 million
     (c) more than 700,000
@@ -1381,7 +1378,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-152. Which has a larger cardinality, `Tailnum` or `Year`?[^152]
+(@) Which has a larger cardinality, `Tailnum` or `Year`?[^152]
     (a) `Tailnum`
     (b) `Year`
     (c) they have the same cardinality
@@ -1392,7 +1389,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-153. Which index takes up more storage space, the one on `Tailnum` or the one on `Year`?[^153]
+(@) Which index takes up more storage space, the one on `Tailnum` or the one on `Year`?[^153]
     (a) `Tailnum`
     (b) `Year`
     (c) they take up the same space
@@ -1402,7 +1399,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-154. Which index is more effective at reducing querying time, the one on `Tailnum` or the one on `Year`?[^154]
+(@) Which index is more effective at reducing querying time, the one on `Tailnum` or the one on `Year`?[^154]
     (a) `Tailnum`
     (b) `Year`
     (c) the queries would be the same
@@ -1412,7 +1409,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-155. What does the **R** function `ifelse(a, b, c)` do?[^155]
+(@) What does the **R** function `ifelse(a, b, c)` do?[^155]
     (a) a = TRUE option, b = FALSE option, c = question
     (b) a = FALSE option, b = TRUE option, c = question
     (c) a = question, b = TRUE option, c = FALSE option
@@ -1422,7 +1419,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-156. What does the **R** function `case_when()` do?[^156]
+(@) What does the **R** function `case_when()` do?[^156]
     (a) renames a variable
     (b) changes the data type of a variable
     (c) partitions a numeric variable
@@ -1432,7 +1429,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
-157. What does the **R** function `cut()` do?[^157]
+(@) What does the **R** function `cut()` do?[^157]
     (a) renames a variable
     (b) changes the data type of a variable
     (c) partitions a numeric variable
