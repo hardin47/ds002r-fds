@@ -735,9 +735,47 @@ band_instruments
 ---
 
 
+(@) What is the output of the following R code?[^39]
+   a. TRUE
+   b. TRUE TRUE TRUE TRUE
+   c. TRUE FALSE FALSE FALSE
+   d. FALSE
 
+```{r}
+fruit <- c("apple", "banana", "pear", "pineapple")
+str_detect(fruit, "a")
+```
+  
 
+[^39]: b.  TRUE TRUE TRUE TRUE
 
+---
+
+(@) What is the output of the following R code?[^40]
+   a. "one -pple"     "two p-ars"     "three bananas"
+   b. "on- -ppl-"     "two p--rs"     "thr-- b-n-n-s"
+   c. "on- apple"     "two p-ars"     "thr-e bananas"
+
+```{r}
+fruits <- c("one apple", "two pears", "three bananas")
+str_replace(fruits, c("a", "e", "i"), "-")
+```
+[^40]: a. "one -pple"     "two p-ars"     "three bananas"  (because `str_replace()` is vectorized)
+
+---
+
+(@) What is the output of the following R code?[^41]
+   a. "abc"  "hifg"
+   b. "ab"  "hifg"
+   c. "ab"  "ifg"
+   d. "abc" "ifg"
+
+```{r}
+x <- c("abcde", "ghifgh")
+str_sub(x, start = c(1, 3), end = c(2, 5))
+```
+
+[^41]: c. "ab"  "ifg"
 
 ---
 
