@@ -742,6 +742,9 @@ band_instruments
    d. FALSE
 
 ```{r}
+#| eval: false
+#| echo: true
+
 fruit <- c("apple", "banana", "pear", "pineapple")
 str_detect(fruit, "a")
 ```
@@ -757,6 +760,8 @@ str_detect(fruit, "a")
    c. "on- apple"     "two p-ars"     "thr-e bananas"
 
 ```{r}
+#| eval: false
+#| echo: true
 fruits <- c("one apple", "two pears", "three bananas")
 str_replace(fruits, c("a", "e", "i"), "-")
 ```
@@ -771,6 +776,8 @@ str_replace(fruits, c("a", "e", "i"), "-")
    d. "abc" "ifg"
 
 ```{r}
+#| eval: false
+#| echo: true
 x <- c("abcde", "ghifgh")
 str_sub(x, start = c(1, 3), end = c(2, 5))
 ```
