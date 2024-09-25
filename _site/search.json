@@ -5884,14 +5884,14 @@
     "href": "slides/2024-09-23-types.html#basics-in-lubridate",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2024-09-24 23:11:32 PDT\"\n\nday(rightnow)\n\n[1] 24\n\nweek(rightnow)\n\n[1] 39\n\nmonth(rightnow, label=FALSE)\n\n[1] 9\n\nmonth(rightnow, label=TRUE)\n\n[1] Sep\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2024"
+    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2024-09-25 05:59:47 PDT\"\n\nday(rightnow)\n\n[1] 25\n\nweek(rightnow)\n\n[1] 39\n\nmonth(rightnow, label=FALSE)\n\n[1] 9\n\nmonth(rightnow, label=TRUE)\n\n[1] Sep\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2024"
   },
   {
     "objectID": "slides/2024-09-23-types.html#basics-in-lubridate-1",
     "href": "slides/2024-09-23-types.html#basics-in-lubridate-1",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 11\n\nhour(rightnow)\n\n[1] 23\n\nyday(rightnow)\n\n[1] 268\n\nmday(rightnow)\n\n[1] 24\n\nwday(rightnow, label=FALSE)\n\n[1] 3\n\nwday(rightnow, label=TRUE)\n\n[1] Tue\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
+    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 59\n\nhour(rightnow)\n\n[1] 5\n\nyday(rightnow)\n\n[1] 269\n\nmday(rightnow)\n\n[1] 25\n\nwday(rightnow, label=FALSE)\n\n[1] 4\n\nwday(rightnow, label=TRUE)\n\n[1] Wed\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
   },
   {
     "objectID": "slides/2024-09-23-types.html#but-how-do-i-create-a-date-object",
