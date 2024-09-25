@@ -87,7 +87,7 @@ df |> mutate(greeting = str_c("Hi ", name, "!"))
 
 ## `str_sub()`
 
-`str_sub(string, start, end)` will extract parts of a `string` where `start` and `end` are the positions where the substring starts ane ends.
+`str_sub(string, start, end)` will extract parts of a `string` where `start` and `end` are the positions where the substring starts and ends.
 
 ```{r}
 fruits <- c("Apple", "Banana", "Pear")
@@ -334,6 +334,49 @@ The **forcats** package within tidyverse contains lots of functions to help proc
 
 If the variable is formatted as a time or date object, you will find that there are very convenient ways to access, wrangle, and plot the information.
 
+There are three types of date/time data that refer to an instant in time:
+
+A **date**. Tibbles print this as `<date>`.
+
+A **time** within a day. Tibbles print this as `<time>`.
+
+A **date-time** is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as `<dttm>`. Base R calls these POSIXct, but that doesn’t exactly trip off the tongue.
+
+## Formatting time variablse
+
+```{r, out.width = "90%", fig.cap = "image credit: https://xkcd.com/1179/", fig.alt = "xkcd comic listing the many different ways that date objects can be written.", echo=FALSE}
+knitr::include_graphics("../images/xkcd_iso_8601.png")
+``` 
+
+## What time is it?
+
+```{r}
+today()
+
+now()
+```
+
+## Creating dates
+
+`ymd()` and friends create dates
+
+```{r}
+ymd("2024-09-25")
+mdy("September 25th, 2024")
+dmy("25-Sep-2024")
+```
+## ... with times
+
+To create a date-time, add an underscore and one or more of "h", "m", and "s" to the name of the parsing function:
+
+```{r}
+ymd_hms("2024-09-25 11:45:59", tz = "America/Los_Angeles")
+
+mdy_hm("09/25/2024 15:01")  # default is UTC = GMT
+```
+
+More <a href = "https://r4ds.hadley.nz/datetimes#time-zones" target = "_blank">information about time zones in R</a>.
+
 ## **lubridate**
   
 **lubridate** is a another R package meant for data wrangling!  
@@ -399,12 +442,13 @@ wday(rightnow, label=TRUE)
 
  
 
-## But how do I create a date object?
+## Working with a date object
 
 ```{r}
-jan31 <- ymd("2021-01-31")
+jan31 <- ymd("2024-01-31")
 jan31 + months(0:11)
 
+floor_date(jan31, "month")
 floor_date(jan31, "month") + months(0:11) + days(31)
 jan31 + months(0:11) + days(31)
 
@@ -422,6 +466,9 @@ names(flights)
  
 
 ## NYC flights 
+
+Creating a date object from variables.
+
 ```{r message=FALSE}
 flightsWK <- flights |>  
    mutate(ymdday = ymd(paste(year, month,day, sep="-"))) |> 
@@ -432,19 +479,6 @@ flightsWK |>  select(year, month, day, ymdday, weekdy, whichweek,
                      dep_time, arr_time, air_time) 
 ```
 
- 
-
-## `reprex`
-
-> Help me help you
-
-`repr`oducible `ex`ample ...
-
-Step 1.  Copy code onto the clipboard
-
-Step 2.  Type `reprex()` into the Console
-
-Step 3.  Look at the Viewer to the right.  Copy the Viewer output into GitHub, Piazza, Discord, an email, stackexchange, etc.
 
  
 

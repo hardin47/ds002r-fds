@@ -31,6 +31,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,
 )
 
 library(tidyverse)
+library(lubridate)
 
 # Make sure to put a space before and after every slide break "---"
 
@@ -786,6 +787,87 @@ str_sub(x, start = c(1, 3), end = c(2, 5))
 
 ---
 
+(@) What is January 31 + one month?[^42]
+    a. February 31
+    b. March 4
+    c. February 28 (assuming no leap year)
+    d. I don't want to answer the question
+    
+[^42]: I don't know what the answer is.  Ill-defined question.
+
+---
+
+(@)  What is the difference between what these two lines of code?[^43]
+    a. same thing
+    b. different months
+    c. different output formatting
+    d. different input
+    e. different calculation
+    
+```{r}
+#| eval: false
+#| echo: true
+library(lubridate)
+today <- ymd("2024-09-25")
+month(today)
+month(today, label = TRUE)
+```
+
+[^43]: c. different output formatting  (the first produces `9` the second produces `Sep`)
+
+---
+
+(@) What does this number mean?[^44]
+    a. Today is the 39th day of the month.
+    b. Today is the 39th day of the year.
+    c. Today is the 39th week of the month.
+    d. Today is the 39th week of the year.
+
+```{r}
+#| echo: true
+today <- ymd("2024-09-25")
+week(today)
+```
+
+[^44]: d. Today is the 39th week of the year.
+
+---
+
+(@) What is the difference in these two functions?[^45]
+   a. Day of month and day of year.
+   b. Day of month and day of week.
+   c. Day of week and day of year.
+   d. Day of weekend and day of month.
+
+```{r}
+#| echo: true
+mday(today)
+yday(today)
+```
+
+[^45]: a. Day of month and day of year. (Day of year is often called the "Julian Day".)
+
+---
+
+(@) What is the result of the code?[^46]
+    a. TRUE
+    b. FALSE
+    c. "2025-09-01"
+    d. "2025-09-25"
+    
+```{r}
+#| echo: true
+#| eval: false
+today > ymd("2025-09-01")
+```
+    
+[^46]: b. FALSE
+
+
+---
+
+
+---
 
 (@) What is a **SQL** server?.[^101]
    (a) A relational database management system.
