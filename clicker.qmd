@@ -623,7 +623,7 @@ sleep_wide
 
 ```{r}
 #| echo: true
-sleep_long <- sleep_wide %>%
+sleep_long <- sleep_wide |>
   pivot_longer(cols = -Subject,
                names_to = "day",
                names_prefix = "day_",
@@ -770,10 +770,10 @@ str_replace(fruits, c("a", "e", "i"), "-")
 ---
 
 (@) What is the output of the following R code?[^41]
-   a. "abc"  "hifg"
-   b. "ab"  "hifg"
-   c. "ab"  "ifg"
-   d. "abc" "ifg"
+    a. "abc"  "hifg"
+    b. "ab"  "hifg"
+    c. "ab"  "ifg"
+    d. "abc" "ifg"
 
 ```{r}
 #| eval: false
@@ -782,7 +782,7 @@ x <- c("abcde", "ghifgh")
 str_sub(x, start = c(1, 3), end = c(2, 5))
 ```
 
-[^41]: c. "ab"  "ifg"
+[^41]: c. "ab"  "ifg"  Again, `str_sub()` is vectorized.  So the subset of string one is from 1 to 2.  The subset of string two is from 3 to 5.
 
 ---
 

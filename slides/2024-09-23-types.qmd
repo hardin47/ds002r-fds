@@ -29,6 +29,8 @@ Some new variable types:
 * character strings
 * factor variables
 * dates
+* numeric
+* logical
 
 A variable's type determines the values that the variable can take on and the operations that can be performed on it.  Specifying variable types ensures the data's integrity and increases performance. 
 
@@ -126,7 +128,14 @@ str_replace(fruits, "a", "x")
 str_replace_all(fruits, "a", "x")
 ```
 
-## `str_detect()` 
+## `str_detect()`
+
+```{r}
+str_detect(fruits, "a")
+```
+
+
+## `str_detect()` in pipeline
 
 `str_detect()` used in a `filter()` pipeline.
 
@@ -171,6 +180,13 @@ tribble(
 
 Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheatsheet</a>. 
 
+
+# Agenda  9/25/24
+
+1. Factor variables
+2. Time and date objects
+
+
 # Factor variables
 
 Factor variables are a special type of character string.
@@ -189,7 +205,7 @@ What is off about the data viz part of the report?
 
 ## Data
 ```{r}
-glimpse(openintro::dream)
+openintro::dream
 ```
 
 ## Plot
@@ -198,6 +214,17 @@ dream |>
   ggplot(aes(x = ideology, fill = stance)) + 
   geom_bar()
 ```
+
+## Levels
+
+```{r}
+dream |> 
+  select(ideology) |> 
+  pull() |>  # levels() works only on vectors, not data frames
+  levels()
+```
+
+
 :::
 
 ## Change the order
@@ -303,10 +330,123 @@ The **forcats** package within tidyverse contains lots of functions to help proc
 
 
 
-# Agenda  9/25/24
+# Time and date objects
 
-1. Factor variables
-2. Time and data objects
+If the variable is formatted as a time or date object, you will find that there are very convenient ways to access, wrangle, and plot the information.
+
+## **lubridate**
+  
+**lubridate** is a another R package meant for data wrangling!  
+
+In particular, **lubridate** makes it very easy to work with days, times, and dates.  The base idea is to start with dates in a `ymd` (year month day) format and transform the information into whatever you want.  
+
+Example from the <a href = "https://lubridate.tidyverse.org/reference/lubridate-package.html" target = "_blank">lubridate vignette</a>.
+
+ 
+
+## If anyone drove a time machine, they would crash
+
+The length of months and years change so often that doing arithmetic with them can be unintuitive. 
+
+<mark>Consider a simple operation: January 31st + one month.</mark>
+
+
+## If anyone drove a time machine, they would crash
+
+The length of months and years change so often that doing arithmetic with them can be unintuitive. 
+
+<mark>Consider a simple operation: January 31st + one month.</mark>
+
+Should the answer be:
+  
+1. February 31st (which doesn't exist)?
+2. March 4th (31 days after January 31)?
+3. February 28th (assuming its not a leap year)?
+
+## If anyone drove a time machine, they would crash
+
+A basic property of arithmetic is that a + b - b = a. Only solution 1 obeys the mathematical property, but it is an invalid date. Wickham wants to make **lubridate** as consistent as possible by invoking the following rule: <mark>if adding or subtracting a month or a year creates an invalid date, **lubridate** will return an NA. </mark>
+
+If you thought solution 2 or 3 was more useful, no problem. You can still get those results with clever arithmetic, or by using the special `%m+%` and `%m-%` operators. `%m+%` and `%m-%` automatically roll dates back to the last day of the month, should that be necessary.
+ 
+
+## basics in `lubridate` 
+
+```{r message=FALSE}
+library(lubridate)
+rightnow <- now()
+rightnow
+
+day(rightnow)
+week(rightnow)
+month(rightnow, label=FALSE)
+month(rightnow, label=TRUE)
+year(rightnow)
+```
+
+ 
+## basics in `lubridate` 
+
+```{r}
+minute(rightnow)
+hour(rightnow)
+
+yday(rightnow)
+mday(rightnow)
+wday(rightnow, label=FALSE)
+wday(rightnow, label=TRUE)
+```
+
+ 
+
+## But how do I create a date object?
+
+```{r}
+jan31 <- ymd("2021-01-31")
+jan31 + months(0:11)
+
+floor_date(jan31, "month") + months(0:11) + days(31)
+jan31 + months(0:11) + days(31)
+
+jan31 %m+% months(0:11)
+```
+
+ 
+
+## NYC flights 
+```{r message=FALSE}
+library(nycflights13)
+names(flights)
+```
+
+ 
+
+## NYC flights 
+```{r message=FALSE}
+flightsWK <- flights |>  
+   mutate(ymdday = ymd(paste(year, month,day, sep="-"))) |> 
+   mutate(weekdy = wday(ymdday, label=TRUE), 
+          whichweek = week(ymdday)) 
+
+flightsWK |>  select(year, month, day, ymdday, weekdy, whichweek, 
+                     dep_time, arr_time, air_time) 
+```
+
+ 
+
+## `reprex`
+
+> Help me help you
+
+`repr`oducible `ex`ample ...
+
+Step 1.  Copy code onto the clipboard
+
+Step 2.  Type `reprex()` into the Console
+
+Step 3.  Look at the Viewer to the right.  Copy the Viewer output into GitHub, Piazza, Discord, an email, stackexchange, etc.
+
+ 
 
 <!--
 
