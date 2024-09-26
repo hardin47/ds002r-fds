@@ -1,7 +1,7 @@
 ---
 title: "Project 2"
 description: |
-  text analysis
+  Completing a full text analysis
 format: html
 ---
 
@@ -12,70 +12,76 @@ You will find a data set containing string data.  This could be newspaper articl
 Your analysis must contain the following elements:
 
 - at least 3 `str_*()` functions
-<!-- - at least 3 regular expressions -->
+- at least 3 regular expressions
 - at least 2 illustrative, well-labeled plots or tables
 - a description of what insights can be gained from your plots and tables
 - a reference / documentation of the data source.
 
 
+Logistics:
+
+- please include all the code used in the analysis.
+- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and labels for color or fill).
+- do not include superfluous error or warning messages.
+- include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
+
 
 ### Some potential places to find text data
 
-<!--
+I've gathered some potential datasets for you to work with.  All of the datasets below contain some or a lot of text.
 
-datasets with strings:
+* <a href = "https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-17/readme.md" target = "_blank"> Shakespeare Dialogue</a> 
+
+* <a href = "https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-20/readme.md" target = "_blank">Netflix titles</a>
+
+* <a href = "https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-28/readme.md" target = "_blank">synopses data frame</a> for Broadway Weekly Grosses
+
+* <a href = "https://github.com/EmilHvitfeldt/friends" target = "_blank">Friends dialogue</a>
+
+* <a href = "https://github.com/nicholasjhorton/FederalistPapers/" target = "_blank">Federalist Papers</a>
+   - Load the package into R using
+   
+```{r}
+#| eval: false
+install.packages("devtools")
+devtools::install_github("nicholasjhorton/FederalistPapers")
+```
 
 
-
-Shakespeare Dialogue: https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-17/readme.md
-
-Netflix titles: https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-20/readme.md
-
-synopses data frame for Broadway Weekly Grosses: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-28/readme.md
-
-Friends: friends <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends.csv')
-
-(friends R package, too)
-
-Federalist papers:  https://github.com/nicholasjhorton/FederalistPapers/
-
-Load the package into R using
-
-install.packages("remotes")
-remotes::install_github("nicholasjhorton/FederalistPapers")
-
-All of Emily Dickinson's poems:
-https://github.com/Amherst-Statistics/DickinsonPoems
-
+* All of <a href = "https://github.com/Amherst-Statistics/DickinsonPoems" target = "_blank">Emily Dickinson's poems</a>
+    - Load the package into R using
+    
+```{r}
+#| eval: false
 devtools::install_github("Amherst-Statistics/DickinsonPoems")
+```
 
-Every line of the office: https://www.kaggle.com/datasets/fabriziocominetti/the-office-lines
+* <a href = "https://www.kaggle.com/datasets/fabriziocominetti/the-office-lines" target = "_blank">Every line of the office</a>
 
-Obama tweets:
+* All of <a href = "https://www.obamalibrary.gov/digital-research-room/archived-white-house-websites-and-social-media" target = "_target">Barack Obama's tweets</a> archived by the National Archives.
 
-archived by the National Archives: https://www.obamalibrary.gov/digital-research-room/archived-white-house-websites-and-social-media
+* The "Dear Abby" stories underlying The Pudding’s <a href = "https://pudding.cool/2018/11/dearabby/" target = "_blank">30 Years of American Anxieties article</a>
+    - See data on the <a href = "https://github.com/the-pudding/data/tree/master/dearabby" target = "_blank">The Pudding's GitHub site</a>
+    - Load the data in using
+    
+```{r}
+#| eval: false
+read_csv("https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv")
+```
 
-Read in the “Dear Abby” data underlying The Pudding’s [30 Years of American Anxieties article](https://pudding.cool/2018/11/dearabby/).
+- <a href = "https://github.com/the-pudding/data" target = "_blank">Other articles from The Pudding</a>
 
-
-posts <- read_csv("https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv")
-
-
-- [Other articles from The Pudding](https://github.com/the-pudding/data)
 - NY Times headlines from the RTextTools package (see below)
-- further analysis with the `bigspotify` data from class
-- the options are endless -- be resourceful and creative!
 
 ```{r}
-#| message: false
 #| eval: false
 
-library(RTextTools)  # may have to install first
+library(RTextTools) 
 data(NYTimes)
 as_tibble(NYTimes)
 ```
 
--->
+- the options are endless -- be resourceful and creative!
 
 
 ### Timeline

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="text analysis">
+<meta name="description" content="Completing a full text analysis">
 
 <title>Foundations of Data Science in R - Project 2</title>
 <style>
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -171,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>text analysis</p>
+    <p>Completing a full text analysis</p>
   </div>
 </div>
 
@@ -193,71 +227,70 @@ ul.task-list li input[type="checkbox"] {
 <p>You will find a data set containing string data. This could be newspaper articles, tweets, songs, plays, movie reviews, or anything else you can imagine. Then you will answer questions of interest and tell a story about your data using string and regular expression skills you have developed.</p>
 <p>Your analysis must contain the following elements:</p>
 <ul>
-<li>at least 3 <code>str_*()</code> functions <!-- - at least 3 regular expressions --></li>
+<li>at least 3 <code>str_*()</code> functions</li>
+<li>at least 3 regular expressions</li>
 <li>at least 2 illustrative, well-labeled plots or tables</li>
 <li>a description of what insights can be gained from your plots and tables</li>
 <li>a reference / documentation of the data source.</li>
 </ul>
+<p>Logistics:</p>
+<ul>
+<li>please include all the code used in the analysis.</li>
+<li>make sure that all graphs are well-labeled (including x and y axes, title of the graph, and labels for color or fill).</li>
+<li>do not include superfluous error or warning messages.</li>
+<li>include a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.</li>
+</ul>
 </section>
 <section id="some-potential-places-to-find-text-data" class="level3">
 <h3 class="anchored" data-anchor-id="some-potential-places-to-find-text-data">Some potential places to find text data</h3>
-<!--
-
-datasets with strings:
-
-
-
-Shakespeare Dialogue: https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-17/readme.md
-
-Netflix titles: https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-20/readme.md
-
-synopses data frame for Broadway Weekly Grosses: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-28/readme.md
-
-Friends: friends <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends.csv')
-
-(friends R package, too)
-
-Federalist papers:  https://github.com/nicholasjhorton/FederalistPapers/
-
-Load the package into R using
-
-install.packages("remotes")
-remotes::install_github("nicholasjhorton/FederalistPapers")
-
-All of Emily Dickinson's poems:
-https://github.com/Amherst-Statistics/DickinsonPoems
-
-devtools::install_github("Amherst-Statistics/DickinsonPoems")
-
-Every line of the office: https://www.kaggle.com/datasets/fabriziocominetti/the-office-lines
-
-Obama tweets:
-
-archived by the National Archives: https://www.obamalibrary.gov/digital-research-room/archived-white-house-websites-and-social-media
-
-Read in the “Dear Abby” data underlying The Pudding’s [30 Years of American Anxieties article](https://pudding.cool/2018/11/dearabby/).
-
-
-posts <- read_csv("https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv")
-
-
-- [Other articles from The Pudding](https://github.com/the-pudding/data)
-- NY Times headlines from the RTextTools package (see below)
-- further analysis with the `bigspotify` data from class
-- the options are endless -- be resourceful and creative!
-
-
-::: {.cell}
-
-```{.r .cell-code}
-library(RTextTools)  # may have to install first
-data(NYTimes)
-as_tibble(NYTimes)
-```
-:::
-
-
--->
+<p>I’ve gathered some potential datasets for you to work with. All of the datasets below contain some or a lot of text.</p>
+<ul>
+<li><p><a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-17/readme.md" target="_blank"> Shakespeare Dialogue</a></p></li>
+<li><p><a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-20/readme.md" target="_blank">Netflix titles</a></p></li>
+<li><p><a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-28/readme.md" target="_blank">synopses data frame</a> for Broadway Weekly Grosses</p></li>
+<li><p><a href="https://github.com/EmilHvitfeldt/friends" target="_blank">Friends dialogue</a></p></li>
+<li><p><a href="https://github.com/nicholasjhorton/FederalistPapers/" target="_blank">Federalist Papers</a></p>
+<ul>
+<li>Load the package into R using</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"nicholasjhorton/FederalistPapers"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>All of <a href="https://github.com/Amherst-Statistics/DickinsonPoems" target="_blank">Emily Dickinson’s poems</a>
+<ul>
+<li>Load the package into R using</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"Amherst-Statistics/DickinsonPoems"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p><a href="https://www.kaggle.com/datasets/fabriziocominetti/the-office-lines" target="_blank">Every line of the office</a></p></li>
+<li><p>All of <a href="https://www.obamalibrary.gov/digital-research-room/archived-white-house-websites-and-social-media" target="_target">Barack Obama’s tweets</a> archived by the National Archives.</p></li>
+<li><p>The “Dear Abby” stories underlying The Pudding’s <a href="https://pudding.cool/2018/11/dearabby/" target="_blank">30 Years of American Anxieties article</a></p>
+<ul>
+<li>See data on the <a href="https://github.com/the-pudding/data/tree/master/dearabby" target="_blank">The Pudding’s GitHub site</a></li>
+<li>Load the data in using</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p><a href="https://github.com/the-pudding/data" target="_blank">Other articles from The Pudding</a></p></li>
+<li><p>NY Times headlines from the RTextTools package (see below)</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RTextTools) </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(NYTimes)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(NYTimes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>the options are endless – be resourceful and creative!</li>
+</ul>
 </section>
 <section id="timeline" class="level3">
 <h3 class="anchored" data-anchor-id="timeline">Timeline</h3>

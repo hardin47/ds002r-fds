@@ -190,10 +190,19 @@ Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" targ
 # Factor variables
 
 Factor variables are a special type of character string.
-The computer actually stores them as *integers* (?!?!!?) (abbreviated as `<fct>` in tibbles). 
+The computer actually stores them as *integers* (?!?!!?) with a label (abbreviated as `<fct>` in tibbles). 
 
 * categorical variable
-* represented in discrete levels
+* represented in discrete levels with an ordering
+
+
+## Where do we order?
+
+The ordering of the factor variable comes out in:
+
+* plots (e.g., barplots)
+* tables (e.g., `group_by()`)
+* modeling (e.g., the baseline level in a linear regression)
 
 ## Order matters
 
@@ -312,6 +321,25 @@ starbucks |>
 ```
 
 :::
+
+## Change character to factor
+
+::: {.panel-tabset}
+
+## OG data
+
+```{r}
+starbucks
+```
+
+## New factor 
+
+```{r}
+starbucks |> 
+  mutate(item = as.factor(item))
+```
+:::
+
 
 
 ## **forcats** functions

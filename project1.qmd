@@ -1,7 +1,7 @@
 ---
 title: "Mini-Project 1"
 description: |
-  Website
+  Creating your own website
 format: html
 ---
   
