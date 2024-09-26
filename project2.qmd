@@ -7,7 +7,7 @@ format: html
 
 ### Overview
 
-You will find a data set containing string data.  This could be newspaper articles, tweets, songs, plays, movie reviews, or anything else you can imagine.  Then you will answer questions of interest and tell a story about your data using string and regular expression skills you have developed.
+You will find a data set containing string data.  The data could be on newspaper articles, tweets, songs, plays, movie reviews, or anything else you can imagine.  Then you will answer questions of interest and tell a story about your data using string and regular expression skills you have developed.
 
 Your analysis must contain the following elements:
 
@@ -20,8 +20,8 @@ Your analysis must contain the following elements:
 
 Logistics:
 
-- please include all the code used in the analysis.
-- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and labels for color or fill).
+- please include all your code used in the analysis.
+- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
 - do not include superfluous error or warning messages.
 - include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
 

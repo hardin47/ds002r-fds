@@ -35,7 +35,7 @@ website:
            href: project.html
          - text: "project 1 - website"
            href: project1.html
-         - text: "project 2"
+         - text: "project 2 - text analysis"
            href: project2.html
          - text: "project 3"
            href: project3.html
