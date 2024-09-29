@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings   WS 8 - time\n HW 3 - due 9.24  Quiz 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nmap + functions\n\n HW 4 - due 10.8  Quiz 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n\n HW 5 - due 10.22  Quiz 10.23\n\n\n\nWeek 10  10.28.24\npermutation tests\n\n Project 3 - due 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n\n HW 6 - due 11.5  Quiz 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n Project 4 - due 11.13\n\n\n\nWeek 13  11.18.24\ntext analysis\n\n HW 7 - due 11.19  Quiz 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\n\n\n Project 5 - due 12.4  + presentations\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings\n HW 3 - due 9.24  Quiz 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - reg exp 1   WS 8 - reg exp 2\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nmap + functions\n\n HW 4 - due 10.8  Quiz 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n\n HW 5 - due 10.22  Quiz 10.23\n\n\n\nWeek 10  10.28.24\npermutation tests\n\n Project 3 - due 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n\n HW 6 - due 11.5  Quiz 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n Project 4 - due 11.13\n\n\n\nWeek 13  11.18.24\ntext analysis\n\n HW 7 - due 11.19  Quiz 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\n\n\n Project 5 - due 12.4  + presentations\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -5976,5 +5976,362 @@
     "title": "Variable Types",
     "section": "Change character to factor",
     "text": "Change character to factor\n\nOG dataNew factor\n\n\n\nstarbucks\n\n# A tibble: 77 × 7\n   item                          calories   fat  carb fiber protein type  \n   &lt;chr&gt;                            &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt; \n 1 \"8-Grain Roll\"                     350     8    67     5      10 bakery\n 2 \"Apple Bran Muffin\"                350     9    64     7       6 bakery\n 3 \"Apple Fritter\"                    420    20    59     0       5 bakery\n 4 \"Banana Nut Loaf\"                  490    19    75     4       7 bakery\n 5 \"Birthday Cake Mini Doughnut\"      130     6    17     0       0 bakery\n 6 \"Blueberry Oat Bar\"                370    14    47     5       6 bakery\n 7 \"Blueberry Scone\"                  460    22    61     2       7 bakery\n 8 \"Bountiful Blueberry Muffin\"       370    14    55     0       6 bakery\n 9 \"Butter Croissant \"                310    18    32     0       5 bakery\n10 \"Cheese Danish\"                    420    25    39     0       7 bakery\n# ℹ 67 more rows\n\n\n\n\n\nstarbucks |&gt; \n  mutate(item = as.factor(item))\n\n# A tibble: 77 × 7\n   item                          calories   fat  carb fiber protein type  \n   &lt;fct&gt;                            &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt; \n 1 \"8-Grain Roll\"                     350     8    67     5      10 bakery\n 2 \"Apple Bran Muffin\"                350     9    64     7       6 bakery\n 3 \"Apple Fritter\"                    420    20    59     0       5 bakery\n 4 \"Banana Nut Loaf\"                  490    19    75     4       7 bakery\n 5 \"Birthday Cake Mini Doughnut\"      130     6    17     0       0 bakery\n 6 \"Blueberry Oat Bar\"                370    14    47     5       6 bakery\n 7 \"Blueberry Scone\"                  460    22    61     2       7 bakery\n 8 \"Bountiful Blueberry Muffin\"       370    14    55     0       6 bakery\n 9 \"Butter Croissant \"                310    18    32     0       5 bakery\n10 \"Cheese Danish\"                    420    25    39     0       7 bakery\n# ℹ 67 more rows"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#regular-expressions",
+    "href": "slides/2024-10-01-regex.html#regular-expressions",
+    "title": "Regular Expressions",
+    "section": "Regular Expressions",
+    "text": "Regular Expressions\n\nA regular expression … is a sequence of characters that define a search pattern. Usually such patterns are used by string searching algorithms for “find” or “find and replace” operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#escape-sequences",
+    "href": "slides/2024-10-01-regex.html#escape-sequences",
+    "title": "Regular Expressions",
+    "section": "Escape sequences",
+    "text": "Escape sequences\nJust to scratch the surface, here are a few special characters that cannot be directly coded. Therefore, they are escaped with a backslash, \\.\n\n\\': single quote.\n\n\\\": double quote.\n\n\\n: newline.\n\n\\r: carriage return.\n\n\\t: tab character."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#quantifiers",
+    "href": "slides/2024-10-01-regex.html#quantifiers",
+    "title": "Regular Expressions",
+    "section": "Quantifiers",
+    "text": "Quantifiers\nQuantifiers specify how many repetitions of the pattern.\n\n*: matches at least 0 times.\n\n+: matches at least 1 times.\n\n?: matches at most 1 times.\n\n{n}: matches exactly n times.\n\n{n,}: matches at least n times.\n\n{n,m}: matches between n and m times."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#examples-of-quantifiers",
+    "href": "slides/2024-10-01-regex.html#examples-of-quantifiers",
+    "title": "Regular Expressions",
+    "section": "Examples of quantifiers",
+    "text": "Examples of quantifiers\n\nstrings &lt;- c(\"a\", \"ab\", \"acb\", \"accb\", \"acccb\", \"accccb\")\ngrep(\"ac*b\", strings, value = TRUE)\ngrep(\"ac*b\", strings, value = FALSE)\ngrep(\"ac+b\", strings, value = TRUE)\ngrep(\"ac?b\", strings, value = TRUE)\ngrep(\"ac{2}b\", strings, value = TRUE)\ngrep(\"ac{2,}b\", strings, value = TRUE)\ngrep(\"ac{2,3}b\", strings, value = TRUE)\n\ngrep() stands for “global regular expression print”. grep() returns a character vector containing the selected elements, grepl() returns a logical vector of TRUE/FALSE for whether or not there was a match."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#examples-of-quantifiers---solution",
+    "href": "slides/2024-10-01-regex.html#examples-of-quantifiers---solution",
+    "title": "Regular Expressions",
+    "section": "Examples of quantifiers - solution",
+    "text": "Examples of quantifiers - solution\n\nstrings &lt;- c(\"a\", \"ab\", \"acb\", \"accb\", \"acccb\", \"accccb\")\ngrep(\"ac*b\", strings, value = TRUE)\n\n[1] \"ab\"     \"acb\"    \"accb\"   \"acccb\"  \"accccb\"\n\ngrep(\"ac*b\", strings, value = FALSE)\n\n[1] 2 3 4 5 6\n\ngrep(\"ac+b\", strings, value = TRUE)\n\n[1] \"acb\"    \"accb\"   \"acccb\"  \"accccb\"\n\ngrep(\"ac?b\", strings, value = TRUE)\n\n[1] \"ab\"  \"acb\"\n\ngrep(\"ac{2}b\", strings, value = TRUE)\n\n[1] \"accb\"\n\ngrep(\"ac{2,}b\", strings, value = TRUE)\n\n[1] \"accb\"   \"acccb\"  \"accccb\"\n\ngrep(\"ac{2,3}b\", strings, value = TRUE)\n\n[1] \"accb\"  \"acccb\"\n\n\ngrep() stands for “global regular expression print”. grep() returns a character vector containing the selected elements, grepl() returns a logical vector of TRUE/FALSE for whether or not there was a match."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#position-of-pattern-within-the-string",
+    "href": "slides/2024-10-01-regex.html#position-of-pattern-within-the-string",
+    "title": "Regular Expressions",
+    "section": "Position of pattern within the string",
+    "text": "Position of pattern within the string\n\n^: matches the start of the string.\n\n$: matches the end of the string.\n\n\\b: matches the boundary of a word. Don’t confuse it with ^ $ which marks the edge of a string.\n\n\\B: matches the empty string provided it is not at an edge of a word."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#examples-of-positions",
+    "href": "slides/2024-10-01-regex.html#examples-of-positions",
+    "title": "Regular Expressions",
+    "section": "Examples of positions",
+    "text": "Examples of positions\n\nstrings &lt;- c(\"abcd\", \"cdab\", \"cabd\", \"c abd\")\ngrep(\"ab\", strings, value = TRUE)\ngrep(\"^ab\", strings, value = TRUE)\ngrep(\"ab$\", strings, value = TRUE)\ngrep(\"\\\\bab\", strings, value = TRUE)"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#examples-of-positions---solution",
+    "href": "slides/2024-10-01-regex.html#examples-of-positions---solution",
+    "title": "Regular Expressions",
+    "section": "Examples of positions - solution",
+    "text": "Examples of positions - solution\n\nstrings &lt;- c(\"abcd\", \"cdab\", \"cabd\", \"c abd\")\ngrep(\"ab\", strings, value = TRUE)\n\n[1] \"abcd\"  \"cdab\"  \"cabd\"  \"c abd\"\n\ngrep(\"^ab\", strings, value = TRUE)\n\n[1] \"abcd\"\n\ngrep(\"ab$\", strings, value = TRUE)\n\n[1] \"cdab\"\n\ngrep(\"\\\\bab\", strings, value = TRUE)\n\n[1] \"abcd\"  \"c abd\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#operators",
+    "href": "slides/2024-10-01-regex.html#operators",
+    "title": "Regular Expressions",
+    "section": "Operators",
+    "text": "Operators\n\n.: matches any single character,\n[...]: a character list, matches any one of the characters inside the square brackets. A - inside the brackets specifies a range of characters.\n\n[^...]: an inverted character list, similar to [...], but matches any characters except those inside the square brackets.\n\n\\: suppress the special meaning of metacharacters in regular expression, i.e. $ * + . ? [ ] ^ { } | ( ) \\. Since \\ itself needs to be escaped in R, we need to escape metacharacters with double backslash like \\\\$.\n\n|: an “or” operator, matches patterns on either side of the |.\n\n(...): grouping in regular expressions. This allows you to retrieve the bits that matched various parts of your regular expression so you can alter them or use them for building up a new string."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#examples-of-operators",
+    "href": "slides/2024-10-01-regex.html#examples-of-operators",
+    "title": "Regular Expressions",
+    "section": "Examples of operators",
+    "text": "Examples of operators\n\nstrings &lt;- c(\"^ab\", \"ab\", \"abc\", \"abd\", \"abe\", \"ab 12\", \"a|b\")\ngrep(\"ab.\", strings, value = TRUE)\ngrep(\"ab[c-e]\", strings, value = TRUE)\ngrep(\"ab[^c]\", strings, value = TRUE)\ngrep(\"^ab\", strings, value = TRUE)\ngrep(\"\\\\^ab\", strings, value = TRUE)\ngrep(\"abc|abd\", strings, value = TRUE)\ngrep(\"a[b|c]\", strings, value = TRUE)\nstr_extract(strings, \"a[b|c]\")"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#examples-of-operators---solution",
+    "href": "slides/2024-10-01-regex.html#examples-of-operators---solution",
+    "title": "Regular Expressions",
+    "section": "Examples of operators - solution",
+    "text": "Examples of operators - solution\n\nstrings &lt;- c(\"^ab\", \"ab\", \"abc\", \"abd\", \"abe\", \"ab 12\", \"a|b\")\ngrep(\"ab.\", strings, value = TRUE)\n\n[1] \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\ngrep(\"ab[c-e]\", strings, value = TRUE)\n\n[1] \"abc\" \"abd\" \"abe\"\n\ngrep(\"ab[^c]\", strings, value = TRUE)\n\n[1] \"abd\"   \"abe\"   \"ab 12\"\n\ngrep(\"^ab\", strings, value = TRUE)\n\n[1] \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\ngrep(\"\\\\^ab\", strings, value = TRUE)\n\n[1] \"^ab\"\n\ngrep(\"abc|abd\", strings, value = TRUE)\n\n[1] \"abc\" \"abd\"\n\ngrep(\"a[b|c]\", strings, value = TRUE)\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\" \"a|b\"  \n\nstr_extract(strings, \"a[b|c]\")\n\n[1] \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"a|\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#character-classes",
+    "href": "slides/2024-10-01-regex.html#character-classes",
+    "title": "Regular Expressions",
+    "section": "Character classes",
+    "text": "Character classes\nCharacter classes allow specifying entire classes of characters, such as numbers, letters, etc. There are two flavors of character classes, one uses [: and :] around a predefined name inside square brackets and the other uses \\ and a special character. They are sometimes interchangeable.\n\n(?i) before the string indicates that the match should be case insensitive.\n[:digit:] or \\d: digits, 0 1 2 3 4 5 6 7 8 9, equivalent to [0-9].\n\n\\D: non-digits, equivalent to [^0-9].\n\n[:lower:]: lower-case letters, equivalent to [a-z].\n\n[:upper:]: upper-case letters, equivalent to [A-Z].\n\n[:alpha:]: alphabetic characters, equivalent to [[:lower:][:upper:]] or [A-z].\n\n[:alnum:]: alphanumeric characters, equivalent to [[:alpha:][:digit:]] or [A-z0-9].\n\n\\w: word characters, equivalent to [[:alnum:]_] or [A-z0-9_] (letter, number, or underscore).\n\n\\W: not word, equivalent to [^A-z0-9_].\n\n[:blank:]: blank characters, i.e. space and tab.\n\n[:space:]: space characters: tab, newline, vertical tab, form feed, carriage return, space.\n\\s: space, .\n\n\\S: not space.\n\n[:punct:]: punctuation characters, ! ” # $ % & ’ ( ) * + , - . / : ; &lt; = &gt; ? @ [  ] ^ _ ` { | } ~.\n[:graph:]: graphical (human readable) characters: equivalent to [[:alnum:][:punct:]].\n[:print:]: printable characters, equivalent to [[:alnum:][:punct:]\\\\s]."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#case-insenstive",
+    "href": "slides/2024-10-01-regex.html#case-insenstive",
+    "title": "Regular Expressions",
+    "section": "Case insenstive",
+    "text": "Case insenstive\n\nMatch only the word meter in “The cemetery is 1 meter from the stop sign.” Also match Meter in “The cemetery is 1 Meter from the stop sign.”"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#case-insenstive-1",
+    "href": "slides/2024-10-01-regex.html#case-insenstive-1",
+    "title": "Regular Expressions",
+    "section": "Case insenstive",
+    "text": "Case insenstive\n\nMatch only the word meter in “The cemetery is 1 meter from the stop sign.” Also match Meter in “The cemetery is 1 Meter from the stop sign.”\n\n\nstring &lt;- c(\"The cemetery is 1 meter from the stop sign.\", \n            \"The cemetery is 1 Meter from the stop sign.\")\n\nstr_extract(string, \"(?i)\\\\bmeter\\\\b\")\n\n[1] \"meter\" \"Meter\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#proper-times-and-dates",
+    "href": "slides/2024-10-01-regex.html#proper-times-and-dates",
+    "title": "Regular Expressions",
+    "section": "Proper times and dates",
+    "text": "Proper times and dates\n\nMatch dates like 01/15/24 and also like 01.15.24 and like 01-15-24.\n\n\nstring &lt;- c(\"01/15/24\", \"01.15.24\", \"01-15-24\", \"011524\", \n            \"January 15, 2024\")"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#proper-times-and-dates-1",
+    "href": "slides/2024-10-01-regex.html#proper-times-and-dates-1",
+    "title": "Regular Expressions",
+    "section": "Proper times and dates",
+    "text": "Proper times and dates\n\nMatch dates like 01/15/24 and also like 01.15.24 and like 01-15-24.\n\n\nstring &lt;- c(\"01/15/24\", \"01.15.24\", \"01-15-24\", \"01 15 24\", \n            \"011524\", \"January 15, 2024\")\n\nstr_extract(string, \"\\\\d\\\\d.\\\\d\\\\d.\\\\d\\\\d\")\n\n[1] \"01/15/24\" \"01.15.24\" \"01-15-24\" \"01 15 24\" NA         NA        \n\nstr_extract(string, \"\\\\d\\\\d[/.\\\\-]\\\\d\\\\d[/.\\\\-]\\\\d\\\\d\")\n\n[1] \"01/15/24\" \"01.15.24\" \"01-15-24\" NA         NA         NA        \n\nstr_extract(string, \"\\\\d{2}[/.\\\\-]\\\\d{2}[/.\\\\-]\\\\d{2}\")\n\n[1] \"01/15/24\" \"01.15.24\" \"01-15-24\" NA         NA         NA"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#proper-times-and-dates-2",
+    "href": "slides/2024-10-01-regex.html#proper-times-and-dates-2",
+    "title": "Regular Expressions",
+    "section": "Proper times and dates",
+    "text": "Proper times and dates\n\nMatch a time of day such as “9:17 am” or “12:30 pm”. Require that the time be a valid time (not “99:99 pm”). Assume no leading zeros (i.e., “09:17 am”).\n\n\nstring &lt;- c(\"9:17 am\", \"12:30 pm\", \"99:99 pm\", \"09:17 am\")"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#proper-times-and-dates-3",
+    "href": "slides/2024-10-01-regex.html#proper-times-and-dates-3",
+    "title": "Regular Expressions",
+    "section": "Proper times and dates",
+    "text": "Proper times and dates\n\nMatch a time of day such as “9:17 am” or “12:30 pm”. Require that the time be a valid time (not “99:99 pm”). Assume no leading zeros (i.e., “09:17 am”).\n\n^(1[012]|[1-9]):[0-5][0-9] (am|pm)$\n\nstring &lt;- c(\"9:17 am\", \"12:30 pm\", \"99:99 pm\", \"09:17 am\")\n\nstr_extract(string, \"(1[012]|[1-9]):[0-5][0-9] (am|pm)\")\n\n[1] \"9:17 am\"  \"12:30 pm\" NA         \"9:17 am\" \n\nstr_extract(string, \"^(1[012]|[1-9]):[0-5][0-9] (am|pm)$\")\n\n[1] \"9:17 am\"  \"12:30 pm\" NA         NA"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#alternation-operator",
+    "href": "slides/2024-10-01-regex.html#alternation-operator",
+    "title": "Regular Expressions",
+    "section": "Alternation operator",
+    "text": "Alternation operator\nThe “or” operator, | has the lowest precedence and parentheses have the highest precedence, which means that parentheses get evaluated before “or”.\n\nWhat is the difference between \\bMary|Jane|Sue\\b and \\b(Mary|Jane|Sue)\\b?\n\n\nstring &lt;- c(\"Mary\", \"Mar\", \"Janet\", \"jane\", \"Susan\", \"Sue\")\n\nstr_extract(string, \"\\\\bMary|Jane|Sue\\\\b\")\nstr_extract(string, \"\\\\b(Mary|Jane|Sue)\\\\b\")"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#alternation-operator-1",
+    "href": "slides/2024-10-01-regex.html#alternation-operator-1",
+    "title": "Regular Expressions",
+    "section": "Alternation operator",
+    "text": "Alternation operator\nThe “or” operator, | has the lowest precedence and parentheses have the highest precedence, which means that parentheses get evaluated before “or”.\n\nWhat is the difference between \\bMary|Jane|Sue\\b and \\b(Mary|Jane|Sue)\\b?\n\n\nstring &lt;- c(\"Mary\", \"Mar\", \"Janet\", \"jane\", \"Susan\", \"Sue\")\n\nstr_extract(string, \"\\\\bMary|Jane|Sue\\\\b\")\n\n[1] \"Mary\" NA     \"Jane\" NA     NA     \"Sue\" \n\nstr_extract(string, \"\\\\b(Mary|Jane|Sue)\\\\b\")\n\n[1] \"Mary\" NA     NA     NA     NA     \"Sue\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#lookaround",
+    "href": "slides/2024-10-01-regex.html#lookaround",
+    "title": "Regular Expressions",
+    "section": "Lookaround",
+    "text": "Lookaround\nA lookaround specifies a place in the regular expression that will anchor the string you’d like to match.\n\n“x(?=y)” – positive lookahead (matches ‘x’ when it is followed by ‘y’)\n“x(?!y)” – negative lookahead (matches ‘x’ when it is not followed by ‘y’)\n“(?&lt;=y)x” – positive lookbehind (matches ‘x’ when it is preceded by ‘y’)\n“(?&lt;!y)x” – negative lookbehind (matches ‘x’ when it is not preceded by ‘y’)"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#lookaround-1",
+    "href": "slides/2024-10-01-regex.html#lookaround-1",
+    "title": "Regular Expressions",
+    "section": "Lookaround",
+    "text": "Lookaround\n\n\nFigure 1: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular-expression-lookahead-lookbehind-cheat-sheet/"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#example---taskmaster",
+    "href": "slides/2024-10-01-regex.html#example---taskmaster",
+    "title": "Regular Expressions",
+    "section": "Example - Taskmaster",
+    "text": "Example - Taskmaster\nData scraped from the wiki site for the TV series, Taskmaster.\n\n\nFigure 2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#scraping-and-wrangling-taskmaster",
+    "href": "slides/2024-10-01-regex.html#scraping-and-wrangling-taskmaster",
+    "title": "Regular Expressions",
+    "section": "Scraping and wrangling Taskmaster",
+    "text": "Scraping and wrangling Taskmaster\nGoal: to scrape the Taskmaster wiki into a dataframe including task, description, episode, episode name, air date, contestant, score, and series.1\n\nresults &lt;- read_html(\"https://taskmaster.fandom.com/wiki/Series_11\") |&gt;\n  html_element(\".tmtable\") |&gt; \n  html_table() |&gt;\n  mutate(episode = ifelse(startsWith(Task, \"Episode\"), Task, NA)) |&gt;\n  fill(episode, .direction = \"down\") |&gt;\n  filter(!startsWith(Task, \"Episode\"), \n         !(Task %in% c(\"Total\", \"Grand Total\"))) |&gt;\n  pivot_longer(cols = -c(Task, Description, episode),\n               names_to = \"contestant\",\n               values_to = \"score\") |&gt;\n  mutate(series = 11)\n\nThanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#scraping-and-wrangling-taskmaster-data---results",
+    "href": "slides/2024-10-01-regex.html#scraping-and-wrangling-taskmaster-data---results",
+    "title": "Regular Expressions",
+    "section": "Scraping and wrangling Taskmaster data - results",
+    "text": "Scraping and wrangling Taskmaster data - results\n\nresults |&gt; \n  select(Task, Description, episode, contestant, score, series) |&gt;\n  head(10)\n\n# A tibble: 10 × 6\n   Task  Description                             episode contestant score series\n   &lt;chr&gt; &lt;chr&gt;                                   &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt;  &lt;dbl&gt;\n 1 1     Prize: Best thing you can carry, but o… Episod… Charlotte… 1         11\n 2 1     Prize: Best thing you can carry, but o… Episod… Jamali Ma… 2         11\n 3 1     Prize: Best thing you can carry, but o… Episod… Lee Mack   4         11\n 4 1     Prize: Best thing you can carry, but o… Episod… Mike Wozn… 5         11\n 5 1     Prize: Best thing you can carry, but o… Episod… Sarah Ken… 3         11\n 6 2     Do the most impressive thing under the… Episod… Charlotte… 2         11\n 7 2     Do the most impressive thing under the… Episod… Jamali Ma… 3[1]      11\n 8 2     Do the most impressive thing under the… Episod… Lee Mack   3         11\n 9 2     Do the most impressive thing under the… Episod… Mike Wozn… 5         11\n10 2     Do the most impressive thing under the… Episod… Sarah Ken… 4         11"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#more-succinct-results",
+    "href": "slides/2024-10-01-regex.html#more-succinct-results",
+    "title": "Regular Expressions",
+    "section": "more succinct results",
+    "text": "more succinct results\n\n   Task  Description         episode   contestant score series\n  1     Prize: Best thing…  Episode 1… Charlotte… 1         11\n  1     Prize: Best thing…  Episode 1… Jamali Ma… 2         11\n  1     Prize: Best thing…  Episode 1… Lee Mack   4         11\n  1     Prize: Best thing…  Episode 1… Mike Wozn… 5         11\n  1     Prize: Best thing…  Episode 1… Sarah Ken… 3         11\n  2     Do the most…        Episode 1… Charlotte… 2         11\n  2     Do the most…        Episode 1… Jamali Ma… 3[1]      11\n  2     Do the most…        Episode 1… Lee Mack   3         11\n  2     Do the most…        Episode 1… Mike Wozn… 5         11\n  2     Do the most…        Episode 1… Sarah Ken… 4         11\n\nCurrently, the episode column contains entries like\n\n\"Episode 1: It's not your fault. (18 March 2021)\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#cleaning-the-score-column",
+    "href": "slides/2024-10-01-regex.html#cleaning-the-score-column",
+    "title": "Regular Expressions",
+    "section": "Cleaning the score column",
+    "text": "Cleaning the score column\n\nresults |&gt; select(score) |&gt; table()\n\nscore\n   –    ✔    ✘    0    1    2    3 3[1] 3[2]    4 4[2]    5   DQ \n   7    1    1   11   37   42   48    1    3   50    1   55   13 \n\n\nHow should the scores be stored? What is the cleaning task?\n\n\nFigure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-numeric-information",
+    "href": "slides/2024-10-01-regex.html#extracting-numeric-information",
+    "title": "Regular Expressions",
+    "section": "Extracting numeric information",
+    "text": "Extracting numeric information\nSuppose we have the following string:\n\n\"3[1]\"\n\nAnd we want to extract just the number “3”:\n\nstr_extract(\"3[1]\", \"3\")\n\n[1] \"3\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-numeric-information-1",
+    "href": "slides/2024-10-01-regex.html#extracting-numeric-information-1",
+    "title": "Regular Expressions",
+    "section": "Extracting numeric information",
+    "text": "Extracting numeric information\nWhat if we don’t know which number to extract?\n\nstr_extract(\"3[1]\", \"\\\\d\")\n\n[1] \"3\"\n\n\n\nstr_extract(\"4[1]\", \"\\\\d\")\n\n[1] \"4\"\n\n\n\nstr_extract(\"10[1]\", \"\\\\d\")\n\n[1] \"1\"\n\n\n\nstr_extract(\"10[1]\", \"\\\\d+\")\n\n[1] \"10\"\n\n\n\nstr_extract(\"DQ\", \"\\\\d\")\n\n[1] NA"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#str_extract",
+    "href": "slides/2024-10-01-regex.html#str_extract",
+    "title": "Regular Expressions",
+    "section": "str_extract()",
+    "text": "str_extract()\nstr_extract() is an R function in the stringr package which can find regular expressions in strings of text.\n\nstr_extract(\"My cat is 3 years old\", \"cat\")\n\n[1] \"cat\"\n\n\n\nstr_extract(\"My cat is 3 years old\", \"3\")\n\n[1] \"3\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#matching-multiple-options",
+    "href": "slides/2024-10-01-regex.html#matching-multiple-options",
+    "title": "Regular Expressions",
+    "section": "Matching multiple options",
+    "text": "Matching multiple options\nstr_extract() returns the first match; str_extract_all() allows more than one match.\n\nstr_extract(\"My cat is 3 years old\", \"cat|dog\")\n\n[1] \"cat\"\n\nstr_extract(\"My dog is 10 years old\", \"cat|dog\")\n\n[1] \"dog\"\n\nstr_extract(\"My dog is 10 years old, my cat is 3 years old\", \n            \"cat|dog\")\n\n[1] \"dog\"\n\nstr_extract_all(\"My dog is 10 years old, my cat is 3 years old\", \n                \"cat|dog\")\n\n[[1]]\n[1] \"dog\" \"cat\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#matching-groups-of-characters",
+    "href": "slides/2024-10-01-regex.html#matching-groups-of-characters",
+    "title": "Regular Expressions",
+    "section": "Matching groups of characters",
+    "text": "Matching groups of characters\nWhat if I want to extract a number?\n\nstr_extract(\"My cat is 3 years old\", \"\\\\d\")\n\n[1] \"3\"\n\n\nWhat will the result be for the following code?\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d\")"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#matching-groups-of-characters-1",
+    "href": "slides/2024-10-01-regex.html#matching-groups-of-characters-1",
+    "title": "Regular Expressions",
+    "section": "Matching groups of characters",
+    "text": "Matching groups of characters\nWhat if I want to extract a number?\n\nstr_extract(\"My cat is 3 years old\", \"\\\\d\")\n\n[1] \"3\"\n\n\nWhat will the result be for the following code?\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d\")\n\n[1] \"1\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#matching-groups-of-characters-2",
+    "href": "slides/2024-10-01-regex.html#matching-groups-of-characters-2",
+    "title": "Regular Expressions",
+    "section": "Matching groups of characters",
+    "text": "Matching groups of characters\nWhat if I want to extract a number?\n\nstr_extract(\"My cat is 3 years old\", \"\\\\d\")\n\n[1] \"3\"\n\n\nWhat will the result be for the following code?\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d\")\n\n[1] \"1\"\n\n\nThe + symbol in a regular expression means “repeated one or more times”\n\nstr_extract(\"My dog is 10 years old\", \"\\\\d+\")\n\n[1] \"10\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-from-multiple-strings",
+    "href": "slides/2024-10-01-regex.html#extracting-from-multiple-strings",
+    "title": "Regular Expressions",
+    "section": "Extracting from multiple strings",
+    "text": "Extracting from multiple strings\n\nstrings &lt;- c(\"My cat is 3 years old\", \"My dog is 10 years old\")\nstr_extract(strings, \"\\\\d+\")\n\n[1] \"3\"  \"10\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-from-multiple-strings-1",
+    "href": "slides/2024-10-01-regex.html#extracting-from-multiple-strings-1",
+    "title": "Regular Expressions",
+    "section": "Extracting from multiple strings",
+    "text": "Extracting from multiple strings\nWhat if we have multiple instances across multiple strings? We need to be careful working with lists (instead of vectors).\n\nstrings &lt;- c(\"My cat is 3 years old\", \"My dog is 10 years old\")\nstr_extract(strings, \"\\\\w+\")\n\n[1] \"My\" \"My\"\n\nstr_extract_all(strings, \"\\\\w+\")\n\n[[1]]\n[1] \"My\"    \"cat\"   \"is\"    \"3\"     \"years\" \"old\"  \n\n[[2]]\n[1] \"My\"    \"dog\"   \"is\"    \"10\"    \"years\" \"old\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-episode-information",
+    "href": "slides/2024-10-01-regex.html#extracting-episode-information",
+    "title": "Regular Expressions",
+    "section": "Extracting episode information",
+    "text": "Extracting episode information\nCurrently, the episode column contains entries like:\n\n\"Episode 2: The pie whisperer. (4 August 2015)\"\n\nHow would I extract just the episode number?"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-episode-information-1",
+    "href": "slides/2024-10-01-regex.html#extracting-episode-information-1",
+    "title": "Regular Expressions",
+    "section": "Extracting episode information",
+    "text": "Extracting episode information\nCurrently, the episode column contains entries like:\n\n\"Episode 2: The pie whisperer. (4 August 2015)\"\n\nHow would I extract just the episode number?\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \"\\\\d+\")\n\n[1] \"2\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-episode-information-2",
+    "href": "slides/2024-10-01-regex.html#extracting-episode-information-2",
+    "title": "Regular Expressions",
+    "section": "Extracting episode information",
+    "text": "Extracting episode information\nCurrently, the episode column contains entries like:\n\n\"Episode 2: The pie whisperer. (4 August 2015)\"\n\nHow would I extract the episode name?\nGoal: find a pattern to match: anything that starts with a :, ends with a .\nLet’s break down that task into pieces."
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-episode-information-3",
+    "href": "slides/2024-10-01-regex.html#extracting-episode-information-3",
+    "title": "Regular Expressions",
+    "section": "Extracting episode information",
+    "text": "Extracting episode information\nHow can we find the period at the end of the sentence? What does each of these lines of code return?\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".\")\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".+\")\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \"\\\\.\")"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-episode-information---solution",
+    "href": "slides/2024-10-01-regex.html#extracting-episode-information---solution",
+    "title": "Regular Expressions",
+    "section": "Extracting episode information - solution",
+    "text": "Extracting episode information - solution\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".\")\n\n[1] \"E\"\n\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \".+\")\n\n[1] \"Episode 2: The pie whisperer. (4 August 2015)\"\n\n\nWe use an escape character when we actually want to choose a period:\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \"\\\\.\")\n\n[1] \".\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-episode-information-4",
+    "href": "slides/2024-10-01-regex.html#extracting-episode-information-4",
+    "title": "Regular Expressions",
+    "section": "Extracting episode information",
+    "text": "Extracting episode information\nGoal: find a pattern to match: anything that starts with a :, ends with a .\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\",\n            \":.+\\\\.\")\n\n[1] \": The pie whisperer.\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#lookaround-again",
+    "href": "slides/2024-10-01-regex.html#lookaround-again",
+    "title": "Regular Expressions",
+    "section": "Lookaround (again)",
+    "text": "Lookaround (again)\n\n\nFigure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular-expression-lookahead-lookbehind-cheat-sheet/"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#lookbehinds",
+    "href": "slides/2024-10-01-regex.html#lookbehinds",
+    "title": "Regular Expressions",
+    "section": "Lookbehinds",
+    "text": "Lookbehinds\n(?&lt;=) is a positive lookbehind. It is used to identify expressions which are preceded by a particular expression.\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \n            \"(?&lt;=: ).+\")\n\n[1] \"The pie whisperer. (4 August 2015)\"\n\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \n            \"(?&lt;=\\\\. ).+\")\n\n[1] \"(4 August 2015)\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#lookaheads",
+    "href": "slides/2024-10-01-regex.html#lookaheads",
+    "title": "Regular Expressions",
+    "section": "Lookaheads",
+    "text": "Lookaheads\n(?=) is a positive lookahead. It is used to identify expressions which are followed by a particular expression.\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \n            \".+(?=\\\\.)\")\n\n[1] \"Episode 2: The pie whisperer\"\n\n\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \n            \".+(?=:)\")\n\n[1] \"Episode 2\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-episode-information-5",
+    "href": "slides/2024-10-01-regex.html#extracting-episode-information-5",
+    "title": "Regular Expressions",
+    "section": "Extracting episode information",
+    "text": "Extracting episode information\nGetting everything between the : and the .\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \n            \"(?&lt;=: ).+(?=\\\\.)\")\n\n[1] \"The pie whisperer\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-air-date",
+    "href": "slides/2024-10-01-regex.html#extracting-air-date",
+    "title": "Regular Expressions",
+    "section": "Extracting air date",
+    "text": "Extracting air date\nI want to extract just the air date. What pattern do I want to match?\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", ...)"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#extracting-air-date-1",
+    "href": "slides/2024-10-01-regex.html#extracting-air-date-1",
+    "title": "Regular Expressions",
+    "section": "Extracting air date",
+    "text": "Extracting air date\n\nstr_extract(\"Episode 2: The pie whisperer. (4 August 2015)\", \n            \"(?&lt;=\\\\().+(?=\\\\))\")\n\n[1] \"4 August 2015\""
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#wrangling-the-episode-info",
+    "href": "slides/2024-10-01-regex.html#wrangling-the-episode-info",
+    "title": "Regular Expressions",
+    "section": "Wrangling the episode info",
+    "text": "Wrangling the episode info\nCurrently:\n\n\n# A tibble: 270 × 1\n   episode                                        \n   &lt;chr&gt;                                          \n 1 Episode 1: It's not your fault. (18 March 2021)\n 2 Episode 1: It's not your fault. (18 March 2021)\n 3 Episode 1: It's not your fault. (18 March 2021)\n 4 Episode 1: It's not your fault. (18 March 2021)\n 5 Episode 1: It's not your fault. (18 March 2021)\n 6 Episode 1: It's not your fault. (18 March 2021)\n 7 Episode 1: It's not your fault. (18 March 2021)\n 8 Episode 1: It's not your fault. (18 March 2021)\n 9 Episode 1: It's not your fault. (18 March 2021)\n10 Episode 1: It's not your fault. (18 March 2021)\n# ℹ 260 more rows"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#wrangling-the-episode-info-1",
+    "href": "slides/2024-10-01-regex.html#wrangling-the-episode-info-1",
+    "title": "Regular Expressions",
+    "section": "Wrangling the episode info",
+    "text": "Wrangling the episode info\nOne option:\n\nresults |&gt;\n  select(episode) |&gt;\n  mutate(episode_name = str_extract(episode, \"(?&lt;=: ).+(?=\\\\.)\"),\n         air_date = str_extract(episode, \"(?&lt;=\\\\().+(?=\\\\))\"),\n         episode = str_extract(episode, \"\\\\d+\"))\n\n# A tibble: 270 × 3\n   episode episode_name        air_date     \n   &lt;chr&gt;   &lt;chr&gt;               &lt;chr&gt;        \n 1 1       It's not your fault 18 March 2021\n 2 1       It's not your fault 18 March 2021\n 3 1       It's not your fault 18 March 2021\n 4 1       It's not your fault 18 March 2021\n 5 1       It's not your fault 18 March 2021\n 6 1       It's not your fault 18 March 2021\n 7 1       It's not your fault 18 March 2021\n 8 1       It's not your fault 18 March 2021\n 9 1       It's not your fault 18 March 2021\n10 1       It's not your fault 18 March 2021\n# ℹ 260 more rows"
+  },
+  {
+    "objectID": "slides/2024-10-01-regex.html#wrangling-the-episode-info-2",
+    "href": "slides/2024-10-01-regex.html#wrangling-the-episode-info-2",
+    "title": "Regular Expressions",
+    "section": "Wrangling the episode info",
+    "text": "Wrangling the episode info\nAnother option:\n\nresults |&gt;\n  separate_wider_regex(episode, \n                       patterns = c(\".+ \", \n                                    episode = \"\\\\d+\", \n                                    \": \", \n                                    episode_name = \".+\", \n                                    \"\\\\. \\\\(\", \n                                    air_date = \".+\", \n                                    \"\\\\)\"))\n\n\n\n# A tibble: 270 × 3\n   episode episode_name        air_date     \n   &lt;chr&gt;   &lt;chr&gt;               &lt;chr&gt;        \n 1 1       It's not your fault 18 March 2021\n 2 1       It's not your fault 18 March 2021\n 3 1       It's not your fault 18 March 2021\n 4 1       It's not your fault 18 March 2021\n 5 1       It's not your fault 18 March 2021\n 6 1       It's not your fault 18 March 2021\n 7 1       It's not your fault 18 March 2021\n 8 1       It's not your fault 18 March 2021\n 9 1       It's not your fault 18 March 2021\n10 1       It's not your fault 18 March 2021\n# ℹ 260 more rows"
   }
 ]

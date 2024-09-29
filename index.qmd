@@ -62,14 +62,15 @@ schedule <- tribble(
 
   
      "Week 5 <br> 9.23.24", 'Data Types', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/factors" target = "_blank"> R4DS Factors</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/strings" target = "_blank"> R4DS Strings</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/08-text-analysis.html" target = "_blank">Text analysis</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-23-types.html" target = "_blank">Data Types</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws7_ds2_f24_strings.pdf" target = "_blank">WS 7 - strings</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws8_ds2_f24_time.pdf" target = "_blank">WS 8 - time</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/factors" target = "_blank"> R4DS Factors</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/strings" target = "_blank"> R4DS Strings</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/08-text-analysis.html" target = "_blank">Text analysis</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-23-types.html" target = "_blank">Data Types</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws7_ds2_f24_strings.pdf" target = "_blank">WS 7 - strings</a>',
 
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 3</a> - due 9.24 <br> Quiz 9.25',
   ' ',
 
   
      "Week 6 <br> 9.30.24", 'Regular Expressions', 
-  ' ',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-30-regex.html" target = "_blank">Regular expressions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws8_ds2_f24_regex1.pdf" target = "_blank">WS 8 - reg exp 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws9_ds2_f24_regex2.pdf" target = "_blank">WS 8 - reg exp 2</a>',
+
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 10.2',
   ' ',
 
