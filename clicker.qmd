@@ -867,6 +867,171 @@ today > ymd("2025-09-01")
 ---
 
 
+(@) `grep("q[^u]", very.large.word.list)` would not match which of the following?[^47]
+    (a) Iraqi
+    (b) Iraqian
+    (c) Iraq
+    (d) zaqqun (tree that "springs out of the bottom of Hell", in the Quran)
+    (e) Qantas (the Australian airline)
+    
+[^47]: neither c. nor e. would match. Inside the bracket "[^u]" matches anything other than a "u", but it has to match something.
+
+---
+
+(@) Which of the following regex would match to both "grey" and "gray"?[^48]
+    (a) "gr[ae]y"
+    (b) "gr(a|e)y"
+    (c) "gray | grey"
+    (d) "gr[a|e]y"
+    (e) some / all of the above -- which ones?
+
+[^48]: e. all of the above. Inside a character class `|` is a normal character and would therefore match "grey" and "gray" and "gr|y".  Which is not what we want, but would work to match both "grey" and "gray".
+
+
+---
+
+(@) What will the result be for the following code?[^49]  
+    (a) 10
+    (b) 1
+    (c) 0
+    (d) NA
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("My dog is 10 years old", "\\d")
+``` 
+    
+[^49]: b. 1 (because `\d` matches only a single digit).
+
+
+---
+
+
+(@) What will the result be for the following code?[^50]  
+    (a) 10
+    (b) 1
+    (c) 0
+    (d) NA
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("My dog is 10 years old", "\\d+")
+``` 
+    
+[^50]: a. 10 (because `\d+` matches at least one digit).
+
+
+---
+
+(@) What will the result be for the following code?[^51]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".")
+```
+
+[^51]: d. E (because `.` matches anything, and returns only a single character).
+
+---
+
+(@) What will the result be for the following code?[^52]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".+")
+```
+
+[^52]: b. Episode 2: The pie whisperer. (4 August 2015) (because `.` matches anything, and with the `+` it returns multiple characters).
+
+---
+
+(@) What will the result be for the following code?[^53]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", "\\.")
+```
+
+[^53]: a. . (because `\.` matches the period, .).
+
+---
+
+(@) How can I pull out just the numerical information in \$47?[^54]
+    (a) "(?<=\\$)\\d"
+    (b) "(?<=\\$)\\d+"
+    (c) "\\d(?=\\$)"
+    (d) "\\d+(?=\\$)"
+
+```{r}
+#| eval: false
+#| echo: false
+str_extract("$47", "(?<=\\$)\\d+")
+```
+
+[^54]: b. "(?<=\\$)\\d+"
+
+
+---
+
+(@) You want to know all the types of pies in the text strings.  They are written as, for example "apple pie".[^55]
+    (a) "\\w+(?!pie)"
+    (b) "\\w+(?! pie)"
+    (c) "\\w+(?=pie)"
+    (d) "\\w+(?= pie)"
+
+```{r}
+#| eval: false
+#| echo: false
+str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?= pie)")
+```
+
+[^55]: d. "\\w+(?= pie)"
+
+---
+
+```{r}
+#| echo: true
+str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?= pie)")
+```
+
+```{r}
+#| echo: true
+str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
+```
+
+---
+
+(@) We say that lookarounds are "zero-lenghth assertions".  What does that mean?[^56]
+    (a) we return the string in the lookaround
+    (b) we replace the string in the lookaround
+    (c) we return the string at the lookaround
+    (d) we replace the string at the lookaround
+
+[^56]: c. we return the string at the lookaround
+
+
+---
+
+
+
+
 ---
 
 (@) What is a **SQL** server?.[^101]
@@ -1185,165 +1350,6 @@ countries with "i" or "t" and ends in "land"; has "ee"; continents with "o"
 
 can use flights data for cities with particular names-->
 
-
-(@) `grep("q[^u]", very.large.word.list)` would not match which of the following?[^127]
-    (a) Iraqi
-    (b) Iraqian
-    (c) Iraq
-    (d) zaqqun (tree that "springs out of the bottom of Hell", in the Quran)
-    (e) Qantas (the Australian airline)
-    
-[^127]: neither c. nor e. would match. Inside the bracket "[^u]" matches anything other than a "u", but it has to match something.
-
----
-
-(@) Which of the following regex would match to both "grey" and "gray"?[^128]
-    (a) "gr[ae]y"
-    (b) "gr(a|e)y"
-    (c) "gray | grey"
-    (d) "gr[a|e]y"
-    (e) some / all of the above -- which ones?
-
-[^128]: e. all of the above. Inside a character class `|` is a normal character and would therefore match "grey" and "gray" and "gr|y".  Which is not what we want, but would work to match both "grey" and "gray".
-
-
----
-
-(@) What will the result be for the following code?[^129]  
-    (a) 10
-    (b) 1
-    (c) 0
-    (d) NA
-
-```{r}
-#| eval: false
-#| echo: true
-str_extract("My dog is 10 years old", "\\d")
-``` 
-    
-[^129]: b. 1 (because `\d` matches only a single digit).
-
-
----
-
-
-(@) What will the result be for the following code?[^130]  
-    (a) 10
-    (b) 1
-    (c) 0
-    (d) NA
-
-```{r}
-#| eval: false
-#| echo: true
-str_extract("My dog is 10 years old", "\\d+")
-``` 
-    
-[^130]: a. 10 (because `\d+` matches at least one digit).
-
-
----
-
-(@) What will the result be for the following code?[^131]
-    (a) .
-    (b) Episode 2: The pie whisperer. (4 August 2015)
-    (c) Episode
-    (d) E
-
-```{r}
-#| eval: false
-#| echo: true
-str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".")
-```
-
-[^131]: d. E (because `.` matches anything, and returns only a single character).
-
----
-
-(@) What will the result be for the following code?[^132]
-    (a) .
-    (b) Episode 2: The pie whisperer. (4 August 2015)
-    (c) Episode
-    (d) E
-
-```{r}
-#| eval: false
-#| echo: true
-str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".+")
-```
-
-[^132]: b. Episode 2: The pie whisperer. (4 August 2015) (because `.` matches anything, and with the `+` it returns multiple characters).
-
----
-
-(@) What will the result be for the following code?[^133]
-    (a) .
-    (b) Episode 2: The pie whisperer. (4 August 2015)
-    (c) Episode
-    (d) E
-
-```{r}
-#| eval: false
-#| echo: true
-str_extract("Episode 2: The pie whisperer. (4 August 2015)", "\\.")
-```
-
-[^133]: a. . (because `\.` matches the period, .).
-
----
-
-(@) How can I pull out just the numerical information in \$47?[^134]
-    (a) "(?<=\\$)\\d"
-    (b) "(?<=\\$)\\d+"
-    (c) "\\d(?=\\$)"
-    (d) "\\d+(?=\\$)"
-
-```{r}
-#| eval: false
-#| echo: false
-str_extract("$47", "(?<=\\$)\\d+")
-```
-
-[^134]: b. "(?<=\\$)\\d+"
-
-
----
-
-(@) You want to know all the types of pies in the text strings.  They are written as, for example "apple pie".[^135]
-    (a) "\\w+(?!pie)"
-    (b) "\\w+(?! pie)"
-    (c) "\\w+(?=pie)"
-    (d) "\\w+(?= pie)"
-
-```{r}
-#| eval: false
-#| echo: false
-str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?= pie)")
-```
-
-[^135]: d. "\\w+(?= pie)"
-
----
-
-```{r}
-#| echo: true
-str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?= pie)")
-```
-
-```{r}
-#| echo: true
-str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
-```
-
----
-
-(@) We say that lookarounds are "zero-lenghth assertions".  What does that mean?[^136]
-    (a) we return the string in the lookaround
-    (b) we replace the string in the lookaround
-    (c) we return the string at the lookaround
-    (d) we replace the string at the lookaround
-
-[^136]: c. we return the string at the lookaround
 
 
 <!--
