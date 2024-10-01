@@ -973,6 +973,24 @@ str_extract("Episode 2: The pie whisperer. (4 August 2015)", "\\.")
 
 ---
 
+(@) What is the difference between the output for the two regular expressions below?[^54]
+    a. They give the same result.
+    b. The first is not case sensitive.
+    c. The second allow for all the variants.
+    d. The first includes Jane.
+    
+```{r}
+#| eval: false
+#| echo: true
+string <- c("Mary", "Mar", "Janet", "jane", "Susan", "Sue")
+str_extract(string, "\\bMary|Jane|Sue\\b")
+str_extract(string, "\\b(Mary|Jane|Sue)\\b")
+```
+
+[^54]: d. The first includes Jane.
+
+---
+
 (@) How can I pull out just the numerical information in \$47?[^54]
     (a) "(?<=\\$)\\d"
     (b) "(?<=\\$)\\d+"

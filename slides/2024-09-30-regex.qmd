@@ -44,7 +44,7 @@ Just to scratch the surface, here are a few special characters that cannot be di
 
   * `\'`: single quote.         
   * `\"`: double quote.          
-  * `\n`: newline.   
+  * `\n`: new line.   
   * `\r`: carriage return.   
   * `\t`: tab character.
 
@@ -179,7 +179,7 @@ Character classes allow specifying entire classes of characters, such as numbers
   * `\w`: word characters, equivalent to `[[:alnum:]_]` or `[A-z0-9_]` (letter, number, or underscore).  
   * `\W`: not word, equivalent to `[^A-z0-9_]`.  
   * `[:blank:]`: blank characters, i.e. space and tab.  
-  * `[:space:]`: space characters: tab, newline, vertical tab, form feed, carriage return, space.
+  * `[:space:]`: space characters: tab, new line, vertical tab, form feed, carriage return, space.
   * `\s`: space, ` `.  
   * `\S`: not space.  
   * `[:punct:]`: punctuation characters, ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~.
@@ -192,12 +192,16 @@ More examples for practice!
 
 ## Case insenstive
 
-* Match only the word `meter` in "The cemetery is 1 meter from the stop sign." Also match `Meter` in "The cemetery is 1 Meter from the stop sign."
+* Match only the word `meter` in "The cemetery is 1 meter from the stop sign." 
+
+* Also match `Meter` in "The cemetery is 1 Meter from the stop sign."
 
 
 ## Case insenstive
 
-* Match only the word `meter` in "The cemetery is 1 meter from the stop sign." Also match `Meter` in "The cemetery is 1 Meter from the stop sign."
+* Match only the word `meter` in "The cemetery is 1 meter from the stop sign." 
+
+* Also match `Meter` in "The cemetery is 1 Meter from the stop sign."
 
 ```{r}
 string <- c("The cemetery is 1 meter from the stop sign.", 

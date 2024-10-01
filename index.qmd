@@ -51,7 +51,7 @@ schedule <- tribble(
   
    "Week 3 <br> 9.9.24", 'Data Viz', 
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-28-dataviz.html" target = "_blank"> Data Viz</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-11-verbs.html" target = "_blank"> Data Verbs</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws4_ds2_f24_ggplot.pdf" target = "_blank">WS 4 - ggplot</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 2</a> - due 9.10 <br> Quiz 9.11',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 2</a> - due 9.10 <br> Quiz 1 9.11',
   ' ',
 
      "Week 4 <br> 9.16.24", 'Data Wrangling', 
@@ -64,7 +64,7 @@ schedule <- tribble(
      "Week 5 <br> 9.23.24", 'Data Types', 
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/factors" target = "_blank"> R4DS Factors</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/strings" target = "_blank"> R4DS Strings</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/08-text-analysis.html" target = "_blank">Text analysis</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-23-types.html" target = "_blank">Data Types</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws7_ds2_f24_strings.pdf" target = "_blank">WS 7 - strings</a>',
 
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 3</a> - due 9.24 <br> Quiz 9.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 3</a> - due 9.24 <br> Quiz 2 9.25',
   ' ',
 
   
@@ -77,7 +77,7 @@ schedule <- tribble(
   
      "Week 7 <br> 10.7.24", 'map + <br>functions', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 4</a> - due 10.8 <br> Quiz 10.9',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 4</a> - due 10.8 <br> Quiz 3 10.9',
   ' ',
 
   
@@ -89,31 +89,31 @@ schedule <- tribble(
   
      "Week 9 <br> 10.21.24", 'iterations + <br> simulations', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 5</a> - due 10.22 <br> Quiz 10.23',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 5</a> - due 10.22',
   ' ',
 
   
      "Week 10 <br> 10.28.24", 'permutation tests', 
   ' ',
-  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 10.30',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 6</a> - due 10.29 <br> Quiz 4 10.30',
   ' ',
   
   
      "Week 11 <br> 11.4.24", 'web scraping', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 6</a> - due 11.5 <br> Quiz 11.6',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 11.6',
   ' ',
   
   
      "Week 12 <br> 11.11.24", 'SQL', 
   ' ',
-  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.13',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 7</a> - due 11.10 <br> Quiz 5 11.12',
   ' ',
   
   
-     "Week 13 <br> 11.18.24", 'text analysis', 
+     "Week 13 <br> 11.18.24", 'SQL', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 7</a> - due 11.19 <br> Quiz 11.20',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.20',
   ' ',
 
      "Week 14 <br> 11.25.24", 'Shiny<br> no class Wed', 
@@ -121,10 +121,16 @@ schedule <- tribble(
   ' ',
   ' ',
 
-     "Week 15 <br> 12.2.24", ' ', 
+     "Week 15 <br> 12.2.24", 'presentations (?)', 
   ' ',
-  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project5">Project 5</a> - due 12.4 <br> + presentations',
+   'Quiz 6 12.2',
+  ' ',
+  
+    "Week 16 <br> 12.9.24", ' ', 
+  ' ',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project5">Project 5</a> - due 12.9 <br> + presentations (?)',
   ' '
+
 )
   
 ```
