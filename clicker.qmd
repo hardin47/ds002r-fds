@@ -991,7 +991,7 @@ str_extract(string, "\\b(Mary|Jane|Sue)\\b")
 
 ---
 
-(@) How can I pull out just the numerical information in \$47?[^54]
+(@) How can I pull out just the numerical information in "\$47"?[^54]
     (a) "(?<=\\$)\\d"
     (b) "(?<=\\$)\\d+"
     (c) "\\d(?=\\$)"

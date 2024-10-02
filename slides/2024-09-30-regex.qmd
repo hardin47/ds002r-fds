@@ -186,7 +186,7 @@ Character classes allow specifying entire classes of characters, such as numbers
   * `[:graph:]`: graphical (human readable) characters: equivalent to `[[:alnum:][:punct:]]`.
   * `[:print:]`: printable characters, equivalent to `[[:alnum:][:punct:]\\s]`.
 
-## Some thoughts on characters and spaces
+## Thoughts on characters and spaces
 
 * `.` matches **any** single character except a newline `\n`.
 
@@ -541,6 +541,19 @@ str_extract("My dog is 10 years old", "\\d+")
 ```{r}
 strings <- c("My cat is 3 years old", "My dog is 10 years old")
 str_extract(strings, "\\d+")
+```
+
+## Extracting from multiple strings
+
+What if we have multiple instances across multiple strings?  We need to be careful working with lists (instead of vectors).
+
+```{r}
+#| eval: false
+strings <- c("My cat is 3 years old", "My dog is 10 years old")
+str_extract(strings, "\\w")
+str_extract_all(strings, "\\w")
+str_extract(strings, "\\w+")
+str_extract_all(strings, "\\w+")
 ```
 
 ## Extracting from multiple strings
