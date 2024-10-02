@@ -180,11 +180,29 @@ Character classes allow specifying entire classes of characters, such as numbers
   * `\W`: not word, equivalent to `[^A-z0-9_]`.  
   * `[:blank:]`: blank characters, i.e. space and tab.  
   * `[:space:]`: space characters: tab, new line, vertical tab, form feed, carriage return, space.
-  * `\s`: space, ` `.  
-  * `\S`: not space.  
+  * `\s`: whitespace.  
+  * `\S`: not whitespace.  
   * `[:punct:]`: punctuation characters, ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~.
   * `[:graph:]`: graphical (human readable) characters: equivalent to `[[:alnum:][:punct:]]`.
   * `[:print:]`: printable characters, equivalent to `[[:alnum:][:punct:]\\s]`.
+
+## Some thoughts on characters and spaces
+
+* `.` matches **any** single character except a newline `\n`.
+
+* `.` does match whitespace (e.g., a space or tab)
+
+* `\s` matches any whitespace including: spaces, tabs, new lines, and carriage returns
+
+* `[ \t]` matches spaces and tabs only (not new lines or carriage returns)
+
+* `[^\s]` matches any character except whitespace (including spaces, tabs, and new lines)
+
+* `[^\s]` and `[\S]` are functionally equivalent
+
+* The pattern `[\s\S]` matches any character including newlines and tabs.
+
+* `\w` matches any single word character (including letters, digits, and the underscore character `_`)
 
 # Some examples
 
@@ -378,14 +396,14 @@ results |>
   2     Do the most…        Episode 1… Sarah Ken… 4         11
 ```
 
-Currently, the episode column contains entries like
+Currently, the `episode` column contains entries like
 
 ```{r, eval=F}
 "Episode 1: It's not your fault. (18 March 2021)"
 ```
 
 
-## Cleaning the score column
+## Cleaning the `score` column
 
 
 ```{r}
@@ -531,6 +549,8 @@ What if we have multiple instances across multiple strings?  We need to be caref
 
 ```{r}
 strings <- c("My cat is 3 years old", "My dog is 10 years old")
+str_extract(strings, "\\w")
+str_extract_all(strings, "\\w")
 str_extract(strings, "\\w+")
 str_extract_all(strings, "\\w+")
 ```
@@ -631,10 +651,9 @@ include_graphics("../images/lookaround.png")
 ```
 
 
-
 ## Lookbehinds
 
-`(?<=)` is a *positive lookbehind*. It is used to identify expressions which are *preceded* by a particular expression.
+`(?<=y)x` – *positive lookbehind* (matches 'x' when it is preceded by 'y')
 
 ```{r}
 str_extract("Episode 2: The pie whisperer. (4 August 2015)", 
@@ -648,7 +667,7 @@ str_extract("Episode 2: The pie whisperer. (4 August 2015)",
 
 ## Lookaheads
 
-`(?=)` is a *positive lookahead*. It is used to identify expressions which are *followed* by a particular expression.
+`x(?=y)` – *positive lookahead* (matches 'x' when it is followed by 'y')
 
 ```{r}
 str_extract("Episode 2: The pie whisperer. (4 August 2015)", 
@@ -704,7 +723,8 @@ results |>
   select(episode) |>
   mutate(episode_name = str_extract(episode, "(?<=: ).+(?=\\.)"),
          air_date = str_extract(episode, "(?<=\\().+(?=\\))"),
-         episode = str_extract(episode, "\\d+"))
+         episode = str_extract(episode, "\\d+")) |> 
+  mutate(air_date2 = dmy(air_date))
 ```
 
 
@@ -721,7 +741,8 @@ results |>
                                     episode_name = ".+", 
                                     "\\. \\(", 
                                     air_date = ".+", 
-                                    "\\)"))
+                                    "\\)")) |> 
+  mutate(air_date2 = dmy(air_date))
 ```
 
 ```{r, echo=F}
@@ -734,7 +755,8 @@ results |>
                                     episode_name = ".+", 
                                     "\\. \\(", 
                                     air_date = ".+", 
-                                    "\\)"))
+                                    "\\)")) |> 
+  mutate(air_date2 = dmy(air_date))
 ```
 
 
