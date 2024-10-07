@@ -69,14 +69,14 @@ schedule <- tribble(
 
   
      "Week 6 <br> 9.30.24", 'Regular Expressions', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-30-regex.html" target = "_blank">Regular expressions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws8_ds2_f24_regex1.pdf" target = "_blank">WS 8 - reg exp 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws9_ds2_f24_regex2.pdf" target = "_blank">WS 8 - reg exp 2</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-09-30-regex.html" target = "_blank">Regular expressions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws8_ds2_f24_regex1.pdf" target = "_blank">WS 8 - reg exp 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws9_ds2_f24_regex2.pdf" target = "_blank">WS 9 - reg exp 2</a>',
 
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 10.2',
   ' ',
 
   
-     "Week 7 <br> 10.7.24", 'map + <br>functions', 
-  ' ',
+     "Week 7 <br> 10.7.24", 'functions + <br> iteration', 
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-10-07-funcmap.html" target = "_blank">functions + iteration</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws10_ds2_f24_funcs.pdf" target = "_blank">WS 10 - functions</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 4</a> - due 10.8 <br> Quiz 3 10.9',
   ' ',
 

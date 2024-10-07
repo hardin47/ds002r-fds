@@ -133,6 +133,7 @@ grep("\\bab", strings, value = TRUE)
   * `\`: suppress the special meaning of metacharacters in regular expression, i.e. `$ * + . ? [ ] ^ { } | ( ) \`. Since `\` itself needs to be escaped in R, we need to escape metacharacters with double backslash like `\\$`.   
   * `|`: an "or" operator, matches patterns on either side of the `|`.  
   * `(...)`: grouping in regular expressions. This allows you to retrieve the bits that matched various parts of your regular expression so you can alter them or use them for building up a new string.
+  * note: both `(ab|cde)` or `ab|cde` match either the string `ab` or the string `cde`.  However, `ab | cde` matches `ab cde` (and does not match either of `ab` or `cde`) because the "or" is now whitespace on either side of `|`.
   
 ## Examples of operators {.scrollable}
 
@@ -169,7 +170,7 @@ str_extract(strings, "a[b|c]")
 
 Character classes allow specifying entire classes of characters, such as numbers, letters, etc. There are two flavors of character classes, one uses `[:` and `:]` around a predefined name inside square brackets and the other uses `\` and a special character. They are sometimes interchangeable.   
 
-  * (?i) before the string indicates that the match should be case insensitive.
+  * (?i) before the string indicates that the match should be case insensitive (will make the entire string case insensitive).
   * `[:digit:]` or `\d`: digits, 0 1 2 3 4 5 6 7 8 9, equivalent to `[0-9]`.  
   * `\D`: non-digits, equivalent to `[^0-9]`.  
   * `[:lower:]`: lower-case letters, equivalent to `[a-z]`.  
@@ -189,19 +190,12 @@ Character classes allow specifying entire classes of characters, such as numbers
 ## Thoughts on characters and spaces
 
 * `.` matches **any** single character except a newline `\n`.
-
 * `.` does match whitespace (e.g., a space or tab)
-
 * `\s` matches any whitespace including: spaces, tabs, new lines, and carriage returns
-
 * `[ \t]` matches spaces and tabs only (not new lines or carriage returns)
-
 * `[^\s]` matches any character except whitespace (including spaces, tabs, and new lines)
-
 * `[^\s]` and `[\S]` are functionally equivalent
-
 * The pattern `[\s\S]` matches any character including newlines and tabs.
-
 * `\w` matches any single word character (including letters, digits, and the underscore character `_`)
 
 # Some examples
@@ -219,11 +213,12 @@ More examples for practice!
 
 * Match only the word `meter` in "The cemetery is 1 meter from the stop sign." 
 
-* Also match `Meter` in "The cemetery is 1 Meter from the stop sign."
+* Also match `Meter` and `meTer` ...
 
 ```{r}
 string <- c("The cemetery is 1 meter from the stop sign.", 
-            "The cemetery is 1 Meter from the stop sign.")
+            "The cemetery is 1 Meter from the stop sign.",
+            "The cemetery is 1 meTer from the stop sign.")
 
 str_extract(string, "(?i)\\bmeter\\b")
 ```
@@ -356,7 +351,7 @@ library(data.table)
 
 ## Scraping and wrangling Taskmaster
 
-Goal: to scrape the Taskmaster wiki into a dataframe including task, description, episode, episode name, air date, contestant, score, and series.^[Thanks to Ciaran Evans at Wake Forest University for example and code,  https://sta279-f23.github.io/]
+Goal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.^[Thanks to Ciaran Evans at Wake Forest University for example and code,  https://sta279-f23.github.io/]
 
 ```{r}
 results <- read_html("https://taskmaster.fandom.com/wiki/Series_11") |>
@@ -417,7 +412,7 @@ How *should* the scores be stored? What is the cleaning task?
 #| label: fig-taskmaster-scores
 #| out.width: 90%
 #| fig-cap: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
-#| fig-alt: Screenshot of the scores for each contestand on each task. Note that many of the scores have footnotes which are recorded in the results table from scraping the wiki.
+#| fig-alt: Screenshot of the scores for each contestant on each task. Note that many of the scores have footnotes which are recorded in the results table from scraping the wiki.
 #| echo: false
 include_graphics("../images/taskmaster-scores.jpg")
 ```

@@ -563,6 +563,7 @@ Jo Hardin
 <li><code>|</code>: an “or” operator, matches patterns on either side of the <code>|</code>.<br>
 </li>
 <li><code>(...)</code>: grouping in regular expressions. This allows you to retrieve the bits that matched various parts of your regular expression so you can alter them or use them for building up a new string.</li>
+<li>note: both <code>(ab|cde)</code> or <code>ab|cde</code> match either the string <code>ab</code> or the string <code>cde</code>. However, <code>ab | cde</code> matches <code>ab cde</code> (and does not match either of <code>ab</code> or <code>cde</code>) because the “or” is now whitespace on either side of <code>|</code>.</li>
 </ul>
 </section>
 <section id="examples-of-operators" class="slide level2 scrollable">
@@ -621,7 +622,7 @@ Jo Hardin
 <h2>Character classes</h2>
 <p>Character classes allow specifying entire classes of characters, such as numbers, letters, etc. There are two flavors of character classes, one uses <code>[:</code> and <code>:]</code> around a predefined name inside square brackets and the other uses <code>\</code> and a special character. They are sometimes interchangeable.</p>
 <ul>
-<li>(?i) before the string indicates that the match should be case insensitive.</li>
+<li>(?i) before the string indicates that the match should be case insensitive (will make the entire string case insensitive).</li>
 <li><code>[:digit:]</code> or <code>\d</code>: digits, 0 1 2 3 4 5 6 7 8 9, equivalent to <code>[0-9]</code>.<br>
 </li>
 <li><code>\D</code>: non-digits, equivalent to <code>[^0-9]</code>.<br>
@@ -653,14 +654,14 @@ Jo Hardin
 <section id="thoughts-on-characters-and-spaces" class="slide level2">
 <h2>Thoughts on characters and spaces</h2>
 <ul>
-<li><p><code>.</code> matches <strong>any</strong> single character except a newline <code>\n</code>.</p></li>
-<li><p><code>.</code> does match whitespace (e.g., a space or tab)</p></li>
-<li><p><code>\s</code> matches any whitespace including: spaces, tabs, new lines, and carriage returns</p></li>
-<li><p><code>[ \t]</code> matches spaces and tabs only (not new lines or carriage returns)</p></li>
-<li><p><code>[^\s]</code> matches any character except whitespace (including spaces, tabs, and new lines)</p></li>
-<li><p><code>[^\s]</code> and <code>[\S]</code> are functionally equivalent</p></li>
-<li><p>The pattern <code>[\s\S]</code> matches any character including newlines and tabs.</p></li>
-<li><p><code>\w</code> matches any single word character (including letters, digits, and the underscore character <code>_</code>)</p></li>
+<li><code>.</code> matches <strong>any</strong> single character except a newline <code>\n</code>.</li>
+<li><code>.</code> does match whitespace (e.g., a space or tab)</li>
+<li><code>\s</code> matches any whitespace including: spaces, tabs, new lines, and carriage returns</li>
+<li><code>[ \t]</code> matches spaces and tabs only (not new lines or carriage returns)</li>
+<li><code>[^\s]</code> matches any character except whitespace (including spaces, tabs, and new lines)</li>
+<li><code>[^\s]</code> and <code>[\S]</code> are functionally equivalent</li>
+<li>The pattern <code>[\s\S]</code> matches any character including newlines and tabs.</li>
+<li><code>\w</code> matches any single word character (including letters, digits, and the underscore character <code>_</code>)</li>
 </ul>
 </section></section>
 <section>
@@ -679,15 +680,16 @@ Jo Hardin
 <h2>Case insenstive</h2>
 <ul>
 <li><p>Match only the word <code>meter</code> in “The cemetery is 1 meter from the stop sign.”</p></li>
-<li><p>Also match <code>Meter</code> in “The cemetery is 1 Meter from the stop sign.”</p></li>
+<li><p>Also match <code>Meter</code> and <code>meTer</code> …</p></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>string <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The cemetery is 1 meter from the stop sign."</span>, </span>
-<span id="cb42-2"><a></a>            <span class="st">"The cemetery is 1 Meter from the stop sign."</span>)</span>
-<span id="cb42-3"><a></a></span>
-<span id="cb42-4"><a></a><span class="fu">str_extract</span>(string, <span class="st">"(?i)</span><span class="sc">\\</span><span class="st">bmeter</span><span class="sc">\\</span><span class="st">b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb42-2"><a></a>            <span class="st">"The cemetery is 1 Meter from the stop sign."</span>,</span>
+<span id="cb42-3"><a></a>            <span class="st">"The cemetery is 1 meTer from the stop sign."</span>)</span>
+<span id="cb42-4"><a></a></span>
+<span id="cb42-5"><a></a><span class="fu">str_extract</span>(string, <span class="st">"(?i)</span><span class="sc">\\</span><span class="st">bmeter</span><span class="sc">\\</span><span class="st">b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "meter" "Meter"</code></pre>
+<pre><code>[1] "meter" "Meter" "meTer"</code></pre>
 </div>
 </div>
 </section>
@@ -817,7 +819,7 @@ Figure&nbsp;2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 </p></section>
 <section id="scraping-and-wrangling-taskmaster" class="slide level2 scrollable">
 <h2>Scraping and wrangling Taskmaster</h2>
-<p>Goal: to scrape the Taskmaster wiki into a dataframe including task, description, episode, episode name, air date, contestant, score, and series.<sup>1</sup></p>
+<p>Goal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.<sup>1</sup></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>results <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://taskmaster.fandom.com/wiki/Series_11"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb61-2"><a></a>  <span class="fu">html_element</span>(<span class="st">".tmtable"</span>) <span class="sc">|&gt;</span> </span>
@@ -887,7 +889,7 @@ Figure&nbsp;2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 </div>
 <p>How <em>should</em> the scores be stored? What is the cleaning task?</p>
 
-<img data-src="../images/taskmaster-scores.jpg" style="width:90.0%" alt="Screenshot of the scores for each contestand on each task. Note that many of the scores have footnotes which are recorded in the results table from scraping the wiki." class="r-stretch quarto-figure-center"><p class="caption">
+<img data-src="../images/taskmaster-scores.jpg" style="width:90.0%" alt="Screenshot of the scores for each contestant on each task. Note that many of the scores have footnotes which are recorded in the results table from scraping the wiki." class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 </p></section>
 <section id="extracting-numeric-information" class="slide level2">

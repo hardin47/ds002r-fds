@@ -1047,8 +1047,161 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 
 ---
 
+(@) What will happen when I run the following code?[^57]
+    a. 0
+    b. 3
+    c. 9
+    d. NA
+    e. error (code will fail)
 
+```{r}
+#| error: true
+#| echo: true
+#| eval: false
+my_power <- function(x, y){
+  return(x^y)
+}
+my_power(3)
+```
 
+[^57]: e. error (code will fail)
+
+---
+
+(@) What will happen when I run the following code?[^58]
+    a. 0
+    b. 3
+    c. 9
+    d. NA
+    e. error (code will fail)
+
+```{r}
+#| echo: true
+#| eval: false
+my_power <- function(x, y = 2){
+  return(x^y)
+}
+my_power(3)
+```
+
+[^58]: c. 9
+
+---
+
+(@) What will happen when I run the following code?[^59]
+    a. 4
+    b. 8
+    c. 9
+    d. NA
+    e. error (code will fail)
+
+```{r}
+#| echo: true
+#| eval: false
+my_power <- function(x, y = 2){
+  return(x^y)
+}
+my_power(2, 3)
+```
+
+[^59]: b. 8
+
+---
+
+(@) What will happen when I run the following code?[^60]
+    a. 4
+    b. 8
+    c. 9
+    d. NA
+    e. error (code will fail)
+
+```{r}
+#| echo: true
+#| eval: false
+my_power <- function(x = 2, y = 3){
+  return(x^y)
+}
+my_power(2, 3)
+```
+
+[^60]: b. 8
+
+---
+
+(@) Consider the `addTen()` function.  The following output is a result of which `map_*()` call?[^61]
+   a. `map(c(1,4,7), addTen)`
+   b. `map_dbl(c(1,4,7), addTen)`
+   c. `map_chr(c(1,4,7), addTen)`
+   d. `map_lgl(c(1,4,7), addTen)`
+   
+```{r}
+#| echo: true
+addTen <- function(wow) {
+  return(wow + 10)
+}
+```
+
+```{r}
+#| echo: false
+map_chr(c(1,4,7), addTen)
+```
+
+[^61]: c. `map_chr(c(1,4,7), addTen)` because the output is in quotes, the values are strings, not numbers.
+
+---
+
+(@) Which of the following input is allowed?[^62]
+    a. `map(c(1, 4, 7), addTen)`
+    b. `map(list(1, 4, 7), addTen)`
+    c. `map(data.frame(a=1, b=4, c=7), addTen)`
+    d. some of the above
+    e. all of the above
+
+[^62]: e. all of the above.  The `map()` function allows vectors, lists, and data frames as input.
+
+---
+
+(@) Which of the following produces a different output?[^63]
+    a. `map(c(1, 4, 7), addTen)`
+    b. `map(c(1, 4, 7), ~addTen(.x))`
+    c. `map(c(1, 4, 7), ~addTen)`
+    d. `map(c(1, 4, 7), function(hi) (hi + 10))`
+    e. `map(c(1, 4, 7), ~(.x + 10))`
+    
+[^63]: c. `map(c(1, 4, 7), ~addTen)`.  The `~` acts on functions that do not have their own name or that are defined by `function(...)`.  By adding the argument `(.x)` we've expanded the `addTen()` function, and so it needs a `~`.  The `addTen()` function all alone does not use a `~`.
+
+---
+
+(@) What will the following code output?[^64]
+    a. 3 random normals
+    b. 6 random normals
+    c. 18 random normals
+    
+```{r}
+#| echo: false
+#| eval: true
+input <- tibble::tribble(
+  ~ n, ~ mean, ~ sd,
+   1,     1,    3,
+   2,    3,   1,
+   3,   47,  10
+)
+```
+```{r}
+#| echo: true
+#| eval: true
+input
+```
+
+```{r}
+#| echo: true
+#| eval: false
+input |> 
+  pmap(rnorm)
+```
+[^64]: b. 6 random normals (1 with mean 1, sd 3; 2 with mean 3, sd 1; 3 with mean 47, sd 10)
+
+---
 
 ---
 
