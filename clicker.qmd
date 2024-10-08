@@ -1121,7 +1121,7 @@ my_power(2, 3)
 my_power <- function(x = 2, y = 3){
   return(x^y)
 }
-my_power(2, 3)
+my_power( )
 ```
 
 [^60]: b. 8
