@@ -506,18 +506,18 @@ Jo Hardin
 </div>
 <p><code>grep()</code> stands for “global regular expression print”. <code>grep()</code> returns a character vector containing the selected elements, <code>grepl()</code> returns a logical vector of TRUE/FALSE for whether or not there was a match.</p>
 </section>
-<section id="position-of-pattern-within-the-string" class="slide level2">
+<section id="position-of-pattern-within-the-string" class="slide level2 scrollable">
 <h2>Position of pattern within the string</h2>
 <ul>
 <li><code>^</code>: matches the start of the string.<br>
 </li>
 <li><code>$</code>: matches the end of the string.<br>
 </li>
-<li><code>\b</code>: matches the boundary of a <em>word</em>. Don’t confuse it with <code>^ $</code> which marks the edge of a <em>string</em>.<br>
+<li><code>\b</code>: matches the boundary of a <em>word</em>. Don’t confuse it with <code>^ $</code> which marks the edge of a <em>string</em>.<sup>1</sup><br>
 </li>
 <li><code>\B</code>: matches the empty string provided it is not at an edge of a word.</li>
 </ul>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>A word boundary is a position between a word character (typically [A-Za-z0-9_]) and a non-word character (anything that is not a word character, such as whitespace, punctuation, etc.).</p></li></ol></aside></section>
 <section id="examples-of-positions" class="slide level2">
 <h2>Examples of positions</h2>
 <div class="cell">
@@ -833,7 +833,7 @@ Figure&nbsp;2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <span id="cb61-10"><a></a>               <span class="at">values_to =</span> <span class="st">"score"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb61-11"><a></a>  <span class="fu">mutate</span>(<span class="at">series =</span> <span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Thanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>Thanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/</p></li></ol></aside></section>
 <section id="scraping-and-wrangling-taskmaster-data---results" class="slide level2">
 <h2>Scraping and wrangling Taskmaster data - results</h2>
 <div class="cell">

@@ -97,7 +97,7 @@ grep("ac{2,3}b", strings, value = TRUE)
 
   * `^`: matches the start of the string.   
   * `$`: matches the end of the string.   
-  * `\b`: matches the boundary of a _word_. Don't confuse it with `^ $` which marks the edge of a _string_.   
+  * `\b`: matches the boundary of a _word_. Don't confuse it with `^ $` which marks the edge of a _string_.^[A word boundary is a position between a word character (typically [A-Za-z0-9_]) and a non-word character (anything that is not a word character, such as whitespace, punctuation, etc.).]   
   * `\B`: matches the empty string provided it is not at an edge of a word.
 
 ## Examples of positions

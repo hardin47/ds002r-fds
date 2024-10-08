@@ -107,7 +107,7 @@ schedule <- tribble(
   
      "Week 12 <br> 11.11.24", 'SQL', 
   ' ',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 7</a> - due 11.10 <br> Quiz 5 11.12',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 7</a> - due 11.12 <br> Quiz 5 11.13',
   ' ',
   
   
