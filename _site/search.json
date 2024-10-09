@@ -6864,28 +6864,28 @@
     "href": "slides/2024-10-07-funcmap.html#pmap",
     "title": "Functions + Iteration",
     "section": "pmap()",
-    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 9.045207\n\n[[2]]\n[1] 24.71257 75.35813\n\n[[3]]\n[1] 798.6352 585.6034 491.7473\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 1.733754\n\n[[2]]\n[1] 91.58374 88.13464\n\n[[3]]\n[1] 670.8929 384.7866 578.4271"
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 1.446494\n\n[[2]]\n[1] 57.05922 96.13643\n\n[[3]]\n[1] 539.6102 315.8671 715.7641\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 1.319626\n\n[[2]]\n[1] 63.90550 56.66804\n\n[[3]]\n[1] 739.7253 478.3804 865.4380"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#an-aside",
     "href": "slides/2024-10-07-funcmap.html#an-aside",
     "title": "Functions + Iteration",
     "section": "An aside…",
-    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.5344838 0.8762677 0.2847229\n\nrunif(n = c(1,3))\n\n[1] 0.7799434 0.4860225\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.4244777 0.9174854\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.003429872 0.717514931"
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.62001957 0.78295586 0.03851755\n\nrunif(n = c(1,3))\n\n[1] 0.4104367 0.1253566\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.6194336 0.5104395\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.8756675 0.3751049"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "href": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "title": "Functions + Iteration",
     "section": "pmap() vs map()",
-    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 1.923097\n\n[[2]]\n[1] 29.39011 95.18698\n\n[[3]]\n[1] 245.1279 200.8042 963.1183\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.2224215 0.9130258 0.7238199\n\n$min\n[1] 0.2049092 0.1442637 0.6555051\n\n$max\n[1] 0.8559491 0.2007408 0.4399454"
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 4.923475\n\n[[2]]\n[1] 99.60349 31.14537\n\n[[3]]\n[1] 815.9056 799.7537 257.3568\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.3175183 0.4277150 0.5310099\n\n$min\n[1] 0.5062579 0.2190396 0.5372893\n\n$max\n[1] 0.05430379 0.23022090 0.96451214"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "href": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "title": "Functions + Iteration",
     "section": "pmap() with expand_grid()",
-    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 3.180199\n\n[[2]]\n[1] 62.23685\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 61.20037\n\n[[5]]\n[1] 1.115837 3.584628\n\n[[6]]\n[1] 61.45215 93.96981\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 75.33856 11.40893\n\n[[9]]\n[1] 8.036593 1.943209 6.304319\n\n[[10]]\n[1] 43.34317 95.95309 42.99603\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 28.06851 61.02056 84.64164"
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 6.148279\n\n[[2]]\n[1] 50.74747\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 82.65167\n\n[[5]]\n[1] 5.307211 7.793464\n\n[[6]]\n[1] 38.78918 74.12956\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 51.74785 81.36814\n\n[[9]]\n[1] 1.633198 2.945797 4.633467\n\n[[10]]\n[1]  1.602562 42.198100 34.863698\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 99.39956 31.86982 67.82815"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#mapping-to-a-data-frame",
@@ -6941,6 +6941,6 @@
     "href": "slides/2024-10-07-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.6098796\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5410086"
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5898155\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.4616584"
   }
 ]

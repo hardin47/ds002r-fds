@@ -366,6 +366,11 @@ map_lgl (.x = c(1:3), .f = triple)
 map_lgl(.x = c(1, NA, 3), .f = is.na)
 ```
 
+# Agenda  10/9/24
+
+1. The `map()` function
+2. Iterating functions
+
 ## `fastfood` dataset from **openintro**
 
 ```{r}
@@ -432,10 +437,7 @@ map_dbl(fastfood, length(unique()))
 map_dbl(fastfood, ~length(unique(x)))
 ```
 
-# Agenda  10/9/24
 
-1. The `map()` function
-2. Iterating functions
 
 # Two+ arguments to `map()`
 
