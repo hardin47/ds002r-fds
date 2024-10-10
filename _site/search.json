@@ -6942,5 +6942,19 @@
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
     "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5898155\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.4616584"
+  },
+  {
+    "objectID": "slides/2024-09-30-regex.html#bounding-words-vs.-phrases",
+    "href": "slides/2024-09-30-regex.html#bounding-words-vs.-phrases",
+    "title": "Regular Expressions",
+    "section": "Bounding words vs. phrases",
+    "text": "Bounding words vs. phrases\n\nstrings &lt;- c(\"apple\", \"applet\", \"pineapple\", \"apple pie\",\n             \"I love apple pie\")\n\nstr_subset(strings, \"\\\\bapple\\\\b\")\nstr_subset(strings, \"^apple$\")\nstr_subset(strings, \"\\\\bapple pie\\\\b\")\nstr_subset(strings, \"^apple pie$\")"
+  },
+  {
+    "objectID": "slides/2024-09-30-regex.html#bounding-words-vs.-phrases---solutions",
+    "href": "slides/2024-09-30-regex.html#bounding-words-vs.-phrases---solutions",
+    "title": "Regular Expressions",
+    "section": "Bounding words vs. phrases - solutions",
+    "text": "Bounding words vs. phrases - solutions\n\nstrings &lt;- c(\"apple\", \"applet\", \"pineapple\", \"apple pie\",\n             \"I love apple pie\")\n\nstr_subset(strings, \"\\\\bapple\\\\b\")\n\n[1] \"apple\"            \"apple pie\"        \"I love apple pie\"\n\nstr_subset(strings, \"^apple$\")\n\n[1] \"apple\"\n\nstr_subset(strings, \"\\\\bapple pie\\\\b\")\n\n[1] \"apple pie\"        \"I love apple pie\"\n\nstr_subset(strings, \"^apple pie$\")\n\n[1] \"apple pie\"\n\nstr_extract(strings, \"\\\\bapple\\\\b\")\n\n[1] \"apple\" NA      NA      \"apple\" \"apple\"\n\nstr_extract(strings, \"^apple$\")\n\n[1] \"apple\" NA      NA      NA      NA     \n\nstr_extract(strings, \"\\\\bapple pie\\\\b\")\n\n[1] NA          NA          NA          \"apple pie\" \"apple pie\"\n\nstr_extract(strings, \"^apple pie$\")\n\n[1] NA          NA          NA          \"apple pie\" NA"
   }
 ]

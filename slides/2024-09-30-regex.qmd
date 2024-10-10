@@ -124,6 +124,37 @@ grep("ab$", strings, value = TRUE)
 grep("\\bab", strings, value = TRUE)
 ```
 
+
+## Bounding words vs. phrases
+
+```{r}
+#| eval: false
+strings <- c("apple", "applet", "pineapple", "apple pie",
+             "I love apple pie")
+
+str_subset(strings, "\\bapple\\b")
+str_subset(strings, "^apple$")
+str_subset(strings, "\\bapple pie\\b")
+str_subset(strings, "^apple pie$")
+```
+
+## Bounding words vs. phrases - solutions
+
+```{r}
+strings <- c("apple", "applet", "pineapple", "apple pie",
+             "I love apple pie")
+
+str_subset(strings, "\\bapple\\b")
+str_subset(strings, "^apple$")
+str_subset(strings, "\\bapple pie\\b")
+str_subset(strings, "^apple pie$")
+
+str_extract(strings, "\\bapple\\b")
+str_extract(strings, "^apple$")
+str_extract(strings, "\\bapple pie\\b")
+str_extract(strings, "^apple pie$")
+```
+
 ## Operators {.scrollable}
 
 
