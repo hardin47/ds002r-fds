@@ -1203,6 +1203,76 @@ input |>
 
 ---
 
+(@) What is the following error telling me?[^65]
+  a. I haven't loaded **lubridate**.
+  b. I can't add months and days.
+  c. There is no object called `jan31`.
+  d. `months()` is not a function.
+  e. There is no error
+  
+```{r}
+#| eval: false
+#| echo: true
+jan31 + months(0:11) + days(31)
+#> Error in eval(expr, envir, enclos): object 'jan31' not found
+```
+
+[^65]: c. There is no object called `jan31`.
+
+---
+
+(@) What is the following error telling me?[^66]
+  a. I haven't loaded **lubridate**.
+  b. I can't add months and days.
+  c. There is no object called `jan31`.
+  d. `ymd()` is not a function.
+  e. There is no error.
+  
+```{r}
+#| eval: false
+#| echo: true
+  jan31 <- ymd("2021-01-31")
+#> Error in ymd("2021-01-31"): could not find function "ymd"
+  jan31 + months(0:11) + days(31)
+#> Error in eval(expr, envir, enclos): object 'jan31' not found
+```
+
+[^66]: a. I haven't loaded **lubridate** (which is why it doesn't recognize that `ymd()` is not a function).
+
+---
+
+(@) What is the following error telling me?[^67]
+  a. I haven't loaded **lubridate**.
+  b. I can't add months and days.
+  c. There is no object called `jan31`.
+  d. `ymd()` is not a function.
+  e. There is no error.
+  
+```{r}
+#| eval: false
+#| echo: true
+  library(lubridate)
+#> 
+#> Attaching package: 'lubridate'
+#> The following objects are masked from 'package:base':
+#> 
+#>     date, intersect, setdiff, union
+  jan31 <- ymd("2021-01-31")
+  jan31 + months(0:11) + days(31)
+#>  [1] "2021-03-03" NA           "2021-05-01" NA           "2021-07-01"
+#>  [6] NA           "2021-08-31" "2021-10-01" NA           "2021-12-01"
+#> [11] NA           "2022-01-31"
+```
+
+[^67]: e. There is no error.
+
+
+
+---
+
+
+
+
 ---
 
 (@) What is a **SQL** server?.[^101]
