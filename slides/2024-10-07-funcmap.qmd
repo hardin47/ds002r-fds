@@ -1,7 +1,7 @@
 ---
 title: "Functions + Iteration"
 author: "Jo Hardin"
-subtitle: "October 7 + 9, 2024"
+subtitle: "October 7 + 9 + 16, 2024"
 format: 
   revealjs:
     incremental: false
@@ -31,8 +31,6 @@ library(openintro)
 
 1. R functions
 2. The `map()` function
-
-
 
 # Functions 
 
@@ -402,6 +400,11 @@ map_dbl(.x = fastfood, .f = mean, na.rm = TRUE)
 map_dbl(.x = fastfood, .f = mean)
 ```
 
+# Agenda  10/16/24
+
+1. The `map()` function
+2. Iterating functions
+
 ## The same thing, many ways 
 
 
@@ -589,6 +592,7 @@ pmap(runif)
 ## `map`ping to a data frame
 
 Would be great if the results were a data frame!
+If the function outputs a data frame, then we can use `list_rbind()` and `list_cbind()` to create a data frame as the final `map()` output.
 
 - results as rows: `map() |> list_rbind()`
 - results as columns: `map() |> list_cbind()`
