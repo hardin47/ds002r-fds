@@ -441,6 +441,50 @@ map_dbl(fastfood, ~length(unique(x)))
 ```
 
 
+## `map`ping to a data frame
+
+Would be great if the results were a data frame!
+If the function outputs a data frame, then we can use `list_rbind()` and `list_cbind()` to create a data frame as the final `map()` output.
+
+- results as rows: `map() |> list_rbind()`
+- results as columns: `map() |> list_cbind()`
+
+::: {.panel-tabset}
+
+## function
+```{r}
+col_stats <- function(n) {
+  head(fastfood, n) |> 
+    select(calories, protein, vit_c) |> 
+    summarise_all(mean, na.rm = TRUE) |> 
+    mutate_all(floor) |> 
+    mutate(n = paste("N =", n))
+}
+```
+
+## `map()`
+```{r}
+out1 <- map(c(10,20), col_stats)
+
+out1
+```
+
+## with `list_rbind()`
+```{r}
+out2 <- map(c(10,20), col_stats) |> list_rbind()
+
+out2
+```
+
+## with `list_cbind()`
+```{r}
+out3 <- map(c(10,20), col_stats) |> list_cbind()
+
+out3
+```
+:::
+
+
 
 # Two+ arguments to `map()`
 
@@ -587,49 +631,6 @@ expand_grid(n = c(1, 2, 3),
             max = c(10, 100)) |> 
 pmap(runif)
 ```
-
-
-## `map`ping to a data frame
-
-Would be great if the results were a data frame!
-If the function outputs a data frame, then we can use `list_rbind()` and `list_cbind()` to create a data frame as the final `map()` output.
-
-- results as rows: `map() |> list_rbind()`
-- results as columns: `map() |> list_cbind()`
-
-::: {.panel-tabset}
-
-## function
-```{r}
-col_stats <- function(n) {
-  head(fastfood, n) |> 
-    summarise_all(mean, na.rm = TRUE) |> 
-    mutate_all(floor) |> 
-    mutate(n = paste("N =", n))
-}
-```
-
-## `map()`
-```{r}
-out1 <- map(c(10,20), col_stats)
-
-out1
-```
-
-## with `list_rbind()`
-```{r}
-out2 <- map(c(10,20), col_stats) |> list_rbind()
-
-out2
-```
-
-## with `list_cbind()`
-```{r}
-out3 <- map(c(10,20), col_stats) |> list_cbind()
-
-out3
-```
-:::
 
 
 

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 1 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings\n HW 3 - due 9.24  Quiz 2 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - reg exp 1   WS 9 - reg exp 2\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - functions\n HW 4 - due 10.8  Quiz 3 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n\n HW 5 - due 10.22\n\n\n\nWeek 10  10.28.24\npermutation tests\n\n HW 6 - due 10.29  Quiz 4 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n\n Project 3 - due 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n HW 7 - due 11.12  Quiz 5 11.13\n\n\n\nWeek 13  11.18.24\nSQL\n\n Project 4 - due 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\npresentations (?)\n\nQuiz 6 12.2\n\n\n\nWeek 16  12.9.24\n\n\n Project 5 - due 12.9  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 1 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings\n HW 3 - due 9.24  Quiz 2 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - reg exp 1   WS 9 - reg exp 2\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - functions\n HW 4 - due 10.8  Quiz 3 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - map\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n\n HW 5 - due 10.22\n\n\n\nWeek 10  10.28.24\npermutation tests\n\n HW 6 - due 10.29  Quiz 4 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n\n Project 3 - due 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n HW 7 - due 11.12  Quiz 5 11.13\n\n\n\nWeek 13  11.18.24\nSQL\n\n Project 4 - due 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\npresentations (?)\n\nQuiz 6 12.2\n\n\n\nWeek 16  12.9.24\n\n\n Project 5 - due 12.9  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -2902,7 +2902,7 @@
     "href": "project5.html",
     "title": "Project 5",
     "section": "",
-    "text": "more soon.\n&lt;!–\nupdate everything about your project.\nTo get an A: * do something new / expand extensively on one of the previous projects. - add extensive regular expressions to the project on string data - add a shiny or plotly example to the graphs from TidyTuesday\n\nclean up the entire website\n\nno warnings or messages\nall plots with good labeling\nalt text on all plots\ngood narrative describing\nmaking sure that all work, data sources, etc. are documented appropriately\n\ncorresponding document (text, Word, Google doc, etc.) describing (in enough detail to receive credit!) all of the changes you’ve made from the original set of projects.\n\n\n:::\n\n\nReuseCC BY 4.0"
+    "text": "more soon.\n\n\n:::\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "images/ma154-hwtest.html",
@@ -6864,35 +6864,35 @@
     "href": "slides/2024-10-07-funcmap.html#pmap",
     "title": "Functions + Iteration",
     "section": "pmap()",
-    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 1.018489\n\n[[2]]\n[1] 73.46167 29.68402\n\n[[3]]\n[1] 374.8825 712.0218 601.4413\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 7.93465\n\n[[2]]\n[1] 64.31548 45.94706\n\n[[3]]\n[1] 364.0497 179.3377 806.1126"
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 1.004521\n\n[[2]]\n[1] 40.61353 54.40645\n\n[[3]]\n[1] 146.8198 994.7049 227.5774\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 2.902521\n\n[[2]]\n[1] 72.18918 82.96368\n\n[[3]]\n[1] 545.9659 375.7516 957.6369"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#an-aside",
     "href": "slides/2024-10-07-funcmap.html#an-aside",
     "title": "Functions + Iteration",
     "section": "An aside…",
-    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.4750039 0.7272085 0.2216559\n\nrunif(n = c(1,3))\n\n[1] 0.1039648 0.4814392\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.7570907 0.9404086\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.3726291 0.2985825"
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.7972131 0.7776503 0.6446273\n\nrunif(n = c(1,3))\n\n[1] 0.7958706 0.3593016\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.19026316 0.05290237\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.6557309 0.3127850"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "href": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "title": "Functions + Iteration",
     "section": "pmap() vs map()",
-    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 5.912468\n\n[[2]]\n[1] 56.14211 41.02391\n\n[[3]]\n[1] 670.0626 219.6690 846.0747\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.9279573 0.8221757 0.2871252\n\n$min\n[1] 0.1052171 0.6036288 0.3364597\n\n$max\n[1] 0.51489715 0.94956876 0.08808504"
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 3.331772\n\n[[2]]\n[1] 34.00788 47.23974\n\n[[3]]\n[1] 875.8903 644.6553 396.3393\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.65188811 0.09807021 0.41572872\n\n$min\n[1] 0.21707764 0.03149578 0.97015891\n\n$max\n[1] 0.3260003 0.6082815 0.4005598"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "href": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "title": "Functions + Iteration",
     "section": "pmap() with expand_grid()",
-    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 6.657235\n\n[[2]]\n[1] 35.64939\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 52.57492\n\n[[5]]\n[1] 5.810034 4.373551\n\n[[6]]\n[1] 84.43664 21.38743\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 74.56840 55.74232\n\n[[9]]\n[1] 1.392286 3.550971 4.693901\n\n[[10]]\n[1] 21.77385 73.95207 85.73909\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 49.99284 79.79740 52.90334"
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 2.870685\n\n[[2]]\n[1] 88.65364\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 10.59502\n\n[[5]]\n[1] 8.876679 5.281895\n\n[[6]]\n[1] 56.30893 55.33807\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 38.14550 57.49029\n\n[[9]]\n[1] 2.515300 7.780722 3.304442\n\n[[10]]\n[1] 13.39158 41.78675 73.49880\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 22.90207 89.97848 98.82485"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#mapping-to-a-data-frame",
     "href": "slides/2024-10-07-funcmap.html#mapping-to-a-data-frame",
     "title": "Functions + Iteration",
     "section": "mapping to a data frame",
-    "text": "mapping to a data frame\nWould be great if the results were a data frame! If the function outputs a data frame, then we can use list_rbind() and list_cbind() to create a data frame as the final map() output.\n\nresults as rows: map() |&gt; list_rbind()\nresults as columns: map() |&gt; list_cbind()\n\n\nfunctionmap()with list_rbind()with list_cbind()\n\n\n\ncol_stats &lt;- function(n) {\n  head(fastfood, n) |&gt; \n    summarise_all(mean, na.rm = TRUE) |&gt; \n    mutate_all(floor) |&gt; \n    mutate(n = paste(\"N =\", n))\n}\n\n\n\n\nout1 &lt;- map(c(10,20), col_stats)\n\nout1\n\n[[1]]\n# A tibble: 1 × 18\n  restaurant  item calories cal_fat total_fat sat_fat trans_fat cholesterol\n       &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n1         NA    NA      657     291        32      11         1         116\n# ℹ 10 more variables: sodium &lt;dbl&gt;, total_carb &lt;dbl&gt;, fiber &lt;dbl&gt;,\n#   sugar &lt;dbl&gt;, protein &lt;dbl&gt;, vit_a &lt;dbl&gt;, vit_c &lt;dbl&gt;, calcium &lt;dbl&gt;,\n#   salad &lt;dbl&gt;, n &lt;chr&gt;\n\n[[2]]\n# A tibble: 1 × 18\n  restaurant  item calories cal_fat total_fat sat_fat trans_fat cholesterol\n       &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n1         NA    NA      582     247        27       9         0          99\n# ℹ 10 more variables: sodium &lt;dbl&gt;, total_carb &lt;dbl&gt;, fiber &lt;dbl&gt;,\n#   sugar &lt;dbl&gt;, protein &lt;dbl&gt;, vit_a &lt;dbl&gt;, vit_c &lt;dbl&gt;, calcium &lt;dbl&gt;,\n#   salad &lt;dbl&gt;, n &lt;chr&gt;\n\n\n\n\n\nout2 &lt;- map(c(10,20), col_stats) |&gt; list_rbind()\n\nout2\n\n# A tibble: 2 × 18\n  restaurant  item calories cal_fat total_fat sat_fat trans_fat cholesterol\n       &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;\n1         NA    NA      657     291        32      11         1         116\n2         NA    NA      582     247        27       9         0          99\n# ℹ 10 more variables: sodium &lt;dbl&gt;, total_carb &lt;dbl&gt;, fiber &lt;dbl&gt;,\n#   sugar &lt;dbl&gt;, protein &lt;dbl&gt;, vit_a &lt;dbl&gt;, vit_c &lt;dbl&gt;, calcium &lt;dbl&gt;,\n#   salad &lt;dbl&gt;, n &lt;chr&gt;\n\n\n\n\n\nout3 &lt;- map(c(10,20), col_stats) |&gt; list_cbind()\n\nout3\n\n# A tibble: 1 × 36\n  restaurant...1 item...2 calories...3 cal_fat...4 total_fat...5 sat_fat...6\n           &lt;dbl&gt;    &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;\n1             NA       NA          657         291            32          11\n# ℹ 30 more variables: trans_fat...7 &lt;dbl&gt;, cholesterol...8 &lt;dbl&gt;,\n#   sodium...9 &lt;dbl&gt;, total_carb...10 &lt;dbl&gt;, fiber...11 &lt;dbl&gt;,\n#   sugar...12 &lt;dbl&gt;, protein...13 &lt;dbl&gt;, vit_a...14 &lt;dbl&gt;, vit_c...15 &lt;dbl&gt;,\n#   calcium...16 &lt;dbl&gt;, salad...17 &lt;dbl&gt;, n...18 &lt;chr&gt;, restaurant...19 &lt;dbl&gt;,\n#   item...20 &lt;dbl&gt;, calories...21 &lt;dbl&gt;, cal_fat...22 &lt;dbl&gt;,\n#   total_fat...23 &lt;dbl&gt;, sat_fat...24 &lt;dbl&gt;, trans_fat...25 &lt;dbl&gt;,\n#   cholesterol...26 &lt;dbl&gt;, sodium...27 &lt;dbl&gt;, total_carb...28 &lt;dbl&gt;, …"
+    "text": "mapping to a data frame\nWould be great if the results were a data frame! If the function outputs a data frame, then we can use list_rbind() and list_cbind() to create a data frame as the final map() output.\n\nresults as rows: map() |&gt; list_rbind()\nresults as columns: map() |&gt; list_cbind()\n\n\nfunctionmap()with list_rbind()with list_cbind()\n\n\n\ncol_stats &lt;- function(n) {\n  head(fastfood, n) |&gt; \n    select(calories, protein, vit_c) |&gt; \n    summarise_all(mean, na.rm = TRUE) |&gt; \n    mutate_all(floor) |&gt; \n    mutate(n = paste(\"N =\", n))\n}\n\n\n\n\nout1 &lt;- map(c(10,20), col_stats)\n\nout1\n\n[[1]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657      39    12 N = 10\n\n[[2]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      582      34    12 N = 20\n\n\n\n\n\nout2 &lt;- map(c(10,20), col_stats) |&gt; list_rbind()\n\nout2\n\n# A tibble: 2 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657      39    12 N = 10\n2      582      34    12 N = 20\n\n\n\n\n\nout3 &lt;- map(c(10,20), col_stats) |&gt; list_cbind()\n\nout3\n\n# A tibble: 1 × 8\n  calories...1 protein...2 vit_c...3 n...4  calories...5 protein...6 vit_c...7\n         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;\n1          657          39        12 N = 10          582          34        12\n# ℹ 1 more variable: n...8 &lt;chr&gt;"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#functions-summary",
@@ -6941,7 +6941,7 @@
     "href": "slides/2024-10-07-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5802409\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5241043"
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5536439\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.6020561"
   },
   {
     "objectID": "slides/2024-09-30-regex.html#bounding-words-vs.-phrases",
@@ -6956,5 +6956,96 @@
     "title": "Regular Expressions",
     "section": "Bounding words vs. phrases - solutions",
     "text": "Bounding words vs. phrases - solutions\n\nstrings &lt;- c(\"apple\", \"applet\", \"pineapple\", \"apple pie\",\n             \"I love apple pie\")\n\nstr_subset(strings, \"\\\\bapple\\\\b\")\n\n[1] \"apple\"            \"apple pie\"        \"I love apple pie\"\n\nstr_subset(strings, \"^apple$\")\n\n[1] \"apple\"\n\nstr_subset(strings, \"\\\\bapple pie\\\\b\")\n\n[1] \"apple pie\"        \"I love apple pie\"\n\nstr_subset(strings, \"^apple pie$\")\n\n[1] \"apple pie\"\n\nstr_extract(strings, \"\\\\bapple\\\\b\")\n\n[1] \"apple\" NA      NA      \"apple\" \"apple\"\n\nstr_extract(strings, \"^apple$\")\n\n[1] \"apple\" NA      NA      NA      NA     \n\nstr_extract(strings, \"\\\\bapple pie\\\\b\")\n\n[1] NA          NA          NA          \"apple pie\" \"apple pie\"\n\nstr_extract(strings, \"^apple pie$\")\n\n[1] NA          NA          NA          \"apple pie\" NA"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#object-names",
+    "href": "slides/2024-10-16-help.html#object-names",
+    "title": "Help me help you",
+    "section": "Object names",
+    "text": "Object names\n\nThere are only two hard things in Computer Science: cache invalidation and naming things.\n\n\n– Phil Karlton"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#object-names-1",
+    "href": "slides/2024-10-16-help.html#object-names-1",
+    "title": "Help me help you",
+    "section": "Object names",
+    "text": "Object names\nVariable and function names should use only lowercase letters, numbers, and _. Use underscores (_) (so called snake case) to separate words within a name.\n\n# Good\nday_one\nday_1\n\n# Bad\nDayOne\ndayone\n\n# Really bad\nT &lt;- FALSE\nc &lt;- 10\nmean &lt;- function(x) sum(x)"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#spacing",
+    "href": "slides/2024-10-16-help.html#spacing",
+    "title": "Help me help you",
+    "section": "Spacing",
+    "text": "Spacing\nDo not put spaces inside or outside parentheses for regular funtion calls.\n\n# Good\nmean(x, na.rm = TRUE)\n\n# Bad\nmean (x, na.rm = TRUE)\nmean( x, na.rm = TRUE )"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#infix-operators",
+    "href": "slides/2024-10-16-help.html#infix-operators",
+    "title": "Help me help you",
+    "section": "Infix operators",
+    "text": "Infix operators\nMost infix operators (==, +, -, &lt;-, etc.) should always be surrounded by spaces:\n\n# Good\nheight &lt;- (feet * 12) + inches\nmean(x, na.rm = TRUE)\n\n# Bad\nheight&lt;-feet*12+inches\nmean(x, na.rm=TRUE)"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#long-function-calls",
+    "href": "slides/2024-10-16-help.html#long-function-calls",
+    "title": "Help me help you",
+    "section": "Long function calls",
+    "text": "Long function calls\nIf a function call is too long to fit on a single line, use one line each for the function name, each argument, and the closing ). This makes the code easier to read and to change later.\n\n# Good\ndo_something_very_complicated(\n  something = \"that\",\n  requires = many,\n  arguments = \"some of which may be long\"\n)\n\n# Bad\ndo_something_very_complicated(\"that\", requires, many, arguments,\n                              \"some of which may be long\"\n                              )"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#long-lines-piping",
+    "href": "slides/2024-10-16-help.html#long-lines-piping",
+    "title": "Help me help you",
+    "section": "Long lines (piping)",
+    "text": "Long lines (piping)\nIf the arguments to a function don’t all fit on one line, put each argument on its own line and indent:\n\n# Good\niris |&gt;\n  summarise(\n    Sepal.Length = mean(Sepal.Length),\n    Sepal.Width = mean(Sepal.Width),\n    .by = Species\n  )\n\n# Bad\niris |&gt;\n  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)\n\n# Also bad\nsummarise(\n  iris,\n  Sepal.Length = mean(Sepal.Length),\n  Sepal.Width = mean(Sepal.Width),\n  .by = Species\n)"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#short-lines-piping",
+    "href": "slides/2024-10-16-help.html#short-lines-piping",
+    "title": "Help me help you",
+    "section": "Short lines (piping)",
+    "text": "Short lines (piping)\nSometimes it’s useful to include a short pipe as an argument to a function in a longer pipe. Carefully consider whether the code is more readable with a short inline pipe or if it’s better to move the code outside the pipe and give it an evocative name.\n\n# Good\nx |&gt;\n  semi_join(y |&gt; filter(is_valid))\n\n# Ok\nx |&gt;\n  select(a, b, w) |&gt;\n  left_join(y |&gt; select(a, b, v), join_by(a, b))\n\n# Better\nx_join &lt;- x |&gt; select(a, b, w)\ny_join &lt;- y |&gt; select(a, b, v)\nleft_join(x_join, y_join, join_by(a, b))"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#how-to-reprex",
+    "href": "slides/2024-10-16-help.html#how-to-reprex",
+    "title": "Help me help you",
+    "section": "How to reprex()?",
+    "text": "How to reprex()?\nStep 1. Write some R code and copy it into the clipboard (command-c or ctrl-c).\nStep 2. Type reprex() into the Console.\nStep 3. Look at the Viewer to the right. Copy the Viewer output into GitHub, Slack, an email, Stack Overflow, Posit Community, etc."
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#reprex-example---1st-try",
+    "href": "slides/2024-10-16-help.html#reprex-example---1st-try",
+    "title": "Help me help you",
+    "section": "reprex() example - 1st try",
+    "text": "reprex() example - 1st try\nCode:\n\njan31 + months(0:11) + days(31)\n\nOutput of reprex():\n\njan31 + months(0:11) + days(31)\n#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#reprex-example---2nd-try",
+    "href": "slides/2024-10-16-help.html#reprex-example---2nd-try",
+    "title": "Help me help you",
+    "section": "reprex() example - 2nd try",
+    "text": "reprex() example - 2nd try\nCode:\n\n  jan31 &lt;- ymd(\"2021-01-31\")\n  jan31 + months(0:11) + days(31)\n\nOutput of reprex():\n\n  jan31 &lt;- ymd(\"2021-01-31\")\n#&gt; Error in ymd(\"2021-01-31\"): could not find function \"ymd\"\n  jan31 + months(0:11) + days(31)\n#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found"
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#reprex-example---3rd-try",
+    "href": "slides/2024-10-16-help.html#reprex-example---3rd-try",
+    "title": "Help me help you",
+    "section": "reprex() example - 3rd try",
+    "text": "reprex() example - 3rd try\nCode:\n\n  library(lubridate)\n  jan31 &lt;- ymd(\"2021-01-31\")\n  jan31 + months(0:11) + days(31)\n\nOutput of reprex():\n\n  library(lubridate)\n#&gt; \n#&gt; Attaching package: 'lubridate'\n#&gt; The following objects are masked from 'package:base':\n#&gt; \n#&gt;     date, intersect, setdiff, union\n  jan31 &lt;- ymd(\"2021-01-31\")\n  jan31 + months(0:11) + days(31)\n#&gt;  [1] \"2021-03-03\" NA           \"2021-05-01\" NA           \"2021-07-01\"\n#&gt;  [6] NA           \"2021-08-31\" \"2021-10-01\" NA           \"2021-12-01\"\n#&gt; [11] NA           \"2022-01-31\""
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#style",
+    "href": "slides/2024-10-16-help.html#style",
+    "title": "Help me help you",
+    "section": "Style",
+    "text": "Style\nThe point is that coding happens in community. Not only do you want your code to run well, but you want other people to be able to understand it and use it. The more that you and others use the same syntax, the better the communication will be."
+  },
+  {
+    "objectID": "slides/2024-10-16-help.html#reproducible-example-w-chatgpt",
+    "href": "slides/2024-10-16-help.html#reproducible-example-w-chatgpt",
+    "title": "Help me help you",
+    "section": "Reproducible example w chatGPT",
+    "text": "Reproducible example w chatGPT\n\ngenerate a reprex in R to demonstrate how to reorder a factor variable"
   }
 ]
