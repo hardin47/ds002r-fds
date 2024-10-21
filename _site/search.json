@@ -7116,35 +7116,35 @@
     "href": "slides/2024-10-21-iters.html#code-so-far",
     "title": "Iterations",
     "section": "Code so far",
-    "text": "Code so far\n\nhats &lt;- 1:10\nrandom_hats &lt;- sample(hats, size = 10, replace = TRUE)\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE\n\n\n\nDo we have a good estimate of the probability of interest?"
+    "text": "Code so far\n\nhats &lt;- 1:10\nrandom_hats &lt;- sample(hats, size = 10, replace = FALSE)\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE\n\n\n\nDo we have a good estimate of the probability of interest?"
   },
   {
     "objectID": "slides/2024-10-21-iters.html#function",
     "href": "slides/2024-10-21-iters.html#function",
     "title": "Iterations",
     "section": "Function",
-    "text": "Function\n\nremove the magic number 10\n\n\nhat_match &lt;- function(n){\n  hats &lt;- 1:n\n  random_hats &lt;- sample(hats, size = n, replace = TRUE)\n  sum(hats == random_hats) &gt; 0\n}\n\nhat_match(10)\n\n[1] FALSE\n\nhat_match(47)\n\n[1] TRUE"
+    "text": "Function\n\nremove the magic number 10\n\n\nhat_match &lt;- function(n){\n  hats &lt;- 1:n\n  random_hats &lt;- sample(hats, size = n, replace = FALSE)\n  sum(hats == random_hats) &gt; 0\n}\n\nhat_match(10)\n\n[1] TRUE\n\nhat_match(47)\n\n[1] FALSE"
   },
   {
     "objectID": "slides/2024-10-21-iters.html#iterate",
     "href": "slides/2024-10-21-iters.html#iterate",
     "title": "Iterations",
     "section": "Iterate",
-    "text": "Iterate\n\nmap_lgl(1:10, ~hat_match(n = 10))\n\n [1]  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE\n\nmap_lgl(1:10, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.6"
+    "text": "Iterate\n\nmap_lgl(1:10, ~hat_match(n = 10))\n\n [1] FALSE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE\n\nmap_lgl(1:10, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.7"
   },
   {
     "objectID": "slides/2024-10-21-iters.html#reproducible",
     "href": "slides/2024-10-21-iters.html#reproducible",
     "title": "Iterations",
     "section": "Reproducible",
-    "text": "Reproducible\n\nset.seed(4747)\nnum_iter &lt;- 1000\n\nmap_lgl(1:num_iter, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.661"
+    "text": "Reproducible\n\nset.seed(4747)\nnum_iter &lt;- 10000\n\nmap_lgl(1:num_iter, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.6329"
   },
   {
     "objectID": "slides/2024-10-21-iters.html#vary-number-of-hats",
     "href": "slides/2024-10-21-iters.html#vary-number-of-hats",
     "title": "Iterations",
     "section": "Vary number of hats",
-    "text": "Vary number of hats\n\nhat_match_prob &lt;- function(n, reps){\n  prob &lt;- map_lgl(1:reps, ~hat_match(n = n)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_hats = n))\n}\n\nset.seed(47)\nmap(1:20, hat_match_prob, reps = num_iter) |&gt; \n  list_rbind()\n\n   match_prob num_hats\n1       1.000        1\n2       0.751        2\n3       0.714        3\n4       0.714        4\n5       0.656        5\n6       0.649        6\n7       0.666        7\n8       0.656        8\n9       0.657        9\n10      0.635       10\n11      0.653       11\n12      0.646       12\n13      0.648       13\n14      0.648       14\n15      0.636       15\n16      0.642       16\n17      0.656       17\n18      0.625       18\n19      0.653       19\n20      0.645       20"
+    "text": "Vary number of hats\n\nhat_match_prob &lt;- function(n, reps){\n  prob &lt;- map_lgl(1:reps, ~hat_match(n = n)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_hats = n))\n}\n\nset.seed(47)\nmap(1:20, hat_match_prob, reps = num_iter) |&gt; \n  list_rbind()\n\n   match_prob num_hats\n1      1.0000        1\n2      0.4964        2\n3      0.6695        3\n4      0.6241        4\n5      0.6376        5\n6      0.6290        6\n7      0.6299        7\n8      0.6299        8\n9      0.6373        9\n10     0.6273       10\n11     0.6319       11\n12     0.6348       12\n13     0.6393       13\n14     0.6300       14\n15     0.6280       15\n16     0.6396       16\n17     0.6355       17\n18     0.6283       18\n19     0.6304       19\n20     0.6461       20"
   },
   {
     "objectID": "slides/2024-10-21-iters.html#visualizing",

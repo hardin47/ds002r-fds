@@ -141,7 +141,7 @@ sum(hats == random_hats) > 0
 
 ```{r}
 hats <- 1:10
-random_hats <- sample(hats, size = 10, replace = TRUE)
+random_hats <- sample(hats, size = 10, replace = FALSE)
 sum(hats == random_hats) > 0
 ```
 
@@ -154,7 +154,7 @@ sum(hats == random_hats) > 0
 ```{r}
 hat_match <- function(n){
   hats <- 1:n
-  random_hats <- sample(hats, size = n, replace = TRUE)
+  random_hats <- sample(hats, size = n, replace = FALSE)
   sum(hats == random_hats) > 0
 }
 
@@ -175,7 +175,7 @@ map_lgl(1:10, ~hat_match(n = 10)) |>
 
 ```{r}
 set.seed(4747)
-num_iter <- 1000
+num_iter <- 10000
 
 map_lgl(1:num_iter, ~hat_match(n = 10)) |> 
   mean()
