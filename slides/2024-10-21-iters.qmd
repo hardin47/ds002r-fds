@@ -55,14 +55,14 @@ The goal of simulating a complicated model is not only to create a program which
 
 
 
-## Aside: a few R functions (`ifelse()`)
+## Aside: `ifelse()`
 ```{r}
 data.frame(value = c(-2:2)) |>
   mutate(abs_value = ifelse(value >=0, value, -value))  # abs val
 ```
 
 
-## Aside: a few R functions (`case_when()`)
+## Aside: `case_when()`
 ```{r}
 set.seed(4747)
 diamonds |> select(carat, cut, color, price) |>
@@ -73,8 +73,7 @@ diamonds |> select(carat, cut, color, price) |>
     TRUE ~ "inexpensive"))
 ```
 
-## Aside: a few R functions (`sample()`)
-
+## Aside: `sample()`
 *sampling*, *shuffling*,  and *resampling*: `sample()` 
 
 ```{r}
@@ -91,7 +90,7 @@ sample(alph, 10, replace = FALSE)  # shuffle
 sample(alph, 10, replace = TRUE)  # resample
 ```
 
-## Aside: a few R functions (`set.seed()`)
+## Aside: `set.seed()`
 
 What if we want to be able to generate the **same** random numbers (here on the interval from 0 to 1) over and over?
 

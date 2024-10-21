@@ -1266,11 +1266,108 @@ jan31 + months(0:11) + days(31)
 
 [^67]: e. There is no error.
 
+---
+
+
+(@) In R the `ifelse()` function takes the arguments:[^68]
+   a. question, yes, no
+   b. question, no, yes
+   c. statement, yes, no
+   d. statement, no, yes
+   e. option1, option2, option3
+
+
+[^68]: a. question, yes, no
+
+---
+
+(@) What is the output of the following:[^69]
+    a.	"cat", 30, "cat", "cat", 6 
+    b.	"cat", "30", "cat", "cat", "6"
+    c.	1, "cat", 5, "cat", "cat"
+    d.	1, "cat", 5, NA, "cat"
+    e.	"1", "cat", "5", NA, "cat"
+
+```{r}
+#| eval: false
+#| echo: true
+data <- c(1, 30, 5, NA, 6)
+
+ifelse(data > 5, "cat", data)
+```
+
+[^69]: e.	"1", "cat", "5", NA, "cat"  (Note that the numbers were converted to character strings!)
+
+---
+
+(@) In R, the `set.seed()` function[^70]
+   a. makes your computations go faster
+   b. keeps track of your computation time
+   c. provides an important parameter
+   d. repeats the function
+   e. makes your results reproducible
+
+[^70]: e. makes your results reproducible
 
 
 ---
 
+(@) What does the following give us?[^71]
+  a. the number of hats that match
+  b. the number of hats that don't match
+  c. the proportion of hats that match
+  d. the proportion of hats that don't match
+  e. whether or not at least one hat matches
+  
+```{r}
+#| echo: false
 
+hats <- 1:10
+random_hats <- sample(hats, size = 10, replace = TRUE)
+```
+  
+```{r}
+#| echo: true
+sum(hats == random_hats)
+```
+
+[^71]: a. the number of hats that match
+
+
+---
+
+(@) What does the following give us?[^72]
+  a. the number of hats that match
+  b. the number of hats that don't match
+  c. the proportion of hats that match
+  d. the proportion of hats that don't match
+  e. whether or not at least one hat matches
+  
+```{r}
+#| echo: true
+mean(hats == random_hats)
+```
+
+[^72]: c. the proportion of hats that match
+
+
+---
+
+(@) What does the following give us?[^73]
+  a. the number of hats that match
+  b. the number of hats that don't match
+  c. the proportion of hats that match
+  d. the proportion of hats that don't match
+  e. whether or not at least one hat matches
+  
+```{r}
+#| echo: true
+sum(hats == random_hats) > 0
+```
+
+[^73]: e. whether or not at least one hat matches
+
+---
 
 
 ---
