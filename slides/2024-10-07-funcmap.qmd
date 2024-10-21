@@ -457,7 +457,6 @@ col_stats <- function(n) {
   head(fastfood, n) |> 
     select(calories, protein, vit_c) |> 
     summarise_all(mean, na.rm = TRUE) |> 
-    mutate_all(floor) |> 
     mutate(n = paste("N =", n))
 }
 ```

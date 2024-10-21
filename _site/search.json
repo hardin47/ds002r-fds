@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 1 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings\n HW 3 - due 9.24  Quiz 2 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - reg exp 1   WS 9 - reg exp 2\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - functions\n HW 4 - due 10.8  Quiz 3 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - map\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n\n HW 5 - due 10.22\n\n\n\nWeek 10  10.28.24\npermutation tests\n\n HW 6 - due 10.29  Quiz 4 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n\n Project 3 - due 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n HW 7 - due 11.12  Quiz 5 11.13\n\n\n\nWeek 13  11.18.24\nSQL\n\n Project 4 - due 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\npresentations (?)\n\nQuiz 6 12.2\n\n\n\nWeek 16  12.9.24\n\n\n Project 5 - due 12.9  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 1 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings\n HW 3 - due 9.24  Quiz 2 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - reg exp 1   WS 9 - reg exp 2\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - functions\n HW 4 - due 10.8  Quiz 3 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - map\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations   WS 12 - probability simulation\n HW 5 - due 10.22\n\n\n\nWeek 10  10.28.24\npermutation tests\n\n HW 6 - due 10.29  Quiz 4 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n\n Project 3 - due 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n HW 7 - due 11.12  Quiz 5 11.13\n\n\n\nWeek 13  11.18.24\nSQL\n\n Project 4 - due 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\npresentations (?)\n\nQuiz 6 12.2\n\n\n\nWeek 16  12.9.24\n\n\n Project 5 - due 12.9  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -6864,35 +6864,35 @@
     "href": "slides/2024-10-07-funcmap.html#pmap",
     "title": "Functions + Iteration",
     "section": "pmap()",
-    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 1.004521\n\n[[2]]\n[1] 40.61353 54.40645\n\n[[3]]\n[1] 146.8198 994.7049 227.5774\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 2.902521\n\n[[2]]\n[1] 72.18918 82.96368\n\n[[3]]\n[1] 545.9659 375.7516 957.6369"
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 5.225703\n\n[[2]]\n[1] 39.04609 77.74412\n\n[[3]]\n[1] 684.9034 178.5490 249.8685\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 4.893553\n\n[[2]]\n[1] 67.83282 39.40317\n\n[[3]]\n[1] 387.5501 903.4603 368.4088"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#an-aside",
     "href": "slides/2024-10-07-funcmap.html#an-aside",
     "title": "Functions + Iteration",
     "section": "An aside…",
-    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.7972131 0.7776503 0.6446273\n\nrunif(n = c(1,3))\n\n[1] 0.7958706 0.3593016\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.19026316 0.05290237\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.6557309 0.3127850"
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.15221096 0.02282148 0.47834053\n\nrunif(n = c(1,3))\n\n[1] 0.06502932 0.48987447\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.4653732 0.4341146\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.1156808 0.6589181"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "href": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "title": "Functions + Iteration",
     "section": "pmap() vs map()",
-    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 3.331772\n\n[[2]]\n[1] 34.00788 47.23974\n\n[[3]]\n[1] 875.8903 644.6553 396.3393\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.65188811 0.09807021 0.41572872\n\n$min\n[1] 0.21707764 0.03149578 0.97015891\n\n$max\n[1] 0.3260003 0.6082815 0.4005598"
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 3.198242\n\n[[2]]\n[1] 97.56940 19.76633\n\n[[3]]\n[1] 615.2259 924.4139 169.4400\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.51307808 0.05441186 0.23625722\n\n$min\n[1] 0.5737369 0.4321635 0.3027663\n\n$max\n[1] 0.0599810 0.2173311 0.1380818"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "href": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "title": "Functions + Iteration",
     "section": "pmap() with expand_grid()",
-    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 2.870685\n\n[[2]]\n[1] 88.65364\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 10.59502\n\n[[5]]\n[1] 8.876679 5.281895\n\n[[6]]\n[1] 56.30893 55.33807\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 38.14550 57.49029\n\n[[9]]\n[1] 2.515300 7.780722 3.304442\n\n[[10]]\n[1] 13.39158 41.78675 73.49880\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 22.90207 89.97848 98.82485"
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 1.605619\n\n[[2]]\n[1] 30.11671\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 66.65871\n\n[[5]]\n[1] 9.770909 2.351709\n\n[[6]]\n[1] 50.73219 34.72296\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 45.00119 98.41663\n\n[[9]]\n[1] 5.695747 2.293408 9.070559\n\n[[10]]\n[1] 76.60333 28.09430 21.61662\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 37.86501 87.10527 44.67924"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#mapping-to-a-data-frame",
     "href": "slides/2024-10-07-funcmap.html#mapping-to-a-data-frame",
     "title": "Functions + Iteration",
     "section": "mapping to a data frame",
-    "text": "mapping to a data frame\nWould be great if the results were a data frame! If the function outputs a data frame, then we can use list_rbind() and list_cbind() to create a data frame as the final map() output.\n\nresults as rows: map() |&gt; list_rbind()\nresults as columns: map() |&gt; list_cbind()\n\n\nfunctionmap()with list_rbind()with list_cbind()\n\n\n\ncol_stats &lt;- function(n) {\n  head(fastfood, n) |&gt; \n    select(calories, protein, vit_c) |&gt; \n    summarise_all(mean, na.rm = TRUE) |&gt; \n    mutate_all(floor) |&gt; \n    mutate(n = paste(\"N =\", n))\n}\n\n\n\n\nout1 &lt;- map(c(10,20), col_stats)\n\nout1\n\n[[1]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657      39    12 N = 10\n\n[[2]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      582      34    12 N = 20\n\n\n\n\n\nout2 &lt;- map(c(10,20), col_stats) |&gt; list_rbind()\n\nout2\n\n# A tibble: 2 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657      39    12 N = 10\n2      582      34    12 N = 20\n\n\n\n\n\nout3 &lt;- map(c(10,20), col_stats) |&gt; list_cbind()\n\nout3\n\n# A tibble: 1 × 8\n  calories...1 protein...2 vit_c...3 n...4  calories...5 protein...6 vit_c...7\n         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;\n1          657          39        12 N = 10          582          34        12\n# ℹ 1 more variable: n...8 &lt;chr&gt;"
+    "text": "mapping to a data frame\nWould be great if the results were a data frame! If the function outputs a data frame, then we can use list_rbind() and list_cbind() to create a data frame as the final map() output.\n\nresults as rows: map() |&gt; list_rbind()\nresults as columns: map() |&gt; list_cbind()\n\n\nfunctionmap()with list_rbind()with list_cbind()\n\n\n\ncol_stats &lt;- function(n) {\n  head(fastfood, n) |&gt; \n    select(calories, protein, vit_c) |&gt; \n    summarise_all(mean, na.rm = TRUE) |&gt; \n    mutate(n = paste(\"N =\", n))\n}\n\n\n\n\nout1 &lt;- map(c(10,20), col_stats)\n\nout1\n\n[[1]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657    39.5  12.3 N = 10\n\n[[2]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     582.    34.6  12.2 N = 20\n\n\n\n\n\nout2 &lt;- map(c(10,20), col_stats) |&gt; list_rbind()\n\nout2\n\n# A tibble: 2 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     657     39.5  12.3 N = 10\n2     582.    34.6  12.2 N = 20\n\n\n\n\n\nout3 &lt;- map(c(10,20), col_stats) |&gt; list_cbind()\n\nout3\n\n# A tibble: 1 × 8\n  calories...1 protein...2 vit_c...3 n...4  calories...5 protein...6 vit_c...7\n         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;\n1          657        39.5      12.3 N = 10         582.        34.6      12.2\n# ℹ 1 more variable: n...8 &lt;chr&gt;"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#functions-summary",
@@ -6941,7 +6941,7 @@
     "href": "slides/2024-10-07-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5536439\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.6020561"
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5367964\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5771717"
   },
   {
     "objectID": "slides/2024-09-30-regex.html#bounding-words-vs.-phrases",
@@ -7047,5 +7047,313 @@
     "title": "Help me help you",
     "section": "Reproducible example w chatGPT",
     "text": "Reproducible example w chatGPT\n\ngenerate a reprex in R to demonstrate how to reorder a factor variable"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#goals-of-simulating-complicated-models",
+    "href": "slides/2024-10-21-iters.html#goals-of-simulating-complicated-models",
+    "title": "Iterations",
+    "section": "Goals of Simulating Complicated Models",
+    "text": "Goals of Simulating Complicated Models\nThe goal of simulating a complicated model is not only to create a program which will provide the desired results. We also hope to be able to write code such that:\n\nThe problem is broken down into small pieces.\nThe problem has checks in it to see what works (run the lines inside the functions!).\nuses simple code (as often as possible)."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#monte-carlo-from-a-population-to",
+    "href": "slides/2024-10-21-iters.html#monte-carlo-from-a-population-to",
+    "title": "Iterations",
+    "section": "Monte Carlo from a population to…",
+    "text": "Monte Carlo from a population to…\n\n\n…simulate as easier than calculus for estimating probabilities.\n…simulate to understand complicated models.\n…simulate to consider statistical methods with fewer assumptions."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#aside-a-few-r-functions-ifelse",
+    "href": "slides/2024-10-21-iters.html#aside-a-few-r-functions-ifelse",
+    "title": "Iterations",
+    "section": "Aside: a few R functions (ifelse())",
+    "text": "Aside: a few R functions (ifelse())\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;=0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#aside-a-few-r-functions-case_when",
+    "href": "slides/2024-10-21-iters.html#aside-a-few-r-functions-case_when",
+    "title": "Iterations",
+    "section": "Aside: a few R functions (case_when())",
+    "text": "Aside: a few R functions (case_when())\n\nset.seed(4747)\ndiamonds |&gt; select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(price_cat = case_when(\n    price &gt; 10000 ~ \"expensive\",\n    price &gt; 1500 ~ \"medium\", \n    TRUE ~ \"inexpensive\"))\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#aside-a-few-r-functions-sample",
+    "href": "slides/2024-10-21-iters.html#aside-a-few-r-functions-sample",
+    "title": "Iterations",
+    "section": "Aside: a few R functions (sample())",
+    "text": "Aside: a few R functions (sample())\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, 5, replace = FALSE) # sample (from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, 5, replace = TRUE) # sample (from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#aside-a-few-r-functions-set.seed",
+    "href": "slides/2024-10-21-iters.html#aside-a-few-r-functions-set.seed",
+    "title": "Iterations",
+    "section": "Aside: a few R functions (set.seed())",
+    "text": "Aside: a few R functions (set.seed())\nWhat if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#step-1-representing-the-hats",
+    "href": "slides/2024-10-21-iters.html#step-1-representing-the-hats",
+    "title": "Iterations",
+    "section": "Step 1: representing the hats",
+    "text": "Step 1: representing the hats\n\nhats &lt;- 1:10\nhats\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#step-2-everyone-draws-a-hat",
+    "href": "slides/2024-10-21-iters.html#step-2-everyone-draws-a-hat",
+    "title": "Iterations",
+    "section": "Step 2: everyone draws a hat",
+    "text": "Step 2: everyone draws a hat\n\nrandom_hats &lt;- sample(hats, size = 10, replace = FALSE)\n\nhats\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nrandom_hats\n\n [1]  4  6  9  3  5 10  2  8  1  7"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#step-3-check-who-got-their-original-hat",
+    "href": "slides/2024-10-21-iters.html#step-3-check-who-got-their-original-hat",
+    "title": "Iterations",
+    "section": "Step 3: check who got their original hat",
+    "text": "Step 3: check who got their original hat\n\nhats == random_hats\n\n [1] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE\n\n# TRUE is 1, FALSE is 0\nsum(hats == random_hats)\n\n[1] 2\n\n# did at least one person get their hat?\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#code-so-far",
+    "href": "slides/2024-10-21-iters.html#code-so-far",
+    "title": "Iterations",
+    "section": "Code so far",
+    "text": "Code so far\n\nhats &lt;- 1:10\nrandom_hats &lt;- sample(hats, size = 10, replace = TRUE)\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE\n\n\n\nDo we have a good estimate of the probability of interest?"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#function",
+    "href": "slides/2024-10-21-iters.html#function",
+    "title": "Iterations",
+    "section": "Function",
+    "text": "Function\n\nremove the magic number 10\n\n\nhat_match &lt;- function(n){\n  hats &lt;- 1:n\n  random_hats &lt;- sample(hats, size = n, replace = TRUE)\n  sum(hats == random_hats) &gt; 0\n}\n\nhat_match(10)\n\n[1] FALSE\n\nhat_match(47)\n\n[1] TRUE"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#iterate",
+    "href": "slides/2024-10-21-iters.html#iterate",
+    "title": "Iterations",
+    "section": "Iterate",
+    "text": "Iterate\n\nmap_lgl(1:10, ~hat_match(n = 10))\n\n [1]  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE\n\nmap_lgl(1:10, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.6"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#reproducible",
+    "href": "slides/2024-10-21-iters.html#reproducible",
+    "title": "Iterations",
+    "section": "Reproducible",
+    "text": "Reproducible\n\nset.seed(4747)\nnum_iter &lt;- 1000\n\nmap_lgl(1:num_iter, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.661"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#vary-number-of-hats",
+    "href": "slides/2024-10-21-iters.html#vary-number-of-hats",
+    "title": "Iterations",
+    "section": "Vary number of hats",
+    "text": "Vary number of hats\n\nhat_match_prob &lt;- function(n, reps){\n  prob &lt;- map_lgl(1:reps, ~hat_match(n = n)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_hats = n))\n}\n\nset.seed(47)\nmap(1:20, hat_match_prob, reps = num_iter) |&gt; \n  list_rbind()\n\n   match_prob num_hats\n1       1.000        1\n2       0.751        2\n3       0.714        3\n4       0.714        4\n5       0.656        5\n6       0.649        6\n7       0.666        7\n8       0.656        8\n9       0.657        9\n10      0.635       10\n11      0.653       11\n12      0.646       12\n13      0.648       13\n14      0.648       14\n15      0.636       15\n16      0.642       16\n17      0.656       17\n18      0.625       18\n19      0.653       19\n20      0.645       20"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#visualizing",
+    "href": "slides/2024-10-21-iters.html#visualizing",
+    "title": "Iterations",
+    "section": "Visualizing",
+    "text": "Visualizing\n\nset.seed(47)\nnum_iter &lt;- 10000\nmap(1:20, hat_match_prob, reps = num_iter) |&gt; \n  list_rbind() |&gt; \n  ggplot(aes(x = num_hats, y = match_prob)) + \n  geom_line() + \n  labs(y = \"probability of at least one match\",\n       x = \"number of hats\")"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#example-2---birthday-problem",
+    "href": "slides/2024-10-21-iters.html#example-2---birthday-problem",
+    "title": "Iterations",
+    "section": "Example 2 - Birthday Problem",
+    "text": "Example 2 - Birthday Problem\nWhat is the probability that in a room of 29 people, at least 2 of them have the same birthday?"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#step-1-representing-the-birthdays",
+    "href": "slides/2024-10-21-iters.html#step-1-representing-the-birthdays",
+    "title": "Iterations",
+    "section": "Step 1: representing the birthdays",
+    "text": "Step 1: representing the birthdays\n\nset.seed(47)\nclass_birthdays &lt;- sample(1:365, size=29, replace=TRUE)\nclass_birthdays \n\n [1]  27 242 143 212 257  13 279 198 365 232 136  69 139  12  41 117 330 165 341\n[20] 176 118 144 273 261 213 304   1 360 144"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#step-2-any-duplicates",
+    "href": "slides/2024-10-21-iters.html#step-2-any-duplicates",
+    "title": "Iterations",
+    "section": "Step 2: any duplicates?",
+    "text": "Step 2: any duplicates?\n\nduplicated(class_birthdays)\n\n [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n[13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n[25] FALSE FALSE FALSE FALSE  TRUE\n\nsum(duplicated(class_birthdays))\n\n[1] 1"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#function-1",
+    "href": "slides/2024-10-21-iters.html#function-1",
+    "title": "Iterations",
+    "section": "Function",
+    "text": "Function\n\nclass_duplicates &lt;- function(unicorn){\n  class_birthdays &lt;- sample(1:365, size = 29, replace = TRUE)\n  num_duplicates &lt;- sum(duplicated(class_birthdays))\n  return(ifelse(num_duplicates &gt; 0, 1, 0))\n}\n\nclass_duplicates()\n\n[1] 1\n\nclass_duplicates()\n\n[1] 0"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#iterate-1",
+    "href": "slides/2024-10-21-iters.html#iterate-1",
+    "title": "Iterations",
+    "section": "Iterate",
+    "text": "Iterate\n\nmap_dbl(1:10, class_duplicates)\n\n [1] 0 1 1 1 1 0 0 1 0 0"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#improve",
+    "href": "slides/2024-10-21-iters.html#improve",
+    "title": "Iterations",
+    "section": "Improve",
+    "text": "Improve\n\nclass_duplicates &lt;- function(class_size){\n  class_birthdays &lt;- sample(1:365, size = class_size, replace = TRUE)\n  num_duplicates &lt;- sum(duplicated(class_birthdays))\n  return(ifelse(num_duplicates &gt; 0, 1, 0))\n}\n\nset.seed(47)\nnum_stud &lt;- 29\nmap_dbl(1:10, ~class_duplicates(class_size = num_stud))\n\n [1] 1 1 0 0 1 1 1 1 0 0"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#vary-number-of-students",
+    "href": "slides/2024-10-21-iters.html#vary-number-of-students",
+    "title": "Iterations",
+    "section": "Vary number of students",
+    "text": "Vary number of students\n\nset.seed(47)\nnum_stud &lt;- 29\nnum_class &lt;- 100\n\nbirth_match_prob &lt;- function(num_stud, reps){\n  prob &lt;- map_dbl(1:reps, ~class_duplicates(class_size = num_stud)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_stud = num_stud))\n}\n\nmap(1:num_stud, birth_match_prob, reps = num_class) |&gt; \n  list_rbind()\n\n   match_prob num_stud\n1        0.00        1\n2        0.00        2\n3        0.00        3\n4        0.00        4\n5        0.03        5\n6        0.03        6\n7        0.04        7\n8        0.06        8\n9        0.11        9\n10       0.13       10\n11       0.14       11\n12       0.18       12\n13       0.18       13\n14       0.25       14\n15       0.25       15\n16       0.32       16\n17       0.37       17\n18       0.43       18\n19       0.44       19\n20       0.40       20\n21       0.43       21\n22       0.47       22\n23       0.48       23\n24       0.47       24\n25       0.61       25\n26       0.67       26\n27       0.63       27\n28       0.66       28\n29       0.73       29"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#visualize",
+    "href": "slides/2024-10-21-iters.html#visualize",
+    "title": "Iterations",
+    "section": "Visualize",
+    "text": "Visualize\n\nset.seed(123)\nnum_stud &lt;- 40\nnum_class &lt;- 1000\n\nmap(1:num_stud, birth_match_prob, reps = num_class) |&gt; \n  list_rbind()  |&gt; \n  ggplot(aes(x = num_stud, y = match_prob)) + \n  geom_line() + \n  labs(y = \"probability of birthday match\",\n       x = \"number of students in class\")"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#simulating-to",
+    "href": "slides/2024-10-21-iters.html#simulating-to",
+    "title": "Iterations",
+    "section": "Simulating to…",
+    "text": "Simulating to…\n\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#simulating-to-1",
+    "href": "slides/2024-10-21-iters.html#simulating-to-1",
+    "title": "Iterations",
+    "section": "Simulating to…",
+    "text": "Simulating to…\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#simulate-to",
+    "href": "slides/2024-10-21-iters.html#simulate-to",
+    "title": "Iterations",
+    "section": "Simulate to…",
+    "text": "Simulate to…\n\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#step-3-who-got-their-original-hat",
+    "href": "slides/2024-10-21-iters.html#step-3-who-got-their-original-hat",
+    "title": "Iterations",
+    "section": "Step 3: who got their original hat?",
+    "text": "Step 3: who got their original hat?\n\nhats == random_hats\n\n [1] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE\n\n# TRUE is 1, FALSE is 0\nsum(hats == random_hats)\n\n[1] 2\n\n# did at least one person get their hat?\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#example-2-birthday-problem",
+    "href": "slides/2024-10-21-iters.html#example-2-birthday-problem",
+    "title": "Iterations",
+    "section": "Example 2: Birthday Problem",
+    "text": "Example 2: Birthday Problem\nWhat is the probability that in a room of 29 people, at least 2 of them have the same birthday?"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#simulate-to-1",
+    "href": "slides/2024-10-21-iters.html#simulate-to-1",
+    "title": "Iterations",
+    "section": "Simulate to…",
+    "text": "Simulate to…\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#many-classrooms",
+    "href": "slides/2024-10-21-iters.html#many-classrooms",
+    "title": "Iterations",
+    "section": "Many classrooms",
+    "text": "Many classrooms\n\nset.seed(47)\nnum_stud &lt;- 29\nnum_class &lt;- 1000\nmap_dbl(1:num_class, ~class_duplicates(class_size = num_stud)) |&gt; \n  mean()\n\n[1] 0.654"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#bias-in-a-model",
+    "href": "slides/2024-10-21-iters.html#bias-in-a-model",
+    "title": "Iterations",
+    "section": "Bias in a model",
+    "text": "Bias in a model\nPopulation:\ntalent ~ Normal (100, 15)\ngrades ~ Normal (talent, 15)\nSAT ~ Normal (talent, 15)\nThe example is taken directly (and mostly verbatim) from a blog by Aaron Roth Algorithmic Unfairness Without Any Bias Baked In."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#goal-for-admitting-students",
+    "href": "slides/2024-10-21-iters.html#goal-for-admitting-students",
+    "title": "Iterations",
+    "section": "Goal for admitting students",
+    "text": "Goal for admitting students\nCollege wants to admit students with\n\ntalent &gt; 115\n\n… but they only have access to grades and SAT which are noisy estimates of talent."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#plan-for-accepting-students",
+    "href": "slides/2024-10-21-iters.html#plan-for-accepting-students",
+    "title": "Iterations",
+    "section": "Plan for accepting students",
+    "text": "Plan for accepting students\n\nRun a regression on a training dataset (talent is known for existing students)\nFind a model which predicts talent based on grades and SAT\nChoose students for whom predicted talent is above 115"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#flaw-in-the-plan",
+    "href": "slides/2024-10-21-iters.html#flaw-in-the-plan",
+    "title": "Iterations",
+    "section": "Flaw in the plan …",
+    "text": "Flaw in the plan …\n\nthere are two populations of students, the Reds and Blues.\nReds are the majority population (99%), and Blues are a small minority population (1%)\nthe Reds and the Blues are no different when it comes to talent: they both have the same talent distribution, as described above.\nthere is no bias baked into the grading or the exams: both the Reds and the Blues also have exactly the same grade and exam score distributions"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#what-is-really-different",
+    "href": "slides/2024-10-21-iters.html#what-is-really-different",
+    "title": "Iterations",
+    "section": "What is really different?",
+    "text": "What is really different?\n\nBut there is one difference: the Blues have more money than the Reds, so they each take the SAT twice, and report only the highest of the two scores to the college. This results in a small but noticeable bump in their average SAT scores, compared to the Reds."
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#key-aspect",
+    "href": "slides/2024-10-21-iters.html#key-aspect",
+    "title": "Iterations",
+    "section": "Key aspect:",
+    "text": "Key aspect:\n\nThe value of SAT means something different for the Reds versus the Blues\n\n(They have different feature distributions.)"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#lets-see-what-happens",
+    "href": "slides/2024-10-21-iters.html#lets-see-what-happens",
+    "title": "Iterations",
+    "section": "Let’s see what happens …",
+    "text": "Let’s see what happens …"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#two-models",
+    "href": "slides/2024-10-21-iters.html#two-models",
+    "title": "Iterations",
+    "section": "Two models:",
+    "text": "Two models:\nRed model (SAT taken once):\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)   33.2     0.152        218.       0\n2 SAT            0.334   0.00149      224.       0\n3 grades         0.334   0.00149      225.       0\n\n\nBlue model (SAT is max score of two):\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   25.3      1.60        15.8 2.04e- 50\n2 SAT            0.432    0.0161      26.7 3.35e-119\n3 grades         0.277    0.0154      18.0 6.83e- 63"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#new-data",
+    "href": "slides/2024-10-21-iters.html#new-data",
+    "title": "Iterations",
+    "section": "New data",
+    "text": "New data\n\nGenerate new data, use the two models separately.\nCan the models predict if a student has talent &gt; 115?"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#new-data-1",
+    "href": "slides/2024-10-21-iters.html#new-data-1",
+    "title": "Iterations",
+    "section": "New data",
+    "text": "New data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 5\n  color   tpr    fpr   fnr error\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 blue  0.503 0.0379 0.497 0.109\n2 red   0.509 0.0378 0.491 0.109"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#two-models-doesnt-seem-right",
+    "href": "slides/2024-10-21-iters.html#two-models-doesnt-seem-right",
+    "title": "Iterations",
+    "section": "TWO models doesn’t seem right????",
+    "text": "TWO models doesn’t seem right????\nWhat if we fit only one model to the entire dataset?\nAfter all, there are laws against using protected classes to make decisions (housing, jobs, money loans, college, etc.)\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)   33.1     0.151        219.       0\n2 SAT            0.334   0.00148      225.       0\n3 grades         0.334   0.00148      226.       0\n\n\n(The coefficients kinda look like the red model…)"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#how-do-the-error-rates-change",
+    "href": "slides/2024-10-21-iters.html#how-do-the-error-rates-change",
+    "title": "Iterations",
+    "section": "How do the error rates change?",
+    "text": "How do the error rates change?\n\n\n\n\n\n\n\n\n\n\n\n\nOne model:\n\n\n# A tibble: 2 × 5\n  color   tpr    fpr   fnr error\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 blue  0.619 0.0627 0.381 0.112\n2 red   0.507 0.0375 0.493 0.109\n\n\nTwo separate models:\n\n\n# A tibble: 2 × 5\n  color   tpr    fpr   fnr error\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 blue  0.503 0.0379 0.497 0.109\n2 red   0.509 0.0378 0.491 0.109"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#what-did-we-learn",
+    "href": "slides/2024-10-21-iters.html#what-did-we-learn",
+    "title": "Iterations",
+    "section": "What did we learn?",
+    "text": "What did we learn?\n\nwith two populations that have different feature distributions, learning a single classifier (that is prohibited from discriminating based on population) will fit the bigger of the two populations\n\n\ndepending on the nature of the distribution difference, it can be either to the benefit or the detriment of the minority population\nno explicit human bias, either on the part of the algorithm designer or the data gathering process\nthe problem is exacerbated if we artificially force the algorithm to be group blind\nwell-intentioned “fairness” regulations prohibiting decision makers form taking sensitive attributes into account can actually make things less fair and less accurate at the same time"
+  },
+  {
+    "objectID": "slides/2024-10-21-iters.html#simulate",
+    "href": "slides/2024-10-21-iters.html#simulate",
+    "title": "Iterations",
+    "section": "Simulate?",
+    "text": "Simulate?\n\ndifferent varying proportions\neffect due to variability\neffect due to SAT coefficient\ndifferent number of times the blues get to take the test\netc."
   }
 ]
