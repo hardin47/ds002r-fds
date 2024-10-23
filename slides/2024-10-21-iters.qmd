@@ -318,6 +318,11 @@ map(1:num_stud, birth_match_prob, reps = num_class) |>
 * add comments
 
 
+# Agenda  10/23/24
+
+1. Simulating for model sensitivity
+
+
 ## Simulate to...
 
 
@@ -612,4 +617,315 @@ error.rates
 * effect due to SAT coefficient
 * different number of times the blues get to take the test
 * etc.
+
+
+# Asset allocation 
+
+* repeatedly run a model on a simulated outcome based on varying inputs
+* inputs are uncertain and variable.
+* output is a large set of results, creating a distribution of outcomes rather than a single point estimate.
+* easy to change the conditions of the models by varying the distribution type or properties of the inputs.
+
+
+Taken from [Risk Analysis Using Monte Carlo Simulations in R](https://www.pluralsight.com/resources/blog/guides/risk-analysis-using-monte-carlo-simulations-in-r). 
+
+
+## Aside: `rnorm()`
+
+`rnorm()` calculates random normal values
+
+```{r}
+rnorm(3)
+rnorm(3, mean = 0, sd = 1)
+
+rnorm(4, mean = 47, sd = 5)
+```
+
+
+
+## Asset allocation 
+
+Task: to model an asset allocation problem where you decide what portion of wealth should be allocated to risk-free investment or high-risk investment
+
+* the function calculates returns based on different asset allocations.
+
+```{r}
+calculate_return <- function(step, alpha) {
+  risk_free_rate <- 1.03
+  risky_rate <- rnorm(1, mean = 0, sd = 1) * 0.05 + 1
+  return(data.frame(step = step, 
+                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))
+}
+
+calculate_return("unicorn", 0.47)
+```
+
+## Let alpha = 0.5
+
+(half risky, half risk free)
+
+```{r}
+decision_steps <- 12
+
+pmap(data.frame(step = 1:decision_steps,
+                alpha = rep(0.5, decision_steps)),
+     calculate_return) |> 
+  list_rbind()
+
+```
+
+
+## Many runs
+
+```{r}
+runs <- 10
+decision_steps <- 12
+
+run_func <- function(run, steps, alpha){
+  pmap(data.frame(step = 1:steps,
+                  alpha = rep(alpha, steps)),
+       calculate_return) |> 
+    list_rbind() |> 
+    cbind(run_number = as.factor(run))
+}
+
+run_func("happy", 12, 0.5)
+
+map(1:runs, run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind()
+```
+
+
+## Cummulative product
+
+```{r}
+numbers <- sample(1:5)
+numbers
+
+cumprod(numbers)
+```
+
+
+## Cummulative rates
+
+```{r}
+map(1:runs, run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return))
+```
+
+
+## Returns over time
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+
+runs <- 20
+map(1:runs, run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+
+## code
+
+```{r}
+#| eval: false
+
+runs <- 20
+map(1:runs, run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+:::
+
+## Change the allocation
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+runs <- 20
+map(1:runs, run_func, 
+    steps = decision_steps, 
+    alpha = 0.1) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.1")
+```
+
+## code
+
+```{r}
+#| eval: false
+runs <- 20
+map(1:runs, run_func, 
+    steps = decision_steps, 
+    alpha = 0.1) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.1")
+```
+
+:::
+
+## Change the allocation
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+
+runs <- 20
+map(1:runs, run_func, 
+    steps = decision_steps, 
+    alpha = 0.9) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.9")
+```
+
+## code
+
+```{r}
+#| eval: false
+
+runs <- 20
+map(1:runs, run_func, 
+    steps = decision_steps, 
+    alpha = 0.9) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.9")
+```
+
+:::
+
+
+## Change the return
+
+::: {.panel-tabset}
+
+## calculate return
+```{r}
+#| code-line-numbers: "3"
+calculate_return_sd10 <- function(step, alpha) {
+  risk_free_rate <- 1.03
+  risky_rate <- rnorm(1, mean = 0, sd = 10) * 0.05 + 1
+  return(data.frame(step = step, 
+                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))
+}
+
+calculate_return("unicorn", 0.47)
+```
+
+
+## run function
+
+```{r}
+#| code-line-numbers: "4"
+run_func_sd10 <- function(run, steps, alpha){
+  pmap(data.frame(step = 1:steps,
+                  alpha = rep(alpha, steps)),
+       calculate_return_sd10) |> 
+    list_rbind() |> 
+    cbind(run_number = as.factor(run))
+}
+```
+
+:::
+
+
+## Does the change impact long-term?
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+#| code-line-numbers: "2"
+runs <- 20
+map(1:runs, run_func_sd10, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+## code
+```{r}
+#| eval: false
+#| code-line-numbers: "2"
+runs <- 20
+map(1:runs, run_func_sd10, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+:::
 

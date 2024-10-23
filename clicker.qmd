@@ -1369,6 +1369,34 @@ sum(hats == random_hats) > 0
 
 ---
 
+(@) In the SAT example, we ran a single iteration and found that the false positive and false negative rates were problematic.  What should we do next?[^74]
+   a. Repeat for many iterations.
+   b. Change the initial settings.
+   c. Bring this analysis to the people with power.
+   d. Always use two models.
+   e. Always use only one model.
+   
+[^74]: a. Repeat for many iterations. (The next step needs to gather information on how the FP and FN results hold, it might have just been something odd in my simulation... )
+
+--- 
+
+(@) In the SAT example, what types of things might we vary?[^75]
+   a. proportion to red vs blue
+   b. how variable the values are:  `N(talent, 15)`
+   c. different number of times blues get to take the test
+   d. how close `grades` and `SAT` are to `talent` (bias?)
+
+[^75]: all of the above
+
+---
+
+(@) What would you want to know from the investment allocation plots?[^76]
+    a. What is the average rate of return?
+    b. What is the maximum rate of return?
+    c. What is the minimum rate of return?
+    d. How often do I lose money?
+
+[^76]: It totally depends on your personality and your finances.  b. doesn't make much sense.  But a., c., and d. are all very reasonable questions to ask about your investments.
 
 ---
 
