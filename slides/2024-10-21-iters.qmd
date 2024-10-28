@@ -9,7 +9,6 @@ format:
     slide-number: true
     show-slide-number: all
     embed-resources: true
-    multiplex: true
 execute:
   echo: true
   warning: false

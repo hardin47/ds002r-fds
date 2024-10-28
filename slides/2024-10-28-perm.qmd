@@ -1,0 +1,248 @@
+---
+title: "Permutation Tests"
+author: "Jo Hardin"
+subtitle: "October 28 + 30, 2024"
+format: 
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+    embed-resources: true
+    html-math-method: mathjax
+execute:
+  echo: true
+  warning: false
+  message: false
+bibliography: 
+  - ../book.bib
+--- 
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(purrr)
+```
+
+
+# Agenda  10/28/24
+1. Hypothesis tests
+2. Permutation tests
+
+
+# Hypothesis testing
+
+Whether permutation tests or non-computational hypothesis tests (like t-test), hypothesis testing has the same structure.
+
+See <a href = "https://st47s.com/DS002R/Notes/13-permutation-tests.html#structure-of-hypothesis-testing" target = "_blank">class notes on hypothesis testing</a>.
+
+## Example: helper or hinderer
+
+> In a study reported in the November 2007 issue of *Nature*, researchers investigated whether infants take into account an individual's actions towards others in evaluating that individual as appealing or aversive, perhaps laying for the foundation for social interaction [@hamlin2007]. In other words, do children who aren't even yet talking still form impressions as to someone's friendliness based on their actions? In one component of the study, 10-month-old infants were shown a "climber" character (a piece of wood with "googly" eyes glued onto it) that could not make it up a hill in two tries. Then the infants were shown two scenarios for the climber's next try, one where the climber was pushed to the top of the hill by another character (the "helper" toy) and one where the climber was pushed back down the hill by another character (the "hinderer" toy). The infant was alternately shown
+these two scenarios several times. Then the child was presented with both pieces of wood (the helper and the hinderer characters) and asked to pick one to play with.
+
+## Example: helper or hinderer
+
+
+* <a href = "https://campuspress.yale.edu/infantlab/media/" target = "_blank">Infant videos</a>
+* <a href = "https://www.nature.com/articles/nature06288" target = "_blank">"Social evaluation by preverbal infants"</a>, *Nature* 2007
+
+
+## Parts of a hypothesis test
+
+* What are the observational units?
+    - infants
+* What is the variable?  What type of variable?
+    - choice of helper or hindered: categorical
+* What is the statistic?
+    - $\hat{p}$ = proportion of infants who chose helper = 14/16 = 0.875
+* What is the parameter?
+    - p = proportion of all infants who might choose helper (not measurable!)
+    
+## Hypotheses 
+
+$H_0$: Null hypothesis. Babies (or rather, the population of babies under consideration) have no inherent preference for the helper or the hinderer shape.
+
+$H_A$: Alternative hypothesis. Babies (or rather, the population of babies under consideration) are more likely to prefer the helper shape over the hinderer shape.  
+
+## p-value
+
+> **p-value** is the probability of our data or more extreme if nothing interesting is going on.
+
+|           completely arbitrary cutoff | $\rightarrow$ | generally accepted conclusion          |
+|---------------------------:|:-------------:|---------------------------------------------|
+|           p-value $>$ 0.10 | $\rightarrow$ | no evidence against the null model          |
+| 0.05 $<$ p-value $<$ 0.10 | $\rightarrow$ | moderate evidence against the null model    |
+| 0.01 $<$ p-value $<$ 0.05 | $\rightarrow$ | strong evidence against the null model      |
+|          p-value $<$ 0.01 | $\rightarrow$ | very strong evidence against the null model |
+
+## Computation
+
+First find the statistic
+```{r echo=TRUE, eval=TRUE}
+# to control the randomness
+set.seed(47)
+
+# first create a data frame with the Infant data
+Infants <- read.delim("http://www.rossmanchance.com/iscam3/data/InfantData.txt")
+
+# find the observed number of babies who chose the helper
+help_obs <- Infants |> 
+  summarize(prop_help = mean(choice == "helper")) |> 
+  pull()
+help_obs
+
+```
+
+## Computation
+
+Find the sampling distribution under the condition that the null hypothesis is true.
+
+::: {.panel-tabset}
+
+## function
+```{r}
+
+# write a function to simulate a set of infants who are 
+# equally likely to choose the helper or the hinderer
+
+random_choice <- function(rep, num_babies){
+  choice = sample(c("helper", "hinderer"), size = num_babies,
+                  replace = TRUE, prob = c(0.5, 0.5))
+  return(mean(choice == "helper"))
+}
+```
+
+## repeat
+```{r}
+# repeat the function many times
+map_dbl(1:10, random_choice, num_babies = 16)
+
+num_exper <- 5000
+help_random <- map_dbl(1:num_exper, random_choice, 
+                            num_babies = 16)
+```
+
+## viz
+```{r}
+#| echo: false
+
+# visualize null sampling distribution
+help_random |> 
+  data.frame() |> 
+  ggplot(aes(x = help_random)) + 
+  geom_histogram() + 
+  labs(x = "proportion of babies who chose the helper",
+       title = "sampling distribution when null hypothesis is true",
+       subtitle = "that is, no inherent preference for helper or hinderer")
+
+```
+
+## viz code
+```{r}
+#| eval: false
+
+# visualize null sampling distribution
+help_random |> 
+  data.frame() |> 
+  ggplot(aes(x = help_random)) + 
+  geom_histogram() + 
+  labs(x = "proportion of babies who chose the helper",
+       title = "sampling distribution when null hypothesis is true",
+       subtitle = "that is, no inherent preference for helper or hinderer")
+
+```
+
+:::
+
+
+## Computation
+
+Are the null values consistent with the observed value?
+
+::: {.panel-tabset}
+
+## viz
+```{r}
+#| echo: false
+
+# visualize null sampling distribution
+help_random |> 
+  data.frame() |> 
+  ggplot(aes(x = help_random)) + 
+  geom_histogram() + 
+  geom_vline(xintercept = help_obs, color = "red") + 
+  labs(x = "proportion of babies who chose the helper",
+       title = "sampling distribution when null hypothesis is true",
+       subtitle = "that is, no inherent preference for helper or hinderer")
+
+```
+
+## p-value
+
+```{r}
+# the p-value!
+sum(help_random >= help_obs) / num_exper
+```
+
+## viz code
+```{r}
+#| eval: false
+
+# visualize null sampling distribution
+help_random |> 
+  data.frame() |> 
+  ggplot(aes(x = help_random)) + 
+  geom_histogram() + 
+  geom_vline(xintercept = help_obs, color = "red") + 
+  labs(x = "proportion of babies who chose the helper",
+       title = "sampling distribution when null hypothesis is true",
+       subtitle = "that is, no inherent preference for helper or hinderer")
+```
+
+:::
+
+
+
+##  All together:  structure of a hypothesis test
+
+* decide on a research question (which will determine the test)
+* collect data, **specify** the variables of interest
+* state the null (and alternative) **hypothesis** values (often statements about parameters)
+   - the null claim is the science we want to reject
+   - the alternative claim is the science we want to demonstrate
+* **generate** a (null) sampling distribution to describe the variability of the statistic that was **calculated** along the way
+* **visualize** the distribution of the statistics under the null model
+* **get p-value** to measure the consistency of the observed statistic and the possible values of the statistic under the null model
+* make a conclusion using words that describe the research setting
+
+## Hypotheses
+
+* **Hypothesis Testing** compares data to the expectation of a specific null hypothesis.  If the data are unusual, assuming that the null hypothesis is true, then the null hypothesis is rejected.  
+
+* The **Null Hypothesis**, $H_0$, is a specific statement about a population made for the purposes of argument.  A good null hypothesis is a statement that would be interesting to reject. 
+
+* The **Alternative Hypothesis**, $H_A$, is a specific statement about a population that is in the researcher's interest to demonstrate.  Typically, the alternative hypothesis contains all the values of the population that are not included in the null hypothesis. 
+
+* In a **two-sided** (or two-tailed) test, the alternative hypothesis includes values on both sides of the value specified by the null hypothesis.
+
+* In a **one-sided** (or one-tailed) test, the alternative hypothesis includes parameter values on only one side of the value specified by the null hypothesis. $H_0$ is rejected only if the data depart from it in the direction stated by $H_A$.
+
+
+
+# Agenda 10/30/24
+1. Two variable permutation tests
+2. Exchangeability
+
+
+
+
+
+## References
+
+
+
+
+
+
+

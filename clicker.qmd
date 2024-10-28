@@ -1400,7 +1400,120 @@ sum(hats == random_hats) > 0
 
 ---
 
-(@) What is a **SQL** server?.[^101]
+(@) If 16 infants with **no genuine preference** choose 16 toys, what is the most likely number of "helping" toys that will be chosen?[^77]
+   (a)	4
+   (b)	7
+   (c)	8
+   (d)	9
+   (e)	10
+
+
+[^77]:  c.	8
+
+---
+
+(@) How likely is it that exactly 8 helpers will be chosen (if there is no preference)?[^78]
+   (a)	0-15% 
+   (b)	16-30% 
+   (c)	31-49%
+   (d)	50%
+   (e)	51-100%
+
+
+[^78]:  b. 0.196 (19.6% of the time)
+
+---
+
+(@) What if we flipped a coin 160 times?  What percent of the time will the simulation flip exactly 80 heads?[^79]
+   (a)	0-15% 
+   (b)	16-30% 
+   (c)	31-49%
+   (d)	50%
+   (e)	51-100%
+
+[^79]: a. 0.063 (6.3% of the time)
+
+---
+
+(@) Is our actual result of 14 (under the coin model)...[^80]
+   (a) very surprising?
+   (b) somewhat surprising?
+   (c) not very surprising?
+   
+[^80]: a. very surprising (prob of 14 or more is 0.0021)
+
+---
+
+(@) Hypothesis: the number of hours that grade-school children spend doing homework predicts their future success on standardized tests.[^81]
+    (a) null, one sided
+    (b) null, two sided
+    (c) alternative, one sided
+    (d) alternative, two sided
+
+[^81]: c. alternative, one sided (because probably we are studying that it **increases** their success rate)
+
+---
+
+(@) Hypothesis: king cheetahs on average run the same speed as standard spotted cheetahs.[^82]
+    (a) null, one sided
+    (b) null, two sided
+    (c) alternative, one sided
+    (d) alternative, two sided
+
+[^82]: a. null, two sided (because I have no idea which cheetah might run faster)
+
+---
+
+(@) Hypothesis: the mean length of African elephant tusks has changed over the last 100 years.[^83]
+    (a) null, one sided
+    (b) null, two sided
+    (c) alternative, one sided
+    (d) alternative, two sided
+
+[^83]: d. alternative, two sided (because I have no idea whether they've increased or decreased)
+
+---
+
+(@) Hypothesis: the risk of facial clefts is equal for babies born to mothers who take folic acid supplements compared with those from mothers who do not.[^84]
+    (a) null, one sided
+    (b) null, two sided
+    (c) alternative, one sided
+    (d) alternative, two sided
+
+[^84]: a. null, one sided (because I happen to know that folic acid is thought to prevent facial clefts)
+
+---
+
+(@) Hypothesis: caffeine intake during pregnancy affects mean birth weight.[^85]
+    (a) null, one sided
+    (b) null, two sided
+    (c) alternative, one sided
+    (d) alternative, two sided
+
+[^85]: c. alternative, one sided (because I happen to know that caffeine is thought to decrease baby's birth weight)
+
+---
+
+(@) In this class, the word parameter means:[^86]
+    (a) The values in a model
+    (b) Numbers that need to be tuned
+    (c) A number which is calculated from a sample of data.
+    (d) A number which (is almost always unknown and) describes a population.
+
+[^86]: d. A number which (is almost always unknown and) describes a population.
+
+---
+
+
+
+
+
+---
+
+
+---
+
+(@) What is a **SQL** server?[^101]
    (a) A relational database management system.
    (b) A software whose main purpose is to store and retrieve data.
    (c) A highly secure server and does not allow any database file manipulation during execution.
