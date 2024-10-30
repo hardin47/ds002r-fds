@@ -10,7 +10,7 @@ For Project 3 you will conduct a small simulation study which does one of the fo
 
 a) conducts a permutation test by simulating behavior under the null hypothesis (you would need to find a dataset and develop a related research question).
 
-b) develops a lineup protocol for visual inference, as in <a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target = "_blank">"Bringing Visual Inference to the Classroom"</a>, (using the **nullabor** package).  [That is, you would use a dataset, with a related research question, and test the research question using a series of null plots.]
+b) develops a lineup protocol for visual inference, as in <a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target = "_blank">"Bringing Visual Inference to the Classroom"</a>, (you'll need to write the function to do the mapping.  The ggplot part would be straightforward using faceting.).  [That is, you would use a dataset, with a related research question, and test the research question using a series of null plots.]
 
 c) calculates a probability which is not trivial to estimate without a simulation.  For example, simulate room draw!
 
