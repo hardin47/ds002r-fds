@@ -37,11 +37,11 @@ website:
            href: project1.html
          - text: "project 2 - text analysis"
            href: project2.html
-         - text: "project 3"
+         - text: "project 3 - simulation analysis"
            href: project3.html
-         - text: "project 4"
+         - text: "project 4 - web scraping"
            href: project4.html
-         - text: "project 5"
+         - text: "project 5 - revision of past projects"
            href: project5.html
          - text: "Data Sources"
            href: https://hardin47.netlify.app/courses/data/

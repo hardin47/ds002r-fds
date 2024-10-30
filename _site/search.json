@@ -2888,14 +2888,14 @@
     "href": "project2.html",
     "title": "Project 2",
     "section": "",
-    "text": "Overview\nYou will find a data set containing string data. The data could be on newspaper articles, tweets, songs, plays, movie reviews, or anything else you can imagine. Then you will answer questions of interest and tell a story about your data using string and regular expression skills you have developed.\nYour analysis must contain the following elements:\n\nat least 3 str_*() functions\nat least 3 regular expressions\nat least 2 illustrative, well-labeled plots or tables\na description of what insights can be gained from your plots and tables\na reference / documentation of the data source.\n\nLogistics:\n\nplease include all your code used in the analysis.\nmake sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).\ndo not include superfluous error or warning messages.\ninclude a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.\n\n\n\nSome potential places to find text data\nI’ve gathered some potential datasets for you to work with. All of the datasets below contain some or a lot of text.\n\n Shakespeare Dialogue\nNetflix titles\nsynopses data frame for Broadway Weekly Grosses\nFriends dialogue\nFederalist Papers\n\nLoad the package into R using\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"nicholasjhorton/FederalistPapers\")\n\n\nAll of Emily Dickinson’s poems\n\nLoad the package into R using\n\n\n\ndevtools::install_github(\"Amherst-Statistics/DickinsonPoems\")\n\n\nEvery line of the office\nAll of Barack Obama’s tweets archived by the National Archives.\nThe “Dear Abby” stories underlying The Pudding’s 30 Years of American Anxieties article\n\nSee data on the The Pudding’s GitHub site\nLoad the data in using\n\n\n\nread_csv(\"https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv\")\n\n\nOther articles from The Pudding\nNY Times headlines from the RTextTools package (see below)\n\n\nlibrary(RTextTools) \ndata(NYTimes)\nas_tibble(NYTimes)\n\n\nthe options are endless – be resourceful and creative!\n\n\n\nTimeline\nMini-Project 2 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday October 2. Ideally, you will add a tab to your Quarto webpage for Mini-Project 2, then you can just submit the new page’s URL. Alternatively, you may submit a Rendered pdf showing all code and output.\n\n:::\n\n\n\nReuseCC BY 4.0"
+    "text": "Overview\nYou will find a data set containing string data. The data could be on newspaper articles, tweets, songs, plays, movie reviews, or anything else you can imagine. Then you will answer questions of interest and tell a story about your data using string and regular expression skills you have developed.\nYour analysis must contain the following elements:\n\nat least 3 str_*() functions\nat least 3 regular expressions\nat least 2 illustrative, well-labeled plots or tables\na description of what insights can be gained from your plots and tables\na reference / documentation of the data source.\n\nLogistics:\n\nplease include all your code used in the analysis.\nmake sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).\ndo not include superfluous error or warning messages.\ninclude a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.\n\n\n\nSome potential places to find text data\nI’ve gathered some potential datasets for you to work with. All of the datasets below contain some or a lot of text.\n\n Shakespeare Dialogue\nNetflix titles\nsynopses data frame for Broadway Weekly Grosses\nFriends dialogue\nFederalist Papers\n\nLoad the package into R using\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"nicholasjhorton/FederalistPapers\")\n\n\nAll of Emily Dickinson’s poems\n\nLoad the package into R using\n\n\n\ndevtools::install_github(\"Amherst-Statistics/DickinsonPoems\")\n\n\nEvery line of the office\nAll of Barack Obama’s tweets archived by the National Archives.\nThe “Dear Abby” stories underlying The Pudding’s 30 Years of American Anxieties article\n\nSee data on the The Pudding’s GitHub site\nLoad the data in using\n\n\n\nread_csv(\"https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv\")\n\n\nOther articles from The Pudding\nNY Times headlines from the RTextTools package (see below)\n\n\nlibrary(RTextTools) \ndata(NYTimes)\nas_tibble(NYTimes)\n\n\nthe options are endless – be resourceful and creative!\n\n\n\nTimeline\nMini-Project 2 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday October 2. You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page’s URL.\n\n:::\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "project3.html",
     "href": "project3.html",
     "title": "Project 3",
     "section": "",
-    "text": "more soon.\n\n\nTimeline\nMini-Project 3 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday October 30. Ideally, you will add a tab to your Quarto webpage for Mini-Project 3, then you can just submit the new page’s URL. Alternatively, you may submit a Rendered pdf showing all code and output.\n\n:::\n\n\n\nReuseCC BY 4.0"
+    "text": "For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):\n\nconducts a permutation test by simulating behavior under the null hypothesis (you would need to find a dataset and develop a related research question).\ndevelops a lineup protocol for visual inference, as in “Bringing Visual Inference to the Classroom”, (using the nullabor package). [That is, you would use a dataset, with a related research question, and test the research question using a series of null plots.]\ncalculates a probability which is not trivial to estimate without a simulation.\n(needs some background in introductory statistics) investigates the effects of condition violations on a statistical test, as measured by coverage rate, confidence interval width, type I error rate, etc. [That is, your simulation would generate data and assess how often the data reject the null hypothesis or how often the confidence interval captures the true parameter. I’m happy to help with the R code for the statistics on this one!]\n\nYour simulation study should contain the following elements:\n\nat least 1 function you’ve written\nat least 1 map() variant\nat least 1 illustrative, well-labeled plot\na description of what insights can be gained from your plot(s)\n\nLogistics:\n\nstart by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences). That is, use words to guide the reader through your analysis.\nplease include all your code used in the analysis.\nmake sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).\ndo not include superfluous error or warning messages.\ninclude a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.\nif you used data, include the source of the data. Include not only where you got the data (e.g., the TidyTuesday URL) but also the original provenance of the information.\n\n\nTimeline\nMini-Project 3 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday October 30. You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page’s URL.\n\n:::\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "project5.html",
@@ -6864,28 +6864,28 @@
     "href": "slides/2024-10-07-funcmap.html#pmap",
     "title": "Functions + Iteration",
     "section": "pmap()",
-    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 5.225703\n\n[[2]]\n[1] 39.04609 77.74412\n\n[[3]]\n[1] 684.9034 178.5490 249.8685\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 4.893553\n\n[[2]]\n[1] 67.83282 39.40317\n\n[[3]]\n[1] 387.5501 903.4603 368.4088"
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 1.522878\n\n[[2]]\n[1] 60.40849 62.27485\n\n[[3]]\n[1] 393.0755 733.5081 142.7339\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 6.228173\n\n[[2]]\n[1] 21.28932 12.86177\n\n[[3]]\n[1] 900.8545 594.6754 274.8844"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#an-aside",
     "href": "slides/2024-10-07-funcmap.html#an-aside",
     "title": "Functions + Iteration",
     "section": "An aside…",
-    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.15221096 0.02282148 0.47834053\n\nrunif(n = c(1,3))\n\n[1] 0.06502932 0.48987447\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.4653732 0.4341146\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.1156808 0.6589181"
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.3460550 0.3684597 0.7622530\n\nrunif(n = c(1,3))\n\n[1] 0.2994728 0.7781749\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.7561568 0.4648677\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.9089102 0.3279757"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "href": "slides/2024-10-07-funcmap.html#pmap-vs-map",
     "title": "Functions + Iteration",
     "section": "pmap() vs map()",
-    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 3.198242\n\n[[2]]\n[1] 97.56940 19.76633\n\n[[3]]\n[1] 615.2259 924.4139 169.4400\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.51307808 0.05441186 0.23625722\n\n$min\n[1] 0.5737369 0.4321635 0.3027663\n\n$max\n[1] 0.0599810 0.2173311 0.1380818"
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 1.734303\n\n[[2]]\n[1] 54.19798 10.06920\n\n[[3]]\n[1] 587.4556 944.9725 889.0832\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.63462172 0.08050289 0.62253413\n\n$min\n[1] 0.5753892 0.1718571 0.8298359\n\n$max\n[1] 0.8211994 0.6053252 0.2518072"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "href": "slides/2024-10-07-funcmap.html#pmap-with-expand_grid",
     "title": "Functions + Iteration",
     "section": "pmap() with expand_grid()",
-    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 1.605619\n\n[[2]]\n[1] 30.11671\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 66.65871\n\n[[5]]\n[1] 9.770909 2.351709\n\n[[6]]\n[1] 50.73219 34.72296\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 45.00119 98.41663\n\n[[9]]\n[1] 5.695747 2.293408 9.070559\n\n[[10]]\n[1] 76.60333 28.09430 21.61662\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 37.86501 87.10527 44.67924"
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 1.08188\n\n[[2]]\n[1] 11.49043\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 39.97649\n\n[[5]]\n[1] 5.169109 4.533750\n\n[[6]]\n[1] 46.15350 74.83895\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 78.80365 13.85192\n\n[[9]]\n[1] 1.959881 2.481792 1.705433\n\n[[10]]\n[1] 61.762033 48.758773  3.483168\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 96.07411 57.56174 46.62570"
   },
   {
     "objectID": "slides/2024-10-07-funcmap.html#mapping-to-a-data-frame",
@@ -6941,7 +6941,7 @@
     "href": "slides/2024-10-07-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5367964\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5771717"
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5983797\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5812336"
   },
   {
     "objectID": "slides/2024-09-30-regex.html#bounding-words-vs.-phrases",
@@ -7600,5 +7600,131 @@
     "title": "Permutation Tests",
     "section": "References",
     "text": "References\n\n\n\n\n\n\n\n\nHamlin, J. Kiley, Karen Wynn, and Paul Bloom. 2007. “Social Evaluation by Preverbal Infants.” Nature 450: 557–59."
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#statistics-without-the-agonizing-pain",
+    "href": "slides/2024-10-28-perm.html#statistics-without-the-agonizing-pain",
+    "title": "Permutation Tests",
+    "section": "Statistics Without the Agonizing Pain",
+    "text": "Statistics Without the Agonizing Pain\n\nJohn Rauser of Pintrest (now Amazon), speaking at Strata + Hadoop 2014. https://blog.revolutionanalytics.com/2014/10/statistics-doesnt-have-to-be-that-hard.html"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#logic-of-hypothesis-tests",
+    "href": "slides/2024-10-28-perm.html#logic-of-hypothesis-tests",
+    "title": "Permutation Tests",
+    "section": "Logic of hypothesis tests",
+    "text": "Logic of hypothesis tests\n\nChoose a statistic that measures the effect\nConstruct the sampling distribution under \\(H_0\\)\nLocate the observed statistic in the null sampling distribution\np-value is the probability of the observed data or more extreme if the null hypothesis is true"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#logic-of-permutation-tests",
+    "href": "slides/2024-10-28-perm.html#logic-of-permutation-tests",
+    "title": "Permutation Tests",
+    "section": "Logic of permutation tests",
+    "text": "Logic of permutation tests\n\nChoose a test statistic\nShuffle the data (force the null hypothesis to be true)\nCreate a null sampling distribution of the test statistic (under \\(H_0\\))\nFind the observed test statistic on the null sampling distribution and compute the p-value (observed data or more extreme). The p-value can be one or two-sided."
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#consider-the-blizzard-entertainment-data",
+    "href": "slides/2024-10-28-perm.html#consider-the-blizzard-entertainment-data",
+    "title": "Permutation Tests",
+    "section": "Consider the Blizzard Entertainment data",
+    "text": "Consider the Blizzard Entertainment data\nIn a revolt over salary inequities, Blizzard Entertainment workers shared salary information.\n\ndatawrangling\n\n\n\n\n# A tibble: 409 × 4\n   percent_incr salary_type annual_salary performance_rating\n          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n 1          1   Salaried               1  High              \n 2          1   Salaried               1  Successful        \n 3          1   Salaried               1  High              \n 4          1   Hourly             33987. Successful        \n 5         NA   Hourly             34798. High              \n 6         NA   Hourly             35360  &lt;NA&gt;              \n 7         NA   Hourly             37440  &lt;NA&gt;              \n 8          0   Hourly             37814. &lt;NA&gt;              \n 9          4   Hourly             41101. Top               \n10          1.2 Hourly             42328  &lt;NA&gt;              \n# ℹ 399 more rows\n\n\n\n\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(\n    annual_salary = case_when(\n      salary_type == \"week\" ~ current_salary * 52,\n      salary_type == \"hour\" ~ current_salary * 40 * 52,\n      TRUE ~ current_salary\n    ),\n    performance_rating = if_else(performance_rating == \"Developing\", \"Poor\", performance_rating)\n  ) |&gt;\n  filter(salary_type != \"week\") |&gt;\n  mutate(\n    salary_type = if_else(salary_type == \"hour\", \"Hourly\", \"Salaried\")\n  ) |&gt;\n  filter(!is.na(annual_salary)) |&gt;\n  select(percent_incr, salary_type, annual_salary, performance_rating)"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#summary-of-the-variable-of-interest",
+    "href": "slides/2024-10-28-perm.html#summary-of-the-variable-of-interest",
+    "title": "Permutation Tests",
+    "section": "Summary of the variable of interest",
+    "text": "Summary of the variable of interest\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#consider-blizzard-entertainment-data",
+    "href": "slides/2024-10-28-perm.html#consider-blizzard-entertainment-data",
+    "title": "Permutation Tests",
+    "section": "Consider Blizzard Entertainment data",
+    "text": "Consider Blizzard Entertainment data\nIn a revolt over salary inequities, Blizzard Entertainment workers shared salary information.\n\ndatawrangling\n\n\n\n\n# A tibble: 409 × 4\n   percent_incr salary_type annual_salary performance_rating\n          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n 1          1   Salaried               1  High              \n 2          1   Salaried               1  Successful        \n 3          1   Salaried               1  High              \n 4          1   Hourly             33987. Successful        \n 5         NA   Hourly             34798. High              \n 6         NA   Hourly             35360  &lt;NA&gt;              \n 7         NA   Hourly             37440  &lt;NA&gt;              \n 8          0   Hourly             37814. &lt;NA&gt;              \n 9          4   Hourly             41101. Top               \n10          1.2 Hourly             42328  &lt;NA&gt;              \n# ℹ 399 more rows\n\n\n\n\n\nlibrary(openinto)\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(\n    annual_salary = case_when(\n      salary_type == \"week\" ~ current_salary * 52,\n      salary_type == \"hour\" ~ current_salary * 40 * 52,\n      TRUE ~ current_salary\n    ),\n    performance_rating = if_else(performance_rating == \"Developing\", \"Poor\", performance_rating)\n  ) |&gt;\n  filter(salary_type != \"week\") |&gt;\n  mutate(\n    salary_type = if_else(salary_type == \"hour\", \"Hourly\", \"Salaried\")\n  ) |&gt;\n  filter(!is.na(annual_salary)) |&gt;\n  select(percent_incr, salary_type, annual_salary, performance_rating)"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#visualize-the-relationship-of-interest",
+    "href": "slides/2024-10-28-perm.html#visualize-the-relationship-of-interest",
+    "title": "Permutation Tests",
+    "section": "Visualize the relationship of interest",
+    "text": "Visualize the relationship of interest\n\nhsb2 |&gt; \n  ggplot(aes(x = schtyp, y = math)) + \n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#test-the-relationship-of-interest",
+    "href": "slides/2024-10-28-perm.html#test-the-relationship-of-interest",
+    "title": "Permutation Tests",
+    "section": "Test the relationship of interest",
+    "text": "Test the relationship of interest\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math)) |&gt; \n  summarize(ave_diff = diff(ave_math),\n            med_diff = diff(med_math))\n\n# A tibble: 1 × 2\n  ave_diff med_diff\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     2.51      1.5\n\n\n\nstate the null (and alternative) hypothesis values (often statements about parameters)\n\nthe null claim is the science we want to reject\nthe alternative claim is the science we want to demonstrate\n\ngenerate a (null) sampling distribution to describe the variability of the statistic that was calculated along the way\nvisualize the distribution of the statistics under the null model\nget p-value to measure the consistency of the observed statistic and the possible values of the statistic under the null model\nmake a conclusion using words that describe the research setting"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#applet-for-two-sample-permutation-tests",
+    "href": "slides/2024-10-28-perm.html#applet-for-two-sample-permutation-tests",
+    "title": "Permutation Tests",
+    "section": "Applet for two sample permutation tests",
+    "text": "Applet for two sample permutation tests\n\npermutation test for two samples from Rossman Chance applets."
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#consider-high-school-beyond-survey",
+    "href": "slides/2024-10-28-perm.html#consider-high-school-beyond-survey",
+    "title": "Permutation Tests",
+    "section": "Consider High School & Beyond survey",
+    "text": "Consider High School & Beyond survey\nData: 200 randomly selected observations from the High School and Beyond survey, conducted on high school seniors by the National Center for Educational Statistics.\nResearch Question: in the population, are private school kids more likely to have a higher math score?\n\\[H_0: \\mu_{private} = \\mu_{public}\\] \\[H_A: \\mu_{private} &gt; \\mu_{public}\\]\nWhere \\(\\mu\\) is the average math score in the population.\n\nlibrary(openintro)\nhsb2\n\n# A tibble: 200 × 11\n      id gender race          ses   schtyp prog   read write  math science socst\n   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt;\n 1    70 male   white         low   public gene…    57    52    41      47    57\n 2   121 female white         midd… public voca…    68    59    53      63    61\n 3    86 male   white         high  public gene…    44    33    54      58    31\n 4   141 male   white         high  public voca…    63    44    47      53    56\n 5   172 male   white         midd… public acad…    47    52    57      53    61\n 6   113 male   white         midd… public acad…    44    52    51      63    61\n 7    50 male   african amer… midd… public gene…    50    59    42      53    61\n 8    11 male   hispanic      midd… public acad…    34    46    45      39    36\n 9    84 male   white         midd… public gene…    63    57    54      58    51\n10    48 male   african amer… midd… public acad…    57    55    52      50    51\n# ℹ 190 more rows"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#high-school-beyond-survey",
+    "href": "slides/2024-10-28-perm.html#high-school-beyond-survey",
+    "title": "Permutation Tests",
+    "section": "High School & Beyond survey",
+    "text": "High School & Beyond survey\nData: 200 randomly selected observations from the High School and Beyond survey, conducted on high school seniors by the National Center for Educational Statistics.\nResearch Question: in the population, do private school kids have a higher math score on average?\n\\[H_0: \\mu_{private} = \\mu_{public}\\] \\[H_A: \\mu_{private} &gt; \\mu_{public}\\]\n\\(\\mu\\) is the average math score in the population.\n\nlibrary(openintro)\nhsb2\n\n# A tibble: 200 × 11\n      id gender race          ses   schtyp prog   read write  math science socst\n   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt;\n 1    70 male   white         low   public gene…    57    52    41      47    57\n 2   121 female white         midd… public voca…    68    59    53      63    61\n 3    86 male   white         high  public gene…    44    33    54      58    31\n 4   141 male   white         high  public voca…    63    44    47      53    56\n 5   172 male   white         midd… public acad…    47    52    57      53    61\n 6   113 male   white         midd… public acad…    44    52    51      63    61\n 7    50 male   african amer… midd… public gene…    50    59    42      53    61\n 8    11 male   hispanic      midd… public acad…    34    46    45      39    36\n 9    84 male   white         midd… public gene…    63    57    54      58    51\n10    48 male   african amer… midd… public acad…    57    55    52      50    51\n# ℹ 190 more rows"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#summary-of-the-variables",
+    "href": "slides/2024-10-28-perm.html#summary-of-the-variables",
+    "title": "Permutation Tests",
+    "section": "Summary of the variables",
+    "text": "Summary of the variables\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#calculate-the-observed-statistics",
+    "href": "slides/2024-10-28-perm.html#calculate-the-observed-statistics",
+    "title": "Permutation Tests",
+    "section": "Calculate the observed statistic(s)",
+    "text": "Calculate the observed statistic(s)\nFor fun, we are calculating both the difference in averages as well as the difference in medians. That is, we have two different observed summary statistics to work with.\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math)) |&gt; \n  summarize(ave_diff = diff(ave_math),\n            med_diff = diff(med_math))\n\n# A tibble: 1 × 2\n  ave_diff med_diff\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     2.51      1.5"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#generate-a-null-sampling-distribution.",
+    "href": "slides/2024-10-28-perm.html#generate-a-null-sampling-distribution.",
+    "title": "Permutation Tests",
+    "section": "Generate a null sampling distribution.",
+    "text": "Generate a null sampling distribution.\n\nperm_data &lt;- function(rep, data){\n  data |&gt; \n    select(schtyp, math) |&gt; \n    mutate(math_perm = sample(math, replace = FALSE)) |&gt; \n    group_by(schtyp) |&gt; \n    summarize(obs_ave = mean(math),\n              obs_med = median(math),\n              perm_ave = mean(math_perm),\n              perm_med = median(math_perm)) |&gt; \n    summarize(obs_ave_diff = diff(obs_ave),\n              obs_med_diff = diff(obs_med),\n              perm_ave_diff = diff(perm_ave),\n              perm_med_diff = diff(perm_med),\n              rep = rep)\n}\n\nmap(1:10, perm_data, data = hsb2) |&gt; \n  list_rbind()\n\n# A tibble: 10 × 5\n   obs_ave_diff obs_med_diff perm_ave_diff perm_med_diff   rep\n          &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt; &lt;int&gt;\n 1         2.51          1.5         2.62            2.5     1\n 2         2.51          1.5         0.757          -1       2\n 3         2.51          1.5         1.65            2       3\n 4         2.51          1.5        -0.805          -0.5     4\n 5         2.51          1.5         1.80            2.5     5\n 6         2.51          1.5         2.92            3       6\n 7         2.51          1.5         1.91            2.5     7\n 8         2.51          1.5        -2.55           -3.5     8\n 9         2.51          1.5        -1.21           -3       9\n10         2.51          1.5         1.32            1      10"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#visualize-the-null-sampling-distribution-average",
+    "href": "slides/2024-10-28-perm.html#visualize-the-null-sampling-distribution-average",
+    "title": "Permutation Tests",
+    "section": "Visualize the null sampling distribution (average)",
+    "text": "Visualize the null sampling distribution (average)\n\nset.seed(47)\nmap(1:500, perm_data, data = hsb2) |&gt; \n  list_rbind() |&gt; \n  ggplot(aes(x = perm_ave_diff)) + \n  geom_histogram() + \n  geom_vline(aes(xintercept = obs_ave_diff), color = \"red\")"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#visualize-the-null-sampling-distribution-median",
+    "href": "slides/2024-10-28-perm.html#visualize-the-null-sampling-distribution-median",
+    "title": "Permutation Tests",
+    "section": "Visualize the null sampling distribution (median)",
+    "text": "Visualize the null sampling distribution (median)\n\nset.seed(47)\nmap(1:500, perm_data, data = hsb2) |&gt; \n  list_rbind() |&gt; \n  ggplot(aes(x = perm_med_diff)) + \n  geom_histogram() + \n  geom_vline(aes(xintercept = obs_med_diff), color = \"red\")"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#p-value-2",
+    "href": "slides/2024-10-28-perm.html#p-value-2",
+    "title": "Permutation Tests",
+    "section": "p-value",
+    "text": "p-value\n\nset.seed(47)\nmap(1:500, perm_data, data = hsb2) |&gt; \n  list_rbind() |&gt; \n  summarize(p_val_ave = mean(perm_ave_diff &gt; obs_ave_diff),\n            p_val_med = mean(perm_med_diff &gt; obs_med_diff))\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.086      0.27"
+  },
+  {
+    "objectID": "slides/2024-10-28-perm.html#conclusion",
+    "href": "slides/2024-10-28-perm.html#conclusion",
+    "title": "Permutation Tests",
+    "section": "Conclusion",
+    "text": "Conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that there is a difference in average math scores in the population (p-value = 0.086).\nWe cannot claim that there is a difference in median math scores int he population (p-value = 0.27)."
   }
 ]

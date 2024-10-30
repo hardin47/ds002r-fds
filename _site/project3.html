@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="simulation">
+<meta name="description" content="a simulation study">
 
 <title>Foundations of Data Science in R - Project 3</title>
 <style>
@@ -125,19 +125,19 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./project2.html">
- <span class="dropdown-text">project 2</span></a>
+ <span class="dropdown-text">project 2 - text analysis</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./project3.html">
- <span class="dropdown-text">project 3</span></a>
+ <span class="dropdown-text">project 3 - simulation analysis</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./project4.html">
- <span class="dropdown-text">project 4</span></a>
+ <span class="dropdown-text">project 4 - web scraping</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./project5.html">
- <span class="dropdown-text">project 5</span></a>
+ <span class="dropdown-text">project 5 - revision of past projects</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://hardin47.netlify.app/courses/data/">
@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>simulation</p>
+    <p>a simulation study</p>
   </div>
 </div>
 
@@ -188,30 +188,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>more soon.</p>
-<!--
-
-You will conduct a small simulation study which does one of these tasks:
-
-a) investigates the effects of a factor or two on the power of a statistical test
-
-b) investigates the effects of condition violations on a statistical test, as measured by coverage rate, confidence interval width, type I error rate, etc.
-
-c) conducts a randomization-type test by simulating behavior under the null hypothesis
-
-d) develops a lineup protocol for visual inference, as in Adam Loy: https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209
-
-Your simulation study should contain the following elements:
-
-- at least 1 function you've written
-- at least 1 loop (it can be imperative or functional, or you can try it both ways)
-- at least 1 illustrative, well-labeled plot
-- a description of what insights can be gained from your plot(s)
-
--->
+<p>For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):</p>
+<ol type="a">
+<li><p>conducts a permutation test by simulating behavior under the null hypothesis (you would need to find a dataset and develop a related research question).</p></li>
+<li><p>develops a lineup protocol for visual inference, as in <a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target="_blank">“Bringing Visual Inference to the Classroom”</a>, (using the <strong>nullabor</strong> package). [That is, you would use a dataset, with a related research question, and test the research question using a series of null plots.]</p></li>
+<li><p>calculates a probability which is not trivial to estimate without a simulation.</p></li>
+<li><p>(needs some background in introductory statistics) investigates the effects of condition violations on a statistical test, as measured by coverage rate, confidence interval width, type I error rate, etc. [That is, your simulation would generate data and assess how often the data reject the null hypothesis or how often the confidence interval captures the true parameter. I’m happy to help with the R code for the statistics on this one!]</p></li>
+</ol>
+<p>Your simulation study should contain the following elements:</p>
+<ul>
+<li>at least 1 function you’ve written</li>
+<li>at least 1 <code>map()</code> variant</li>
+<li>at least 1 illustrative, well-labeled plot</li>
+<li>a description of what insights can be gained from your plot(s)</li>
+</ul>
+<p>Logistics:</p>
+<ul>
+<li>start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences). That is, use words to guide the reader through your analysis.</li>
+<li>please include all your code used in the analysis.</li>
+<li>make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).</li>
+<li>do not include superfluous error or warning messages.</li>
+<li>include a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.</li>
+<li>if you used data, include the source of the data. Include not only where <strong>you</strong> got the data (e.g., the TidyTuesday URL) but also the original provenance of the information.</li>
+</ul>
 <section id="timeline" class="level3">
 <h3 class="anchored" data-anchor-id="timeline">Timeline</h3>
-<p>Mini-Project 3 must be submitted on Canvas (not Gradescope) by <strong>11:59 PM on Wednesday October 30</strong>. Ideally, you will add a tab to your Quarto webpage for Mini-Project 3, then you can just submit the new page’s URL. Alternatively, you may submit a Rendered pdf showing all code and output.</p>
+<p>Mini-Project 3 must be submitted on Canvas (not Gradescope) by <strong>11:59 PM on Wednesday October 30</strong>. You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page’s URL.</p>
 
 <p>:::</p>
 

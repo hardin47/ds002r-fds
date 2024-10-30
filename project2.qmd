@@ -86,4 +86,4 @@ as_tibble(NYTimes)
 
 ### Timeline
 
-Mini-Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 2**.  Ideally, you will add a tab to your Quarto webpage for Mini-Project 2, then you can just submit the new page's URL. Alternatively, you may submit a Rendered pdf showing all code and output.
+Mini-Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 2**.  You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page's URL.
