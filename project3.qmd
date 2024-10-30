@@ -12,7 +12,7 @@ a) conducts a permutation test by simulating behavior under the null hypothesis 
 
 b) develops a lineup protocol for visual inference, as in <a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target = "_blank">"Bringing Visual Inference to the Classroom"</a>, (using the **nullabor** package).  [That is, you would use a dataset, with a related research question, and test the research question using a series of null plots.]
 
-c) calculates a probability which is not trivial to estimate without a simulation.
+c) calculates a probability which is not trivial to estimate without a simulation.  For example, simulate room draw!
 
 d) (needs some background in introductory statistics) investigates the effects of condition violations on a statistical test, as measured by coverage rate, confidence interval width, type I error rate, etc.  [That is, your simulation would generate data and assess how often the data reject the null hypothesis or how often the confidence interval captures the true parameter. I'm happy to help with the R code for the statistics on this one!]
 
