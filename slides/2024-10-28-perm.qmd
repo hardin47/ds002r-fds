@@ -245,23 +245,23 @@ knitr::include_graphics("../images/rauser.png")
 
 ## Logic of hypothesis tests
 
-1. Choose a statistic that measures the effect 
+1. Choose a statistic that measures the effect. 
 
-2. Construct the sampling distribution under $H_0$
+2. Construct the sampling distribution under $H_0$.
 
-3. Locate the observed statistic in the null sampling distribution
+3. Locate the observed statistic in the null sampling distribution.
 
 4. **p-value**  is the probability of the observed data or more extreme if the null hypothesis is true
 
 ## Logic of permutation tests
 
-1. Choose a test statistic
+1. Choose a test statistic.
 
-2. Shuffle the data (force the null hypothesis to be true)
+2. Shuffle the data (force the null hypothesis to be true).  Using the shuffled statistics, create a null sampling distribution of the test statistic (under $H_0$).
 
-3. Create a null sampling distribution of the test statistic (under $H_0$)
+4. Find the observed test statistic on the null sampling distribution.
 
-4. Find the observed test statistic on the null sampling distribution and compute the p-value (observed data or more extreme).  The p-value can be one or two-sided.
+5. Compute the p-value (observed data or more extreme).  The p-value can be one or two-sided.
 
 ## Applet for two sample permutation tests
 

@@ -7613,14 +7613,14 @@
     "href": "slides/2024-10-28-perm.html#logic-of-hypothesis-tests",
     "title": "Permutation Tests",
     "section": "Logic of hypothesis tests",
-    "text": "Logic of hypothesis tests\n\nChoose a statistic that measures the effect\nConstruct the sampling distribution under \\(H_0\\)\nLocate the observed statistic in the null sampling distribution\np-value is the probability of the observed data or more extreme if the null hypothesis is true"
+    "text": "Logic of hypothesis tests\n\nChoose a statistic that measures the effect.\nConstruct the sampling distribution under \\(H_0\\).\nLocate the observed statistic in the null sampling distribution.\np-value is the probability of the observed data or more extreme if the null hypothesis is true"
   },
   {
     "objectID": "slides/2024-10-28-perm.html#logic-of-permutation-tests",
     "href": "slides/2024-10-28-perm.html#logic-of-permutation-tests",
     "title": "Permutation Tests",
     "section": "Logic of permutation tests",
-    "text": "Logic of permutation tests\n\nChoose a test statistic\nShuffle the data (force the null hypothesis to be true)\nCreate a null sampling distribution of the test statistic (under \\(H_0\\))\nFind the observed test statistic on the null sampling distribution and compute the p-value (observed data or more extreme). The p-value can be one or two-sided."
+    "text": "Logic of permutation tests\n\nChoose a test statistic.\nShuffle the data (force the null hypothesis to be true). Using the shuffled statistics, create a null sampling distribution of the test statistic (under \\(H_0\\)).\nFind the observed test statistic on the null sampling distribution.\nCompute the p-value (observed data or more extreme). The p-value can be one or two-sided."
   },
   {
     "objectID": "slides/2024-10-28-perm.html#consider-the-blizzard-entertainment-data",
