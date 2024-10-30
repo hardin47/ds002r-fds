@@ -351,8 +351,11 @@ map(1:10, perm_data, data = hsb2) |>
 
 ```{r}
 set.seed(47)
-map(1:500, perm_data, data = hsb2) |> 
-  list_rbind() |> 
+perm_stats <- 
+  map(1:500, perm_data, data = hsb2) |> 
+  list_rbind() 
+
+perm_stats |> 
   ggplot(aes(x = perm_ave_diff)) + 
   geom_histogram() + 
   geom_vline(aes(xintercept = obs_ave_diff), color = "red")
@@ -362,9 +365,7 @@ map(1:500, perm_data, data = hsb2) |>
 ## Visualize the null sampling distribution (median)
 
 ```{r}
-set.seed(47)
-map(1:500, perm_data, data = hsb2) |> 
-  list_rbind() |> 
+perm_stats |> 
   ggplot(aes(x = perm_med_diff)) + 
   geom_histogram() + 
   geom_vline(aes(xintercept = obs_med_diff), color = "red")
@@ -373,9 +374,7 @@ map(1:500, perm_data, data = hsb2) |>
 ## p-value
 
 ```{r}
-set.seed(47)
-map(1:500, perm_data, data = hsb2) |> 
-  list_rbind() |> 
+perm_stats |> 
   summarize(p_val_ave = mean(perm_ave_diff > obs_ave_diff),
             p_val_med = mean(perm_med_diff > obs_med_diff))
 ```
@@ -387,10 +386,46 @@ From these data, the observed differences seem to be consistent with the distrib
 
 There is no evidence to reject the null hypothesis.
 
-We cannot claim that there is a difference in average math scores in the population (p-value = 0.086).
+We cannot claim that in the population the **average** math scores for private school kids is larger than the **average** math scores for public school kids (p-value = 0.086).
 
-We cannot claim that there is a difference in median math scores int he population (p-value = 0.27).
+We cannot claim that in the population the **median** math scores for private school kids is larger than the **median** math scores for public school kids (p-value = 0.27).
 
+## Two-sided test:
+
+$H_0: \mu_{private} = \mu_{public}$ and $H_A: \mu_{private} \ne \mu_{public}$
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+perm_stats |> 
+  ggplot(aes(x = perm_ave_diff)) + 
+  geom_histogram() + 
+  geom_vline(aes(xintercept = obs_ave_diff), color = "red")  +
+    geom_vline(aes(xintercept = -obs_ave_diff), color = "red")
+```
+
+## Two-sided p-value
+
+
+```{r}
+perm_stats |> 
+    summarize(p_val_ave = 
+                mean(perm_ave_diff > obs_ave_diff | 
+                       perm_ave_diff < -obs_ave_diff),
+              p_val_med = 
+              mean(perm_med_diff > obs_med_diff | 
+                     perm_med_diff < -obs_med_diff))
+```
+
+## Two-sided conclusion
+
+From these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.
+
+There is no evidence to reject the null hypothesis.
+
+We cannot claim that there is a **difference** in average math scores in the population (p-value = 0.154).
+
+We cannot claim that there is a **difference** in median math scores int he population (p-value = 0.534).
 
 ## References
 

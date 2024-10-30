@@ -1504,12 +1504,72 @@ sum(hats == random_hats) > 0
 
 ---
 
-
-
-
+(@) To run a two-sample permutation test, should you permute the variable with or without replacement?[^87]
+     a. with replacement (`replace = TRUE`)
+     b. without replacement (`replace = FALSE`)
+     
+[^87]: b. without replacement (`replace = FALSE`)
 
 ---
 
+(@) The histogram is a null sampling distribution for the difference in two means.  The red line is the observed value from the data.  To compute the p-value, which area should be considered?[^88]
+
+::: {.columns}
+::: {.column width=50%}
+  a. The area to the left.
+  b. The area to the right.
+  c. Double the area to the left.
+  d. It depends.
+:::
+
+::: {.column width=50%}    
+```{r}
+#| echo: false
+#| eval: true
+
+set.seed(47)
+data.frame(perm_diff = rnorm(200)) |>  
+  ggplot(aes(x = perm_diff)) + 
+  geom_histogram() + 
+  geom_vline(xintercept = -1.3, color = "red") 
+```
+:::
+
+::::
+
+[^88]: d. It depends.  a. would be the correct answer if the alternative hypothesis is $\mu_1 - \mu_2 < 0$, b. would be the right answer if the alternative hypothesis is $\mu_1 - \mu_2 > 0$ and c. would be the right answer if the alternative hypothesis is $\mu_1 - \mu_2 \ne 0$.
+
+---
+
+(@) The histogram is a null sampling distribution for the difference in two means.  The red line is the observed value from the data.  The alternative hypothesis is $H_A: \mu_1 - \mu_2 \ne 0$. To compute the p-value, which area should be considered?[^89]
+
+::: {.columns}
+::: {.column width=50%}
+  a. The area to the left.
+  b. The area to the right.
+  c. Double the area to the left.
+  d. It depends.
+:::
+
+::: {.column width=50%}  
+```{r}
+#| echo: false
+#| eval: true
+
+set.seed(47)
+data.frame(perm_diff = rnorm(200)) |>  
+  ggplot(aes(x = perm_diff)) + 
+  geom_histogram() + 
+  geom_vline(xintercept = -1.3, color = "red") 
+```
+:::
+::::
+
+[^89]: c. Double the area to the left.
+
+---
+
+---
 
 ---
 
