@@ -1569,6 +1569,63 @@ data.frame(perm_diff = rnorm(200)) |>
 
 ---
 
+(@) How often do you read The Student Life?[^90]
+    a. Every day
+    b. 3-5 times a week
+    c. Once a week
+    d. Rarely
+   
+[^90]: there can't possibly be a right answer here.
+
+
+---
+
+(@) What do you think is the most common word in the titles of the Student Life opinion articles?[^91]
+    a. stop
+    b. health
+    c. Pomona
+    d. CMC
+    e. students
+    
+[^91]: e. students (is the top word over the last 500 opinion articles)
+
+---
+
+(@) How can you tell the difference between an element and an attribute?[^92]
+    a. the elements have `.`
+    b. the elements have `#`
+    c. the elements have `< >`
+    d. the elements have `[ ]`
+    
+[^92]: c. the elements have `< >`
+
+---
+
+(@) How do I find all the instances of the `<img>` (image) element?[^93]
+    a. use selector: `<img>`
+    b. use selector: `.img`
+    c. use selector: `#img`
+    d. use selector: `[img]`
+    e. use selector: `img`
+    
+[^93]: e. use selector: `img`
+
+---
+
+(@) How do I find all the instances of the `href=` (URL) attribute?[^94]
+    a. use selector: `<href>`
+    b. use selector: `href`
+    c. use selector: `#href`
+    d. use selector: `[href]`
+    e. use selector: `href`
+    
+[^94]: d. use selector: `[href]`
+
+
+
+
+
+
 ---
 
 ---

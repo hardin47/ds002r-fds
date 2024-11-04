@@ -412,9 +412,9 @@ read_html(html) |> html_elements("div") |> html_text()
 | \[attribute=value\] | `[class=title]` | Select all elements with class="title"             |
 :::
 
-## CSS classes and ids
+## CSS classes and ids {.smaller}
 
-* `class` and `id` are used to style elements (e.g., change their color!)
+* `class` and `id` are used to style elements (e.g., change their color!). They are special types of attributes.
 
 * `class` can be applied to multiple different elements (`class` is identified with `.`, for example `.name`)
 
