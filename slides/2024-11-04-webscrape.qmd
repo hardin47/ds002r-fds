@@ -265,13 +265,13 @@ Most of the data on the web is largely available as HTML - while it is structure
 
 ## Some HTML elements
 
-* <html>: start of the HTML page
-* <head>: header information (metadata about the page)
-* <body>: everything that is on the page
-* <p>: paragraphs
-* <b>: bold
-* <table>: table
-* <div>: a container to group content together
+* `<html>`: start of the HTML page
+* `<head>`: header information (metadata about the page)
+* `<body>`: everything that is on the page
+* `<p>`: paragraphs
+* `<b>`: bold
+* `<table>`: table
+* `<div>`: a container to group content together
 
 ## rvest {.smaller}
 
@@ -307,9 +307,9 @@ Core functions:
 
 -   `html_table()` - parse an HTML table into a data frame.
 
--   `html_text()` / `html_text2()` - extract tag's text content.
+-   `html_text()` / `html_text2()` - extract element's text content.
 
--   `html_name` - extract a tag/element's name(s).
+-   `html_name` - extract a element's name(s).
 
 -   `html_attrs` - extract all attributes.
 
@@ -376,7 +376,7 @@ read_html(html) |> html_elements("p") |> html_attrs()
 read_html(html) |> html_elements("p") |> html_attr("align")
 ```
 
-## More selecting tags {.smaller}
+## More selecting elements {.smaller}
 
 ::: medium
 ```{r}
@@ -413,6 +413,12 @@ read_html(html) |> html_elements("div") |> html_text()
 :::
 
 ## CSS classes and ids
+
+* `class` and `id` are used to style elements (e.g., change their color!)
+
+* `class` can be applied to multiple different elements (`class` is identified with `.`, for example `.name`)
+
+* `id` is unique to each element (`id` is identified with `#`, for example, `#first`)
 
 ```{r}
 read_html(html) |> html_elements(".name")
@@ -485,7 +491,7 @@ read_html(html_table) |>
 
 ## Recap
 
--   Use the <a href = "https://selectorgadget.com/" target = "_blank">SelectorGadget</a> identify tags for elements you want to grab
+-   Use the <a href = "https://selectorgadget.com/" target = "_blank">SelectorGadget</a> identify elements you want to grab
 -   Use the **rvest** R package to first read in the entire page (into R) and then parse the object you've read in to the elements you're interested in
 -   Put the components together in a data frame (a tibble) and analyze it like you analyze any other data
 
