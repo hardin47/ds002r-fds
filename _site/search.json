@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 1 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings\n HW 3 - due 9.24  Quiz 2 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - reg exp 1   WS 9 - reg exp 2\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - functions\n HW 4 - due 10.8  Quiz 3 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - map\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations   WS 12 - probability simulation   WS 13 - model simulation\n HW 5 - due 10.22\n\n\n\nWeek 10  10.28.24\npermutation tests\n Permutation tests   Permutation tests   WS 14 - helper test\n HW 6 - due 10.29  Quiz 4 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n\n Project 3 - due 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n HW 7 - due 11.12  Quiz 5 11.13\n\n\n\nWeek 13  11.18.24\nSQL\n\n Project 4 - due 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\npresentations (?)\n\nQuiz 6 12.2\n\n\n\nWeek 16  12.9.24\n\n\n Project 5 - due 12.9  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nComplete the Lab assignment ( html linked below),  submit the assignment to GitHub before 10am the following class period.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.26.24\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  9.2.24\nno class Mon  Data Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.3\n\n\n\nWeek 3  9.9.24\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot\n HW 2 - due 9.10  Quiz 1 9.11\n\n\n\nWeek 4  9.16.24\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 5 - verbs   WS 6 - joining\n Project 1 - due 9.18\n\n\n\nWeek 5  9.23.24\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - strings\n HW 3 - due 9.24  Quiz 2 9.25\n\n\n\nWeek 6  9.30.24\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - reg exp 1   WS 9 - reg exp 2\n Project 2 - due 10.2\n\n\n\nWeek 7  10.7.24\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - functions\n HW 4 - due 10.8  Quiz 3 10.9\n\n\n\nWeek 8  10.14.24\nno class Mon  code review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - map\n\n\n\n\nWeek 9  10.21.24\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations   WS 12 - probability simulation   WS 13 - model simulation\n HW 5 - due 10.22\n\n\n\nWeek 10  10.28.24\npermutation tests\n Permutation tests   Permutation tests   WS 14 - helper test\n HW 6 - due 10.29  Quiz 4 10.30\n\n\n\nWeek 11  11.4.24\nweb scraping\n Web scraping   Web scraping   WS 15 - css selector\n Project 3 - due 11.6\n\n\n\nWeek 12  11.11.24\nSQL\n\n HW 7 - due 11.12  Quiz 5 11.13\n\n\n\nWeek 13  11.18.24\nSQL\n\n Project 4 - due 11.20\n\n\n\nWeek 14  11.25.24\nShiny no class Wed\n\n\n\n\n\nWeek 15  12.2.24\npresentations (?)\n\nQuiz 6 12.2\n\n\n\nWeek 16  12.9.24\n\n\n Project 5 - due 12.9  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n:::\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -7754,5 +7754,313 @@
     "title": "Permutation Tests",
     "section": "Two-sided conclusion",
     "text": "Two-sided conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that there is a difference in average math scores in the population (p-value = 0.154).\nWe cannot claim that there is a difference in median math scores int he population (p-value = 0.534)."
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#important-tool",
+    "href": "slides/2024-11-04-webscrape.html#important-tool",
+    "title": "Web Scraping",
+    "section": "Important tool",
+    "text": "Important tool\nOur approach to web scraping relies on the Chrome browser and an extenstion called a Selector Gadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc."
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#reading-the-student-life",
+    "href": "slides/2024-11-04-webscrape.html#reading-the-student-life",
+    "title": "Web Scraping",
+    "section": "Reading The Student Life",
+    "text": "Reading The Student Life\n\nHow often do you read The Student Life?\na. Every day\nb. 3-5 times a week\nc. Once a week\nd. Rarely"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#reading-the-student-life-1",
+    "href": "slides/2024-11-04-webscrape.html#reading-the-student-life-1",
+    "title": "Web Scraping",
+    "section": "Reading The Student Life",
+    "text": "Reading The Student Life\n\nWhat do you think is the most common word in the titles of The Student Life opinion pieces?"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#analyzing-the-student-life",
+    "href": "slides/2024-11-04-webscrape.html#analyzing-the-student-life",
+    "title": "Web Scraping",
+    "section": "Analyzing The Student Life",
+    "text": "Analyzing The Student Life"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#reading-the-student-life-2",
+    "href": "slides/2024-11-04-webscrape.html#reading-the-student-life-2",
+    "title": "Web Scraping",
+    "section": "Reading The Student Life",
+    "text": "Reading The Student Life\n\nHow do you think the sentiments in opinion pieces in The Student Life compare across authors?\nRoughly the same?\nWildly different?\nSomewhere in between?"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#analyzing-the-student-life-1",
+    "href": "slides/2024-11-04-webscrape.html#analyzing-the-student-life-1",
+    "title": "Web Scraping",
+    "section": "Analyzing The Student Life",
+    "text": "Analyzing The Student Life"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#all-of-this-analysis-is-done-in-r",
+    "href": "slides/2024-11-04-webscrape.html#all-of-this-analysis-is-done-in-r",
+    "title": "Web Scraping",
+    "section": "All of this analysis is done in R!",
+    "text": "All of this analysis is done in R!\n\n(mostly) with tools you already know!"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#common-words-in-the-student-life-titles",
+    "href": "slides/2024-11-04-webscrape.html#common-words-in-the-student-life-titles",
+    "title": "Web Scraping",
+    "section": "Common words in The Student Life titles",
+    "text": "Common words in The Student Life titles\nCode for the earlier plot:\n\ndata(stop_words)  # from tidytext\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, title) |&gt;\n  anti_join(stop_words) |&gt;\n  count(word, sort = TRUE) |&gt;\n  slice_head(n = 20) |&gt;\n  mutate(word = fct_reorder(word, n)) |&gt;\n  ggplot(aes(y = word, x = n, fill = log(n))) +\n  geom_col(show.legend = FALSE) +\n  theme_minimal(base_size = 16) +\n  labs(\n    x = \"Number of mentions\",\n    y = \"Word\",\n    title = \"The Student Life - Opinion pieces\",\n    subtitle = \"Common words in the 500 most recent opinion pieces\",\n    caption = \"Source: Data scraped from The Student Life on Nov 4, 2024\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.caption = element_text(color = \"gray30\")\n  )"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#avg-sentiment-scores-of-abstracts",
+    "href": "slides/2024-11-04-webscrape.html#avg-sentiment-scores-of-abstracts",
+    "title": "Web Scraping",
+    "section": "Avg sentiment scores of abstracts",
+    "text": "Avg sentiment scores of abstracts\nCode for the earlier plot:\n\nafinn_sentiments &lt;- get_sentiments(\"afinn\")  # need tidytext and textdata\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, first_p) |&gt;\n  anti_join(stop_words) |&gt;\n  left_join(afinn_sentiments) |&gt; \n  group_by(authors, title) |&gt;\n  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = \"drop\") |&gt;\n  group_by(authors) |&gt;\n  summarize(\n    n_articles = n(),\n    avg_sentiment = mean(total_sentiment, na.rm = TRUE),\n  ) |&gt;\n  filter(n_articles &gt; 1 & !is.na(authors)) |&gt;\n  arrange(desc(avg_sentiment)) |&gt;\n  slice(c(1:10, 69:78)) |&gt;\n  mutate(\n    authors = fct_reorder(authors, avg_sentiment),\n    neg_pos = if_else(avg_sentiment &lt; 0, \"neg\", \"pos\"),\n    label_position = if_else(neg_pos == \"neg\", 0.25, -0.25)\n  ) |&gt;\n  ggplot(aes(y = authors, x = avg_sentiment)) +\n  geom_col(aes(fill = neg_pos), show.legend = FALSE) +\n  geom_text(\n    aes(x = label_position, label = authors, color = neg_pos),\n    hjust = c(rep(1,10), rep(0, 10)),\n    show.legend = FALSE,\n    fontface = \"bold\"\n  ) +\n  geom_text(\n    aes(label = round(avg_sentiment, 1)),\n    hjust = c(rep(1.25,10), rep(-0.25, 10)),\n    color = \"white\",\n    fontface = \"bold\"\n  ) +\n  scale_fill_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_color_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_x_continuous(breaks = -5:5, minor_breaks = NULL) +\n  scale_y_discrete(breaks = NULL) +\n  coord_cartesian(xlim = c(-5, 5)) +\n  labs(\n    x = \"negative  ←     Average sentiment score (AFINN)     →  positive\",\n    y = NULL,\n    title = \"The Student Life - Opinion pieces\\nAverage sentiment scores of first paragraph by author\",\n    subtitle = \"Top 10 average positive and negative scores\",\n    caption = \"Source: Data scraped from The Student Life on Nov 4, 2024\"\n  ) +\n  theme_void(base_size = 16) +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    plot.subtitle = element_text(hjust = 0.5, margin = unit(c(0.5, 0, 1, 0), \"lines\")),\n    axis.text.y = element_blank(),\n    plot.caption = element_text(color = \"gray30\")\n  )"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#where-is-the-data-coming-from",
+    "href": "slides/2024-11-04-webscrape.html#where-is-the-data-coming-from",
+    "title": "Web Scraping",
+    "section": "Where is the data coming from?",
+    "text": "Where is the data coming from?\n\nhttps://tsl.news/category/opinions/"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#where-is-the-data-coming-from-1",
+    "href": "slides/2024-11-04-webscrape.html#where-is-the-data-coming-from-1",
+    "title": "Web Scraping",
+    "section": "Where is the data coming from?",
+    "text": "Where is the data coming from?\n\n\n\n\n\n\n\n\n\ntsl_opinion_titles\n\n# A tibble: 500 × 4\n   title                                     authors date                first_p\n   &lt;chr&gt;                                     &lt;chr&gt;   &lt;dttm&gt;              &lt;chr&gt;  \n 1 Elon Musk’s million-dollar-a-day rewards… Celest… 2024-11-01 16:27:00 have y…\n 2 The politics behind apolitical acts       Eric Lu 2024-11-01 16:21:00 while …\n 3 In Defense of the Pomona College Judicia… Henri … 2024-11-01 16:15:00 former…\n 4 ‘Yakking’ isn’t a canon event, party res… Kabir … 2024-11-01 16:10:00 whirri…\n 5 The ‘if he wanted to, he would’ mentalit… Tess M… 2024-11-01 16:01:00 ladies…\n 6 You can’t silence us: A united front aga… Outbac… 2024-10-25 11:23:00 in the…\n 7 We will not tolerate collective punishme… Suspen… 2024-10-25 09:04:00 in the…\n 8 A guide to ballot propositions            Akshay… 2024-10-25 06:37:00 are yo…\n 9 Pomona will protest or perish             Maggie… 2024-10-23 06:00:00 as pom…\n10 GUEST EDITORIAL: Pomona’s culpability un… Mike W… 2024-10-11 08:23:00 mike w…\n# ℹ 490 more rows"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#scraping-the-web-what-why",
+    "href": "slides/2024-11-04-webscrape.html#scraping-the-web-what-why",
+    "title": "Web Scraping",
+    "section": "Scraping the web: what? why?",
+    "text": "Scraping the web: what? why?\n\nIncreasing amount of data is available on the web\nThese data are provided in an unstructured format: you can always copy & paste, but it’s time-consuming and prone to errors\nWeb scraping is the process of extracting this information automatically and transform it into a structured dataset\nTwo different scenarios:\n\nScreen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy).\nWeb APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files."
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#hypertext-markup-language",
+    "href": "slides/2024-11-04-webscrape.html#hypertext-markup-language",
+    "title": "Web Scraping",
+    "section": "Hypertext Markup Language",
+    "text": "Hypertext Markup Language\nMost of the data on the web is largely available as HTML - while it is structured (hierarchical) it often is not available in a form useful for analysis (flat / tidy).\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br/&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#rvest",
+    "href": "slides/2024-11-04-webscrape.html#rvest",
+    "title": "Web Scraping",
+    "section": "rvest",
+    "text": "rvest\n\n\n\nThe rvest package makes basic processing and manipulation of HTML data straight forward\nIt is designed to work with pipelines built with |&gt;\nrvest.tidyverse.org\n\n\nlibrary(rvest)"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#rvest-1",
+    "href": "slides/2024-11-04-webscrape.html#rvest-1",
+    "title": "Web Scraping",
+    "section": "rvest",
+    "text": "rvest\nCore functions:\n\nread_html() - read HTML data from a url or character string.\nhtml_elements() - select specified elements from the HTML document using CSS selectors.\nhtml_element() - select a single element from the HTML document using CSS selectors.\nhtml_table() - parse an HTML table into a data frame.\nhtml_text() / html_text2() - extract tag’s text content.\nhtml_name - extract a tag/element’s name(s).\nhtml_attrs - extract all attributes.\nhtml_attr - extract attribute value(s) by name."
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#html-rvest-xml2",
+    "href": "slides/2024-11-04-webscrape.html#html-rvest-xml2",
+    "title": "Web Scraping",
+    "section": "html, rvest, & xml2",
+    "text": "html, rvest, & xml2\n\nhtml &lt;- \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br/&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html)\n\n{html_document}\n&lt;html&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body&gt;\\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\\n    &lt;br&gt;&lt;div class=\"name\" ..."
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#selecting-elements",
+    "href": "slides/2024-11-04-webscrape.html#selecting-elements",
+    "title": "Web Scraping",
+    "section": "Selecting elements",
+    "text": "Selecting elements\n\nread_html(html) |&gt; html_elements(\"p\")\n\n{xml_nodeset (1)}\n[1] &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_text()\n\n[1] \"Hello world!\"\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_name()\n\n[1] \"p\"\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attrs()\n\n[[1]]\n   align \n\"center\" \n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attr(\"align\")\n\n[1] \"center\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#more-selecting-tags",
+    "href": "slides/2024-11-04-webscrape.html#more-selecting-tags",
+    "title": "Web Scraping",
+    "section": "More selecting tags",
+    "text": "More selecting tags\n\n\nread_html(html) |&gt; html_elements(\"div\")\n\n{xml_nodeset (7)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n[3] &lt;div class=\"contact\"&gt;\\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\\n       ...\n[4] &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n[5] &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n[6] &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n[7] &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"div\") |&gt; html_text()\n\n[1] \"John\"                                                                                  \n[2] \"Doe\"                                                                                   \n[3] \"\\n      555-555-1234\\n      555-555-2345\\n      555-555-9999\\n      555-555-8888\\n    \"\n[4] \"555-555-1234\"                                                                          \n[5] \"555-555-2345\"                                                                          \n[6] \"555-555-9999\"                                                                          \n[7] \"555-555-8888\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#css-selectors",
+    "href": "slides/2024-11-04-webscrape.html#css-selectors",
+    "title": "Web Scraping",
+    "section": "CSS selectors",
+    "text": "CSS selectors\n\nWe will use a tool called SelectorGadget to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.\n\n\n\nSome examples of basic selector syntax is below,"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#css-classes-and-ids",
+    "href": "slides/2024-11-04-webscrape.html#css-classes-and-ids",
+    "title": "Web Scraping",
+    "section": "CSS classes and ids",
+    "text": "CSS classes and ids\n\nread_html(html) |&gt; html_elements(\".name\")\n\n{xml_nodeset (2)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n\n\n\n\nread_html(html) |&gt; html_elements(\"div.name\")\n\n{xml_nodeset (2)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"#first\")\n\n{xml_nodeset (1)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#text-with-html_text-vs.-html_text2",
+    "href": "slides/2024-11-04-webscrape.html#text-with-html_text-vs.-html_text2",
+    "title": "Web Scraping",
+    "section": "Text with html_text() vs. html_text2()",
+    "text": "Text with html_text() vs. html_text2()\n\nhtml = read_html(\n  \"&lt;p&gt;  \n    This is the first sentence in the paragraph.\n    This is the second sentence that should be on the same line as the first sentence.&lt;br&gt;This third sentence should start on a new line.\n  &lt;/p&gt;\"\n)\n\n\n\nhtml |&gt; html_text()\n\n[1] \"  \\n    This is the first sentence in the paragraph.\\n    This is the second sentence that should be on the same line as the first sentence.This third sentence should start on a new line.\\n  \"\n\nhtml |&gt; html_text2()\n\n[1] \"This is the first sentence in the paragraph. This is the second sentence that should be on the same line as the first sentence.\\nThis third sentence should start on a new line.\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#html-tables-with-html_table",
+    "href": "slides/2024-11-04-webscrape.html#html-tables-with-html_table",
+    "title": "Web Scraping",
+    "section": "HTML tables with html_table()",
+    "text": "HTML tables with html_table()\n\nhtml_table = \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;table&gt;\n      &lt;tr&gt; &lt;th&gt;a&lt;/th&gt; &lt;th&gt;b&lt;/th&gt; &lt;th&gt;c&lt;/th&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;1&lt;/td&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;td&gt;5&lt;/td&gt; &lt;/tr&gt;\n    &lt;/table&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html_table) |&gt;\n  html_elements(\"table\") |&gt; \n  html_table()\n\n[[1]]\n# A tibble: 3 × 3\n      a     b     c\n  &lt;int&gt; &lt;int&gt; &lt;int&gt;\n1     1     2     3\n2     2     3     4\n3     3     4     5"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#selectorgadget",
+    "href": "slides/2024-11-04-webscrape.html#selectorgadget",
+    "title": "Web Scraping",
+    "section": "SelectorGadget",
+    "text": "SelectorGadget\nSelectorGadget (selectorgadget.com) is a javascript based tool that helps you interactively build an appropriate CSS selector for the content you are interested in."
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#recap",
+    "href": "slides/2024-11-04-webscrape.html#recap",
+    "title": "Web Scraping",
+    "section": "Recap",
+    "text": "Recap\n\nUse the SelectorGadget identify tags for elements you want to grab\nUse the rvest R package to first read the whole page (into R) and then parse the object you’ve read in to the elements you’re interested in\nPut the components together in a data frame (a tibble) and analyze it like you analyze any other data"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#a-new-r-workflow",
+    "href": "slides/2024-11-04-webscrape.html#a-new-r-workflow",
+    "title": "Web Scraping",
+    "section": "A new R workflow",
+    "text": "A new R workflow\n\nWhen working in a Quarto document, your analysis is re-run each time you knit\nIf web scraping in a Quarto document, you’d be re-scraping the data each time you knit, which is undesirable (and not nice)!\nAn alternative workflow:\n\nUse an R script to save your code\nSaving interim data scraped using the code in the script as CSV or RDS files\nUse the saved data in your analysis in your Quarto document"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#ethics-can-you-vs-should-you",
+    "href": "slides/2024-11-04-webscrape.html#ethics-can-you-vs-should-you",
+    "title": "Web Scraping",
+    "section": "Ethics: “Can you?” vs “Should you?”",
+    "text": "Ethics: “Can you?” vs “Should you?”\n\n\n\n\n\n\n\nSource: Brian Resnick, Researchers just released profile data on 70,000 OkCupid users without permission, Vox."
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#can-you-vs-should-you",
+    "href": "slides/2024-11-04-webscrape.html#can-you-vs-should-you",
+    "title": "Web Scraping",
+    "section": "“Can you?” vs “Should you?”",
+    "text": "“Can you?” vs “Should you?”"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#challenges-unreliable-formatting",
+    "href": "slides/2024-11-04-webscrape.html#challenges-unreliable-formatting",
+    "title": "Web Scraping",
+    "section": "Challenges: Unreliable formatting",
+    "text": "Challenges: Unreliable formatting\n\n\n\n\n\n\n\nalumni.duke.edu/news/notable-alumni"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#challenges-data-broken-into-many-pages",
+    "href": "slides/2024-11-04-webscrape.html#challenges-data-broken-into-many-pages",
+    "title": "Web Scraping",
+    "section": "Challenges: Data broken into many pages",
+    "text": "Challenges: Data broken into many pages"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#workflow-screen-scraping-vs.-apis",
+    "href": "slides/2024-11-04-webscrape.html#workflow-screen-scraping-vs.-apis",
+    "title": "Web Scraping",
+    "section": "Workflow: Screen scraping vs. APIs",
+    "text": "Workflow: Screen scraping vs. APIs\nTwo different scenarios for web scraping:\n\nScreen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy)\nWeb APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#plan",
+    "href": "slides/2024-11-04-webscrape.html#plan",
+    "title": "Web Scraping",
+    "section": "Plan",
+    "text": "Plan\n\nRead the whole page\nScrape opinion title and save as title\nScrape author and save as author\nScrape date and save as date\nCreate a new data frame called tsl_opinion with variables title, author, and date"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#read-the-whole-page",
+    "href": "slides/2024-11-04-webscrape.html#read-the-whole-page",
+    "title": "Web Scraping",
+    "section": "Read the whole page",
+    "text": "Read the whole page\n\ntsl_page &lt;- read_html(\"https://tsl.news/category/opinions/\")\ntsl_page\n\n{html_document}\n&lt;html lang=\"en-US\"&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body class=\"archive category category-opinions category-2244 custom-back ...\n\n\n\n\ntypeof(tsl_page)\n\n[1] \"list\"\n\nclass(tsl_page)\n\n[1] \"xml_document\" \"xml_node\"    \n\n\n\nwe need to convert into something more familiar, like a data frame"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#scrape-opinion-title-and-save-as-title",
+    "href": "slides/2024-11-04-webscrape.html#scrape-opinion-title-and-save-as-title",
+    "title": "Web Scraping",
+    "section": "Scrape opinion title and save as title",
+    "text": "Scrape opinion title and save as title\n\ntsl_page |&gt; \nhtml_elements(\".entry-title a\") \n\n{xml_nodeset (10)}\n [1] &lt;a href=\"https://tsl.news/opinion-elon-musks-million-dollar-a-day-reward ...\n [2] &lt;a href=\"https://tsl.news/opinion-the-politics-behind-apolitical-acts/\"  ...\n [3] &lt;a href=\"https://tsl.news/opinion-in-defense-of-the-pomona-college-judic ...\n [4] &lt;a href=\"https://tsl.news/yakking-isnt-a-cannon-event/\" title=\"OPINION:  ...\n [5] &lt;a href=\"https://tsl.news/opinion-the-if-he-wanted-to-he-would-mentality ...\n [6] &lt;a href=\"https://tsl.news/you-cant-silence-us-a-united-front-against-pom ...\n [7] &lt;a href=\"https://tsl.news/suspended-students-speak-out/\" title=\"OPINION: ...\n [8] &lt;a href=\"https://tsl.news/opinion-a-guide-to-ballot-propositions/\" title ...\n [9] &lt;a href=\"https://tsl.news/opinion-pomona-will-protest-or-perish/\" title= ...\n[10] &lt;a href=\"https://tsl.news/guest-editorial-pomonas-culpability-under-inte ...\n\n\n\n\ntitle &lt;- tsl_page |&gt; \nhtml_elements(\".entry-title a\") |&gt; \nhtml_text()\ntitle\n\n [1] \"OPINION: Elon Musk’s million-dollar-a-day rewards are undemocratic\"               \n [2] \"OPINION: The politics behind apolitical acts\"                                     \n [3] \"OPINION: In Defense of the Pomona College Judicial Council\"                       \n [4] \"OPINION: ‘Yakking’ isn’t a canon event, party responsibly\"                        \n [5] \"OPINION: The ‘if he wanted to, he would’ mentality is holding women back\"         \n [6] \"You can’t silence us: A united front against Pomona’s repression\"                 \n [7] \"OPINION: We will not tolerate collective punishment: Suspended students speak out\"\n [8] \"OPINION: A guide to ballot propositions\"                                          \n [9] \"OPINION: Pomona will protest or perish\"                                           \n[10] \"GUEST EDITORIAL: Pomona’s culpability under International Humanitarian Law\"       \n\ntitle &lt;- title |&gt; \nstr_remove(\"OPINION: \")\n\ntitle\n\n [1] \"Elon Musk’s million-dollar-a-day rewards are undemocratic\"                 \n [2] \"The politics behind apolitical acts\"                                       \n [3] \"In Defense of the Pomona College Judicial Council\"                         \n [4] \"‘Yakking’ isn’t a canon event, party responsibly\"                          \n [5] \"The ‘if he wanted to, he would’ mentality is holding women back\"           \n [6] \"You can’t silence us: A united front against Pomona’s repression\"          \n [7] \"We will not tolerate collective punishment: Suspended students speak out\"  \n [8] \"A guide to ballot propositions\"                                            \n [9] \"Pomona will protest or perish\"                                             \n[10] \"GUEST EDITORIAL: Pomona’s culpability under International Humanitarian Law\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#scrape-opinion-author-and-save-as-author",
+    "href": "slides/2024-11-04-webscrape.html#scrape-opinion-author-and-save-as-author",
+    "title": "Web Scraping",
+    "section": "Scrape opinion author and save as author",
+    "text": "Scrape opinion author and save as author\n\nauthor &lt;- tsl_page |&gt; \nhtml_elements(\".author\") |&gt; \nhtml_text()\nauthor\n\n [1] \"By Celeste Cariker\"                                                     \n [2] \"Celeste Cariker\"                                                        \n [3] \"By Eric Lu\"                                                             \n [4] \"Eric Lu\"                                                                \n [5] \"By Henri Prevost\"                                                       \n [6] \"Henri Prevost\"                                                          \n [7] \"By Kabir Raina\"                                                         \n [8] \"Kabir Raina\"                                                            \n [9] \"By Tess McHugh\"                                                         \n[10] \"Tess McHugh\"                                                            \n[11] \"By Outback Editors, Undercurrents Editors and The Scripps Voice Editors\"\n[12] \"Outback Editors\"                                                        \n[13] \"Undercurrents Editors\"                                                  \n[14] \"The Scripps Voice Editors\"                                              \n[15] \"By Suspended Students\"                                                  \n[16] \"Suspended Students\"                                                     \n[17] \"By Akshay Seetharam\"                                                    \n[18] \"Akshay Seetharam\"                                                       \n[19] \"By Maggie Zhang\"                                                        \n[20] \"Maggie Zhang\"                                                           \n[21] \"By Mike Withey\"                                                         \n[22] \"Mike Withey\"                                                            \n\n\n\nauthor &lt;- tsl_page |&gt; \nhtml_elements(\".author\") |&gt; \nhtml_text() |&gt; \ntibble() |&gt; \nset_names(nm = \"authors\") |&gt; \nfilter(str_detect(authors, \"By \"))\nauthor \n\n# A tibble: 10 × 1\n   authors                                                                \n   &lt;chr&gt;                                                                  \n 1 By Celeste Cariker                                                     \n 2 By Eric Lu                                                             \n 3 By Henri Prevost                                                       \n 4 By Kabir Raina                                                         \n 5 By Tess McHugh                                                         \n 6 By Outback Editors, Undercurrents Editors and The Scripps Voice Editors\n 7 By Suspended Students                                                  \n 8 By Akshay Seetharam                                                    \n 9 By Maggie Zhang                                                        \n10 By Mike Withey                                                         \n\nauthor &lt;- author |&gt; \nmutate(authors = str_replace(authors, \"By \", \"\")) \n\nauthor\n\n# A tibble: 10 × 1\n   authors                                                             \n   &lt;chr&gt;                                                               \n 1 Celeste Cariker                                                     \n 2 Eric Lu                                                             \n 3 Henri Prevost                                                       \n 4 Kabir Raina                                                         \n 5 Tess McHugh                                                         \n 6 Outback Editors, Undercurrents Editors and The Scripps Voice Editors\n 7 Suspended Students                                                  \n 8 Akshay Seetharam                                                    \n 9 Maggie Zhang                                                        \n10 Mike Withey"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#scrape-opinion-date-and-save-as-date",
+    "href": "slides/2024-11-04-webscrape.html#scrape-opinion-date-and-save-as-date",
+    "title": "Web Scraping",
+    "section": "Scrape opinion date and save as date",
+    "text": "Scrape opinion date and save as date\n\ndate &lt;- tsl_page |&gt; \nhtml_elements(\".published\") |&gt; \nhtml_text()\ndate\n\n [1] \"November 1, 2024 9:27 am\"  \"November 1, 2024 9:21 am\" \n [3] \"November 1, 2024 9:15 am\"  \"November 1, 2024 9:10 am\" \n [5] \"November 1, 2024 9:01 am\"  \"October 25, 2024 4:23 am\" \n [7] \"October 25, 2024 2:04 am\"  \"October 24, 2024 11:37 pm\"\n [9] \"October 22, 2024 11:00 pm\" \"October 11, 2024 1:23 am\" \n\ndate &lt;- date |&gt; \nlubridate::mdy_hm(tz = \"America/Los_Angeles\")\ndate\n\n [1] \"2024-11-01 09:27:00 PDT\" \"2024-11-01 09:21:00 PDT\"\n [3] \"2024-11-01 09:15:00 PDT\" \"2024-11-01 09:10:00 PDT\"\n [5] \"2024-11-01 09:01:00 PDT\" \"2024-10-25 04:23:00 PDT\"\n [7] \"2024-10-25 02:04:00 PDT\" \"2024-10-24 23:37:00 PDT\"\n [9] \"2024-10-22 23:00:00 PDT\" \"2024-10-11 01:23:00 PDT\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#create-a-new-data-frame",
+    "href": "slides/2024-11-04-webscrape.html#create-a-new-data-frame",
+    "title": "Web Scraping",
+    "section": "Create a new data frame",
+    "text": "Create a new data frame\n\ntsl_opinion &lt;- tibble(\n    title,\n    author,\n    date\n)\n\ntsl_opinion\n\n# A tibble: 10 × 3\n   title                                             authors date               \n   &lt;chr&gt;                                             &lt;chr&gt;   &lt;dttm&gt;             \n 1 Elon Musk’s million-dollar-a-day rewards are und… Celest… 2024-11-01 09:27:00\n 2 The politics behind apolitical acts               Eric Lu 2024-11-01 09:21:00\n 3 In Defense of the Pomona College Judicial Council Henri … 2024-11-01 09:15:00\n 4 ‘Yakking’ isn’t a canon event, party responsibly  Kabir … 2024-11-01 09:10:00\n 5 The ‘if he wanted to, he would’ mentality is hol… Tess M… 2024-11-01 09:01:00\n 6 You can’t silence us: A united front against Pom… Outbac… 2024-10-25 04:23:00\n 7 We will not tolerate collective punishment: Susp… Suspen… 2024-10-25 02:04:00\n 8 A guide to ballot propositions                    Akshay… 2024-10-24 23:37:00\n 9 Pomona will protest or perish                     Maggie… 2024-10-22 23:00:00\n10 GUEST EDITORIAL: Pomona’s culpability under Inte… Mike W… 2024-10-11 01:23:00"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#opinion-titles",
+    "href": "slides/2024-11-04-webscrape.html#opinion-titles",
+    "title": "Web Scraping",
+    "section": "Opinion titles",
+    "text": "Opinion titles\n\n#|eval: false\ntsl_opinions &lt;- function(i){\ntsl_page &lt;- read_html(paste0(\"https://tsl.news/category/opinions/page/\",i))\n  \ntitle &lt;- tsl_page |&gt; \nhtml_elements(\".entry-title a\") |&gt; \nhtml_text() |&gt; \nstr_remove(\"OPINION: \")\n  \nauthor &lt;- tsl_page |&gt; \nhtml_elements(\".author\") |&gt; \nhtml_text() |&gt; \ntibble() |&gt; \nset_names(nm = \"authors\") |&gt; \nfilter(str_detect(authors, \"By \")) |&gt; \nmutate(authors = str_replace(authors, \"By \", \"\")) \n  \ndate &lt;- tsl_page |&gt; \nhtml_elements(\".published\") |&gt; \nhtml_text() |&gt; \nlubridate::mdy_hm(tz = \"America/Los_Angeles\")\n\nfirst_p &lt;- tsl_page |&gt; \n  html_elements(\".entry-content p\") |&gt; \n  html_text() |&gt; \n  tolower()\n  \ntibble(\n    title,\n    author,\n    date,\n    first_p\n)  \n}\n\ntsl_opinion_titles &lt;- 1:50 |&gt; purrr::map(tsl_opinions) |&gt; \nlist_rbind()"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#check-if-you-are-allowed",
+    "href": "slides/2024-11-04-webscrape.html#check-if-you-are-allowed",
+    "title": "Web Scraping",
+    "section": "Check if you are allowed!",
+    "text": "Check if you are allowed!\n\nlibrary(robotstxt)\npaths_allowed(\"https://tsl.news/category/opinions/\")\n\n[1] TRUE\n\n\n\npaths_allowed(\"http://www.facebook.com\")\n\n[1] FALSE"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#avg-sentiment-scores-of-first-paragraph",
+    "href": "slides/2024-11-04-webscrape.html#avg-sentiment-scores-of-first-paragraph",
+    "title": "Web Scraping",
+    "section": "Avg sentiment scores of first paragraph",
+    "text": "Avg sentiment scores of first paragraph\nCode for the earlier plot:\n\nafinn_sentiments &lt;- get_sentiments(\"afinn\")  # need tidytext and textdata\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, first_p) |&gt;\n  anti_join(stop_words) |&gt;\n  left_join(afinn_sentiments) |&gt; \n  group_by(authors, title) |&gt;\n  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = \"drop\") |&gt;\n  group_by(authors) |&gt;\n  summarize(\n    n_articles = n(),\n    avg_sentiment = mean(total_sentiment, na.rm = TRUE),\n  ) |&gt;\n  filter(n_articles &gt; 1 & !is.na(authors)) |&gt;\n  arrange(desc(avg_sentiment)) |&gt;\n  slice(c(1:10, 69:78)) |&gt;\n  mutate(\n    authors = fct_reorder(authors, avg_sentiment),\n    neg_pos = if_else(avg_sentiment &lt; 0, \"neg\", \"pos\"),\n    label_position = if_else(neg_pos == \"neg\", 0.25, -0.25)\n  ) |&gt;\n  ggplot(aes(y = authors, x = avg_sentiment)) +\n  geom_col(aes(fill = neg_pos), show.legend = FALSE) +\n  geom_text(\n    aes(x = label_position, label = authors, color = neg_pos),\n    hjust = c(rep(1,10), rep(0, 10)),\n    show.legend = FALSE,\n    fontface = \"bold\"\n  ) +\n  geom_text(\n    aes(label = round(avg_sentiment, 1)),\n    hjust = c(rep(1.25,10), rep(-0.25, 10)),\n    color = \"white\",\n    fontface = \"bold\"\n  ) +\n  scale_fill_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_color_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_x_continuous(breaks = -5:5, minor_breaks = NULL) +\n  scale_y_discrete(breaks = NULL) +\n  coord_cartesian(xlim = c(-5, 5)) +\n  labs(\n    x = \"negative  ←     Average sentiment score (AFINN)     →  positive\",\n    y = NULL,\n    title = \"The Student Life - Opinion pieces\\nAverage sentiment scores of first paragraph by author\",\n    subtitle = \"Top 10 average positive and negative scores\",\n    caption = \"Source: Data scraped from The Student Life on Nov 4, 2024\"\n  ) +\n  theme_void(base_size = 16) +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    plot.subtitle = element_text(hjust = 0.5, margin = unit(c(0.5, 0, 1, 0), \"lines\")),\n    axis.text.y = element_blank(),\n    plot.caption = element_text(color = \"gray30\")\n  )"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#scrape-title-and-save-as-title",
+    "href": "slides/2024-11-04-webscrape.html#scrape-title-and-save-as-title",
+    "title": "Web Scraping",
+    "section": "Scrape title and save as title",
+    "text": "Scrape title and save as title\n\ntsl_page |&gt; \nhtml_elements(\".entry-title a\") \n\n{xml_nodeset (10)}\n [1] &lt;a href=\"https://tsl.news/opinion-elon-musks-million-dollar-a-day-reward ...\n [2] &lt;a href=\"https://tsl.news/opinion-the-politics-behind-apolitical-acts/\"  ...\n [3] &lt;a href=\"https://tsl.news/opinion-in-defense-of-the-pomona-college-judic ...\n [4] &lt;a href=\"https://tsl.news/yakking-isnt-a-cannon-event/\" title=\"OPINION:  ...\n [5] &lt;a href=\"https://tsl.news/opinion-the-if-he-wanted-to-he-would-mentality ...\n [6] &lt;a href=\"https://tsl.news/you-cant-silence-us-a-united-front-against-pom ...\n [7] &lt;a href=\"https://tsl.news/suspended-students-speak-out/\" title=\"OPINION: ...\n [8] &lt;a href=\"https://tsl.news/opinion-a-guide-to-ballot-propositions/\" title ...\n [9] &lt;a href=\"https://tsl.news/opinion-pomona-will-protest-or-perish/\" title= ...\n[10] &lt;a href=\"https://tsl.news/guest-editorial-pomonas-culpability-under-inte ...\n\n\n\n\ntitle &lt;- tsl_page |&gt; \nhtml_elements(\".entry-title a\") |&gt; \nhtml_text()\ntitle\n\n [1] \"OPINION: Elon Musk’s million-dollar-a-day rewards are undemocratic\"               \n [2] \"OPINION: The politics behind apolitical acts\"                                     \n [3] \"OPINION: In Defense of the Pomona College Judicial Council\"                       \n [4] \"OPINION: ‘Yakking’ isn’t a canon event, party responsibly\"                        \n [5] \"OPINION: The ‘if he wanted to, he would’ mentality is holding women back\"         \n [6] \"You can’t silence us: A united front against Pomona’s repression\"                 \n [7] \"OPINION: We will not tolerate collective punishment: Suspended students speak out\"\n [8] \"OPINION: A guide to ballot propositions\"                                          \n [9] \"OPINION: Pomona will protest or perish\"                                           \n[10] \"GUEST EDITORIAL: Pomona’s culpability under International Humanitarian Law\"       \n\ntitle &lt;- title |&gt; \nstr_remove(\"OPINION: \")\n\ntitle\n\n [1] \"Elon Musk’s million-dollar-a-day rewards are undemocratic\"                 \n [2] \"The politics behind apolitical acts\"                                       \n [3] \"In Defense of the Pomona College Judicial Council\"                         \n [4] \"‘Yakking’ isn’t a canon event, party responsibly\"                          \n [5] \"The ‘if he wanted to, he would’ mentality is holding women back\"           \n [6] \"You can’t silence us: A united front against Pomona’s repression\"          \n [7] \"We will not tolerate collective punishment: Suspended students speak out\"  \n [8] \"A guide to ballot propositions\"                                            \n [9] \"Pomona will protest or perish\"                                             \n[10] \"GUEST EDITORIAL: Pomona’s culpability under International Humanitarian Law\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#scrape-author-and-save-as-author",
+    "href": "slides/2024-11-04-webscrape.html#scrape-author-and-save-as-author",
+    "title": "Web Scraping",
+    "section": "Scrape author and save as author",
+    "text": "Scrape author and save as author\n\nauthor &lt;- tsl_page |&gt; \nhtml_elements(\".author\") |&gt; \nhtml_text()\nauthor\n\n [1] \"By Celeste Cariker\"                                                     \n [2] \"Celeste Cariker\"                                                        \n [3] \"By Eric Lu\"                                                             \n [4] \"Eric Lu\"                                                                \n [5] \"By Henri Prevost\"                                                       \n [6] \"Henri Prevost\"                                                          \n [7] \"By Kabir Raina\"                                                         \n [8] \"Kabir Raina\"                                                            \n [9] \"By Tess McHugh\"                                                         \n[10] \"Tess McHugh\"                                                            \n[11] \"By Outback Editors, Undercurrents Editors and The Scripps Voice Editors\"\n[12] \"Outback Editors\"                                                        \n[13] \"Undercurrents Editors\"                                                  \n[14] \"The Scripps Voice Editors\"                                              \n[15] \"By Suspended Students\"                                                  \n[16] \"Suspended Students\"                                                     \n[17] \"By Akshay Seetharam\"                                                    \n[18] \"Akshay Seetharam\"                                                       \n[19] \"By Maggie Zhang\"                                                        \n[20] \"Maggie Zhang\"                                                           \n[21] \"By Mike Withey\"                                                         \n[22] \"Mike Withey\"                                                            \n\n\n\nauthor &lt;- tsl_page |&gt; \nhtml_elements(\".author\") |&gt; \nhtml_text() |&gt; \ntibble() |&gt; \nset_names(nm = \"authors\") |&gt; \nfilter(str_detect(authors, \"By \"))\nauthor \n\n# A tibble: 10 × 1\n   authors                                                                \n   &lt;chr&gt;                                                                  \n 1 By Celeste Cariker                                                     \n 2 By Eric Lu                                                             \n 3 By Henri Prevost                                                       \n 4 By Kabir Raina                                                         \n 5 By Tess McHugh                                                         \n 6 By Outback Editors, Undercurrents Editors and The Scripps Voice Editors\n 7 By Suspended Students                                                  \n 8 By Akshay Seetharam                                                    \n 9 By Maggie Zhang                                                        \n10 By Mike Withey                                                         \n\nauthor &lt;- author |&gt; \nmutate(authors = str_replace(authors, \"By \", \"\")) \n\nauthor\n\n# A tibble: 10 × 1\n   authors                                                             \n   &lt;chr&gt;                                                               \n 1 Celeste Cariker                                                     \n 2 Eric Lu                                                             \n 3 Henri Prevost                                                       \n 4 Kabir Raina                                                         \n 5 Tess McHugh                                                         \n 6 Outback Editors, Undercurrents Editors and The Scripps Voice Editors\n 7 Suspended Students                                                  \n 8 Akshay Seetharam                                                    \n 9 Maggie Zhang                                                        \n10 Mike Withey"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#scrape-date-and-save-as-date",
+    "href": "slides/2024-11-04-webscrape.html#scrape-date-and-save-as-date",
+    "title": "Web Scraping",
+    "section": "Scrape date and save as date",
+    "text": "Scrape date and save as date\n\ndate &lt;- tsl_page |&gt; \nhtml_elements(\".published\") |&gt; \nhtml_text()\ndate\n\n [1] \"November 1, 2024 9:27 am\"  \"November 1, 2024 9:21 am\" \n [3] \"November 1, 2024 9:15 am\"  \"November 1, 2024 9:10 am\" \n [5] \"November 1, 2024 9:01 am\"  \"October 25, 2024 4:23 am\" \n [7] \"October 25, 2024 2:04 am\"  \"October 24, 2024 11:37 pm\"\n [9] \"October 22, 2024 11:00 pm\" \"October 11, 2024 1:23 am\" \n\ndate &lt;- date |&gt; \nlubridate::mdy_hm(tz = \"America/Los_Angeles\")\ndate\n\n [1] \"2024-11-01 09:27:00 PDT\" \"2024-11-01 09:21:00 PDT\"\n [3] \"2024-11-01 09:15:00 PDT\" \"2024-11-01 09:10:00 PDT\"\n [5] \"2024-11-01 09:01:00 PDT\" \"2024-10-25 04:23:00 PDT\"\n [7] \"2024-10-25 02:04:00 PDT\" \"2024-10-24 23:37:00 PDT\"\n [9] \"2024-10-22 23:00:00 PDT\" \"2024-10-11 01:23:00 PDT\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#some-html-elements",
+    "href": "slides/2024-11-04-webscrape.html#some-html-elements",
+    "title": "Web Scraping",
+    "section": "Some HTML elements",
+    "text": "Some HTML elements\n\n\n: start of the HTML page\n\n: header information (metadata about the page)\n\n: everything that is on the page\n\n: paragraphs\n: bold\n\n: table\n: a container to group content together\nrvest\n\n\n\nThe rvest package makes basic processing and manipulation of HTML data straight forward\nIt is designed to work with pipelines built with |&gt;\nrvest.tidyverse.org\n\n\nlibrary(rvest)\n\n\n\n\n\n\n\n\n\n\nrvest\nCore functions:\n\nread_html() - read HTML data from a url or character string.\nhtml_elements() - select specified elements from the HTML document using CSS selectors.\nhtml_element() - select a single element from the HTML document using CSS selectors.\nhtml_table() - parse an HTML table into a data frame.\nhtml_text() / html_text2() - extract tag’s text content.\nhtml_name - extract a tag/element’s name(s).\nhtml_attrs - extract all attributes.\nhtml_attr - extract attribute value(s) by name.\n\n\nhtml, rvest, & xml2\n\nhtml &lt;- \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br/&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html)\n\n{html_document}\n&lt;html&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body&gt;\\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\\n    &lt;br&gt;&lt;div class=\"name\" ...\n\n\n\n\nSelecting elements\n\nread_html(html) |&gt; html_elements(\"p\")\n\n{xml_nodeset (1)}\n[1] &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_text()\n\n[1] \"Hello world!\"\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_name()\n\n[1] \"p\"\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attrs()\n\n[[1]]\n   align \n\"center\" \n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attr(\"align\")\n\n[1] \"center\"\n\n\n\n\nMore selecting tags\n\n\nread_html(html) |&gt; html_elements(\"div\")\n\n{xml_nodeset (7)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n[3] &lt;div class=\"contact\"&gt;\\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\\n       ...\n[4] &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n[5] &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n[6] &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n[7] &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"div\") |&gt; html_text()\n\n[1] \"John\"                                                                                  \n[2] \"Doe\"                                                                                   \n[3] \"\\n      555-555-1234\\n      555-555-2345\\n      555-555-9999\\n      555-555-8888\\n    \"\n[4] \"555-555-1234\"                                                                          \n[5] \"555-555-2345\"                                                                          \n[6] \"555-555-9999\"                                                                          \n[7] \"555-555-8888\"                                                                          \n\n\n\n\n\nCSS selectors\n\nWe will use a tool called SelectorGadget to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.\n\n\n\nSome examples of basic selector syntax is below,\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSelector\nExample\nDescription\n\n\n\n\n.class\n.title\nSelect all elements with class=“title”\n\n\n#id\n#name\nSelect all elements with id=“name”\n\n\nelement\np\nSelect all &lt;p&gt; elements\n\n\nelement element\ndiv p\nSelect all &lt;p&gt; elements inside a &lt;div&gt; element\n\n\nelement&gt;element\ndiv &gt; p\nSelect all &lt;p&gt; elements with &lt;div&gt; as a parent\n\n\n[attribute]\n[class]\nSelect all elements with a class attribute\n\n\n[attribute=value]\n[class=title]\nSelect all elements with class=“title”"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#data-acquisition",
+    "href": "slides/2024-11-04-webscrape.html#data-acquisition",
+    "title": "Web Scraping",
+    "section": "Data Acquisition",
+    "text": "Data Acquisition\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   }
 ]
