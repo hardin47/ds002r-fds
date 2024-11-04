@@ -7760,7 +7760,7 @@
     "href": "slides/2024-11-04-webscrape.html#important-tool",
     "title": "Web Scraping",
     "section": "Important tool",
-    "text": "Important tool\nOur approach to web scraping relies on the Chrome browser and an extenstion called a Selector Gadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc."
+    "text": "Important tool\nOur approach to web scraping relies on the Chrome browser and an extension called a Selector Gadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc."
   },
   {
     "objectID": "slides/2024-11-04-webscrape.html#reading-the-student-life",
@@ -7921,7 +7921,7 @@
     "href": "slides/2024-11-04-webscrape.html#recap",
     "title": "Web Scraping",
     "section": "Recap",
-    "text": "Recap\n\nUse the SelectorGadget identify tags for elements you want to grab\nUse the rvest R package to first read the whole page (into R) and then parse the object you’ve read in to the elements you’re interested in\nPut the components together in a data frame (a tibble) and analyze it like you analyze any other data"
+    "text": "Recap\n\nUse the SelectorGadget identify tags for elements you want to grab\nUse the rvest R package to first read in the entire page (into R) and then parse the object you’ve read in to the elements you’re interested in\nPut the components together in a data frame (a tibble) and analyze it like you analyze any other data"
   },
   {
     "objectID": "slides/2024-11-04-webscrape.html#a-new-r-workflow",
@@ -7970,7 +7970,7 @@
     "href": "slides/2024-11-04-webscrape.html#plan",
     "title": "Web Scraping",
     "section": "Plan",
-    "text": "Plan\n\nRead the whole page\nScrape opinion title and save as title\nScrape author and save as author\nScrape date and save as date\nCreate a new data frame called tsl_opinion with variables title, author, and date"
+    "text": "Plan\n\nRead in the entire page\nScrape opinion title and save as title\nScrape author and save as author\nScrape date and save as date\nCreate a new data frame called tsl_opinion with variables title, author, and date"
   },
   {
     "objectID": "slides/2024-11-04-webscrape.html#read-the-whole-page",
@@ -8062,5 +8062,12 @@
     "title": "Web Scraping",
     "section": "Data Acquisition",
     "text": "Data Acquisition\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#read-in-the-entire-page",
+    "href": "slides/2024-11-04-webscrape.html#read-in-the-entire-page",
+    "title": "Web Scraping",
+    "section": "Read in the entire page",
+    "text": "Read in the entire page\n\ntsl_page &lt;- read_html(\"https://tsl.news/category/opinions/\")\ntsl_page\n\n{html_document}\n&lt;html lang=\"en-US\"&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body class=\"archive category category-opinions category-2244 custom-back ...\n\n\n\n\ntypeof(tsl_page)\n\n[1] \"list\"\n\nclass(tsl_page)\n\n[1] \"xml_document\" \"xml_node\"    \n\n\n\nwe need to convert into something more familiar, like a data frame"
   }
 ]

@@ -33,7 +33,7 @@ library(tidytext)
 
 ## Important tool
 
-Our approach to web scraping relies on the Chrome browser and an extenstion called a Selector Gadget.  Download them here:
+Our approach to web scraping relies on the Chrome browser and an extension called a Selector Gadget.  Download them here:
 
 * <a href = "https://www.google.com/chrome/" target = "_blank">Chrome</a>
 
@@ -486,21 +486,21 @@ read_html(html_table) |>
 ## Recap
 
 -   Use the <a href = "https://selectorgadget.com/" target = "_blank">SelectorGadget</a> identify tags for elements you want to grab
--   Use the **rvest** R package to first read the whole page (into R) and then parse the object you've read in to the elements you're interested in
+-   Use the **rvest** R package to first read in the entire page (into R) and then parse the object you've read in to the elements you're interested in
 -   Put the components together in a data frame (a tibble) and analyze it like you analyze any other data
 
 
 
 ## Plan
 
-1. Read the whole page
+1. Read in the entire page
 2. Scrape opinion title and save as `title`
 3. Scrape author and save as `author`
 4. Scrape date and save as `date`
 5. Create a new data frame called `tsl_opinion` with variables `title`, `author`, and `date`
 
 
-## Read the whole page
+## Read in the entire page
 
 ```{r}
 tsl_page <- read_html("https://tsl.news/category/opinions/")
