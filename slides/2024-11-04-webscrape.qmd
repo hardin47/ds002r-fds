@@ -195,7 +195,6 @@ Code for the earlier plot:
 #| ref.label: tsl-sentiments
 #| fig-show: hide
 #| message: false
-#| code-line-numbers: "|2-4|5-19|20|21|22-27|28-33|34-52"
 ```
 
 ## Where is the data coming from? {.smaller}
@@ -315,7 +314,7 @@ Core functions:
 
 -   `html_attr` - extract attribute value(s) by name.
 
-## html, rvest, & xml2 {.smaller}
+## html & rvest {.smaller}
 
 ```{r}
 html <- 
@@ -522,7 +521,7 @@ read_html(html_table) |>
 5. Create a new data frame called `tsl_opinion` with variables `title`, `author`, and `date`
 
 
-## Read in the entire page
+## Read in the entire page {.smaller}
 
 ```{r}
 tsl_page <- read_html("https://tsl.news/category/opinions/")
@@ -537,7 +536,7 @@ class(tsl_page)
 
 * we need to convert into something more familiar, like a data frame
 
-## Scrape title and save as `title`
+## Scrape title and save as `title` {.smaller}
 
 ```{r}
 tsl_page |> 
@@ -598,7 +597,7 @@ date
 ```
 
 
-## Create a new data frame
+## Create a new data frame {.smaller}
 
 ```{r}
 tsl_opinion <- tibble(

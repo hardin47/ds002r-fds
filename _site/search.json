@@ -8083,5 +8083,12 @@
     "title": "Web Scraping",
     "section": "div p vs div > p",
     "text": "div p vs div &gt; p\n\ndiv p selects all &lt;p&gt; elements within &lt;div&gt;, regardless of depth.\ndiv &gt; p selects only direct child &lt;p&gt; elements of &lt;div&gt;.\n\n&lt;div&gt;\n  &lt;p&gt;This will be selected by both `div p` and `div &gt; p`.&lt;/p&gt; \n  &lt;section&gt;\n    &lt;p&gt;This will be selected only by `div p`, not by `div &gt; p`.&lt;/p&gt;\n  &lt;/section&gt;\n&lt;/div&gt;"
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#html-rvest",
+    "href": "slides/2024-11-04-webscrape.html#html-rvest",
+    "title": "Web Scraping",
+    "section": "html & rvest",
+    "text": "html & rvest\n\nhtml &lt;- \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br/&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html)\n\n{html_document}\n&lt;html&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body&gt;\\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\\n    &lt;br&gt;&lt;div class=\"name\" ..."
   }
 ]
