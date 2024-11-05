@@ -7886,7 +7886,7 @@
     "href": "slides/2024-11-04-webscrape.html#css-selectors",
     "title": "Web Scraping",
     "section": "CSS selectors",
-    "text": "CSS selectors\n\nWe will use a tool called SelectorGadget to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.\n\n\n\nSome examples of basic selector syntax is below,\n\n\n\n\n\n\n\n\n\n\nSelector\nExample\nDescription\n\n\n\n\n.class\n.title\nSelect all elements with class=“title”\n\n\n#id\n#name\nSelect all elements with id=“name”\n\n\nelement\np\nSelect all &lt;p&gt; elements\n\n\nelement element\ndiv p\nSelect all &lt;p&gt; elements inside a &lt;div&gt; element\n\n\nelement&gt;element\ndiv &gt; p\nSelect all &lt;p&gt; elements with &lt;div&gt; as a parent\n\n\n[attribute]\n[class]\nSelect all elements with a class attribute\n\n\n[attribute=value]\n[class=title]\nSelect all elements with class=“title”"
+    "text": "CSS selectors\n\nWe will use a tool called SelectorGadget to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.\n\n\n\nSome examples of basic selector syntax is below,\n\n\n\n\n\n\n\n\n\n\nSelector\nExample\nDescription\n\n\n\n\n.class\n.title\nSelect all elements with class=“title”\n\n\n#id\n#name\nSelect all elements with id=“name”\n\n\nelement\np\nSelect all &lt;p&gt; elements\n\n\nelement element\ndiv p\nSelect all &lt;p&gt; elements inside a &lt;div&gt; element\n\n\nelement&gt;element\ndiv &gt; p\nSelect all &lt;p&gt; elements with &lt;div&gt; as a direct parent\n\n\n[attribute]\n[class]\nSelect all elements with a class attribute\n\n\n[attribute=value]\n[class=title]\nSelect all elements with class=“title”"
   },
   {
     "objectID": "slides/2024-11-04-webscrape.html#css-classes-and-ids",
@@ -8076,5 +8076,12 @@
     "title": "Web Scraping",
     "section": "More selecting elements",
     "text": "More selecting elements\n\n\nread_html(html) |&gt; html_elements(\"div\")\n\n{xml_nodeset (7)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n[3] &lt;div class=\"contact\"&gt;\\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\\n       ...\n[4] &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n[5] &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n[6] &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n[7] &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"div\") |&gt; html_text()\n\n[1] \"John\"                                                                                  \n[2] \"Doe\"                                                                                   \n[3] \"\\n      555-555-1234\\n      555-555-2345\\n      555-555-9999\\n      555-555-8888\\n    \"\n[4] \"555-555-1234\"                                                                          \n[5] \"555-555-2345\"                                                                          \n[6] \"555-555-9999\"                                                                          \n[7] \"555-555-8888\""
+  },
+  {
+    "objectID": "slides/2024-11-04-webscrape.html#div-p-vs-div-p",
+    "href": "slides/2024-11-04-webscrape.html#div-p-vs-div-p",
+    "title": "Web Scraping",
+    "section": "div p vs div > p",
+    "text": "div p vs div &gt; p\n\ndiv p selects all &lt;p&gt; elements within &lt;div&gt;, regardless of depth.\ndiv &gt; p selects only direct child &lt;p&gt; elements of &lt;div&gt;.\n\n&lt;div&gt;\n  &lt;p&gt;This will be selected by both `div p` and `div &gt; p`.&lt;/p&gt; \n  &lt;section&gt;\n    &lt;p&gt;This will be selected only by `div p`, not by `div &gt; p`.&lt;/p&gt;\n  &lt;/section&gt;\n&lt;/div&gt;"
   }
 ]

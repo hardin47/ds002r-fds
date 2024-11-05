@@ -407,7 +407,7 @@ read_html(html) |> html_elements("div") |> html_text()
 | #id                 | `#name`         | Select all elements with id="name"                 |
 | element             | `p`             | Select all \<p\> elements                          |
 | element element     | `div p`         | Select all \<p\> elements inside a \<div\> element |
-| element\>element    | `div > p`       | Select all \<p\> elements with \<div\> as a parent |
+| element\>element    | `div > p`       | Select all \<p\> elements with \<div\> as a direct parent |
 | \[attribute\]       | `[class]`       | Select all elements with a class attribute         |
 | \[attribute=value\] | `[class=title]` | Select all elements with class="title"             |
 :::
@@ -480,6 +480,22 @@ read_html(html_table) |>
   html_elements("table") |> 
   html_table()
 ```
+
+## `div p` vs `div > p`
+
+* `div p` selects all `<p>` elements within `<div>`, regardless of depth.
+* `div > p` selects only direct child `<p>` elements of `<div>`.
+
+
+```
+<div>
+  <p>This will be selected by both `div p` and `div > p`.</p> 
+  <section>
+    <p>This will be selected only by `div p`, not by `div > p`.</p>
+  </section>
+</div>
+```
+
 
 ## SelectorGadget
 
