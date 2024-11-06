@@ -480,6 +480,53 @@ read_html(html_table) |>
   html_table()
 ```
 
+
+##  `html_attr()`
+
+extracts data from attributes:
+
+```{r}
+html <- minimal_html("
+  <p><a href='https://en.wikipedia.org/wiki/Cat'>cats</a></p>
+  <p><a href='https://en.wikipedia.org/wiki/Dog'>dogs</a></p>
+")
+html
+```
+
+
+```{r}
+html |> 
+  html_elements("p") 
+```
+
+```{r}
+html |> 
+  html_elements("p") |> 
+  html_element("a") 
+```
+
+
+```{r}
+html |> 
+  html_elements("p") |> 
+  html_element("a") |> 
+  html_attr("href")
+```
+
+```{r}
+html |> 
+  html_element("a") |> 
+  html_attr("href")
+```
+
+```{r}
+html |> 
+  html_elements("a") |> 
+  html_attr("href")
+```
+
+* `html_attr()` always returns a string, so if you’re extracting numbers or dates, you’ll need to do some post-processing.
+
 ## `div p` vs `div > p`
 
 * `div p` selects all `<p>` elements within `<div>`, regardless of depth.
@@ -561,26 +608,18 @@ title
 
 ```{r}
 author <- tsl_page |> 
-html_elements(".author") |> 
+html_elements("span.author") |> 
 html_text()
 author
 ```
 
-
 ```{r}
-author <- tsl_page |> 
-html_elements(".author") |> 
-html_text() |> 
-tibble() |> 
-set_names(nm = "authors") |> 
-filter(str_detect(authors, "By "))
-author 
-
 author <- author |> 
-mutate(authors = str_replace(authors, "By ", "")) 
+str_replace("By ", "")
 
 author
 ```
+
 
 
 ## Scrape date and save as `date`
@@ -623,11 +662,10 @@ html_text() |>
 str_remove("OPINION: ")
   
 author <- tsl_page |> 
-html_elements(".author") |> 
+html_elements("span.author") |> 
 html_text() |> 
 tibble() |> 
 set_names(nm = "authors") |> 
-filter(str_detect(authors, "By ")) |> 
 mutate(authors = str_replace(authors, "By ", "")) 
   
 date <- tsl_page |> 
@@ -703,9 +741,107 @@ Source: Brian Resnick, [Researchers just released profile data on 70,000 OkCupid
 ![](../images/many-pages.png){fig-align="center"}
 
 
+## More ethics: graphics
+
+Consider the following image.  What do you think is wrong?  (Hint: examine the y-axis carefully)
+
+
+```{r fig.cap = "Reproduction of a data graphic reporting the number of gun deaths in Florida over time. The original image was published by Reuters.  [@MDSR]", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/FLguns.jpg")
+```
+
+## More ethics: graphics
 
 
 
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(magick)
 
+img1 <- image_read("../images/GAcovid.jpg")
+img2 <- image_read("../images/GAcovid2.jpg")
+img3 <- image_read("../images/GAheatmap1.jpeg")
+img4 <- image_read("../images/GAheatmap2.jpeg")
+
+img1_with_border <- image_border(img1, "white", "10x10")
+img2_with_border <- image_border(img2, "white", "10x10")
+img3_with_border <- image_border(img3, "white", "10x10")
+img4_with_border <- image_border(img4, "white", "10x10")
+
+image_write(img1_with_border, "../images/img1_with_border.png")
+image_write(img2_with_border, "../images/img2_with_border.png")
+image_write(img3_with_border, "../images/img3_with_border.png")
+image_write(img4_with_border, "../images/img4_with_border.png")
+```
+
+:::: {.columns}
+::: {.column width=50%}
+```{r fig.cap = "May 10, 2020, Georgia Department of Health, COVID-19 cases for 5 counties across time. https://dph.georgia.gov/covid-19-daily-status-report", out.width='90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/GAcovid.jpg")
+```
+:::
+
+::: {.column width=50%}
+```{r fig.cap = "May 17, 2020, Georgia Department of Health, COVID-19 cases for 5 counties across time. https://dph.georgia.gov/covid-19-daily-status-report", out.width='90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/GAcovid2.jpg")
+```
+:::
+
+::::
+
+## More ethics: graphics
+
+A few weeks later, the Georgia Department of Health came out with the following two plots where, despite cases skyrocketing, they display images where the visual doesn't really change.
+
+:::: {.columns}
+::: {.column width=50%}
+
+```{r fig.cap = "July 2, 2020, Georgia Department of Health, COVID-19 cases per 100K https://dph.georgia.gov/covid-19-daily-status-report", out.width='42%', fig.align='center', echo=FALSE, fig.show = 'hold'}
+knitr::include_graphics("../images/img3_with_border.png")
+```
+:::
+
+::: {.column width=50%}
+```{r fig.cap = "July 17, 2020, Georgia Department of Health, COVID-19 cases per 100K https://dph.georgia.gov/covid-19-daily-status-report", out.width='42%', fig.align='center', echo=FALSE, fig.show = 'hold'}
+knitr::include_graphics("../images/img4_with_border.png")
+```
+:::
+
+::::
+
+## More ethics: algorithms
+
+
+1. disparate treatment $\rightarrow$ means that the differential treatment is intentional
+
+2. disparate impact $\rightarrow$ means that the differential treatment is unintentional or implicit (some examples include advancing mortgage credit, employment selection, predictive policing)
+
+
+## More ethics: COMPAS
+
+```{r fig.cap = "Dylan Fugett had three subsequent arrests for drug possession.  Bernard Parker had no subsequent offenses.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/recid1.jpg")
+```
+
+
+## More ethics: COMPAS
+
+| DYLAN FUGETT 	| BERNARD PARKER 	|
+|----------------------	|-------------------------------------	|
+| Prior Offense 	| Prior Offense 	|
+| 1 attempted burglary 	| 1 resisting arrest without violence 	|
+| LOW RISK - 3 	| HIGH RISK - 10 	|
+| Subsequent Offenses 	| Subsequent Offenses 	|
+| 3 drug possessions 	| None 	|
+
+
+## More ethics: COMPAS
+
+```{r fig.cap = "False positive and false negative rates broken down by race.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/recid2.jpg")
+```
+
+
+
+## References
 
 
