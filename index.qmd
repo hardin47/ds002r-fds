@@ -102,13 +102,13 @@ schedule <- tribble(
   
   
      "Week 11 <br> 11.4.24", 'web scraping', 
- '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-11-04-webscrape.html" target = "_blank">Web scraping</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws15_ds2_f24_css.pdf" target = "_blank">WS 15 - css selector</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws15_ds2_f24_rvest.html" target = "_blank">WS 16 - rvest</a>',
+ '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-11-04-webscrape.html" target = "_blank">Web scraping</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws15_ds2_f24_css.pdf" target = "_blank">WS 15 - css selector</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws16_ds2_f24_rvest.html" target = "_blank">WS 16 - rvest</a>',
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 11.6',
   ' ',
   
   
      "Week 12 <br> 11.11.24", 'SQL', 
- '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/04-sql-in-R.html" target = "_blank">SQL</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-11-11-db.html" target = "_blank">SQL DBMS</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws16_ds2_f24_sql1.pdf" target = "_blank">WS 16 - sql 1</a>',
+ '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/04-sql-in-R.html" target = "_blank">SQL</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-11-11-db.html" target = "_blank">SQL DBMS</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws17_ds2_f24_sql1.pdf" target = "_blank">WS 17 - sql 1</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">HW 7</a> - due 11.12 <br> Quiz 5 11.13',
   ' ',
   

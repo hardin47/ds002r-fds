@@ -991,11 +991,11 @@ str_extract(string, "\\b(Mary|Jane|Sue)\\b")
 
 ---
 
-(@) How can I pull out just the numerical information in "\$47"?[^54]
-    (a) "(?<=\\$)\\d"
-    (b) "(?<=\\$)\\d+"
-    (c) "\\d(?=\\$)"
-    (d) "\\d+(?=\\$)"
+(@) How can I pull out just the numerical information in "\$47"?[^54b]
+    (a) `"(?<=\\$)\\d"`
+    (b) `"(?<=\\$)\\d+"`
+    (c) `"\\d(?=\\$)"`
+    (d) `"\\d+(?=\\$)"`
 
 ```{r}
 #| eval: false
@@ -1003,16 +1003,16 @@ str_extract(string, "\\b(Mary|Jane|Sue)\\b")
 str_extract("$47", "(?<=\\$)\\d+")
 ```
 
-[^54]: b. "(?<=\\$)\\d+"
+[^54b]: b. `"(?<=\\$)\\d+"`
 
 
 ---
 
 (@) You want to know all the types of pies in the text strings.  They are written as, for example "apple pie".[^55]
-    (a) "\\w+(?!pie)"
-    (b) "\\w+(?! pie)"
-    (c) "\\w+(?=pie)"
-    (d) "\\w+(?= pie)"
+    (a) `"\\w+(?!pie)"`
+    (b) `"\\w+(?! pie)"`
+    (c) `"\\w+(?=pie)"`
+    (d) `"\\w+(?= pie)"`
 
 ```{r}
 #| eval: false
@@ -1020,7 +1020,7 @@ str_extract("$47", "(?<=\\$)\\d+")
 str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?= pie)")
 ```
 
-[^55]: d. "\\w+(?= pie)"
+[^55]: d. `"\\w+(?= pie)"`
 
 ---
 
@@ -1632,10 +1632,6 @@ data.frame(perm_diff = rnorm(200)) |>
    
 [^95]: a. an attribute describes an element
 
-
-
----
-
 ---
 
 (@) What is a **SQL** server?[^101]
@@ -1646,15 +1642,14 @@ data.frame(perm_diff = rnorm(200)) |>
 
 [^101]: a. A relational database management system.
 
-
 ---
 
 (@) When was **SQL** created?[^102]
-   (a) 1960s
-   (b) 1970s
-   (c) 1980s
-   (d) 1990s
-   (e) 2000s
+    (a) 1960s
+    (b) 1970s
+    (c) 1980s
+    (d) 1990s
+    (e) 2000s
 
 [^102]: b. The first versions were created in the 1970s and called SEQUEL (Structured English QUEry Language).  c. **SQL** came about in particular systems in the 1980s.
    
@@ -1671,8 +1666,8 @@ data.frame(perm_diff = rnorm(200)) |>
 ---
 
 (@) Which is bigger:[^104]
-   (a) computer's hard drive / storage
-   (b) computer's memory / RAM
+    (a) computer's hard drive / storage
+    (b) computer's memory / RAM
 
 [^104]: a. computer's hard drive / storage
 
