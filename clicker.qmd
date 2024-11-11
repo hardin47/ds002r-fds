@@ -1622,7 +1622,15 @@ data.frame(perm_diff = rnorm(200)) |>
 [^94]: d. use selector: `[href]`
 
 
+---
 
+(@) What is the difference between an attribute and an element?[^95]
+   a. an attribute describes an element
+   b. an element describes an attribute
+   c. an attribute is the parent of an element
+   d. an element is the parent of an attribute
+   
+[^95]: a. an attribute describes an element
 
 
 

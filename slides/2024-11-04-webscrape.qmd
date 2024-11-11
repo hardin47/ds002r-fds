@@ -411,6 +411,13 @@ read_html(html) |> html_elements("div") |> html_text()
 | \[attribute=value\] | `[class=title]` | Select all elements with class="title"             |
 :::
 
+
+# Agenda  11/6/24
+
+1. `rvest` continues
+2. example
+3. ethics
+
 ## CSS classes and ids {.smaller}
 
 * `class` and `id` are used to style elements (e.g., change their color!). They are special types of attributes.
@@ -492,6 +499,20 @@ html <- minimal_html("
 ")
 html
 ```
+
+```{r}
+html |> 
+html_attr("href")
+```
+
+
+
+```{r}
+html |> 
+html_elements("[href]") |> 
+html_attr("href")
+```
+
 
 
 ```{r}

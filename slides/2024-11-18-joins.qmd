@@ -1,0 +1,674 @@
+---
+title: SQL joins
+author: "Jo Hardin"
+date: "January 10, 2024"
+format:
+  revealjs:
+    slide-number: true
+    show-slide-number: all
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| include: false
+
+source("../_common.R")
+fontawesome::fa_html_dependency()
+```
+
+
+# Today's example
+
+## IMDb
+
+Consider a database of information from <a href = "https://www.imdb.com/" target = "_blank">IMDb</a>.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("../images/ted-lasso.jpg")
+```
+
+```{r}
+#| echo: false
+
+con_imdb <- DBI::dbConnect(
+  RMariaDB::MariaDB(),
+  dbname = "imdb",
+  host = Sys.getenv("SMITH_HOST"),
+  user = Sys.getenv("SMITH_USER"),
+  password = Sys.getenv("SMITH_PWD")
+)
+```
+
+
+
+## IMDb {.scrollable}
+
+21 tables in the `imdb` database!  Lots of details on movies, TV series, video games, and more. Today interest is in movies (and details within, like actors and ratings).
+
+```{sql}
+#| connection: con_imdb
+
+SHOW TABLES;
+```
+
+## IMDb - glance through tables {.scrollable}
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM kind_type
+LIMIT 0, 10;
+```
+
+
+## All the `JOIN`s
+
+
+* `JOIN` (aka `INNER JOIN`): include all of the rows that exist in both tables
+* `LEFT JOIN`: include all of the rows in the first table.  
+* `RIGHT JOIN`: include all of the rows in the second table. 
+* `FULL OUTER JOIN`: include all rows in either table. (The functionality doesn't exist in **MySQL** but can be created using joins and `UNION`.)
+* `CROSS JOIN`: match each row of the first table with each row in the second table. 
+
+
+## All the `JOIN`s
+
+Venn diagrams of the different types of joins.  
+
+
+```{r}
+#| label: fig-venn-joins
+#| out.width: 70%
+#| fig-cap: "Venn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join"
+#| fig-alt: Venn diagrams describing different types of JOINs.
+#| echo: false
+include_graphics("../images/join-types.png")
+```
+
+## All the `JOIN`s
+
+Mini data tables of the different types of `JOIN`.  (In **SQL** the missing values will be labeled as `NULL` (not `NA`).)
+
+```{r}
+#| label: fig-table-joins
+#| out.width: 70%
+#| fig-cap: "Mini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
+#| fig-alt: Mini data tables describing different types of JOINs.
+#| echo: false
+include_graphics("../images/table-joins.png")
+```
+
+## All the `JOIN`s
+
+Each `JOIN` clause needs four specific pieces of information:
+
+1. The name of the first table you want to `JOIN`.
+2. The type of `JOIN` being used.
+3. The name of the second table you want to `JOIN`.
+4. The condition(s) under which you want the records in the first table to match records in the second table.
+
+## A toy example {.scrollable}
+
+Rock bands from the 60s.
+
+```{r}
+band_members
+band_instruments
+```
+
+The function `sqldf()` in the **sqldf** **R** package allows for **SQL** commands on **R** objects.
+
+## Rock bands - `INNER JOIN` {.scrollable}
+
+An inner join combines two datasets returning only the observations that exist in both of the original datasets.
+
+```{r}
+sqldf::sqldf("SELECT star.name,
+                     star.band,
+                     inst.plays
+              FROM band_members AS star
+              JOIN band_instruments AS inst ON star.name = inst.name")
+```
+
+
+## Rock bands - `FULL JOIN` {.scrollable}
+
+A full join combines two datasets returning every observation that exists in either one of the original datasets.  
+
+```{r}
+band_members |>
+  full_join(band_instruments)
+```
+
+The `full_join()` function does not have an equivalent in **MySQL**.  See notes for using `JOIN`s and `UNION`s to produce a full join.
+
+## Rock bands - `LEFT JOIN` {.scrollable}
+
+A left join combines two datasets returning every observation that exists in the left (or first) original dataset.  
+
+```{r}
+sqldf::sqldf("SELECT star.name,
+                     star.band,
+                      inst.plays
+              FROM band_members AS star
+              LEFT JOIN band_instruments AS inst 
+              ON star.name = inst.name")
+```
+
+
+## Rock bands - `RIGHT JOIN` {.scrollable}
+
+A right join combines two datasets returning every observation that exists in the right (or second) original dataset. 
+
+```{r}
+sqldf::sqldf("SELECT inst.name,
+                     star.band,
+                      inst.plays
+              FROM band_members AS star
+              RIGHT JOIN band_instruments AS inst 
+              ON star.name = inst.name")
+```
+
+
+## Rock bands - `CROSS JOIN` {.scrollable}
+
+A right join combines two datasets returning every observation that exists in the right (or second) original dataset. 
+
+```{r}
+sqldf::sqldf("SELECT *
+              FROM band_members AS star
+              CROSS JOIN band_instruments AS inst")
+```
+
+
+## `JOIN` IMDb title + votes {.scrollable}
+
+In the `imdb` database, the `title` table includes information about the 4,626,322  titles in the database, including the `id`, `title`, `kind_id` (indicator for the kind of ID it is), and `production_year`.  It does not, however, include the review of the title. 
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM title LIMIT 0, 10;
+```
+
+## `JOIN` IMDb title + votes {.scrollable}
+
+The `movie_info_idx` table does not contain much information about each particular film.  It does, however, have an indicator for the movie ID (given by `movie_id`) as well as the number of votes (given by `info` where `type_id = 100`). 
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM movie_info_idx LIMIT 0, 6;
+```
+## `JOIN` IMDb title + votes {.scrollable}
+
+* combine the titles with the number of votes so that each title with user votes is included (`INNER JOIN`)
+
+
+```{sql}
+#| connection: con_imdb
+
+SELECT title.id,
+       title.title,
+       movie_info_idx.info
+FROM title
+JOIN movie_info_idx ON title.id = movie_info_idx.movie_id 
+WHERE title.production_year = 2015 
+    AND title.kind_id = 1                  # movies only
+    AND movie_info_idx.info_type_id = 100  # info_type is votes
+    AND movie_info_idx.info > 150000       # at least 150,000 votes
+ORDER BY movie_info_idx.info DESC
+LIMIT 0, 20;
+
+```
+
+Some aspects of the query are worth pointing out:  
+* The variables in the output are given in the `SELECT` clause.  The `id` and `title` (both from the `title` table) and the `info` from the `movie_info_idx` which represents the number of IMDb votes.
+* The variables are preceded by the table from which they came. While not always necessary, it is good practice so as to avoid confusion.
+* The `JOIN` happens by linking the `id` variable in the `title` table with the `movie_id` variable in the `movie_info_idx` table.
+* The `LIMIT` wasn't necessary (there are only 12 observations), but it's good practice so that we don't end up with unwieldy query results.
+* The `WHERE` clause happens before the `JOIN` action, despite being written after.
+* In the `WHERE` clause, we keep only movies, only 2015 production year, and only at least 150,000 votes.
+
+## `JOIN` IMDb title + actress {.scrollable}
+
+`cast_info` contains the `person_id` and the `movie_id`
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM cast_info LIMIT 0, 10;
+
+```
+
+
+`person_role_id` is `1` if actor and `2` if actress
+
+
+## `JOIN` IMDb title + actress {.scrollable}
+
+`aka_name` contains `person_id` and `name` (of actor)
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM aka_name LIMIT 0, 10;
+
+```
+
+
+## `JOIN` IMDb title + actress {.scrollable}
+
+`title` contains `id` and `title` (of the movie)
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM title LIMIT 0, 10;
+
+```
+
+## `JOIN` IMDb title + actress {.scrollable}
+
+Goal: identify the actresses in those movies with the highest number of votes.
+
+```{sql}
+#| connection: con_imdb
+
+SELECT t.title,
+       idx.info,
+       a.person_id,
+       n.name
+FROM title AS t
+JOIN movie_info_idx AS idx ON t.id = idx.movie_id 
+JOIN cast_info AS a ON idx.movie_id = a.movie_id
+JOIN aka_name AS n ON a.person_id = n.person_id
+WHERE t.production_year = 2015 
+    AND t.kind_id = 1           # movies only
+    AND idx.info_type_id = 100  # info_type is votes
+    AND idx.info > 150000       # at least 150,000 votes
+    AND a.role_id = 2           # actresses only
+ORDER BY a.person_id
+LIMIT 0, 50;
+```
+
+Connecting the most popular movies of 2015 with the actresses in those movies requires a series of `JOIN`s. Note that to make the code less onerous, the `title` table has been aliased by `t`, the `movie_info_idx` table has been aliased by `idx`, the `cast_info` table has been aliased by `a`, and the `aka_name` table has been aliased by `n`.
+
+There is a lot of data cleaning to do as some of the `person_id` values are one to many!!  That is, the `person_id` matches multiple names in the `aka_name` database.
+
+
+## Other `JOIN`s
+
+Let's look at `RIGHT JOIN` and `LEFT JOIN` using two new smaller tables.
+
+1. The first has seven movies in it (from 2015 with at least 400,000 IMDb votes).  
+
+2. The second consists of almost 3 million actresses (`person_role_id = 2`).  In order to find a subset of actresses, the `person_id > 3900000` was set arbitrarily (in order to have a smaller group with which to work).
+
+Using subqueries, we can `JOIN` the two datasets using different `JOIN` techniques.
+
+
+## movies:  {.scrollable}
+
+```{sql}
+#| connection: con_imdb
+
+SELECT t.id,
+       t.title,
+       idx.info,
+       (SELECT COUNT(*)
+       FROM title AS t
+       JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+       WHERE t.production_year = 2015  
+             AND t.kind_id = 1
+             AND idx.info_type_id = 100
+             AND idx.info > 400000) AS row_count
+FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1             # movies only
+    AND idx.info_type_id = 100    # info_type is votes
+    AND idx.info > 400000         # at least 400,000 votes
+ORDER BY idx.info DESC;
+```
+
+
+## actresses: {.scrollable}
+
+```{sql}
+#| connection: con_imdb
+
+
+SELECT a.person_id,
+       a.movie_id,
+       n.name,
+       (SELECT COUNT(*)
+       FROM cast_info AS a
+       JOIN aka_name AS n ON a.person_id = n.person_id
+       WHERE a.person_role_id = 2  
+             AND a.person_id > 390000) AS row_count
+FROM cast_info AS a
+JOIN aka_name AS n ON a.person_id = n.person_id
+       WHERE a.person_role_id = 2  
+             AND a.person_id > 3900000
+LIMIT 0, 20;
+```
+
+
+
+## Inner `JOIN` {.scrollable}
+
+With an inner `JOIN`, there are 32 rows corresponding to all the actresses in the seven 2015 films with the most votes.  Because the `JOIN` is an intersection of the two tables, only the actresses with `person_id` above 3900000 are included.
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM
+(SELECT t.id,
+       t.title
+FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               # movies only
+    AND idx.info_type_id = 100      # info_type is votes
+    AND idx.info > 400000) AS movs  # at least 400,000 votes     
+INNER JOIN (SELECT a.person_id,
+       a.movie_id,
+       n.name
+    FROM cast_info AS a
+    JOIN aka_name AS n ON a.person_id = n.person_id
+    WHERE a.role_id = 2             # acresses only
+        AND a.person_id > 3900000) AS acts ON acts.movie_id = movs.id
+LIMIT 0, 300;
+
+```
+
+
+## `RIGHT JOIN` {.scrollable}
+
+With a `RIGHT JOIN`, there are more than 300 rows (the `LIMIT` clause keeps us from knowing how many rows, but there are a LOT!) corresponding to all the actresses whose `person_id` above 3900000 are included.  Those actresses who acted in one of the seven top 2015 films are also included in the full results table, but they don't happen to be in the truncated output here. 
+
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM
+(SELECT t.id,
+       t.title
+FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               # movies only
+    AND idx.info_type_id = 100      # info_type is votes
+    AND idx.info > 400000) AS movs  # at least 400,000 votes     
+RIGHT JOIN (SELECT a.person_id,
+       a.movie_id,
+       n.name
+    FROM cast_info AS a
+    JOIN aka_name AS n ON a.person_id = n.person_id
+    WHERE a.role_id = 2             # acresses only
+        AND a.person_id > 3900000) AS acts ON acts.movie_id = movs.id
+LIMIT 0, 300;
+
+```
+
+## `LEFT JOIN` {.scrollable}
+
+With a `LEFT JOIN`, there are 33 rows corresponding to the actresses in the seven top 2015 movies. Only **The Revenant** did not have any actresses whose `person_id` is greater than 3900000.
+
+
+```{sql}
+#| connection: con_imdb
+
+SELECT * FROM
+(SELECT t.id,
+       t.title
+FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               # movies only
+    AND idx.info_type_id = 100      # info_type is votes
+    AND idx.info > 400000) AS movs  # at least 400,000 votes     
+LEFT JOIN (SELECT a.person_id,
+       a.movie_id,
+       n.name
+    FROM cast_info AS a
+    JOIN aka_name AS n ON a.person_id = n.person_id
+    WHERE a.role_id = 2             # acresses only
+        AND a.person_id > 3900000) AS acts ON acts.movie_id = movs.id
+LIMIT 0, 300;
+
+```
+
+
+
+## Counting repeat actresses {.scrollable}
+
+We might, for example, want to know how many names / spellings of a name with a specific `person_id` (above 3900000) exist for each `person_id` in each of the top voted seven films of 2015.  
+
+```{sql}
+#| connection: con_imdb
+
+SELECT acts.person_id, 
+       COUNT(*) AS num_repeat_names
+FROM (SELECT t.id,
+       t.title
+FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               # movies only
+    AND idx.info_type_id = 100      # info_type is votes
+    AND idx.info > 400000) AS movs  # at least 400,000 votes
+JOIN (SELECT a.person_id,
+       a.movie_id,
+       n.name
+    FROM cast_info AS a
+    JOIN aka_name AS n ON a.person_id = n.person_id
+    WHERE a.role_id = 2             # acresses only
+        AND a.person_id > 3900000) AS acts ON acts.movie_id = movs.id
+GROUP BY acts.person_id;
+```
+
+
+## Counting number of actresses per film {.scrollable}
+
+We might, for example, want to know how many actresses with a specific `person_id` (above 3900000) are in each of the top voted seven films of 2015.  
+
+```{sql}
+#| connection: con_imdb
+
+SELECT movs.id, 
+       movs.title,
+       COUNT(*) AS num_actress
+FROM (SELECT t.id,
+       t.title
+FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               # movies only
+    AND idx.info_type_id = 100      # info_type is votes
+    AND idx.info > 400000) AS movs  # at least 400,000 votes
+JOIN (SELECT a.person_id,
+       a.movie_id,
+       n.name
+    FROM cast_info AS a
+    JOIN aka_name AS n ON a.person_id = n.person_id
+    WHERE a.role_id = 2             # acresses only
+        AND a.person_id > 3900000) AS acts ON acts.movie_id = movs.id
+GROUP BY movs.id;
+```
+
+## `UNION`ing
+
+In **SQL** a `UNION` clause combines two different tables by their rows (whereas `JOIN` combines two tables by columns). Think about `UNION` similarly to the `bind_rows()` command in **R**.
+
+```{r}
+#| label: fig-table-union
+#| out.width: 120%
+#| fig-cap: "UNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html"
+#| fig-alt: Mini data tables describing how UNION binds rows and JOIN appends columns.
+#| echo: false
+
+library(cowplot)
+library(ggpubr)
+
+fig1_path <- "../images/join-union.png"
+fig2_path <- "../images/union-all.png"
+
+fig1 <- ggdraw() + draw_image(fig1_path)
+fig2 <- ggdraw() + draw_image(fig2_path)
+
+ggarrange(fig1, fig2, ncol = 1)
+```
+
+## `UNION`s
+
+Silly example where the column names are ignored.
+
+```{sql}
+#| connection: con_imdb
+
+SELECT 
+    1 AS bar,
+    2 AS foo
+
+UNION
+
+SELECT 
+    10 AS foo,
+    20 AS bar;
+```
+
+
+
+## `UNION` {.scrollable}
+
+`UNION` is specifically designed to bind rows from two different `SELECT` queries where the variables have been selected in the same order.
+
+Combine the top voted movies from 2015 with the top voted movies from 2019.  
+
+However, to account for time, we require the movies from 2015 to have more votes (400,000) than the movies from 2017 (200,000).  
+
+That is, the `WHERE` clause is different for the two subqueries.
+
+
+## `UNION` {.scrollable}
+```{sql}
+#| connection: con_imdb
+
+(SELECT t.title, 
+        t.production_year, 
+        idx.info AS num_votes
+    FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               
+    AND idx.info_type_id = 100      
+    AND idx.info > 400000)
+
+UNION
+
+(SELECT t.title, 
+        t.production_year, 
+        idx.info AS num_votes
+    FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2017  
+    AND t.kind_id = 1               
+    AND idx.info_type_id = 100      
+    AND idx.info > 200000)
+LIMIT 0, 100;
+```
+
+
+
+## `UNION ALL` {.scrollable}
+
+If the goal is to include duplicates across two tables, use `UNION ALL` instead of `UNION`.
+
+Let's say that the first table is all movies with production year after 2012 and number of votes greater than 500,000.  The second table is movies with production year equal to 2015 and number of votes greater than 400,000.  
+
+The Martian would be in both tables.
+
+## `UNION ALL` {.scrollable}
+
+With just `UNION`
+
+```{sql}
+#| connection: con_imdb
+
+(SELECT t.title,
+        t.production_year, 
+        idx.info AS num_votes
+    FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year > 2012  
+    AND t.kind_id = 1               
+    AND idx.info_type_id = 100      
+    AND idx.info > 500000)
+
+UNION
+
+(SELECT t.title, 
+        t.production_year, 
+        idx.info AS num_votes
+    FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               
+    AND idx.info_type_id = 100      
+    AND idx.info > 400000)
+ORDER BY production_year DESC, num_votes;
+
+```
+
+## `UNION ALL` {.scrollable}
+
+When `UNION ALL` is applied, The Martian is listed twice in the results table.
+
+```{sql}
+#| connection: con_imdb
+
+(SELECT t.title,
+        t.production_year, 
+        idx.info AS num_votes
+    FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year > 2012  
+    AND t.kind_id = 1               
+    AND idx.info_type_id = 100      
+    AND idx.info > 500000)
+
+UNION ALL
+
+(SELECT t.title, 
+        t.production_year, 
+        idx.info AS num_votes
+    FROM title AS t
+JOIN movie_info_idx AS idx ON idx.movie_id = t.id
+WHERE t.production_year = 2015  
+    AND t.kind_id = 1               
+    AND idx.info_type_id = 100      
+    AND idx.info > 400000)
+ORDER BY production_year DESC, num_votes;
+
+```
+
+
+## Best practice
+
+It is always a good idea to terminate the **SQL** connection when you are done with it.
+
+```{r}
+DBI::dbDisconnect(con_imdb, shutdown = TRUE)
+```
+
+
+
+
