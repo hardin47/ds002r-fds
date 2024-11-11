@@ -114,7 +114,7 @@ head(carriers)
 
 ## **SQL** tables as `tibble`
 
-The function `collect()` copies a **SQL** table from it's server location on disk to your local memory location in **R**.
+The function `collect()` copies a **SQL** table from its server location on disk to your local memory location in **R**.
 
 ```{r}
 carriers_tibble <- carriers |>

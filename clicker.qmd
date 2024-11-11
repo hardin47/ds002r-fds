@@ -1636,8 +1636,8 @@ data.frame(perm_diff = rnorm(200)) |>
 
 (@) What is a **SQL** server?[^101]
    (a) A relational database management system.
-   (b) A software whose main purpose is to store and retrieve data.
-   (c) A highly secure server and does not allow any database file manipulation during execution.
+   (b) A software program whose main purpose is to store and retrieve data.
+   (c) A highly secure server that does not allow any database file manipulation during execution.
    (d) All of the above.
 
 [^101]: a. A relational database management system.
