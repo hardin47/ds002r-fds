@@ -25,9 +25,9 @@ fontawesome::fa_html_dependency()
 
 # Agenda  11/13/24
 
-1. Database
-2. SQL connections
-3. SQL in R (3 ways)
+1. Order of clauses
+2. Similarities & differences with **tidyverse**
+3. **SQL** queries to **R** objects
 
 ```{r}
 #| include: false

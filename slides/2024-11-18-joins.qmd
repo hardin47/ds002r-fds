@@ -1,7 +1,7 @@
 ---
 title: SQL joins
 author: "Jo Hardin"
-date: "January 10, 2024"
+date: "November 18 + 20, 2024"
 format:
   revealjs:
     slide-number: true
@@ -19,6 +19,12 @@ execute:
 source("../_common.R")
 fontawesome::fa_html_dependency()
 ```
+
+
+# Agenda  11/18/24
+
+1. Joining
+2. Other combinations
 
 
 # Today's example
