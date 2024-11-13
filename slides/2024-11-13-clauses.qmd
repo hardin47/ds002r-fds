@@ -2,10 +2,13 @@
 title: SQL clauses
 author: "Jo Hardin"
 date: "November 13, 2024"
-format:
+format: 
   revealjs:
+    incremental: false
+    scrollable: true
     slide-number: true
     show-slide-number: all
+    embed-resources: true
 execute:
   echo: true
   warning: false
@@ -20,7 +23,7 @@ source("../_common.R")
 fontawesome::fa_html_dependency()
 ```
 
-# Agenda  11/11/24
+# Agenda  11/13/24
 
 1. Database
 2. SQL connections
@@ -36,25 +39,25 @@ fontawesome::fa_html_dependency()
 
 # Today's example
 
-## IMDb
+## Traffic Stops
 
-Consider a database of information from <a href = "https://www.imdb.com/" target = "_blank">IMDb</a>.
+Consider a database of information from <a href = "https://openpolicing.stanford.edu/data/" target = "_blank">Stanford Open Policing Project</a> on over 200 million traffic stops in the US.
 
 ```{r}
 #| echo: false
 #| fig-align: center
-knitr::include_graphics("../images/ted-lasso.jpg")
+knitr::include_graphics("../images/traffic_police.jpeg")
 ```
 
 ## Establishing a SQL connection
 
 ```{r}
-con_imdb <- DBI::dbConnect(
+con_traffic <- DBI::dbConnect(
   RMariaDB::MariaDB(),
-  dbname = "imdb",
-  host = Sys.getenv("SMITH_HOST"),
-  user = Sys.getenv("SMITH_USER"),
-  password = Sys.getenv("SMITH_PWD")
+  dbname = "traffic",
+  host = Sys.getenv("TRAFFIC_HOST"),
+  user = Sys.getenv("TRAFFIC_USER"),
+  password = Sys.getenv("TRAFFIC_PWD")
 )
 ```
 
@@ -62,10 +65,10 @@ con_imdb <- DBI::dbConnect(
 
 ## IMDb {.scrollable}
 
-21 tables in the `imdb` database!  Lots of details on movies, TV series, video games, and more. Today interest is in TV series (and details within, like actors and ratings).
+88 tables in the `traffic` database!  Lots of details on traffic stops across cities and highway patrols.
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
 SHOW TABLES;
 ```
@@ -73,21 +76,21 @@ SHOW TABLES;
 ## IMDb - glance through tables {.scrollable}
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT * FROM kind_type
+SELECT * FROM ca_los_angeles_2020_04_01
 LIMIT 0, 10;
 ```
 
 
 ## DESCRIBE tables {.scrollable}
 
-Still using a `{sql}` chunk.  The `DESCRIBE` command shows the 18 field names (variables) in the `aka_title` table.  Some of the variables are characters (`text`) and some are numeric (either `double` or `bigint`)
+Still using a `{sql}` chunk.  The `DESCRIBE` command shows the 10 field names (variables) in the `ca_los_angeles_2020_04_01` table.  Some of the variables are characters (`text`) and some are `date` or `time`.
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-DESCRIBE char_name;
+DESCRIBE ca_los_angeles_2020_04_01;
 ```
 
 ## Parts of a SQL table
@@ -98,12 +101,6 @@ DESCRIBE char_name;
 * `Key` designates whether the variable is a Primary Key.  `PRI` is a primary key, all unique, no `NULL` values.  `UNI` is a unique key, but `NULL` values are allowed.  `MUL` is a non-unique ("Multiple") key, allowing for duplicates, can speed up queries.
 * `Default` provides the default value of the variable if no value is provided when a row is added to the database.
 
-```{sql}
-#| connection: con_imdb
-
-SELECT * FROM char_name
-LIMIT 0, 10;
-```
 
 # **SQL** clauses
 
@@ -130,7 +127,7 @@ Queries in **SQL** start with the `SELECT` keyword and consist of several clause
 
 ::::
 
-The clauses are similar to data wrangling verbs in **R**.
+The clauses are similar to data wrangling verbs in **R**, but the order in **SQL** is super important!
 
 
 ## SELECT ... FROM
@@ -138,12 +135,12 @@ The clauses are similar to data wrangling verbs in **R**.
 * start with a `SELECT`, include a corresponding `FROM` 
 * columns may be specified or `*` returns every column
 
-The shortest **SQL** query is the following `SELECT` command.  Do not run this command!!! The `yellow_old` table has 15 million rows, and we do not want to look at them simultaneously.
+The shortest **SQL** query is the following `SELECT` command.  Do not run this command!!! The `ca_los_angeles_2020_04_01` table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.
 
 ```{r}
 #| eval: false
 
-DO NOT RUN:  SELECT * FROM aka_name;
+DO NOT RUN:  SELECT * FROM ca_los_angeles_2020_04_01;
 ```
 
 ## SELECT ... FROM {.scrollable}
@@ -151,9 +148,9 @@ DO NOT RUN:  SELECT * FROM aka_name;
 Much better for big tables:
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT * FROM keyword LIMIT 0, 14;
+SELECT * FROM ca_los_angeles_2020_04_01 LIMIT 0, 10;
 
 ```
 
@@ -161,53 +158,60 @@ SELECT * FROM keyword LIMIT 0, 14;
 
 ## SELECT ... FROM
 
-How do we know how many titles are in the database?  Two different ways of counting the rows (that produce the same number):
+How do we know how many traffic stops are in the database?  Two different ways of counting the rows (that produce the same number):
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*), SUM(1) FROM keyword LIMIT 0, 14;
+SELECT COUNT(*), SUM(1) FROM ca_los_angeles_2020_04_01 LIMIT 0, 10;
 ```
 
-```{sql}
-#| connection: con_air
-
-SELECT COUNT(*), SUM(1) FROM flights LIMIT 0, 14;
-```
-
-More than 500,000 titles and 1.3 million actors.
+More than 5.4 million LAPD traffic stops.
 
 ## SELECT ... FROM
 
-What is the length of a taxi ride (in time)?  ... unfortunately, `pickup_datetime` and `dropoff_datetime` are saved as character strings instead of in DateTime format.
+Let's look at New Orleans, LA
+
+```{sql}
+#| connection: con_traffic
+
+DESCRIBE la_new_orleans_2020_04_01;
+```
+
+
+## SELECT ... FROM
+
+How old was the car being driven? 
+
+Unfortunately, `date` is saved as a date variable, and `vehicle_year` is saved as a double.
+Fortunately, we can convert `vehicle_year` to a date variable.
 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
 SELECT
-      pickup_datetime, dropoff_datetime,
-      STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T") AS pickup,
-      STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T") AS dropoff
-   FROM yellow_old
+      date, vehicle_year,
+      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date
+   FROM la_new_orleans_2020_04_01
    LIMIT 0, 10;
 ```
 
 
+
 ## SELECT ... FROM
 
-Why can't we find the difference between the new two time variables?
+Why can't we find the difference between the two time variables?
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 #| error: true
 
 SELECT
-      pickup_datetime, dropoff_datetime,
-      STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T") AS pickup,
-      STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T") AS dropoff,
-      TIMEDIFF(pickup, dropoff) AS length_time
-   FROM yellow_old
+      date, vehicle_year,
+      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date
+      TIMESTAMPDIFF(YEAR, vehicle_date, date) AS car_age
+   FROM la_new_orleans_2020_04_01
    LIMIT 0, 10;
 ```
 
@@ -220,35 +224,36 @@ Solution 1:  two layers of `SELECT`
    * second `SELECT` (i.e., outside) layer subtracts the two times
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
 SELECT 
-   pickup,
-   dropoff, 
-   TIMEDIFF(pickup, dropoff) AS length_time 
+   date,
+   vehicle_date, 
+   TIMESTAMPDIFF(YEAR, vehicle_date, date) AS car_age 
 FROM (
    SELECT
-      STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T") AS pickup,
-      STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T") AS dropoff
-   FROM yellow_old)
+      date,
+      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date
+   FROM la_new_orleans_2020_04_01)
    AS subquery_table
-LIMIT 0, 20;
+LIMIT 0, 10;
 ```
 
 ## SELECT ... FROM {.scrollable}
 
-Solution 2: apply the `STR_TO_DATE()` function inside the `TIMEDIFF()` function 
+Solution 2: apply the `STR_TO_DATE()` function inside the `TIMESTAMPDIFF()` function 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
 SELECT 
-   pickup_datetime,
-   dropoff_datetime, 
-   TIMEDIFF(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T"), 
-            STR_TO_DATE(dropoff_datetime, "%Y-%m-%d %T")) AS length_time 
-FROM yellow_old
-LIMIT 0, 20;
+   date,
+   vehicle_year,
+   TIMESTAMPDIFF(YEAR, 
+                 STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d'),
+                 date) AS car_age 
+FROM la_new_orleans_2020_04_01
+LIMIT 0, 10;
 ```
 
 
@@ -256,52 +261,57 @@ LIMIT 0, 20;
 
 There is a distinction between clauses that operate on the *variables of the original table* versus those that operate on the *variables of the results set*.  
 
-`pickup_datetime` and `dropoff_datetime` are columns in the *original table* - they are written to disk on the **SQL** server.  
+`date` and `vehicle_year` are columns in the *original table* - they are written to disk on the **SQL** server.  
 
-`pickup`, `dropoff`, and `length_time` exist only in the *results set*, which is passed from the server (**SQL** server) to the client (e.g., **RStudio** or **DBeaver**) and is not written to disk.
+`car_age` exist only in the *results set*, which is passed from the server (**SQL** server) to the client (e.g., **RStudio** or **DBeaver**) in your computer's memory and is not written to disk.
 
 ## SELECT DISTINCT {.scrollable}
 
 Returns only unique rows.
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT DISTINCT payment_type
-FROM yellow_old
-LIMIT 0, 20;
+SELECT DISTINCT raw_actions_taken
+FROM la_new_orleans_2020_04_01
+LIMIT 0, 200;
 ```
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT DISTINCT vendor_id, payment_type
-FROM yellow_old
-LIMIT 0, 20;
+SELECT DISTINCT outcome
+FROM la_new_orleans_2020_04_01
+LIMIT 0, 10;
 ```
-In case you are curious: 
 
-* `VTS` is Verifone Transportation Systems and `CMT` is Mobile Knowledge Systems
-Inc.
-* `CRD` is credit card; `CSH` is cash; `NOC` is no charge; `DIS` is dispute
+```{sql}
+#| connection: con_traffic
+
+SELECT DISTINCT vehicle_make, vehicle_color
+FROM la_new_orleans_2020_04_01
+LIMIT 0, 10;
+```
+
+(note that we haven't yet arranged the distinct values!)
 
 ## WHERE
 
-The `WHERE` clause is analogous to the `filter()` function in **dplyr**.  However, keep in mind that there are two **SQL** commands that resemble the **dplyr** `filter()` function. `WHERE` operates on the original data in the table and `HAVING` operates on the result set. 
+The `WHERE` clause is analogous to the `filter()` function in **dplyr**.  However, keep in mind that there are two **SQL** commands that resemble the **dplyr** `filter()` function. `WHERE` operates on the [original data]{.underline} in the table and `HAVING` operates on the [result set]{.underline}. 
 
 ## WHERE {.scrollable}
 
-What was the fare for those taxi rides where the `tip_amount` was more than $10 and the person used cash?
+What was the time of day for those traffic stops `search_conducted` was true and `vehicle_make` was Subaru?
 
-Note that in **SQL** the equality logical is `=` and in **R** the equality logical is `==`.
+Note that in **SQL** the equality logical is `=` and in **R** the equality logical is `==`.  Note also that the WHERE command is case-insensitive!
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT payment_type, fare_amount, tip_amount, total_amount
-FROM yellow_old
-WHERE tip_amount > 10
-   AND payment_type = "CSH"
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE search_conducted = 1
+   AND vehicle_make = "Subaru"
 LIMIT 0, 10;
 
 ```
@@ -312,12 +322,12 @@ LIMIT 0, 10;
 `BETWEEN` can be used to specify a range of values for a numeric value.  `BETWEEN` is inclusive.
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT payment_type, fare_amount, tip_amount, total_amount
-FROM yellow_old
-WHERE tip_amount BETWEEN 10 and 12
-   AND payment_type = "CSH"
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_year BETWEEN 1970 and 1999
+   AND vehicle_make = "Subaru"
 LIMIT 0, 10;
 
 ```
@@ -328,12 +338,12 @@ LIMIT 0, 10;
 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT payment_type, fare_amount, tip_amount, total_amount
-FROM yellow_old
-WHERE tip_amount IN (10, 12)
-   AND payment_type = "CSH"
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_make IN ("Subaru", "Dodge")
+   AND search_conducted = 1
 LIMIT 0, 10;
 
 ```
@@ -343,52 +353,67 @@ LIMIT 0, 10;
 `AND` takes precedent over `OR` in the order of operations, when there are no parentheses.  
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT payment_type, fare_amount, tip_amount, total_amount
-FROM yellow_old
-WHERE tip_amount BETWEEN 10 and 12 OR 
-      total_amount BETWEEN 100 and 112 AND 
-      payment_type = "CSH"
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_year BETWEEN 1970 and 1999 OR
+      vehicle_make IN ("Subaru", "Dodge") AND 
+      search_conducted = 1
 LIMIT 0, 10;
 ```
 
+same as:
+
+```{sql}
+#| connection: con_traffic
+
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_year BETWEEN 1970 and 1999 OR
+      (vehicle_make IN ("Subaru", "Dodge") AND 
+      search_conducted = 1)
+LIMIT 0, 10;
+```
 
 ## WHERE
 
 Parentheses take precedent over `AND` and `OR`.
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT payment_type, fare_amount, tip_amount, total_amount
-FROM yellow_old
-WHERE (tip_amount BETWEEN 10 and 12 OR 
-      total_amount BETWEEN 100 and 112 ) AND 
-      payment_type = "CSH"
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE (vehicle_year BETWEEN 1970 and 1999 OR
+      vehicle_make IN ("Subaru", "Dodge") ) AND 
+      search_conducted = 1
 LIMIT 0, 10;
 ```
 
 
 ## WHERE
 
-`IS NULL` not `= NULL` (because `NULL` indicates *unknown*)
+`IS NULL` not `= NULL` (because `NULL` indicates *unknown*).  (Just like how we need to use `is.na()` in **R**!)
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT payment_type, fare_amount, tip_amount, total_amount
-FROM yellow_old
-WHERE payment_type IS NULL
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_make IS NULL
 LIMIT 0, 10;
 ```
 
-```{sql}
-#| connection: con_imdb
 
-SELECT payment_type, fare_amount, tip_amount, total_amount
-FROM yellow_old
-WHERE payment_type = NULL
+
+```{sql}
+#| connection: con_traffic
+#| eval: false
+
+SELECT time, search_conducted, vehicle_year, vehicle_make
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_make = NULL
 LIMIT 0, 10;
 ```
 
@@ -409,7 +434,7 @@ Consider the following table and **SQL** query to evaluate `WHERE age <= 20 OR n
 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
 SELECT * FROM (
    SELECT 'Ace' AS name, 20 AS age, 4 as num_dogs
@@ -437,7 +462,7 @@ Thus we keep only Ace and Ada.
 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
 SELECT * FROM (
    SELECT 'Ace' AS name, 20 AS age, 4 as num_dogs
@@ -459,32 +484,33 @@ The `GROUP BY` clause will direct **SQL** to carry out the query separately for 
 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*) AS num_transactions, 
-       SUM(1) AS num_transactions_also,
-       SUM(2) AS double_transactions,
-       payment_type 
-FROM yellow_old
-WHERE tip_amount BETWEEN 10 and 20
-GROUP BY payment_type;
+SELECT subject_race,
+       COUNT(*) AS num_stops, 
+       SUM(1) AS num_stops_also,
+       SUM(2) AS double_stops
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_year BETWEEN 1970 and 1999
+GROUP BY subject_race;
 ```
 
 ## GROUP BY
 
-For those people who tipped between $10 and $20, what was the lowest and highest fare for each of the types of payments?
+For those people whose cars are between 1970 and 1999, how old is the youngest and oldest person for each `subject_race`?
 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*) AS num_transactions, 
-       MIN(fare_amount) AS lowest_fare,
-       MAX(fare_amount) AS highest_fare,
-       payment_type 
-FROM yellow_old
-WHERE tip_amount BETWEEN 10 and 20
-GROUP BY payment_type;
+SELECT subject_race,
+       COUNT(*) AS num_stops, 
+       MIN(subject_age) AS min_age,
+       MAX(subject_age) AS max_age
+FROM la_new_orleans_2020_04_01
+WHERE vehicle_year BETWEEN 1970 and 1999
+GROUP BY subject_race;
+
 ```
 
 
@@ -492,19 +518,16 @@ GROUP BY payment_type;
 
 `GROUP BY` will work applied to multiple columns.  
 
-What is `wday`?
-
-
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*) AS num_transactions, 
-       MIN(fare_amount) AS lowest_fare,
-       MAX(fare_amount) AS highest_fare,
-       payment_type,
-       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
-FROM yellow_old
-GROUP BY payment_type, wday;
+SELECT subject_race,
+       COUNT(*) AS num_stops, 
+       MIN(subject_age) AS min_age,
+       MAX(subject_age) AS max_age,
+       DAYNAME(date) AS wday
+FROM la_new_orleans_2020_04_01
+GROUP BY subject_race, wday;
 ```
 
 
@@ -513,51 +536,53 @@ GROUP BY payment_type, wday;
 `ORDER BY` allows us to look at interesting aspects of the data by sorting the data.
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*) AS num_transactions, 
-       MIN(fare_amount) AS lowest_fare,
-       MAX(fare_amount) AS highest_fare,
-       payment_type,
-       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
-FROM yellow_old
-GROUP BY payment_type, wday
-ORDER BY lowest_fare ASC;
+SELECT subject_race,
+       COUNT(*) AS num_stops, 
+       MIN(subject_age) AS min_age,
+       MAX(subject_age) AS max_age,
+       DAYNAME(date) AS wday
+FROM la_new_orleans_2020_04_01
+GROUP BY subject_race, wday
+ORDER BY min_age ASC;
+
 ```
 
-WHAT?!?!!  How in the world was one of the fares -$612.40?
+
+WHAT?!?!!  How are 10 year olds getting pulled over for traffic stops?
 
 
 ## ORDER BY {.scrollable}
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*) AS num_transactions, 
-       MIN(fare_amount) AS lowest_fare,
-       MAX(fare_amount) AS highest_fare,
-       payment_type,
-       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
-FROM yellow_old
-GROUP BY payment_type, wday
-ORDER BY highest_fare DESC;
+SELECT subject_race,
+       COUNT(*) AS num_stops, 
+       MIN(subject_age) AS min_age,
+       MAX(subject_age) AS max_age,
+       DAYNAME(date) AS wday
+FROM la_new_orleans_2020_04_01
+GROUP BY subject_race, wday
+ORDER BY max_age DESC;
 ```
 
-$950 is a lot to pay for a cab ride!  But in NYC, I'd believe it.
+So many people over 100 years old...  the data seem fishy!
 
 ## ORDER BY {.scrollable}
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*) AS num_transactions, 
-       MIN(fare_amount) AS lowest_fare,
-       MAX(fare_amount) AS highest_fare,
-       payment_type,
-       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
-FROM yellow_old
-GROUP BY payment_type, wday
-ORDER BY wday, payment_type;
+SELECT subject_race,
+       COUNT(*) AS num_stops, 
+       MIN(subject_age) AS min_age,
+       MAX(subject_age) AS max_age,
+       DAYNAME(date) AS wday
+FROM la_new_orleans_2020_04_01
+GROUP BY subject_race, wday
+ORDER BY wday, subject_race;
 ```
 
 
@@ -572,22 +597,23 @@ We are able to `GROUP BY` and `ORDER BY` on the new variables we had created, `w
 
 ## HAVING
 
-Recall that `WHERE` acts only on the original data.  If we are interested in rides that took place on `Friday`, we need to use the derived variable `wday` instead of the raw variable `pickup_datetime`.  Fortunately, `HAVING` works on the results set.  
+Recall that `WHERE` acts only on the original data.  If we are interested in traffic stops that happened on `Friday`, we need to use the derived variable `wday` instead of the raw variable `date`.  Fortunately, `HAVING` works on the [results set]{.underline}.  
 
 ## HAVING
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT COUNT(*) AS num_transactions, 
-       MIN(fare_amount) AS lowest_fare,
-       MAX(fare_amount) AS highest_fare,
-       payment_type,
-       DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
-FROM yellow_old
-GROUP BY payment_type, wday
+SELECT subject_race,
+       COUNT(*) AS num_stops, 
+       MIN(subject_age) AS min_age,
+       MAX(subject_age) AS max_age,
+       DAYNAME(date) AS wday
+FROM la_new_orleans_2020_04_01
+GROUP BY subject_race, wday
 HAVING wday = 'Friday';
 ```
+
 
 ## HAVING
 
@@ -598,14 +624,14 @@ Note: `HAVING` requires a `GROUP BY` clause.  And the variable(s) used in `HAVIN
 
 ## LIMIT {.scrollable}
 
-`LIMIT` truncates the query to specified rows.  The first number is the offset (i.e., the number of rows to skip), the second number is the (maximum) number of rows to return.  Here, we return rows 15428119 through 15428128.
+`LIMIT` truncates the query to specified rows.  The first number is the offset (i.e., the number of rows to skip), the second number is the (maximum) number of rows to return.  Here, we return rows 154219 through 154228.
 
 The first number is optional.
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 
-SELECT * FROM yellow_old LIMIT 15428118, 10;
+SELECT * FROM la_new_orleans_2020_04_01 LIMIT 154218, 10;
 
 ```
 
@@ -614,18 +640,18 @@ SELECT * FROM yellow_old LIMIT 15428118, 10;
 
 If you are working in **R** to run **SQL** commands, you may want to use the query output for further analysis or visualizations. 
 
-* use `#|output.var: "name_of_variable"` inside the `{sql}` chunk. 
+* use `#| output.var: "name_of_variable"` inside the `{sql}` chunk. 
 * `name_of_variable` will then be available to be used in the R environment.
 
 
 ```{sql}
-#| connection: con_imdb
+#| connection: con_traffic
 #| label: new-table
 #| output.var: "new_table"
 #| echo: fenced
 
-SELECT *, DAYNAME(STR_TO_DATE(pickup_datetime, "%Y-%m-%d %T")) AS wday
-FROM yellow_old 
+SELECT *, DAYNAME(date) AS wday
+FROM la_new_orleans_2020_04_01
 LIMIT 0, 1000;
 ```
 
@@ -636,8 +662,9 @@ LIMIT 0, 1000;
 
 new_table |>
   drop_na(wday) |>
-  ggplot(aes(x = fare_amount, y = tip_amount, color = wday)) + 
-  geom_point() 
+  ggplot(aes(x = vehicle_year, y = subject_age, color = wday)) + 
+  geom_point() +
+  xlim(1985, 2025)
 ```
 
 
@@ -647,5 +674,5 @@ new_table |>
 Always a good idea to terminate the **SQL** connection when you are done with it.
 
 ```{r}
-dbDisconnect(con_imdb, shutdown = TRUE)
+dbDisconnect(con_traffic, shutdown = TRUE)
 ```
