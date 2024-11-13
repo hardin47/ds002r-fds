@@ -63,7 +63,7 @@ con_traffic <- DBI::dbConnect(
 
 
 
-## IMDb {.scrollable}
+## Traffic Stops {.scrollable}
 
 88 tables in the `traffic` database!  Lots of details on traffic stops across cities and highway patrols.
 
@@ -73,7 +73,7 @@ con_traffic <- DBI::dbConnect(
 SHOW TABLES;
 ```
 
-## IMDb - glance through tables {.scrollable}
+## LAPD - glance through tables {.scrollable}
 
 ```{sql}
 #| connection: con_traffic
