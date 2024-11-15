@@ -1727,7 +1727,7 @@ data.frame(perm_diff = rnorm(200)) |>
    (a) `SELECT` * `FROM` Persons `WHERE` FirstName <> 'Peter'
    (b) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter'
    (c) `SELECT` * `FROM` Persons `WHERE` FirstName == 'Peter'
-   (d) `SELECT` [all] `FROM` Persons `WHERE` FirstName `LIKE` 'Peter'
+   (d) `SELECT` * `FROM` Persons `WHERE` FirstName `LIKE` 'Peter'
    (e) `SELECT` [all] `FROM` Persons `WHERE` FirstName = 'Peter'
    
 [^110]: b. `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' (d. would also work.)
@@ -1736,9 +1736,9 @@ data.frame(perm_diff = rnorm(200)) |>
 
 (@) With SQL, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?[^111]
    (a) `SELECT` FirstName = 'Peter', LastName = 'Jackson' `FROM` Persons
-   (b) `SELECT` * `FROM` Persons `WHERE` FirstName <> 'Peter' AND LastName <> 'Jackson'
+   (b) `SELECT` * `FROM` Persons `WHERE` FirstName = Peter' & LastName = Jackson'
    (c) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
-   (d) `SELECT` * `FROM` Persons `WHERE` FirstName == 'Peter' AND LastName == 'Jackson'
+   (d) `SELECT` * `FROM` Persons `WHERE` FirstName = Peter' | LastName = Jackson'
 
 [^111]: c. `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
 

@@ -1,8 +1,80 @@
 ---
 title: "Project 4"
 description: |
-  web scraping
+  SQL
 format: html
 ---
 
-more soon.
+You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](https://www.science.smith.edu/wai-database/) hosted by Smith College.  WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles.  The goal of the database is to "enable auditory researchers to share WAI measurements and combine analyses over multiple datasets."^[Thanks to Paul Roback at St. Olaf for sharing this project idea.]
+
+You have two primary goals:
+
+1) Duplicate Figure 1 from <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target = "_blank">@voss</a>.  You will need to query the WAI Database to build a dataset which you can pipe into `ggplot()` to recreate Figure 1 *as closely as possible* (might not be possible to reproduce exactly).
+
+2) Find a study where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs. mean absorption by the group of interest.
+
+You should be using `JOIN`s in both (1) and (2), do the `JOIN`ing in **SQL**, not in **R**.  Indeed, do as much of the work as possible using **SQL** functions!  Really only the `ggplot()` should be in done in **R**.
+
+
+## Timeline
+
+Mini-Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Tuesday November 26**.  You will add a tab to your Quarto webpage for Mini-Project 4 and submit the new page's URL. 
+
+
+## Hints
+
+- Parse the caption from Figure 1 carefully to determine how mean absorbances are calculated: "Mean absorbances for the 12 studies within the WAI database as of July 1, 2019. Noted in the legend are the peer-reviewed publications associated with the datasets, the number of individual ears, and the equipment used in the study. When multiple measurements were made on the same ear, the average from those measurements was used in the calculation across subjects for a given study. Some subjects have measurements on both a right and a left ear, and some subjects have measurements from only one ear; this figure includes every ear in the database and does not control for the effect of number of ears from each subject."
+- filter for only the 12 studies shown in Figure 1 (and also for frequencies shown in Figure 1)
+- study the patterns of frequencies.  It seems that most researchers used the same set of frequencies for each subject, ear, and session.
+- note the scale of the x-axis
+- the key labels contains AuthorsShortList, Year, and Instrument, in addition to the number of unique ears (I think Werner's N may be incorrect?)
+
+
+## Starter Code
+
+```{r}
+#| include: FALSE
+
+library(tidyverse)
+library(mdsr)
+library(dbplyr)
+library(DBI)
+```
+
+```{r}
+library(RMariaDB)
+con_wai <- dbConnect(
+  MariaDB(), host = "scidb.smith.edu",
+  user = "waiuser", password = "smith_waiDB", 
+  dbname = "wai"
+)
+Measurements <- tbl(con_wai, "Measurements")
+PI_Info <- tbl(con_wai, "PI_Info")
+Subjects <- tbl(con_wai, "Subjects")
+
+# collect(Measurements)
+```
+
+```{sql}
+#| connection: con_wai
+SHOW TABLES;
+```
+
+```{sql}
+#| connection: con_wai
+DESCRIBE Measurements;
+```
+
+```{sql}
+#| connection: con_wai
+
+SELECT *
+FROM Measurements
+LIMIT 0, 5;
+```
+
+
+
+
+
+

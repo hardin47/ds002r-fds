@@ -115,12 +115,12 @@ schedule <- tribble(
   
      "Week 13 <br> 11.18.24", 'SQL', 
  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/06-sql-joins.html" target = "_blank">SQL joins</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-11-18-joins.html" target = "_blank">SQL joins</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws19_ds2_f24_sql3.pdf" target = "_blank">WS 19 - sql 3</a>',
-  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.20',
+  ' ',
   ' ',
 
      "Week 14 <br> 11.25.24", 'Shiny<br> no class Wed', 
   ' ',
-  ' ',
+  '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due Tuesday 11.26',
   ' ',
 
      "Week 15 <br> 12.2.24", 'presentations (?)', 
