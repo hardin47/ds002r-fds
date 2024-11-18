@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jo Hardin">
-  <title>Foundations of Data Science in R - SQL joins</title>
+  <title>Foundations of Data Science in R – SQL joins</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -430,7 +430,7 @@ Jo Hardin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a></a>SHOW <span class="kw">TABLES</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <thead>
 <tr class="header">
@@ -479,7 +479,7 @@ Jo Hardin
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> kind_type</span>
 <span id="cb2-2"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>7 records</caption>
 <thead>
 <tr class="header">
@@ -536,16 +536,12 @@ Jo Hardin
 <h2>All the <code>JOIN</code>s</h2>
 <p>Venn diagrams of the different types of joins.</p>
 
-<img data-src="../images/join-types.png" style="width:70.0%" alt="Venn diagrams describing different types of JOINs." class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;1: Venn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join
-</p></section>
+<img data-src="../images/join-types.png" style="width:70.0%" alt="Venn diagrams describing different types of JOINs." class="r-stretch quarto-figure-center"><p class="caption">Venn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join</p></section>
 <section id="all-the-joins-2" class="slide level2">
 <h2>All the <code>JOIN</code>s</h2>
 <p>Mini data tables of the different types of <code>JOIN</code>. (In <strong>SQL</strong> the missing values will be labeled as <code>NULL</code> (not <code>NA</code>).)</p>
 
-<img data-src="../images/table-joins.png" style="width:70.0%" alt="Mini data tables describing different types of JOINs." class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti
-</p></section>
+<img data-src="../images/table-joins.png" style="width:70.0%" alt="Mini data tables describing different types of JOINs." class="r-stretch quarto-figure-center"><p class="caption">Mini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti</p></section>
 <section id="all-the-joins-3" class="slide level2">
 <h2>All the <code>JOIN</code>s</h2>
 <p>Each <code>JOIN</code> clause needs four specific pieces of information:</p>
@@ -678,7 +674,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb17-1"><a></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> title <span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 3%">
@@ -862,7 +858,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb18-1"><a></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> movie_info_idx <span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">6</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>6 records</caption>
 <thead>
 <tr class="header">
@@ -939,7 +935,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb19-10"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> movie_info_idx.info <span class="kw">DESC</span></span>
 <span id="cb19-11"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">20</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <thead>
 <tr class="header">
@@ -1012,7 +1008,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb20-1"><a></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> cast_info <span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table style="width:100%;">
+<table class="caption-top" style="width:100%;">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 4%">
@@ -1137,7 +1133,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb21-1"><a></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> aka_name <span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 2%">
@@ -1237,7 +1233,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb22-1"><a></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> title <span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 3%">
@@ -1435,7 +1431,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb23-14"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> a.person_id</span>
 <span id="cb23-15"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">50</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 52%">
@@ -1549,7 +1545,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb24-16"><a></a>    <span class="kw">AND</span> idx.info <span class="op">&gt;</span> <span class="dv">400000</span>         # <span class="kw">at</span> <span class="fu">least</span> <span class="dv">400</span>,<span class="dv">000</span> votes</span>
 <span id="cb24-17"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> idx.info <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>7 records</caption>
 <colgroup>
 <col style="width: 11%">
@@ -1631,7 +1627,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb25-13"><a></a>             <span class="kw">AND</span> a.person_id <span class="op">&gt;</span> <span class="dv">3900000</span></span>
 <span id="cb25-14"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">20</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <thead>
 <tr class="header">
@@ -1729,7 +1725,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb26-16"><a></a>        <span class="kw">AND</span> a.person_id <span class="op">&gt;</span> <span class="dv">3900000</span>) <span class="kw">AS</span> acts <span class="kw">ON</span> acts.movie_id <span class="op">=</span> movs.<span class="kw">id</span></span>
 <span id="cb26-17"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">300</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 9%">
@@ -1845,7 +1841,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb27-16"><a></a>        <span class="kw">AND</span> a.person_id <span class="op">&gt;</span> <span class="dv">3900000</span>) <span class="kw">AS</span> acts <span class="kw">ON</span> acts.movie_id <span class="op">=</span> movs.<span class="kw">id</span></span>
 <span id="cb27-17"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">300</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <thead>
 <tr class="header">
@@ -1954,7 +1950,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb28-16"><a></a>        <span class="kw">AND</span> a.person_id <span class="op">&gt;</span> <span class="dv">3900000</span>) <span class="kw">AS</span> acts <span class="kw">ON</span> acts.movie_id <span class="op">=</span> movs.<span class="kw">id</span></span>
 <span id="cb28-17"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">300</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 9%">
@@ -2071,7 +2067,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb29-17"><a></a>        <span class="kw">AND</span> a.person_id <span class="op">&gt;</span> <span class="dv">3900000</span>) <span class="kw">AS</span> acts <span class="kw">ON</span> acts.movie_id <span class="op">=</span> movs.<span class="kw">id</span></span>
 <span id="cb29-18"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> acts.person_id;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <thead>
 <tr class="header">
@@ -2149,7 +2145,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <span id="cb30-18"><a></a>        <span class="kw">AND</span> a.person_id <span class="op">&gt;</span> <span class="dv">3900000</span>) <span class="kw">AS</span> acts <span class="kw">ON</span> acts.movie_id <span class="op">=</span> movs.<span class="kw">id</span></span>
 <span id="cb30-19"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> movs.<span class="kw">id</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>6 records</caption>
 <thead>
 <tr class="header">
@@ -2198,9 +2194,7 @@ Figure&nbsp;2: Mini data tables describing different JOINs, image credit: Statis
 <h2><code>UNION</code>ing</h2>
 <p>In <strong>SQL</strong> a <code>UNION</code> clause combines two different tables by their rows (whereas <code>JOIN</code> combines two tables by columns). Think about <code>UNION</code> similarly to the <code>bind_rows()</code> command in <strong>R</strong>.</p>
 
-<img data-src="2024-11-18-joins_files/figure-revealjs/fig-table-union-1.png" style="width:120.0%" alt="Mini data tables describing how UNION binds rows and JOIN appends columns." class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html
-</p></section>
+<img data-src="2024-11-18-joins_files/figure-revealjs/unnamed-chunk-28-1.png" style="width:120.0%" alt="Mini data tables describing how UNION binds rows and JOIN appends columns." class="r-stretch quarto-figure-center"><p class="caption">UNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html</p></section>
 <section id="unions" class="slide level2">
 <h2><code>UNION</code>s</h2>
 <p>Silly example where the column names are ignored.</p>
@@ -2215,7 +2209,7 @@ Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane W
 <span id="cb31-8"><a></a>    <span class="dv">10</span> <span class="kw">AS</span> foo,</span>
 <span id="cb31-9"><a></a>    <span class="dv">20</span> <span class="kw">AS</span> bar;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>2 records</caption>
 <thead>
 <tr class="header">
@@ -2270,7 +2264,7 @@ Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane W
 <span id="cb32-21"><a></a>    <span class="kw">AND</span> idx.info <span class="op">&gt;</span> <span class="dv">200000</span>)</span>
 <span id="cb32-22"><a></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">100</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 62%">
@@ -2373,7 +2367,7 @@ Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane W
 <span id="cb33-21"><a></a>    <span class="kw">AND</span> idx.info <span class="op">&gt;</span> <span class="dv">400000</span>)</span>
 <span id="cb33-22"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> production_year <span class="kw">DESC</span>, num_votes;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <colgroup>
 <col style="width: 62%">
@@ -2470,7 +2464,7 @@ Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane W
 <span id="cb34-21"><a></a>    <span class="kw">AND</span> idx.info <span class="op">&gt;</span> <span class="dv">400000</span>)</span>
 <span id="cb34-22"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> production_year <span class="kw">DESC</span>, num_votes;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <caption>Displaying records 1 - 10</caption>
 <thead>
 <tr class="header">
@@ -2828,18 +2822,7 @@ Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane W
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -2871,7 +2854,29 @@ Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane W
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/ds002r-fds\.netlify\.app\/");
@@ -2879,7 +2884,7 @@ Figure&nbsp;3: UNION binds rows while JOIN appends columns, image credit: Jane W
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

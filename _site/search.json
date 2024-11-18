@@ -8348,7 +8348,7 @@
     "href": "slides/2024-11-13-clauses.html#order-of-clauses",
     "title": "SQL clauses",
     "section": "Order of clauses",
-    "text": "Order of clauses\nQueries in SQL start with the SELECT keyword and consist of several clauses, which must be written in the following order:\n\n\n\nSELECT\nFROM\nJOIN\nWHERE\n\n\n\nGROUP BY\nHAVING\nORDER BY\nLIMIT\n\n\n\nThe clauses are similar to data wrangling verbs in R, but the order in SQL is super important!"
+    "text": "Order of clauses\nQueries in SQL start with the SELECT keyword and consist of several clauses, which must be written in the following order:\n\n\n\nSELECT\nFROM\nJOIN\nWHERE\n\n\n\nGROUP BY\nHAVING\nORDER BY\nLIMIT\n\n\nThe clauses are similar to data wrangling verbs in R, but the order in SQL is super important!"
   },
   {
     "objectID": "slides/2024-11-13-clauses.html#select-from",
@@ -8579,7 +8579,7 @@
     "href": "slides/2024-11-13-clauses.html#saving-sql-queries-as-r-objects",
     "title": "SQL clauses",
     "section": "Saving SQL queries as R objects",
-    "text": "Saving SQL queries as R objects\nIf you are working in R to run SQL commands, you may want to use the query output for further analysis or visualizations.\n\nuse #| output.var: \"name_of_variable\" inside the {sql} chunk.\nname_of_variable will then be available to be used in the R environment.\n\n\n```{sql}\n#| connection: con_traffic\n#| label: new-table\n#| output.var: \"new_table\"\n\nSELECT *, DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 1000;\n```"
+    "text": "Saving SQL queries as R objects\nIf you are working in R to run SQL commands, you may want to use the query output for further analysis or visualizations.\n\nuse #| output.var: \"name_of_variable\" inside the {sql} chunk.\nname_of_variable will then be available to be used in the R environment.\n\n\n```{sql}\n#| connection: con_traffic\n#| output.var: \"new_table\"\n\nSELECT *, DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 1000;\n```"
   },
   {
     "objectID": "slides/2024-11-13-clauses.html#saving-sql-queries-as-r-objects-1",
@@ -8635,14 +8635,14 @@
     "href": "slides/2024-11-18-joins.html#all-the-joins-1",
     "title": "SQL joins",
     "section": "All the JOINs",
-    "text": "All the JOINs\nVenn diagrams of the different types of joins.\n\n\nFigure 1: Venn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join"
+    "text": "All the JOINs\nVenn diagrams of the different types of joins.\n\nVenn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join"
   },
   {
     "objectID": "slides/2024-11-18-joins.html#all-the-joins-2",
     "href": "slides/2024-11-18-joins.html#all-the-joins-2",
     "title": "SQL joins",
     "section": "All the JOINs",
-    "text": "All the JOINs\nMini data tables of the different types of JOIN. (In SQL the missing values will be labeled as NULL (not NA).)\n\n\nFigure 2: Mini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
+    "text": "All the JOINs\nMini data tables of the different types of JOIN. (In SQL the missing values will be labeled as NULL (not NA).)\n\nMini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
   },
   {
     "objectID": "slides/2024-11-18-joins.html#all-the-joins-3",
@@ -8803,7 +8803,7 @@
     "href": "slides/2024-11-18-joins.html#unioning",
     "title": "SQL joins",
     "section": "UNIONing",
-    "text": "UNIONing\nIn SQL a UNION clause combines two different tables by their rows (whereas JOIN combines two tables by columns). Think about UNION similarly to the bind_rows() command in R.\n\n\nFigure 3: UNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html"
+    "text": "UNIONing\nIn SQL a UNION clause combines two different tables by their rows (whereas JOIN combines two tables by columns). Think about UNION similarly to the bind_rows() command in R.\n\nUNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html"
   },
   {
     "objectID": "slides/2024-11-18-joins.html#unions",

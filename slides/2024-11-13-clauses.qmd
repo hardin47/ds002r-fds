@@ -646,7 +646,6 @@ If you are working in **R** to run **SQL** commands, you may want to use the que
 
 ```{sql}
 #| connection: con_traffic
-#| label: new-table
 #| output.var: "new_table"
 #| echo: fenced
 

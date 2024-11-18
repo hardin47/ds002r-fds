@@ -87,7 +87,6 @@ Venn diagrams of the different types of joins.
 
 
 ```{r}
-#| label: fig-venn-joins
 #| out.width: 70%
 #| fig-cap: "Venn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join"
 #| fig-alt: Venn diagrams describing different types of JOINs.
@@ -100,7 +99,6 @@ include_graphics("../images/join-types.png")
 Mini data tables of the different types of `JOIN`.  (In **SQL** the missing values will be labeled as `NULL` (not `NA`).)
 
 ```{r}
-#| label: fig-table-joins
 #| out.width: 70%
 #| fig-cap: "Mini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
 #| fig-alt: Mini data tables describing different types of JOINs.
@@ -513,7 +511,6 @@ GROUP BY movs.id;
 In **SQL** a `UNION` clause combines two different tables by their rows (whereas `JOIN` combines two tables by columns). Think about `UNION` similarly to the `bind_rows()` command in **R**.
 
 ```{r}
-#| label: fig-table-union
 #| out.width: 120%
 #| fig-cap: "UNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html"
 #| fig-alt: Mini data tables describing how UNION binds rows and JOIN appends columns.
