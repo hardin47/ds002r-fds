@@ -180,7 +180,7 @@ sqldf::sqldf("SELECT inst.name,
 
 ## Rock bands - `CROSS JOIN` {.scrollable}
 
-A right join combines two datasets returning every observation that exists in the right (or second) original dataset. 
+A cross join combines every row from one table with every row from another table to produce the Cartesian product of the two tables.
 
 ```{r}
 sqldf::sqldf("SELECT *
