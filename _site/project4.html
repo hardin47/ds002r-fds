@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You will use SQL to query the <a href="https://www.science.smith.edu/wai-database/">Wideband Acoustic Immittance (WAI) Database</a> hosted by Smith College. WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles. The goal of the database is to “enable auditory researchers to share WAI measurements and combine analyses over multiple datasets.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>You have two primary goals:</p>
 <ol type="1">
-<li><p>Duplicate Figure 1 from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target="_blank"><span class="citation" data-cites="voss">@voss</span></a>. You will need to query the WAI Database to build a dataset which you can pipe into <code>ggplot()</code> to recreate Figure 1 <em>as closely as possible</em> (might not be possible to reproduce exactly).</p></li>
+<li><p>Duplicate Figure 1 from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target="_blank">Voss (2020)</a>. You will need to query the WAI Database to build a dataset which you can pipe into <code>ggplot()</code> to recreate Figure 1 <em>as closely as possible</em> (might not be possible to reproduce exactly).</p></li>
 <li><p>Find a study where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs.&nbsp;mean absorption by the group of interest.</p></li>
 </ol>
 <p>You should be using <code>JOIN</code>s in both (1) and (2), do the <code>JOIN</code>ing in <strong>SQL</strong>, not in <strong>R</strong>. Indeed, do as much of the work as possible using <strong>SQL</strong> functions! Really only the <code>ggplot()</code> should be in done in <strong>R</strong>.</p>
@@ -240,7 +240,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>filter for only the 12 studies shown in Figure 1 (and also for frequencies shown in Figure 1)</li>
 <li>study the patterns of frequencies. It seems that most researchers used the same set of frequencies for each subject, ear, and session.</li>
 <li>note the scale of the x-axis</li>
-<li>the key labels contains AuthorsShortList, Year, and Instrument, in addition to the number of unique ears (I think Werner’s N may be incorrect?)</li>
+<li>the labels on the legend contains <code>AuthorsShortList</code>, <code>Year</code>, and <code>Instrument</code>, in addition to the number of unique ears (I think Werner’s N may be incorrect?). To get the number of unique ears, you might want something like this inside your <code>SELECT</code> query: <code>COUNT(DISTINCT SubjectNumber, Ear) AS Unique_Ears</code></li>
+<li>when creating the labels, you’ll need to <code>GROUP BY Identifier, Instrument</code>. That is, group by both the <code>Identifier</code> and the <code>Instrument</code>. The <code>Instrument</code> will not perfectly match the labels in the plot.</li>
 </ul>
 <p>Logistics:</p>
 <ul>

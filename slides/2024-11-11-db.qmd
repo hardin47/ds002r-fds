@@ -1,7 +1,7 @@
 ---
 title: Databases and **dbplyr** and **SQL**, oh my!
 author: "Jo Hardin"
-date: "November 11, 2024"
+subtitle: "November 11, 2024"
 format:
   revealjs:
     slide-number: true

@@ -9,7 +9,7 @@ You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](http
 
 You have two primary goals:
 
-1) Duplicate Figure 1 from <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target = "_blank">@voss</a>.  You will need to query the WAI Database to build a dataset which you can pipe into `ggplot()` to recreate Figure 1 *as closely as possible* (might not be possible to reproduce exactly).
+1) Duplicate Figure 1 from <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target = "_blank">Voss (2020)</a>.  You will need to query the WAI Database to build a dataset which you can pipe into `ggplot()` to recreate Figure 1 *as closely as possible* (might not be possible to reproduce exactly).
 
 2) Find a study where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs. mean absorption by the group of interest.
 
@@ -27,7 +27,8 @@ Mini-Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Tue
 - filter for only the 12 studies shown in Figure 1 (and also for frequencies shown in Figure 1)
 - study the patterns of frequencies.  It seems that most researchers used the same set of frequencies for each subject, ear, and session.
 - note the scale of the x-axis
-- the key labels contains AuthorsShortList, Year, and Instrument, in addition to the number of unique ears (I think Werner's N may be incorrect?)
+- the labels on the legend contains `AuthorsShortList`, `Year`, and `Instrument`, in addition to the number of unique ears (I think Werner's N may be incorrect?).  To get the number of unique ears, you might want something like this inside your `SELECT` query:  `COUNT(DISTINCT SubjectNumber, Ear) AS Unique_Ears`
+- when creating the labels, you'll need to `GROUP BY Identifier, Instrument`.  That is, group by both the `Identifier` and the `Instrument`.  The `Instrument` will not perfectly match the labels in the plot.
 
 Logistics:
 

@@ -1,7 +1,7 @@
 ---
 title: SQL clauses
 author: "Jo Hardin"
-date: "November 13, 2024"
+subtitle: "November 13, 2024"
 format: 
   revealjs:
     incremental: false
@@ -23,7 +23,7 @@ source("../_common.R")
 fontawesome::fa_html_dependency()
 ```
 
-# Agenda  11/13/24
+# Agenda  11/13/24 + 11/17/24
 
 1. Order of clauses
 2. Similarities & differences with **tidyverse**
