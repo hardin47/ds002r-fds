@@ -101,6 +101,7 @@ shup2 <-- "Hello to you!"
 ```{r}
 #| eval: false
 #| echo: true
+#| error: true
 3shup <-  "Hello to you!"
 ```
 

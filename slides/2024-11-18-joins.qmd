@@ -4,12 +4,18 @@ author: "Jo Hardin"
 subtitle: "November 18 + 20, 2024"
 format:
   revealjs:
+    incremental: false
+    scrollable: true
     slide-number: true
     show-slide-number: all
+    embed-resources: true
+    html-math-method: mathjax
 execute:
   echo: true
   warning: false
   message: false
+bibliography: 
+  - ../slides.bib
 ---
 
 
@@ -231,6 +237,7 @@ LIMIT 0, 20;
 ```
 
 Some aspects of the query are worth pointing out:  
+
 * The variables in the output are given in the `SELECT` clause.  The `id` and `title` (both from the `title` table) and the `info` from the `movie_info_idx` which represents the number of IMDb votes.
 * The variables are preceded by the table from which they came. While not always necessary, it is good practice so as to avoid confusion.
 * The `JOIN` happens by linking the `id` variable in the `title` table with the `movie_id` variable in the `movie_info_idx` table.
