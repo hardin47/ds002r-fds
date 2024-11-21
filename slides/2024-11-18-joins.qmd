@@ -14,8 +14,6 @@ execute:
   echo: true
   warning: false
   message: false
-bibliography: 
-  - ../slides.bib
 ---
 
 
@@ -290,7 +288,7 @@ Goal: identify the actresses in those movies with the highest number of votes.
 ```{sql}
 #| connection: con_imdb
 
-SELECT t.title,
+SELECT DISTINCT t.title,
        idx.info,
        a.person_id,
        n.name

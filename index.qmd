@@ -2,6 +2,10 @@
 title: "Schedule"
 description: |
   Schedule for DS002R, Foundations of Data Science in R, Pomona College, Fall 2024
+format:
+  html:
+    code-fold: true
+    html-math-method: katex
 execute: 
   message: false
   warning: false
@@ -40,9 +44,9 @@ quarto add quarto-ext/fontawesome
 schedule <- tribble(
   ~`date`, ~topic, ~`class materials`, ~`due dates`, ~resources,
   "Week 1 <br> 8.26.24", 'intro + <br> R + RStudio + <br> GitHub', 
-  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/01-intro.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-26-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f24_DSproj.pdf" target = "_blank">WS 1 - DS project</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_f24_R.pdf" target = "_blank">WS 2 - R syntax</a>',
+  '{{< fa book-open >}}) <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/01-intro.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-26-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f24_DSproj.pdf" target = "_blank">WS 1 - DS project</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_f24_R.pdf" target = "_blank">WS 2 - R syntax</a>',
   ' ',
-  '{{< fa comments >}} ',
+  '{{< fa comments >}}',
   
    "Week 2 <br> 9.2.24", 'no class Mon <br> Data Viz', 
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-08-28-dataviz.html" target = "_blank"> Data Viz</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws3_ds2_f24_tufte.pdf" target = "_blank">WS 3 - Tufte</a> ',
@@ -123,7 +127,7 @@ schedule <- tribble(
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due Tuesday 11.26',
   ' ',
 
-     "Week 15 <br> 12.2.24", ' ', 
+      "Week 15 <br> 12.2.24", ' ', 
   ' ',
    'Quiz 6 12.2',
   'presentations (?) 12.6',
@@ -132,7 +136,6 @@ schedule <- tribble(
   ' ',
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project5">Project 5</a> - due 12.9 <br> + presentations (?)',
   ' '
-
 )
   
 ```
@@ -147,7 +150,7 @@ schedule |>
   gt::gt() |> 
   gt::fmt_markdown(columns = everything()) |> 
     gt::cols_width(date ~ pct(8),
-                 everything() ~ pct(23))
+                 everything() ~ pct(23)) 
 ```
 
 
