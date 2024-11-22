@@ -73,6 +73,10 @@ Most importantly, please become familiar with <a href = "https://happygitwithr.c
 include_graphics("images/happygitwithr.png")
 ```
 
+
+See the **fantastic** posit::conf talk by Meghan Harris, <a href = "https://www.youtube.com/watch?v=y2qdvYKKVdc" target = "_blank">"Please Let Me Merge Before I Start Crying": And Other Things I've Said at The Git Terminal</a>.
+
+
 # Get the assignment materials from GitHub
 
 

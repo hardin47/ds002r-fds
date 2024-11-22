@@ -4344,7 +4344,7 @@
     "href": "github.html#submitting-assignments-after-having-connected-to-github",
     "title": "Working on assignments with GitHub",
     "section": "Submitting assignments after having connected to GitHub",
-    "text": "Submitting assignments after having connected to GitHub\nTo submit your assignment, complete the following steps:\n\nVia Canvas, access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method.\nSelect the appropriate GitHub repository. The branch will always be “main”.\n\nYou can submit multiple times before the deadline. Your last submission will determine your grade.\nOnce assignments are completely graded, you will be able to see your grade and assignment feedback on Gradescope. Grades will also be synced with Canvas.\n\n:::"
+    "text": "Submitting assignments after having connected to GitHub\nTo submit your assignment, complete the following steps:\n\nVia Canvas, access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method.\nSelect the appropriate GitHub repository. The branch will always be “main”.\n\nYou can submit multiple times before the deadline. Your last submission will determine your grade.\nOnce assignments are completely graded, you will be able to see your grade and assignment feedback on Gradescope. Grades will also be synced with Canvas."
   },
   {
     "objectID": "slides/2024-08-28-dataviz.html#layers",

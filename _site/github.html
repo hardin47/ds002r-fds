@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.6.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="author" content="original content by Ben Wiedermann">
 <meta name="description" content="Big thanks to Ben Wiedermann at HMC for inspiring the following.">
 
-<title>Foundations of Data Science in R - Working on assignments with GitHub</title>
+<title>Working on assignments with GitHub – Foundations of Data Science in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,12 +39,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-99ea18842df93e310e1b06c91aebad21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">R tip</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Project</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-project">    
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -225,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/git_2x.png" class="img-fluid figure-img" width="330"></p>
+<p><img src="images/git_2x.png" class="img-fluid figure-img" alt="xkcd comic detailing that Git can be pretty complicated." width="330"></p>
 <figcaption>image credit: https://xkcd.com/1597/,</figcaption>
 </figure>
 </div>
@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/git-workflow.png" class="img-fluid figure-img" width="1025"></p>
+<p><img src="images/git-workflow.png" class="img-fluid figure-img" alt="Flowchart demonstrating that assignments are recieved from Git, processed on your computer (iteratively with GitHub), and submitted to Gradescope." width="1025"></p>
 <figcaption>Flowchart of assignment process.</figcaption>
 </figure>
 </div>
@@ -260,12 +260,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/happygitwithr.png" class="img-fluid figure-img" width="1191"></p>
+<p><img src="images/happygitwithr.png" class="img-fluid figure-img" alt="Screen shot of the Happy Git with R webpage." width="1191"></p>
 <figcaption>The more you read Happy Git with R, the better your life will be.</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>See the <strong>fantastic</strong> posit::conf talk by Meghan Harris, <a href="https://www.youtube.com/watch?v=y2qdvYKKVdc" target="_blank">“Please Let Me Merge Before I Start Crying”: And Other Things I’ve Said at The Git Terminal</a>.</p>
 </section>
 <section id="get-the-assignment-materials-from-github" class="level1">
 <h1>Get the assignment materials from GitHub</h1>
@@ -274,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/hw-repos.png" class="img-fluid figure-img" width="887"></p>
+<p><img src="images/hw-repos.png" class="img-fluid figure-img" alt="Screen shot of GitHub showing what the course organization will look like for a given student." width="887"></p>
 <figcaption>The course organization which lists all of the assignment repositories. Click on the repository associated with the specific week’s HW assignment.</figcaption>
 </figure>
 </div>
@@ -297,7 +298,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/repo-clone.png" class="img-fluid figure-img" width="893"></p>
+<p><img src="images/repo-clone.png" class="img-fluid figure-img" alt="Screen shot of GitHub showing the location of the repo URL." width="893"></p>
 <figcaption>Copy the HTTPS URL, and use it to create a new project in RStudio.</figcaption>
 </figure>
 </div>
@@ -320,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/pull.png" class="img-fluid figure-img" width="379"></p>
+<p><img src="images/pull.png" class="img-fluid figure-img" alt="Screen shot of how to pull using the Rstudio IDE." width="379"></p>
 <figcaption>Always pull before you start. pull-work-save-commit-push</figcaption>
 </figure>
 </div>
@@ -334,7 +335,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/name-render.png" class="img-fluid figure-img" width="940"></p>
+<p><img src="images/name-render.png" class="img-fluid figure-img" alt="Screen shot of how to Render using the RStudio IDE." width="940"></p>
 <figcaption>Always pull before you start. pull-work-render-commit-push</figcaption>
 </figure>
 </div>
@@ -348,7 +349,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/choose-commit.png" class="img-fluid figure-img" width="1020"></p>
+<p><img src="images/choose-commit.png" class="img-fluid figure-img" alt="Screen shot of how to commit using the RStudio IDE." width="1020"></p>
 <figcaption>pull-work-render-commit-push</figcaption>
 </figure>
 </div>
@@ -362,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/commit-push.png" class="img-fluid figure-img" width="1063"></p>
+<p><img src="images/commit-push.png" class="img-fluid figure-img" alt="Screen shot of how to push using the RStudio IDE." width="1063"></p>
 <figcaption>pull-work-render-commit-push</figcaption>
 </figure>
 </div>
@@ -376,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/check-github.png" class="img-fluid figure-img" width="966"></p>
+<p><img src="images/check-github.png" class="img-fluid figure-img" alt="Screen shot of checking GitHub changes online." width="966"></p>
 <figcaption>Check that your changes are correct.</figcaption>
 </figure>
 </div>
@@ -399,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/gradescope_account.png" class="img-fluid figure-img" width="301"></p>
+<p><img src="images/gradescope_account.png" class="img-fluid figure-img" alt="Screen shot of Gradescope account changes." width="301"></p>
 <figcaption>Change your Gradescope account settings.</figcaption>
 </figure>
 </div>
@@ -413,7 +414,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/link_github.png" class="img-fluid figure-img" width="404"></p>
+<p><img src="images/link_github.png" class="img-fluid figure-img" alt="Screen shot of how to link GitHub to Gradescope." width="404"></p>
 <figcaption>Linking GitHub to Gradescope.</figcaption>
 </figure>
 </div>
@@ -424,7 +425,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/authorize_gradescope.png" class="img-fluid figure-img" width="371"></p>
+<p><img src="images/authorize_gradescope.png" class="img-fluid figure-img" alt="Screen shot of authorizing Gradescope to talk to GitHub." width="371"></p>
 <figcaption>Authorizing Gradescope to talk to GitHub.</figcaption>
 </figure>
 </div>
@@ -436,7 +437,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/github_success.png" class="img-fluid figure-img" width="880"></p>
+<p><img src="images/github_success.png" class="img-fluid figure-img" alt="Screen shot of successful integration between GitHub and Gradescope." width="880"></p>
 <figcaption>Successful integration of GitHub and Gradescope</figcaption>
 </figure>
 </div>
@@ -451,7 +452,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/submitting_gradescope.png" class="img-fluid figure-img" width="748"></p>
+<p><img src="images/submitting_gradescope.png" class="img-fluid figure-img" alt="Screen shot of submitting HW from GitHub to Gradescope." width="748"></p>
 <figcaption>Submitting HW from GitHub to Gradescope.</figcaption>
 </figure>
 </div>
@@ -468,7 +469,6 @@ ul.task-list li input[type="checkbox"] {
 <p>You can submit multiple times before the deadline. Your last submission will determine your grade.</p>
 <p>Once assignments are completely graded, you will be able to see your grade and assignment feedback on Gradescope. Grades will also be synced with Canvas.</p>
 
-<p>:::</p>
 
 </section>
 </section>
@@ -509,18 +509,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -552,7 +541,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/ds002r-fds\.netlify\.app\/");
@@ -560,7 +569,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -657,7 +666,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
