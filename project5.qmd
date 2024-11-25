@@ -23,6 +23,8 @@ To get an A:
      - all plots with good labeling
      - alt text on all plots
      - good narrative describing 
+     - adding a plot when you introduce the data to introduce the reader to the data / context
+     - add comments to each line of code to help the reader navigate what you are doing.
      - making sure that all work, data sources, etc. are documented appropriately
      
   * corresponding document (text, Word, Google doc, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects.

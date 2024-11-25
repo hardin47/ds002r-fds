@@ -8895,5 +8895,103 @@
     "title": "Project 4",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThanks to Paul Roback at St. Olaf for sharing this project idea.↩︎"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#a-simple-shiny-app",
+    "href": "slides/2024-11-25-shiny.html#a-simple-shiny-app",
+    "title": "Shiny",
+    "section": "A simple Shiny App",
+    "text": "A simple Shiny App\nPut the following into a Shiny App using File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Shiny Web App ... as a file called app.R.\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  \"Hello, world!\"\n)\n\nserver &lt;- function(input, output, session) {\n}\n\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#what-are-the-parts-of-a-shiny-app",
+    "href": "slides/2024-11-25-shiny.html#what-are-the-parts-of-a-shiny-app",
+    "title": "Shiny",
+    "section": "What are the parts of a Shiny App?",
+    "text": "What are the parts of a Shiny App?\nLooking closely at the code above, the app.R does four things:\n\nIt calls library(shiny) to load the shiny package.\nIt defines the user interface, the HTML webpage that humans interact with. In this case, it’s a page containing the words “Hello, world!”.\nIt specifies the behaviour of our app by defining a server function. It’s currently empty, so our app doesn’t do anything, but we’ll be back to revisit this shortly.\nIt executes shinyApp(ui, server) to construct and start a Shiny application from UI and server."
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#how-to-run-a-shiny-app",
+    "href": "slides/2024-11-25-shiny.html#how-to-run-a-shiny-app",
+    "title": "Shiny",
+    "section": "How to run a Shiny App?",
+    "text": "How to run a Shiny App?\n\n\n\nTo run Shiny\n\n\n\nClick the Run App button in the document toolbar.\n\n\n\n\n\n\n\n\n\n\n\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter.\nIf you’re not using RStudio, you can (source()) the whole document, or call shiny::runApp() with the path to the directory containing app.R."
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#shiny",
+    "href": "slides/2024-11-25-shiny.html#shiny",
+    "title": "Shiny",
+    "section": "Shiny",
+    "text": "Shiny\n\nShiny is an R package that allows you to easily create rich, interactive web apps. Shiny allows you to take your work in R and expose it via a web browser so that anyone can use it."
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#examples",
+    "href": "slides/2024-11-25-shiny.html#examples",
+    "title": "Shiny",
+    "section": "Examples",
+    "text": "Examples\nSee the following gallery of Shiny example from Posit: https://shiny.posit.co/r/gallery/"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#what-does-it-look-like",
+    "href": "slides/2024-11-25-shiny.html#what-does-it-look-like",
+    "title": "Shiny",
+    "section": "What does it look like?",
+    "text": "What does it look like?"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#back-in-r",
+    "href": "slides/2024-11-25-shiny.html#back-in-r",
+    "title": "Shiny",
+    "section": "Back in R…",
+    "text": "Back in R…\nGo back and look at the console. You will see something like:\nListening on http://127.0.0.1:7521\nR is busy! It is running your Shiny App. You can’t do anything in R because the processes are engaged with the Shiny App."
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#pieces",
+    "href": "slides/2024-11-25-shiny.html#pieces",
+    "title": "Shiny",
+    "section": "Pieces",
+    "text": "Pieces\nShiny applications will be contained in one app.R file. The file contains two key components:\nui: code for the user interface. The user interface is the webpage that your user will interact with.\nserver: code for the computer part. What should the computer/server do with your inputs as the user changes them.\nThe last code at the bottom, shinyApp(ui = ui, server = server), will compile everything together to result in the interactive webpage.\nPress Run App at the top of RStudio and see what happens!"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#pieces-1",
+    "href": "slides/2024-11-25-shiny.html#pieces-1",
+    "title": "Shiny",
+    "section": "Pieces",
+    "text": "Pieces\n\nlibrary(shiny)\n\nshinyApp(\n  ui = list(\n    # new (to you) widgets go here\n  ),\n  \n  server = function(input, output, session) {\n    # somewhat familiar (to you) code goes here\n  }\n)"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#a-brief-widget-tour",
+    "href": "slides/2024-11-25-shiny.html#a-brief-widget-tour",
+    "title": "Shiny",
+    "section": "A brief widget tour",
+    "text": "A brief widget tour\nhttps://rundel.shinyapps.io/widgets/"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#the-default-shinny-app",
+    "href": "slides/2024-11-25-shiny.html#the-default-shinny-app",
+    "title": "Shiny",
+    "section": "The default Shinny App",
+    "text": "The default Shinny App\n\n#\n# This is a Shiny web application. You can run the application by clicking\n# the 'Run App' button above.\n#\n# Find out more about building applications with Shiny here:\n#\n#    https://shiny.posit.co/\n#\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n\n    # Application title\n    titlePanel(\"Old Faithful Geyser Data\"),\n\n    # Sidebar with a slider input for number of bins \n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"bins\",\n                        \"Number of bins:\",\n                        min = 1,\n                        max = 50,\n                        value = 30)\n        ),\n\n        # Show a plot of the generated distribution\n        mainPanel(\n           plotOutput(\"distPlot\")\n        )\n    )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n\n    output$distPlot &lt;- renderPlot({\n        # generate bins based on input$bins from ui.R\n        x    &lt;- faithful[, 2]\n        bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n\n        # draw the histogram with the specified number of bins\n        hist(x, breaks = bins, col = 'darkgray', border = 'white',\n             xlab = 'Waiting time to next eruption (in mins)',\n             main = 'Histogram of waiting times')\n    })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#running-old-faithful",
+    "href": "slides/2024-11-25-shiny.html#running-old-faithful",
+    "title": "Shiny",
+    "section": "Running Old Faithful",
+    "text": "Running Old Faithful\n\nRun in RStudio\nSee the app in action here: https://shiny.posit.co/r/gallery/start-simple/faithful/"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#live-demo",
+    "href": "slides/2024-11-25-shiny.html#live-demo",
+    "title": "Shiny",
+    "section": "Live demo",
+    "text": "Live demo\nLet’s build a weather app!"
+  },
+  {
+    "objectID": "slides/2024-11-25-shiny.html#shiny-in-python",
+    "href": "slides/2024-11-25-shiny.html#shiny-in-python",
+    "title": "Shiny",
+    "section": "Shiny in Python",
+    "text": "Shiny in Python\nCheck it out!\nhttps://shiny.posit.co/py/"
   }
 ]
