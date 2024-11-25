@@ -2016,162 +2016,87 @@ can use flights data for cities with particular names-->
 
 ---
 
-(@) Which **SQL** statement is used to create a database table called 'Customers'?[^142]
-    (a) `CREATE DATABASE TAB` Customers
-    (b) `CREATE DATABASE` Customers
-    (c) `CREATE DATABASE TABLE` Customers
-    (d) `CREATE TABLE` Customers
-    (e) `CREATE DB` Customers
+(@) Which of the following is the primary function used to create a Shiny app?[^142]
+    a. `shinyApp()`
+    b. `createApp()`
+    c. `runApp()`
+    d. `startShinyApp()`
 
-[^142]: d. `CREATE TABLE` Customers
-
----
-
-(@) Which **SQL** statement revises data in a database?[^143]
-    (a) `SAVE AS` 
-    (b) `MODIFY`
-    (c) `SAVE`
-    (d) `UPDATE`
-
-[^143]: d. `UPDATE`
+[^142]: a. `shinyApp()`
 
 ---
 
-(@) Which **SQL** statement takes out data from a database?[^144]
-    (a) `REMOVE`
-    (b) `DELETE`
-    (c) `COLLAPSE`
+(@) Which of the following Shiny components contains the code for handling user inputs and generating outputs?[^143]
+    a. `ui`
+    b. `server`
+    c. `runApp()`
+    d. `shinyApp()`
 
-[^144]: b. `DELETE`
-
----
-
-(@) The `NOT NULL` constraint enforces a column to not accept `NULL` values.[^145]
-    (a) FALSE
-    (b) TRUE
-
-[^145]: b. TRUE
+[^143]: b. `server`
 
 ---
 
-(@) Which **SQL** statement places new data in a database?[^146]
-    (a) `ADD RECORD`
-    (b) `INSERT INTO`
-    (c) `ADD NEW`
-    (d) `INSERT NEW` 
- 
-[^146]: b. `INSERT INTO`
+(@) Which of the following Shiny UI elements is used to allow users to select a single option from a list of choices?[^144]
+   a. `selectInput()`
+   b. `radioButtons()`
+   c. `checkboxGroupInput()`
+   d. `textInput()`
+
+[^144]: a. `selectInput()`
 
 ---
 
-(@) With **SQL**, how can you insert a new record into the "Persons" table?[^147]
-    (a) `INSERT` `INTO` Persons VALUES ('Jimmy', 'Jackson')
-    (b) `INSERT` ('Jimmy', 'Jacskon') `INTO` Persons
-    (c) `INSERT` VALUES ('Jimmy', 'Jackson') `INTO` Persons
+(@)  In Shiny, what is the purpose of the `renderText()` function?[^145]
+  a. To display a plot as text
+  b. To generate text output based on reactive inputs
+  c. To create a text input field
+  d. To render HTML elements
 
-[^147]: a. `INSERT` `INTO` Persons VALUES ('Jimmy', 'Jackson')
-
----
-
-(@) With **SQL**, how can you insert "Olsen" as the "LastName" in the "Persons" table?[^148]
-    (a) `INSERT` `INTO` Persons (LastName) VALUES ('Olsen')
-    (b) `INSERT` `INTO` Persons ('Olsen) `INTO` LastName
-    (c) `INSERT` ('Olsen') `INTO` Persons (LastName)
- 
-[^148]: a. `INSERT` `INTO` Persons (LastName) VALUES ('Olsen')
+[^145]: b. To generate text output based on reactive inputs
 
 ---
 
-(@) How can you change "Hansen" into "Nilsen" in the "LastName" column in the Persons table?[^149]
-    (a) `MODIFY` Persons `SET` LastName='Nilsen' `WHERE` LastName='Hansen'
-    (b) `UPDATE` Persons `SET` LastName='Hansen' `INTO` LastName='Nilsen'
-    (c) `MODIFY` Persons `SET` LastName='Hansen' `INTO` LastName='Nilsen'
-    (d) `UPDATE` Persons `SET` LastName='Nilsen' `WHERE` LastName='Hansen' 
+(@) What does the `ui` component in a Shiny app represent?[^146]
+   a. The logic of the application
+   b. The server-side calculations
+   c. The user interface elements
+   d. The global settings for the app
 
-[^149]: d. `UPDATE` Persons `SET` LastName='Nilsen' `WHERE` LastName='Hansen' 
-
----
-
-(@) With **SQL**, how can you delete the records where the "FirstName" is "Peter" in the Persons Table?[^150]
-    (a) `DELETE` `FROM` Persons `WHERE` FirstName='Peter'
-    (b) `DELETE` FirstName='Peter' `FROM` Persons
-    (c) `DELETE ROW` FirstName='Peter' `FROM` Persons
-
-[^150]: a. `DELETE` `FROM` Persons `WHERE` FirstName='Peter'
+[^146]: c. The user interface elements
 
 ---
 
-(@) In the `flights` table, the following `INDEX`es exist: `Tailnum`, `Year`, and `Date`.  How many rows would be looked through if the `WHERE` filter was on `month` only?[^151]
-    (a) more than 6.3 million
-    (b) less than 6.3 million
-    (c) more than 700,000
-    (d) less than 700,000
-    
-[^151]: a. more than 6.3 million. Because there is no index on month (and we don't have a year to incorporate month into the Date index), we need to look through all 48 million rows.
+(@) Which Shiny function is used to handle reactive expressions in the server function?[^147]
+   a. `reactive()`
+   b. `render()`
+   c. `observe()`
+   d. `updateInput()`
+
+[^147]: a. reactive()
 
 ---
 
-(@) Which has a larger cardinality, `Tailnum` or `Year`?[^152]
-    (a) `Tailnum`
-    (b) `Year`
-    (c) they have the same cardinality
-    (d) neither has a cardinality
+(@) What is the default output type for `renderPlot()` in Shiny?[^148]
+    a. plotly chart
+    b. ggplot2 plot
+    c. base R plot
+    d. HTML table
 
-[^152]: a. `Tailnum`. The cardinality is the number of unique values, and there are many more unique planes than years.
+[^148]: c. base R plot
 
 
 ---
 
-(@) Which index takes up more storage space, the one on `Tailnum` or the one on `Year`?[^153]
-    (a) `Tailnum`
-    (b) `Year`
-    (c) they take up the same space
-    (d) you can't index on either variable
+(@) Which of the following is the correct way to create a slider input in Shiny?[^149]
+    a. `sliderInput("slider", "Slider", min = 1, max = 100, value = 50)`
+    b. `inputSlider("slider", min = 1, max = 100)`
+    c. `sliderControl("slider", 1, 100)`
+    d. `input_slider("slider", 1, 100)`
 
-[^153]: a. `Tailnum`. Because the cardinality is higher, it will take up much more space in the index.
+[^149]: a. `sliderInput("slider", "Slider", min = 1, max = 100, value = 50)`
 
----
-
-(@) Which index is more effective at reducing querying time, the one on `Tailnum` or the one on `Year`?[^154]
-    (a) `Tailnum`
-    (b) `Year`
-    (c) the queries would be the same
-    (d) you can't query on either variable
-    
-[^154]: a. `Tailnum`. Because the index is more complete, it will make the querying more efficient.
 
 ---
-
-(@) What does the **R** function `ifelse(a, b, c)` do?[^155]
-    (a) a = TRUE option, b = FALSE option, c = question
-    (b) a = FALSE option, b = TRUE option, c = question
-    (c) a = question, b = TRUE option, c = FALSE option
-    (d) a = question, b = FALSE option, c = TRUE option
-
-[^155]: c. a = question, b = TRUE option, c = FALSE option
-
----
-
-(@) What does the **R** function `case_when()` do?[^156]
-    (a) renames a variable
-    (b) changes the data type of a variable
-    (c) partitions a numeric variable
-    (d) creates a new variable by re-coding an original variable
-
-[^156]: d. creates a new variable by re-coding an original variable
-
----
-
-(@) What does the **R** function `cut()` do?[^157]
-    (a) renames a variable
-    (b) changes the data type of a variable
-    (c) partitions a numeric variable
-    (d) creates a new variable by re-coding an original variable
-
-[^157]: c. partitions a numeric variable
-
----
-
 
 
 

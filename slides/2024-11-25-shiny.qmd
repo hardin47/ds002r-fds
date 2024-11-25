@@ -44,7 +44,7 @@ library(ggthemes)
 
 ## Examples
 
-See the following gallery of Shiny example from Posit: https://shiny.posit.co/r/gallery/
+See the following gallery of Shiny example from Posit: <a href = "https://shiny.posit.co/r/gallery/" target = "_blank">https://shiny.posit.co/r/gallery/</a>
 
 ```{=html}
 <iframe width="780" height="500" src="https://shiny.posit.co/r/gallery/" title="Widgets" data-external="1"></iframe>
@@ -158,7 +158,7 @@ shinyApp(
 
 ## A brief widget tour
 
-https://rundel.shinyapps.io/widgets/
+<a href = "https://rundel.shinyapps.io/widgets/" target = "_blank">https://rundel.shinyapps.io/widgets/</a>
 
 ```{=html}
 <iframe width="780" height="500" src="https://rundel.shinyapps.io/widgets/" title="Widgets" data-external="1"></iframe>
@@ -226,7 +226,19 @@ shinyApp(ui = ui, server = server)
 
 * Run in RStudio
 
-* See the app in action here: https://shiny.posit.co/r/gallery/start-simple/faithful/
+* See the app in action here: <a href = "https://shiny.posit.co/r/gallery/start-simple/faithful/" target = "_blank">https://shiny.posit.co/r/gallery/start-simple/faithful/</a>
+
+## reactive()
+
+The function `reactive()` is worth pointing out.  It is used to create a reactive expression — an expression that is automatically recalculated when any of its inputs change.
+
+Use `reactive()` when
+
+* You want to perform calculations that depend on user input and automatically update when those inputs change.
+* You need to pass dynamically calculated values to other parts of the app (outputs, observers, etc.).
+* You need to create reactive data or state, such as subsets or transformations of input data.
+
+Do not use `reactive()` on the UI inputs because they are inherently reactive already!
 
 ## Live demo
 
@@ -236,4 +248,4 @@ Let's build a weather app!
 
 Check it out!
 
-https://shiny.posit.co/py/
+<a href = "https://shiny.posit.co/py/" target = "_blank">https://shiny.posit.co/py/</a>
