@@ -1,53 +1,83 @@
 ---
 title: "Project 5"
 description: |
-  Final
+  Final updates
 format: html
 ---
 
-more soon.
+The plan for project 5 is to update your website (and mini-projects within) so that it puts your best foot forward for anyone who might be looking at it.  
 
-<!--
+## Tasks
 
-update everything about your project.
+Project 5 has two main tasks:
 
-IMPORTANT:  you want your website to represent **your** knowledge.  If all the code on there is from chatGPT or stack exchange, you might go back and re-write some of the code so that it actually represents what you have learned in the class.
+1. The first is to re-do all the previous projects.  Things like removing the warnings & messages.  Making sure that all data and ideas have been properly cited.  Rewriting any code so that it is actually **your** work (instead of, for example, copied directly from ChatGPT). Giving all graphs proper captions. Explaining your work.  You will write up (and turn in, separate from your website) a document explaining what changes and updates you've made.
 
-To get an A:
-  * do something new / expand extensively on one of the previous projects.
-     - add extensive regular expressions to the project on string data
-     - add a shiny or plotly example to the graphs from TidyTuesday
-     
+2. The second thing to do is to prepare a ~5 min presentation on some aspect of your project.  It can be about any aspect of the project (or all aspects of the project), and your presentation should be as if to a client about the work.  You'll create the presentation in Quarto (formatted as revealjs) rendered to html.  The presentation will be either on Friday Dec 6th during reading days (9am-noon) or during our regularly scheduled final time, Monday Dec 9th 9am-noon (your choice).
+
+
+## Timeline
+
+Mini-Project 5 must be submitted on Canvas (not Gradescope) by **11:59 PM on Monday December 9**.  To Canvas submit two things:  1. the URL of your overall website, 2. a document detailing the changes you have made.
+
+Additionally, you will give a ~5 min presentation to the class on some aspect(s) of your project.  You can describe one of the mini-projects, the creation of the website, the entire project overall, or any other aspect of the project.  (You will present either on the Friday Dec 6th during reading days (9am-noon) or during our regularly scheduled final time, Monday Dec 9th 9am-noon.)
+
+## Presentation
+
+Your slides should be created in Quarto (formatted as revealjs) and rendered to html.  They should be linked to the website. A new slide is created by a second header: `##`.  The YAML for the presentation slides might look like this:
+
+```
+---
+title: "title of presentation"
+author: "your name"
+subtitle: "date of presentation"
+format: revealjs
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+```
+
+
+
+## Hints
+
+IMPORTANT:  you want your website to represent **your** knowledge.  If all the code on the website is from chatGPT, you should go back and re-write the code so that it actually represents what you have learned in the class.
+
   * clean up the entire website
      - no warnings or messages
      - all plots with good labeling
      - alt text on all plots
      - good narrative describing 
      - adding a plot when you introduce the data to introduce the reader to the data / context
-     - add comments to each line of code to help the reader navigate what you are doing.
+     - add comments within the code to help the reader navigate what you are doing.
      - making sure that all work, data sources, etc. are documented appropriately
      
-  * corresponding document (text, Word, Google doc, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects.
+  * create a corresponding document (text, Word, Google doc, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects.
   
-  * don't call your analyses "my website" or "mini-project 2", use descriptive names that will make sense after the semester is over.
+  * don't call your analyses "my website" or "mini-project 2", use descriptive names that will make sense after the semester is over (to someone looking at your website who doesn't know about our class).
   
-  * make sure that your citations are full.  That is, provide a lot more than the TidyTuesday URL. Who collected the data? Why? What is the original source of the information?
+  * make sure that your citations are full.  That is, provide more than the TidyTuesday URL. Who collected the data? Why? What is the original source of the information?
   
   * if you didn't put the recent projects onto your website, do so now.
   
   * provide a narrative setting up the analysis.  Don't just start with code.
   
+  * use exploratory data analysis to set up the example.  That is, show a plot / table of the original data.  Explain the variables to your reader.
+  
   * use the tidyverse.  If you have gotten code from a different place (which uses `$` for example), translate the code into a tidy pipeline.
 
 
+## Extra credit
 
+You may earn one extra credit point toward the projects for doing something new / expanding extensively on one of the previous projects.  
 
-Project 5 has two main tasks:
-The first is to re-do all the previous projects.  Things like removing the warnings & messages.  Making sure that all data and ideas have been properly cited.  Rewriting any code so that it is actually **your** work (instead of, for example, just copied directly from ChatGPT). Giving all graphs proper captions. Explaining your work.  You will write up (and turn in, separate from your website) a document explaining what changes and updates you’ve made.
-The second thing to do is to prepare a ~5 min presentation on some aspect of your project.  It can be about any aspect of the project (or all aspects of the project), and your presentation should be as if to a client about the work.  You’ll create the presentation in Quarto (formatted as revealjs) rendered to html.  The presentation will be either on Friday morning during reading days or during our regularly scheduled final time, Monday Dec 9th 9am-noon (your choice).
-Detailed instructions for Project 5 will be posted before the Thanksgiving break.  If you are already starting to work on updating past assignments, make sure to keep good notes on what updates and edits you are making.  
-  
--->
+Some examples include:
+
+   - add extensive regular expressions to the project on string data
+   - add a shiny or plotly example to the graphs from TidyTuesday
+
   
   
   

@@ -77,11 +77,11 @@ knitr::include_graphics("../images/shiny_start.png")
 
 ## What are the parts of a Shiny App?
 
-Looking closely at the code above, the app.R does four things:
+Looking closely at the code above, the `app.R` does four things:
 
-1. It calls library(shiny) to load the shiny package.
+1. It calls `library(shiny)` to load the shiny package.
 
-2. It defines the user interface, the HTML webpage that humans interact with. In this case, it’s a page containing the words “Hello, world!”.
+2. It defines the user interface, the HTML webpage that humans interact with. In this case, it’s a page containing the words "Hello, world!".
 
 3. It specifies the behaviour of our app by defining a server function. It’s currently empty, so our app doesn’t do anything, but we’ll be back to revisit this shortly.
 
