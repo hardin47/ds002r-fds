@@ -8985,7 +8985,7 @@
     "href": "slides/2024-11-25-shiny.html#live-demo",
     "title": "Shiny",
     "section": "Live demo",
-    "text": "Live demo\nLet’s build a weather app!"
+    "text": "Live demo\nLet’s build a weather app! See sample files here: https://github.com/hardin47/ds002r-fds/tree/main/Shiny_weather"
   },
   {
     "objectID": "slides/2024-11-25-shiny.html#shiny-in-python",

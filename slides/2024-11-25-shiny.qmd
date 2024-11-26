@@ -242,7 +242,7 @@ Do not use `reactive()` on the UI inputs because they are inherently reactive al
 
 ## Live demo
 
-Let's build a weather app!
+Let's build a weather app!  See sample files here:  <a href = "https://github.com/hardin47/ds002r-fds/tree/main/Shiny_weather" target = "_blank">https://github.com/hardin47/ds002r-fds/tree/main/Shiny_weather</a>
 
 ## Shiny in Python
 
