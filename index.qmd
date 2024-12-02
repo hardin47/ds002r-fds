@@ -133,7 +133,7 @@ schedule <- tribble(
   ' ',
 
       "Week 15 <br> 12.2.24", ' ', 
-  ' ',
+  '{{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2024-12-02-fin.html" target = "_blank">Fin</a> ',
    'Quiz 6 12.4',
   'presentations (?) 12.6',
   
