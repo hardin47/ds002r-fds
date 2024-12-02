@@ -24,14 +24,19 @@ Additionally, you will give a ~5 min presentation to the class on some aspect(s)
 
 ## Presentation
 
-Your slides should be created in Quarto (formatted as revealjs) and rendered to html.  They should be linked to the website. A new slide is created by a second header: `##`.  The YAML for the presentation slides might look like this:
+Your slides should be created in Quarto (formatted as revealjs) and rendered to html.  They should be linked to the website. A new slide is created by a second level header: `##`.  The YAML for the presentation slides might look like this:
 
 ```
 ---
 title: "title of presentation"
 author: "your name"
 subtitle: "date of presentation"
-format: revealjs
+format:
+  revealjs:
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+    embed-resources: true
 execute:
   echo: true
   warning: false

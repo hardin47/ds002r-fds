@@ -9013,7 +9013,7 @@
     "href": "project5.html#presentation",
     "title": "Project 5",
     "section": "Presentation",
-    "text": "Presentation\nYour slides should be created in Quarto (formatted as revealjs) and rendered to html. They should be linked to the website. A new slide is created by a second header: ##. The YAML for the presentation slides might look like this:\n---\ntitle: \"title of presentation\"\nauthor: \"your name\"\nsubtitle: \"date of presentation\"\nformat: revealjs\nexecute:\n  echo: true\n  warning: false\n  message: false\n---"
+    "text": "Presentation\nYour slides should be created in Quarto (formatted as revealjs) and rendered to html. They should be linked to the website. A new slide is created by a second level header: ##. The YAML for the presentation slides might look like this:\n---\ntitle: \"title of presentation\"\nauthor: \"your name\"\nsubtitle: \"date of presentation\"\nformat:\n  revealjs:\n    scrollable: true\n    slide-number: true\n    show-slide-number: all\n    embed-resources: true\nexecute:\n  echo: true\n  warning: false\n  message: false\n---"
   },
   {
     "objectID": "project5.html#hints",

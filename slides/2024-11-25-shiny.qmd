@@ -23,7 +23,8 @@ fontawesome::fa_html_dependency()
 ```
 
 
-```{r include=FALSE}
+```{r}
+#| include: false
 library(tidyverse)
 library(mosaic)
 library(knitr)
