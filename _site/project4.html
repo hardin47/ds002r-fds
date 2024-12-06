@@ -226,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You have two primary goals:</p>
 <ol type="1">
 <li><p>Duplicate Figure 1 from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target="_blank">Voss (2020)</a>. You will need to query the WAI Database to build a dataset which you can pipe into <code>ggplot()</code> to recreate Figure 1 <em>as closely as possible</em> (might not be possible to reproduce exactly).</p></li>
-<li><p>Find a study where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs.&nbsp;mean absorption by the group of interest.</p></li>
+<li><p>Find a single study (from the WAI database) where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs.&nbsp;mean absorption by the group of interest.</p></li>
 </ol>
 <p>You should be using <code>JOIN</code>s in both (1) and (2), do the <code>JOIN</code>ing in <strong>SQL</strong>, not in <strong>R</strong>. Indeed, do as much of the work as possible using <strong>SQL</strong> functions! Really only the <code>ggplot()</code> should be in done in <strong>R</strong>.</p>
 <section id="timeline" class="level2">

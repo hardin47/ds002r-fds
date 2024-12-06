@@ -11,7 +11,7 @@ You have two primary goals:
 
 1) Duplicate Figure 1 from <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target = "_blank">Voss (2020)</a>.  You will need to query the WAI Database to build a dataset which you can pipe into `ggplot()` to recreate Figure 1 *as closely as possible* (might not be possible to reproduce exactly).
 
-2) Find a study where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs. mean absorption by the group of interest.
+2) Find a single study (from the WAI database) where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs. mean absorption by the group of interest.
 
 You should be using `JOIN`s in both (1) and (2), do the `JOIN`ing in **SQL**, not in **R**.  Indeed, do as much of the work as possible using **SQL** functions!  Really only the `ggplot()` should be in done in **R**.
 
