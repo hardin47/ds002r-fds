@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -225,7 +245,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You will use SQL to query the <a href="https://www.science.smith.edu/wai-database/">Wideband Acoustic Immittance (WAI) Database</a> hosted by Smith College. WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles. The goal of the database is to “enable auditory researchers to share WAI measurements and combine analyses over multiple datasets.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>You have two primary goals:</p>
 <ol type="1">
-<li><p>Duplicate Figure 1 from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7093226/" target="_blank">Voss (2020)</a>. You will need to query the WAI Database to build a dataset which you can pipe into <code>ggplot()</code> to recreate Figure 1 <em>as closely as possible</em> (might not be possible to reproduce exactly).</p></li>
+<li><p>Duplicate <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7093226/" target="_blank">Figure 1</a> from <span class="citation" data-cites="voss2019">Voss (<a href="#ref-voss2019" role="doc-biblioref">2019</a>)</span>. You will need to query the WAI Database to build a dataset which you can pipe into <code>ggplot()</code> to recreate Figure 1 <em>as closely as possible</em> (might not be possible to reproduce exactly).</p></li>
 <li><p>Find a single study (from the WAI database) where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs.&nbsp;mean absorption by the group of interest.</p></li>
 </ol>
 <p>You should be using <code>JOIN</code>s in both (1) and (2), do the <code>JOIN</code>ing in <strong>SQL</strong>, not in <strong>R</strong>. Indeed, do as much of the work as possible using <strong>SQL</strong> functions! Really only the <code>ggplot()</code> should be in done in <strong>R</strong>.</p>
@@ -546,10 +566,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-voss2019" class="csl-entry" role="listitem">
+Voss, SE. 2019. <span>“Resource Review.”</span> <em>Ear and Hearing</em> 40 (6). <a href="https://doi.org/10.1097/AUD.0000000000000790">https://doi.org/10.1097/AUD.0000000000000790</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>Thanks to Paul Roback at St.&nbsp;Olaf for sharing this project idea.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
