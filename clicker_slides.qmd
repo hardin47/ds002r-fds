@@ -3,6 +3,7 @@ format:
   revealjs:
     footnotes-hover: true
     reference-location: document
+    embed-resources: true
 ---
 
 ```{=html}

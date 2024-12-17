@@ -62,6 +62,16 @@ library(lubridate)
 
 ---
 
+(@) Where can I get feedback on my HW assignments / quizzes?[^2b]
+    (a) prof will return paper versions
+    (b) on Gradescope
+    (c) on Canvas
+    (d) on GitHub
+    
+[^2b]: b. on Gradescope
+
+---
+
 (@) Which of the following includes talking to the remove version of GitHub?[^3]
     (a) changing your name (updating the YAML)
     (b) committing the file(s)
@@ -526,6 +536,28 @@ babynames |>
 
 [^31]: running the different code chunks with relevant output.
 
+
+---
+
+(@) Where can I get feedback on my HW assignments / quizzes?[^31b]
+    (a) prof will return paper versions
+    (b) on Gradescope
+    (c) on Canvas
+    (d) on GitHub
+    
+[^31b]: b. on Gradescope
+
+---
+
+(@) Where can I get feedback on my projects?[^31c]
+    (a) prof will return paper versions
+    (b) on Gradescope
+    (c) on Canvas
+    (d) on GitHub
+    
+[^31c]: c. on Canvas
+
+
 ---
 
 (@) Fill in Q1.[^32]
@@ -734,6 +766,8 @@ band_instruments
 ::::
 
 [^38]: d. `NA` (it would be `NULL` in **SQL**)
+
+
 
 ---
 
@@ -1299,6 +1333,27 @@ ifelse(data > 5, "cat", data)
 ```
 
 [^69]: e.	"1", "cat", "5", NA, "cat"  (Note that the numbers were converted to character strings!)
+
+
+---
+
+(@) Where can I get feedback on my HW assignments / quizzes?[^69b]
+    (a) prof will return paper versions
+    (b) on Gradescope
+    (c) on Canvas
+    (d) on GitHub
+    
+[^69b]: b. on Gradescope
+
+---
+
+(@) Where can I get feedback on my projects?[^69c]
+    (a) prof will return paper versions
+    (b) on Gradescope
+    (c) on Canvas
+    (d) on GitHub
+    
+[^69c]: c. on Canvas
 
 ---
 
