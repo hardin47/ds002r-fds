@@ -8,7 +8,7 @@ format: html
 
 For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):
 
-a) conducts a permutation test by simulating behavior under the null hypothesis (you would need to find a dataset and develop a related research question).
+a) conducts a permutation test by simulating behavior under the null hypothesis (you would need to find a dataset and develop a related research question). Please include the full context of the problem. That is, what are the variables and why would testing them be interesting?  Include a visualization of the original data / variables of interest so that the reader can sense the extent of difference in the original relationship.
 
 b) develops a lineup protocol for visual inference, as in <a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target = "_blank">"Bringing Visual Inference to the Classroom"</a>, (you'll need to write the function to do the mapping.  The ggplot part would be straightforward using faceting.).  [That is, you would use a dataset, with a related research question, and test the research question using a series of null plots.]
 
@@ -30,7 +30,7 @@ Logistics:
 - make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
 - do not include superfluous error or warning messages.
 - include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
-- if you used data, include the source of the data. Include not only where **you** got the data (e.g., the TidyTuesday URL) but also the original provenance of the information.
+- if you used data, include the source of the data. Include both where **you** got the data (e.g., the TidyTuesday URL) and also the original provenance of the information.
 
 
 

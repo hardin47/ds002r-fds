@@ -38,7 +38,7 @@ format: html
 ---
 ````
 
-The TidyTuesday analysis can be quite minimal. One scatterplot per analysis is fine, and you don't need to annotate or make it beautiful (of course, you might **want** to make it beautiful...). It is your choice whether or not to show the code. (Do you think it is better to show the code or hide the code? No right answer.) Please include the source of the data (which might be the TidyTuesday page + the original source of the information).
+The TidyTuesday analysis can be quite minimal. One scatterplot per analysis is fine, and you don't need to annotate or make it beautiful (of course, you might **want** to make it beautiful...). It is your choice whether or not to show the code. (Do you think it is better to show the code or hide the code? No right answer.) Please include the source of the data (which includes both the TidyTuesday page + the original source of the information).
 
 Inside your `_quarto.yml` file (see https://ucsb-meds.github.io/creating-quarto-websites/#modify-website-appearance-in-_quarto.yml), you might have something like the following:
 

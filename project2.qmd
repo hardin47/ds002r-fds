@@ -24,6 +24,7 @@ Logistics:
 - make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
 - do not include superfluous error or warning messages.
 - include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
+- please include the source of the data (which includes both the link to the TidyTuesday page + the original source of the information).
 
 
 ### Some potential places to find text data
