@@ -4,7 +4,7 @@ description: |
   Big thanks to Ben Wiedermann at HMC for inspiring the following.  
 author:
   - name: Jo Hardin 
-    url: https://m154-comp-stats.netlify.app/
+    url: https://ds002r-fds.netlify.app/
     affiliation: Pomona College
     affiliation_url: https://hardin47.netlify.app/
   - name: original content by Ben Wiedermann
@@ -13,6 +13,7 @@ output:
   distill::distill_article:
     toc: true
     toc_depth: 1
+embed-resources: true
 ---
 
 ```{r setup, include=FALSE}
@@ -80,7 +81,7 @@ See the **fantastic** posit::conf talk by Meghan Harris, <a href = "https://www.
 # Get the assignment materials from GitHub
 
 
-Each assignment will be provided within a separate GitHub repository. You will get to the specific repository via the <a href = "https://github.com/orgs/ST47S-FODS-Fall2024/repositories" target = "_blank">course organization</a>. 
+Each assignment will be provided within a separate GitHub repository. You will get to the specific repository via the <a href = "https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">course organization</a>. 
 
 
 ```{r echo = FALSE, fig.cap="The course organization which lists all of the assignment repositories.  Click on the repository associated with the specific week's HW assignment.", fig.alt = "Screen shot of GitHub showing what the course organization will look like for a given student."}

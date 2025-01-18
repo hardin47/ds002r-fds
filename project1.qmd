@@ -25,7 +25,12 @@ To make the website follow the instructions at <a href = "https://ucsb-meds.gith
 
 ### TidyTuesday
 
-For each analysis, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file).  Your YAML might look something like this (note that the format here is html, unlike the pdf that we use for the homework).
+For each analysis, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file).  Your YAML will look something like this (note that the format here is html, unlike the pdf that we use for the homework). Some considerations:
+
+* Each TidyTuesday analysis has a separate .qmd file.
+* The two analyses compile to html and are linked via a drop-down menu (see example `_quarto.yml` file below).
+* You should both *link* to the TidyTuesday resource (giving it credit) **and** give a full citation of the original data (credit the original source which is almost surely different from the TidyTuesday link).
+* There should be some words to introduce the dataset, etc.
 
 ````
 ---
@@ -33,7 +38,7 @@ title: "Super Mario Kart"
 description: |
   Analysis of Super Mario Kart data from TidyTuesday
 author: Jo Hardin
-date: September 18, 2024
+date: February 12, 2025
 format: html
 ---
 ````
@@ -66,4 +71,4 @@ The assignment as written asks you to submit a public facing website. Generally,
 
 ### Timeline
 
-Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday September 18**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!
+Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday February 12**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!

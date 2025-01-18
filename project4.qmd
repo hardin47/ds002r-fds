@@ -7,6 +7,10 @@ bibliography:
   - book.bib
 ---
 
+Project instructions to come!
+
+<!--
+
 You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](https://www.science.smith.edu/wai-database/) hosted by Smith College.  WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles.  The goal of the database is to "enable auditory researchers to share WAI measurements and combine analyses over multiple datasets."^[Thanks to Paul Roback at St. Olaf for sharing this project idea.]
 
 You have two primary goals:
@@ -44,7 +48,8 @@ Logistics:
 ## Starter Code
 
 ```{r}
-#| include: FALSE
+#| eval: false
+#| include: false
 
 library(tidyverse)
 library(mdsr)
@@ -53,6 +58,8 @@ library(DBI)
 ```
 
 ```{r}
+#| eval: false
+
 library(RMariaDB)
 con_wai <- dbConnect(
   MariaDB(), host = "scidb.smith.edu",
@@ -68,16 +75,21 @@ Subjects <- tbl(con_wai, "Subjects")
 
 ```{sql}
 #| connection: con_wai
+#| eval: false
+
 SHOW TABLES;
 ```
 
 ```{sql}
 #| connection: con_wai
+#| eval: false
+
 DESCRIBE Measurements;
 ```
 
 ```{sql}
 #| connection: con_wai
+#| eval: false
 
 SELECT *
 FROM Measurements
@@ -85,7 +97,7 @@ LIMIT 0, 5;
 ```
 
 
-
+-->
 
 
 

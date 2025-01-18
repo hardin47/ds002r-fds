@@ -16,7 +16,7 @@ website:
   navbar:
     title: "Foundations of Data Science in R"
     description: |
-      DS002R, Foundations of Data Science in R, Fall 2024
+      DS002R, Foundations of Data Science in R, Spring 2025
     background: success
     foreground: secondary
     search: true
@@ -39,10 +39,12 @@ website:
            href: project2.html
          - text: "project 3 - simulation analysis"
            href: project3.html
-         - text: "project 4 - SQL"
+         - text: "project 4 - ethical data science"
            href: project4.html
-         - text: "project 5 - project updates"
+         - text: "project 5 - SQL"
            href: project5.html
+         - text: "project 6 - project updates"
+           href: project6.html
          - text: "Data Sources"
            href: https://hardin47.netlify.app/courses/data/
       - text: "GitHub"
@@ -60,7 +62,7 @@ website:
       <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target = "_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     center:
       - text: |
-          <br> © Jo Hardin, 2024 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+          <br> © Jo Hardin, 2025 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
           DS002R -- Foundations of Data Science in R -- Pomona College <br>
 license: "CC BY"
 format:

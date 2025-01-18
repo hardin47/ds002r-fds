@@ -21,61 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -187,11 +133,15 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="./project4.html">
- <span class="dropdown-text">project 4 - SQL</span></a>
+ <span class="dropdown-text">project 4 - ethical data science</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./project5.html">
- <span class="dropdown-text">project 5 - project updates</span></a>
+ <span class="dropdown-text">project 5 - SQL</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project6.html">
+ <span class="dropdown-text">project 6 - project updates</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://hardin47.netlify.app/courses/data/">
@@ -242,344 +192,97 @@ div.csl-indent {
 </header>
 
 
-<p>You will use SQL to query the <a href="https://www.science.smith.edu/wai-database/">Wideband Acoustic Immittance (WAI) Database</a> hosted by Smith College. WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles. The goal of the database is to “enable auditory researchers to share WAI measurements and combine analyses over multiple datasets.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>You have two primary goals:</p>
-<ol type="1">
-<li><p>Duplicate <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7093226/" target="_blank">Figure 1</a> from <span class="citation" data-cites="voss2019">Voss (<a href="#ref-voss2019" role="doc-biblioref">2019</a>)</span>. You will need to query the WAI Database to build a dataset which you can pipe into <code>ggplot()</code> to recreate Figure 1 <em>as closely as possible</em> (might not be possible to reproduce exactly).</p></li>
-<li><p>Find a single study (from the WAI database) where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs.&nbsp;mean absorption by the group of interest.</p></li>
-</ol>
-<p>You should be using <code>JOIN</code>s in both (1) and (2), do the <code>JOIN</code>ing in <strong>SQL</strong>, not in <strong>R</strong>. Indeed, do as much of the work as possible using <strong>SQL</strong> functions! Really only the <code>ggplot()</code> should be in done in <strong>R</strong>.</p>
-<section id="timeline" class="level2">
-<h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
-<p>Mini-Project 4 must be submitted on Canvas (not Gradescope) by <strong>11:59 PM on Tuesday November 26</strong>. You will add a tab to your Quarto webpage for Mini-Project 4 and submit the new page’s URL.</p>
-</section>
-<section id="hints" class="level2">
-<h2 class="anchored" data-anchor-id="hints">Hints</h2>
-<ul>
-<li>Parse the caption from Figure 1 carefully to determine how mean absorbances are calculated: “Mean absorbances for the 12 studies within the WAI database as of July 1, 2019. Noted in the legend are the peer-reviewed publications associated with the datasets, the number of individual ears, and the equipment used in the study. When multiple measurements were made on the same ear, the average from those measurements was used in the calculation across subjects for a given study. Some subjects have measurements on both a right and a left ear, and some subjects have measurements from only one ear; this figure includes every ear in the database and does not control for the effect of number of ears from each subject.”</li>
-<li>filter for only the 12 studies shown in Figure 1 (and also for frequencies shown in Figure 1)</li>
-<li>study the patterns of frequencies. It seems that most researchers used the same set of frequencies for each subject, ear, and session.</li>
-<li>note the scale of the x-axis</li>
-<li>the labels on the legend contains <code>AuthorsShortList</code>, <code>Year</code>, and <code>Instrument</code>, in addition to the number of unique ears (I think Werner’s N may be incorrect?). To get the number of unique ears, you might want something like this inside your <code>SELECT</code> query: <code>COUNT(DISTINCT SubjectNumber, Ear) AS Unique_Ears</code></li>
-<li>when creating the labels, you’ll need to <code>GROUP BY Identifier, Instrument</code>. That is, group by both the <code>Identifier</code> and the <code>Instrument</code>. The <code>Instrument</code> will not perfectly match the labels in the plot.</li>
-</ul>
-<p>Logistics:</p>
-<ul>
-<li>start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences). That is, use words to guide the reader through your analysis.</li>
-<li>please include all your code used in the analysis.</li>
-<li>make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).</li>
-<li>do not include superfluous error or warning messages.</li>
-<li>include a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.</li>
-<li>include the source of the data.</li>
-</ul>
-</section>
-<section id="starter-code" class="level2">
-<h2 class="anchored" data-anchor-id="starter-code">Starter Code</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RMariaDB)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>con_wai <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">MariaDB</span>(), <span class="at">host =</span> <span class="st">"scidb.smith.edu"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">user =</span> <span class="st">"waiuser"</span>, <span class="at">password =</span> <span class="st">"smith_waiDB"</span>, </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">dbname =</span> <span class="st">"wai"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Measurements <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con_wai, <span class="st">"Measurements"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>PI_Info <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con_wai, <span class="st">"PI_Info"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Subjects <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con_wai, <span class="st">"Subjects"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># collect(Measurements)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>SHOW <span class="kw">TABLES</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>7 records</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Tables_in_wai</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Codebook</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Measurements</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Measurements_pre2020</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PI_Info</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">PI_Info_OLD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Subjects</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Subjects_pre2020</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>DESCRIBE Measurements;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Displaying records 1 - 10</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Field</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Null</th>
-<th style="text-align: left;">Key</th>
-<th style="text-align: left;">Default</th>
-<th style="text-align: left;">Extra</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Identifier</td>
-<td style="text-align: left;">varchar(50)</td>
-<td style="text-align: left;">NO</td>
-<td style="text-align: left;">PRI</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SubjectNumber</td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">NO</td>
-<td style="text-align: left;">PRI</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Session</td>
-<td style="text-align: left;">int</td>
-<td style="text-align: left;">NO</td>
-<td style="text-align: left;">PRI</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ear</td>
-<td style="text-align: left;">varchar(50)</td>
-<td style="text-align: left;">NO</td>
-<td style="text-align: left;">PRI</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Instrument</td>
-<td style="text-align: left;">varchar(50)</td>
-<td style="text-align: left;">NO</td>
-<td style="text-align: left;">PRI</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Age</td>
-<td style="text-align: left;">float</td>
-<td style="text-align: left;">YES</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">AgeCategory</td>
-<td style="text-align: left;">varchar(50)</td>
-<td style="text-align: left;">YES</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">EarStatus</td>
-<td style="text-align: left;">varchar(50)</td>
-<td style="text-align: left;">YES</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">TPP</td>
-<td style="text-align: left;">float</td>
-<td style="text-align: left;">YES</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">AreaCanal</td>
-<td style="text-align: left;">float</td>
-<td style="text-align: left;">YES</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> Measurements</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">0</span>, <span class="dv">5</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>5 records</caption>
-<colgroup>
-<col style="width: 6%">
-<col style="width: 8%">
-<col style="width: 5%">
-<col style="width: 3%">
-<col style="width: 6%">
-<col style="width: 2%">
-<col style="width: 7%">
-<col style="width: 6%">
-<col style="width: 2%">
-<col style="width: 6%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Identifier</th>
-<th style="text-align: right;">SubjectNumber</th>
-<th style="text-align: right;">Session</th>
-<th style="text-align: left;">Ear</th>
-<th style="text-align: left;">Instrument</th>
-<th style="text-align: right;">Age</th>
-<th style="text-align: left;">AgeCategory</th>
-<th style="text-align: left;">EarStatus</th>
-<th style="text-align: right;">TPP</th>
-<th style="text-align: right;">AreaCanal</th>
-<th style="text-align: right;">PressureCanal</th>
-<th style="text-align: left;">SweepDirection</th>
-<th style="text-align: right;">Frequency</th>
-<th style="text-align: right;">Absorbance</th>
-<th style="text-align: right;">Zmag</th>
-<th style="text-align: right;">Zang</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Abur_2014</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Left</td>
-<td style="text-align: left;">HearID</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: left;">Adult</td>
-<td style="text-align: left;">Normal</td>
-<td style="text-align: right;">-5</td>
-<td style="text-align: right;">4.42e-05</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Ambient</td>
-<td style="text-align: right;">210.938</td>
-<td style="text-align: right;">0.0333379</td>
-<td style="text-align: right;">113780000</td>
-<td style="text-align: right;">-0.233504</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Abur_2014</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Left</td>
-<td style="text-align: left;">HearID</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: left;">Adult</td>
-<td style="text-align: left;">Normal</td>
-<td style="text-align: right;">-5</td>
-<td style="text-align: right;">4.42e-05</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Ambient</td>
-<td style="text-align: right;">234.375</td>
-<td style="text-align: right;">0.0315705</td>
-<td style="text-align: right;">103585000</td>
-<td style="text-align: right;">-0.235778</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Abur_2014</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Left</td>
-<td style="text-align: left;">HearID</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: left;">Adult</td>
-<td style="text-align: left;">Normal</td>
-<td style="text-align: right;">-5</td>
-<td style="text-align: right;">4.42e-05</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Ambient</td>
-<td style="text-align: right;">257.812</td>
-<td style="text-align: right;">0.0405751</td>
-<td style="text-align: right;">92951696</td>
-<td style="text-align: right;">-0.233482</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Abur_2014</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Left</td>
-<td style="text-align: left;">HearID</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: left;">Adult</td>
-<td style="text-align: left;">Normal</td>
-<td style="text-align: right;">-5</td>
-<td style="text-align: right;">4.42e-05</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Ambient</td>
-<td style="text-align: right;">281.250</td>
-<td style="text-align: right;">0.0438399</td>
-<td style="text-align: right;">86058000</td>
-<td style="text-align: right;">-0.233421</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Abur_2014</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Left</td>
-<td style="text-align: left;">HearID</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: left;">Adult</td>
-<td style="text-align: left;">Normal</td>
-<td style="text-align: right;">-5</td>
-<td style="text-align: right;">4.42e-05</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Ambient</td>
-<td style="text-align: right;">304.688</td>
-<td style="text-align: right;">0.0486400</td>
-<td style="text-align: right;">79492800</td>
-<td style="text-align: right;">-0.232931</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<p>Project instructions to come!</p>
+<!--
+
+You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](https://www.science.smith.edu/wai-database/) hosted by Smith College.  WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles.  The goal of the database is to "enable auditory researchers to share WAI measurements and combine analyses over multiple datasets."^[Thanks to Paul Roback at St. Olaf for sharing this project idea.]
+
+You have two primary goals:
+
+1) Duplicate <a href = "https://pmc.ncbi.nlm.nih.gov/articles/PMC7093226/" target = "_blank">Figure 1</a> from @voss2019.  You will need to query the WAI Database to build a dataset which you can pipe into `ggplot()` to recreate Figure 1 *as closely as possible* (might not be possible to reproduce exactly).
+
+2) Find a single study (from the WAI database) where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs. mean absorption by the group of interest.
+
+You should be using `JOIN`s in both (1) and (2), do the `JOIN`ing in **SQL**, not in **R**.  Indeed, do as much of the work as possible using **SQL** functions!  Really only the `ggplot()` should be in done in **R**.
+
+
+## Timeline
+
+Mini-Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Tuesday November 26**.  You will add a tab to your Quarto webpage for Mini-Project 4 and submit the new page's URL. 
+
+
+## Hints
+
+- Parse the caption from Figure 1 carefully to determine how mean absorbances are calculated: "Mean absorbances for the 12 studies within the WAI database as of July 1, 2019. Noted in the legend are the peer-reviewed publications associated with the datasets, the number of individual ears, and the equipment used in the study. When multiple measurements were made on the same ear, the average from those measurements was used in the calculation across subjects for a given study. Some subjects have measurements on both a right and a left ear, and some subjects have measurements from only one ear; this figure includes every ear in the database and does not control for the effect of number of ears from each subject."
+- filter for only the 12 studies shown in Figure 1 (and also for frequencies shown in Figure 1)
+- study the patterns of frequencies.  It seems that most researchers used the same set of frequencies for each subject, ear, and session.
+- note the scale of the x-axis
+- the labels on the legend contains `AuthorsShortList`, `Year`, and `Instrument`, in addition to the number of unique ears (I think Werner's N may be incorrect?).  To get the number of unique ears, you might want something like this inside your `SELECT` query:  `COUNT(DISTINCT SubjectNumber, Ear) AS Unique_Ears`
+- when creating the labels, you'll need to `GROUP BY Identifier, Instrument`.  That is, group by both the `Identifier` and the `Instrument`.  The `Instrument` will not perfectly match the labels in the plot.
+
+Logistics:
+
+- start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences).  That is, use words to guide the reader through your analysis.
+- please include all your code used in the analysis.
+- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
+- do not include superfluous error or warning messages.
+- include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
+- include the source of the data. 
+
+## Starter Code
 
 
 
-</section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-voss2019" class="csl-entry" role="listitem">
-Voss, SE. 2019. <span>“Resource Review.”</span> <em>Ear and Hearing</em> 40 (6). <a href="https://doi.org/10.1097/AUD.0000000000000790">https://doi.org/10.1097/AUD.0000000000000790</a>.
-</div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+::: {.cell}
 
-<ol>
-<li id="fn1"><p>Thanks to Paul Roback at St.&nbsp;Olaf for sharing this project idea.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+```{.r .cell-code}
+library(RMariaDB)
+con_wai <- dbConnect(
+  MariaDB(), host = "scidb.smith.edu",
+  user = "waiuser", password = "smith_waiDB", 
+  dbname = "wai"
+)
+Measurements <- tbl(con_wai, "Measurements")
+PI_Info <- tbl(con_wai, "PI_Info")
+Subjects <- tbl(con_wai, "Subjects")
+
+# collect(Measurements)
+```
+:::
+
+::: {.cell}
+
+```{.sql .cell-code}
+SHOW TABLES;
+```
+:::
+
+::: {.cell}
+
+```{.sql .cell-code}
+DESCRIBE Measurements;
+```
+:::
+
+::: {.cell}
+
+```{.sql .cell-code}
+SELECT *
+FROM Measurements
+LIMIT 0, 5;
+```
+:::
+
+
+
+
+-->
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1007,7 +710,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- <br> © Jo Hardin, 2024 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+ <br> © Jo Hardin, 2025 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
 DS002R -- Foundations of Data Science in R -- Pomona College <br>
   </li>  
 </ul>

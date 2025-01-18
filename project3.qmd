@@ -5,6 +5,9 @@ description: |
 format: html
 ---
 
+Project instructions to come!
+
+<!--
 
 For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):
 
@@ -39,3 +42,4 @@ Logistics:
 
 Mini-Project 3 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 30**.  You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page's URL. 
 
+-->
