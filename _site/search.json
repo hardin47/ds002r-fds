@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  1.22.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - R syntax\n\n\n\n\nWeek 2  1.27.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz\n HW 1 - due 1.30.25 (Thursday!)\n\n\n\nWeek 3  2.3.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs\n HW 2 - due 2.3.25 (Monday going forward)\n\n\n\nWeek 4  2.10.25\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join\n HW 3 - due 2.10.25  Quiz 1 2.12.25\n\n\n\nWeek 5  2.17.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types\n Project 1 - due 2.19.25\n\n\n\nWeek 6  2.24.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions\n HW 4 - due 2.24.25  Quiz 2 2.26.25\n\n\n\nWeek 7  3.3.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration\n Project 2 - due 3.5.25\n\n\n\nWeek 8  3.10.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n HW 5 - due 3.10.25\n\n\n\nWeek 9  3.24.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations\n HW 6 - due 3.24.25  Quiz 3 3.26.25\n\n\n\nWeek 10  3.31.25\npermutation tests\n Permutation tests   Permutation tests\n Project 3 - due 4.2.25\n\n\n\nWeek 11  4.7.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 7 - due 4.7.25  Quiz 4 4.9.25\n\n\n\nWeek 12  4.14.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL clauses\n Project 4 - due 4.16.25\n\n\n\nWeek 13  4.21.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 4.21.25  Quiz 5 4.23.25\n\n\n\nWeek 14  4.28.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 4.30.25\n\n\n\nWeek 15  5.5.25\n\n Fin\nQuiz 6 5.7.25\npresentations (?) 5.9.25\n\n\nWeek 16  5.13.25\n\n\n Project 6 - due 5.13.25  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  1.22.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n\n\n\nWeek 2  1.27.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz\n HW 1 - due 1.30.25 (Thursday!)\n\n\n\nWeek 3  2.3.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs\n HW 2 - due 2.3.25 (Monday going forward)\n\n\n\nWeek 4  2.10.25\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join\n HW 3 - due 2.10.25  Quiz 1 2.12.25\n\n\n\nWeek 5  2.17.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types\n Project 1 - due 2.19.25\n\n\n\nWeek 6  2.24.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions\n HW 4 - due 2.24.25  Quiz 2 2.26.25\n\n\n\nWeek 7  3.3.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration\n Project 2 - due 3.5.25\n\n\n\nWeek 8  3.10.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n HW 5 - due 3.10.25\n\n\n\nWeek 9  3.24.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations\n HW 6 - due 3.24.25  Quiz 3 3.26.25\n\n\n\nWeek 10  3.31.25\npermutation tests\n Permutation tests   Permutation tests\n Project 3 - due 4.2.25\n\n\n\nWeek 11  4.7.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 7 - due 4.7.25  Quiz 4 4.9.25\n\n\n\nWeek 12  4.14.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL clauses\n Project 4 - due 4.16.25\n\n\n\nWeek 13  4.21.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 4.21.25  Quiz 5 4.23.25\n\n\n\nWeek 14  4.28.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 4.30.25\n\n\n\nWeek 15  5.5.25\n\n Fin\nQuiz 6 5.7.25\npresentations (?) 5.9.25\n\n\nWeek 16  5.13.25\n\n\n Project 6 - due 5.13.25  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -18,7 +18,7 @@
     "href": "syllabus.html",
     "title": "syllabus",
     "section": "",
-    "text": "Jo Hardin 2351 Estella jo.hardin@pomona.edu\nClass: Mondays & Wednesday, 11-12:15pm\nOffice Hours: (Estella 2351)\nMonday: 2:30-4:30pm\nTuesday: 9-11am\nThursday: 1-3pm\nMentor Sessions:\nSunday & Tuesday 6-8pm\nEstella 2141\nMentors: Maren Rusk & Julia Aceron\n\n\n\n\n\nArtwork by @allison_horst.\n\n\n\n\n\n\n\nFoundations of Data Science in R is a first course in data science. Data play an increasingly important role in many fields. Being able to understand data and the ethical implications in data driven decisions is paramount to being an informed member of society. As an introduction to data science with R, this course will introduce students to basic data science concepts. Prerequisite: CSCI004 or CSCI005 or CSCI051 or equivalent experience in programming.\n\n\n\n\n\n\nAnonymous Feedback\n\n\n\nAs someone who is, myself, constantly learning and growing in many ways, I welcome your feedback about the course, the classroom dynamics, or anything else you’d like me to know. There is a link on Canvas to an anonymous feedback form. Please feel free to provide me with feedback at any time!\n\n\n\n\n\nBy the end of the term, students will be able to:\n\nscrape, process, and clean data from the web\nwrangle data in a variety of formats\ncontextualize variation in data\nconstruct point and interval estimates using resampling techniques\ndesign accurate, clear and appropriate data graphics\nquery large relational databases (using SQL)\nwork fluently with regular expression\ncommunicate data-driven decisions\n\n\n\n\nIn an ideal world, science would be objective. However, much of science is subjective and is historically built on a small subset of privileged voices. In this class, we will make an effort to recognize how science (and data science!) has played a role in both understanding diversity as well as in promoting systems of power and privilege. I acknowledge that there may be both overt and covert biases in the material due to the lens with which it was written, even though the material is primarily of a scientific nature. Integrating a diverse set of experiences is important for a more comprehensive understanding of science. I would like to discuss issues of diversity in statistics as part of the course from time to time.\nPlease contact me if you have any suggestions to improve the quality of the course materials.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:\n\nIf you have a name and/or set of pronouns that differ from those that appear in your official records, please let me know!\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. You can also relay information to me via your mentors. I want to be a resource for you.\n\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. As a participant in course discussions, you should also strive to honor the diversity of your classmates.\n\n\n\n\n\n Modern Data Science with R, 3rd edition by Baumer, Kaplan, and Horton.\nR for Data Science, 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\n\n\n\n\n\n\nDates\n\n\n\n\nQuizzes on Feb 12, Feb 26, March 26, April 9, April 23, May 7 (in class)\n2.19.25 Project 1 due\n3.5.25 Project 2 due\n4.2.25 Project 3 due\n4.16.25 Project 4 due\n4.30.25 Project 5 due\n5.9.25 (Friday) or 5.11.25 (Tuesday) Project Presentations (9am-noon)\n5.11.25 Project 6 write-up due (on GitHub by midnight)\n\n\n\n\n\n\n\n\n\n\n\nBest and most comprehensive Git help: http://happygitwithr.com/\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nGreat tutorials through the Coding Club\nGoogle for R\nIncredibly helpful cheatsheets from RStudio.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nRStudio IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers.\n[3] Close to all problems completed with less than 75% correct.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub.\n\n\n\n\n\nThere will be 5 mini-projects (due roughly every other week). You will also compile the projects, reflect on the process, and present your work to your classrmates. Project information is available here: DS 002R Projects\n\n\n\n\nGitHub will be used as a way to practice reproducible and collaborative science. There may be a slight learning curve, but knowing Git will be an extremely useful skill as you venture beyond this class.\nR will be used for all homework assignments. R is freely available at http://www.r-project.org/ and is already installed on college computers. Additionally, you need to install R Studio in order to use Quarto, https://posit.co/downloads/. If you are not already familiar with R, please work through some of the materials provided ASAP.\nYou are welcome to use Pomona’s R Studio server at https://rstudio.campus.pomona.edu/ (or https://rstudio.pomona.edu if you are off campus). If you use the server, you can connect directly to your Git account without installing Git locally on your own computer. [If you are not a Pomona student, you will need to get an account from Pomona’s ITS. Go to ITS, tell them that you are taking a Pomona course, and ask for an account for using RStudio.]\n\n\n\n\n\nThis class will be interactive, and your engagement is expected (every day in class). Although notes will be posted, your engagement is an integral part of the in-class learning process.\nIn class: after answering one question, wait until 5 other people have spoken before answering another question. [Feel free to ask as many questions as often as you like!]\n\n\n\n\nYou are on your honor to present only your work as part of your course assessments. Below, I’ve provided Pomona’s academic honesty policy. But before the policy, I’ve given some thoughts on cheating which I have taken from Nick Ball’s CHEM 147 Collective (thank you, Prof Ball!). Prof Ball gives us all something to think about when we are learning in a classroom as well as on our journey to become scientists and professionals:\nThere are many known reasons why we may feel the need to “cheat” on problem sets or exams:\n\n\nAn academic environment that values grades above learning.\nFinancial aid is critical for remaining in school that places undue pressure on maintaining a high GPA.\nNavigating school, work, and/or family obligations that have diverted focus from class.\nChallenges balancing coursework and mental health.\nBalancing academic, family, peer, or personal issues.\n\n\nBeing accused of cheating – whether it has occurred or not – can be devastating for students. The college requires me to respond to potential academic dishonesty with a process that is very long and damaging. As your instructor, I care about you and want to offer alternatives to prevent us from having to go through this process. If you find yourself in a situation where “cheating” seems like the only option:\nPlease come talk to me. We will figure this out together.\nPomona College is an academic community, all of whose members are expected to abide by ethical standards both in their conduct and in their exercise of responsibilities toward other members of the community. The college expects students to understand and adhere to basic standards of honesty and academic integrity. These standards include, but are not limited to, the following:\n\n\nIn projects and assignments prepared independently, students never represent the ideas or the language of others as their own.\nStudents do not destroy or alter either the work of other students or the educational resources and materials of the College.\nStudents neither give nor receive assistance in examinations.\nStudents do not take unfair advantage of fellow students by representing work completed for one course as original work for another or by deliberately disregarding course rules and regulations.\nIn laboratory or research projects involving the collection of data, students accurately report data observed and do not alter these data for any reason.\n\n\n\n\n\nPlease email and / or set up a time to talk if you have any questions about or difficulty with the material, the computing, or the course. Talk to me as soon as possible if you find yourself struggling. The material will build on itself, so it will be much easier to catch up if the concepts get clarified earlier rather than later. This semester is going to be fun. Let’s do it.\n\n\n\n\n\n\nGrading\n\n\n\n\n30% Homework\n30% Quizzes\n30% Projects & Final Presentation\n10% Class engagement"
+    "text": "Jo Hardin 2351 Estella jo.hardin@pomona.edu\nClass: Mondays & Wednesday, 11-12:15pm\nOffice Hours: (Estella 2351)\nMonday: 2:30-4:30pm\nTuesday: 9-11am\nThursday: 1-3pm\nMentor Sessions:\nSunday & Tuesday 6-8pm\nEstella 2141\nMentors: Maren Rusk & Julia Aceron\n\n\n\n\n\nArtwork by @allison_horst.\n\n\n\n\n\n\n\nFoundations of Data Science in R is a first course in data science. Data play an increasingly important role in many fields. Being able to understand data and the ethical implications in data driven decisions is paramount to being an informed member of society. As an introduction to data science with R, this course will introduce students to basic data science concepts. Prerequisite: CSCI004 or CSCI005 or CSCI051 or equivalent experience in programming.\n\n\n\n\n\n\nAnonymous Feedback\n\n\n\nAs someone who is, myself, constantly learning and growing in many ways, I welcome your feedback about the course, the classroom dynamics, or anything else you’d like me to know. There is a link on Canvas to an anonymous feedback form. Please feel free to provide me with feedback at any time!\n\n\n\n\n\nBy the end of the term, students will be able to:\n\nscrape, process, and clean data from the web\nwrangle data in a variety of formats\ncontextualize variation in data\nconstruct point and interval estimates using resampling techniques\ndesign accurate, clear and appropriate data graphics\nquery large relational databases (using SQL)\nwork fluently with regular expression\ncommunicate data-driven decisions\n\n\n\n\nIn an ideal world, science would be objective. However, much of science is subjective and is historically built on a small subset of privileged voices. In this class, we will make an effort to recognize how science (and data science!) has played a role in both understanding diversity as well as in promoting systems of power and privilege. I acknowledge that there may be both overt and covert biases in the material due to the lens with which it was written, even though the material is primarily of a scientific nature. Integrating a diverse set of experiences is important for a more comprehensive understanding of science. I would like to discuss issues of diversity in statistics as part of the course from time to time.\nPlease contact me if you have any suggestions to improve the quality of the course materials.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:\n\nIf you have a name and/or set of pronouns that differ from those that appear in your official records, please let me know!\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. You can also relay information to me via your mentors. I want to be a resource for you.\n\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. As a participant in course discussions, you should also strive to honor the diversity of your classmates.\n\n\n\n\n\n Modern Data Science with R, 3rd edition by Baumer, Kaplan, and Horton.\nR for Data Science, 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\n\n\n\n\n\n\nDates\n\n\n\n\nQuizzes on Feb 12, Feb 26, March 26, April 9, April 23, May 7 (in class)\n2.19.25 Project 1 due\n3.5.25 Project 2 due\n4.2.25 Project 3 due\n4.16.25 Project 4 due\n4.30.25 Project 5 due\n5.9.25 (Friday) or 5.11.25 (Tuesday) Project Presentations (9am-noon)\n5.11.25 Project 6 write-up due (on GitHub by midnight)\n\n\n\n\n\n\n\n\n\n\n\nBest and most comprehensive Git help: http://happygitwithr.com/\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nGreat tutorials through the Coding Club\nGoogle for R\nIncredibly helpful cheatsheets from RStudio.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nRStudio IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers.\n[3] Close to all problems completed with less than 75% correct. OR an assignment that didn’t make it all the way to Canvas as the correctly rendered pdf.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub.\n\n\n\n\n\nThere will be 5 mini-projects (due roughly every other week). You will also compile the projects, reflect on the process, and present your work to your classrmates. Project information is available here: DS 002R Projects\n\n\n\n\nGitHub will be used as a way to practice reproducible and collaborative science. There may be a slight learning curve, but knowing Git will be an extremely useful skill as you venture beyond this class.\nR will be used for all homework assignments. R is freely available at http://www.r-project.org/ and is already installed on college computers. Additionally, you need to install R Studio in order to use Quarto, https://posit.co/downloads/. If you are not already familiar with R, please work through some of the materials provided ASAP.\nYou are welcome to use Pomona’s R Studio server at https://rstudio.campus.pomona.edu/ (or https://rstudio.pomona.edu if you are off campus). If you use the server, you can connect directly to your Git account without installing Git locally on your own computer. [If you are not a Pomona student, you will need to get an account from Pomona’s ITS. Go to ITS, tell them that you are taking a Pomona course, and ask for an account for using RStudio.]\n\n\n\n\n\nThis class will be interactive, and your engagement is expected (every day in class). Although notes will be posted, your engagement is an integral part of the in-class learning process.\nIn class: after answering one question, wait until 5 other people have spoken before answering another question. [Feel free to ask as many questions as often as you like!]\n\n\n\n\nYou are on your honor to present only your work as part of your course assessments. Below, I’ve provided Pomona’s academic honesty policy. But before the policy, I’ve given some thoughts on cheating which I have taken from Nick Ball’s CHEM 147 Collective (thank you, Prof Ball!). Prof Ball gives us all something to think about when we are learning in a classroom as well as on our journey to become scientists and professionals:\nThere are many known reasons why we may feel the need to “cheat” on problem sets or exams:\n\n\nAn academic environment that values grades above learning.\nFinancial aid is critical for remaining in school that places undue pressure on maintaining a high GPA.\nNavigating school, work, and/or family obligations that have diverted focus from class.\nChallenges balancing coursework and mental health.\nBalancing academic, family, peer, or personal issues.\n\n\nBeing accused of cheating – whether it has occurred or not – can be devastating for students. The college requires me to respond to potential academic dishonesty with a process that is very long and damaging. As your instructor, I care about you and want to offer alternatives to prevent us from having to go through this process. If you find yourself in a situation where “cheating” seems like the only option:\nPlease come talk to me. We will figure this out together.\nPomona College is an academic community, all of whose members are expected to abide by ethical standards both in their conduct and in their exercise of responsibilities toward other members of the community. The college expects students to understand and adhere to basic standards of honesty and academic integrity. These standards include, but are not limited to, the following:\n\n\nIn projects and assignments prepared independently, students never represent the ideas or the language of others as their own.\nStudents do not destroy or alter either the work of other students or the educational resources and materials of the College.\nStudents neither give nor receive assistance in examinations.\nStudents do not take unfair advantage of fellow students by representing work completed for one course as original work for another or by deliberately disregarding course rules and regulations.\nIn laboratory or research projects involving the collection of data, students accurately report data observed and do not alter these data for any reason.\n\n\n\n\n\nPlease email and / or set up a time to talk if you have any questions about or difficulty with the material, the computing, or the course. Talk to me as soon as possible if you find yourself struggling. The material will build on itself, so it will be much easier to catch up if the concepts get clarified earlier rather than later. This semester is going to be fun. Let’s do it.\n\n\n\n\n\n\nGrading\n\n\n\n\n30% Homework\n30% Quizzes\n30% Projects & Final Presentation\n10% Class engagement"
   },
   {
     "objectID": "syllabus.html#math-150-spring-2023",
@@ -2937,7 +2937,7 @@
     "href": "syllabus.html#links-to-resources",
     "title": "syllabus",
     "section": "",
-    "text": "Best and most comprehensive Git help: http://happygitwithr.com/\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nGreat tutorials through the Coding Club\nGoogle for R\nIncredibly helpful cheatsheets from RStudio.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nRStudio IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers.\n[3] Close to all problems completed with less than 75% correct.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub."
+    "text": "Best and most comprehensive Git help: http://happygitwithr.com/\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nGreat tutorials through the Coding Club\nGoogle for R\nIncredibly helpful cheatsheets from RStudio.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nRStudio IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers.\n[3] Close to all problems completed with less than 75% correct. OR an assignment that didn’t make it all the way to Canvas as the correctly rendered pdf.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub."
   },
   {
     "objectID": "syllabus.html#projects",
@@ -9112,5 +9112,278 @@
     "title": "syllabus",
     "section": "",
     "text": "Jo Hardin 2351 Estella jo.hardin@pomona.edu\nClass: Mondays & Wednesday, 11-12:15pm\nOffice Hours: (Estella 2351)\nMonday: 2:30-4:30pm\nTuesday: 9-11am\nThursday: 1-3pm\nMentor Sessions:\nSunday & Tuesday 6-8pm\nEstella 2141\nMentors: Maren Rusk & Julia Aceron\n\n\n\n\n\nArtwork by @allison_horst."
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#course-structure",
+    "href": "slides/2025-01-22-intro.html#course-structure",
+    "title": "Introduction to DS002R",
+    "section": "Course structure",
+    "text": "Course structure\n\nbi-weekly HW (to GitHub + Gradescope)\nbi-weekly quizzes\nmini-projects\nin-class activities / clickers\nethical considerations"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#additional-details",
+    "href": "slides/2025-01-22-intro.html#additional-details",
+    "title": "Introduction to DS002R",
+    "section": "Additional details",
+    "text": "Additional details\n\nCanvas has all the links\n\ncourse website – almost everything\nclass notes\nCanvas page – solutions and assignments\n\nno computers (tablets fine)\ngood communication\nTidyTuesday"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#syllabus",
+    "href": "slides/2025-01-22-intro.html#syllabus",
+    "title": "Introduction to DS002R",
+    "section": "Syllabus",
+    "text": "Syllabus\n\n\n\noffice hours\nmentor sessions\nanonymous feedback\ndates for assignments\n\n\n\nlinks to resources\nHW grading\nproject information\n\n\n\n\n\n\n\n\nImportant\n\n\nI need your GitHub user name - please email it to me."
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#v1.0---drew-conway",
+    "href": "slides/2025-01-22-intro.html#v1.0---drew-conway",
+    "title": "Introduction to DS002R",
+    "section": "V1.0 - Drew Conway",
+    "text": "V1.0 - Drew Conway\n\n2010: http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#v2.0---steve-geringer",
+    "href": "slides/2025-01-22-intro.html#v2.0---steve-geringer",
+    "title": "Introduction to DS002R",
+    "section": "V2.0 - Steve Geringer",
+    "text": "V2.0 - Steve Geringer\n\n2014: http://www.anlytcs.com/2014/01/data-science-venn-diagram-v20.html"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#v3.0---writuparna-banerjee",
+    "href": "slides/2025-01-22-intro.html#v3.0---writuparna-banerjee",
+    "title": "Introduction to DS002R",
+    "section": "V3.0 - Writuparna Banerjee",
+    "text": "V3.0 - Writuparna Banerjee\n\n2020: https://medium.com/@writuparnabanerjee/the-difference-in-the-career-options-in-data-science-data-scientist-vs-data-engineer-vs-data-33209d0ac880"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#v4.0---joel-grus",
+    "href": "slides/2025-01-22-intro.html#v4.0---joel-grus",
+    "title": "Introduction to DS002R",
+    "section": "V4.0 - Joel Grus",
+    "text": "V4.0 - Joel Grus\n\n2013: https://posit.co/wp-content/themes/Posit/public/markdown-blogs/role-of-the-data-scientist/index.html?wtime=%7Bseek_to_second_number%7D"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#data-science-overview",
+    "href": "slides/2025-01-22-intro.html#data-science-overview",
+    "title": "Introduction to DS002R",
+    "section": "Data Science Overview",
+    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#data-science-in-ds-002r",
+    "href": "slides/2025-01-22-intro.html#data-science-in-ds-002r",
+    "title": "Introduction to DS002R",
+    "section": "Data Science in DS 002R",
+    "text": "Data Science in DS 002R\n\n\n\n\n\n\n\n\n\n\n\n\n\nDS workflow\nin DS002R\nbeyond DS002R\n\n\n\n\ndata acquisition\nweb scraping, relational databases\nAPIs\n\n\ndata exploration\nwrangling, strings, regular expressions\nnatural language processing\n\n\ndata visualization\ngrammar of graphics\nanimations\n\n\ndata conclusions\niteration, permutation tests\npredictive modeling, machine learning, AI\n\n\ndata communication\nyes!\nyes!"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#data-science-in-the-wild",
+    "href": "slides/2025-01-22-intro.html#data-science-in-the-wild",
+    "title": "Introduction to DS002R",
+    "section": "Data Science in the Wild",
+    "text": "Data Science in the Wild\nData science extracts knowledge from within a particular domain of inquiry. Examples from Pomona!\n\nShannon Burns (Psychological Science and Neuroscience) uses data to understand brain processes of social communication.\nCharlotte Chang uses data to study and improve earth stewardship.\nAnthony (Tony) Clark (Computer Science) uses data to improve the safety and reliability of mobile robots.\nManisha Goel (Economics) uses data to understand how people’s identities shape the fortunes of businesses where they work.\nJun Lang (Asian Languages and Literatures) uses data to analyze (1) the intersection of language, gender, and society, and (2) second language acquisition and pedagogy.\nFrank Pericolosi (Physical Education) uses data to improve his team’s chances on the field.\nAmi Radunskaya (Mathematics) uses data to model tumor growth and treatment.\nYuqing Zhu (Neuroscience) uses data to figure out how a jumble of neurons becomes smart."
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#learning-goals",
+    "href": "slides/2025-01-22-intro.html#learning-goals",
+    "title": "Introduction to DS002R",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control), using modern programming tools and techniques"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#activity",
+    "href": "slides/2025-01-22-intro.html#activity",
+    "title": "Introduction to DS002R",
+    "section": "Activity",
+    "text": "Activity\n\nWhat problem or task would you like to investigate using data?\nWhat would be hard about executing the project?\nWhat are the potential ethical frameworks to consider?\nHow would you define success?"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#reproducibility-checklist",
+    "href": "slides/2025-01-22-intro.html#reproducibility-checklist",
+    "title": "Introduction to DS002R",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#toolkit-for-reproducibility",
+    "href": "slides/2025-01-22-intro.html#toolkit-for-reproducibility",
+    "title": "Introduction to DS002R",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#r-and-rstudio-1",
+    "href": "slides/2025-01-22-intro.html#r-and-rstudio-1",
+    "title": "Introduction to DS002R",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#r-vs.-rstudio",
+    "href": "slides/2025-01-22-intro.html#r-vs.-rstudio",
+    "title": "Introduction to DS002R",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#r-packages",
+    "href": "slides/2025-01-22-intro.html#r-packages",
+    "title": "Introduction to DS002R",
+    "section": "R packages",
+    "text": "R packages\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of August 26, 2024, there are 21,145 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#tour-r-rstudio",
+    "href": "slides/2025-01-22-intro.html#tour-r-rstudio",
+    "title": "Introduction to DS002R",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#tour-recap-r-rstudio",
+    "href": "slides/2025-01-22-intro.html#tour-recap-r-rstudio",
+    "title": "Introduction to DS002R",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/2025-01-22-intro.html#a-short-list-for-now-of-r-essentials",
+    "title": "Introduction to DS002R",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#r-essentials-continued",
+    "href": "slides/2025-01-22-intro.html#r-essentials-continued",
+    "title": "Introduction to DS002R",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#tidyverse",
+    "href": "slides/2025-01-22-intro.html#tidyverse",
+    "title": "Introduction to DS002R",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#quarto-1",
+    "href": "slides/2025-01-22-intro.html#quarto-1",
+    "title": "Introduction to DS002R",
+    "section": "Quarto",
+    "text": "Quarto\n\nFully reproducible reports – each time you Render, the analysis is run from the beginning\nCode goes in chunks\nNarrative goes outside of chunks"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#tour-quarto",
+    "href": "slides/2025-01-22-intro.html#tour-quarto",
+    "title": "Introduction to DS002R",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#tour-recap-quarto",
+    "href": "slides/2025-01-22-intro.html#tour-recap-quarto",
+    "title": "Introduction to DS002R",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#environments",
+    "href": "slides/2025-01-22-intro.html#environments",
+    "title": "Introduction to DS002R",
+    "section": "Environments",
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#environments-1",
+    "href": "slides/2025-01-22-intro.html#environments-1",
+    "title": "Introduction to DS002R",
+    "section": "Environments",
+    "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#how-will-we-use-quarto",
+    "href": "slides/2025-01-22-intro.html#how-will-we-use-quarto",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery assignment is an Quarto document.\nYou’ll always have a template Quarto document to start with.\nThe amount of scaffolding in the template will decrease over the semester."
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#git-and-github",
+    "href": "slides/2025-01-22-intro.html#git-and-github",
+    "title": "Introduction to DS002R",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#versioning---done-badly",
+    "href": "slides/2025-01-22-intro.html#versioning---done-badly",
+    "title": "Introduction to DS002R",
+    "section": "Versioning - done badly",
+    "text": "Versioning - done badly"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#versioning---done-better",
+    "href": "slides/2025-01-22-intro.html#versioning---done-better",
+    "title": "Introduction to DS002R",
+    "section": "Versioning - done better",
+    "text": "Versioning - done better"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#versioning---done-even-better",
+    "href": "slides/2025-01-22-intro.html#versioning---done-even-better",
+    "title": "Introduction to DS002R",
+    "section": "Versioning - done even better",
+    "text": "Versioning - done even better\nwith human readable messages"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github",
+    "href": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github-1",
+    "href": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github-1",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github-2",
+    "href": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github-2",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github-3",
+    "href": "slides/2025-01-22-intro.html#how-will-we-use-git-and-github-3",
+    "title": "Introduction to DS002R",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#git-and-github-tips",
+    "href": "slides/2025-01-22-intro.html#git-and-github-tips",
+    "title": "Introduction to DS002R",
+    "section": "Git and GitHub tips",
+    "text": "Git and GitHub tips\n\n\nThere are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.\nWe will be doing Git things and interfacing with GitHub through RStudio, but if you google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#tour-git-github",
+    "href": "slides/2025-01-22-intro.html#tour-git-github",
+    "title": "Introduction to DS002R",
+    "section": "Tour: Git + GitHub",
+    "text": "Tour: Git + GitHub"
+  },
+  {
+    "objectID": "slides/2025-01-22-intro.html#participation",
+    "href": "slides/2025-01-22-intro.html#participation",
+    "title": "Introduction to DS002R",
+    "section": "Participation",
+    "text": "Participation\nFor full participation points, you’ll need to share at least one R-tip-of-the day.\n\nBeginning of class, I’ll ask if anyone has ideas\nYou share the tip\nI’ll post the tip online"
   }
 ]
