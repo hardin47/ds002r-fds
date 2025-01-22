@@ -112,6 +112,33 @@ include_graphics("images/repo-clone.png")
 3. On the cloning machine (e.g., your own compute or the RStudio server), create a new R project with the URL copied from above.  Follow the steps at https://happygitwithr.com/new-github-first.html (section 15.2 New RStudio Project via git clone).
 
 
+:::: {.columns} 
+::: {.column width="25%"}
+```{r, fig.cap = "", fig.alt = "Screen shot of your computer showing the location of the repo URL.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("images/new_r_proj1.png")
+``` 
+:::
+
+::: {.column width=25%}
+```{r, fig.cap = "",  fig.alt = "Screen shot of your computer showing the location of the repo URL.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("images/new_r_proj2.png")
+``` 
+:::
+
+::: {.column width=25%}
+```{r, fig.cap = "", fig.alt = "Screen shot of your computer showing the location of the repo URL.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("images/new_r_proj3.png")
+``` 
+:::
+
+::: {.column width=25%}
+```{r, fig.cap = "", fig.alt = "Screen shot of your computer showing the location of the repo URL.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("images/new_r_proj4.png")
+``` 
+:::
+::::
+Using the HTTPS URL, create a new project in RStudio.
+
 # Work on the assignment, push back to GitHub
 
 <aside>
