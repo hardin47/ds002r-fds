@@ -148,7 +148,7 @@ tribble(~`DS workflow`, ~`in DS002R`, ~`beyond DS002R`,
 Data science extracts knowledge from within a particular domain of inquiry.  Examples from Pomona!
 
 * <a href = "https://www.shannonmburns.com/" target = "_blank">Shannon Burns</a> (Psychological Science and Neuroscience) uses data to understand brain processes of social communication.
-* <a href = "https://chang.eco/" target = "_blank">Charlotte Chang</a> uses data to study and improve earth stewardship.
+* <a href = "https://chang.eco/" target = "_blank">Charlotte Chang</a> (Environmental Analysis & Biology) uses data to study and improve earth stewardship.
 * <a href = "https://cs.pomona.edu/~ajc/" target = "_blank">Anthony (Tony) Clark</a> (Computer Science) uses data to improve the safety and reliability of mobile robots.
 * <a href = "https://manishagoel.weebly.com/" target = "_blank">Manisha Goel</a> (Economics) uses data to understand how people’s identities shape the fortunes of businesses where they work. 
 * <a href = "https://www.pomona.edu/directory/people/jun-lang" target = "_blank">Jun Lang</a> (Asian Languages and Literatures) uses data to analyze (1) the intersection of language, gender, and society, and (2) second language acquisition and pedagogy.
@@ -446,7 +446,7 @@ Why the error?
 
 ::: incremental
 -   There are millions of git commands -- ok, that's an exaggeration, but there are a lot of them -- and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.
--   We will be doing Git things and interfacing with GitHub through RStudio, but if you google for help you might come across methods for doing these things in the command line -- skip that and move on to the next resource unless you feel comfortable trying it out.
+-   We will be doing Git things and interfacing with GitHub through RStudio, but if you Google for help you might come across methods for doing these things in the command line -- skip that and move on to the next resource unless you feel comfortable trying it out.
 -   There is a great resource for working with git and R: [happygitwithr.com](http://happygitwithr.com/). Some of the content in there is beyond the scope of this course, but it's a good place to look for help.
 :::
 

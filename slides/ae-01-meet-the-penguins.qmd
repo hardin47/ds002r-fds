@@ -1,0 +1,39 @@
+---
+title: "Meet the Penguins"
+author: "Insert name"
+format: html
+editor: source
+---
+
+For this application exercise, we'll use the **tidyverse** and **palmerpenguins** packages.
+
+```{r}
+#| label: load-packages
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+The dataset we will visualize is called `penguins`. Let's `glimpse()` at it.
+
+* **Your turn**: Replace `#add code here` with the code for "glimpse"ing at the `penguins` **data frame** -- `glimpse(penguins)`. Render the document and view the output.
+
+```{r}
+#| label: glimpse-penguins
+
+# add code here
+```
+
+
+* **Demo**: Replace the blank below with the number of rows in the `penguins` data frame based on the output of the chunk below.
+
+```{r}
+#| label: nrow-penguins
+
+nrow(penguins)
+```
+
+
+There are ___ penguins in the `penguins` data frame.
+
+

@@ -72,7 +72,7 @@ library(lubridate)
 
 ---
 
-(@) Which of the following includes talking to the remove version of GitHub?[^3]
+(@) Which of the following includes talking to the remote version of GitHub?[^3]
     (a) changing your name (updating the YAML)
     (b) committing the file(s)
     (c) pushing the file(s)

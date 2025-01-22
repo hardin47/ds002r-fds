@@ -171,7 +171,9 @@ There will be 5 mini-projects (due roughly every other week). You will also comp
 
 * This class will be interactive, and your engagement is expected (every day in class). Although notes will be posted, your engagement is an integral part of the in-class learning process.
 
-* In class: after answering one question, wait until 5 other people have spoken before answering another question. [Feel free to ask as many questions as often as you like!]
+* In class: after answering one question, wait until 5 other people have spoken before answering another question. [Feel free to **ask** as many questions as often as you like!]
+
+* To get full participation points, you will be expected to contribute at least one R tip of the day, sometime during the semester.
  	
 
 ## Academic Honesty:
