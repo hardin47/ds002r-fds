@@ -23,7 +23,7 @@ Thursday: 1-3pm
 **Mentor Sessions:**  
 Sunday & Tuesday 6-8pm    
 Estella 2141   
-Mentors: Maren Rusk & Julia Aceron
+Mentors: Maren Rusk & Taha Disbudak
 
 
 ```{r}
