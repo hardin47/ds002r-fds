@@ -101,7 +101,7 @@ Once your repository has been created, you should clone the code to whatever com
 <a href = "https://happygitwithr.com/" target = "_blank">Happy Git and GitHub with R</a> is your new best friend.
 </aside>
 
-1. From the course organization, lick on the link for the correct repository.
+1. From the course organization, click on the link for the correct repository.
 
 2. Click the green `Code` button and copy the URL.
 
