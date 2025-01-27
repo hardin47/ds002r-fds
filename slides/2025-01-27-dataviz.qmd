@@ -36,6 +36,7 @@ library(ggthemes)
 1. GitHub
 2. NSSD
 3. grammar of graphics
+4. thoughts on plotting
 
 ::: {.callout-important}
 Before Wednesday, read: Tufte. 1997. <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
@@ -45,18 +46,19 @@ Before Wednesday, read: Tufte. 1997. <a href = "http://www.edwardtufte.com/tufte
 
 ## NSSD: 
 
+::: {.incremental}
+* What was Hilary trying to answer in her data collection?
 
-1. What was Hilary trying to answer in her data collection?
+* Name two of Hilary's main hurdles in gathering accurate data.
 
-2. Name two of Hilary's main hurdles in gathering accurate data.
+* Which is better:  high touch (manual) or low touch (automatic) data collection?  Why?
 
-3. Which is better:  high touch (manual) or low touch (automatic) data collection?  Why?
+* What additional covariates are needed / desired?  Any problems with them?
 
-4. What additional covariates are needed / desired?  Any problems with them?
+* How much data does she need?
 
-5. How much data does she need?
-
-6. Are there any ethical considerations to think about?
+* Are there any ethical considerations to think about?
+:::
 
 # Graphics
 
@@ -130,11 +132,6 @@ knitr::include_graphics("../images/attributes.jpg")
 ```
 
 
-# Agenda  9/4/24
-
-1. Thoughts on plotting 
-2. ggplot
-3. Tufte
 
 ## Advice for Plotting
 
@@ -273,7 +270,10 @@ knitr::include_graphics("../images/attributes.jpg")
 :::
 ::::
 
+# Agenda  1/29/25
 
+1. ggplot
+2. Tufte
 
 
 # Goals of `ggplot2`
