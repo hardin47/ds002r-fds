@@ -39,7 +39,7 @@ library(ggthemes)
 4. thoughts on plotting
 
 ::: {.callout-important}
-Before Wednesday, read: Tufte. 1997. <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
+Before Wednesday, read: Tufte. 1997. <a href = "https://www.edwardtufte.com/book/visual-and-statistical-thinking-displays-of-evidence-for-making-decisions/" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
 :::
 
 

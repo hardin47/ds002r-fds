@@ -246,6 +246,12 @@ Click on your programming assignment in Gradescope. Verify that the GitHub conne
 include_graphics("images/submitting_gradescope.png")
 ```
 
+::: {.callout-important}
+If you see a blank window when you click on Gradescope within Canvas, that means you need to enable third-party cookies in your browser. Since Gradescope is a third party integration in Canvas, cookies need to be enabled for it to work properly.
+
+ITS has instructions for how to enable cookies on a range of different browsers: <a href = "https://community.canvaslms.com/t5/Canvas-Basics-Guide/How-do-I-enable-third-party-cookies-in-my-browser/ta-p/605670" target = "_blank">How do I enable third-party cookies in my browser?</a>
+:::
+
 
 ## Submitting assignments after having connected to GitHub
 
