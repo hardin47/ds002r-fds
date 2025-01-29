@@ -36,7 +36,7 @@ library(ggthemes)
 1. GitHub
 2. NSSD
 3. grammar of graphics
-4. thoughts on plotting
+
 
 ::: {.callout-important}
 Before Wednesday, read: Tufte. 1997. <a href = "https://www.edwardtufte.com/book/visual-and-statistical-thinking-displays-of-evidence-for-making-decisions/" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
@@ -132,6 +132,11 @@ knitr::include_graphics("../images/attributes.jpg")
 ```
 
 
+# Agenda  1/29/25
+
+1. thoughts on plotting
+2. Tufte
+3. ggplot
 
 ## Advice for Plotting
 
@@ -270,10 +275,198 @@ knitr::include_graphics("../images/attributes.jpg")
 :::
 ::::
 
-# Agenda  1/29/25
 
-1. ggplot
-2. Tufte
+
+# Examples in the wild
+
+* Tufte -- Cholera & Challenger
+* Fonts
+* NYT often does data viz quite well
+* W.E.B Du Bois
+
+
+
+## Preliminaries
+
+1. Make the data stand out
+
+2. Facilitate comparison
+
+3. Add information
+
+(Nolan & Perrrett, 2016)
+
+
+## Preliminaries
+
+Tufte lists two main motivational steps to working with graphics as part of an argument.
+
+1. "An essential analytic task in making decisions based on evidence is to understand how things work."
+
+2. Making decisions based on evidence requires the appropriate display of that evidence."
+
+# Tufte
+
+Tufte (1997) <a href = "https://www.edwardtufte.com/book/visual-and-statistical-thinking-displays-of-evidence-for-making-decisions/" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
+
+
+## Cholera - a picture tells 1000 words
+
+```{r fig.cap = "How many aspects of this graph can you point out which are relevant to figuring out that cholera infection was coming from a single pump?  Are there any distracting aspects?", out.width="65%", fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/cholera1.jpg")
+```
+
+
+
+## Cholera - difficult to interpret
+
+```{r fig.cap = "Why would the outbreak already have begun to decline before the pump handle was removed?", out.width="80%", fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/cholera2.jpg")
+```
+
+
+## Challenger - Problematic
+
+```{r fig.cap = "One of the graphics which was particularly unconvincing in trying to explain that O-rings fail in the cold.", out.width = "70%", fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/challenger2.jpg")
+```
+
+
+## Challenger - Better????
+
+```{r fig.cap = "A different graph of the Challenger information, now sorted by temperature", fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/challenger1.jpg")
+```
+
+
+## Challenger - Improved
+
+```{r fig.cap = "The graphic the engineers should have led with in trying to persuade the administrators not to launch.  It is evident that the number of O-ring failures is quite highly associated with the ambient temperature.  Note the *vital* information on the x-axis associated with the large number of launches at warm temperatures that had *zero* O-ring failures.", fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/TuftestemperatureandOringrelationshi.jpg")
+```
+
+Note that the "improved" Challenger graphic was made by **Tufte**, not by the engineers working on the problem at the time.
+
+
+## Fonts matter
+
+```{r, out.width = "500px", fig.alt = "image credit: Will Chase RStudio::conf 2020", echo=FALSE,fig.align = 'center'}
+knitr::include_graphics("../images/fontsmatter.png")
+``` 
+
+
+
+## Advice on plotting, specific
+
+- Avoid having other graph elements interfere with data
+- Use visually prominent symbols
+- Avoid over-plotting  (One way to avoid over plotting: jitter the values)
+- Different values of data may obscure each other
+- Include all or nearly all of the data
+- Fill data region
+
+
+
+## Advice on plotting, general
+
+- Eliminate superfluous material
+- Facilitate comparisons
+- Choose the best scale
+- Make the plot data / information rich
+- Use good captions, alt text, conclusions
+
+
+
+
+## Simplify
+
+```{r, out.width = "85%", fig.cap = "image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked", fig.alt = "A gif of a barplot which starts out cluttered with labels and slowly becomes simplified with the relevant information highlighted.", echo=FALSE}
+knitr::include_graphics("../images/data-ink-bar.gif")
+``` 
+
+
+
+## Simplified
+
+:::: {.columns} 
+::: {.column width="50%"}
+```{r, fig.cap = "", fig.alt = "The before and after images with the process of simplifying a barplot.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("../images/barplot-gif-before.png")
+``` 
+:::
+
+::: {.column width=50%}
+```{r, fig.cap = "", fig.alt = "The before and after images with the process of simplifying a barplot.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("../images/barplot-gif-after.png")
+``` 
+:::
+::::
+image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked
+
+## NYT 9/7/21
+
+
+::: {.panel-tabset}
+
+## Data Viz
+```{r, out.width = "90%", fig.cap = "One in 5,000, NYT, D. Leonhardt 9/7/21; image credit: https://www.nytimes.com/2021/09/07/briefing/risk-breakthrough-infections-delta.html", fig.alt = "A scatterplot showing that states with higher vaccination rates have lower COVID case rates.  A few states are highlighted in stronger font: NY, CA, MA have low COVID rates and high vaccination rates; SC GA, ID have high COVID rates and low vaccination rates; TX and USA are in the middle with medium vaccination and medium COVID rates.", echo=FALSE}
+knitr::include_graphics("../images/vacc-case.png")
+``` 
+
+## What they did well
+
+* lighter grid lines
+* no extra information
+* good caption
+* regression line to give context to the trend
+* y axes labels horizontal, not vertical
+* a few states (and the US) are highlighted to draw the reader's eye
+
+:::
+
+# W.E.B. Du Bois
+
+One of the great early data viz pioneers. Remarkable ability to convey information.
+
+
+## Worth a Mention
+
+:::: {.columns} 
+::: {.column width="50%"}
+W.E.B. Du Bois (1868-1963)
+
+* sociologist
+* data scientist
+:::
+
+::: {.column width="50%"}
+```{r, out.width = "40%", fig.alt = "image of WEB Du Bois", fig.cap = "image credit: wikipedia", echo=FALSE}
+knitr::include_graphics("../images/WEB_DuBois_1918.jpg")
+``` 
+:::
+::::
+
+In 1900 Du Bois contributed approximately 60 data visualizations to an exhibit at the Exposition Universelle in Paris, an exhibit designed to illustrate the progress made by African Americans since the end of slavery (only 37 years prior, in 1863).
+
+
+
+## Beautiful & Informative Graphics
+
+https://drawingmatter.org/w-e-b-du-bois-visionary-infographics/
+
+:::: {.columns} 
+::: {.column width="50%"}
+```{r, out.width = "90%", fig.alt = "figures from Du Bois's 1900 exhibition", fig.cap = "", echo=FALSE}
+knitr::include_graphics("../images/dubois-graphs1.png")
+``` 
+:::
+
+::: {.column width="50%"}
+```{r, out.width = "90%", fig.alt = "figures from Du Bois's 1900 exhibition", echo=FALSE}
+knitr::include_graphics("../images/dubois-graphs2.png")
+``` 
+:::
+::::
 
 
 # Goals of `ggplot2`
@@ -1539,198 +1732,6 @@ ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
  
  
 
-
-# Examples in the wild
-
-* Advice
-* Tufte -- Cholera & Challenger
-* Fonts
-* NYT often does data viz quite well
-* W.E.B Du Bois
-
-
-
-## Preliminaries
-
-1. Make the data stand out
-
-2. Facilitate comparison
-
-3. Add information
-
-(Nolan & Perrrett, 2016)
-
-
-## Preliminaries
-
-Tufte lists two main motivational steps to working with graphics as part of an argument.
-
-1. "An essential analytic task in making decisions based on evidence is to understand how things work."
-
-2. Making decisions based on evidence requires the appropriate display of that evidence."
-
-# Tufte
-
-Tufte (1997) <a href = "http://www.edwardtufte.com/tufte/books_textb" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>.  (Use Google to find it.)
-
-
-## Cholera - a picture tells 1000 words
-
-```{r fig.cap = "How many aspects of this graph can you point out which are relevant to figuring out that cholera infection was coming from a single pump?  Are there any distracting aspects?", out.width="65%", fig.align='center', echo=FALSE}
-knitr::include_graphics("../images/cholera1.jpg")
-```
-
-
-
-## Cholera - difficult to interpret
-
-```{r fig.cap = "Why would the outbreak already have begun to decline before the pump handle was removed?", out.width="80%", fig.align='center', echo=FALSE}
-knitr::include_graphics("../images/cholera2.jpg")
-```
-
-
-## Challenger - Problematic
-
-```{r fig.cap = "One of the graphics which was particularly unconvincing in trying to explain that O-rings fail in the cold.", out.width = "70%", fig.align='center', echo=FALSE}
-knitr::include_graphics("../images/challenger2.jpg")
-```
-
-
-## Challenger - Better????
-
-```{r fig.cap = "A different graph of the Challenger information, now sorted by temperature", fig.align='center', echo=FALSE}
-knitr::include_graphics("../images/challenger1.jpg")
-```
-
-
-## Challenger - Improved
-
-```{r fig.cap = "The graphic the engineers should have led with in trying to persuade the administrators not to launch.  It is evident that the number of O-ring failures is quite highly associated with the ambient temperature.  Note the *vital* information on the x-axis associated with the large number of launches at warm temperatures that had *zero* O-ring failures.", fig.align='center', echo=FALSE}
-knitr::include_graphics("../images/TuftestemperatureandOringrelationshi.jpg")
-```
-
-Note that the "improved" Challenger graphic was made by **Tufte**, not by the engineers working on the problem at the time.
-
-
-## Fonts matter
-
-```{r, out.width = "500px", fig.alt = "image credit: Will Chase RStudio::conf 2020", echo=FALSE,fig.align = 'center'}
-knitr::include_graphics("../images/fontsmatter.png")
-``` 
-
-
-
-## Advice on plotting, specific
-
-- Avoid having other graph elements interfere with data
-- Use visually prominent symbols
-- Avoid over-plotting  (One way to avoid over plotting: jitter the values)
-- Different values of data may obscure each other
-- Include all or nearly all of the data
-- Fill data region
-
-
-
-## Advice on plotting, general
-
-- Eliminate superfluous material
-- Facilitate comparisons
-- Choose the best scale
-- Make the plot data / information rich
-- Use good captions, alt text, conclusions
-
-
-
-
-## Simplify
-
-```{r, out.width = "85%", fig.cap = "image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked", fig.alt = "A gif of a barplot which starts out cluttered with labels and slowly becomes simplified with the relevant information highlighted.", echo=FALSE}
-knitr::include_graphics("../images/data-ink-bar.gif")
-``` 
-
-
-
-## Simplified
-
-:::: {.columns} 
-::: {.column width="50%"}
-```{r, fig.cap = "", fig.alt = "The before and after images with the process of simplifying a barplot.", fig.show='hold', echo=FALSE}
-knitr::include_graphics("../images/barplot-gif-before.png")
-``` 
-:::
-
-::: {.column width=50%}
-```{r, fig.cap = "", fig.alt = "The before and after images with the process of simplifying a barplot.", fig.show='hold', echo=FALSE}
-knitr::include_graphics("../images/barplot-gif-after.png")
-``` 
-:::
-::::
-image credit: https://www.darkhorseanalytics.com/portfolio-data-looks-better-naked
-
-## NYT 9/7/21
-
-
-::: {.panel-tabset}
-
-## Data Viz
-```{r, out.width = "90%", fig.cap = "One in 5,000, NYT, D. Leonhardt 9/7/21; image credit: https://www.nytimes.com/2021/09/07/briefing/risk-breakthrough-infections-delta.html", fig.alt = "A scatterplot showing that states with higher vaccination rates have lower COVID case rates.  A few states are highlighted in stronger font: NY, CA, MA have low COVID rates and high vaccination rates; SC GA, ID have high COVID rates and low vaccination rates; TX and USA are in the middle with medium vaccination and medium COVID rates.", echo=FALSE}
-knitr::include_graphics("../images/vacc-case.png")
-``` 
-
-## What they did well
-
-* lighter grid lines
-* no extra information
-* good caption
-* regression line to give context to the trend
-* y axes labels horizontal, not vertical
-* a few states (and the US) are highlighted to draw the reader's eye
-
-:::
-
-# W.E.B. Du Bois
-
-One of the great early data viz pioneers. Remarkable ability to convey information.
-
-
-## Worth a Mention
-
-:::: {.columns} 
-::: {.column width="50%"}
-W.E.B. Du Bois (1868-1963)
-
-* sociologist
-* data scientist
-:::
-
-::: {.column width="50%"}
-```{r, out.width = "40%", fig.alt = "image of WEB Du Bois", fig.cap = "image credit: wikipedia", echo=FALSE}
-knitr::include_graphics("../images/WEB_DuBois_1918.jpg")
-``` 
-:::
-::::
-
-In 1900 Du Bois contributed approximately 60 data visualizations to an exhibit at the Exposition Universelle in Paris, an exhibit designed to illustrate the progress made by African Americans since the end of slavery (only 37 years prior, in 1863).
-
-
-
-## Beautiful & Informative Graphics
-
-https://drawingmatter.org/w-e-b-du-bois-visionary-infographics/
-
-:::: {.columns} 
-::: {.column width="50%"}
-```{r, out.width = "90%", fig.alt = "figures from Du Bois's 1900 exhibition", fig.cap = "", echo=FALSE}
-knitr::include_graphics("../images/dubois-graphs1.png")
-``` 
-:::
-
-::: {.column width="50%"}
-```{r, out.width = "90%", fig.alt = "figures from Du Bois's 1900 exhibition", echo=FALSE}
-knitr::include_graphics("../images/dubois-graphs2.png")
-``` 
-:::
-::::
 
 
 

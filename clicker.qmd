@@ -217,6 +217,102 @@ shup6 <-  sqrt 10
 
 [^13]: c. Because that graphic displays the message you want as optimally as possible.
 
+
+---
+
+(@) What are the visual cues on this plot?[^13b]
+
+:::: {.columns} 
+::: {.column width="50%"}
+    (a) position
+    (b) length
+    (c) shape
+    (d) area/volume
+    (e) shade/color
+    
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE}
+library(mosaic)
+library(mosaicData)
+SAT |> subset(frac > 50) |>
+  ggplot(aes(x = state, y =  math)) + 
+  labs(x = "state",
+       y = "average SAT score") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  geom_point() + 
+  geom_linerange(aes(x = state, ymin=0, ymax = math))
+```
+:::
+::::
+
+[^13b]: b. length, definitely. Maybe also a. position.
+
+
+---
+
+(@) What are the visual cues on this plot?[^13c]
+
+:::: {.columns} 
+::: {.column width="50%"}
+    (a) position
+    (b) length
+    (c) shape
+    (d) area/volume
+    (e) shade/color
+    
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE}
+SwimRecords |>
+  ggplot(aes(x = year, y = time, color = sex)) + 
+  geom_point() + 
+  geom_line() +
+  labs(title = "100m Swimming World Records",
+       y = "World Record Time (seconds)")
+```
+:::
+::::
+
+[^13c]: a. position, definitely, also e. color. Maybe also b. length.
+
+---
+
+(@) What are the visual cues on this plot?[^13d]
+
+:::: {.columns} 
+::: {.column width="50%"}
+    (a) position
+    (b) length
+    (c) shape
+    (d) area/volume
+    (e) shade/color
+    
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE}
+HELPrct |> group_by(substance) |>
+  summarize(count = n()) |>
+  mutate(lab.ypos = cumsum(count) - 0.5*count) |>
+  ggplot(aes(x = "", y =count, fill = substance)) + 
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y", start = 0)+
+  geom_text(aes(y = lab.ypos, label = count), color = "white") +
+  scale_fill_brewer(palette = "Greens") +
+  theme_void() +
+  labs(title = "HELP clinical trial at detoxification unit")
+```
+
+:::
+::::
+
+[^13d]: e. color, definitely. Also probably d. area.
+
+
+
 ---
 
 (@) Why are the points orange?[^14]

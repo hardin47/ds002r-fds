@@ -20,9 +20,12 @@ knitr::include_graphics("images/R_first_then.png")
 #| echo: false
 schedule <- tribble(
   ~`number`, ~tip, ~`description`, ~`misc`,
-  "Tip 1", 'cmd + opt + i', 
+  'Tip 1', 'cmd + opt + i', 
   'creates a new R chunk',
-  'cntrl + alt + i <br> for PC',
+  'cntrl + alt + i for PC',
+  
+  'Tip 2', 'Tools -> Global Options... -> Appearance',
+  'allows for dark mode, plus other options!', ' '
 )
 ```
 
@@ -35,8 +38,8 @@ schedule <- tribble(
 schedule |> 
   gt::gt() |> 
   gt::fmt_markdown(columns = everything()) |> 
-  gt::cols_width(number ~ px(60),
-                 everything() ~ px(150))
+  gt::cols_width(number ~ px(100),
+                 everything() ~ px(200))
 ```
 
 
