@@ -224,12 +224,11 @@ shup6 <-  sqrt 10
 
 :::: {.columns} 
 ::: {.column width="50%"}
-    (a) position
-    (b) length
-    (c) shape
-    (d) area/volume
-    (e) shade/color
-    
+   a. position
+   b. length
+   c. shape
+   d. area/volume
+   e. shade/color
 :::
 
 ::: {.column width="50%"}
@@ -256,12 +255,11 @@ SAT |> subset(frac > 50) |>
 
 :::: {.columns} 
 ::: {.column width="50%"}
-    (a) position
-    (b) length
-    (c) shape
-    (d) area/volume
-    (e) shade/color
-    
+  a. position
+  b. length
+  c. shape
+  d. area/volume
+  e. shade/color
 :::
 
 ::: {.column width="50%"}
@@ -284,12 +282,11 @@ SwimRecords |>
 
 :::: {.columns} 
 ::: {.column width="50%"}
-    (a) position
-    (b) length
-    (c) shape
-    (d) area/volume
-    (e) shade/color
-    
+  a. position
+  b. length
+  c. shape
+  d. area/volume
+  e. shade/color
 :::
 
 ::: {.column width="50%"}
