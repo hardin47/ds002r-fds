@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
+
+  <meta name="author" content="Jo Hardin">
+  <title>Foundations of Data Science in R – Data Wrangling</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Data Wrangling</h1>
+  <p class="subtitle">February 5 + 10, 2025</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Jo Hardin 
+</div>
+</div>
+</div>
+
+</section>
+<section id="agenda-2525" class="title-slide slide level1 center scrollable">
+<h1>Agenda 2/5/25</h1>
+<ol type="1">
+<li>Tidy data</li>
+<li>Data verbs</li>
+</ol>
+</section>
+
+<section>
+<section id="what-are-data" class="title-slide slide level1 center">
+<h1>What are data?</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div id="iqsrndnjjh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#iqsrndnjjh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#iqsrndnjjh thead, #iqsrndnjjh tbody, #iqsrndnjjh tfoot, #iqsrndnjjh tr, #iqsrndnjjh td, #iqsrndnjjh th {
+  border-style: none;
+}
+
+#iqsrndnjjh p {
+  margin: 0;
+  padding: 0;
+}
+
+#iqsrndnjjh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#iqsrndnjjh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#iqsrndnjjh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#iqsrndnjjh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#iqsrndnjjh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#iqsrndnjjh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#iqsrndnjjh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#iqsrndnjjh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#iqsrndnjjh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#iqsrndnjjh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#iqsrndnjjh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#iqsrndnjjh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#iqsrndnjjh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#iqsrndnjjh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#iqsrndnjjh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iqsrndnjjh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#iqsrndnjjh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#iqsrndnjjh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#iqsrndnjjh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iqsrndnjjh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#iqsrndnjjh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iqsrndnjjh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#iqsrndnjjh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iqsrndnjjh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#iqsrndnjjh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iqsrndnjjh .gt_left {
+  text-align: left;
+}
+
+#iqsrndnjjh .gt_center {
+  text-align: center;
+}
+
+#iqsrndnjjh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#iqsrndnjjh .gt_font_normal {
+  font-weight: normal;
+}
+
+#iqsrndnjjh .gt_font_bold {
+  font-weight: bold;
+}
+
+#iqsrndnjjh .gt_font_italic {
+  font-style: italic;
+}
+
+#iqsrndnjjh .gt_super {
+  font-size: 65%;
+}
+
+#iqsrndnjjh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#iqsrndnjjh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#iqsrndnjjh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#iqsrndnjjh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#iqsrndnjjh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#iqsrndnjjh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#iqsrndnjjh .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#iqsrndnjjh .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#iqsrndnjjh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="species" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">species</th>
+<th id="island" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">island</th>
+<th id="bill_length_mm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">bill_length_mm</th>
+<th id="bill_depth_mm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">bill_depth_mm</th>
+<th id="flipper_length_mm" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">flipper_length_mm</th>
+<th id="body_mass_g" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">body_mass_g</th>
+<th id="sex" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">sex</th>
+<th id="year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">year</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">39.1</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.7</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">181</td>
+<td class="gt_row gt_right" headers="body_mass_g">3750</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">39.5</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">17.4</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">186</td>
+<td class="gt_row gt_right" headers="body_mass_g">3800</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">40.3</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">18.0</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">195</td>
+<td class="gt_row gt_right" headers="body_mass_g">3250</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">NA</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">NA</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">NA</td>
+<td class="gt_row gt_right" headers="body_mass_g">NA</td>
+<td class="gt_row gt_center" headers="sex">NA</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">36.7</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">19.3</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">193</td>
+<td class="gt_row gt_right" headers="body_mass_g">3450</td>
+<td class="gt_row gt_center" headers="sex">female</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="species">Adelie</td>
+<td class="gt_row gt_center" headers="island">Torgersen</td>
+<td class="gt_row gt_right" headers="bill_length_mm">39.3</td>
+<td class="gt_row gt_right" headers="bill_depth_mm">20.6</td>
+<td class="gt_row gt_right" headers="flipper_length_mm">190</td>
+<td class="gt_row gt_right" headers="body_mass_g">3650</td>
+<td class="gt_row gt_center" headers="sex">male</td>
+<td class="gt_row gt_right" headers="year">2007</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="tidy-data" class="slide level2">
+<h2>Tidy data</h2>
+<ul>
+<li>each row = a unit of observation (here, a penguin)</li>
+<li>each column = a measure on some variable of interest, either quantitative (numbers with units) or categorical (discrete possibilities or categories)</li>
+<li>each entry contains a single data value; no analysis, summaries, footnotes, comments, etc, and only one value per cell</li>
+</ul>
+</section>
+<section id="definition-of-datum" class="slide level2">
+<h2>Definition of <code>datum</code></h2>
+<p>The definition of <strong>datum</strong> can be much broader:</p>
+
+<img data-src="../images/datum.png" width="846" class="r-stretch quarto-figure-center"><p class="caption">Definition of datum from the <a href="https://www.oed.com/search/dictionary/?scope=Entries&amp;q=datum">Oxford English Dictionary</a></p></section>
+<section id="tidying-data" class="slide level2 scrollable">
+<h2>Tidying data</h2>
+<p>How would you wrangle each data example into a tidy format?</p>
+<ol type="1">
+<li>the emails in your inbox<br>
+</li>
+<li>social media texts<br>
+</li>
+<li>images<br>
+</li>
+<li>videos<br>
+</li>
+<li>audio files</li>
+</ol>
+</section>
+<section id="not-tidy-active-duty-military" class="slide level2">
+<h2>Not tidy – Active Duty Military</h2>
+<p>The Active Duty data are not tidy! What are the cases? How are the data not tidy? What might the data look like in tidy form? Suppose that the case was “an individual in the armed forces.” What variables would you use to capture the information in the <a href="https://docs.google.com/spreadsheets/d/1Ow6Cm4z-Z1Yybk3i352msulYCEDOUaOghmo9ALajyHo/edit#gid=1811988794" target="_blank">following table</a>?</p>
+
+<img data-src="../images/activedutyTidy.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="tidy-packages-the-tidyverse" class="slide level2">
+<h2>Tidy packages: the tidyverse</h2>
+
+<img data-src="../images/tidyverse.png" alt="Image of hex stickers for the eight core tidyverse packages including ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, and forcats." width="462" class="r-stretch quarto-figure-center"><p class="caption">image credit: https://www.tidyverse.org/.</p></section></section>
+<section>
+<section id="verbs" class="title-slide slide level1 center">
+<h1>Verbs</h1>
+<p>Most data wrangling happens with a set of data verbs. Verbs are <strong>functions</strong> that act on data frames.</p>
+<p>The first argument of each data verb is the data frame.</p>
+</section>
+<section id="some-basic-verbs" class="slide level2">
+<h2>Some Basic Verbs</h2>
+<ul>
+<li><code>filter()</code></li>
+<li><code>arrange()</code></li>
+<li><code>select()</code></li>
+<li><code>distinct()</code></li>
+<li><code>mutate()</code></li>
+<li><code>summarize()</code></li>
+<li><code>sample_n()</code></li>
+</ul>
+</section>
+<section id="filter" class="slide level2">
+<h2><code>filter()</code></h2>
+<p>Allows you to select a subset of the <strong>rows</strong> of a data frame. The first argument is the name of the data frame, the following arguments are the filters that you’d like to apply</p>
+<p>For all flights on January 1st:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">filter</span>(flights, month <span class="sc">==</span> <span class="dv">1</span>, day <span class="sc">==</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 842 × 19
+    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+ 1  2013     1     1      517            515         2      830            819
+ 2  2013     1     1      533            529         4      850            830
+ 3  2013     1     1      542            540         2      923            850
+ 4  2013     1     1      544            545        -1     1004           1022
+ 5  2013     1     1      554            600        -6      812            837
+ 6  2013     1     1      554            558        -4      740            728
+ 7  2013     1     1      555            600        -5      913            854
+ 8  2013     1     1      557            600        -3      709            723
+ 9  2013     1     1      557            600        -3      838            846
+10  2013     1     1      558            600        -2      753            745
+# ℹ 832 more rows
+# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="constructing-filters" class="slide level2">
+<h2>Constructing filters</h2>
+<p>Filters are constructed of <strong>logical operators</strong>: <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code> (and some others).</p>
+<p>Adding them one by one to <code>filter()</code> is akin to saying “this AND that”. To say “this OR that OR both”, use |.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">filter</span>(flights, month <span class="sc">==</span> <span class="dv">1</span> <span class="sc">|</span> month <span class="sc">==</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 51,955 × 19
+    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+ 1  2013     1     1      517            515         2      830            819
+ 2  2013     1     1      533            529         4      850            830
+ 3  2013     1     1      542            540         2      923            850
+ 4  2013     1     1      544            545        -1     1004           1022
+ 5  2013     1     1      554            600        -6      812            837
+ 6  2013     1     1      554            558        -4      740            728
+ 7  2013     1     1      555            600        -5      913            854
+ 8  2013     1     1      557            600        -3      709            723
+ 9  2013     1     1      557            600        -3      838            846
+10  2013     1     1      558            600        -2      753            745
+# ℹ 51,945 more rows
+# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="practice" class="slide level2 scrollable">
+<h2>Practice</h2>
+<p>Construct filters to isolate:</p>
+<ol type="1">
+<li>Flights that left on St.&nbsp;Patrick’s Day.</li>
+<li>Flights that were destined for Chicago’s primary airport.</li>
+<li>Flights that were destined for Chicago’s primary airport and were operated by United Airlines.</li>
+<li>Flights with flight times more than 2000 miles or that were in the air more than 5 hours.</li>
+</ol>
+</section>
+<section id="solution" class="slide level2 scrollable">
+<h2>Solution</h2>
+<ol type="1">
+<li>Flights that left on St.&nbsp;Patrick’s Day.</li>
+<li>Flights that were destined for Chicago’s primary airport.</li>
+<li>Flights that were destined for Chicago’s primary airport and were operated by United Airlines.</li>
+<li>Flights with flight times more than 2000 miles or that were in the air more than 5 hours.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">filter</span>(flights, month <span class="sc">==</span> <span class="dv">3</span>, day <span class="sc">==</span> <span class="dv">17</span>)</span>
+<span id="cb5-2"><a></a><span class="fu">filter</span>(flights, dest <span class="sc">==</span> <span class="st">"ORD"</span>)</span>
+<span id="cb5-3"><a></a><span class="fu">filter</span>(flights, dest <span class="sc">==</span> <span class="st">"ORD"</span>, carrier <span class="sc">==</span> <span class="st">"UA"</span>)</span>
+<span id="cb5-4"><a></a><span class="fu">filter</span>(flights, distance <span class="sc">&gt;</span> <span class="dv">2000</span> <span class="sc">|</span> air_time <span class="sc">&gt;</span> <span class="dv">5</span><span class="sc">*</span><span class="dv">60</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="arrange" class="slide level2">
+<h2><code>arrange()</code></h2>
+<p><code>arrange()</code> reorders the rows: It takes a data frame, and a set of column names (or more complicated expressions) to order by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">arrange</span>(flights, year, month, day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Use <code>desc()</code> to sort in descending order.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">arrange</span>(flights, <span class="fu">desc</span>(arr_delay))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="select" class="slide level2">
+<h2><code>select()</code></h2>
+<p>Often you work with large datasets with many columns where only a few are actually of interest to you. <code>select()</code> allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">select</span>(flights, year, month, day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can exclude columns using <code>-</code> and specify a range using <code>:</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">select</span>(flights, <span class="sc">-</span>(year<span class="sc">:</span>day))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="distinct" class="slide level2">
+<h2><code>distinct()</code></h2>
+<p>A common use of <code>select()</code> is to find out which values a set of variables takes. This is particularly useful in conjunction with the <code>distinct()</code> verb which only returns the unique values in a table.</p>
+<p>What do the following data correspond to?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">distinct</span>(<span class="fu">select</span>(flights, origin, dest))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 224 × 2
+   origin dest 
+   &lt;chr&gt;  &lt;chr&gt;
+ 1 EWR    IAH  
+ 2 LGA    IAH  
+ 3 JFK    MIA  
+ 4 JFK    BQN  
+ 5 LGA    ATL  
+ 6 EWR    ORD  
+ 7 EWR    FLL  
+ 8 LGA    IAD  
+ 9 JFK    MCO  
+10 LGA    ORD  
+# ℹ 214 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate" class="slide level2">
+<h2><code>mutate()</code></h2>
+<p>As well as selecting from the set of existing columns, it’s often useful to add new columns that are functions of existing columns. This is the job of <code>mutate()</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">select</span>(<span class="fu">mutate</span>(flights, <span class="at">gain =</span> dep_delay <span class="sc">-</span> arr_delay), </span>
+<span id="cb12-2"><a></a>       flight, dep_delay, arr_delay, gain)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 336,776 × 4
+   flight dep_delay arr_delay  gain
+    &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1   1545         2        11    -9
+ 2   1714         4        20   -16
+ 3   1141         2        33   -31
+ 4    725        -1       -18    17
+ 5    461        -6       -25    19
+ 6   1696        -4        12   -16
+ 7    507        -5        19   -24
+ 8   5708        -3       -14    11
+ 9     79        -3        -8     5
+10    301        -2         8   -10
+# ℹ 336,766 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="summarize-and-sample_n" class="slide level2">
+<h2><code>summarize()</code> and <code>sample_n()</code></h2>
+<p><code>summarize()</code> collapses a data frame to a single row based on some function. It’s not very useful yet, but it will be.</p>
+<p><code>sample_n()</code> provides you with a random sample of rows.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">summarize</span>(flights, <span class="at">delay =</span> <span class="fu">mean</span>(dep_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  delay
+  &lt;dbl&gt;
+1  12.6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">sample_n</span>(flights, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 19
+    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+ 1  2013     2    22     1711           1659        12     2133           2046
+ 2  2013    11    23     1955           1956        -1     2246           2230
+ 3  2013     7    10     1301           1300         1     1601           1555
+ 4  2013     8     6     1621           1604        17     1818           1819
+ 5  2013     9    17     1334           1340        -6     1633           1650
+ 6  2013     9     5      947            950        -3     1201           1220
+ 7  2013    10    30     2009           2005         4     2141           2130
+ 8  2013     5    31     1828           1815        13     2038           2039
+ 9  2013     5    30     2100           2051         9     2359             26
+10  2013     8    25     1227           1230        -3     1416           1424
+# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="practice-1" class="slide level2">
+<h2>Practice</h2>
+<p><strong>Mutate</strong> the data to create a new column that contains the average speed traveled by the plane for each flight.</p>
+<p><strong>Select</strong> the new variable and save it, along with tailnum, as a new data frame object.</p>
+</section>
+<section id="practice-2" class="slide level2">
+<h2>Practice</h2>
+<p><strong>Mutate</strong> the data to create a new column that contains the average speed traveled by the plane for each flight.</p>
+<p><strong>Select</strong> the new variable and save it, along with tailnum, as a new data frame object.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>flights2 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(flights, <span class="at">speed =</span> distance<span class="sc">/</span>(air_time<span class="sc">/</span><span class="dv">60</span>))</span>
+<span id="cb18-2"><a></a>speed_data <span class="ot">&lt;-</span> <span class="fu">select</span>(flights2, tailnum, speed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="group_by" class="slide level2">
+<h2><code>group_by()</code></h2>
+<p><code>summarize()</code> and <code>sample_n()</code> are even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.</p>
+<p>The <code>group_by()</code> function describes how to break a dataset down into groups of rows.</p>
+</section>
+<section id="group_by-1" class="slide level2">
+<h2><code>group_by()</code></h2>
+<p>Find the fastest airplanes in the bunch, measured as the average speed per airplane.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>by_tailnum <span class="ot">&lt;-</span> <span class="fu">group_by</span>(speed_data, tailnum)</span>
+<span id="cb19-2"><a></a>avg_speed <span class="ot">&lt;-</span> <span class="fu">summarize</span>(by_tailnum, </span>
+<span id="cb19-3"><a></a>                       <span class="at">count =</span> <span class="fu">n</span>(), </span>
+<span id="cb19-4"><a></a>                       <span class="at">avg_speed =</span> <span class="fu">mean</span>(speed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb19-5"><a></a><span class="fu">arrange</span>(avg_speed, <span class="fu">desc</span>(avg_speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4,044 × 3
+   tailnum count avg_speed
+   &lt;chr&gt;   &lt;int&gt;     &lt;dbl&gt;
+ 1 N228UA      1      501.
+ 2 N315AS      1      499.
+ 3 N654UA      1      499.
+ 4 N819AW      1      490.
+ 5 N382HA     26      486.
+ 6 N388HA     36      484.
+ 7 N391HA     21      484.
+ 8 N777UA      1      483.
+ 9 N385HA     28      483.
+10 N392HA     13      482.
+# ℹ 4,034 more rows</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="agenda-21025" class="title-slide slide level1 center scrollable">
+<h1>Agenda 2/10/25</h1>
+<ol type="1">
+<li>Chaining</li>
+</ol>
+</section>
+<section id="chaining" class="slide level2">
+<h2>Chaining</h2>
+<p>Instead of applying each verb step-by-step, we can chain them into a single data pipeline, connected with the <code>|&gt;</code> operator. You start the pipeline with a data frame and then pass it to each function in turn.</p>
+<p>The pipe syntax (<code>|&gt;</code>) takes a data frame and sends it to the argument of a function. The mapping goes to the first available argument in the function. For example:</p>
+<p><code>x |&gt;  f()</code> is the same as <code>f(x)</code></p>
+<p><code>x |&gt;  f(y)</code> is the same as <code>f(x, y)</code></p>
+</section>
+<section id="mornings" class="slide level2">
+<h2>Mornings</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>me_step1 <span class="ot">&lt;-</span> <span class="fu">dress</span>(me, <span class="at">what =</span> sports)  </span>
+<span id="cb21-2"><a></a>me_step2 <span class="ot">&lt;-</span> <span class="fu">exercise</span>(me_step1, <span class="at">how =</span> running)  </span>
+<span id="cb21-3"><a></a>me_step3 <span class="ot">&lt;-</span> <span class="fu">eat</span>(me_step2, <span class="at">choice =</span> cereal)  </span>
+<span id="cb21-4"><a></a>me_step4 <span class="ot">&lt;-</span> <span class="fu">dress</span>(me_step3, <span class="at">what =</span> school)  </span>
+<span id="cb21-5"><a></a>me_step5 <span class="ot">&lt;-</span> <span class="fu">commute</span>(me_step4, <span class="at">transportation =</span> bike)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="mornings-1" class="slide level2">
+<h2>Mornings</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">commute</span>(<span class="fu">dress</span>(<span class="fu">eat</span>(<span class="fu">exercise</span>(<span class="fu">dress</span>(me, <span class="at">what =</span> sports), <span class="at">how =</span> running), <span class="at">choice =</span> cereal), <span class="at">what =</span> school), <span class="at">transportation =</span> bike)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="morning" class="slide level2">
+<h2>Morning</h2>
+<p>(better??)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">commute</span>(</span>
+<span id="cb23-2"><a></a>  <span class="fu">dress</span>(</span>
+<span id="cb23-3"><a></a>    <span class="fu">eat</span>(</span>
+<span id="cb23-4"><a></a>      <span class="fu">exercise</span>(</span>
+<span id="cb23-5"><a></a>        <span class="fu">dress</span>(me, </span>
+<span id="cb23-6"><a></a>              <span class="at">what =</span> sports), </span>
+<span id="cb23-7"><a></a>        <span class="at">how =</span> running), </span>
+<span id="cb23-8"><a></a>      <span class="at">choice =</span> cereal), </span>
+<span id="cb23-9"><a></a>    <span class="at">what =</span> school), </span>
+<span id="cb23-10"><a></a>  <span class="at">transportation =</span> bike)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="mornings-2" class="slide level2">
+<h2>Mornings</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>me <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a></a>  <span class="fu">dress</span>(<span class="at">what =</span> sports) <span class="sc">|&gt;</span> </span>
+<span id="cb24-3"><a></a>  <span class="fu">exercise</span>(<span class="at">how =</span> running) <span class="sc">|&gt;</span> </span>
+<span id="cb24-4"><a></a>  <span class="fu">eat</span>(<span class="at">choice =</span> cereal) <span class="sc">|&gt;</span> </span>
+<span id="cb24-5"><a></a>  <span class="fu">dress</span>(<span class="at">what =</span> school) <span class="sc">|&gt;</span> </span>
+<span id="cb24-6"><a></a>  <span class="fu">commute</span>(<span class="at">transportation =</span> bike)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="little-bunny-foo-foo" class="slide level2">
+<h2><a href="https://www.youtube.com/watch?v=yTqVltEy4JY" target="_blank">Little Bunny Foo Foo</a></h2>
+<p>From Hadley Wickham, how to think about tidy data.</p>
+<blockquote>
+<p>Little bunny Foo Foo</p>
+</blockquote>
+<blockquote>
+<p>Went hopping through the forest</p>
+</blockquote>
+<blockquote>
+<p>Scooping up the field mice</p>
+</blockquote>
+<blockquote>
+<p>And bopping them on the head</p>
+</blockquote>
+</section>
+<section id="little-bunny-foo-foo-1" class="slide level2">
+<h2>Little Bunny Foo Foo</h2>
+<p>The nursery rhyme could be created by a series of steps where the output from each step is saved as an object along the way.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>foo_foo <span class="ot">&lt;-</span> <span class="fu">little_bunny</span>()</span>
+<span id="cb25-2"><a></a>foo_foo_1 <span class="ot">&lt;-</span> <span class="fu">hop</span>(foo_foo, <span class="at">through =</span> forest)</span>
+<span id="cb25-3"><a></a>foo_foo_2 <span class="ot">&lt;-</span> <span class="fu">scoop</span>(foo_foo_2, <span class="at">up =</span> field_mice)</span>
+<span id="cb25-4"><a></a>foo_foo_3 <span class="ot">&lt;-</span> <span class="fu">bop</span>(foo_foo_2, <span class="at">on =</span> head)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="little-bunny-foo-foo-2" class="slide level2">
+<h2>Little Bunny Foo Foo</h2>
+<p>Another approach is to concatenate the functions so that there is only one output.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">bop</span>(</span>
+<span id="cb26-2"><a></a>   <span class="fu">scoop</span>(</span>
+<span id="cb26-3"><a></a>      <span class="fu">hop</span>(foo_foo, <span class="at">through =</span> forest),</span>
+<span id="cb26-4"><a></a>      <span class="at">up =</span> field_mice),</span>
+<span id="cb26-5"><a></a>   <span class="at">on =</span> head)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="little-bunny-foo-foo-3" class="slide level2">
+<h2>Little Bunny Foo Foo</h2>
+<p>Or even worse, as one line:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">bop</span>(<span class="fu">scoop</span>(<span class="fu">hop</span>(foo_foo, <span class="at">through =</span> forest), <span class="at">up =</span> field_mice), <span class="at">on =</span> head)<span class="er">))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="little-bunny-foo-foo-4" class="slide level2">
+<h2>Little Bunny Foo Foo</h2>
+<p>Instead, the code can be written using the pipe in the <strong>order</strong> in which the function is evaluated:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>foo_foo <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a></a>   <span class="fu">hop</span>(<span class="at">through =</span> forest) <span class="sc">|&gt;</span> </span>
+<span id="cb28-3"><a></a>       <span class="fu">scoop</span>(<span class="at">up =</span> field_mice) <span class="sc">|&gt;</span> </span>
+<span id="cb28-4"><a></a>           <span class="fu">bop</span>(<span class="at">on =</span> head)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="flights" class="slide level2">
+<h2>Flights</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">No pipe</a></li><li><a href="#tabset-1-2">Pipe</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>flights2 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(flights, <span class="at">speed =</span> distance<span class="sc">/</span>(air_time<span class="sc">/</span><span class="dv">60</span>))</span>
+<span id="cb29-2"><a></a>tail_speed <span class="ot">&lt;-</span> <span class="fu">select</span>(flights2, tailnum, speed)</span>
+<span id="cb29-3"><a></a>tail_speed_grp <span class="ot">&lt;-</span> <span class="fu">group_by</span>(tail_speed, tailnum)</span>
+<span id="cb29-4"><a></a>tail_ave <span class="ot">&lt;-</span> <span class="fu">summarize</span>(tail_speed_grp, <span class="at">number =</span> <span class="fu">n</span>(),</span>
+<span id="cb29-5"><a></a>                      <span class="at">avg_speed =</span> <span class="fu">mean</span>(speed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb29-6"><a></a><span class="fu">arrange</span>(tail_ave, <span class="fu">desc</span>(avg_speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4,044 × 3
+   tailnum number avg_speed
+   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;
+ 1 N228UA       1      501.
+ 2 N315AS       1      499.
+ 3 N654UA       1      499.
+ 4 N819AW       1      490.
+ 5 N382HA      26      486.
+ 6 N388HA      36      484.
+ 7 N391HA      21      484.
+ 8 N777UA       1      483.
+ 9 N385HA      28      483.
+10 N392HA      13      482.
+# ℹ 4,034 more rows</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb31-2"><a></a>  <span class="fu">mutate</span>(<span class="at">speed =</span> distance <span class="sc">/</span> (air_time<span class="sc">/</span><span class="dv">60</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb31-3"><a></a>  <span class="fu">select</span>(tailnum, speed) <span class="sc">|&gt;</span> </span>
+<span id="cb31-4"><a></a>  <span class="fu">group_by</span>(tailnum) <span class="sc">|&gt;</span>  </span>
+<span id="cb31-5"><a></a>  <span class="fu">summarize</span>(<span class="at">number =</span> <span class="fu">n</span>(), </span>
+<span id="cb31-6"><a></a>            <span class="at">avg_speed =</span> <span class="fu">mean</span>(speed, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb31-7"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4,044 × 3
+   tailnum number avg_speed
+   &lt;chr&gt;    &lt;int&gt;     &lt;dbl&gt;
+ 1 N228UA       1      501.
+ 2 N315AS       1      499.
+ 3 N654UA       1      499.
+ 4 N819AW       1      490.
+ 5 N382HA      26      486.
+ 6 N388HA      36      484.
+ 7 N391HA      21      484.
+ 8 N777UA       1      483.
+ 9 N385HA      28      483.
+10 N392HA      13      482.
+# ℹ 4,034 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="practice-3" class="slide level2">
+<h2>Practice</h2>
+<p>Form a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?</p>
+</section>
+<section id="practice-4" class="slide level2">
+<h2>Practice</h2>
+<p>Form a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb33-2"><a></a>  <span class="fu">group_by</span>(carrier) <span class="sc">|&gt;</span> </span>
+<span id="cb33-3"><a></a>  <span class="fu">summarize</span>(<span class="at">avg_delay =</span> <span class="fu">mean</span>(dep_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb33-4"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_delay))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 2
+   carrier avg_delay
+   &lt;chr&gt;       &lt;dbl&gt;
+ 1 F9          20.2 
+ 2 EV          20.0 
+ 3 YV          19.0 
+ 4 FL          18.7 
+ 5 WN          17.7 
+ 6 9E          16.7 
+ 7 B6          13.0 
+ 8 VX          12.9 
+ 9 OO          12.6 
+10 UA          12.1 
+11 MQ          10.6 
+12 DL           9.26
+13 AA           8.59
+14 AS           5.80
+15 HA           4.90
+16 US           3.78</code></pre>
+</div>
+</div>
+</section>
+<section id="practice-again" class="slide level2">
+<h2>Practice again</h2>
+<p>Say you’re curious about the relationship between the number of flights that each plane made in 2013, the mean distance that each of those planes flew, and the mean arrival delay. You also want to exclude the edge cases from your analysis, so focus on the planes that have logged more than 20 flights and flown an average distance of less than 2000 miles. Please form the chain that creates this dataset.</p>
+</section>
+<section id="solution-1" class="slide level2">
+<h2>Solution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>delay_data <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span> </span>
+<span id="cb35-2"><a></a>  <span class="fu">group_by</span>(tailnum) <span class="sc">|&gt;</span> </span>
+<span id="cb35-3"><a></a>  <span class="fu">summarize</span>(<span class="at">number =</span> <span class="fu">n</span>(),</span>
+<span id="cb35-4"><a></a>            <span class="at">dist =</span> <span class="fu">mean</span>(distance, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb35-5"><a></a>            <span class="at">delay =</span> <span class="fu">mean</span>(arr_delay, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb35-6"><a></a>  <span class="fu">filter</span>(number <span class="sc">&gt;</span> <span class="dv">20</span>, dist <span class="sc">&lt;</span> <span class="dv">2000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="visualizing-the-data" class="slide level2">
+<h2>Visualizing the data</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Viz</a></li><li><a href="#tabset-2-2">Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="2025-02-05-verbs_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>delay_data <span class="sc">|&gt;</span> </span>
+<span id="cb36-2"><a></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(dist, delay)) <span class="sc">+</span></span>
+<span id="cb36-3"><a></a> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> number), </span>
+<span id="cb36-4"><a></a>            <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb36-5"><a></a> <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb36-6"><a></a> <span class="fu">scale_size_area</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When <code>scale_size_area</code> is used, the default behavior is to scale the area of points to be proportional to the value.</p>
+</div>
+</div>
+</div>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/ds002r-fds\.netlify\.app\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
