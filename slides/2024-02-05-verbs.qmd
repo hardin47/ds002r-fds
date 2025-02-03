@@ -1,7 +1,7 @@
 ---
 title: Data Wrangling
 author: "Jo Hardin"
-subtitle: "September 11 + 16, 2024"
+subtitle: "February 5 + 10, 2025"
 format:
   revealjs:
     incremental: false
@@ -23,7 +23,7 @@ library(nycflights13)
 ```
 
 
-# Agenda  9/11/24
+# Agenda  2/5/25
 
 1. Tidy data
 2. Data verbs
@@ -267,7 +267,7 @@ avg_speed <- summarize(by_tailnum,
 arrange(avg_speed, desc(avg_speed))
 ```
 
-# Agenda  9/16/24
+# Agenda  2/10/25
 
 1. Chaining
 
