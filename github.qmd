@@ -32,7 +32,7 @@ library(praise)
 set.seed(4747)
 ```
 
-# Working on assignments with GitHub and Gradescope
+# Working on assignments with GitHub and Gradescope {#workinggit}
 
 
 In DS002R, we will use GitHub + Gradescope to access and submit assignments.  Here is the basic structure of how it will work:
@@ -54,7 +54,7 @@ The following diagram lays out the process, and the rest of the document provide
 include_graphics("images/git-workflow.png")
 ```
 
-# Installing R + RStudio + Git
+# Installing R + RStudio + Git {#install}
 
 Most importantly, please become familiar with <a href = "https://happygitwithr.com/" target = "_blank">Happy Git and GitHub with R</a>.  Happy Git with R is an incredibly user friendly resource which includes help for almost every single thing that might happen when getting started.  
 
@@ -78,7 +78,7 @@ include_graphics("images/happygitwithr.png")
 See the **fantastic** posit::conf talk by Meghan Harris, <a href = "https://www.youtube.com/watch?v=y2qdvYKKVdc" target = "_blank">"Please Let Me Merge Before I Start Crying": And Other Things I've Said at The Git Terminal</a>.
 
 
-# Get the assignment materials from GitHub
+# Get the assignment materials from GitHub {#getfromgit}
 
 
 Each assignment will be provided within a separate GitHub repository. You will get to the specific repository via the <a href = "https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">course organization</a>. 
@@ -93,7 +93,7 @@ The assignment files will be copied as a private repository that you (and your p
 We will call this version, that lives on your personal GitHub account, the *GitHub fork*.
 
 
-# Clone the assignment (or project) repository on to your own computer(s)
+# Clone the assignment (or project) repository on to your own computer(s) {#clone}
 
 Once your repository has been created, you should clone the code to whatever computer you are working on.  Just like a Google Doc, you can work on the files from different machines at different times.  Unlike a Google Doc, you'll have to make sure to open the repo (`clone` or `pull` if you've already `clone`d) and save the repo (`commit` + `push`) more deliberately.
 
@@ -139,7 +139,7 @@ knitr::include_graphics("images/new_r_proj4.png")
 ::::
 Using the HTTPS URL, create a new project in RStudio.
 
-# Work on the assignment, push back to GitHub
+# Work on the assignment, push back to GitHub {#push}
 
 <aside>
 &#9888; Always start your work session with a pull to the computer you are working on, and end your session with a push back to GitHub.
@@ -191,7 +191,7 @@ include_graphics("images/check-github.png")
 
 
 
-# Submit the assignment on Gradescope
+# Submit the assignment on Gradescope {#submitgradescope}
 
 You will submit your assignments via Gradescope on Canvas.
 
