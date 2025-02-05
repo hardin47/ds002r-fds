@@ -31,7 +31,14 @@ schedule <- tribble(
   'allows for dark mode, plus other options!', ' ',
   
   'Tip 4', 'cmd + shift + C', 'comments the line',
-  'cntrl + shift + C for PC'
+  'cntrl + shift + C for PC',
+  
+  'Tip 5', '`\\textcolor{red}{this text will be red}`', 'LaTeX formatting to change the text color', 'when render to pdf (different syntax for render to html)',
+  
+  'Tip 6', '<img src = "images/gear1.png">', 'changes the figure size', 'gear in R chunk',
+  
+  'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render'
+  
   
 )
 ```
