@@ -421,7 +421,7 @@ ggplot(data = Births78,
 
 (@) What is wrong with the following code?[^25]
     (a) should only  be one =
-    (b) Sydney should be lower case
+    (b) Sidney should be lower case
     (c) name should not be in quotes
     (d) use mutate instead of filter
     (e) babynames in wrong place
@@ -430,7 +430,7 @@ ggplot(data = Births78,
 #| eval: false
 #| echo: true
 Result <- |> filter(babynames,
-		name== “Sydney”)
+		name == “Sidney”)
 ```
 
 [^25]: e. babynames in wrong place
@@ -486,24 +486,24 @@ tribble_c |> gt::gt(caption = "table c")
 #(a) 
 babynames |> 
   group_by(year, sex) |> 
-  summarize(totalBirths = sum(num))
+  summarize(totalBirths = sum(n))
 
 #(b) 
 group_by(babynames, year, sex) |> 
-  summarize(totalBirths = sum(num))
+  summarize(totalBirths = sum(n))
 
 #(c)
 group_by(babynames, year, sex) |> 
-  summarize(totalBirths = mean(num))
+  summarize(totalBirths = mean(n))
 
 #(d)
 temp <- group_by(babynames, year, sex)
 
-summarize(temp, totalBirths = sum(num))
+summarize(temp, totalBirths = sum(n))
 
 #(e)
 summarize(group_by(babynames, year, sex), 
-          totalBirths = sum(num))
+          totalBirths = sum(n))
 ```
 
 [^27]: c. does something different because it takes the `mean()` (average) instead of the `sum()`.  The other commands compute the total number of births broken down by `year` and `sex`.
@@ -535,9 +535,9 @@ result <- babynames |>
 (@) Fill in Q2.[^29]
     (a) `(year, sex)`
     (b) `(year, name)`
-    (c) `(year, num)`
+    (c) `(year, n)`
     (d) `(sex, name)`
-    (e) `(sex, num)`
+    (e) `(sex, n)`
     
 ```{r}
 #| eval: false
@@ -558,8 +558,8 @@ result <- babynames |>
     (a) `n_distinct(name)`
     (b) `n_distinct(n)`
     (c) `sum(name)`
-    (d) `sum(num)`
-    (e) `mean(num)`
+    (d) `sum(n)`
+    (e) `mean(n)`
 
 ```{r}
 #| eval: false
@@ -572,7 +572,7 @@ result <- babynames |>
   # number of babies (each year, each name)
 ```
 
-[^30]: d. `sum(num)`
+[^30]: d. `sum(n)`
 
 ---
 
@@ -580,15 +580,13 @@ result <- babynames |>
 
 ```{r}
 #| echo: true
-babynames <- babynames::babynames |> 
-  rename(num = n)
-
+library(babynames)
 babynames |>
   filter(name %in% c("Jane", "Mary")) |> 
   # just the Janes and Marys
   group_by(name, year) |> 
   # for each year for each name
-  summarize(total = sum(num))
+  summarize(total = sum(n))
 ```
 
 
@@ -599,7 +597,7 @@ babynames |>
 babynames |>
   filter(name %in% c("Jane", "Mary")) |> 
   group_by(name, year) |> 
-  summarize(number = sum(num))
+  summarize(number = sum(n))
 
 babynames |>
   filter(name %in% c("Jane", "Mary")) |> 
@@ -609,7 +607,7 @@ babynames |>
 babynames |>
   filter(name %in% c("Jane", "Mary")) |> 
   group_by(name, year) |> 
-  summarize(n_distinct(num))
+  summarize(n_distinct(n))
 
 babynames |>
   filter(name %in% c("Jane", "Mary")) |> 
@@ -619,12 +617,12 @@ babynames |>
 babynames |>
   filter(name %in% c("Jane", "Mary")) |> 
   group_by(name, year) |> 
-  summarize(mean(num))
+  summarize(mean(n))
 
 babynames |>
   filter(name %in% c("Jane", "Mary")) |> 
   group_by(name, year) |> 
-  summarize(median(num))
+  summarize(median(n))
 ```
 
 [^31]: running the different code chunks with relevant output.

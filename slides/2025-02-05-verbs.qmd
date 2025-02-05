@@ -52,6 +52,13 @@ The definition of **datum** can be much broader:
 knitr::include_graphics("../images/datum.png")
 ```
 
+## Not tidy -- Active Duty Military
+
+The Active Duty data are not tidy!  What are the cases?  How are the data not tidy?  What might the data look like in tidy form?  Suppose that the case was "an individual in the armed forces."  What variables would you use to capture the information in the <a href = "https://docs.google.com/spreadsheets/d/1Ow6Cm4z-Z1Yybk3i352msulYCEDOUaOghmo9ALajyHo/edit#gid=1811988794" target = "_blank">following table</a>?
+
+```{r out.width = '100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/activedutyTidy.png")
+```
 
 ## Tidying data
 
@@ -62,14 +69,6 @@ How would you wrangle each data example into a tidy format?
 3. images  
 4. videos  
 5. audio files
-
-## Not tidy -- Active Duty Military
-
-The Active Duty data are not tidy!  What are the cases?  How are the data not tidy?  What might the data look like in tidy form?  Suppose that the case was "an individual in the armed forces."  What variables would you use to capture the information in the <a href = "https://docs.google.com/spreadsheets/d/1Ow6Cm4z-Z1Yybk3i352msulYCEDOUaOghmo9ALajyHo/edit#gid=1811988794" target = "_blank">following table</a>?
-
-```{r out.width = '100%', fig.align='center', echo=FALSE}
-knitr::include_graphics("../images/activedutyTidy.png")
-```
 
  
 ## Tidy packages: the tidyverse
@@ -96,7 +95,13 @@ The first argument of each data verb is the data frame.
 - `summarize()`
 - `sample_n()`
 
- 
+## (out of) NYC, flights data (2013)
+
+```{r}
+library(nycflights13)
+flights
+```
+
 
 ## `filter()`
 
@@ -160,13 +165,13 @@ names (or more complicated expressions) to order by. If you provide more than
 one column name, each additional column will be used to break ties in the values
 of preceding columns:
 
-```{r, eval = FALSE}
+```{r}
 arrange(flights, year, month, day)
 ```
 
 Use `desc()` to sort in descending order.
 
-```{r, eval = FALSE}
+```{r}
 arrange(flights, desc(arr_delay))
 ```
 
@@ -178,13 +183,13 @@ Often you work with large datasets with many columns where only a few are
 actually of interest to you. `select()` allows you to rapidly zoom in on a useful
 subset using operations that usually only work on numeric variable positions:
 
-```{r eval=FALSE}
+```{r}
 select(flights, year, month, day)
 ```
 
 You can exclude columns using `-` and specify a range using `:`.
 
-```{r eval = FALSE}
+```{r}
 select(flights, -(year:day))
 ```
 
@@ -267,9 +272,6 @@ avg_speed <- summarize(by_tailnum,
 arrange(avg_speed, desc(avg_speed))
 ```
 
-# Agenda  2/10/25
-
-1. Chaining
 
 ## Chaining
 
