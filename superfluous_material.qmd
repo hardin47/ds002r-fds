@@ -1,0 +1,77 @@
+---
+title: "superfluous material examples"
+format: html
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+# An okay way to look at a data frame
+
+Sometimes the way the dataset is saved will make it print just the first few rows.  This is totally okay in your rendered doc. Indeed, oftentimes printing the data to the screen is a great way to communicate aspects of the data (variable names, variable types, etc.)
+
+```{r}
+library(nycflights13)
+flights
+```
+
+# A not okay way to look at a data frame
+
+But sometimes, the formatting is such that the **entire** dataset is printed in the output!!! Having all the data print out isn't helpful for your reader who is overwhelmed by pages of numbers.
+
+```{r}
+smokecancer <- data.frame(action = c(rep("non-smoker", 51), rep("smoker", 69)),
+                     outcome = c(rep("lung_cancer", 19), rep("healthy", 32), 
+                                 rep("lung_cancer", 41), rep("healthy", 28)))
+
+smokecancer
+```
+
+## Solutions
+
+One way to print only the top of the data frame is to use the `head()` function:
+
+```{r}
+smokecancer |> 
+  head()
+```
+
+
+Another way to print only the top few rows is to change the object from a `data.frame` into a `tibble` (a `tibble` is like a `data.frame` but it has nice printing options). Note that one benefit of `tibble()` over `head()` is that the reader can see the size of the data frame (number of rows and columns).
+
+```{r}
+smokecancer |> 
+  tibble()
+```
+
+
+# Messages and warnings that the reader doesn't need
+
+Ususally, at the top (in the YAML), I'll scaffold the assignment to make the messages and warnings `false`. That is, I'll instruct the computer to not print messages. But for your project (where you don't have a template), you'll have to remember to do this! (Look at the HW YAML.)
+
+This is what it looks like if you have set the messages to `true`. Again, not very helpful for your reader (unless you are trying to communicate something specific about the versioning of the R package).
+
+```{r}
+#| echo: false
+
+detach("package:tidyverse", unload=TRUE)
+```
+
+
+
+
+```{r}
+#| message: true
+
+library(tidyverse)
+library(openintro)
+library(babynames)
+```
+
+
+

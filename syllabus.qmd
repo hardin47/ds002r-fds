@@ -147,7 +147,7 @@ I (like many people) am still in the process of learning about diverse perspecti
 Homework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.
 
 [5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.  
-[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers.
+[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers. [<a href = "https://ds002r-fds.netlify.app/superfluous_material.html" target = "_blank">Here is an example</a> of extraneous messages and printed lists of numbers.]
 [3] Close to all problems completed with less than 75% correct. OR an assignment that didn't make it all the way to Canvas as the correctly rendered pdf.  
 [2] More than half but fewer than all problems completed and > 75% correct.  
 [1] More than half but fewer than all problems completed and < 75% correct; OR less than half of problems completed.  
