@@ -15,7 +15,7 @@ library(tidyverse)
 
 Part of being a successful data scientist is communicating your work and demonstrating that you know **how** to communicate your work.  To that end, you will each be creating your own website with some of the course projects (see caveat below!).
 
-You will produce a personal website using Quarto that contains, at a minimum, a Home/About page with a picture or image (doesn't have to be of you, could be some kind of art, etc., but make sure you have permission to post whatever you include), some basic information about you, and a link to the GitHub repo that contains the R code for your website.  
+You will produce a personal website using Quarto that contains, at a minimum, a Home/About page with a picture or image (doesn't have to be of you, could be some kind of art, etc., but make sure you have permission to post whatever image you include), some basic information about you, and a link to the GitHub repo that contains the R code for your website.  
 
 Then, in the Menu bar, you should have a selection called "Data Viz" with two sub-selections, each being a <a href = "https://github.com/rfordatascience/tidytuesday/tree/master/data" target = "_blank">TidyTuesday</a> analysis.
 
@@ -25,11 +25,11 @@ To make the website follow the instructions at <a href = "https://ucsb-meds.gith
 
 ### TidyTuesday
 
-For each analysis, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file).  Your YAML will look something like this (note that the format here is html, unlike the pdf that we use for the homework). Some considerations:
+For each of the two analyses, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file).  Your YAML will look something like this (note that the format here is html, unlike the pdf that we use for the homework). Some considerations:
 
 * Each TidyTuesday analysis has a separate .qmd file.
 * The two analyses compile to html and are linked via a drop-down menu (see example `_quarto.yml` file below).
-* You should both *link* to the TidyTuesday resource (giving it credit) **and** give a full citation of the original data (credit the original source which is almost surely different from the TidyTuesday link).
+* You should both *link* to the TidyTuesday resource (giving it credit) **and** give a full citation of the original data (that is, credit the original source which is almost surely different from the TidyTuesday link).
 * There should be some words to introduce the dataset, etc.
 
 ````
@@ -43,7 +43,7 @@ format: html
 ---
 ````
 
-The TidyTuesday analysis can be quite minimal. One scatterplot per analysis is fine, and you don't need to annotate or make it beautiful (of course, you might **want** to make it beautiful...). It is your choice whether or not to show the code. (Do you think it is better to show the code or hide the code? No right answer.) Please include the source of the data (which includes both the TidyTuesday page + the original source of the information).
+The TidyTuesday analysis can be quite minimal. One scatterplot per analysis is fine, and you don't need to annotate or make it beautiful (of course, you might **want** to make it beautiful...). It is your choice whether or not to show the code. (Do you think it is better to show the code or hide the code? No right answer.)^[One option is to use code folding so that the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code.] Please include the source of the data (which includes both the TidyTuesday page + the original source of the information).
 
 Inside your `_quarto.yml` file (see https://ucsb-meds.github.io/creating-quarto-websites/#modify-website-appearance-in-_quarto.yml), you might have something like the following:
 
@@ -71,4 +71,4 @@ The assignment as written asks you to submit a public facing website. Generally,
 
 ### Timeline
 
-Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday February 12**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!
+Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday February 19, 2025**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!
