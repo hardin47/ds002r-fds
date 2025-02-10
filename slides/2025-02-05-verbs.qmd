@@ -8,6 +8,7 @@ format:
     scrollable: true
     slide-number: true
     show-slide-number: all
+    df-print: paged
 execute:
   echo: true
   warning: false
@@ -175,7 +176,7 @@ arrange(flights, year, month, day)
 Use `desc()` to sort in descending order.
 
 ```{r}
-arrange(flights, desc(arr_delay))
+arrange(flights, desc(dep_delay))
 ```
 
  

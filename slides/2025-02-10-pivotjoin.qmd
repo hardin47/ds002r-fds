@@ -8,6 +8,7 @@ format:
     scrollable: true
     slide-number: true
     show-slide-number: all
+    df-print: paged
 execute:
   echo: true
   warning: false
@@ -27,7 +28,7 @@ library(knitr)
 # Agenda  2/10/25
 
 1. Pivoting
-2. (maybe Joining?)
+2. Joining
 
 
 # `pivot`ing
@@ -148,6 +149,9 @@ babynames |>
   arrange(desc(maxcount))
 ```
 
+# Agenda  2/12/25
+
+1. Joining
 
 # `_join`ing
 
