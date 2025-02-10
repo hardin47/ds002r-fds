@@ -10301,7 +10301,7 @@
     "href": "slides/2025-02-05-verbs.html#some-basic-verbs",
     "title": "Data Wrangling",
     "section": "Some Basic Verbs",
-    "text": "Some Basic Verbs\n\nfilter()\narrange()\nselect()\ndistinct()\nmutate()\nsummarize()\nsample_n()"
+    "text": "Some Basic Verbs\n\nfilter()\\(^*\\)\narrange()\nselect()\\(^*\\)\ndistinct()\nmutate()\\(^*\\)\nsummarize()\\(^*\\)\nsample_n()\ngroup_by()\\(^*\\)\n\nThe most used verbs are denoted with \\(^*\\)."
   },
   {
     "objectID": "slides/2025-02-05-verbs.html#filter",
@@ -10364,7 +10364,7 @@
     "href": "slides/2025-02-05-verbs.html#summarize-and-sample_n",
     "title": "Data Wrangling",
     "section": "summarize() and sample_n()",
-    "text": "summarize() and sample_n()\nsummarize() collapses a data frame to a single row based on some function. It’s not very useful yet, but it will be.\nsample_n() provides you with a random sample of rows.\n\nsummarize(flights, delay = mean(dep_delay, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  delay\n  &lt;dbl&gt;\n1  12.6\n\nsample_n(flights, 10)\n\n# A tibble: 10 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013    12    20     1033           1015        18     1212           1150\n 2  2013     8    16      734            740        -6      902            914\n 3  2013     2     8     1131           1129         2     1314           1305\n 4  2013     8    27     1701           1659         2     1931           2006\n 5  2013     4     8     1729           1729         0     2108           2105\n 6  2013    10    16      624            630        -6      747            753\n 7  2013     2    11     1136           1114        22     1406           1345\n 8  2013     3     2     1357           1400        -3     1640           1631\n 9  2013     8    19     1442           1445        -3     1557           1642\n10  2013     9    16      920            745        95     1146           1024\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
+    "text": "summarize() and sample_n()\nsummarize() collapses a data frame to a single row based on some function. It’s not very useful yet, but it will be.\nsample_n() provides you with a random sample of rows.\n\nsummarize(flights, delay = mean(dep_delay, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  delay\n  &lt;dbl&gt;\n1  12.6\n\nsample_n(flights, 10)\n\n# A tibble: 10 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     8     2     2112           2055        17     2323           2324\n 2  2013    10    23     1615           1605        10     1821           1755\n 3  2013     8     7     1252           1255        -3     1549           1606\n 4  2013     6    13     2332           1800       332       39           1930\n 5  2013     4     9     2356           2355         1      329            345\n 6  2013     3    14     1333           1345       -12     1439           1453\n 7  2013     7     1      605            609        -4      901            859\n 8  2013     5    15     1545           1545         0     1825           1849\n 9  2013     6     4     1444           1435         9     1709           1710\n10  2013    10    16     1103           1110        -7     1411           1431\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;"
   },
   {
     "objectID": "slides/2025-02-05-verbs.html#practice-1",
@@ -10385,7 +10385,7 @@
     "href": "slides/2025-02-05-verbs.html#group_by",
     "title": "Data Wrangling",
     "section": "group_by()",
-    "text": "group_by()\nsummarize() and sample_n() are even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.\nThe group_by() function describes how to break a dataset down into groups of rows."
+    "text": "group_by()\nsummarize() and sample_n() are even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.\nThe group_by() function describes how to break a dataset down into groups of rows.\ngroup_by() does not change anything about the data frame. Rather, it holds the rows of the data frame separately so that any future verbs applied to the data frame are done separately per group being held."
   },
   {
     "objectID": "slides/2025-02-05-verbs.html#group_by-1",

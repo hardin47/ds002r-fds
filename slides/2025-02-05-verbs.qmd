@@ -87,13 +87,16 @@ The first argument of each data verb is the data frame.
 
 ## Some Basic Verbs
 
-- `filter()`
+- `filter()`$^*$
 - `arrange()`
-- `select()`
+- `select()`$^*$
 - `distinct()`
-- `mutate()`
-- `summarize()`
+- `mutate()`$^*$
+- `summarize()`$^*$
 - `sample_n()`
+- `group_by()`$^*$
+
+The most used verbs are denoted with $^*$.
 
 ## (out of) NYC, flights data (2013)
 
@@ -257,6 +260,8 @@ speed_data <- select(flights2, tailnum, speed)
 `summarize()` and `sample_n()` are even more powerful when combined with the idea of  "group by", repeating the operation separately on groups of observations within the dataset. 
 
 The `group_by()` function describes how to break a dataset down into groups of rows.
+
+`group_by()` does not change anything about the data frame. Rather, it *holds* the rows of the data frame separately so that any future verbs applied to the data frame are done separately per group being held.
 
  
 
