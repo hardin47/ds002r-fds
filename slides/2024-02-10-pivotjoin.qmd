@@ -1,7 +1,7 @@
 ---
 title: Pivoting and Joining
 author: "Jo Hardin"
-subtitle: "September 18 + 23, 2024"
+subtitle: "September 10 + 12, 2024"
 format:
   revealjs:
     incremental: false
@@ -24,7 +24,7 @@ library(knitr)
 ```
 
 
-# Agenda  9/18/24
+# Agenda  2/10/25
 
 1. Pivoting
 2. (maybe Joining?)
