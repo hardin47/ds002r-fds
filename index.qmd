@@ -62,7 +62,7 @@ schedule <- tribble(
   ' ',
 
      "Week 4 <br> 2.10.25", 'Data Wrangling', 
-  '{{< fa book-open >}} <a href="https://r4ds.had.co.nz/transform.html" target = "_blank"> R4DS Transform</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/07-wrangling.html" target = "_blank">wrangling</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-02-05-verbs.html" target = "_blank"> Data Verbs</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-02-10-pivotjoin.html" target = "_blank"> Pivot + Join</a> ',
+  '{{< fa book-open >}} <a href="https://r4ds.had.co.nz/transform.html" target = "_blank"> R4DS Transform</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/07-wrangling.html" target = "_blank">wrangling</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-02-05-verbs.html" target = "_blank"> Data Verbs</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-02-10-pivotjoin.html" target = "_blank"> Pivot + Join</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws6_ds2_s25_join.pdf" target = "_blank">WS 6 - Joining</a>',
 
     '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 3</a> - due 2.10.25 <br> Quiz 1 2.12.25',
   ' ',

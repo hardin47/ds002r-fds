@@ -39,11 +39,13 @@ schedule <- tribble(
   
   'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render',
   
-  'Tip 8', '#| echo: false', 'evaluates the chunk, but does not show the code', 'alternatively: "echo = FALSE" inside curly braces',
+  'Tip 8', '`#| echo: false`', 'evaluates the chunk, but does not show the code', 'alternatively: `echo = FALSE` inside curly braces',
   
   'Tip 9', 'Tool -> Global Options... -> Spelling', 'allows for real-time spell check', ' ',
   
-  'Tip 10', 'cmd + shift + M', 'produces a pipe',  'cntrl + shift + M for PC <br> Tools -> Global Options... -> Code to get the native pipe'
+  'Tip 10', 'cmd + shift + M', 'produces a pipe',  'cntrl + shift + M for PC <br> Tools -> Global Options... -> Code to get the native pipe',
+  
+  'Tip 11', 'opt + -', "produces the assignment operator, `<-`", ' '
   
   
 )

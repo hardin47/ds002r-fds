@@ -724,6 +724,45 @@ GDP |>
 
 ---
 
+(@) You'd like to use the data to make a plot with `Midterm` score on the x-axis and `Final` score on the y-axis using the following `ggplot()` code. Which data frame should you use?[^35a]
+    a. use raw data
+    b. use `pivot_wider()` on raw data
+    c. use `pivot_longer()` on raw data
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot(___, aes(x = ___, y = ___, color = ___)) + 
+  geom_point()
+```
+
+```{r}
+#| echo: false
+library(tidyverse)
+
+# Create a long format dataset
+grades <- tibble(
+  student = c("Alice", "Alice", "Bob", "Bob"),
+  test = c("Midterm", "Final", "Midterm", "Final"),
+  score = c(85, 90, 78, 82)
+)
+
+grades
+```
+[^35a]: b. use `pivot_wider()` on raw data
+
+---
+
+```{r}
+#| echo: true
+grades |> 
+  pivot_wider(names_from = test, values_from = score)
+
+```
+
+
+---
+
 (@) Response to stimulus (in ms) after only 3 hrs of sleep for 9 days. You want to make a plot with the subject's reaction time (y-axis) vs the number of days of sleep restriction (x-axis) using the following `ggplot()` code. Which data frame should you use?[^35]
     a. use raw data
     b. use `pivot_wider()` on raw data
@@ -773,21 +812,6 @@ band_members |>
   right_join(band_instruments, by = "name")
 ```
 
-:::: {.columns}
-::: {.column width="50%"}
-```{r}
-#| echo: true
-band_members
-```
-:::
-
-:::{.column width="50%"}
-```{r}
-#| echo: true
-band_instruments
-```
-:::
-::::
 
 [^36]: a. Mick
 
@@ -797,7 +821,23 @@ band_instruments
    a. `name`
    b. `band`
    c. `plays`
-   d. none of them
+   d. none of them  <br>
+
+:::: {.columns}
+::: {.column width="25%"}
+```{r}
+#| echo: true
+band_members
+```
+:::
+
+:::{.column width="25%"}
+```{r}
+#| echo: true
+band_instruments
+```
+:::
+::::
 
 ```{r}
 #| echo: true
@@ -805,22 +845,6 @@ band_instruments
 band_members |> 
   right_join(band_instruments, by = "name")
 ```
-
-:::: {.columns}
-::: {.column width="50%"}
-```{r}
-#| echo: true
-band_members
-```
-:::
-
-:::{.column width="50%"}
-```{r}
-#| echo: true
-band_instruments
-```
-:::
-::::
 
 [^37]: d. none of them (the default is to retain all the variables)
 
@@ -831,7 +855,23 @@ band_instruments
    b. changes to guitar
    c. changes to bass
    d. `NA`
-   e. `NULL`
+   e. `NULL`  <br>
+
+:::: {.columns}
+::: {.column width="25%"}
+```{r}
+#| echo: true
+band_members
+```
+:::
+
+:::{.column width="25%"}
+```{r}
+#| echo: true
+band_instruments
+```
+:::
+::::
 
 ```{r}
 #| echo: true
@@ -839,22 +879,6 @@ band_instruments
 band_members |> 
   full_join(band_instruments, by = "name")
 ```
-
-:::: {.columns}
-::: {.column width="50%"}
-```{r}
-#| echo: true
-band_members
-```
-:::
-
-:::{.column width="50%"}
-```{r}
-#| echo: true
-band_instruments
-```
-:::
-::::
 
 [^38]: d. `NA` (it would be `NULL` in **SQL**)
 
@@ -924,7 +948,7 @@ str_sub(x, start = c(1, 3), end = c(2, 5))
 
 ---
 
-(@)  What is the difference between what these two lines of code?[^43]
+(@)  What is the difference between code lines 3 and 4 below?[^43]
     a. same thing
     b. different months
     c. different output formatting
