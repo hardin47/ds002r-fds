@@ -261,25 +261,25 @@ Jo Hardin
 <span id="cb1-5"><a></a>litF</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 260 × 38
-   Adult (15+) literacy rate …¹ `1975` `1976` `1977` `1978` `1979` `1980` `1981`
-   &lt;chr&gt;                         &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
- 1 Afghanistan                      NA     NA     NA     NA   4.99   NA       NA
- 2 Albania                          NA     NA     NA     NA  NA      NA       NA
- 3 Algeria                          NA     NA     NA     NA  NA      NA       NA
- 4 Andorra                          NA     NA     NA     NA  NA      NA       NA
- 5 Angola                           NA     NA     NA     NA  NA      NA       NA
- 6 Anguilla                         NA     NA     NA     NA  NA      NA       NA
- 7 Antigua and Barbuda              NA     NA     NA     NA  NA      NA       NA
- 8 Argentina                        NA     NA     NA     NA  NA      93.6     NA
- 9 Armenia                          NA     NA     NA     NA  NA      NA       NA
-10 Aruba                            NA     NA     NA     NA  NA      NA       NA
+   Adult (15+) literacy ra…¹ `1975` `1976` `1977` `1978` `1979` `1980`
+   &lt;chr&gt;                      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 Afghanistan                   NA     NA     NA     NA   4.99   NA  
+ 2 Albania                       NA     NA     NA     NA  NA      NA  
+ 3 Algeria                       NA     NA     NA     NA  NA      NA  
+ 4 Andorra                       NA     NA     NA     NA  NA      NA  
+ 5 Angola                        NA     NA     NA     NA  NA      NA  
+ 6 Anguilla                      NA     NA     NA     NA  NA      NA  
+ 7 Antigua and Barbuda           NA     NA     NA     NA  NA      NA  
+ 8 Argentina                     NA     NA     NA     NA  NA      93.6
+ 9 Armenia                       NA     NA     NA     NA  NA      NA  
+10 Aruba                         NA     NA     NA     NA  NA      NA  
 # ℹ 250 more rows
 # ℹ abbreviated name: ¹​`Adult (15+) literacy rate (%). Female`
-# ℹ 30 more variables: `1982` &lt;dbl&gt;, `1983` &lt;dbl&gt;, `1984` &lt;dbl&gt;, `1985` &lt;dbl&gt;,
-#   `1986` &lt;dbl&gt;, `1987` &lt;dbl&gt;, `1988` &lt;dbl&gt;, `1989` &lt;dbl&gt;, `1990` &lt;dbl&gt;,
-#   `1991` &lt;dbl&gt;, `1992` &lt;dbl&gt;, `1993` &lt;dbl&gt;, `1994` &lt;dbl&gt;, `1995` &lt;dbl&gt;,
-#   `1996` &lt;dbl&gt;, `1997` &lt;dbl&gt;, `1998` &lt;dbl&gt;, `1999` &lt;dbl&gt;, `2000` &lt;dbl&gt;,
-#   `2001` &lt;dbl&gt;, `2002` &lt;dbl&gt;, `2003` &lt;dbl&gt;, `2004` &lt;dbl&gt;, `2005` &lt;dbl&gt;, …</code></pre>
+# ℹ 31 more variables: `1981` &lt;dbl&gt;, `1982` &lt;dbl&gt;, `1983` &lt;dbl&gt;,
+#   `1984` &lt;dbl&gt;, `1985` &lt;dbl&gt;, `1986` &lt;dbl&gt;, `1987` &lt;dbl&gt;,
+#   `1988` &lt;dbl&gt;, `1989` &lt;dbl&gt;, `1990` &lt;dbl&gt;, `1991` &lt;dbl&gt;,
+#   `1992` &lt;dbl&gt;, `1993` &lt;dbl&gt;, `1994` &lt;dbl&gt;, `1995` &lt;dbl&gt;,
+#   `1996` &lt;dbl&gt;, `1997` &lt;dbl&gt;, `1998` &lt;dbl&gt;, `1999` &lt;dbl&gt;, …</code></pre>
 </div>
 </div>
 </section>
@@ -293,7 +293,7 @@ Jo Hardin
 <span id="cb3-5"><a></a>               <span class="at">values_to =</span> <span class="st">"litRateF"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb3-6"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(litRateF))</span>
 <span id="cb3-7"><a></a></span>
-<span id="cb3-8"><a></a>litF</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-8"><a></a>litF </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 571 × 3
    country     year  litRateF
@@ -576,17 +576,17 @@ Jo Hardin
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>works</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9 × 2
-  name               known_for                                                  
-  &lt;chr&gt;              &lt;chr&gt;                                                      
-1 Ada Lovelace       first computer algorithm                                   
-2 Marie Curie        theory of radioactivity,  discovery of elements polonium a…
-3 Janaki Ammal       hybrid species, biodiversity protection                    
-4 Chien-Shiung Wu    confim and refine theory of radioactive beta decy, Wu expe…
-5 Katherine Johnson  calculations of orbital mechanics critical to sending the …
-6 Vera Rubin         existence of dark matter                                   
-7 Gladys West        mathematical modeling of the shape of the Earth which serv…
-8 Flossie Wong-Staal first scientist to clone HIV and create a map of its genes…
-9 Jennifer Doudna    one of the primary developers of CRISPR, a ground-breaking…</code></pre>
+  name               known_for                                        
+  &lt;chr&gt;              &lt;chr&gt;                                            
+1 Ada Lovelace       first computer algorithm                         
+2 Marie Curie        theory of radioactivity,  discovery of elements …
+3 Janaki Ammal       hybrid species, biodiversity protection          
+4 Chien-Shiung Wu    confim and refine theory of radioactive beta dec…
+5 Katherine Johnson  calculations of orbital mechanics critical to se…
+6 Vera Rubin         existence of dark matter                         
+7 Gladys West        mathematical modeling of the shape of the Earth …
+8 Flossie Wong-Staal first scientist to clone HIV and create a map of…
+9 Jennifer Doudna    one of the primary developers of CRISPR, a groun…</code></pre>
 </div>
 </div>
 </div>
@@ -599,18 +599,18 @@ Jo Hardin
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 5
-   name               profession                 birth_year death_year known_for
-   &lt;chr&gt;              &lt;chr&gt;                           &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
- 1 Ada Lovelace       Mathematician                      NA         NA first co…
- 2 Marie Curie        Physicist and Chemist              NA         NA theory o…
- 3 Janaki Ammal       Botanist                         1897       1984 hybrid s…
- 4 Chien-Shiung Wu    Physicist                        1912       1997 confim a…
- 5 Katherine Johnson  Mathematician                    1918       2020 calculat…
- 6 Rosalind Franklin  Chemist                          1920       1958 &lt;NA&gt;     
- 7 Vera Rubin         Astronomer                       1928       2016 existenc…
- 8 Gladys West        Mathematician                    1930         NA mathemat…
- 9 Flossie Wong-Staal Virologist and Molecular …       1947       2020 first sc…
-10 Jennifer Doudna    Biochemist                       1964         NA one of t…</code></pre>
+   name               profession       birth_year death_year known_for
+   &lt;chr&gt;              &lt;chr&gt;                 &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
+ 1 Ada Lovelace       Mathematician            NA         NA first co…
+ 2 Marie Curie        Physicist and C…         NA         NA theory o…
+ 3 Janaki Ammal       Botanist               1897       1984 hybrid s…
+ 4 Chien-Shiung Wu    Physicist              1912       1997 confim a…
+ 5 Katherine Johnson  Mathematician          1918       2020 calculat…
+ 6 Rosalind Franklin  Chemist                1920       1958 &lt;NA&gt;     
+ 7 Vera Rubin         Astronomer             1928       2016 existenc…
+ 8 Gladys West        Mathematician          1930         NA mathemat…
+ 9 Flossie Wong-Staal Virologist and …       1947       2020 first sc…
+10 Jennifer Doudna    Biochemist             1964         NA one of t…</code></pre>
 </div>
 </div>
 </section>
@@ -714,18 +714,18 @@ Jo Hardin
 <span id="cb40-2"><a></a>  <span class="fu">left_join</span>(dates, <span class="at">by =</span> <span class="st">"name"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 4
-   name               profession                         birth_year death_year
-   &lt;chr&gt;              &lt;chr&gt;                                   &lt;dbl&gt;      &lt;dbl&gt;
- 1 Ada Lovelace       Mathematician                              NA         NA
- 2 Marie Curie        Physicist and Chemist                      NA         NA
- 3 Janaki Ammal       Botanist                                 1897       1984
- 4 Chien-Shiung Wu    Physicist                                1912       1997
- 5 Katherine Johnson  Mathematician                            1918       2020
- 6 Rosalind Franklin  Chemist                                  1920       1958
- 7 Vera Rubin         Astronomer                               1928       2016
- 8 Gladys West        Mathematician                            1930         NA
- 9 Flossie Wong-Staal Virologist and Molecular Biologist       1947       2020
-10 Jennifer Doudna    Biochemist                               1964         NA</code></pre>
+   name               profession                 birth_year death_year
+   &lt;chr&gt;              &lt;chr&gt;                           &lt;dbl&gt;      &lt;dbl&gt;
+ 1 Ada Lovelace       Mathematician                      NA         NA
+ 2 Marie Curie        Physicist and Chemist              NA         NA
+ 3 Janaki Ammal       Botanist                         1897       1984
+ 4 Chien-Shiung Wu    Physicist                        1912       1997
+ 5 Katherine Johnson  Mathematician                    1918       2020
+ 6 Rosalind Franklin  Chemist                          1920       1958
+ 7 Vera Rubin         Astronomer                       1928       2016
+ 8 Gladys West        Mathematician                    1930         NA
+ 9 Flossie Wong-Staal Virologist and Molecular …       1947       2020
+10 Jennifer Doudna    Biochemist                       1964         NA</code></pre>
 </div>
 </div>
 </section>
@@ -764,16 +764,16 @@ Jo Hardin
 <span id="cb44-2"><a></a>  <span class="fu">right_join</span>(dates, <span class="at">by =</span> <span class="st">"name"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 4
-  name               profession                         birth_year death_year
-  &lt;chr&gt;              &lt;chr&gt;                                   &lt;dbl&gt;      &lt;dbl&gt;
-1 Janaki Ammal       Botanist                                 1897       1984
-2 Chien-Shiung Wu    Physicist                                1912       1997
-3 Katherine Johnson  Mathematician                            1918       2020
-4 Rosalind Franklin  Chemist                                  1920       1958
-5 Vera Rubin         Astronomer                               1928       2016
-6 Gladys West        Mathematician                            1930         NA
-7 Flossie Wong-Staal Virologist and Molecular Biologist       1947       2020
-8 Jennifer Doudna    Biochemist                               1964         NA</code></pre>
+  name               profession                  birth_year death_year
+  &lt;chr&gt;              &lt;chr&gt;                            &lt;dbl&gt;      &lt;dbl&gt;
+1 Janaki Ammal       Botanist                          1897       1984
+2 Chien-Shiung Wu    Physicist                         1912       1997
+3 Katherine Johnson  Mathematician                     1918       2020
+4 Rosalind Franklin  Chemist                           1920       1958
+5 Vera Rubin         Astronomer                        1928       2016
+6 Gladys West        Mathematician                     1930         NA
+7 Flossie Wong-Staal Virologist and Molecular B…       1947       2020
+8 Jennifer Doudna    Biochemist                        1964         NA</code></pre>
 </div>
 </div>
 </section>
@@ -813,18 +813,18 @@ Jo Hardin
 <span id="cb48-2"><a></a>  <span class="fu">full_join</span>(works, <span class="at">by =</span> <span class="st">"name"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 4
-   name               birth_year death_year known_for                           
-   &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                               
- 1 Janaki Ammal             1897       1984 hybrid species, biodiversity protec…
- 2 Chien-Shiung Wu          1912       1997 confim and refine theory of radioac…
- 3 Katherine Johnson        1918       2020 calculations of orbital mechanics c…
- 4 Rosalind Franklin        1920       1958 &lt;NA&gt;                                
- 5 Vera Rubin               1928       2016 existence of dark matter            
- 6 Gladys West              1930         NA mathematical modeling of the shape …
- 7 Flossie Wong-Staal       1947       2020 first scientist to clone HIV and cr…
- 8 Jennifer Doudna          1964         NA one of the primary developers of CR…
- 9 Ada Lovelace               NA         NA first computer algorithm            
-10 Marie Curie                NA         NA theory of radioactivity,  discovery…</code></pre>
+   name               birth_year death_year known_for                 
+   &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                     
+ 1 Janaki Ammal             1897       1984 hybrid species, biodivers…
+ 2 Chien-Shiung Wu          1912       1997 confim and refine theory …
+ 3 Katherine Johnson        1918       2020 calculations of orbital m…
+ 4 Rosalind Franklin        1920       1958 &lt;NA&gt;                      
+ 5 Vera Rubin               1928       2016 existence of dark matter  
+ 6 Gladys West              1930         NA mathematical modeling of …
+ 7 Flossie Wong-Staal       1947       2020 first scientist to clone …
+ 8 Jennifer Doudna          1964         NA one of the primary develo…
+ 9 Ada Lovelace               NA         NA first computer algorithm  
+10 Marie Curie                NA         NA theory of radioactivity, …</code></pre>
 </div>
 </div>
 </section>
@@ -862,15 +862,15 @@ Jo Hardin
 <span id="cb52-2"><a></a>  <span class="fu">inner_join</span>(works, <span class="at">by =</span> <span class="st">"name"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 4
-  name               birth_year death_year known_for                            
-  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                                
-1 Janaki Ammal             1897       1984 hybrid species, biodiversity protect…
-2 Chien-Shiung Wu          1912       1997 confim and refine theory of radioact…
-3 Katherine Johnson        1918       2020 calculations of orbital mechanics cr…
-4 Vera Rubin               1928       2016 existence of dark matter             
-5 Gladys West              1930         NA mathematical modeling of the shape o…
-6 Flossie Wong-Staal       1947       2020 first scientist to clone HIV and cre…
-7 Jennifer Doudna          1964         NA one of the primary developers of CRI…</code></pre>
+  name               birth_year death_year known_for                  
+  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;                      
+1 Janaki Ammal             1897       1984 hybrid species, biodiversi…
+2 Chien-Shiung Wu          1912       1997 confim and refine theory o…
+3 Katherine Johnson        1918       2020 calculations of orbital me…
+4 Vera Rubin               1928       2016 existence of dark matter   
+5 Gladys West              1930         NA mathematical modeling of t…
+6 Flossie Wong-Staal       1947       2020 first scientist to clone H…
+7 Jennifer Doudna          1964         NA one of the primary develop…</code></pre>
 </div>
 </div>
 </section>
@@ -967,18 +967,18 @@ Jo Hardin
 <span id="cb62-3"><a></a>  <span class="fu">left_join</span>(works, <span class="at">by =</span> <span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 5
-   name               profession                 birth_year death_year known_for
-   &lt;chr&gt;              &lt;chr&gt;                           &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
- 1 Ada Lovelace       Mathematician                      NA         NA first co…
- 2 Marie Curie        Physicist and Chemist              NA         NA theory o…
- 3 Janaki Ammal       Botanist                         1897       1984 hybrid s…
- 4 Chien-Shiung Wu    Physicist                        1912       1997 confim a…
- 5 Katherine Johnson  Mathematician                    1918       2020 calculat…
- 6 Rosalind Franklin  Chemist                          1920       1958 &lt;NA&gt;     
- 7 Vera Rubin         Astronomer                       1928       2016 existenc…
- 8 Gladys West        Mathematician                    1930         NA mathemat…
- 9 Flossie Wong-Staal Virologist and Molecular …       1947       2020 first sc…
-10 Jennifer Doudna    Biochemist                       1964         NA one of t…</code></pre>
+   name               profession       birth_year death_year known_for
+   &lt;chr&gt;              &lt;chr&gt;                 &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
+ 1 Ada Lovelace       Mathematician            NA         NA first co…
+ 2 Marie Curie        Physicist and C…         NA         NA theory o…
+ 3 Janaki Ammal       Botanist               1897       1984 hybrid s…
+ 4 Chien-Shiung Wu    Physicist              1912       1997 confim a…
+ 5 Katherine Johnson  Mathematician          1918       2020 calculat…
+ 6 Rosalind Franklin  Chemist                1920       1958 &lt;NA&gt;     
+ 7 Vera Rubin         Astronomer             1928       2016 existenc…
+ 8 Gladys West        Mathematician          1930         NA mathemat…
+ 9 Flossie Wong-Staal Virologist and …       1947       2020 first sc…
+10 Jennifer Doudna    Biochemist             1964         NA one of t…</code></pre>
 </div>
 </div>
 </section>
@@ -1513,7 +1513,7 @@ minute(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 59
+[1] 21
 ```
 
 
@@ -1526,7 +1526,7 @@ hour(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 10
+[1] 20
 ```
 
 
@@ -1709,19 +1709,20 @@ flightsWK |>  select(year, month, day, ymdday, weekdy, whichweek,
 
 ```
 # A tibble: 336,776 × 9
-    year month   day ymdday     weekdy whichweek dep_time arr_time air_time
-   <int> <int> <int> <date>     <ord>      <dbl>    <int>    <int>    <dbl>
- 1  2013     1     1 2013-01-01 Tue            1      517      830      227
- 2  2013     1     1 2013-01-01 Tue            1      533      850      227
- 3  2013     1     1 2013-01-01 Tue            1      542      923      160
- 4  2013     1     1 2013-01-01 Tue            1      544     1004      183
- 5  2013     1     1 2013-01-01 Tue            1      554      812      116
- 6  2013     1     1 2013-01-01 Tue            1      554      740      150
- 7  2013     1     1 2013-01-01 Tue            1      555      913      158
- 8  2013     1     1 2013-01-01 Tue            1      557      709       53
- 9  2013     1     1 2013-01-01 Tue            1      557      838      140
-10  2013     1     1 2013-01-01 Tue            1      558      753      138
+    year month   day ymdday     weekdy whichweek dep_time arr_time
+   <int> <int> <int> <date>     <ord>      <dbl>    <int>    <int>
+ 1  2013     1     1 2013-01-01 Tue            1      517      830
+ 2  2013     1     1 2013-01-01 Tue            1      533      850
+ 3  2013     1     1 2013-01-01 Tue            1      542      923
+ 4  2013     1     1 2013-01-01 Tue            1      544     1004
+ 5  2013     1     1 2013-01-01 Tue            1      554      812
+ 6  2013     1     1 2013-01-01 Tue            1      554      740
+ 7  2013     1     1 2013-01-01 Tue            1      555      913
+ 8  2013     1     1 2013-01-01 Tue            1      557      709
+ 9  2013     1     1 2013-01-01 Tue            1      557      838
+10  2013     1     1 2013-01-01 Tue            1      558      753
 # ℹ 336,766 more rows
+# ℹ 1 more variable: air_time <dbl>
 ```
 
 

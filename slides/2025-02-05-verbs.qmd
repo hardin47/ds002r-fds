@@ -21,6 +21,7 @@ execute:
 library(tidyverse)
 library(palmerpenguins)
 library(nycflights13)
+options(pillar.width = 70)
 ```
 
 

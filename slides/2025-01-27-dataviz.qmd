@@ -28,6 +28,7 @@ library(tidyverse)
 library(mosaic)
 library(knitr)
 library(ggthemes)
+options(pillar.width = 70)
 ```
 
 
