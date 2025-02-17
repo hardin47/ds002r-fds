@@ -86,6 +86,14 @@ str_view(string1)
 str_view(string2)
 ```
 
+## Working with strings
+
+* yes, lots of code to learn
+* no, the code doesn't really matter
+* learning goal for today: 
+
+> what can you even do with string variables???
+
 ## `str_c`
 
 Similar to `paste()` (gluing strings together), but works well in a tidy pipeline.
@@ -185,18 +193,69 @@ The **stringr** package within tidyverse contains lots of functions to help proc
 
 tribble(
   ~`str function`, ~arguments, ~returns,
-"`str_c()", " ..., `sep`, `collapse`", "a new concatenated string",
+"`str_vew()`", "`x`", "the string",
+"`str_c()`", " ..., `sep`, `collapse`", "a new concatenated string",
+"`str_sub()`",	"`x`, `start`, `end`", "a modified string",
 "`str_replace()`",	"`x`, `pattern`, `replacement`",	"a modified string",
 "`str_replace_all()`",	"`x`, `pattern`, `replacement`", "a modified string",
+"`str_detect()`",	"`x`, `pattern`",	"TRUE/FALSE",
 "`str_to_lower()`",	"`x`", "a modified string",
 "`str_to_upper()`",	"`x`", "a modified string",
-"`str_sub()`",	"`x`, `start`, `end`", "a modified string",
 "`str_length()`",	"`x`", "a number",
-"`str_detect()`",	"`x`, `pattern`",	"TRUE/FALSE") |> 
+) |> 
   kableExtra::kable()
 ```
 
 Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheatsheet</a>. 
+
+
+# `str_*()` functions on non-strings?
+
+Do the functions that were built to handle strings work if the variable is not a string?
+
+## Starbucks data
+
+::: {.panel-tabset}
+
+## data
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type)
+```
+
+## on factor
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type) |> 
+  mutate(TYPE = str_to_upper(type))
+```
+
+## on numeric
+
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type) |> 
+  filter(str_detect(fat, "1"))
+```
+
+## on integers
+
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type) |> 
+  mutate(newcal = str_replace(calories, "0", "&"))
+```
+
+
+:::
 
 
 # Agenda  2/19/25

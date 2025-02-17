@@ -886,23 +886,55 @@ band_members |>
 
 ---
 
-
-(@) What is the output of the following R code?[^39]
-   a. TRUE
-   b. TRUE TRUE TRUE TRUE
-   c. TRUE FALSE FALSE FALSE
-   d. FALSE
+(@) What is the output of the following R code?[^38b]
+   a. "a 1" "b 2" "c 3"
+   b. "a, 1" "b, 2" "c, 3"
+   c. "a1" "b2" "c3"
+   d. "a b c"  "1 2 3"
+   e. "abc" "123"
 
 ```{r}
 #| eval: false
 #| echo: true
-
-fruit <- c("apple", "banana", "pear", "pineapple")
-str_detect(fruit, "a")
+str_c(letters = c("a", "b", "c"),
+      numbers = c(1, 2, 3))
 ```
-  
 
-[^39]: b.  TRUE TRUE TRUE TRUE
+[^38b]: c. "a1" "b2" "c3"
+
+---
+
+
+(@) What is the output of the following R code?[^38c]
+   a. "a 1" "b 2" "c 3"
+   b. "a, 1" "b, 2" "c, 3"
+   c. "a1" "b2" "c3"
+   d. "a b c"  "1 2 3"
+   e. "abc" "123"
+
+```{r}
+#| eval: false
+#| echo: true
+str_c(letters = c("a", "b", "c"),
+      numbers = c(1, 2, 3), sep = " ")
+```
+
+[^38c]: a. "a 1" "b 2" "c 3"
+
+---
+
+(@) What is the output of the following R code?[^41]
+    a. "abc"  "hifg"
+    b. "ab"  "hifg"
+    c. "ab"  "ifg"
+    d. "abc" "ifg"
+
+```{r}
+#| eval: false
+#| echo: true
+x <- c("abcde", "ghifgh")
+str_sub(x, start = c(1, 3), end = c(2, 5))
+```
 
 ---
 
@@ -921,20 +953,25 @@ str_replace(fruits, c("a", "e", "i"), "-")
 
 ---
 
-(@) What is the output of the following R code?[^41]
-    a. "abc"  "hifg"
-    b. "ab"  "hifg"
-    c. "ab"  "ifg"
-    d. "abc" "ifg"
+[^41]: c. "ab"  "ifg"  Again, `str_sub()` is vectorized.  So the subset of string one is from 1 to 2.  The subset of string two is from 3 to 5.
+
+
+(@) What is the output of the following R code?[^39]
+   a. TRUE
+   b. TRUE TRUE TRUE TRUE
+   c. TRUE FALSE FALSE FALSE
+   d. FALSE
 
 ```{r}
 #| eval: false
 #| echo: true
-x <- c("abcde", "ghifgh")
-str_sub(x, start = c(1, 3), end = c(2, 5))
-```
 
-[^41]: c. "ab"  "ifg"  Again, `str_sub()` is vectorized.  So the subset of string one is from 1 to 2.  The subset of string two is from 3 to 5.
+fruit <- c("apple", "banana", "pear", "pineapple")
+str_detect(fruit, "a")
+```
+  
+
+[^39]: b.  TRUE TRUE TRUE TRUE
 
 ---
 
