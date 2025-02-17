@@ -65,33 +65,28 @@ Quantifiers specify how many repetitions of the pattern.
 #| eval: false
 
 strings <- c("a", "ab", "acb", "accb", "acccb", "accccb")
-grep("ac*b", strings, value = TRUE)
-grep("ac*b", strings, value = FALSE)
-grep("ac+b", strings, value = TRUE)
-grep("ac?b", strings, value = TRUE)
-grep("ac{2}b", strings, value = TRUE)
-grep("ac{2,}b", strings, value = TRUE)
-grep("ac{2,3}b", strings, value = TRUE)
+str_subset(strings, "ac*b") 
+str_subset(strings, "ac+b") 
+str_subset(strings, "ac*b", negate = TRUE)
+str_subset(strings, "ac?b") 
+str_subset(strings, "ac{2}b") 
+str_subset(strings, "ac{2,}b") 
+str_subset(strings, "ac{2,3}b")
 ```
-
-
-`grep()` stands for "global regular expression print".  `grep()` returns a character vector containing the selected elements, `grepl()` returns a logical vector of TRUE/FALSE for whether or not there was a match.
 
 ## Examples of quantifiers - solution {.scrollable}
 
 ```{r}
 strings <- c("a", "ab", "acb", "accb", "acccb", "accccb")
-grep("ac*b", strings, value = TRUE)
-grep("ac*b", strings, value = FALSE)
-grep("ac+b", strings, value = TRUE)
-grep("ac?b", strings, value = TRUE)
-grep("ac{2}b", strings, value = TRUE)
-grep("ac{2,}b", strings, value = TRUE)
-grep("ac{2,3}b", strings, value = TRUE)
+str_subset(strings, "ac*b") 
+str_subset(strings, "ac+b") 
+str_subset(strings, "ac*b", negate = TRUE)
+str_subset(strings, "ac?b") 
+str_subset(strings, "ac{2}b") 
+str_subset(strings, "ac{2,}b") 
+str_subset(strings, "ac{2,3}b")
 ```
 
-
-`grep()` stands for "global regular expression print".  `grep()` returns a character vector containing the selected elements, `grepl()` returns a logical vector of TRUE/FALSE for whether or not there was a match.
 
 ## Position of pattern within the string
 
@@ -106,10 +101,10 @@ grep("ac{2,3}b", strings, value = TRUE)
 #| eval: false
 
 strings <- c("abcd", "cdab", "cabd", "c abd")
-grep("ab", strings, value = TRUE)
-grep("^ab", strings, value = TRUE)
-grep("ab$", strings, value = TRUE)
-grep("\\bab", strings, value = TRUE)
+str_subset(strings, "ab")
+str_subset(strings, "^ab")
+str_subset(strings, "ab$")
+str_subset(strings, "\\bab")
 ```
 
 ## Examples of positions - solution
@@ -118,10 +113,10 @@ grep("\\bab", strings, value = TRUE)
 #| eval: true
 
 strings <- c("abcd", "cdab", "cabd", "c abd")
-grep("ab", strings, value = TRUE)
-grep("^ab", strings, value = TRUE)
-grep("ab$", strings, value = TRUE)
-grep("\\bab", strings, value = TRUE)
+str_subset(strings, "ab")
+str_subset(strings, "^ab")
+str_subset(strings, "ab$")
+str_subset(strings, "\\bab")
 ```
 
 
@@ -172,13 +167,13 @@ str_extract(strings, "^apple pie$")
 #| eval: false
 
 strings <- c("^ab", "ab", "abc", "abd", "abe", "ab 12", "a|b")
-grep("ab.", strings, value = TRUE)
-grep("ab[c-e]", strings, value = TRUE)
-grep("ab[^c]", strings, value = TRUE)
-grep("^ab", strings, value = TRUE)
-grep("\\^ab", strings, value = TRUE)
-grep("abc|abd", strings, value = TRUE)
-grep("a[b|c]", strings, value = TRUE)
+str_subset(strings, "ab.")
+str_subset(strings, "ab[c-e]")
+str_subset(strings, "ab[^c]")
+str_subset(strings, "^ab")
+str_subset(strings, "\\^ab")
+str_subset(strings, "abc|abd")
+str_subset(strings, "a[b|c]")
 str_extract(strings, "a[b|c]")
 ```
 
@@ -187,13 +182,13 @@ str_extract(strings, "a[b|c]")
 
 ```{r}
 strings <- c("^ab", "ab", "abc", "abd", "abe", "ab 12", "a|b")
-grep("ab.", strings, value = TRUE)
-grep("ab[c-e]", strings, value = TRUE)
-grep("ab[^c]", strings, value = TRUE)
-grep("^ab", strings, value = TRUE)
-grep("\\^ab", strings, value = TRUE)
-grep("abc|abd", strings, value = TRUE)
-grep("a[b|c]", strings, value = TRUE)
+str_subset(strings, "ab.")
+str_subset(strings, "ab[c-e]")
+str_subset(strings, "ab[^c]")
+str_subset(strings, "^ab")
+str_subset(strings, "\\^ab")
+str_subset(strings, "abc|abd")
+str_subset(strings, "a[b|c]")
 str_extract(strings, "a[b|c]")
 ```
 

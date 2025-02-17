@@ -1,7 +1,7 @@
 ---
 title: Variable Types
 author: "Jo Hardin"
-subtitle: "September 23 + 25, 2024"
+subtitle: "February 16 + 18, 2025"
 format:
   revealjs:
     incremental: false
@@ -19,6 +19,7 @@ execute:
 #| echo: false
 library(tidyverse)
 library(openintro)
+options(pillar.width = 70)
 ```
 
 
@@ -26,16 +27,25 @@ library(openintro)
 
 Some new variable types: 
 
+:::: {.columns}
+
+::: {.column width=50%}
 * character strings
 * factor variables
 * dates
-* numeric
-* logical
+:::
 
+
+::: {.column width=50%}
+* numeric (decimal)
+* integer
+* logical (Boolean)
+:::
+::::
 A variable's type determines the values that the variable can take on and the operations that can be performed on it.  Specifying variable types ensures the data's integrity and increases performance. 
 
 
-# Agenda  9/23/24
+# Agenda  2/17/25
 
 1. Character strings
 2. `str_*()` functions
@@ -145,17 +155,24 @@ str_detect(fruits, "a")
 
 ```{r}
 starwars |> 
-  select(name, films) |> 
-  str() 
+  select(name, films) 
 ```
 
-## filtered data
+## unnested data
+
+```{r}
+starwars |> 
+  select(name, films) |> 
+  unnest_wider(films, names_sep = "")
+```
+
+## filtered unnested data
 
 ```{r}
 starwars |> 
   filter(str_detect(films, "Empire")) |> 
   select(name, films) |> 
-  str()
+  unnest_wider(films, names_sep = "")
 ```
 :::
 
@@ -168,6 +185,7 @@ The **stringr** package within tidyverse contains lots of functions to help proc
 
 tribble(
   ~`str function`, ~arguments, ~returns,
+"`str_c()", " ..., `sep`, `collapse`", "a new concatenated string",
 "`str_replace()`",	"`x`, `pattern`, `replacement`",	"a modified string",
 "`str_replace_all()`",	"`x`, `pattern`, `replacement`", "a modified string",
 "`str_to_lower()`",	"`x`", "a modified string",
@@ -181,7 +199,7 @@ tribble(
 Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheatsheet</a>. 
 
 
-# Agenda  9/25/24
+# Agenda  2/19/25
 
 1. Factor variables
 2. Time and date objects
@@ -229,7 +247,7 @@ dream |>
 ```{r}
 dream |> 
   select(ideology) |> 
-  pull() |>  # levels() works only on vectors, not data frames
+  pull() |>  # because levels() works only on vectors, not data frames
   levels()
 ```
 
@@ -320,6 +338,16 @@ starbucks |>
  
 ```
 
+## For funzies
+
+```{r}
+#| echo: true
+#| error: true
+
+starbucks |> 
+  mutate(type = fct_reorder(fiber, calories, .fun = "mean", .desc = TRUE)) 
+
+```
 :::
 
 ## Change character to factor
@@ -362,7 +390,7 @@ The **forcats** package within tidyverse contains lots of functions to help proc
 
 If the variable is formatted as a time or date object, you will find that there are very convenient ways to access, wrangle, and plot the information.
 
-There are three types of date/time data that refer to an instant in time:
+There are 3 types of date/time data that refer to an instant in time:
 
 A **date**. Tibbles print this as `<date>`.
 
