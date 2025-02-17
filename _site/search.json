@@ -11071,7 +11071,7 @@
     "href": "slides/2025-02-17-types.html#str_detect",
     "title": "Variable Types",
     "section": "str_detect()",
-    "text": "str_detect()\n\nstr_detect(fruits, \"a\")\n\n[1] FALSE  TRUE  TRUE"
+    "text": "str_detect()\n\nfruits\n\n[1] \"Apple\"  \"Banana\" \"Pear\"  \n\nstr_detect(fruits, \"a\")\n\n[1] FALSE  TRUE  TRUE"
   },
   {
     "objectID": "slides/2025-02-17-types.html#str_detect-in-pipeline",
@@ -11085,7 +11085,7 @@
     "href": "slides/2025-02-17-types.html#stringr-functions",
     "title": "Variable Types",
     "section": "stringr functions",
-    "text": "stringr functions\nThe stringr package within tidyverse contains lots of functions to help process strings. Letting x be a string variable…\n\n\n\n\n\n\n\n\n\n\nstr function\narguments\nreturns\n\n\n\n\nstr_vew()\nx\nthe string\n\n\nstr_c()\n…, sep, collapse\na new concatenated string\n\n\nstr_sub()\nx, start, end\na modified string\n\n\nstr_replace()\nx, pattern, replacement\na modified string\n\n\nstr_replace_all()\nx, pattern, replacement\na modified string\n\n\nstr_detect()\nx, pattern\nTRUE/FALSE\n\n\nstr_to_lower()\nx\na modified string\n\n\nstr_to_upper()\nx\na modified string\n\n\nstr_length()\nx\na number\n\n\n\n\n\nUse the stringr cheatsheet."
+    "text": "stringr functions\nThe stringr package within tidyverse contains lots of functions to help process strings. Letting x be a string variable…\n\n\n\n\n\n\n\n\n\n\nstr function\narguments\nreturns\n\n\n\n\nstr_view()\nx\nthe string\n\n\nstr_c()\n…, sep, collapse\na new concatenated string\n\n\nstr_sub()\nx, start, end\na modified string\n\n\nstr_replace()\nx, pattern, replacement\na modified string\n\n\nstr_replace_all()\nx, pattern, replacement\na modified string\n\n\nstr_detect()\nx, pattern\nTRUE/FALSE\n\n\nstr_to_lower()\nx\na modified string\n\n\nstr_to_upper()\nx\na modified string\n\n\nstr_length()\nx\na number\n\n\n\n\n\nUse the stringr cheatsheet."
   },
   {
     "objectID": "slides/2025-02-17-types.html#where-do-we-order",
@@ -11148,7 +11148,7 @@
     "href": "slides/2025-02-17-types.html#what-time-is-it",
     "title": "Variable Types",
     "section": "What time is it?",
-    "text": "What time is it?\n\ntoday()\n\n[1] \"2025-02-17\"\n\nnow()\n\n[1] \"2025-02-17 10:06:50 PST\""
+    "text": "What time is it?\n\ntoday()\n\n[1] \"2025-02-17\"\n\nnow()\n\n[1] \"2025-02-17 11:57:24 PST\""
   },
   {
     "objectID": "slides/2025-02-17-types.html#creating-dates",
@@ -11197,14 +11197,14 @@
     "href": "slides/2025-02-17-types.html#basics-in-lubridate",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2025-02-17 10:06:50 PST\"\n\nday(rightnow)\n\n[1] 17\n\nweek(rightnow)\n\n[1] 7\n\nmonth(rightnow, label=FALSE)\n\n[1] 2\n\nmonth(rightnow, label=TRUE)\n\n[1] Feb\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2025"
+    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2025-02-17 11:57:24 PST\"\n\nday(rightnow)\n\n[1] 17\n\nweek(rightnow)\n\n[1] 7\n\nmonth(rightnow, label=FALSE)\n\n[1] 2\n\nmonth(rightnow, label=TRUE)\n\n[1] Feb\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2025"
   },
   {
     "objectID": "slides/2025-02-17-types.html#basics-in-lubridate-1",
     "href": "slides/2025-02-17-types.html#basics-in-lubridate-1",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 6\n\nhour(rightnow)\n\n[1] 10\n\nyday(rightnow)\n\n[1] 48\n\nmday(rightnow)\n\n[1] 17\n\nwday(rightnow, label=FALSE)\n\n[1] 2\n\nwday(rightnow, label=TRUE)\n\n[1] Mon\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
+    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 57\n\nhour(rightnow)\n\n[1] 11\n\nyday(rightnow)\n\n[1] 48\n\nmday(rightnow)\n\n[1] 17\n\nwday(rightnow, label=FALSE)\n\n[1] 2\n\nwday(rightnow, label=TRUE)\n\n[1] Mon\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
   },
   {
     "objectID": "slides/2025-02-17-types.html#working-with-a-date-object",

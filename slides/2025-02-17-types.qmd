@@ -149,6 +149,7 @@ str_replace_all(fruits, "a", "x")
 ## `str_detect()`
 
 ```{r}
+fruits
 str_detect(fruits, "a")
 ```
 
@@ -193,7 +194,7 @@ The **stringr** package within tidyverse contains lots of functions to help proc
 
 tribble(
   ~`str function`, ~arguments, ~returns,
-"`str_vew()`", "`x`", "the string",
+"`str_view()`", "`x`", "the string",
 "`str_c()`", " ..., `sep`, `collapse`", "a new concatenated string",
 "`str_sub()`",	"`x`, `start`, `end`", "a modified string",
 "`str_replace()`",	"`x`, `pattern`, `replacement`",	"a modified string",
