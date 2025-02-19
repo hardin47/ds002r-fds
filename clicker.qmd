@@ -975,9 +975,63 @@ str_detect(fruit, "a")
 
 ---
 
+(@) If unspecified, the levels of a factor variable will be ordered:[^39b]
+    a. in the order that they first show up in the dataset
+    b. from shortest to longest in terms of characters
+    c. from longest to shortest in terms of characters
+    d. alphabetically, from a to z
+    e. alphabetically, from z to a
+    
+[^39b]: d. alphabetically, from a to z
+
+---
+
+(@) What does this code do?[^39c]
+    a. New variable which is the average of the `calories`
+    b. New variable which is the average of the `type`
+    c. Changes the values of `type`
+    d. Changes the levels of `type`
+    e. Changes the order of the levels of `type`
+
+```{r}
+#| eval: false
+#| echo: true
+
+starbucks |> 
+  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE))
+
+```
+
+[^39c]: e. Changes the order of the levels of `type`
+
+
+---
+
+(@) What does `fct_recode()` do here?[^39d]
+    a. Creates a new variable
+    b. Changes the values of `x`
+    c. Changes the levels of `x`
+    d. Changes the order of the levels of `x`
+    e. Some of the above
+    f. All of the above
+
+```{r}
+#| eval: false
+#| echo: true
+
+x <- factor(c("apple", "bear", "dear", "banana"))
+x
+fct_recode(x, fruit = "apple", fruit = "banana")
+
+```
+
+[^39d]: e. Some of the above (b. Changes the values of `x` and c. Changes the levels of `x` and sort of d. Changes the order of the levels of `x`, jut by the nature of c.)
+
+---
+
 (@) What is January 31 + one month?[^42]
     a. February 31
-    b. March 4
+    b. March 3
     c. February 28 (assuming no leap year)
     d. I don't want to answer the question
     

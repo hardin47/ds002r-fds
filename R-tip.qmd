@@ -45,8 +45,9 @@ schedule <- tribble(
   
   'Tip 10', 'cmd + shift + M', 'produces a pipe',  'cntrl + shift + M for PC <br> Tools -> Global Options... -> Code to get the native pipe',
   
-  'Tip 11', 'opt + -', "produces the assignment operator, `<-`", ' '
+  'Tip 11', 'opt + -', "produces the assignment operator, `<-`", ' ',
   
+  'Tip 12', 'R was adopted as an open source version of S', ' ', 'It was written by Ross Ihaka and Robert Gentleman, which is why they called it R'
   
 )
 ```

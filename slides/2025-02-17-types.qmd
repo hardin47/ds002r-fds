@@ -49,7 +49,7 @@ A variable's type determines the values that the variable can take on and the op
 
 1. Character strings
 2. `str_*()` functions
-3. Factor variables
+
 
 
 # Character strings
@@ -261,8 +261,8 @@ starbucks |>
 
 # Agenda  2/19/25
 
-1. Factor variables
-2. Time and date objects
+1. Factor variables, `fct_*()` functions
+2. Time and date objects, **lubridate** package
 
 
 # Factor variables
@@ -276,7 +276,7 @@ The computer actually stores them as *integers* (?!?!!?) with a label (abbreviat
 
 ## Where do we order?
 
-The ordering of the factor variable comes out in:
+The ordering of the factor variable is important in:
 
 * plots (e.g., barplots)
 * tables (e.g., `group_by()`)
@@ -303,6 +303,8 @@ dream |>
 ```
 
 ## Levels
+
+The `levels()` function reports the levels and their order.
 
 ```{r}
 dream |> 
@@ -410,6 +412,52 @@ starbucks |>
 ```
 :::
 
+## What really are levels?
+
+::: {.panel-tabset}
+
+## recode
+
+```{r}
+x <- factor(c("apple", "bear", "dear", "banana"))
+x
+
+fct_recode(x, fruit = "apple", fruit = "banana")
+```
+## rewrite
+
+```{r}
+data.frame(words = x) |> 
+  mutate(x_recode = fct_recode(words, fruit = "apple", fruit = "banana"),
+         x_rewrite = ifelse(words == "apple", "fruit",
+                            ifelse(words == "banana", "fruit", words))) |> 
+  str()
+```
+
+
+## mistake
+
+```{r}
+# If you make a mistake you'll get a warning
+fct_recode(x, fruit = "apple", fruit = "bananana")
+```
+
+## NULL
+
+```{r}
+# If you name the level NULL it will be removed
+fct_recode(x, NULL = "apple", fruit = "banana")
+```
+
+## special variables
+
+```{r}
+# Wrap the left hand side in quotes if it contains special variables
+fct_recode(x, "an apple" = "apple", "a bear" = "bear")
+```
+
+:::
+
 ## Change character to factor
 
 ::: {.panel-tabset}
@@ -443,6 +491,7 @@ The **forcats** package within tidyverse contains lots of functions to help proc
 * functions for changing the **labels** or values of factor levels
     - `fct_recode()` = *manually* change levels
     - `fct_lump()` = *group together*  least common levels
+    - `fct_other()` = manually replace some levels with "other"
 
 
 
@@ -499,7 +548,7 @@ More <a href = "https://r4ds.hadley.nz/datetimes#time-zones" target = "_blank">i
 
 In particular, **lubridate** makes it very easy to work with days, times, and dates.  The base idea is to start with dates in a `ymd` (year month day) format and transform the information into whatever you want.  
 
-Example from the <a href = "https://lubridate.tidyverse.org/reference/lubridate-package.html" target = "_blank">lubridate vignette</a>.
+Examples from the <a href = "https://lubridate.tidyverse.org/reference/lubridate-package.html" target = "_blank">lubridate vignette</a>.
 
  
 
@@ -519,7 +568,7 @@ The length of months and years change so often that doing arithmetic with them c
 Should the answer be:
   
 1. February 31st (which doesn't exist)?
-2. March 4th (31 days after January 31)?
+2. March 3rd (31 days after January 31)?
 3. February 28th (assuming its not a leap year)?
 
 ## If anyone drove a time machine, they would crash
