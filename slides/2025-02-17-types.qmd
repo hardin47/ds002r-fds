@@ -526,18 +526,18 @@ now()
 `ymd()` and friends create dates
 
 ```{r}
-ymd("2024-09-25")
-mdy("September 25th, 2024")
-dmy("25-Sep-2024")
+ymd("2025-02-19")
+mdy("February 19th, 2025")
+dmy("19-Feb-2025")
 ```
 ## ... with times
 
 To create a date-time, add an underscore and one or more of "h", "m", and "s" to the name of the parsing function:
 
 ```{r}
-ymd_hms("2024-09-25 11:45:59", tz = "America/Los_Angeles")
+ymd_hms("2025-02-19 11:45:59", tz = "America/Los_Angeles")
 
-mdy_hm("09/25/2024 15:01")  # default is UTC = GMT
+mdy_hm("02/19/2025 15:01")  # default is UTC = GMT
 ```
 
 More <a href = "https://r4ds.hadley.nz/datetimes#time-zones" target = "_blank">information about time zones in R</a>.
@@ -609,18 +609,31 @@ wday(rightnow, label=TRUE)
 
 ## Working with a date object
 
-```{r}
-jan31 <- ymd("2024-01-31")
-jan31 + months(0:11)
 
+```{r}
+jan31 <- ymd("2025-01-31")
+jan31 + months(0:11)
+```
+
+. . .
+
+```{r}
 floor_date(jan31, "month")
 floor_date(jan31, "month") + months(0:11) + days(31)
-jan31 + months(0:11) + days(31)
+```
 
+. . .
+
+```{r}
+jan31 + months(0:11) + days(31)
+```
+
+. . .
+
+```{r}
 jan31 %m+% months(0:11)
 ```
 
- 
 
 ## NYC flights 
 ```{r message=FALSE}
@@ -636,12 +649,12 @@ Creating a date object from variables.
 
 ```{r message=FALSE}
 flightsWK <- flights |>  
-   mutate(ymdday = ymd(paste(year, month,day, sep="-"))) |> 
+   mutate(ymdday = ymd(str_c(year, month, day, sep="-"))) |> 
    mutate(weekdy = wday(ymdday, label=TRUE), 
           whichweek = week(ymdday)) 
 
 flightsWK |>  select(year, month, day, ymdday, weekdy, whichweek, 
-                     dep_time, arr_time, air_time) 
+                     dep_time, arr_time) 
 ```
 
 

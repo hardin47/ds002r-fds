@@ -1050,7 +1050,7 @@ fct_recode(x, fruit = "apple", fruit = "banana")
 #| eval: false
 #| echo: true
 library(lubridate)
-today <- ymd("2024-09-25")
+today <- ymd("2025-02-19")
 month(today)
 month(today, label = TRUE)
 ```
@@ -1060,18 +1060,18 @@ month(today, label = TRUE)
 ---
 
 (@) What does this number mean?[^44]
-    a. Today is the 39th day of the month.
-    b. Today is the 39th day of the year.
-    c. Today is the 39th week of the month.
-    d. Today is the 39th week of the year.
+    a. Today is the 8th day of the month.
+    b. Today is the 8th day of the year.
+    c. Today is the 8th week of the month.
+    d. Today is the 8th week of the year.
 
 ```{r}
 #| echo: true
-today <- ymd("2024-09-25")
+today <- ymd("2025-02-19")
 week(today)
 ```
 
-[^44]: d. Today is the 39th week of the year.
+[^44]: d. Today is the 8th week of the year.
 
 ---
 
@@ -1091,11 +1091,20 @@ yday(today)
 
 ---
 
+```{r}
+#| echo: true
+#| eval: true
+mday(today)
+yday(today)
+```
+
+---
+
 (@) What is the result of the code?[^46]
     a. TRUE
     b. FALSE
     c. "2025-09-01"
-    d. "2025-09-25"
+    d. "2025-02-19"
     
 ```{r}
 #| echo: true
