@@ -78,7 +78,7 @@ schedule <- tribble(
      "Week 6 <br> 2.24.25", 'Regular Expressions', 
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-30-regex.html" target = "_blank">Regular expressions</a>',
 
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 4</a> - due 2.24.25 <br> Quiz 2 2.26.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 4</a> - due 2.25.25 (Tuesday going forward) <br> Quiz 2 2.26.25',
   ' ',
 
   
@@ -91,14 +91,14 @@ schedule <- tribble(
   
      "Week 8 <br> 3.10.25", 'code review + <br> reprex', 
  '{{< fa book-open >}} <a href="https://www.tidyverse.org/help/" target = "_blank"> reproducible examples</a> <br>  {{< fa book-open >}} <a href="https://style.tidyverse.org/" target = "_blank"> Tidyverse style guide</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/16-reprex.html" target = "_blank">Reproducible examples</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-16-help.html" target = "_blank">help me help you</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 5</a> - due 3.10.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 5</a> - due 3.11.25',
   ' ',
 
   
      "Week 9 <br> 3.24.25", 'iterations + <br> simulations', 
  '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Iterations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-21-iters.html" target = "_blank">Iterations</a>',
 
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 6</a> - due 3.24.25 <br> Quiz 3 3.26.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 6</a> - due 3.25.25 <br> Quiz 3 3.26.25',
 
   ' ',
 
@@ -111,7 +111,7 @@ schedule <- tribble(
   
      "Week 11 <br> 4.7.25", 'web scraping', 
  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-04-webscrape.html" target = "_blank">Web scraping</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 7</a> - due 4.7.25 <br> Quiz 4 4.9.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 7</a> - due 4.8.25 <br> Quiz 4 4.9.25',
 
   ' ',
   
@@ -124,7 +124,7 @@ schedule <- tribble(
   
      "Week 13 <br> 4.21.25", 'SQL', 
  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/06-sql-joins.html" target = "_blank">SQL joins</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-18-joins.html" target = "_blank">SQL joins</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 8</a> - due 4.21.25 <br> Quiz 5 4.23.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 8</a> - due 4.22.25 <br> Quiz 5 4.23.25',
   ' ',
 
      "Week 14 <br> 4.28.25", 'Shiny', 
