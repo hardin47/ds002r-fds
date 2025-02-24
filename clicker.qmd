@@ -1136,7 +1136,7 @@ today > ymd("2025-09-01")
     (d) "gr[a|e]y"
     (e) some / all of the above -- which ones?
 
-[^48]: e. all of the above. Inside a character class `|` is a normal character and would therefore match "grey" and "gray" and "gr|y".  Which is not what we want, but would work to match both "grey" and "gray".
+[^48]: e. some of the above. d. Inside a character class `|` is a normal character and would therefore match "grey" and "gray" and "gr|y".  Which is not what we want, but would work to match both "grey" and "gray". c. would not match with `str_extract()` (but might match in other parsers that ignored spaces).
 
 
 ---

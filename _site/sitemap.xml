@@ -166,7 +166,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/clicker.html</loc>
-    <lastmod>2025-02-19T18:15:38.790Z</lastmod>
+    <lastmod>2025-02-24T18:27:20.555Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/clicker_study.html</loc>
@@ -327,5 +327,9 @@
   <url>
     <loc>https://ds002r-fds.netlify.app/slides/2025-02-17-types.html</loc>
     <lastmod>2025-02-19T18:27:14.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2025-02-24-regex.html</loc>
+    <lastmod>2025-02-24T18:20:26.569Z</lastmod>
   </url>
 </urlset>
