@@ -30,6 +30,7 @@ For each of the two analyses, find a TidyTuesday dataset and create a plot (star
 * Each TidyTuesday analysis has a separate .qmd file.
 * The two analyses compile to html and are linked via a drop-down menu (see example `_quarto.yml` file below).
 * You should both *link* to the TidyTuesday resource (giving it credit) **and** give a full citation of the original data (that is, credit the original source which is almost surely different from the TidyTuesday link).
+* Remove all messages and warnings (see the YAML on any HW assignment for the code).
 * There should be some words to introduce the dataset, etc.
 
 ````
