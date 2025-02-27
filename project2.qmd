@@ -6,18 +6,15 @@ format: html
 ---
 
 
-Project instructions to come!
-
-<!--
-
 ### Overview
 
-You will find a data set containing string data.  The data could be on newspaper articles, tweets, songs, plays, movie reviews, or anything else you can imagine.  Then you will answer questions of interest and tell a story about your data using string and regular expression skills you have developed.
+You will find a data set containing string / character data.  The data could be on newspaper articles, tweets, songs, scripts, movie reviews, or anything else you can imagine.  Then you will answer questions of interest and tell a story about your data using the string and regular expression skills you have developed.
 
 Your analysis must contain the following elements:
 
-- at least 3 `str_*()` functions
+- at least 3 `str_*()` functions (3 different functions)
 - at least 3 regular expressions
+- at least 1 lookaround
 - at least 2 illustrative, well-labeled plots or tables
 - a description of what insights can be gained from your plots and tables
 - a reference / documentation of the data source.
@@ -25,11 +22,11 @@ Your analysis must contain the following elements:
 
 Logistics:
 
-- please include all your code used in the analysis.
+- please include all your code used in the analysis (but feel free to use code folding^[code folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code].)
 - make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
-- do not include superfluous error or warning messages.
+- do not include error or warning messages (see HW YAML for code).
 - include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
-- please include the source of the data (which includes both the link to the TidyTuesday page + the original source of the information).
+- please include the source of the data (which might include, for example, both the link to the data source (e.g., TidyTuesday page) + the original source of the data (e.g., NYT)).
 
 
 ### Some potential places to find text data
@@ -92,6 +89,5 @@ as_tibble(NYTimes)
 
 ### Timeline
 
-Mini-Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 2**.  You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page's URL.
+Mini-Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday March 5**.  You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page's URL.
 
--->

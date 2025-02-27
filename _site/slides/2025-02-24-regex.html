@@ -312,9 +312,7 @@ Jo Hardin
 </li>
 <li><code>$</code>: matches the end of the string.<br>
 </li>
-<li><code>\b</code>: matches the boundary of a <em>word</em>. Don’t confuse it with <code>^ $</code> which marks the edge of a <em>string</em>.<sup>1</sup><br>
-</li>
-<li><code>\B</code>: matches the empty string provided it is not at an edge of a word.</li>
+<li><code>\b</code>: matches the boundary of a <em>word</em>. Don’t confuse it with <code>^ $</code> which marks the edge of a <em>string</em>.<sup>1</sup></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>A word boundary is a position between a word character (typically [A-Za-z0-9_]) and a non-word character (anything that is not a word character, such as whitespace, punctuation, etc.).</p></li></ol></aside></section>
 <section id="examples-of-positions" class="slide level2">
@@ -498,7 +496,7 @@ Jo Hardin
 <h2>Character classes</h2>
 <p>Character classes allow specifying entire classes of characters, such as numbers, letters, etc. There are two flavors of character classes, one uses <code>[:</code> and <code>:]</code> around a predefined name inside square brackets and the other uses <code>\</code> and a special character. They are sometimes interchangeable.</p>
 <ul>
-<li>(?i) before the string indicates that the match should be case insensitive (will make the entire string case insensitive).</li>
+<li>(?i) before the string indicates that the match should be case insensitive (will make the <em>entire string</em> case insensitive).</li>
 <li><code>[:digit:]</code> or <code>\d</code>: digits, 0 1 2 3 4 5 6 7 8 9, equivalent to <code>[0-9]</code>.<br>
 </li>
 <li><code>\D</code>: non-digits, equivalent to <code>[^0-9]</code>.<br>
@@ -538,6 +536,7 @@ Jo Hardin
 <li><code>[^\s]</code> and <code>[\S]</code> are functionally equivalent</li>
 <li>The pattern <code>[\s\S]</code> matches any character including newlines and tabs.</li>
 <li><code>\w</code> matches any single word character (including letters, digits, and the underscore character <code>_</code>)</li>
+<li><code>\B</code>: matches the empty string provided it is not at an edge of a word.</li>
 </ul>
 </section></section>
 <section>

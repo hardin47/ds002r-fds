@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.36">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -37,10 +71,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-99ea18842df93e310e1b06c91aebad21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-643cb54a90563409bf607ca7ddb324ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -192,121 +226,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Project instructions to come!</p>
-<!--
-
-### Overview
-
-You will find a data set containing string data.  The data could be on newspaper articles, tweets, songs, plays, movie reviews, or anything else you can imagine.  Then you will answer questions of interest and tell a story about your data using string and regular expression skills you have developed.
-
-Your analysis must contain the following elements:
-
-- at least 3 `str_*()` functions
-- at least 3 regular expressions
-- at least 2 illustrative, well-labeled plots or tables
-- a description of what insights can be gained from your plots and tables
-- a reference / documentation of the data source.
-
-
-Logistics:
-
-- please include all your code used in the analysis.
-- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
-- do not include superfluous error or warning messages.
-- include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
-- please include the source of the data (which includes both the link to the TidyTuesday page + the original source of the information).
-
-
-### Some potential places to find text data
-
-I've gathered some potential datasets for you to work with.  All of the datasets below contain some or a lot of text.
-
-* <a href = "https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-17/readme.md" target = "_blank"> Shakespeare Dialogue</a> 
-
-* <a href = "https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-20/readme.md" target = "_blank">Netflix titles</a>
-
-* <a href = "https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-28/readme.md" target = "_blank">synopses data frame</a> for Broadway Weekly Grosses
-
-* <a href = "https://github.com/EmilHvitfeldt/friends" target = "_blank">Friends dialogue</a>
-
-* <a href = "https://github.com/nicholasjhorton/FederalistPapers/" target = "_blank">Federalist Papers</a>
-   - Load the package into R using
-   
-
-
-::: {.cell}
-
-```{.r .cell-code}
-install.packages("devtools")
-devtools::install_github("nicholasjhorton/FederalistPapers")
-```
-:::
-
-
-
-
-* All of <a href = "https://github.com/Amherst-Statistics/DickinsonPoems" target = "_blank">Emily Dickinson's poems</a>
-    - Load the package into R using
-    
-
-
-::: {.cell}
-
-```{.r .cell-code}
-devtools::install_github("Amherst-Statistics/DickinsonPoems")
-```
-:::
-
-
-
-* <a href = "https://www.kaggle.com/datasets/fabriziocominetti/the-office-lines" target = "_blank">Every line of the office</a>
-
-* All of <a href = "https://www.obamalibrary.gov/digital-research-room/archived-white-house-websites-and-social-media" target = "_target">Barack Obama's tweets</a> archived by the National Archives.
-
-* The "Dear Abby" stories underlying The Pudding’s <a href = "https://pudding.cool/2018/11/dearabby/" target = "_blank">30 Years of American Anxieties article</a>
-    - See data on the <a href = "https://github.com/the-pudding/data/tree/master/dearabby" target = "_blank">The Pudding's GitHub site</a>
-    - Load the data in using
-    
-
-
-::: {.cell}
-
-```{.r .cell-code}
-read_csv("https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv")
-```
-:::
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p>You will find a data set containing string / character data. The data could be on newspaper articles, tweets, songs, scripts, movie reviews, or anything else you can imagine. Then you will answer questions of interest and tell a story about your data using the string and regular expression skills you have developed.</p>
+<p>Your analysis must contain the following elements:</p>
+<ul>
+<li>at least 3 <code>str_*()</code> functions (3 different functions)</li>
+<li>at least 3 regular expressions</li>
+<li>at least 1 lookaround</li>
+<li>at least 2 illustrative, well-labeled plots or tables</li>
+<li>a description of what insights can be gained from your plots and tables</li>
+<li>a reference / documentation of the data source.</li>
+</ul>
+<p>Logistics:</p>
+<ul>
+<li>please include all your code used in the analysis (but feel free to use code folding<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.)</li>
+<li>make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).</li>
+<li>do not include error or warning messages (see HW YAML for code).</li>
+<li>include a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.</li>
+<li>please include the source of the data (which might include, for example, both the link to the data source (e.g., TidyTuesday page) + the original source of the data (e.g., NYT)).</li>
+</ul>
+</section>
+<section id="some-potential-places-to-find-text-data" class="level3">
+<h3 class="anchored" data-anchor-id="some-potential-places-to-find-text-data">Some potential places to find text data</h3>
+<p>I’ve gathered some potential datasets for you to work with. All of the datasets below contain some or a lot of text.</p>
+<ul>
+<li><p><a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-17/readme.md" target="_blank"> Shakespeare Dialogue</a></p></li>
+<li><p><a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-04-20/readme.md" target="_blank">Netflix titles</a></p></li>
+<li><p><a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-28/readme.md" target="_blank">synopses data frame</a> for Broadway Weekly Grosses</p></li>
+<li><p><a href="https://github.com/EmilHvitfeldt/friends" target="_blank">Friends dialogue</a></p></li>
+<li><p><a href="https://github.com/nicholasjhorton/FederalistPapers/" target="_blank">Federalist Papers</a></p>
+<ul>
+<li>Load the package into R using</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"nicholasjhorton/FederalistPapers"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>All of <a href="https://github.com/Amherst-Statistics/DickinsonPoems" target="_blank">Emily Dickinson’s poems</a>
+<ul>
+<li>Load the package into R using</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"Amherst-Statistics/DickinsonPoems"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p><a href="https://www.kaggle.com/datasets/fabriziocominetti/the-office-lines" target="_blank">Every line of the office</a></p></li>
+<li><p>All of <a href="https://www.obamalibrary.gov/digital-research-room/archived-white-house-websites-and-social-media" target="_target">Barack Obama’s tweets</a> archived by the National Archives.</p></li>
+<li><p>The “Dear Abby” stories underlying The Pudding’s <a href="https://pudding.cool/2018/11/dearabby/" target="_blank">30 Years of American Anxieties article</a></p>
+<ul>
+<li>See data on the <a href="https://github.com/the-pudding/data/tree/master/dearabby" target="_blank">The Pudding’s GitHub site</a></li>
+<li>Load the data in using</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p><a href="https://github.com/the-pudding/data" target="_blank">Other articles from The Pudding</a></p></li>
+<li><p>NY Times headlines from the RTextTools package (see below)</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RTextTools) </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(NYTimes)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">as_tibble</span>(NYTimes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>the options are endless – be resourceful and creative!</li>
+</ul>
+</section>
+<section id="timeline" class="level3">
+<h3 class="anchored" data-anchor-id="timeline">Timeline</h3>
+<p>Mini-Project 2 must be submitted on Canvas (not Gradescope) by <strong>11:59 PM on Wednesday March 5</strong>. You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page’s URL.</p>
 
 
-
-- <a href = "https://github.com/the-pudding/data" target = "_blank">Other articles from The Pudding</a>
-
-- NY Times headlines from the RTextTools package (see below)
+</section>
 
 
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-::: {.cell}
-
-```{.r .cell-code}
-library(RTextTools) 
-data(NYTimes)
-as_tibble(NYTimes)
-```
-:::
-
-
-
-- the options are endless -- be resourceful and creative!
-
-
-### Timeline
-
-Mini-Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 2**.  You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page's URL.
-
--->
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<ol>
+<li id="fn1"><p>code folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

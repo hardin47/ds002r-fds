@@ -94,7 +94,7 @@ str_subset(strings, "ac{2,3}b")
   * `^`: matches the start of the string.   
   * `$`: matches the end of the string.   
   * `\b`: matches the boundary of a _word_. Don't confuse it with `^ $` which marks the edge of a _string_.^[A word boundary is a position between a word character (typically [A-Za-z0-9_]) and a non-word character (anything that is not a word character, such as whitespace, punctuation, etc.).]   
-  * `\B`: matches the empty string provided it is not at an edge of a word.
+
 
 ## Examples of positions
 
@@ -208,7 +208,7 @@ str_extract(strings, "a[b|c]")
 
 Character classes allow specifying entire classes of characters, such as numbers, letters, etc. There are two flavors of character classes, one uses `[:` and `:]` around a predefined name inside square brackets and the other uses `\` and a special character. They are sometimes interchangeable.   
 
-  * (?i) before the string indicates that the match should be case insensitive (will make the entire string case insensitive).
+  * (?i) before the string indicates that the match should be case insensitive (will make the *entire string* case insensitive).
   * `[:digit:]` or `\d`: digits, 0 1 2 3 4 5 6 7 8 9, equivalent to `[0-9]`.  
   * `\D`: non-digits, equivalent to `[^0-9]`.  
   * `[:lower:]`: lower-case letters, equivalent to `[a-z]`.  
@@ -235,7 +235,8 @@ Character classes allow specifying entire classes of characters, such as numbers
 * `[^\s]` and `[\S]` are functionally equivalent
 * The pattern `[\s\S]` matches any character including newlines and tabs.
 * `\w` matches any single word character (including letters, digits, and the underscore character `_`)
-
+* `\B`: matches the empty string provided it is not at an edge of a word.
+  
 # Some examples
 
 More examples for practice!

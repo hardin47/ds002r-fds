@@ -2888,7 +2888,7 @@
     "href": "project2.html",
     "title": "Project 2",
     "section": "",
-    "text": "Project instructions to come!\n\n\n\n\nReuseCC BY 4.0"
+    "text": "You will find a data set containing string / character data. The data could be on newspaper articles, tweets, songs, scripts, movie reviews, or anything else you can imagine. Then you will answer questions of interest and tell a story about your data using the string and regular expression skills you have developed.\nYour analysis must contain the following elements:\n\nat least 3 str_*() functions (3 different functions)\nat least 3 regular expressions\nat least 1 lookaround\nat least 2 illustrative, well-labeled plots or tables\na description of what insights can be gained from your plots and tables\na reference / documentation of the data source.\n\nLogistics:\n\nplease include all your code used in the analysis (but feel free to use code folding1.)\nmake sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).\ndo not include error or warning messages (see HW YAML for code).\ninclude a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.\nplease include the source of the data (which might include, for example, both the link to the data source (e.g., TidyTuesday page) + the original source of the data (e.g., NYT))."
   },
   {
     "objectID": "project3.html",
@@ -11295,7 +11295,7 @@
     "href": "slides/2025-02-24-regex.html#position-of-pattern-within-the-string",
     "title": "Regular Expressions",
     "section": "Position of pattern within the string",
-    "text": "Position of pattern within the string\n\n^: matches the start of the string.\n\n$: matches the end of the string.\n\n\\b: matches the boundary of a word. Don’t confuse it with ^ $ which marks the edge of a string.1\n\n\\B: matches the empty string provided it is not at an edge of a word.\n\nA word boundary is a position between a word character (typically [A-Za-z0-9_]) and a non-word character (anything that is not a word character, such as whitespace, punctuation, etc.)."
+    "text": "Position of pattern within the string\n\n^: matches the start of the string.\n\n$: matches the end of the string.\n\n\\b: matches the boundary of a word. Don’t confuse it with ^ $ which marks the edge of a string.1\n\nA word boundary is a position between a word character (typically [A-Za-z0-9_]) and a non-word character (anything that is not a word character, such as whitespace, punctuation, etc.)."
   },
   {
     "objectID": "slides/2025-02-24-regex.html#examples-of-positions",
@@ -11358,7 +11358,7 @@
     "href": "slides/2025-02-24-regex.html#thoughts-on-characters-and-spaces",
     "title": "Regular Expressions",
     "section": "Thoughts on characters and spaces",
-    "text": "Thoughts on characters and spaces\n\n. matches any single character except a newline \\n.\n. does match whitespace (e.g., a space or tab)\n\\s matches any whitespace including: spaces, tabs, new lines, and carriage returns\n[ \\t] matches spaces and tabs only (not new lines or carriage returns)\n[^\\s] matches any character except whitespace (including spaces, tabs, and new lines)\n[^\\s] and [\\S] are functionally equivalent\nThe pattern [\\s\\S] matches any character including newlines and tabs.\n\\w matches any single word character (including letters, digits, and the underscore character _)"
+    "text": "Thoughts on characters and spaces\n\n. matches any single character except a newline \\n.\n. does match whitespace (e.g., a space or tab)\n\\s matches any whitespace including: spaces, tabs, new lines, and carriage returns\n[ \\t] matches spaces and tabs only (not new lines or carriage returns)\n[^\\s] matches any character except whitespace (including spaces, tabs, and new lines)\n[^\\s] and [\\S] are functionally equivalent\nThe pattern [\\s\\S] matches any character including newlines and tabs.\n\\w matches any single word character (including letters, digits, and the underscore character _)\n\\B: matches the empty string provided it is not at an edge of a word."
   },
   {
     "objectID": "slides/2025-02-24-regex.html#case-insenstive",
@@ -11646,5 +11646,12 @@
     "title": "Regular Expressions",
     "section": "Examples of operators - solution {.scrollable}1",
     "text": "Examples of operators - solution {.scrollable}1\n\nstrings &lt;- c(\"^ab\", \"ab\", \"abc\", \"abd\", \"abe\", \"ab 12\", \"a|b\")\nstr_subset(strings, \"ab.\")\n\n[1] \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"ab[c-e]\")\n\n[1] \"abc\" \"abd\" \"abe\"\n\nstr_subset(strings, \"ab[^c]\")\n\n[1] \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"^ab\")\n\n[1] \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"\\\\^ab\")\n\n[1] \"^ab\"\n\nstr_subset(strings, \"abc|abd\")\n\n[1] \"abc\" \"abd\"\n\nstr_subset(strings, \"ab|c\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"(ab)|c\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"(ab|c)\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"a(b|c)\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"a[b|c]\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\" \"a|b\"  \n\nstr_extract(strings, \"a[b|c]\")\n\n[1] \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"a|\"\n\n\nit turns out that “ab|c” and “(ab)|c” and “(ab|c)” are all equivalent!"
+  },
+  {
+    "objectID": "project2.html#footnotes",
+    "href": "project2.html#footnotes",
+    "title": "Project 2",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\ncode folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code↩︎"
   }
 ]
