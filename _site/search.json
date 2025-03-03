@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  1.22.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  1.27.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - R   WS 3 - Tufte\n HW 1 - due 1.30.25 (Thursday!)\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  2.3.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot   WS 5 - Verbs\n HW 2 - due 2.3.25 (Monday going forward)\n\n\n\nWeek 4  2.10.25\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 6 - Joining\n HW 3 - due 2.10.25  Quiz 1 2.12.25\n\n\n\nWeek 5  2.17.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - String Variables   WS 8 - Factor Variables\n Project 1 - due 2.19.25\n\n\n\nWeek 6  2.24.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 9 - Regular Expressions 1   WS 10 - Regular Expressions 2\n HW 4 - due 2.25.25 (Tuesday going forward)  Quiz 2 2.26.25\n\n\n\nWeek 7  3.3.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration\n Project 2 - due 3.5.25\n\n\n\nWeek 8  3.10.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n HW 5 - due 3.11.25\n\n\n\nWeek 9  3.24.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations\n HW 6 - due 3.25.25  Quiz 3 3.26.25\n\n\n\nWeek 10  3.31.25\npermutation tests\n Permutation tests   Permutation tests\n Project 3 - due 4.2.25\n\n\n\nWeek 11  4.7.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 7 - due 4.8.25  Quiz 4 4.9.25\n\n\n\nWeek 12  4.14.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL clauses\n Project 4 - due 4.16.25\n\n\n\nWeek 13  4.21.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 4.22.25  Quiz 5 4.23.25\n\n\n\nWeek 14  4.28.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 4.30.25\n\n\n\nWeek 15  5.5.25\n\n Fin\nQuiz 6 5.7.25\npresentations (?) 5.9.25\n\n\nWeek 16  5.13.25\n\n\n Project 6 - due 5.13.25  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  1.22.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  1.27.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - R   WS 3 - Tufte\n HW 1 - due 1.30.25 (Thursday!)\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  2.3.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot   WS 5 - Verbs\n HW 2 - due 2.3.25 (Monday going forward)\n\n\n\nWeek 4  2.10.25\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 6 - Joining\n HW 3 - due 2.10.25  Quiz 1 2.12.25\n\n\n\nWeek 5  2.17.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - String Variables   WS 8 - Factor Variables\n Project 1 - due 2.19.25\n\n\n\nWeek 6  2.24.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 9 - Regular Expressions\n HW 4 - due 2.25.25 (Tuesday going forward)  Quiz 2 2.26.25\n\n\n\nWeek 7  3.3.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - Functions   WS 11 - map\n Project 2 - due 3.5.25\n\n\n\nWeek 8  3.10.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n HW 5 - due 3.11.25\n\n\n\nWeek 9  3.24.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations\n HW 6 - due 3.25.25  Quiz 3 3.26.25\n\n\n\nWeek 10  3.31.25\npermutation tests\n Permutation tests   Permutation tests\n Project 3 - due 4.2.25\n\n\n\nWeek 11  4.7.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 7 - due 4.8.25  Quiz 4 4.9.25\n\n\n\nWeek 12  4.14.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL clauses\n Project 4 - due 4.16.25\n\n\n\nWeek 13  4.21.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 4.22.25  Quiz 5 4.23.25\n\n\n\nWeek 14  4.28.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 4.30.25\n\n\n\nWeek 15  5.5.25\n\n Fin\nQuiz 6 5.7.25\npresentations (?) 5.9.25\n\n\nWeek 16  5.13.25\n\n\n Project 6 - due 5.13.25  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -11653,5 +11653,208 @@
     "title": "Project 2",
     "section": "Footnotes",
     "text": "Footnotes\n\n\ncode folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code↩︎"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#function-components",
+    "href": "slides/2025-03-03-funcmap.html#function-components",
+    "title": "Functions + Iteration",
+    "section": "Function components",
+    "text": "Function components\nHere is a simple function to compute the absolute value.\n\nmy_abs &lt;- function(x){\n  return(ifelse(x &gt;= 0, x, -1*x))\n}\n\nmy_abs(-3)\n\n[1] 3\n\nmy_abs(c(-2, 5))\n\n[1] 2 5\n\n\n\nname: my_abs\narguments: x\nbody: everything inside the { }"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#ordering-and-arguments",
+    "href": "slides/2025-03-03-funcmap.html#ordering-and-arguments",
+    "title": "Functions + Iteration",
+    "section": "Ordering and arguments",
+    "text": "Ordering and arguments\n\nmy_power &lt;- function(x, y){\n  return(x^y)\n}\n\nmy_power(x = 2, y = 3)\n\n[1] 8\n\nmy_power(y = 3, x = 2)\n\n[1] 8\n\nmy_power(2, 3)\n\n[1] 8\n\nmy_power(3, 2)\n\n[1] 9\n\n\n\nWhen calling the function, if you don’t name the arguments, R assumes that you passed them in the order defined inside the function."
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#function-defaults",
+    "href": "slides/2025-03-03-funcmap.html#function-defaults",
+    "title": "Functions + Iteration",
+    "section": "Function defaults",
+    "text": "Function defaults\n\nfunctionresult\n\n\n\nmy_power &lt;- function(x, y){\n  return(x^y)\n}\n\nWhat will happen when I run the following code?\n\nmy_power(3)\n\n\n\n\nmy_power(3)\n\nError in my_power(3): argument \"y\" is missing, with no default"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#function-defaults-1",
+    "href": "slides/2025-03-03-funcmap.html#function-defaults-1",
+    "title": "Functions + Iteration",
+    "section": "Function defaults",
+    "text": "Function defaults\n\nfunctionresult\n\n\n\nmy_power &lt;- function(x, y = 2){\n  return(x^y)\n}\n\nWhat will happen when I run the following code?\n\nmy_power(3)\n\n\n\n\nmy_power(3)\n\n[1] 9"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#function-defaults-2",
+    "href": "slides/2025-03-03-funcmap.html#function-defaults-2",
+    "title": "Functions + Iteration",
+    "section": "Function defaults",
+    "text": "Function defaults\n\nfunctionresult\n\n\n\nmy_power &lt;- function(x, y = 2){\n  return(x^y)\n}\n\nWhat will happen when I run the following code?\n\nmy_power(2, 3)\n\n\n\n\nmy_power(2, 3)\n\n[1] 8"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#function-defaults-3",
+    "href": "slides/2025-03-03-funcmap.html#function-defaults-3",
+    "title": "Functions + Iteration",
+    "section": "Function defaults",
+    "text": "Function defaults\n\nfunctionresult\n\n\n\nmy_power &lt;- function(x = 2, y = 3){\n  return(x^y)\n}\n\nWhat will happen when I run the following code?\n\nmy_power()\n\n\n\n\nmy_power()\n\n[1] 8"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#returning-a-value",
+    "href": "slides/2025-03-03-funcmap.html#returning-a-value",
+    "title": "Functions + Iteration",
+    "section": "Returning a value",
+    "text": "Returning a value\n\nfunctionsresults\n\n\n\naverage1 &lt;- function(x, remove_nas) {\n    sum(x, na.rm = remove_nas)/sum(!is.na(x))\n}\n\naverage2 &lt;- function(x, remove_nas) {\n    return(sum(x, na.rm = remove_nas)/sum(!is.na(x)))\n}\n\naverage3 &lt;- function(x, remove_nas = TRUE) {\n    sum(x, na.rm = remove_nas)/sum(!is.na(x))\n}\n\n\n\n\nsome_data &lt;- c(3, NA, 2, 13, 2, NA, 47)\n\naverage1(some_data)\n\nError in average1(some_data): argument \"remove_nas\" is missing, with no default\n\naverage1(some_data, remove_nas = TRUE)\n\n[1] 13.4\n\naverage2(some_data)\n\nError in average2(some_data): argument \"remove_nas\" is missing, with no default\n\naverage2(some_data, remove_nas = TRUE)\n\n[1] 13.4\n\naverage3(some_data)\n\n[1] 13.4"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#returning-a-value-1",
+    "href": "slides/2025-03-03-funcmap.html#returning-a-value-1",
+    "title": "Functions + Iteration",
+    "section": "Returning a value",
+    "text": "Returning a value\n\nwithout return(): the function returns the last value which gets computed and isn’t stored as an object (using &lt;-).\nwith return(): the function will return an object that is explicitly included in the return() call. (Note: if you (accidentally?) have two return() calls, the function will return the object in the first return() call.)"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#control-flow",
+    "href": "slides/2025-03-03-funcmap.html#control-flow",
+    "title": "Functions + Iteration",
+    "section": "Control flow",
+    "text": "Control flow\nOften in functions, you will want to execute code conditionally. Consider the if-else if-else structure.\n\nif (logical_condition) {\n    # some code\n} else if (other_logical_condition) {\n    # some other code\n} else {\n    # yet more code\n}"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#control-flow-1",
+    "href": "slides/2025-03-03-funcmap.html#control-flow-1",
+    "title": "Functions + Iteration",
+    "section": "Control flow",
+    "text": "Control flow\n\nfunctionresult\n\n\n\nmiddle &lt;- function(x) {\n    mean_x &lt;- mean(x, na.rm = TRUE)\n    median_x &lt;- median(x, na.rm = TRUE)\n    seems_skewed &lt;- (mean_x &gt; 1.5*median_x) | (mean_x &lt; (1/1.5)*median_x)\n    if (seems_skewed) {\n        median_x\n    } else {\n        mean_x\n    }\n}\n\nNote that (mean_x &gt; 1.5*median_x) | (mean_x &lt; (1/1.5)*median_x) is a TRUE or FALSE question.\n\n\n\nsome_data &lt;- c(3, NA, 2, 13, 2, NA, 47)\n\n\nmean(some_data, na.rm = TRUE)\n\n[1] 13.4\n\nmedian(some_data, na.rm = TRUE)\n\n[1] 3\n\nmiddle(some_data)\n\n[1] 3"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse",
+    "href": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse",
+    "title": "Functions + Iteration",
+    "section": "Functions in the tidyverse",
+    "text": "Functions in the tidyverse\nDon’t collapse\nFunctions that return the same number of rows as the original data frame are good to use inside mutate() and filter(). For example, you might want to capitalize the first word of every string:\n\nfirst_upper &lt;- function(x) {\n  str_sub(x, 1, 1) &lt;- str_to_upper(str_sub(x, 1, 1))\n  x\n}\n\nfirst_upper(c(\"hello\", \"goodbye\"))\n\n[1] \"Hello\"   \"Goodbye\""
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse-1",
+    "href": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse-1",
+    "title": "Functions + Iteration",
+    "section": "Functions in the tidyverse",
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.6302384\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.6082177"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#functions-summary",
+    "href": "slides/2025-03-03-funcmap.html#functions-summary",
+    "title": "Functions + Iteration",
+    "section": "Functions summary",
+    "text": "Functions summary\n\nFunctions can be used to avoid repeating code\nArguments allow us specify the inputs when we call a function\nIf inputs are not named when calling the function, R uses the ordering from the function definition\nAll arguments must be specified when calling a function\nDefault arguments can be specified when the function is defined\nThe input to a function can be a function!"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#purrr-for-functional-programming",
+    "href": "slides/2025-03-03-funcmap.html#purrr-for-functional-programming",
+    "title": "Functions + Iteration",
+    "section": "purrr for functional programming",
+    "text": "purrr for functional programming\nfunctionals are functions that take function as input and return a vector / list / data frame as output.\n\nalternatives to loops\na functional is better than a for loop is better than while is better than repeat (in terms of computing efficiency)"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#benefits",
+    "href": "slides/2025-03-03-funcmap.html#benefits",
+    "title": "Functions + Iteration",
+    "section": "Benefits",
+    "text": "Benefits\n\nencourages function logic to be separated from iteration logic\ncan collapse results into vectors/data frames easily"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#map",
+    "href": "slides/2025-03-03-funcmap.html#map",
+    "title": "Functions + Iteration",
+    "section": "Map",
+    "text": "Map\nmap() has (at least) two arguments, a data object and a function. It performs the function on each element of the object and returns a list. We can also pass additional arguments into the function."
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#variations-of-map_-functions",
+    "href": "slides/2025-03-03-funcmap.html#variations-of-map_-functions",
+    "title": "Functions + Iteration",
+    "section": "variations of map_ functions",
+    "text": "variations of map_ functions\n\n\nThe map functions are named by they output the produce. For example:\n\nmap(.x, .f) is the main mapping function and returns a list\nmap_dbl(.x, .f) returns a numeric (double) vector\nmap_chr(.x, .f) returns a character vector\nmap_lgl(.x, .f) returns a logical vector\n\n\n\n\n\n\n\n\n\n\n\n\nNote that the first argument is always the data object and the second object is always the function you want to iteratively apply to each element in the input object."
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#map-variants-output",
+    "href": "slides/2025-03-03-funcmap.html#map-variants-output",
+    "title": "Functions + Iteration",
+    "section": "map() variants (output)",
+    "text": "map() variants (output)\n\ntriple &lt;- function(x) x * 3\nmap(.x = c(1:3), .f = triple)\n\n[[1]]\n[1] 3\n\n[[2]]\n[1] 6\n\n[[3]]\n[1] 9\n\nmap_dbl(.x = c(1:3), .f = triple)\n\n[1] 3 6 9\n\nmap_lgl (.x = c(1:3), .f = triple)\n\nError in `map_lgl()`:\nℹ In index: 1.\nCaused by error:\n! Can't coerce from a number to a logical.\n\nmap_lgl(.x = c(1, NA, 3), .f = is.na)\n\n[1] FALSE  TRUE FALSE"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#fastfood-dataset-from-openintro",
+    "href": "slides/2025-03-03-funcmap.html#fastfood-dataset-from-openintro",
+    "title": "Functions + Iteration",
+    "section": "fastfood dataset from openintro",
+    "text": "fastfood dataset from openintro\n\nlibrary(openintro)\nfastfood\n\n# A tibble: 515 × 17\n   restaurant item        calories cal_fat total_fat sat_fat trans_fat\n   &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n 1 Mcdonalds  Artisan Gr…      380      60         7       2       0  \n 2 Mcdonalds  Single Bac…      840     410        45      17       1.5\n 3 Mcdonalds  Double Bac…     1130     600        67      27       3  \n 4 Mcdonalds  Grilled Ba…      750     280        31      10       0.5\n 5 Mcdonalds  Crispy Bac…      920     410        45      12       0.5\n 6 Mcdonalds  Big Mac          540     250        28      10       1  \n 7 Mcdonalds  Cheeseburg…      300     100        12       5       0.5\n 8 Mcdonalds  Classic Ch…      510     210        24       4       0  \n 9 Mcdonalds  Double Che…      430     190        21      11       1  \n10 Mcdonalds  Double Qua…      770     400        45      21       2.5\n# ℹ 505 more rows\n# ℹ 10 more variables: cholesterol &lt;dbl&gt;, sodium &lt;dbl&gt;,\n#   total_carb &lt;dbl&gt;, fiber &lt;dbl&gt;, sugar &lt;dbl&gt;, protein &lt;dbl&gt;,\n#   vit_a &lt;dbl&gt;, vit_c &lt;dbl&gt;, calcium &lt;dbl&gt;, salad &lt;chr&gt;\n\n\nFrom TidyTuesday Fast food entree data on September 4, 2018."
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#anonymous-functions-and-shortcuts",
+    "href": "slides/2025-03-03-funcmap.html#anonymous-functions-and-shortcuts",
+    "title": "Functions + Iteration",
+    "section": "Anonymous functions and shortcuts",
+    "text": "Anonymous functions and shortcuts\n\nuse ~ to set a formula (when the function is neither a single name nor defined by function(...) { ...})\nuse .x to reference the input map(.x = ..., .f = )\n\n\nmap_dbl(.x = fastfood, .f = function(dog) mean(dog, na.rm = TRUE))\n\n  restaurant         item     calories      cal_fat    total_fat      sat_fat \n          NA           NA  530.9126214  238.8135922   26.5902913    8.1533981 \n   trans_fat  cholesterol       sodium   total_carb        fiber        sugar \n   0.4650485   72.4563107 1246.7378641   45.6640777    4.1371769    7.2621359 \n     protein        vit_a        vit_c      calcium        salad \n  27.8910506   18.8571429   20.1704918   24.8524590           NA \n\n\n\nmap_dbl(.x = fastfood,  .f = ~mean(.x, na.rm = TRUE))\n\n  restaurant         item     calories      cal_fat    total_fat      sat_fat \n          NA           NA  530.9126214  238.8135922   26.5902913    8.1533981 \n   trans_fat  cholesterol       sodium   total_carb        fiber        sugar \n   0.4650485   72.4563107 1246.7378641   45.6640777    4.1371769    7.2621359 \n     protein        vit_a        vit_c      calcium        salad \n  27.8910506   18.8571429   20.1704918   24.8524590           NA \n\n\n\nmap_dbl(.x = fastfood, .f = mean, na.rm = TRUE)\n\n  restaurant         item     calories      cal_fat    total_fat      sat_fat \n          NA           NA  530.9126214  238.8135922   26.5902913    8.1533981 \n   trans_fat  cholesterol       sodium   total_carb        fiber        sugar \n   0.4650485   72.4563107 1246.7378641   45.6640777    4.1371769    7.2621359 \n     protein        vit_a        vit_c      calcium        salad \n  27.8910506   18.8571429   20.1704918   24.8524590           NA \n\n\n\nmap_dbl(.x = fastfood, .f = mean)\n\n  restaurant         item     calories      cal_fat    total_fat      sat_fat \n          NA           NA  530.9126214  238.8135922   26.5902913    8.1533981 \n   trans_fat  cholesterol       sodium   total_carb        fiber        sugar \n   0.4650485   72.4563107 1246.7378641   45.6640777           NA    7.2621359 \n     protein        vit_a        vit_c      calcium        salad \n          NA           NA           NA           NA           NA"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#the-same-thing-many-ways",
+    "href": "slides/2025-03-03-funcmap.html#the-same-thing-many-ways",
+    "title": "Functions + Iteration",
+    "section": "The same thing, many ways",
+    "text": "The same thing, many ways\nNote that .x is the name of the first argument in map() (.f is the name of the second argument).\n\n# the task\nmap_dbl(fastfood, function(x) length(unique(x)))\n\n restaurant        item    calories     cal_fat   total_fat     sat_fat \n          8         505         113         117          80          40 \n  trans_fat cholesterol      sodium  total_carb       fiber       sugar \n         10          52         197         103          19          31 \n    protein       vit_a       vit_c     calcium       salad \n         71          22          24          27           1 \n\nmap_dbl(fastfood, function(unicorn) length(unique(unicorn)))\n\n restaurant        item    calories     cal_fat   total_fat     sat_fat \n          8         505         113         117          80          40 \n  trans_fat cholesterol      sodium  total_carb       fiber       sugar \n         10          52         197         103          19          31 \n    protein       vit_a       vit_c     calcium       salad \n         71          22          24          27           1 \n\nmap_dbl(fastfood, ~length(unique(.x)))\n\n restaurant        item    calories     cal_fat   total_fat     sat_fat \n          8         505         113         117          80          40 \n  trans_fat cholesterol      sodium  total_carb       fiber       sugar \n         10          52         197         103          19          31 \n    protein       vit_a       vit_c     calcium       salad \n         71          22          24          27           1 \n\nmap_dbl(fastfood, ~length(unique(..1)))\n\n restaurant        item    calories     cal_fat   total_fat     sat_fat \n          8         505         113         117          80          40 \n  trans_fat cholesterol      sodium  total_carb       fiber       sugar \n         10          52         197         103          19          31 \n    protein       vit_a       vit_c     calcium       salad \n         71          22          24          27           1 \n\nmap_dbl(fastfood, ~length(unique(.)))\n\n restaurant        item    calories     cal_fat   total_fat     sat_fat \n          8         505         113         117          80          40 \n  trans_fat cholesterol      sodium  total_carb       fiber       sugar \n         10          52         197         103          19          31 \n    protein       vit_a       vit_c     calcium       salad \n         71          22          24          27           1 \n\n# not the task\nmap_dbl(fastfood, length)\n\n restaurant        item    calories     cal_fat   total_fat     sat_fat \n        515         515         515         515         515         515 \n  trans_fat cholesterol      sodium  total_carb       fiber       sugar \n        515         515         515         515         515         515 \n    protein       vit_a       vit_c     calcium       salad \n        515         515         515         515         515 \n\n\n\n#error\nmap_dbl(fastfood, ~length)\n\nError in `map_dbl()`:\nℹ In index: 1.\nℹ With name: restaurant.\nCaused by error:\n! Can't coerce from a primitive function to a double.\n\n#error\nmap_dbl(fastfood, length(unique()))\n\nError in unique.default(): argument \"x\" is missing, with no default\n\n#error\nmap_dbl(fastfood, ~length(unique(x)))\n\nError in `map_dbl()`:\nℹ In index: 1.\nℹ With name: restaurant.\nCaused by error in `.f()`:\n! object 'x' not found"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#mapping-to-a-data-frame",
+    "href": "slides/2025-03-03-funcmap.html#mapping-to-a-data-frame",
+    "title": "Functions + Iteration",
+    "section": "mapping to a data frame",
+    "text": "mapping to a data frame\nWould be great if the results were a data frame! If the function outputs a data frame, then we can use list_rbind() and list_cbind() to create a data frame as the final map() output.\n\nresults as rows: map() |&gt; list_rbind()\nresults as columns: map() |&gt; list_cbind()\n\n\nfunctionmap()with list_rbind()with list_cbind()\n\n\n\ncol_stats &lt;- function(n) {\n  head(fastfood, n) |&gt; \n    select(calories, protein, vit_c) |&gt; \n    summarise_all(mean, na.rm = TRUE) |&gt; \n    mutate(n = paste(\"N =\", n))\n}\n\n\n\n\nout1 &lt;- map(c(10,20), col_stats)\n\nout1\n\n[[1]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657    39.5  12.3 N = 10\n\n[[2]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     582.    34.6  12.2 N = 20\n\n\n\n\n\nout2 &lt;- map(c(10,20), col_stats) |&gt; list_rbind()\n\nout2\n\n# A tibble: 2 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     657     39.5  12.3 N = 10\n2     582.    34.6  12.2 N = 20\n\n\n\n\n\nout3 &lt;- map(c(10,20), col_stats) |&gt; list_cbind()\n\nout3\n\n# A tibble: 1 × 8\n  calories...1 protein...2 vit_c...3 n...4  calories...5 protein...6\n         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;       &lt;dbl&gt;\n1          657        39.5      12.3 N = 10         582.        34.6\n# ℹ 2 more variables: vit_c...7 &lt;dbl&gt;, n...8 &lt;chr&gt;"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#map_-variants-input",
+    "href": "slides/2025-03-03-funcmap.html#map_-variants-input",
+    "title": "Functions + Iteration",
+    "section": "map_*() variants (input)",
+    "text": "map_*() variants (input)\n\nWe’ve already described the difference between the columns. Now we cover the difference between the rows."
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#map2_",
+    "href": "slides/2025-03-03-funcmap.html#map2_",
+    "title": "Functions + Iteration",
+    "section": "map2_*()",
+    "text": "map2_*()\n\nmap2_*() has two arguments, .x and .y\nraise each value of .x to the power of 2\n\n\nmap_dbl(\n  .x = c(1:5), \n  .f = function(x) x ^ 2\n)\n\n[1]  1  4  9 16 25\n\n\n\nraise each value .x to the power .y\n\n\nmap2_dbl(\n  .x = c(1:5), \n  .y = c(2:6), \n  .f = ~ (.x ^ .y)\n)\n\n[1]     1     8    81  1024 15625"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#imap",
+    "href": "slides/2025-03-03-funcmap.html#imap",
+    "title": "Functions + Iteration",
+    "section": "imap()",
+    "text": "imap()\n\nimap() is like map2()except that .y is derived from names(.x) if the data frame has names.\nIf not, .y is 1, 2, 3, … \\(n\\) where \\(n\\) is the number of items in .x. (A data frame has \\(n\\) columns.)\nThese two calls produce the same result\n\n\nimap_chr(.x = fastfood, \n         .f = ~ paste(.y, \"has a mean of\", round(mean(.x), 1))) |&gt; \nhead()\n\n                    restaurant                           item \n \"restaurant has a mean of NA\"        \"item has a mean of NA\" \n                      calories                        cal_fat \n\"calories has a mean of 530.9\"  \"cal_fat has a mean of 238.8\" \n                     total_fat                        sat_fat \n\"total_fat has a mean of 26.6\"    \"sat_fat has a mean of 8.2\" \n\nmap2_chr(.x = fastfood, \n         .y = names(fastfood),\n         .f = ~ paste(.y, \"has a mean of\", round(mean(.x), 1))) |&gt; \nhead()\n\n                    restaurant                           item \n \"restaurant has a mean of NA\"        \"item has a mean of NA\" \n                      calories                        cal_fat \n\"calories has a mean of 530.9\"  \"cal_fat has a mean of 238.8\" \n                     total_fat                        sat_fat \n\"total_fat has a mean of 26.6\"    \"sat_fat has a mean of 8.2\""
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#pmap",
+    "href": "slides/2025-03-03-funcmap.html#pmap",
+    "title": "Functions + Iteration",
+    "section": "pmap()",
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 9.238867\n\n[[2]]\n[1] 32.56191 24.30150\n\n[[3]]\n[1] 330.0908 459.4802 503.1543\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 2.497859\n\n[[2]]\n[1] 78.35573 68.65517\n\n[[3]]\n[1] 159.7659 568.6797 181.6443"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#an-aside",
+    "href": "slides/2025-03-03-funcmap.html#an-aside",
+    "title": "Functions + Iteration",
+    "section": "An aside…",
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.06942109 0.41213972 0.10437531\n\nrunif(n = c(1,3))\n\n[1] 0.3931872 0.1928019\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.5119592 0.3431955\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.5932339 0.7264740"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#pmap-vs-map",
+    "href": "slides/2025-03-03-funcmap.html#pmap-vs-map",
+    "title": "Functions + Iteration",
+    "section": "pmap() vs map()",
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 8.111631\n\n[[2]]\n[1] 88.80091 32.49726\n\n[[3]]\n[1] 719.4127 779.3250 959.0848\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.7788997 0.6642755 0.7281039\n\n$min\n[1] 0.05662876 0.18251103 0.49636783\n\n$max\n[1] 0.73436897 0.08789322 0.98726933"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#pmap-with-expand_grid",
+    "href": "slides/2025-03-03-funcmap.html#pmap-with-expand_grid",
+    "title": "Functions + Iteration",
+    "section": "pmap() with expand_grid()",
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 5.328371\n\n[[2]]\n[1] 9.900047\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 16.54692\n\n[[5]]\n[1] 8.537932 1.953327\n\n[[6]]\n[1] 35.46049 13.68456\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 45.24840 39.19336\n\n[[9]]\n[1] 1.633344 6.808533 9.308186\n\n[[10]]\n[1]  3.90316 37.68613 68.60588\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 45.63949 15.78394 49.14826"
   }
 ]

@@ -76,14 +76,14 @@ schedule <- tribble(
 
   
      "Week 6 <br> 2.24.25", 'Regular Expressions', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-02-24-regex.html" target = "_blank">Regular expressions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws9_ds2_s25_regex1.pdf" target = "_blank">WS 9 - Regular Expressions 1</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws10_ds2_s25_regex2.pdf" target = "_blank">WS 10 - Regular Expressions 2</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-02-24-regex.html" target = "_blank">Regular expressions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws9_ds2_s25_regex1.pdf" target = "_blank">WS 9 - Regular Expressions</a> ',
 
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 4</a> - due 2.25.25 (Tuesday going forward) <br> Quiz 2 2.26.25',
   ' ',
 
   
      "Week 7 <br> 3.3.25", 'functions + <br> iteration', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-07-funcmap.html" target = "_blank">functions + iteration</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-03-03-funcmap.html" target = "_blank">functions + iteration</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws10_ds2_s25_funcs.pdf" target = "_blank">WS 10 - Functions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws11_ds2_s25_map.pdf" target = "_blank">WS 11 - map</a>',
 
     '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 3.5.25',
   ' ',

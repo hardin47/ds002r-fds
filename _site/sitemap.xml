@@ -154,7 +154,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/index.html</loc>
-    <lastmod>2025-02-24T18:34:44.935Z</lastmod>
+    <lastmod>2025-03-03T03:51:12.309Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/handout/ws1_sds261_j24.html</loc>
@@ -331,5 +331,9 @@
   <url>
     <loc>https://ds002r-fds.netlify.app/slides/2025-02-24-regex.html</loc>
     <lastmod>2025-02-26T18:44:04.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2025-03-03-funcmap.html</loc>
+    <lastmod>2025-03-03T03:49:28.609Z</lastmod>
   </url>
 </urlset>
