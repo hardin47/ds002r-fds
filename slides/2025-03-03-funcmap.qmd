@@ -31,6 +31,12 @@ options(pillar.width = 70)
 1. R functions
 2. The `map()` function
 
+## Data Conclusions
+
+```{r, out.width = "800px", echo=FALSE, fig.cap = "Based on [https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories), original source: [https://www.linkedin.com/learning/instructors/bill-shander](https://www.linkedin.com/learning/instructors/bill-shander)"}
+knitr::include_graphics("../images/data_lego2.png")
+```
+
 # Functions 
 
 ## Function components

@@ -11736,7 +11736,7 @@
     "href": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.6302384\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.6082177"
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5463894\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.4691142"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#functions-summary",
@@ -11834,27 +11834,48 @@
     "href": "slides/2025-03-03-funcmap.html#pmap",
     "title": "Functions + Iteration",
     "section": "pmap()",
-    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 9.238867\n\n[[2]]\n[1] 32.56191 24.30150\n\n[[3]]\n[1] 330.0908 459.4802 503.1543\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 2.497859\n\n[[2]]\n[1] 78.35573 68.65517\n\n[[3]]\n[1] 159.7659 568.6797 181.6443"
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 5.728353\n\n[[2]]\n[1] 26.72346 35.10718\n\n[[3]]\n[1] 687.4253 768.2454 764.2333\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 9.298864\n\n[[2]]\n[1] 27.78441 80.68520\n\n[[3]]\n[1] 246.3039 234.7719 755.6017"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#an-aside",
     "href": "slides/2025-03-03-funcmap.html#an-aside",
     "title": "Functions + Iteration",
     "section": "An aside…",
-    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.06942109 0.41213972 0.10437531\n\nrunif(n = c(1,3))\n\n[1] 0.3931872 0.1928019\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.5119592 0.3431955\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.5932339 0.7264740"
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.2884791 0.6515248 0.3873312\n\nrunif(n = c(1,3))\n\n[1] 0.2485137 0.4352529\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.8028399 0.8003303\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.1485522 0.8974684"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#pmap-vs-map",
     "href": "slides/2025-03-03-funcmap.html#pmap-vs-map",
     "title": "Functions + Iteration",
     "section": "pmap() vs map()",
-    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 8.111631\n\n[[2]]\n[1] 88.80091 32.49726\n\n[[3]]\n[1] 719.4127 779.3250 959.0848\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.7788997 0.6642755 0.7281039\n\n$min\n[1] 0.05662876 0.18251103 0.49636783\n\n$max\n[1] 0.73436897 0.08789322 0.98726933"
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 1.671821\n\n[[2]]\n[1] 42.71869 31.42704\n\n[[3]]\n[1] 155.4260 304.2565 991.5343\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.1132298 0.9321116 0.1878142\n\n$min\n[1] 0.8081172 0.6018867 0.4035593\n\n$max\n[1] 0.03785776 0.91283936 0.17086978"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#pmap-with-expand_grid",
     "href": "slides/2025-03-03-funcmap.html#pmap-with-expand_grid",
     "title": "Functions + Iteration",
     "section": "pmap() with expand_grid()",
-    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 5.328371\n\n[[2]]\n[1] 9.900047\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 16.54692\n\n[[5]]\n[1] 8.537932 1.953327\n\n[[6]]\n[1] 35.46049 13.68456\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 45.24840 39.19336\n\n[[9]]\n[1] 1.633344 6.808533 9.308186\n\n[[10]]\n[1]  3.90316 37.68613 68.60588\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 45.63949 15.78394 49.14826"
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 9.062466\n\n[[2]]\n[1] 23.12928\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 12.47267\n\n[[5]]\n[1] 8.151141 1.448228\n\n[[6]]\n[1] 47.60908 53.75996\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 63.81806 73.63271\n\n[[9]]\n[1] 5.381725 7.534388 1.397402\n\n[[10]]\n[1] 26.20355 75.39285 59.50845\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 52.31591 98.85717 87.67280"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html#data-conclusions",
+    "href": "slides/2025-03-03-funcmap.html#data-conclusions",
+    "title": "Functions + Iteration",
+    "section": "Data Conclusions",
+    "text": "Data Conclusions\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-02-10-pivotjoin.html#data-exploration",
+    "href": "slides/2025-02-10-pivotjoin.html#data-exploration",
+    "title": "Pivoting and Joining",
+    "section": "Data Exploration",
+    "text": "Data Exploration\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-01-27-dataviz.html#data-visualization",
+    "href": "slides/2025-01-27-dataviz.html#data-visualization",
+    "title": "Better Data Visualizations",
+    "section": "Data Visualization",
+    "text": "Data Visualization\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   }
 ]
