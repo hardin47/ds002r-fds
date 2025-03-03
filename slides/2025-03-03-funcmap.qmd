@@ -29,7 +29,6 @@ options(pillar.width = 70)
 
 
 1. R functions
-2. The `map()` function
 
 ## Data Conclusions
 
