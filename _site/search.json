@@ -2930,7 +2930,7 @@
     "href": "R-tip.html",
     "title": "R tip-of-the-day",
     "section": "",
-    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\n\nadds a new R chunk\nlook for it at top of Quarto doc\n\n\nTip 3\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 4\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 5\n\\textcolor{red}{this text will be red}\nLaTeX formatting to change the text color\nwhen render to pdf (different syntax for render to html)\n\n\nTip 6\n\nchanges the figure size\ngear in R chunk\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\nTip 8\n#| echo: false\nevaluates the chunk, but does not show the code\nalternatively: echo = FALSE inside curly braces\n\n\nTip 9\nTool -&gt; Global Options… -&gt; Spelling\nallows for real-time spell check\n\n\n\nTip 10\ncmd + shift + M\nproduces a pipe\ncntrl + shift + M for PC  Tools -&gt; Global Options… -&gt; Code to get the native pipe\n\n\nTip 11\nopt + -\nproduces the assignment operator, &lt;-\n\n\n\nTip 12\nR was adopted as an open source version of S\n\nIt was written by Ross Ihaka and Robert Gentleman, which is why they called it R\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
+    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\n\nadds a new R chunk\nlook for it at top of Quarto doc\n\n\nTip 3\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 4\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 5\n\\textcolor{red}{this text will be red}\nLaTeX formatting to change the text color\nwhen render to pdf (different syntax for render to html)\n\n\nTip 6\n\nchanges the figure size\ngear in R chunk\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\nTip 8\n#| echo: false\nevaluates the chunk, but does not show the code\nalternatively: echo = FALSE inside curly braces\n\n\nTip 9\nTool -&gt; Global Options… -&gt; Spelling\nallows for real-time spell check\n\n\n\nTip 10\ncmd + shift + M\nproduces a pipe\ncntrl + shift + M for PC  Tools -&gt; Global Options… -&gt; Code to get the native pipe\n\n\nTip 11\nopt + -\nproduces the assignment operator, &lt;-\n\n\n\nTip 12\nR was adopted as an open source version of S\n\nIt was written by Ross Ihaka and Robert Gentleman, which is why they called it R\n\n\nTip 13\nhighlight with mouse and hit quotation\nwill put quotes around the highlighted phrase\n\n\n\nTip 14\nhighlight with mouse and hit parenthesis\nwill put parentheses around the highlighted phrase\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "syllabus.html#links-to-resources",
@@ -11729,14 +11729,14 @@
     "href": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nDon’t collapse\nFunctions that return the same number of rows as the original data frame are good to use inside mutate() and filter(). For example, you might want to capitalize the first word of every string:\n\nfirst_upper &lt;- function(x) {\n  str_sub(x, 1, 1) &lt;- str_to_upper(str_sub(x, 1, 1))\n  x\n}\n\nfirst_upper(c(\"hello\", \"goodbye\"))\n\n[1] \"Hello\"   \"Goodbye\""
+    "text": "Functions in the tidyverse\n\nDon’t collapse\nFunctions that return the same number of rows as the original data frame are good to use inside mutate() and filter(). For example, you might want to capitalize the first word of every string:\n\nfirst_upper &lt;- function(x) {\n  str_sub(x, 1, 1) &lt;- str_to_upper(str_sub(x, 1, 1))\n  x\n}\n\nfirst_upper(c(\"hello\", \"goodbye\"))\n\n[1] \"Hello\"   \"Goodbye\""
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse-1",
     "href": "slides/2025-03-03-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5490914\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5562061"
+    "text": "Functions in the tidyverse\n\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5518542\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.6421353"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#functions-summary",
@@ -11771,7 +11771,7 @@
     "href": "slides/2025-03-03-funcmap.html#variations-of-map_-functions",
     "title": "Functions + Iteration",
     "section": "variations of map_ functions",
-    "text": "variations of map_ functions\n\n\nThe map functions are named by they output the produce. For example:\n\nmap(.x, .f) is the main mapping function and returns a list\nmap_dbl(.x, .f) returns a numeric (double) vector\nmap_chr(.x, .f) returns a character vector\nmap_lgl(.x, .f) returns a logical vector\n\n\n\n\n\n\n\n\n\n\n\n\nNote that the first argument is always the data object and the second object is always the function you want to iteratively apply to each element in the input object."
+    "text": "variations of map_ functions\n\n\nThe map functions are named by they output the produce. For example:\n\nmap(.x, .f) is the main mapping function and returns a list\nmap_dbl(.x, .f) returns a numeric (double) vector\nmap_chr(.x, .f) returns a character vector\nmap_lgl(.x, .f) returns a logical vector\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that the first argument is always the data object and the second object is always the function you want to iteratively apply to each element in the input object."
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#map-variants-output",
@@ -11806,14 +11806,14 @@
     "href": "slides/2025-03-03-funcmap.html#mapping-to-a-data-frame",
     "title": "Functions + Iteration",
     "section": "mapping to a data frame",
-    "text": "mapping to a data frame\nWould be great if the results were a data frame! If the function outputs a data frame, then we can use list_rbind() and list_cbind() to create a data frame as the final map() output.\n\nresults as rows: map() |&gt; list_rbind()\nresults as columns: map() |&gt; list_cbind()\n\n\nfunctionmap()with list_rbind()with list_cbind()\n\n\n\ncol_stats &lt;- function(n) {\n  head(fastfood, n) |&gt; \n    select(calories, protein, vit_c) |&gt; \n    summarise_all(mean, na.rm = TRUE) |&gt; \n    mutate(n = paste(\"N =\", n))\n}\n\n\n\n\nout1 &lt;- map(c(10,20), col_stats)\n\nout1\n\n[[1]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657    39.5  12.3 N = 10\n\n[[2]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     582.    34.6  12.2 N = 20\n\n\n\n\n\nout2 &lt;- map(c(10,20), col_stats) |&gt; list_rbind()\n\nout2\n\n# A tibble: 2 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     657     39.5  12.3 N = 10\n2     582.    34.6  12.2 N = 20\n\n\n\n\n\nout3 &lt;- map(c(10,20), col_stats) |&gt; list_cbind()\n\nout3\n\n# A tibble: 1 × 8\n  calories...1 protein...2 vit_c...3 n...4  calories...5 protein...6\n         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;       &lt;dbl&gt;\n1          657        39.5      12.3 N = 10         582.        34.6\n# ℹ 2 more variables: vit_c...7 &lt;dbl&gt;, n...8 &lt;chr&gt;"
+    "text": "mapping to a data frame\nWould be great if the results were a data frame! If the function outputs a data frame, then we can use list_rbind() and list_cbind() to create a data frame as the final map() output.\n\nresults as rows: map() |&gt; list_rbind()\nresults as columns: map() |&gt; list_cbind()\n\n\nfunctionmap()list_rbind()list_cbind()\n\n\n\ncol_stats &lt;- function(n) {\n  head(fastfood, n) |&gt; \n    select(calories, protein, vit_c) |&gt; \n    summarise_all(mean, na.rm = TRUE) |&gt; \n    mutate(n = paste(\"N =\", n))\n}\n\n\n\n\nout1 &lt;- map(c(10,20), col_stats)\n\nout1\n\n[[1]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1      657    39.5  12.3 N = 10\n\n[[2]]\n# A tibble: 1 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     582.    34.6  12.2 N = 20\n\n\n\n\n\nout2 &lt;- map(c(10,20), col_stats) |&gt; list_rbind()\n\nout2\n\n# A tibble: 2 × 4\n  calories protein vit_c n     \n     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; \n1     657     39.5  12.3 N = 10\n2     582.    34.6  12.2 N = 20\n\n\n\n\n\nout3 &lt;- map(c(10,20), col_stats) |&gt; list_cbind()\n\nout3\n\n# A tibble: 1 × 8\n  calories...1 protein...2 vit_c...3 n...4  calories...5 protein...6\n         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;       &lt;dbl&gt;\n1          657        39.5      12.3 N = 10         582.        34.6\n# ℹ 2 more variables: vit_c...7 &lt;dbl&gt;, n...8 &lt;chr&gt;"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#map_-variants-input",
     "href": "slides/2025-03-03-funcmap.html#map_-variants-input",
     "title": "Functions + Iteration",
     "section": "map_*() variants (input)",
-    "text": "map_*() variants (input)\n\nWe’ve already described the difference between the columns. Now we cover the difference between the rows."
+    "text": "map_*() variants (input)\n\n\n\n\n\n\n\n\n\nWe’ve already described the difference between the columns. Now we cover the difference between the rows."
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#map2_",
@@ -11834,35 +11834,35 @@
     "href": "slides/2025-03-03-funcmap.html#pmap",
     "title": "Functions + Iteration",
     "section": "pmap()",
-    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 4.287802\n\n[[2]]\n[1] 48.07100 80.80391\n\n[[3]]\n[1] 838.0463 144.3348 152.4655\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 3.434179\n\n[[2]]\n[1] 12.46491 39.33878\n\n[[3]]\n[1] 327.1880 348.5141 724.2219"
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 7.654292\n\n[[2]]\n[1] 81.50640 85.75316\n\n[[3]]\n[1] 635.2406 865.7665 548.9754\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 5.715042\n\n[[2]]\n[1] 86.29638 49.60961\n\n[[3]]\n[1] 835.3881 885.3914 405.8973"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#an-aside",
     "href": "slides/2025-03-03-funcmap.html#an-aside",
     "title": "Functions + Iteration",
     "section": "An aside…",
-    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.1279656 0.9520581 0.9131436\n\nrunif(n = c(1,3))\n\n[1] 0.1693617 0.1901143\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.007644573 0.455165162\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.0854838 0.6094752"
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.6770936 0.3559830 0.8006055\n\nrunif(n = c(1,3))\n\n[1] 0.3101591 0.3772256\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.3056234 0.1693235\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.04298927 0.78530555"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#pmap-vs-map",
     "href": "slides/2025-03-03-funcmap.html#pmap-vs-map",
     "title": "Functions + Iteration",
     "section": "pmap() vs map()",
-    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 9.069688\n\n[[2]]\n[1] 51.78181 32.13059\n\n[[3]]\n[1] 259.8265 390.3502 711.7193\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.47536697 0.17719118 0.02225526\n\n$min\n[1] 0.1939313 0.6080432 0.7448465\n\n$max\n[1] 0.40234913 0.07412706 0.60867520"
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 4.726372\n\n[[2]]\n[1] 37.68095 15.92128\n\n[[3]]\n[1] 114.3215 284.8287 329.4026\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.56354981 0.06568109 0.52050601\n\n$min\n[1] 0.6131441 0.1780260 0.7096716\n\n$max\n[1] 0.9203914 0.6625039 0.3668780"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#pmap-with-expand_grid",
     "href": "slides/2025-03-03-funcmap.html#pmap-with-expand_grid",
     "title": "Functions + Iteration",
     "section": "pmap() with expand_grid()",
-    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 1.932225\n\n[[2]]\n[1] 35.61801\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 67.0951\n\n[[5]]\n[1] 8.155001 4.986331\n\n[[6]]\n[1] 75.222534  3.440691\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 39.19120 60.62977\n\n[[9]]\n[1] 5.687266 6.962353 3.496125\n\n[[10]]\n[1] 97.752077 49.747207  8.339367\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 99.35426 46.68252 79.08576"
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 6.969472\n\n[[2]]\n[1] 37.18674\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 87.59753\n\n[[5]]\n[1] 6.362016 1.829908\n\n[[6]]\n[1] 83.34266  6.41970\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 89.85348 67.06164\n\n[[9]]\n[1] 9.764761 1.470894 6.853850\n\n[[10]]\n[1] 64.57383 99.78512 90.67044\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 74.61169 36.06845 78.94106"
   },
   {
     "objectID": "slides/2025-03-03-funcmap.html#data-conclusions",
     "href": "slides/2025-03-03-funcmap.html#data-conclusions",
     "title": "Functions + Iteration",
-    "section": "Data Conclusions",
-    "text": "Data Conclusions\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "section": "",
+    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2025-02-10-pivotjoin.html#data-exploration",
@@ -11877,5 +11877,12 @@
     "title": "Better Data Visualizations",
     "section": "Data Visualization",
     "text": "Data Visualization\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-03-03-funcmap.html",
+    "href": "slides/2025-03-03-funcmap.html",
+    "title": "Functions + Iteration",
+    "section": "",
+    "text": "R functions\n\n\n\n\n\n\n\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   }
 ]

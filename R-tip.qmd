@@ -47,7 +47,11 @@ schedule <- tribble(
   
   'Tip 11', 'opt + -', "produces the assignment operator, `<-`", ' ',
   
-  'Tip 12', 'R was adopted as an open source version of S', ' ', 'It was written by Ross Ihaka and Robert Gentleman, which is why they called it R'
+  'Tip 12', 'R was adopted as an open source version of S', ' ', 'It was written by Ross Ihaka and Robert Gentleman, which is why they called it R',
+  
+  'Tip 13', 'highlight with mouse and hit quotation', 'will put quotes around the highlighted phrase', ' ',
+  
+   'Tip 14', 'highlight with mouse and hit parenthesis', 'will put parentheses around the highlighted phrase', ' '
   
 )
 ```

@@ -468,14 +468,14 @@ out1 <- map(c(10,20), col_stats)
 out1
 ```
 
-## with `list_rbind()`
+## `list_rbind()`
 ```{r}
 out2 <- map(c(10,20), col_stats) |> list_rbind()
 
 out2
 ```
 
-## with `list_cbind()`
+## `list_cbind()`
 ```{r}
 out3 <- map(c(10,20), col_stats) |> list_cbind()
 
