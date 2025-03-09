@@ -94,6 +94,7 @@ schedule <- tribble(
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 5</a> - due 3.11.25',
   ' ',
 
+"3.17.25", 'Spring Break', ' ', ' ', ' ',
   
      "Week 9 <br> 3.24.25", 'iterations + <br> simulations', 
  '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Iterations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-21-iters.html" target = "_blank">Iterations</a>',
