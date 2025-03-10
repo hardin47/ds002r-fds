@@ -1519,6 +1519,151 @@ jan31 + months(0:11) + days(31)
 
 ---
 
+(@) Rank these in order of bad to best.[^67a]  
+     a. 1, 2, 3
+     b. 1, 3, 2
+     c. 2, 1, 3
+     d. 3, 2, 1
+     e. 3, 1, 2
+   
+```{r}
+#| eval: false
+#| echo: true
+# 1
+day_one
+day_1
+
+# 2
+DayOne
+dayone
+
+# 3
+T <- FALSE
+c <- 10
+mean <- function(x) sum(x)
+```
+
+[^67a]: d. 3, 2, 1
+
+---
+
+(@) Which is better?[^67b]  
+     a. 1
+     b. 2
+   
+```{r}
+#| eval: false
+#| echo: true
+# 1
+mean(x, na.rm = TRUE)
+
+# 2
+mean (x, na.rm = TRUE)
+mean( x, na.rm = TRUE )
+```
+   
+[^67b]: a. 1
+
+---
+
+(@) Which is better?[^67c]  
+     a. 1
+     b. 2
+
+```{r}
+#| eval: false
+#| echo: true
+
+# 1
+height<-feet*12+inches
+mean(x, na.rm=TRUE)
+
+# 2
+height <- (feet * 12) + inches
+mean(x, na.rm = TRUE)
+```
+
+[^67c]: b. 2
+
+---
+
+(@) Which is better?[^67d]  
+     a. 1
+     b. 2
+
+```{r}
+#| eval: false
+#| echo: true
+# 1
+do_something_very_complicated(
+  something = "that",
+  requires = many,
+  arguments = "some of which may be long"
+)
+
+# 2
+do_something_very_complicated("that", requires, many, arguments,
+                              "some of which may be long"
+                              )
+```
+
+[^67d]: a. 1
+
+
+---
+
+(@) Which is better?[^67e]  
+     a. 1 
+     b. 2
+   
+```{r}
+#| eval: false
+#| echo: true
+
+# 1
+iris |>
+  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)
+
+# 2
+iris |>
+  summarise(
+    Sepal.Length = mean(Sepal.Length),
+    Sepal.Width = mean(Sepal.Width),
+    .by = Species
+  )
+```
+
+[^67e]: b. 2
+
+---
+
+(@) Which one do you like best?[^67f]  
+     a. 1
+     b. 2
+     c. 3
+   
+```{r}
+#| eval: false
+#| echo: true
+# 1
+x |>
+  semi_join(y |> filter(is_valid))
+
+# 2
+x |>
+  select(a, b, w) |>
+  left_join(y |> select(a, b, v), join_by(a, b))
+
+# 3
+x_join <- x |> select(a, b, w)
+y_join <- y |> select(a, b, v)
+left_join(x_join, y_join, join_by(a, b))
+```
+
+[^67f]: Maybe c. 3? a. 1? They are all okay, but you have to think carefully to read any of them!
+
+---
+
 
 (@) In R the `ifelse()` function takes the arguments:[^68]
    a. question, yes, no
