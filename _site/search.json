@@ -11981,6 +11981,13 @@
     "href": "slides/2025-03-10-help.html#style",
     "title": "Help me help you",
     "section": "Style",
-    "text": "Style\nThe point is that coding happens in community. Not only do you want your code to run well, but you want other people to be able to understand it and use it. The more that you and others use the same syntax, the better the communication will be."
+    "text": "Style\n\nThe point is that coding happens in community.\n\nNot only do you want your code to run well, but you want other people to be able to understand it and use it.\nThe more that you and others use the same syntax, the better the communication will be."
+  },
+  {
+    "objectID": "slides/2025-03-10-help.html#data-communication",
+    "href": "slides/2025-03-10-help.html#data-communication",
+    "title": "Help me help you",
+    "section": "Data Communication",
+    "text": "Data Communication\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   }
 ]
