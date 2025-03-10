@@ -51,7 +51,9 @@ schedule <- tribble(
   
   'Tip 13', 'highlight with mouse and hit quotation', 'will put quotes around the highlighted phrase', ' ',
   
-   'Tip 14', 'highlight with mouse and hit parenthesis', 'will put parentheses around the highlighted phrase', ' '
+   'Tip 14', 'highlight with mouse and hit parenthesis', 'will put parentheses around the highlighted phrase', ' ',
+  
+  'Tip 15', 'Session -> Restart R', 'rerstart the R session (without restarting RStudio)', 'shift + cmd / cntrl + 0'
   
 )
 ```
