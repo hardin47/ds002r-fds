@@ -1726,6 +1726,91 @@ ifelse(data > 5, "cat", data)
 
 [^70]: e. makes your results reproducible
 
+---
+
+(@) What could the following code give us?[^70a]
+   a. [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"
+   b. [1] "i" "b" "g" "d" "a"
+   c. [1] "j" "g" "f" "i" "f"
+   d. [1] "f" "h" "i" "e" "g" "d" "c" "j" "b" "a"
+   e. [1] "e" "j" "e" "b" "e" "c" "f" "a" "e" "a"
+
+[^70a]: d. [1] "f" "h" "i" "e" "g" "d" "c" "j" "b" "a"
+
+```{r}
+#| echo: true
+#| eval: false
+
+# shuffle
+set.seed(47)
+alph <- letters[1:10]
+sample(alph, 10, replace = FALSE)
+```
+
+
+---
+
+(@) What could the following code give us?[^70b]
+   a. [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"
+   b. [1] "i" "b" "g" "d" "a"
+   c. [1] "j" "g" "f" "i" "f"
+   d. [1] "f" "h" "i" "e" "g" "d" "c" "j" "b" "a"
+   e. [1] "e" "j" "e" "b" "e" "c" "f" "a" "e" "a"
+
+[^70b]: e. [1] "e" "j" "e" "b" "e" "c" "f" "a" "e" "a"
+
+```{r}
+#| echo: true
+#| eval: false
+
+# resample
+set.seed(47)
+alph <- letters[1:10]
+sample(alph, 10, replace = TRUE)
+```
+
+---
+
+(@) What could the following code give us?[^70c]
+   a. [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"
+   b. [1] "i" "b" "g" "d" "a"
+   c. [1] "j" "g" "f" "i" "f"
+   d. [1] "f" "h" "i" "e" "g" "d" "c" "j" "b" "a"
+   e. [1] "e" "j" "e" "b" "e" "c" "f" "a" "e" "a"
+
+[^70c]: c. [1] "j" "g" "f" "i" "f"  (could have also been b.)
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+# sample from an infinite population
+set.seed(47)
+alph <- letters[1:10]
+sample(alph, 10, replace = TRUE)
+```
+
+---
+
+(@) What could the following code give us?[^70d]
+   a. [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"
+   b. [1] "i" "b" "g" "d" "a"
+   c. [1] "j" "g" "f" "i" "f"
+   d. [1] "f" "h" "i" "e" "g" "d" "c" "j" "b" "a"
+   e. [1] "e" "j" "e" "b" "e" "c" "f" "a" "e" "a"
+
+[^70d]: b. [1] "i" "b" "g" "d" "a"
+
+```{r}
+#| echo: true
+#| eval: false
+
+# sample from  finite population
+set.seed(47)
+alph <- letters[1:10]
+sample(alph, 10, replace = FALSE)
+```
 
 ---
 
@@ -1783,6 +1868,27 @@ sum(hats == random_hats) > 0
 ```
 
 [^73]: e. whether or not at least one hat matches
+
+
+---
+
+(@) What is the magic number?[^73a]
+   a. 10
+   b. 10, the number of overall hats
+   c. 10, the number of hats we select
+   d. 0
+   e. 0, the number of matching hats
+   
+[^73a]: a. 10 (it represents both the number of overall hats and the number of hats we select)
+
+```{r}
+#| echo: true
+#| eval: false
+
+hats <- 1:10
+random_hats <- sample(hats, size = 10, replace = FALSE)
+sum(hats == random_hats) > 0
+```
 
 ---
 

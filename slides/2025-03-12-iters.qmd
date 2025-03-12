@@ -129,7 +129,9 @@ meet_func <- function(nada){
   data.frame(
     alex = runif(1, min = 0, max = 60),
     jordan = runif(1, min = 0, max = 60)) |> 
-    mutate(result = ifelse(abs(alex - jordan) <= 10, "They meet", "They do not"
+    mutate(result = ifelse(abs(alex - jordan) <= 10, 
+                           "They meet", 
+                           "They do not"
   )
   )
 }
@@ -158,8 +160,9 @@ for(i in 1:n){
     data.frame(
       alex = runif(1, min = 0, max = 60),
       jordan = runif(1, min = 0, max = 60)) |> 
-      mutate(result = ifelse(
-                    abs(alex - jordan) <= 10, "They meet", "They do not"
+      mutate(result = ifelse(abs(alex - jordan) <= 10,
+                             "They meet", 
+                             "They do not"
   )))
 }
 toc()
@@ -173,8 +176,9 @@ tic()
 meet_vect <- data.frame(
   alex = runif(n, min = 0, max = 60),
   jordan = runif(n, min = 0, max = 60)) |> 
-  mutate(result = ifelse(
-    abs(alex - jordan) <= 10, "They meet", "They do not"
+  mutate(result = ifelse(abs(alex - jordan) <= 10, 
+                         "They meet", 
+                         "They do not"
   )
 )
 toc()
@@ -188,15 +192,6 @@ toc()
 The results themselves are equivalent.  Differing values due to randomness in the simulation.
 
 ::: {.panel-tabset}
-
-## vectorized
-
-```{r}
-meet_vect |> 
-  group_by(result) |> 
-  summarize(number = n()) |> 
-  mutate(proprotion = number / sum(number))
-```
 
 ## `map()`
 
@@ -214,6 +209,15 @@ meet_map |>
 meet_for |> 
   group_by(result) |> 
   summarize(number = n())|> 
+  mutate(proprotion = number / sum(number))
+```
+
+## vectorized
+
+```{r}
+meet_vect |> 
+  group_by(result) |> 
+  summarize(number = n()) |> 
   mutate(proprotion = number / sum(number))
 ```
 
@@ -310,6 +314,26 @@ map_lgl(1:num_iter, ~hat_match(n = 10)) |>
   mean()
 ```
 
+```{r}
+set.seed(123)
+num_iter <- 10000
+
+map_lgl(1:num_iter, ~hat_match(n = 10)) |> 
+  mean()
+```
+
+## Vary number of hats
+
+```{r}
+hat_match_prob <- function(n, reps){
+  prob <- map_lgl(1:reps, ~hat_match(n = n)) |> 
+    mean()
+  return(data.frame(match_prob = prob, num_hats = n))
+}
+
+hat_match_prob(47, 200)
+```
+
 ## Vary number of hats
 
 ```{r}
@@ -323,6 +347,7 @@ set.seed(47)
 map(1:20, hat_match_prob, reps = num_iter) |> 
   list_rbind()
 ```
+
 
 ## Visualizing
 
@@ -343,13 +368,13 @@ map(1:20, hat_match_prob, reps = num_iter) |>
 
 ## Example 3: Birthday Problem
 
-What is the probability that in a room of 29 people, at least 2 of them have the same birthday?
+What is the probability that in a room of 28 people, at least 2 of them have the same birthday?
 
 ## Step 1: representing the birthdays
 
 ```{r}
-set.seed(47)
-class_birthdays <- sample(1:365, size=29, replace=TRUE)
+set.seed(7474)
+class_birthdays <- sample(1:365, size = 28, replace = TRUE)
 class_birthdays 
 ```
 
@@ -364,7 +389,7 @@ sum(duplicated(class_birthdays))
 
 ```{r}
 class_duplicates <- function(unicorn){
-  class_birthdays <- sample(1:365, size = 29, replace = TRUE)
+  class_birthdays <- sample(1:365, size = 28, replace = TRUE)
   num_duplicates <- sum(duplicated(class_birthdays))
   return(ifelse(num_duplicates > 0, 1, 0))
 }
@@ -389,7 +414,7 @@ class_duplicates <- function(class_size){
 }
 
 set.seed(47)
-num_stud <- 29
+num_stud <- 28
 map_dbl(1:10, ~class_duplicates(class_size = num_stud))
 
 ```
@@ -398,7 +423,7 @@ map_dbl(1:10, ~class_duplicates(class_size = num_stud))
 
 ```{r}
 set.seed(47)
-num_stud <- 29
+num_stud <- 28
 num_class <- 1000
 map_dbl(1:num_class, ~class_duplicates(class_size = num_stud)) |> 
   mean()
@@ -409,7 +434,7 @@ map_dbl(1:num_class, ~class_duplicates(class_size = num_stud)) |>
 
 ```{r}
 set.seed(47)
-num_stud <- 29
+num_stud_upper <- 28
 num_class <- 100
 
 birth_match_prob <- function(num_stud, reps){
@@ -418,7 +443,7 @@ birth_match_prob <- function(num_stud, reps){
   return(data.frame(match_prob = prob, num_stud = num_stud))
 }
 
-map(1:num_stud, birth_match_prob, reps = num_class) |> 
+map(1:num_stud_upper, birth_match_prob, reps = num_class) |> 
   list_rbind()
 
 ```
@@ -428,10 +453,10 @@ map(1:num_stud, birth_match_prob, reps = num_class) |>
 
 ```{r}
 set.seed(123)
-num_stud <- 40
+num_stud_upper <- 40
 num_class <- 1000
 
-map(1:num_stud, birth_match_prob, reps = num_class) |> 
+map(1:num_stud_upper, birth_match_prob, reps = num_class) |> 
   list_rbind()  |> 
   ggplot(aes(x = num_stud, y = match_prob)) + 
   geom_line() + 
@@ -449,7 +474,7 @@ map(1:num_stud, birth_match_prob, reps = num_class) |>
 * add comments
 
 
-# Agenda  10/23/24
+# Agenda  3/24/25
 
 1. Simulating for model sensitivity
 
