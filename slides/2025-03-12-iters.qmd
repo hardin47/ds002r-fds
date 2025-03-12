@@ -13,6 +13,8 @@ execute:
   echo: true
   warning: false
   message: false
+bibliography: 
+  - ../book.bib
 --- 
 
 
@@ -25,6 +27,7 @@ execute:
 ```{r}
 #| echo: false
 library(tidyverse)
+library(tictoc)
 ```
 
 ## Goals of Simulating Complicated Models
@@ -104,7 +107,134 @@ set.seed(4747)
 runif(4, 0, 1) # random uniform numbers
 ```
 
-# Example 1: hats
+
+## Example 1: Alex & Jordan
+
+Consider a situation where Alex and Jordan plan to meet to study in their college campus center [@mosteller1987;@MDSR]. They are both impatient people who will wait only 10 minutes for the other before leaving.
+
+But their planning was incomplete. Alex said, "Meet me between 7 and 8 tonight at the student center." When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?
+
+## Simulate their meeting
+
+Assume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm. 
+
+::: {.panel-tabset}
+
+
+
+## function
+
+```{r}
+meet_func <- function(nada){
+  data.frame(
+    alex = runif(1, min = 0, max = 60),
+    jordan = runif(1, min = 0, max = 60)) |> 
+    mutate(result = ifelse(abs(alex - jordan) <= 10, "They meet", "They do not"
+  )
+  )
+}
+```
+
+
+## `map()`
+
+```{r}
+n <- 100000
+
+tic()
+meet_map <- 1:n |> 
+  map(meet_func) |> 
+  list_rbind()
+toc()
+```
+
+## `for()` loop
+
+```{r}
+tic()
+meet_for <- data.frame()
+for(i in 1:n){
+  meet_for <- meet_for |> rbind(
+    data.frame(
+      alex = runif(1, min = 0, max = 60),
+      jordan = runif(1, min = 0, max = 60)) |> 
+      mutate(result = ifelse(
+                    abs(alex - jordan) <= 10, "They meet", "They do not"
+  )))
+}
+toc()
+
+```
+
+## vectorized 
+
+```{r}
+tic()
+meet_vect <- data.frame(
+  alex = runif(n, min = 0, max = 60),
+  jordan = runif(n, min = 0, max = 60)) |> 
+  mutate(result = ifelse(
+    abs(alex - jordan) <= 10, "They meet", "They do not"
+  )
+)
+toc()
+```
+
+:::
+
+
+##  Results
+
+The results themselves are equivalent.  Differing values due to randomness in the simulation.
+
+::: {.panel-tabset}
+
+## vectorized
+
+```{r}
+meet_vect |> 
+  group_by(result) |> 
+  summarize(number = n()) |> 
+  mutate(proprotion = number / sum(number))
+```
+
+## `map()`
+
+```{r}
+
+meet_map |> 
+  group_by(result) |> 
+  summarize(number = n())|> 
+  mutate(proprotion = number / sum(number))
+```
+
+## `for()` loop
+
+```{r}
+meet_for |> 
+  group_by(result) |> 
+  summarize(number = n())|> 
+  mutate(proprotion = number / sum(number))
+```
+
+:::
+
+## Visualizing the meet up
+
+
+```{r}
+meet_map |> 
+  ggplot(aes(x = jordan, y = alex, color = result)) +
+  geom_point(alpha = 0.3) + 
+  geom_abline(intercept = 10, slope = 1) + 
+  geom_abline(intercept = -10, slope = 1) + 
+  scale_color_brewer(palette = "Paired")
+```
+
+
+
+
+# Example 2: hats
 
 10 people are at a party, and all of them are wearing hats. They each place their hat in a pile; when they leave, they choose a hat at random. What is the probability at least one person selected the correct hat?
 
@@ -209,7 +339,9 @@ map(1:20, hat_match_prob, reps = num_iter) |>
 
 
 
-## Example 2: Birthday Problem
+
+
+## Example 3: Birthday Problem
 
 What is the probability that in a room of 29 people, at least 2 of them have the same birthday?
 

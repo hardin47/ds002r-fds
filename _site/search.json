@@ -12044,14 +12044,14 @@
     "href": "slides/2025-03-12-iters.html#step-2-everyone-draws-a-hat",
     "title": "Iterations",
     "section": "Step 2: everyone draws a hat",
-    "text": "Step 2: everyone draws a hat\n\nrandom_hats &lt;- sample(hats, size = 10, replace = FALSE)\n\nhats\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nrandom_hats\n\n [1]  4  6  9  3  5 10  2  8  1  7"
+    "text": "Step 2: everyone draws a hat\n\nrandom_hats &lt;- sample(hats, size = 10, replace = FALSE)\n\nhats\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nrandom_hats\n\n [1]  7  5  1  2  3 10  9  4  6  8"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#step-3-who-got-their-original-hat",
     "href": "slides/2025-03-12-iters.html#step-3-who-got-their-original-hat",
     "title": "Iterations",
     "section": "Step 3: who got their original hat?",
-    "text": "Step 3: who got their original hat?\n\nhats == random_hats\n\n [1] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE\n\n# TRUE is 1, FALSE is 0\nsum(hats == random_hats)\n\n[1] 2\n\n# did at least one person get their hat?\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE"
+    "text": "Step 3: who got their original hat?\n\nhats == random_hats\n\n [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n\n# TRUE is 1, FALSE is 0\nsum(hats == random_hats)\n\n[1] 0\n\n# did at least one person get their hat?\nsum(hats == random_hats) &gt; 0\n\n[1] FALSE"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#code-so-far",
@@ -12072,7 +12072,7 @@
     "href": "slides/2025-03-12-iters.html#iterate",
     "title": "Iterations",
     "section": "Iterate",
-    "text": "Iterate\n\nmap_lgl(1:10, ~hat_match(n = 10))\n\n [1] FALSE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE\n\nmap_lgl(1:10, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.7"
+    "text": "Iterate\n\nmap_lgl(1:10, ~hat_match(n = 10))\n\n [1]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE\n\nmap_lgl(1:10, ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.6"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#reproducible",
@@ -12121,7 +12121,7 @@
     "href": "slides/2025-03-12-iters.html#function-1",
     "title": "Iterations",
     "section": "Function",
-    "text": "Function\n\nclass_duplicates &lt;- function(unicorn){\n  class_birthdays &lt;- sample(1:365, size = 29, replace = TRUE)\n  num_duplicates &lt;- sum(duplicated(class_birthdays))\n  return(ifelse(num_duplicates &gt; 0, 1, 0))\n}\n\nclass_duplicates()\n\n[1] 1\n\nclass_duplicates()\n\n[1] 0"
+    "text": "Function\n\nremove the magic number 10\n\n\nhat_match &lt;- function(n){\n  hats &lt;- 1:n\n  random_hats &lt;- sample(hats, size = n, replace = FALSE)\n  sum(hats == random_hats) &gt; 0\n}\n\nhat_match(10)\n\n[1] FALSE\n\nhat_match(47)\n\n[1] TRUE"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#iterate-1",
@@ -12338,6 +12338,55 @@
     "href": "slides/2025-03-12-iters.html#does-the-change-impact-long-term",
     "title": "Iterations",
     "section": "Does the change impact long-term?",
-    "text": "Does the change impact long-term?\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(1:runs, run_func_sd10, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
+    "text": "Does the change impact long-term?\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(1:runs, run_func_sd10, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")\n\n\n\n\n\n\n\n\nBaumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. Modern Data Science with r. CRC Press. https://mdsr-book.github.io/mdsr2e/.\n\n\nMosteller, Frederick. 1987. Fifty Challenging Problems in Probability with Solutions. Dover Publications: Mineola, NY."
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#example-2-sally-joan",
+    "href": "slides/2025-03-12-iters.html#example-2-sally-joan",
+    "title": "Iterations",
+    "section": "Example 2: Sally & Joan",
+    "text": "Example 2: Sally & Joan\nConsider a situation where Sally and Joan plan to meet to study in their college campus center (Mosteller 1987; Baumer, Kaplan, and Horton 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Sally said, “Meet me between 7 and 8 tonight at the student center.” When should Joan plan to arrive at the campus center? And what is the probability that they actually meet?"
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#simulate-their-meeting",
+    "href": "slides/2025-03-12-iters.html#simulate-their-meeting",
+    "title": "Iterations",
+    "section": "Simulate their meeting",
+    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n33.65 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in 1:n){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(\n                    abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\"\n  )))\n}\ntoc()\n\n169.104 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(\n    abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed"
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#results",
+    "href": "slides/2025-03-12-iters.html#results",
+    "title": "Iterations",
+    "section": "Results",
+    "text": "Results\nThe results themselves are equivalent. Differing values due to randomness in the simulation.\n\nvectorizedmap()for() loop\n\n\n\nmeet_vect |&gt; \n  group_by(result) |&gt; \n  summarize(number = n()) |&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305\n\n\n\n\n\nmeet_map |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306"
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#visualizing-the-meet-up",
+    "href": "slides/2025-03-12-iters.html#visualizing-the-meet-up",
+    "title": "Iterations",
+    "section": "Visualizing the meet up",
+    "text": "Visualizing the meet up\n\nmeet_map |&gt; \n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) + \n  geom_abline(intercept = 10, slope = 1) + \n  geom_abline(intercept = -10, slope = 1) + \n  scale_color_brewer(palette = \"Paired\")"
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#example-3-birthday-problem",
+    "href": "slides/2025-03-12-iters.html#example-3-birthday-problem",
+    "title": "Iterations",
+    "section": "Example 3: Birthday Problem",
+    "text": "Example 3: Birthday Problem\nWhat is the probability that in a room of 29 people, at least 2 of them have the same birthday?"
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#function-2",
+    "href": "slides/2025-03-12-iters.html#function-2",
+    "title": "Iterations",
+    "section": "Function",
+    "text": "Function\n\nclass_duplicates &lt;- function(unicorn){\n  class_birthdays &lt;- sample(1:365, size = 29, replace = TRUE)\n  num_duplicates &lt;- sum(duplicated(class_birthdays))\n  return(ifelse(num_duplicates &gt; 0, 1, 0))\n}\n\nclass_duplicates()\n\n[1] 1\n\nclass_duplicates()\n\n[1] 0"
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#example-1-alex-jordan",
+    "href": "slides/2025-03-12-iters.html#example-1-alex-jordan",
+    "title": "Iterations",
+    "section": "Example 1: Alex & Jordan",
+    "text": "Example 1: Alex & Jordan\nConsider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer, Kaplan, and Horton 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?"
   }
 ]
