@@ -673,9 +673,9 @@ tsl_opinion
 ## Opinion titles
 
 ```{r}
-#|eval: false
+#| eval: false
 tsl_opinions <- function(i){
-tsl_page <- read_html(paste0("https://tsl.news/category/opinions/page/",i))
+tsl_page <- rvest::read_html(paste0("https://tsl.news/category/opinions/page/",i))
   
 title <- tsl_page |> 
 html_elements(".entry-title a") |> 
@@ -695,7 +695,7 @@ html_text() |>
 lubridate::mdy_hm(tz = "America/Los_Angeles")
 
 first_p <- tsl_page |> 
-  html_elements(".entry-content p") |> 
+  html_elements(".entry-content p:nth-child(1)") |> 
   html_text() |> 
   tolower()
   
@@ -707,7 +707,7 @@ tibble(
 )  
 }
 
-tsl_opinion_titles <- 1:50 |> purrr::map(tsl_opinions) |> 
+tsl_opinion_titles <- c(1:50) |> purrr::map(tsl_opinions) |> 
 list_rbind()
 ```
 

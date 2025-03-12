@@ -116,10 +116,10 @@ random_choice <- function(rep, num_babies){
 ## repeat
 ```{r}
 # repeat the function many times
-map_dbl(1:10, random_choice, num_babies = 16)
+map_dbl(c(1:10), random_choice, num_babies = 16)
 
 num_exper <- 5000
-help_random <- map_dbl(1:num_exper, random_choice, 
+help_random <- map_dbl(c(1:num_exper), random_choice, 
                             num_babies = 16)
 ```
 
@@ -342,7 +342,7 @@ perm_data <- function(rep, data){
               rep = rep)
 }
 
-map(1:10, perm_data, data = hsb2) |> 
+map(c(1:10), perm_data, data = hsb2) |> 
   list_rbind()
 ```
 
@@ -352,7 +352,7 @@ map(1:10, perm_data, data = hsb2) |>
 ```{r}
 set.seed(47)
 perm_stats <- 
-  map(1:500, perm_data, data = hsb2) |> 
+  map(c(1:500), perm_data, data = hsb2) |> 
   list_rbind() 
 
 perm_stats |> 

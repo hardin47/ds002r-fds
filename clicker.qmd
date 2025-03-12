@@ -1824,8 +1824,9 @@ sample(alph, 10, replace = FALSE)
 ```{r}
 #| echo: false
 
-hats <- 1:10
-random_hats <- sample(hats, size = 10, replace = TRUE)
+hats <- c(1:10)
+set.seed(47)
+random_hats <- sample(hats, size = 10, replace = FALSE)
 ```
   
 ```{r}
@@ -1885,7 +1886,7 @@ sum(hats == random_hats) > 0
 #| echo: true
 #| eval: false
 
-hats <- 1:10
+hats <- c(1:10)
 random_hats <- sample(hats, size = 10, replace = FALSE)
 sum(hats == random_hats) > 0
 ```

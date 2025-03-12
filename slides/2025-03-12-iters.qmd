@@ -155,7 +155,7 @@ toc()
 ```{r}
 tic()
 meet_for <- data.frame()
-for(i in 1:n){
+for(i in c(1:n)){
   meet_for <- meet_for |> rbind(
     data.frame(
       alex = runif(1, min = 0, max = 60),
@@ -245,13 +245,14 @@ meet_map |>
 ## Step 1: representing the hats
 
 ```{r}
-hats <- 1:10
+hats <- c(1:10)
 hats
 ```
 
 ## Step 2: everyone draws a hat
 
 ```{r}
+set.seed(47)
 random_hats <- sample(hats, size = 10, replace = FALSE)
 
 hats
@@ -273,7 +274,8 @@ sum(hats == random_hats) > 0
 ## Code so far
 
 ```{r}
-hats <- 1:10
+set.seed(47)
+hats <- c(1:10)
 random_hats <- sample(hats, size = 10, replace = FALSE)
 sum(hats == random_hats) > 0
 ```
@@ -286,7 +288,7 @@ sum(hats == random_hats) > 0
 
 ```{r}
 hat_match <- function(n){
-  hats <- 1:n
+  hats <- c(1:n)
   random_hats <- sample(hats, size = n, replace = FALSE)
   sum(hats == random_hats) > 0
 }
@@ -298,9 +300,9 @@ hat_match(47)
 ## Iterate
 
 ```{r}
-map_lgl(1:10, ~hat_match(n = 10))
+map_lgl(c(1:10), ~hat_match(n = 10))
 
-map_lgl(1:10, ~hat_match(n = 10)) |> 
+map_lgl(c(1:10), ~hat_match(n = 10)) |> 
   mean()
 ```
 
@@ -310,7 +312,7 @@ map_lgl(1:10, ~hat_match(n = 10)) |>
 set.seed(4747)
 num_iter <- 10000
 
-map_lgl(1:num_iter, ~hat_match(n = 10)) |> 
+map_lgl(c(1:num_iter), ~hat_match(n = 10)) |> 
   mean()
 ```
 
@@ -318,7 +320,7 @@ map_lgl(1:num_iter, ~hat_match(n = 10)) |>
 set.seed(123)
 num_iter <- 10000
 
-map_lgl(1:num_iter, ~hat_match(n = 10)) |> 
+map_lgl(c(1:num_iter), ~hat_match(n = 10)) |> 
   mean()
 ```
 
@@ -326,7 +328,7 @@ map_lgl(1:num_iter, ~hat_match(n = 10)) |>
 
 ```{r}
 hat_match_prob <- function(n, reps){
-  prob <- map_lgl(1:reps, ~hat_match(n = n)) |> 
+  prob <- map_lgl(c(1:reps), ~hat_match(n = n)) |> 
     mean()
   return(data.frame(match_prob = prob, num_hats = n))
 }
@@ -338,13 +340,13 @@ hat_match_prob(47, 200)
 
 ```{r}
 hat_match_prob <- function(n, reps){
-  prob <- map_lgl(1:reps, ~hat_match(n = n)) |> 
+  prob <- map_lgl(c(1:reps), ~hat_match(n = n)) |> 
     mean()
   return(data.frame(match_prob = prob, num_hats = n))
 }
 
 set.seed(47)
-map(1:20, hat_match_prob, reps = num_iter) |> 
+map(c(1:20), hat_match_prob, reps = num_iter) |> 
   list_rbind()
 ```
 
@@ -354,7 +356,7 @@ map(1:20, hat_match_prob, reps = num_iter) |>
 ```{r}
 set.seed(47)
 num_iter <- 10000
-map(1:20, hat_match_prob, reps = num_iter) |> 
+map(c(1:20), hat_match_prob, reps = num_iter) |> 
   list_rbind() |> 
   ggplot(aes(x = num_hats, y = match_prob)) + 
   geom_line() + 
@@ -374,7 +376,7 @@ What is the probability that in a room of 28 people, at least 2 of them have the
 
 ```{r}
 set.seed(7474)
-class_birthdays <- sample(1:365, size = 28, replace = TRUE)
+class_birthdays <- sample(c(1:365), size = 28, replace = TRUE)
 class_birthdays 
 ```
 
@@ -389,7 +391,7 @@ sum(duplicated(class_birthdays))
 
 ```{r}
 class_duplicates <- function(unicorn){
-  class_birthdays <- sample(1:365, size = 28, replace = TRUE)
+  class_birthdays <- sample(c(1:365), size = 28, replace = TRUE)
   num_duplicates <- sum(duplicated(class_birthdays))
   return(ifelse(num_duplicates > 0, 1, 0))
 }
@@ -401,21 +403,21 @@ class_duplicates()
 ## Iterate
 
 ```{r}
-map_dbl(1:10, class_duplicates)
+map_dbl(c(1:10), class_duplicates)
 ```
 
 ## Improve
 
 ```{r}
 class_duplicates <- function(class_size){
-  class_birthdays <- sample(1:365, size = class_size, replace = TRUE)
+  class_birthdays <- sample(c(1:365), size = class_size, replace = TRUE)
   num_duplicates <- sum(duplicated(class_birthdays))
   return(ifelse(num_duplicates > 0, 1, 0))
 }
 
 set.seed(47)
 num_stud <- 28
-map_dbl(1:10, ~class_duplicates(class_size = num_stud))
+map_dbl(c(1:10), ~class_duplicates(class_size = num_stud))
 
 ```
 
@@ -425,7 +427,7 @@ map_dbl(1:10, ~class_duplicates(class_size = num_stud))
 set.seed(47)
 num_stud <- 28
 num_class <- 1000
-map_dbl(1:num_class, ~class_duplicates(class_size = num_stud)) |> 
+map_dbl(c(1:num_class), ~class_duplicates(class_size = num_stud)) |> 
   mean()
 ```
 
@@ -438,12 +440,12 @@ num_stud_upper <- 28
 num_class <- 100
 
 birth_match_prob <- function(num_stud, reps){
-  prob <- map_dbl(1:reps, ~class_duplicates(class_size = num_stud)) |> 
+  prob <- map_dbl(c(1:reps), ~class_duplicates(class_size = num_stud)) |> 
     mean()
   return(data.frame(match_prob = prob, num_stud = num_stud))
 }
 
-map(1:num_stud_upper, birth_match_prob, reps = num_class) |> 
+map(c(1:num_stud_upper), birth_match_prob, reps = num_class) |> 
   list_rbind()
 
 ```
@@ -456,7 +458,7 @@ set.seed(123)
 num_stud_upper <- 40
 num_class <- 1000
 
-map(1:num_stud_upper, birth_match_prob, reps = num_class) |> 
+map(c(1:num_stud_upper), birth_match_prob, reps = num_class) |> 
   list_rbind()  |> 
   ggplot(aes(x = num_stud, y = match_prob)) + 
   geom_line() + 
@@ -823,7 +825,7 @@ calculate_return("unicorn", 0.47)
 ```{r}
 decision_steps <- 12
 
-pmap(data.frame(step = 1:decision_steps,
+pmap(data.frame(step = c(1:decision_steps),
                 alpha = rep(0.5, decision_steps)),
      calculate_return) |> 
   list_rbind()
@@ -838,7 +840,7 @@ runs <- 10
 decision_steps <- 12
 
 run_func <- function(run, steps, alpha){
-  pmap(data.frame(step = 1:steps,
+  pmap(data.frame(step = c(1:steps),
                   alpha = rep(alpha, steps)),
        calculate_return) |> 
     list_rbind() |> 
@@ -847,7 +849,7 @@ run_func <- function(run, steps, alpha){
 
 run_func("happy", 12, 0.5)
 
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps,
     alpha = 0.5) |> 
   list_rbind()
@@ -867,7 +869,7 @@ cumprod(numbers)
 ## Cummulative rates
 
 ```{r}
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps,
     alpha = 0.5) |> 
   list_rbind() |> 
@@ -886,7 +888,7 @@ map(1:runs, run_func,
 #| echo: false
 
 runs <- 20
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps,
     alpha = 0.5) |> 
   list_rbind() |> 
@@ -906,7 +908,7 @@ map(1:runs, run_func,
 #| eval: false
 
 runs <- 20
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps,
     alpha = 0.5) |> 
   list_rbind() |> 
@@ -930,7 +932,7 @@ map(1:runs, run_func,
 ```{r}
 #| echo: false
 runs <- 20
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps, 
     alpha = 0.1) |> 
   list_rbind() |> 
@@ -948,7 +950,7 @@ map(1:runs, run_func,
 ```{r}
 #| eval: false
 runs <- 20
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps, 
     alpha = 0.1) |> 
   list_rbind() |> 
@@ -973,7 +975,7 @@ map(1:runs, run_func,
 #| echo: false
 
 runs <- 20
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps, 
     alpha = 0.9) |> 
   list_rbind() |> 
@@ -992,7 +994,7 @@ map(1:runs, run_func,
 #| eval: false
 
 runs <- 20
-map(1:runs, run_func, 
+map(c(1:runs), run_func, 
     steps = decision_steps, 
     alpha = 0.9) |> 
   list_rbind() |> 
@@ -1031,7 +1033,7 @@ calculate_return("unicorn", 0.47)
 ```{r}
 #| code-line-numbers: "4"
 run_func_sd10 <- function(run, steps, alpha){
-  pmap(data.frame(step = 1:steps,
+  pmap(data.frame(step = c(1:steps),
                   alpha = rep(alpha, steps)),
        calculate_return_sd10) |> 
     list_rbind() |> 
@@ -1052,7 +1054,7 @@ run_func_sd10 <- function(run, steps, alpha){
 #| echo: false
 #| code-line-numbers: "2"
 runs <- 20
-map(1:runs, run_func_sd10, 
+map(c(1:runs), run_func_sd10, 
     steps = decision_steps,
     alpha = 0.5) |> 
   list_rbind() |> 
@@ -1070,7 +1072,7 @@ map(1:runs, run_func_sd10,
 #| eval: false
 #| code-line-numbers: "2"
 runs <- 20
-map(1:runs, run_func_sd10, 
+map(c(1:runs), run_func_sd10, 
     steps = decision_steps,
     alpha = 0.5) |> 
   list_rbind() |> 

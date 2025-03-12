@@ -1150,7 +1150,7 @@ A list is a way to hold things which might be very different in shape:
 ```{.r .cell-code}
 a_list <- list(a_number = 5,
                       a_vector = c("a", "b", "c"),
-                      a_dataframe = data.frame(a = 1:3, 
+                      a_dataframe = data.frame(a = c(1:3), 
                                                b = c("q", "b", "z"), 
                                                c = c("bananas", "are", "so very great")))
 
@@ -1441,7 +1441,7 @@ day(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 2
+[1] 12
 ```
 
 
@@ -1454,7 +1454,7 @@ week(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 9
+[1] 11
 ```
 
 
@@ -1517,7 +1517,7 @@ minute(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 12
+[1] 15
 ```
 
 
@@ -1530,7 +1530,7 @@ hour(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 20
+[1] 16
 ```
 
 
@@ -1543,7 +1543,7 @@ yday(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 61
+[1] 71
 ```
 
 
@@ -1556,7 +1556,7 @@ mday(rightnow)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 2
+[1] 12
 ```
 
 
@@ -1569,7 +1569,7 @@ wday(rightnow, label=FALSE)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] 1
+[1] 4
 ```
 
 
@@ -1582,7 +1582,7 @@ wday(rightnow, label=TRUE)
 ::: {.cell-output .cell-output-stdout}
 
 ```
-[1] Sun
+[1] Wed
 Levels: Sun < Mon < Tue < Wed < Thu < Fri < Sat
 ```
 
