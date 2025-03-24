@@ -27,6 +27,7 @@ Logistics:
 - do not include error or warning messages (see HW YAML for code).
 - include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
 - please include the source of the data (which might include, for example, both the link to the data source (e.g., TidyTuesday page) + the original source of the data (e.g., NYT)).
+- if you are working with a (local) copy of the .csv file (as opposed to, for example, a link to the dataset on TidyTuesday's GitHub site), then the .csv file should live in **your** GitHub repository for your website. And you should read the data in from that local copy. That is, the dataset should not live in your Downloads.
 
 
 ### Some potential places to find text data

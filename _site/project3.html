@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.36">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-99ea18842df93e310e1b06c91aebad21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-643cb54a90563409bf607ca7ddb324ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -192,47 +192,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Project instructions to come!</p>
-<!--
-
-For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):
-
-a) conducts a permutation test by simulating behavior under the null hypothesis (you would need to find a dataset and develop a related research question). Please include the full context of the problem. That is, what are the variables and why would testing them be interesting?  Include a visualization of the original data / variables of interest so that the reader can sense the extent of difference in the original relationship.
-
-b) develops a lineup protocol for visual inference, as in <a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target = "_blank">"Bringing Visual Inference to the Classroom"</a>, (you'll need to write the function to do the mapping.  The ggplot part would be straightforward using faceting.).  [That is, you would use a dataset, with a related research question, and test the research question using a series of null plots.]
-
-c) calculates a probability which is not trivial to estimate without a simulation.  For example, simulate room draw!
-
-d) (needs some background in introductory statistics) investigates the effects of condition violations on a statistical test, as measured by coverage rate, confidence interval width, type I error rate, etc.  [That is, your simulation would generate data and assess how often the data reject the null hypothesis or how often the confidence interval captures the true parameter. I'm happy to help with the R code for the statistics on this one!]
-
-Your simulation study should contain the following elements:
-
-- at least 1 function you've written
-- at least 1 `map()` variant
-- at least 1 illustrative, well-labeled plot
-- a description of what insights can be gained from your plot(s)
-
-Logistics:
-
-- start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences).  That is, use words to guide the reader through your analysis.
-- please include all your code used in the analysis.
-- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
-- do not include superfluous error or warning messages.
-- include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
-- if you used data, include the source of the data. Include both where **you** got the data (e.g., the TidyTuesday URL) and also the original provenance of the information.
-
-
-
-### Timeline
+<p>For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):</p>
+<ol type="a">
+<li><p>conducts a permutation test by simulating behavior under the null hypothesis (you will need to find a dataset and develop a related research question). Please include the full context of the problem. That is, what are the variables and why is testing them interesting? Include a visualization of the original data / variables of interest so that the reader can sense the extent of difference in the original relationship.</p></li>
+<li><p>develops a lineup protocol for visual inference, as in <a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target="_blank">“Bringing Visual Inference to the Classroom”</a>, (you’ll need to write the function to do the mapping. The ggplot part will be straightforward using faceting.). [That is, you will use a dataset, with a related research question, and test the research question using a series of null plots.]</p></li>
+<li><p>calculates a probability which is not trivial to estimate without a simulation. For example, simulate room draw!</p></li>
+<li><p>(needs some background in introductory statistics) investigates the effects of condition violations on a statistical test, as measured by coverage rate, confidence interval width, type I error rate, etc. [That is, your simulation will generate data and assess how often the data reject the null hypothesis or how often the confidence interval captures the true parameter. I’m happy to help with the R code for the statistics on this one!]</p></li>
+</ol>
+<p>Your simulation study should contain the following elements:</p>
+<ul>
+<li>at least 1 function you’ve written</li>
+<li>at least 1 <code>map()</code> variant</li>
+<li>at least 1 illustrative, well-labeled plot</li>
+<li>a description of what insights can be gained from your plot(s)</li>
+</ul>
+<p>Logistics:</p>
+<ul>
+<li>work in your website .Rproj, do not start a new R Project.</li>
+<li>start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences). That is, use words to guide the reader through your analysis.</li>
+<li>please include all your code used in the analysis (but feel free to use code folding<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>).</li>
+<li>make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).</li>
+<li>do not include error or warning messages (see HW YAML for code).</li>
+<li>include a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.</li>
+<li>if you used data, include the source of the data. Include both where <strong>you</strong> got the data (e.g., the TidyTuesday URL) and also the original provenance of the information.</li>
+<li>if you are working with a (local) copy of the .csv file (as opposed to, for example, a link to the dataset on TidyTuesday’s GitHub site), then the .csv file should live in <strong>your</strong> GitHub repository for your website. And you should read the data in from that local copy. That is, the dataset should not live in your Downloads.</li>
+</ul>
+<section id="timeline" class="level3">
+<h3 class="anchored" data-anchor-id="timeline">Timeline</h3>
+<p>Mini-Project 3 must be submitted on Canvas (not Gradescope) by <strong>11:59 PM on Wednesday April 2, 2025</strong>. You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page’s URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]</p>
 
 
-Mini-Project 3 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 30**.  You will add a tab to your Quarto webpage for Mini-Project 3 and submit the new page's URL. 
-
--->
+</section>
 
 
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<ol>
+<li id="fn1"><p>code folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

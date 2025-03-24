@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.36">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="SQL">
+<meta name="description" content="ethics: data and power">
 
 <title>Project 4 – Foundations of Data Science in R</title>
 <style>
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-99ea18842df93e310e1b06c91aebad21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-643cb54a90563409bf607ca7ddb324ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>SQL</p>
+    <p>ethics: data and power</p>
   </div>
 </div>
 
@@ -192,89 +192,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Project instructions to come!</p>
+<p>instructions to come</p>
 <!--
 
-You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](https://www.science.smith.edu/wai-database/) hosted by Smith College.  WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles.  The goal of the database is to "enable auditory researchers to share WAI measurements and combine analyses over multiple datasets."^[Thanks to Paul Roback at St. Olaf for sharing this project idea.]
+Two quotes from Data Feminism
 
-You have two primary goals:
+> [Examine] how power operates in the world today. This consists of asking who questions about data science: Who does the work (and who is pushed out)? Who benefits (and who is neglected or harmed)? Whose priorities get turned into products (and whose are overlooked)?^[https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nhrgx0zws6h]
 
-1) Duplicate <a href = "https://pmc.ncbi.nlm.nih.gov/articles/PMC7093226/" target = "_blank">Figure 1</a> from @voss2019.  You will need to query the WAI Database to build a dataset which you can pipe into `ggplot()` to recreate Figure 1 *as closely as possible* (might not be possible to reproduce exactly).
+> How did we get to the point where data science is used almost exclusively in the service of profit (for a few), surveillance (of the minoritized), and efficiency (amidst scarcity)?^[https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nifnaq2jmn9]
 
-2) Find a single study (from the WAI database) where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs. mean absorption by the group of interest.
+TASK
 
-You should be using `JOIN`s in both (1) and (2), do the `JOIN`ing in **SQL**, not in **R**.  Indeed, do as much of the work as possible using **SQL** functions!  Really only the `ggplot()` should be in done in **R**.
+1. find / read an article that describes an ethical dilemma with a data science component (see below for some potential examples).
+
+2. Describe the situation as if to someone who is not at all familiar with the setting.
+
+3. Answer at least 4 of the questions below.
 
 
-## Timeline
+* Biobank samples from the Havasupai lawsuit (informed consent, among other things).  Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), "<a href = "https://www.researchgate.net/publication/260121496_Protecting_Dignitary_Interests_of_Biobank_Research_Participants_Lessons_from_Havasupai_Tribe_v_Arizona_Board_of_RegentsI" target = "_blank">Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents</a>," Law, Innovation and Technology, 5, 54–84.
 
-Mini-Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Tuesday November 26**.  You will add a tab to your Quarto webpage for Mini-Project 4 and submit the new page's URL. 
+* Facebook emotional contagion experiment (patient consent, among other things). Kramer, A. D., Guillory, J. E., and Hancock, J. T. (2014), "<a href = "https://www.pnas.org/doi/10.1073/pnas.1320040111" target = "_blank">Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks</a>," Proceedings of the National Academy of Sciences of the United States of America, 111, 8788–8790.
 
+* OK Cupid data release (privacy and publicly available data). Xiao, T., and Ma, Y. (2021), "<a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1930812" target = "_blank">A Letter to the Journal of Statistics and Data Science Education — A Call for Review of 'OkCupid Data for Introductory Statistics and Data Science Courses' by Albert Y. Kim and Adriana Escobedo-Land</a>," Journal of Statistics and Data Science Education, 29, 214–215.
 
-## Hints
-
-- Parse the caption from Figure 1 carefully to determine how mean absorbances are calculated: "Mean absorbances for the 12 studies within the WAI database as of July 1, 2019. Noted in the legend are the peer-reviewed publications associated with the datasets, the number of individual ears, and the equipment used in the study. When multiple measurements were made on the same ear, the average from those measurements was used in the calculation across subjects for a given study. Some subjects have measurements on both a right and a left ear, and some subjects have measurements from only one ear; this figure includes every ear in the database and does not control for the effect of number of ears from each subject."
-- filter for only the 12 studies shown in Figure 1 (and also for frequencies shown in Figure 1)
-- study the patterns of frequencies.  It seems that most researchers used the same set of frequencies for each subject, ear, and session.
-- note the scale of the x-axis
-- the labels on the legend contains `AuthorsShortList`, `Year`, and `Instrument`, in addition to the number of unique ears (I think Werner's N may be incorrect?).  To get the number of unique ears, you might want something like this inside your `SELECT` query:  `COUNT(DISTINCT SubjectNumber, Ear) AS Unique_Ears`
-- when creating the labels, you'll need to `GROUP BY Identifier, Instrument`.  That is, group by both the `Identifier` and the `Instrument`.  The `Instrument` will not perfectly match the labels in the plot.
-
-Logistics:
-
-- start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences).  That is, use words to guide the reader through your analysis.
-- please include all your code used in the analysis.
-- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
-- do not include superfluous error or warning messages.
-- include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
-- include the source of the data. 
-
-## Starter Code
+* Taxis dataset with 173 million cab rides (poorly anonymized data). 
+https://arstechnica.com/tech-policy/2014/06/poorly-anonymized-logs-reveal-nyc-cab-drivers-detailed-whereabouts/
 
 
 
+* netflix de-anonymized + IMDB
+https://www.forbes.com/sites/kalevleetaru/2016/08/24/the-big-data-era-of-mosaicked-deidentification-can-we-anonymize-data-anymore/
 
 
-::: {.cell}
+* COMPAS
 
-```{.r .cell-code}
-library(RMariaDB)
-con_wai <- dbConnect(
-  MariaDB(), host = "scidb.smith.edu",
-  user = "waiuser", password = "smith_waiDB", 
-  dbname = "wai"
-)
-Measurements <- tbl(con_wai, "Measurements")
-PI_Info <- tbl(con_wai, "PI_Info")
-Subjects <- tbl(con_wai, "Subjects")
+* Target: https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?unlocked_article_code=1.6U4.nLSt.-yehBjKHEmPW&smid=url-share
 
-# collect(Measurements)
-```
-:::
+* Amazon hiring algorithm (moral responsibility) Dastin, J. (2018), "<a href = "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G" target = "_blank">Amazon Scraps Secret AI Recruiting Tool that Showed Bias Against Women</a>."
 
-::: {.cell}
+* Airlines respond differently, depending on who is tweeting. https://pubsonline.informs.org/doi/10.1287/isre.2021.1058
+(Does our library have a copy?)
 
-```{.sql .cell-code}
-SHOW TABLES;
-```
-:::
+* The Allegheny Family Screening Tool is specifically designed to predict the risk that a child will be placed in foster care in the two years after they are investigated.  https://pulitzercenter.org/stories/algorithm-screens-child-neglect-raises-concerns
 
-::: {.cell}
 
-```{.sql .cell-code}
-DESCRIBE Measurements;
-```
-:::
+Do we have permission to use these datasets?
 
-::: {.cell}
+Did the participants consent to their data being used?
 
-```{.sql .cell-code}
-SELECT *
-FROM Measurements
-LIMIT 0, 5;
-```
-:::
+Who collected the data and made it publicly available?
 
+Do the data have identifiable information?
+
+Were the variables collected in an accurate manner?
+
+Should we analyze data if we do not know how the data were collected?
+
+May researchers prioritize certain principles from the Belmont report over others?
+
+Are the data sufficiently anonymized or old to be free of ethical concerns?
+
+How were these data used to discriminate in the issuance of consumer credit?
+
+Should race be used as a variable?
+
+Are researchers who use certain variables complicit in or perpetuating some undue stigma or discrimination against minority subgroups?
+
+Was this research conducted using data obtained ethically?
+
+Were the participants aware of the ways their data would be used for research?
+
+If the data were publicly mined, is there information that could potentially be used to identify a particular person?
+
+Can participants provide informed consent to the use of their data in applications or algorithms that do not yet exist, and especially when these applications are not yet even foreseen?
+
+What are the possible ethical implications of using such data?
+
+Would the students be willing to share the data with others outside of the classroom for analysis in different contexts?
+
+Would their willingness to share data depend on the mode of data collection or questions being evaluated?
+
+
+<!--
+
+Add something about how sometimes there isn't enough information on marginalized communities. But sometimes there is too much. Example about the Allegheny Family Screening Tool -- 
+
+https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4#data-science-with-whose-interests-and-goals
+
+> The goal of the model is to remove children from potentially abusive households before it happens; this would appear to be a very worthy goal. As Eubanks shows, however, inequities result. For wealthier parents, who can more easily access private health care and mental health services, there is simply not that much data to pull into the model. For poor parents, who more often rely on public resources, the system scoops up records from child welfare services, drug and alcohol treatment programs, mental health services, Medicaid histories, and more. Because there are far more data about poor parents, they are oversampled in the model, and so their children are overtargeted as being at risk for child abuse—a risk that results in children being removed from their families and homes. Eubanks argues that the model “confuse[s] parenting while poor with poor parenting.”
+
+
+
+3. 
+Jessica Utts also has some great articles to consider as well:
+Integrating ethics into the guidelines for assessment and instruction in statistics education (GAISE)
+R Raman, J Utts, AI Cohen, MJ Hayat
+The American Statistician 77 (3), 323-330
+ 
+General and Personal Reflections on Succeeding as a Woman Science Researcher
+J Utts
+Journal of Anomalistics Volume 22, 447-464
+2022
+Enhancing data science ethics through statistical education and practice
+J Utts
+International Statistical Review 89 (1), 1-17
+ 
+4.
+This conversation is great! I wanted to chime in with a resource, though it's not particularly about students doing projects. I've been learning good things reading this:
+https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization
+which comes from
+https://www.urban.org/projects/do-no-harm-project
+
+One thing (among many) that caught my eye, from page 17:
+"A main reason more analyses don’t include more racial
+groups is likely sample size. In the data we used here,
+the number of people in poverty ranged from around
+100 people for some groups to tens of thousands for
+others. Sample size limitations are a function of multiple
+factors, including the actual size of the group, staffing,
+and funding as well as the active choices made by the
+surveying organization, survey funders, and society.
+Heather Krause, founder of We All Count, noted in
+our interview that small sample sizes for groups that
+are already underrepresented is a “choice on the part
+of the privileged, not limitations that are inherent in
+small populations.” Thus, the burden to do a better job
+collecting data that reflects the lives of all people should
+not fall on already-marginalized communities but on the
+surveying and research institutions, which should strive
+for better representation of such groups in the
+full dataset."
+
+I'm thinking that "choice on the part of the privileged, not limitations that are inherent in small populations" means that the people running a survey failed to decide (perhaps without realizing it) to put more effort (and money) into "oversampling": getting larger samples from groups that would ordinarily have too low of a sample size to make their estimates have a small enough uncertainty (and then accounting for that when giving overall estimates).
+
+So that's something to think about! In a Stat 101 sort of class we always emphasize the importance of doing a random sample, but this is saying it's better to deliberately "oversample" in many cases. And to allocate budget for it. And maybe that failing to do so is malpractice?
 
 
 

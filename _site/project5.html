@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.36">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="ethical data science">
+<meta name="description" content="SQL">
 
 <title>Project 5 – Foundations of Data Science in R</title>
 <style>
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-01c78b5cd655e4cd89133cf59d535862.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-99ea18842df93e310e1b06c91aebad21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-643cb54a90563409bf607ca7ddb324ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>ethical data science</p>
+    <p>SQL</p>
   </div>
 </div>
 
@@ -193,6 +193,96 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Project instructions to come!</p>
+<!--
+
+You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](https://www.science.smith.edu/wai-database/) hosted by Smith College.  WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles.  The goal of the database is to "enable auditory researchers to share WAI measurements and combine analyses over multiple datasets."^[Thanks to Paul Roback at St. Olaf for sharing this project idea.]
+
+You have two primary goals:
+
+1) Duplicate <a href = "https://pmc.ncbi.nlm.nih.gov/articles/PMC7093226/" target = "_blank">Figure 1</a> from @voss2019.  You will need to query the WAI Database to build a dataset which you can pipe into `ggplot()` to recreate Figure 1 *as closely as possible* (might not be possible to reproduce exactly).
+
+2) Find a single study (from the WAI database) where subjects of different sex, race, ethnicity, or age groups were enrolled, and produce plots of frequency vs. mean absorption by the group of interest.
+
+You should be using `JOIN`s in both (1) and (2), do the `JOIN`ing in **SQL**, not in **R**.  Indeed, do as much of the work as possible using **SQL** functions!  Really only the `ggplot()` should be in done in **R**.
+
+
+## Timeline
+
+Mini-Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Tuesday November 26**.  You will add a tab to your Quarto webpage for Mini-Project 4 and submit the new page's URL. 
+
+
+## Hints
+
+- Parse the caption from Figure 1 carefully to determine how mean absorbances are calculated: "Mean absorbances for the 12 studies within the WAI database as of July 1, 2019. Noted in the legend are the peer-reviewed publications associated with the datasets, the number of individual ears, and the equipment used in the study. When multiple measurements were made on the same ear, the average from those measurements was used in the calculation across subjects for a given study. Some subjects have measurements on both a right and a left ear, and some subjects have measurements from only one ear; this figure includes every ear in the database and does not control for the effect of number of ears from each subject."
+- filter for only the 12 studies shown in Figure 1 (and also for frequencies shown in Figure 1)
+- study the patterns of frequencies.  It seems that most researchers used the same set of frequencies for each subject, ear, and session.
+- note the scale of the x-axis
+- the labels on the legend contains `AuthorsShortList`, `Year`, and `Instrument`, in addition to the number of unique ears (I think Werner's N may be incorrect?).  To get the number of unique ears, you might want something like this inside your `SELECT` query:  `COUNT(DISTINCT SubjectNumber, Ear) AS Unique_Ears`
+- when creating the labels, you'll need to `GROUP BY Identifier, Instrument`.  That is, group by both the `Identifier` and the `Instrument`.  The `Instrument` will not perfectly match the labels in the plot.
+
+Logistics:
+
+- start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences).  That is, use words to guide the reader through your analysis.
+- please include all your code used in the analysis.
+- make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
+- do not include superfluous error or warning messages.
+- include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
+- include the source of the data. 
+
+## Starter Code
+
+
+
+
+
+
+
+::: {.cell}
+
+```{.r .cell-code}
+library(RMariaDB)
+con_wai <- dbConnect(
+  MariaDB(), host = "scidb.smith.edu",
+  user = "waiuser", password = "smith_waiDB", 
+  dbname = "wai"
+)
+Measurements <- tbl(con_wai, "Measurements")
+PI_Info <- tbl(con_wai, "PI_Info")
+Subjects <- tbl(con_wai, "Subjects")
+
+# collect(Measurements)
+```
+:::
+
+::: {.cell}
+
+```{.sql .cell-code}
+SHOW TABLES;
+```
+:::
+
+::: {.cell}
+
+```{.sql .cell-code}
+DESCRIBE Measurements;
+```
+:::
+
+::: {.cell}
+
+```{.sql .cell-code}
+SELECT *
+FROM Measurements
+LIMIT 0, 5;
+```
+:::
+
+
+
+
+
+
+-->
 
 
 

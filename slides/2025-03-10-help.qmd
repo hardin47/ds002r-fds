@@ -116,6 +116,13 @@ Output of `reprex()`:
 knitr::include_graphics(path = '../images/chatgpt_factor.jpg')
 ```
 
+## Must-haves for `reprex()`
+
+The following must be included in order for a reproducible example to work (i.e., for someone else to run the code and get the same output):
+
+* R pacakges
+* relevant dataset(s)
+* all of the code
 
 ## Checklist for a good `reprex()`
 
@@ -123,6 +130,7 @@ knitr::include_graphics(path = '../images/chatgpt_factor.jpg')
 ✅ Complete  
 ✅ Runnable  
 ✅ Clearly explains the problem
+
 
 # Code style
 

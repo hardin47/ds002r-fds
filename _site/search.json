@@ -2888,21 +2888,21 @@
     "href": "project2.html",
     "title": "Project 2",
     "section": "",
-    "text": "You will find a data set containing string / character data. The data could be on newspaper articles, tweets, songs, scripts, movie reviews, or anything else you can imagine. Then you will answer questions of interest and tell a story about your data using the string and regular expression skills you have developed.\nYour analysis must contain the following elements:\n\nat least 3 str_*() functions (3 different functions)\nat least 3 regular expressions\nat least 1 lookaround\nat least 2 illustrative, well-labeled plots or tables\na description of what insights can be gained from your plots and tables\na reference / documentation of the data source.\n\nLogistics:\n\nplease include all your code used in the analysis (but feel free to use code folding1.)\nmake sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).\ndo not include error or warning messages (see HW YAML for code).\ninclude a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.\nplease include the source of the data (which might include, for example, both the link to the data source (e.g., TidyTuesday page) + the original source of the data (e.g., NYT))."
+    "text": "You will find a data set containing string / character data. The data could be on newspaper articles, tweets, songs, scripts, movie reviews, or anything else you can imagine. Then you will answer questions of interest and tell a story about your data using the string and regular expression skills you have developed.\nYour analysis must contain the following elements:\n\nat least 3 str_*() functions (3 different functions)\nat least 3 regular expressions\nat least 1 lookaround\nat least 2 illustrative, well-labeled plots or tables\na description of what insights can be gained from your plots and tables\na reference / documentation of the data source.\n\nLogistics:\n\nplease include all your code used in the analysis (but feel free to use code folding1.)\nmake sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).\ndo not include error or warning messages (see HW YAML for code).\ninclude a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.\nplease include the source of the data (which might include, for example, both the link to the data source (e.g., TidyTuesday page) + the original source of the data (e.g., NYT)).\nif you are working with a (local) copy of the .csv file (as opposed to, for example, a link to the dataset on TidyTuesday’s GitHub site), then the .csv file should live in your GitHub repository for your website. And you should read the data in from that local copy. That is, the dataset should not live in your Downloads."
   },
   {
     "objectID": "project3.html",
     "href": "project3.html",
     "title": "Project 3",
     "section": "",
-    "text": "Project instructions to come!\n\n\n\n\nReuseCC BY 4.0"
+    "text": "For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):\nYour simulation study should contain the following elements:\nLogistics:"
   },
   {
     "objectID": "project5.html",
     "href": "project5.html",
     "title": "Project 5",
     "section": "",
-    "text": "Project instructions to come!\n\n\n\nReuseCC BY 4.0"
+    "text": "Project instructions to come!\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "images/ma154-hwtest.html",
@@ -2916,7 +2916,7 @@
     "href": "project4.html",
     "title": "Project 4",
     "section": "",
-    "text": "Project instructions to come!\n\n\n\n\nReuseCC BY 4.0"
+    "text": "instructions to come\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "project1.html",
@@ -8894,7 +8894,7 @@
     "href": "project4.html#footnotes",
     "title": "Project 4",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nThanks to Paul Roback at St. Olaf for sharing this project idea.↩︎"
+    "text": "Footnotes\n\n\nhttps://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nhrgx0zws6h↩︎\nhttps://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nifnaq2jmn9↩︎"
   },
   {
     "objectID": "slides/2024-11-25-shiny.html#a-simple-shiny-app",
@@ -11967,7 +11967,7 @@
     "href": "slides/2025-03-10-help.html#long-lines-piping",
     "title": "Help me help you",
     "section": "Long lines (piping)",
-    "text": "Long lines (piping)\nIf the arguments to a function don’t all fit on one line, put each argument on its own line and indent:2\n\n# Good\niris |&gt;\n  summarise(\n    Sepal.Length = mean(Sepal.Length),\n    Sepal.Width = mean(Sepal.Width),\n    .by = Species\n  )\n\n# Bad\niris |&gt;\n  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)\n\n# Also bad\nsummarise(\n  iris,\n  Sepal.Length = mean(Sepal.Length),\n  Sepal.Width = mean(Sepal.Width),\n  .by = Species\n)"
+    "text": "Long lines (piping)\nIf the arguments to a function don’t all fit on one line, put each argument on its own line and indent:1\n\n# Good\niris |&gt;\n  summarise(\n    Sepal.Length = mean(Sepal.Length),\n    Sepal.Width = mean(Sepal.Width),\n    .by = Species\n  )\n\n# Bad\niris |&gt;\n  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)\n\n# Also bad\nsummarise(\n  iris,\n  Sepal.Length = mean(Sepal.Length),\n  Sepal.Width = mean(Sepal.Width),\n  .by = Species\n)\n\nThe last one isn’t great because it is hard to distinguish the data frame from the other arguments (which play very different roles in the summarize() function)."
   },
   {
     "objectID": "slides/2025-03-10-help.html#short-lines-piping",
@@ -11987,8 +11987,8 @@
     "objectID": "slides/2025-03-10-help.html#data-communication",
     "href": "slides/2025-03-10-help.html#data-communication",
     "title": "Help me help you",
-    "section": "",
-    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "section": "Data Communication",
+    "text": "Data Communication\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#goals-of-simulating-complicated-models",
@@ -12338,7 +12338,7 @@
     "href": "slides/2025-03-12-iters.html#does-the-change-impact-long-term",
     "title": "Iterations",
     "section": "Does the change impact long-term?",
-    "text": "Does the change impact long-term?\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func_sd10, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")\n\n\n\n\n\n\n\n\nBaumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. Modern Data Science with r. CRC Press. https://mdsr-book.github.io/mdsr2e/.\n\n\nMosteller, Frederick. 1987. Fifty Challenging Problems in Probability with Solutions. Dover Publications: Mineola, NY."
+    "text": "Does the change impact long-term?\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func_sd10, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#example-2-sally-joan",
@@ -12352,7 +12352,7 @@
     "href": "slides/2025-03-12-iters.html#simulate-their-meeting",
     "title": "Iterations",
     "section": "Simulate their meeting",
-    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n35.129 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n172.944 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed"
+    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n32.822 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n168.08 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#results",
@@ -12409,5 +12409,215 @@
     "title": "Iterations",
     "section": "Vary number of hats",
     "text": "Vary number of hats\n\nhat_match_prob &lt;- function(n, reps){\n  prob &lt;- map_lgl(c(1:reps), ~hat_match(n = n)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_hats = n))\n}\n\nset.seed(47)\nmap(c(1:20), hat_match_prob, reps = num_iter) |&gt; \n  list_rbind()\n\n   match_prob num_hats\n1      1.0000        1\n2      0.4964        2\n3      0.6695        3\n4      0.6241        4\n5      0.6376        5\n6      0.6290        6\n7      0.6299        7\n8      0.6299        8\n9      0.6373        9\n10     0.6273       10\n11     0.6319       11\n12     0.6348       12\n13     0.6393       13\n14     0.6300       14\n15     0.6280       15\n16     0.6396       16\n17     0.6355       17\n18     0.6283       18\n19     0.6304       19\n20     0.6461       20"
+  },
+  {
+    "objectID": "slides/2025-03-10-help.html#must-haves-for-reprex",
+    "href": "slides/2025-03-10-help.html#must-haves-for-reprex",
+    "title": "Help me help you",
+    "section": "Must-haves for reprex()",
+    "text": "Must-haves for reprex()\nThe following must be included in order for a reproducible example to work (i.e., for someone else to run the code and get the same output):\n\nR pacakges\nrelevant dataset(s)\nall of the code"
+  },
+  {
+    "objectID": "project3.html#footnotes",
+    "href": "project3.html#footnotes",
+    "title": "Project 3",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\ncode folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code↩︎"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#example-helper-or-hinderer",
+    "href": "slides/2025-03-26-perm.html#example-helper-or-hinderer",
+    "title": "Permutation Tests",
+    "section": "Example: helper or hinderer",
+    "text": "Example: helper or hinderer\n\nIn a study reported in the November 2007 issue of Nature, researchers investigated whether infants take into account an individual’s actions towards others in evaluating that individual as appealing or aversive, perhaps laying for the foundation for social interaction (Hamlin, Wynn, and Bloom 2007). In other words, do children who aren’t even yet talking still form impressions as to someone’s friendliness based on their actions? In one component of the study, 10-month-old infants were shown a “climber” character (a piece of wood with “googly” eyes glued onto it) that could not make it up a hill in two tries. Then the infants were shown two scenarios for the climber’s next try, one where the climber was pushed to the top of the hill by another character (the “helper” toy) and one where the climber was pushed back down the hill by another character (the “hinderer” toy). The infant was alternately shown these two scenarios several times. Then the child was presented with both pieces of wood (the helper and the hinderer characters) and asked to pick one to play with."
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#example-helper-or-hinderer-1",
+    "href": "slides/2025-03-26-perm.html#example-helper-or-hinderer-1",
+    "title": "Permutation Tests",
+    "section": "Example: helper or hinderer",
+    "text": "Example: helper or hinderer\n\nInfant videos\n“Social evaluation by preverbal infants”, Nature 2007"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#parts-of-a-hypothesis-test",
+    "href": "slides/2025-03-26-perm.html#parts-of-a-hypothesis-test",
+    "title": "Permutation Tests",
+    "section": "Parts of a hypothesis test",
+    "text": "Parts of a hypothesis test\n\nWhat are the observational units?\n\ninfants\n\nWhat is the variable? What type of variable?\n\nchoice of helper or hindered: categorical\n\nWhat is the statistic?\n\n\\(\\hat{p}\\) = proportion of infants who chose helper = 14/16 = 0.875\n\nWhat is the parameter?\n\np = proportion of all infants who might choose helper (not measurable!)"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#hypotheses",
+    "href": "slides/2025-03-26-perm.html#hypotheses",
+    "title": "Permutation Tests",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\\(H_0\\): Null hypothesis. Babies (or rather, the population of babies under consideration) have no inherent preference for the helper or the hinderer shape.\n\\(H_A\\): Alternative hypothesis. Babies (or rather, the population of babies under consideration) are more likely to prefer the helper shape over the hinderer shape."
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#p-value",
+    "href": "slides/2025-03-26-perm.html#p-value",
+    "title": "Permutation Tests",
+    "section": "p-value",
+    "text": "p-value\n\np-value is the probability of our data or more extreme if nothing interesting is going on.\n\n\n\n\n\n\n\n\n\ncompletely arbitrary cutoff\n\\(\\rightarrow\\)\ngenerally accepted conclusion\n\n\n\n\np-value \\(&gt;\\) 0.10\n\\(\\rightarrow\\)\nno evidence against the null model\n\n\n0.05 \\(&lt;\\) p-value \\(&lt;\\) 0.10\n\\(\\rightarrow\\)\nmoderate evidence against the null model\n\n\n0.01 \\(&lt;\\) p-value \\(&lt;\\) 0.05\n\\(\\rightarrow\\)\nstrong evidence against the null model\n\n\np-value \\(&lt;\\) 0.01\n\\(\\rightarrow\\)\nvery strong evidence against the null model"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#computation",
+    "href": "slides/2025-03-26-perm.html#computation",
+    "title": "Permutation Tests",
+    "section": "Computation",
+    "text": "Computation\nFirst find the statistic\n\n# to control the randomness\nset.seed(47)\n\n# first create a data frame with the Infant data\nInfants &lt;- read.delim(\"http://www.rossmanchance.com/iscam3/data/InfantData.txt\")\n\n# find the observed number of babies who chose the helper\nhelp_obs &lt;- Infants |&gt; \n  summarize(prop_help = mean(choice == \"helper\")) |&gt; \n  pull()\nhelp_obs\n\n[1] 0.875"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#computation-1",
+    "href": "slides/2025-03-26-perm.html#computation-1",
+    "title": "Permutation Tests",
+    "section": "Computation",
+    "text": "Computation\nFind the sampling distribution under the condition that the null hypothesis is true.\n\nfunctionrepeatvizviz code\n\n\n\n# write a function to simulate a set of infants who are \n# equally likely to choose the helper or the hinderer\n\nrandom_choice &lt;- function(rep, num_babies){\n  choice = sample(c(\"helper\", \"hinderer\"), size = num_babies,\n                  replace = TRUE, prob = c(0.5, 0.5))\n  return(mean(choice == \"helper\"))\n}\n\n\n\n\n# repeat the function many times\nmap_dbl(c(1:10), random_choice, num_babies = 16)\n\n [1] 0.6875 0.3750 0.4375 0.3750 0.5000 0.5000 0.6250 0.4375 0.6875 0.6250\n\nnum_exper &lt;- 5000\nhelp_random &lt;- map_dbl(c(1:num_exper), random_choice, \n                            num_babies = 16)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# visualize null sampling distribution\nhelp_random |&gt; \n  data.frame() |&gt; \n  ggplot(aes(x = help_random)) + \n  geom_histogram() + \n  labs(x = \"proportion of babies who chose the helper\",\n       title = \"sampling distribution when null hypothesis is true\",\n       subtitle = \"that is, no inherent preference for helper or hinderer\")"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#computation-2",
+    "href": "slides/2025-03-26-perm.html#computation-2",
+    "title": "Permutation Tests",
+    "section": "Computation",
+    "text": "Computation\nAre the null values consistent with the observed value?\n\nvizp-valueviz code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# the p-value!\nsum(help_random &gt;= help_obs) / num_exper\n\n[1] 0.0022\n\n\n\n\n\n# visualize null sampling distribution\nhelp_random |&gt; \n  data.frame() |&gt; \n  ggplot(aes(x = help_random)) + \n  geom_histogram() + \n  geom_vline(xintercept = help_obs, color = \"red\") + \n  labs(x = \"proportion of babies who chose the helper\",\n       title = \"sampling distribution when null hypothesis is true\",\n       subtitle = \"that is, no inherent preference for helper or hinderer\")"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#all-together-structure-of-a-hypothesis-test",
+    "href": "slides/2025-03-26-perm.html#all-together-structure-of-a-hypothesis-test",
+    "title": "Permutation Tests",
+    "section": "All together: structure of a hypothesis test",
+    "text": "All together: structure of a hypothesis test\n\ndecide on a research question (which will determine the test)\ncollect data, specify the variables of interest\nstate the null (and alternative) hypothesis values (often statements about parameters)\n\nthe null claim is the science we want to reject\nthe alternative claim is the science we want to demonstrate\n\ngenerate a (null) sampling distribution to describe the variability of the statistic that was calculated along the way\nvisualize the distribution of the statistics under the null model\nget p-value to measure the consistency of the observed statistic and the possible values of the statistic under the null model\nmake a conclusion using words that describe the research setting"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#hypotheses-1",
+    "href": "slides/2025-03-26-perm.html#hypotheses-1",
+    "title": "Permutation Tests",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\nHypothesis Testing compares data to the expectation of a specific null hypothesis. If the data are unusual, assuming that the null hypothesis is true, then the null hypothesis is rejected.\nThe Null Hypothesis, \\(H_0\\), is a specific statement about a population made for the purposes of argument. A good null hypothesis is a statement that would be interesting to reject.\nThe Alternative Hypothesis, \\(H_A\\), is a specific statement about a population that is in the researcher’s interest to demonstrate. Typically, the alternative hypothesis contains all the values of the population that are not included in the null hypothesis.\nIn a two-sided (or two-tailed) test, the alternative hypothesis includes values on both sides of the value specified by the null hypothesis.\nIn a one-sided (or one-tailed) test, the alternative hypothesis includes parameter values on only one side of the value specified by the null hypothesis. \\(H_0\\) is rejected only if the data depart from it in the direction stated by \\(H_A\\)."
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#statistics-without-the-agonizing-pain",
+    "href": "slides/2025-03-26-perm.html#statistics-without-the-agonizing-pain",
+    "title": "Permutation Tests",
+    "section": "Statistics Without the Agonizing Pain",
+    "text": "Statistics Without the Agonizing Pain\n\nJohn Rauser of Pintrest (now Amazon), speaking at Strata + Hadoop 2014. https://blog.revolutionanalytics.com/2014/10/statistics-doesnt-have-to-be-that-hard.html"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#logic-of-hypothesis-tests",
+    "href": "slides/2025-03-26-perm.html#logic-of-hypothesis-tests",
+    "title": "Permutation Tests",
+    "section": "Logic of hypothesis tests",
+    "text": "Logic of hypothesis tests\n\nChoose a statistic that measures the effect.\nConstruct the sampling distribution under \\(H_0\\).\nLocate the observed statistic in the null sampling distribution.\np-value is the probability of the observed data or more extreme if the null hypothesis is true"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#logic-of-permutation-tests",
+    "href": "slides/2025-03-26-perm.html#logic-of-permutation-tests",
+    "title": "Permutation Tests",
+    "section": "Logic of permutation tests",
+    "text": "Logic of permutation tests\n\nChoose a test statistic.\nShuffle the data (force the null hypothesis to be true). Using the shuffled statistics, create a null sampling distribution of the test statistic (under \\(H_0\\)).\nFind the observed test statistic on the null sampling distribution.\nCompute the p-value (observed data or more extreme). The p-value can be one or two-sided."
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#applet-for-two-sample-permutation-tests",
+    "href": "slides/2025-03-26-perm.html#applet-for-two-sample-permutation-tests",
+    "title": "Permutation Tests",
+    "section": "Applet for two sample permutation tests",
+    "text": "Applet for two sample permutation tests\n\npermutation test for two samples from Rossman Chance applets."
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#high-school-beyond-survey",
+    "href": "slides/2025-03-26-perm.html#high-school-beyond-survey",
+    "title": "Permutation Tests",
+    "section": "High School & Beyond survey",
+    "text": "High School & Beyond survey\nData: 200 randomly selected observations from the High School and Beyond survey, conducted on high school seniors by the National Center for Educational Statistics.\nResearch Question: in the population, do private school kids have a higher math score on average?\n\\[H_0: \\mu_{private} = \\mu_{public}\\] \\[H_A: \\mu_{private} &gt; \\mu_{public}\\]\n\\(\\mu\\) is the average math score in the population.\n\nlibrary(openintro)\nhsb2\n\n# A tibble: 200 × 11\n      id gender race          ses   schtyp prog   read write  math science socst\n   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt;\n 1    70 male   white         low   public gene…    57    52    41      47    57\n 2   121 female white         midd… public voca…    68    59    53      63    61\n 3    86 male   white         high  public gene…    44    33    54      58    31\n 4   141 male   white         high  public voca…    63    44    47      53    56\n 5   172 male   white         midd… public acad…    47    52    57      53    61\n 6   113 male   white         midd… public acad…    44    52    51      63    61\n 7    50 male   african amer… midd… public gene…    50    59    42      53    61\n 8    11 male   hispanic      midd… public acad…    34    46    45      39    36\n 9    84 male   white         midd… public gene…    63    57    54      58    51\n10    48 male   african amer… midd… public acad…    57    55    52      50    51\n# ℹ 190 more rows"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#summary-of-the-variables",
+    "href": "slides/2025-03-26-perm.html#summary-of-the-variables",
+    "title": "Permutation Tests",
+    "section": "Summary of the variables",
+    "text": "Summary of the variables\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#visualize-the-relationship-of-interest",
+    "href": "slides/2025-03-26-perm.html#visualize-the-relationship-of-interest",
+    "title": "Permutation Tests",
+    "section": "Visualize the relationship of interest",
+    "text": "Visualize the relationship of interest\n\nhsb2 |&gt; \n  ggplot(aes(x = schtyp, y = math)) + \n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#calculate-the-observed-statistics",
+    "href": "slides/2025-03-26-perm.html#calculate-the-observed-statistics",
+    "title": "Permutation Tests",
+    "section": "Calculate the observed statistic(s)",
+    "text": "Calculate the observed statistic(s)\nFor fun, we are calculating both the difference in averages as well as the difference in medians. That is, we have two different observed summary statistics to work with.\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math)) |&gt; \n  summarize(ave_diff = diff(ave_math),\n            med_diff = diff(med_math))\n\n# A tibble: 1 × 2\n  ave_diff med_diff\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     2.51      1.5"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#generate-a-null-sampling-distribution.",
+    "href": "slides/2025-03-26-perm.html#generate-a-null-sampling-distribution.",
+    "title": "Permutation Tests",
+    "section": "Generate a null sampling distribution.",
+    "text": "Generate a null sampling distribution.\n\nperm_data &lt;- function(rep, data){\n  data |&gt; \n    select(schtyp, math) |&gt; \n    mutate(math_perm = sample(math, replace = FALSE)) |&gt; \n    group_by(schtyp) |&gt; \n    summarize(obs_ave = mean(math),\n              obs_med = median(math),\n              perm_ave = mean(math_perm),\n              perm_med = median(math_perm)) |&gt; \n    summarize(obs_ave_diff = diff(obs_ave),\n              obs_med_diff = diff(obs_med),\n              perm_ave_diff = diff(perm_ave),\n              perm_med_diff = diff(perm_med),\n              rep = rep)\n}\n\nmap(c(1:10), perm_data, data = hsb2) |&gt; \n  list_rbind()\n\n# A tibble: 10 × 5\n   obs_ave_diff obs_med_diff perm_ave_diff perm_med_diff   rep\n          &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt; &lt;int&gt;\n 1         2.51          1.5         2.62            2.5     1\n 2         2.51          1.5         0.757          -1       2\n 3         2.51          1.5         1.65            2       3\n 4         2.51          1.5        -0.805          -0.5     4\n 5         2.51          1.5         1.80            2.5     5\n 6         2.51          1.5         2.92            3       6\n 7         2.51          1.5         1.91            2.5     7\n 8         2.51          1.5        -2.55           -3.5     8\n 9         2.51          1.5        -1.21           -3       9\n10         2.51          1.5         1.32            1      10"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#visualize-the-null-sampling-distribution-average",
+    "href": "slides/2025-03-26-perm.html#visualize-the-null-sampling-distribution-average",
+    "title": "Permutation Tests",
+    "section": "Visualize the null sampling distribution (average)",
+    "text": "Visualize the null sampling distribution (average)\n\nset.seed(47)\nperm_stats &lt;- \n  map(c(1:500), perm_data, data = hsb2) |&gt; \n  list_rbind() \n\nperm_stats |&gt; \n  ggplot(aes(x = perm_ave_diff)) + \n  geom_histogram() + \n  geom_vline(aes(xintercept = obs_ave_diff), color = \"red\")"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#visualize-the-null-sampling-distribution-median",
+    "href": "slides/2025-03-26-perm.html#visualize-the-null-sampling-distribution-median",
+    "title": "Permutation Tests",
+    "section": "Visualize the null sampling distribution (median)",
+    "text": "Visualize the null sampling distribution (median)\n\nperm_stats |&gt; \n  ggplot(aes(x = perm_med_diff)) + \n  geom_histogram() + \n  geom_vline(aes(xintercept = obs_med_diff), color = \"red\")"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#p-value-2",
+    "href": "slides/2025-03-26-perm.html#p-value-2",
+    "title": "Permutation Tests",
+    "section": "p-value",
+    "text": "p-value\n\nperm_stats |&gt; \n  summarize(p_val_ave = mean(perm_ave_diff &gt; obs_ave_diff),\n            p_val_med = mean(perm_med_diff &gt; obs_med_diff))\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.086      0.27"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#conclusion",
+    "href": "slides/2025-03-26-perm.html#conclusion",
+    "title": "Permutation Tests",
+    "section": "Conclusion",
+    "text": "Conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that in the population the average math scores for private school kids is larger than the average math scores for public school kids (p-value = 0.086).\nWe cannot claim that in the population the median math scores for private school kids is larger than the median math scores for public school kids (p-value = 0.27)."
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#two-sided-test",
+    "href": "slides/2025-03-26-perm.html#two-sided-test",
+    "title": "Permutation Tests",
+    "section": "Two-sided test:",
+    "text": "Two-sided test:\n\\(H_0: \\mu_{private} = \\mu_{public}\\) and \\(H_A: \\mu_{private} \\ne \\mu_{public}\\)"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#two-sided-p-value",
+    "href": "slides/2025-03-26-perm.html#two-sided-p-value",
+    "title": "Permutation Tests",
+    "section": "Two-sided p-value",
+    "text": "Two-sided p-value\n\nperm_stats |&gt; \n    summarize(p_val_ave = \n                mean(perm_ave_diff &gt; obs_ave_diff | \n                       perm_ave_diff &lt; -obs_ave_diff),\n              p_val_med = \n              mean(perm_med_diff &gt; obs_med_diff | \n                     perm_med_diff &lt; -obs_med_diff))\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.154     0.534"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#two-sided-conclusion",
+    "href": "slides/2025-03-26-perm.html#two-sided-conclusion",
+    "title": "Permutation Tests",
+    "section": "Two-sided conclusion",
+    "text": "Two-sided conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that there is a difference in average math scores in the population (p-value = 0.154).\nWe cannot claim that there is a difference in median math scores int he population (p-value = 0.534)."
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html#references",
+    "href": "slides/2025-03-26-perm.html#references",
+    "title": "Permutation Tests",
+    "section": "References",
+    "text": "References\n\n\n\n\nHamlin, J. Kiley, Karen Wynn, and Paul Bloom. 2007. “Social Evaluation by Preverbal Infants.” Nature 450: 557–59."
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html#section",
+    "href": "slides/2025-03-12-iters.html#section",
+    "title": "Iterations",
+    "section": "",
+    "text": "Baumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. Modern Data Science with r. CRC Press. https://mdsr-book.github.io/mdsr2e/.\n\n\nMosteller, Frederick. 1987. Fifty Challenging Problems in Probability with Solutions. Dover Publications: Mineola, NY."
   }
 ]
