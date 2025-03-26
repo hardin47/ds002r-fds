@@ -97,7 +97,7 @@ schedule <- tribble(
 "3.17.25", 'Spring Break', ' ', ' ', ' ',
   
      "Week 9 <br> 3.24.25", 'iterations + <br> simulations', 
- '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Iterations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-03-12-iters.html" target = "_blank">Iterations</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws14_ds2_s25_model-sim.pdf" target = "_blank">WS 14 - model simulation</a>',
+ '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Iterations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-03-12-iters.html" target = "_blank">Iterations</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws14_ds2_s25_model-sim.pdf" target = "_blank">WS 14 - model simulation</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws145_ds2_s25_helper.pdf" target = "_blank">WS 15 - helper & hinderer</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 6</a> - due 3.25.25 <br> Quiz 3 3.26.25',
 
   ' ',
