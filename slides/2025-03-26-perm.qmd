@@ -22,12 +22,12 @@ bibliography:
 #| echo: false
 library(tidyverse)
 library(purrr)
+options(pillar.width = 70)
 ```
 
 
 # Agenda  3/26/25
-1. Hypothesis tests
-2. Permutation tests
+1. Hypothesis testing
 
 
 # Hypothesis testing
@@ -35,6 +35,8 @@ library(purrr)
 Whether permutation tests or non-computational hypothesis tests (like t-test), hypothesis testing has the same structure.
 
 See <a href = "https://st47s.com/DS002R/Notes/13-permutation-tests.html#structure-of-hypothesis-testing" target = "_blank">class notes on hypothesis testing</a>.
+
+n.b., Helper-Hindered example uses a simulation to accomplish the hypothesis test, but it isn't a permutation test becasue we aren't permuting anything!
 
 ## Example: helper or hinderer
 
@@ -233,7 +235,7 @@ help_random |>
 # Agenda 3/31/25
 1. Two variable permutation tests
 
-
+Same hypothesis testing ideas: now we have **two** variables and we permute one of them to make the null hypothesis true.
  
 ## Statistics Without the Agonizing Pain
 
