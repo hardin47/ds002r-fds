@@ -104,7 +104,7 @@ schedule <- tribble(
 
   
      "Week 10 <br> 3.31.25", 'permutation tests', 
- '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/13-permutation-tests.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-03-26-perm.html" target = "_blank">Permutation tests</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws16_ds2_s25_permtest.pdf" target = "_blank">WS 16 - permutation test</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws17_ds2_s25_ethics.pdf" target = "_blank">WS 17 - ethics</a>',
+ '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/13-permutation-tests.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-03-26-perm.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-04-02-ethics.html" target = "_blank">Data Science Ethics</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws16_ds2_s25_permtest.pdf" target = "_blank">WS 16 - permutation test</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws17_ds2_s25_ethics.pdf" target = "_blank">WS 17 - ethics</a>',
   '{{< fa code >}} <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 4.2.25',
   ' ',
   
@@ -135,7 +135,7 @@ schedule <- tribble(
       "Week 15 <br> 5.5.25", ' ', 
   '{{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-12-02-fin.html" target = "_blank">Fin</a> ',
    'Quiz 6 5.7.25',
-  'presentations (?) 5.9.25',
+  'presentations (?) 5.8.25',
   
     "Week 16 <br> 5.13.25", ' ', 
   ' ',

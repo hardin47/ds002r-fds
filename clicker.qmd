@@ -2093,6 +2093,91 @@ data.frame(perm_diff = rnorm(200)) |>
 
 ---
 
+(@) What is misleading here?[^89a]
+    a. Very low data-to-ink ratio?^[data-to-ink ratio measures how much ink is being used for the data (data-ink) as compared to how much ink is because used on the entire plot (labels, etc.)]
+    b. Non-intuitive sorting?
+    c. Wrong / changing scales?
+    d. 1-dim information in 2-D or 3-d?
+    e. Inconsistent labeling
+
+```{r}
+#| fig.cap: "Reproduction of a data graphic reporting the number of gun deaths in Florida over time. The original image was published by Reuters.  [@MDSR]"
+#| out-width: '100%'
+#| fig-align: 'center'
+#| echo: FALSE
+knitr::include_graphics("images/FLguns.jpg")
+```    
+    
+[^89a]: c. The scale of the y-axis is upside down.
+
+
+---
+
+(@) What is misleading here?[^89b]
+    a. Very low data-to-ink ratio?^[data-to-ink ratio measures how much ink is being used for the data (data-ink) as compared to how much ink is because used on the entire plot (labels, etc.)]
+    b. Non-intuitive sorting?
+    c. Wrong / changing scales?
+    d. 1-dim information in 2-D or 3-d?
+    e. Inconsistent labeling
+
+```{r fig.cap = "A tweet by *National Review* on December 14, 2015 showing the change in global temperature over time.  [@MDSR]", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("images/climate.jpg")
+``` 
+    
+[^89b]: c. The scale of the y-axis is way too zoomed in.
+
+
+---
+
+(@) What is misleading here?[^89c]
+    a. Very low data-to-ink ratio?^[data-to-ink ratio measures how much ink is being used for the data (data-ink) as compared to how much ink is because used on the entire plot (labels, etc.)]
+    b. Non-intuitive sorting?
+    c. Wrong / changing scales?
+    d. 1-dim information in 2-D or 3-d?
+    e. Inconsistent labeling
+
+```{r fig.cap = "May 10, 2020, Georgia Department of Health, COVID-19 cases for 5 counties across time. https://dph.georgia.gov/covid-19-daily-status-report", out.width='90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("images/GAcovid.jpg")
+```
+    
+[^89c]: b. Non-intuitive sorting (sorted in decreasing order instead of by time)
+
+
+---
+
+(@) What is misleading here?[^89d]
+    a. Very low data-to-ink ratio?^[data-to-ink ratio measures how much ink is being used for the data (data-ink) as compared to how much ink is because used on the entire plot (labels, etc.)]
+    b. Non-intuitive sorting?
+    c. Wrong / changing scales?
+    d. 1-dim information in 2-D or 3-d?
+    e. Inconsistent labeling
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{r}
+#| fig-cap: "July 2, 2020, Georgia Department of Health, COVID-19 cases per 100K"
+#| fig-align: 'center'
+#| echo: false
+knitr::include_graphics("images/GAheatmap1.jpeg")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig-cap: "July 17, 2020, https://dph.georgia.gov/covid-19-daily-status-report"
+#| fig-align: 'center'
+#| echo: false
+knitr::include_graphics("images/GAheatmap2.jpeg")
+```
+:::
+::::
+    
+[^89d]: e. Inconsistent labeling (the colors mean different things for the two plots)
+
+
+---
+
 (@) How often do you read The Student Life?[^90]
     a. Every day
     b. 3-5 times a week

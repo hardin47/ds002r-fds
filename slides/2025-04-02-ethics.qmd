@@ -108,7 +108,7 @@ Was the research ethical? Were the authors justified in creating and publishing 
 
 ## Predicting race
 
-Consider a racial prediction algorithm including published software for the classifer under an open-source license as the R package **wru** [@imai2016]. (Trained using <a href = "https://www.census.gov/topics/population/genealogy/data.html" target = "_blank">US Census Surname Data</a>.)
+Consider a racial prediction algorithm including published software for the classier under an open-source license as the R package **wru** [@imai2016]. (Trained using <a href = "https://www.census.gov/topics/population/genealogy/data.html" target = "_blank">US Census Surname Data</a>.)
 
 The main function `predict_race()` returns predicted probabilities for a person's race based on either their last name alone, or their last name and their address.
 
@@ -188,6 +188,8 @@ As data teams, we aim to...
 
 
 ## Principles in action
+
+To think clearly about ethics, we need to apply principles directly to the examples...
 
 ## Predicting sexuality
 
