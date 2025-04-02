@@ -53,7 +53,12 @@ schedule <- tribble(
   
    'Tip 14', 'highlight with mouse and hit parenthesis', 'will put parentheses around the highlighted phrase', ' ',
   
-  'Tip 15', 'Session -> Restart R', 'rerstart the R session (without restarting RStudio)', 'shift + cmd / cntrl + 0'
+  'Tip 15', 'Session -> Restart R', 'rerstart the R session (without restarting RStudio)', 'shift + cmd / cntrl + 0',
+
+  'Tip 16', 'cmd + d', 'deletes the line',
+  'cntrl + d for PC (works on code or narrative)',
+
+  'Tip 17', 'Tools -> Keyboard Shortcuts Help', 'provides all the keyboard shortcuts', 'opt + shift + K on Mac; alt + shift + K on PC'
   
 )
 ```
