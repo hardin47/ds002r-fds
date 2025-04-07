@@ -2178,11 +2178,12 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) How often do you read The Student Life?[^90]
+(@) How often do you read "The Student Life"?[^90]
     a. Every day
     b. 3-5 times a week
     c. Once a week
     d. Rarely
+    e. What is "The Student Life"?
    
 [^90]: there can't possibly be a right answer here.
 

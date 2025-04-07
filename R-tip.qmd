@@ -60,7 +60,9 @@ schedule <- tribble(
 
   'Tip 17', 'Tools -> Keyboard Shortcuts Help', 'provides all the keyboard shortcuts', 'opt + shift + K on Mac; alt + shift + K on PC',
   
-  'Tip 18', '$ LaTeX code $', 'formats LaTeX code into math', 'cool way to write mathematical notation'
+  'Tip 18', '$ LaTeX code $', 'formats LaTeX code into math', 'cool way to write mathematical notation',
+  
+  'Tip 19', 'cmd + click on a function name', 'shows the inside of the function', 'cntrl + click on a function name for PC'
   
 )
 ```
