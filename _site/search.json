@@ -12744,7 +12744,7 @@
     "href": "slides/2025-04-07-webscrape.html#important-tool",
     "title": "Web Scraping",
     "section": "Important tool",
-    "text": "Important tool\nOur approach to web scraping relies on the Chrome browser and an extension called a Selector Gadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc."
+    "text": "Important tool\nOur approach to web scraping relies on the Chrome browser and an extension called SelectorGadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc."
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#data-acquisition",
@@ -12828,14 +12828,14 @@
     "href": "slides/2025-04-07-webscrape.html#scraping-the-web-what-why",
     "title": "Web Scraping",
     "section": "Scraping the web: what? why?",
-    "text": "Scraping the web: what? why?\n\nIncreasing amount of data is available on the web\nThese data are provided in an unstructured format: you can always copy & paste, but it’s time-consuming and prone to errors\nWeb scraping is the process of extracting this information automatically and transform it into a structured dataset\nTwo different scenarios:\n\nScreen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy).\nWeb APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files."
+    "text": "Scraping the web: what? why?\n\nIncreasing amount of data is available on the web\nThese data are provided in an unstructured format: you can always copy & paste, but it’s time-consuming and prone to errors\nWeb scraping is the process of extracting information automatically and transforming it into a structured dataset\nTwo different scenarios:\n\nScreen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy).\nWeb APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files."
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#hypertext-markup-language",
     "href": "slides/2025-04-07-webscrape.html#hypertext-markup-language",
     "title": "Web Scraping",
     "section": "Hypertext Markup Language",
-    "text": "Hypertext Markup Language\nMost of the data on the web is largely available as HTML - while it is structured (hierarchical) it often is not available in a form useful for analysis (flat / tidy).\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br/&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
+    "text": "Hypertext Markup Language\nMuch of the data on the web is available as HTML - while it is structured (hierarchical), often it is not immediately available in a form useful for analysis (flat / tidy).\n\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#some-html-elements",
@@ -12863,7 +12863,7 @@
     "href": "slides/2025-04-07-webscrape.html#html-rvest",
     "title": "Web Scraping",
     "section": "html & rvest",
-    "text": "html & rvest\n\nhtml &lt;- \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br/&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html)\n\n{html_document}\n&lt;html&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body&gt;\\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\\n    &lt;br&gt;&lt;div class=\"name\" ..."
+    "text": "html & rvest\n\nhtml &lt;- \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html)\n\n{html_document}\n&lt;html&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body&gt;\\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\\n    &lt;br&gt;&lt;div class=\"name\" ..."
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#selecting-elements",

@@ -30,12 +30,11 @@ options(pillar.width = 70)
 
 # Agenda  4/07/25
 1. web scraping
-2. selector gadget
-3. `rvest`
+2. `rvest`
 
 ## Important tool
 
-Our approach to web scraping relies on the Chrome browser and an extension called a Selector Gadget.  Download them here:
+Our approach to web scraping relies on the Chrome browser and an extension called SelectorGadget.  Download them here:
 
 * <a href = "https://www.google.com/chrome/" target = "_blank">Chrome</a>
 
@@ -275,7 +274,7 @@ tsl_opinion_titles
 
 -   These data are provided in an unstructured format: you can always copy & paste, but it's time-consuming and prone to errors
 
--   Web scraping is the process of extracting this information automatically and transform it into a structured dataset
+-   Web scraping is the process of extracting information automatically and transforming it into a structured dataset
 
 -   Two different scenarios:
 
@@ -286,7 +285,7 @@ tsl_opinion_titles
 
 ## Hypertext Markup Language {.smaller}
 
-Most of the data on the web is largely available as HTML - while it is structured (hierarchical) it often is not available in a form useful for analysis (flat / tidy).
+Much of the data on the web is available as HTML - while it is structured (hierarchical), often it is not immediately available in a form useful for analysis (flat / tidy).
 
 ::: small
 ``` html
@@ -296,7 +295,7 @@ Most of the data on the web is largely available as HTML - while it is structure
   </head>
   <body>
     <p align="center">Hello world!</p>
-    <br/>
+    <br>
     <div class="name" id="first">John</div>
     <div class="name" id="last">Doe</div>
     <div class="contact">
@@ -372,7 +371,7 @@ html <-
   </head>
   <body>
     <p align="center">Hello world!</p>
-    <br/>
+    <br>
     <div class="name" id="first">John</div>
     <div class="name" id="last">Doe</div>
     <div class="contact">
@@ -463,7 +462,7 @@ read_html(html) |> html_elements("div") |> html_text()
 # Agenda  4/9/25
 
 1. `rvest` continues
-2. example
+2. SelectorGadget
 3. ethics
 
 ## CSS classes and ids {.smaller}
