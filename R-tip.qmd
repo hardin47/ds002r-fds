@@ -58,7 +58,9 @@ schedule <- tribble(
   'Tip 16', 'cmd + d', 'deletes the line',
   'cntrl + d for PC (works on code or narrative)',
 
-  'Tip 17', 'Tools -> Keyboard Shortcuts Help', 'provides all the keyboard shortcuts', 'opt + shift + K on Mac; alt + shift + K on PC'
+  'Tip 17', 'Tools -> Keyboard Shortcuts Help', 'provides all the keyboard shortcuts', 'opt + shift + K on Mac; alt + shift + K on PC',
+  
+  'Tip 18', '$ LaTeX code $', 'formats LaTeX code into math', 'cool way to write mathematical notation'
   
 )
 ```

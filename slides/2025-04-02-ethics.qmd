@@ -242,5 +242,40 @@ stakeholders: OKCupid itself (principle 4)
   * 11. Protect the privacy and security of individuals represented in our data.
 
 
+# Algorithms
+
+
+1. disparate treatment $\rightarrow$ means that the differential treatment is intentional
+
+2. disparate impact $\rightarrow$ means that the differential treatment is unintentional or implicit (some examples include advancing mortgage credit, employment selection, predictive policing)
+
+
+## COMPAS
+
+```{r fig.cap = "Dylan Fugett had three subsequent arrests for drug possession.  Bernard Parker had no subsequent offenses.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/recid1.jpg")
+```
+
+
+## COMPAS
+
+| DYLAN FUGETT 	| BERNARD PARKER 	|
+|----------------------	|-------------------------------------	|
+| Prior Offense 	| Prior Offense 	|
+| 1 attempted burglary 	| 1 resisting arrest without violence 	|
+| LOW RISK - 3 	| HIGH RISK - 10 	|
+| Subsequent Offenses 	| Subsequent Offenses 	|
+| 3 drug possessions 	| None 	|
+
+
+## COMPAS
+
+```{r fig.cap = "False positive and false negative rates broken down by race.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/recid2.jpg")
+```
+
+
+
+
 ## References
 

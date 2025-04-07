@@ -110,7 +110,7 @@ schedule <- tribble(
   
   
      "Week 11 <br> 4.7.25", 'web scraping', 
- '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-04-webscrape.html" target = "_blank">Web scraping</a>',
+ '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-04-07-webscrape.html" target = "_blank">Web scraping</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws18_ds2_s25_css.pdf" target = "_blank">WS 18 - css selectors</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Spring2025/repositories" target = "_blank">HW 7</a> - due 4.8.25 <br> Quiz 4 4.9.25',
 
   ' ',
