@@ -491,6 +491,20 @@ read_html(html) |> html_elements("#first")
 
 ## Text with `html_text()` vs. `html_text2()`
 
+* The two functions handle whitespace differently:
+
+```{r}
+html <- read_html("<p>  Hello,\n   world! </p>")
+
+html |>  html_element("p") |>  html_text()
+
+
+html |>  html_element("p") |>  html_text2()
+
+```
+
+## Text with `html_text()` vs. `html_text2()`
+
 ```{r}
 html = read_html(
   "<p>  
@@ -539,6 +553,8 @@ read_html(html_table) |>
 
 extracts data from attributes:
 
+(n.b., the `<a>` tag refers to "anchor" and is used to create hyperlinks)
+
 ```{r}
 html <- minimal_html("
   <p><a href='https://en.wikipedia.org/wiki/Cat'>cats</a></p>
@@ -581,6 +597,13 @@ html |>
   html_attr("href")
 ```
 
+
+```{r}
+html |> 
+  html_elements("p a") |> 
+  html_attr("href")
+```
+
 ```{r}
 html |> 
   html_element("a") |> 
@@ -605,7 +628,7 @@ html |>
 <div>
   <p>This will be selected by both `div p` and `div > p`.</p> 
   <section>
-    <p>This will be selected only by `div p`, not by `div > p`.</p>
+   <p>This will be selected only by `div p`, not by `div > p`. Because it is inside the section tag.</p>
   </section>
 </div>
 ```
@@ -664,6 +687,7 @@ html_elements(".entry-title a")
 title <- tsl_page |> 
 html_elements(".entry-title a") |> 
 html_text()
+
 title
 
 title <- title |> 
@@ -809,8 +833,5 @@ Source: Brian Resnick, [Researchers just released profile data on 70,000 OkCupid
 ![](../images/many-pages.png){fig-align="center"}
 
 
-
-
-## References
 
 

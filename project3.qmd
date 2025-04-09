@@ -19,6 +19,7 @@ Your simulation study should contain the following elements:
 
 - at least 1 function you've written
 - at least 1 `map()` variant
+- a description of the simulation. Help the reader follow what you are doing, that is, what does your function do? why would you map it? etc.
 - at least 1 illustrative, well-labeled plot
 - a description of what insights can be gained from your plot(s)
 
