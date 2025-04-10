@@ -192,149 +192,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>instructions to come</p>
-<!--
-
-Two quotes from Data Feminism
-
-> [Examine] how power operates in the world today. This consists of asking who questions about data science: Who does the work (and who is pushed out)? Who benefits (and who is neglected or harmed)? Whose priorities get turned into products (and whose are overlooked)?^[https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nhrgx0zws6h]
-
-> How did we get to the point where data science is used almost exclusively in the service of profit (for a few), surveillance (of the minoritized), and efficiency (amidst scarcity)?^[https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nifnaq2jmn9]
-
-TASK
-
-1. find / read an article that describes an ethical dilemma with a data science component (see below for some potential examples).
-
-2. Describe the situation as if to someone who is not at all familiar with the setting.
-
-3. Answer at least 4 of the questions below.
-
-
-* Biobank samples from the Havasupai lawsuit (informed consent, among other things).  Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), "<a href = "https://www.researchgate.net/publication/260121496_Protecting_Dignitary_Interests_of_Biobank_Research_Participants_Lessons_from_Havasupai_Tribe_v_Arizona_Board_of_RegentsI" target = "_blank">Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents</a>," Law, Innovation and Technology, 5, 54–84.
-
-* Facebook emotional contagion experiment (patient consent, among other things). Kramer, A. D., Guillory, J. E., and Hancock, J. T. (2014), "<a href = "https://www.pnas.org/doi/10.1073/pnas.1320040111" target = "_blank">Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks</a>," Proceedings of the National Academy of Sciences of the United States of America, 111, 8788–8790.
-
-* OK Cupid data release (privacy and publicly available data). Xiao, T., and Ma, Y. (2021), "<a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1930812" target = "_blank">A Letter to the Journal of Statistics and Data Science Education — A Call for Review of 'OkCupid Data for Introductory Statistics and Data Science Courses' by Albert Y. Kim and Adriana Escobedo-Land</a>," Journal of Statistics and Data Science Education, 29, 214–215.
-
-* Taxis dataset with 173 million cab rides (poorly anonymized data). 
-https://arstechnica.com/tech-policy/2014/06/poorly-anonymized-logs-reveal-nyc-cab-drivers-detailed-whereabouts/
-
-
-
-* netflix de-anonymized + IMDB
-https://www.forbes.com/sites/kalevleetaru/2016/08/24/the-big-data-era-of-mosaicked-deidentification-can-we-anonymize-data-anymore/
-
-
-* COMPAS
-
-* Target: https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?unlocked_article_code=1.6U4.nLSt.-yehBjKHEmPW&smid=url-share
-
-* Amazon hiring algorithm (moral responsibility) Dastin, J. (2018), "<a href = "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G" target = "_blank">Amazon Scraps Secret AI Recruiting Tool that Showed Bias Against Women</a>."
-
-* Airlines respond differently, depending on who is tweeting. https://pubsonline.informs.org/doi/10.1287/isre.2021.1058
-(Does our library have a copy?)
-
-* The Allegheny Family Screening Tool is specifically designed to predict the risk that a child will be placed in foster care in the two years after they are investigated.  https://pulitzercenter.org/stories/algorithm-screens-child-neglect-raises-concerns
-
-
-Do we have permission to use these datasets?
-
-Did the participants consent to their data being used?
-
-Who collected the data and made it publicly available?
-
-Do the data have identifiable information?
-
-Were the variables collected in an accurate manner?
-
-Should we analyze data if we do not know how the data were collected?
-
-May researchers prioritize certain principles from the Belmont report over others?
-
-Are the data sufficiently anonymized or old to be free of ethical concerns?
-
-How were these data used to discriminate in the issuance of consumer credit?
-
-Should race be used as a variable?
-
-Are researchers who use certain variables complicit in or perpetuating some undue stigma or discrimination against minority subgroups?
-
-Was this research conducted using data obtained ethically?
-
-Were the participants aware of the ways their data would be used for research?
-
-If the data were publicly mined, is there information that could potentially be used to identify a particular person?
-
-Can participants provide informed consent to the use of their data in applications or algorithms that do not yet exist, and especially when these applications are not yet even foreseen?
-
-What are the possible ethical implications of using such data?
-
-Would the students be willing to share the data with others outside of the classroom for analysis in different contexts?
-
-Would their willingness to share data depend on the mode of data collection or questions being evaluated?
+<p>Project 4 examines ethics and power in the data science context. You will investigate a particular data science ethical quandary and the power dynamics within. Our work is grounded in the following two quotes from <a href="https://data-feminism.mitpress.mit.edu/" target="_blank">Data Feminism</a>. The first asks about <em>who</em> and the second asks about <em>why</em>.</p>
+<blockquote class="blockquote">
+<p>[Examine] how power operates in the world today. This consists of asking who questions about data science: Who does the work (and who is pushed out)? Who benefits (and who is neglected or harmed)? Whose priorities get turned into products (and whose are overlooked)?<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>How did we get to the point where data science is used almost exclusively in the service of profit (for a few), surveillance (of the minoritized), and efficiency (amidst scarcity)?<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<section id="your-task" class="level2">
+<h2 class="anchored" data-anchor-id="your-task">Your task</h2>
+<ol type="1">
+<li><p>First, find an ethical dilemma with a data science component. There are many examples below, and within each example you should start with the reference provided and find <strong>at least one more article</strong> (possibly from another angle?) to expand your understanding of the topic. It should be clear from your report what information came from which article.</p></li>
+<li><p>Describe the example / scenario as if to someone who is not at all familiar with the setting. In particular, it should be clear both what is the data science component and what is the ethical dilemma.</p></li>
+<li><p>Respond to at least 4 of the items below (from the list of questions or the Data Values and Principles Manifesto). Four separate paragraphs that explain both the issue (e.g., consent) and how the issue played out in the data science example. Note: totally fine if there are items that were done <em>well</em> in your example.</p></li>
+</ol>
+</section>
+<section id="questions-to-respond-to" class="level2">
+<h2 class="anchored" data-anchor-id="questions-to-respond-to">Questions to respond to</h2>
+<ul>
+<li><p>What is the permission structure for using the data? Was it followed?</p></li>
+<li><p>What was the consent structure for recruiting participants? Were the participants aware of the ways their data would be used for research? Was informed consent possible? Can you provide informed consent for applications that are yet foreseen?</p></li>
+<li><p>What was the data collection process? Were the observations collected ethically? Are there missing observations?</p></li>
+<li><p>Were the data made publicly available?</p></li>
+<li><p>Is the data identifiable? All of it? Some of it? In what way? Are the data sufficiently anonymized or old to be free of ethical concerns? Is anonymity guaranteed?</p></li>
+<li><p>How were the variables collected? Were they accurately recorded? Is there any missing data?</p></li>
+<li><p>Who was measured? Are those individuals representative of the people to whom we’d like to generalize / apply the algorithm? Should we analyze data if we do not know how the data were collected?</p></li>
+<li><p>Is the data being used in unintended ways to the original study?</p></li>
+<li><p>Should race be used as a variable? Is it a proxy for something else (e.g., amount of melanin in the skin, stress of navigating microaggressions, zip-code, etc.)? What about gender?</p></li>
+<li><p><a href="https://datapractices.org/manifesto/" target="_blank">Data Values and Principles manifesto</a></p></li>
+</ul>
+<blockquote class="blockquote">
+<p>As data teams, we aim to…</p>
+</blockquote>
+<blockquote class="blockquote">
+<ol type="1">
+<li>Use data to improve life for our users, customers, organizations, and communities.</li>
+<li>Create reproducible and extensible work.</li>
+<li>Build teams with diverse ideas, backgrounds, and strengths.</li>
+<li>Prioritize the continuous collection and availability of discussions and metadata.</li>
+<li>Clearly identify the questions and objectives that drive each project and use to guide both planning and refinement.</li>
+<li>Be open to changing our methods and conclusions in response to new knowledge.</li>
+<li>Recognize and mitigate bias in ourselves and in the data we use.</li>
+<li>Present our work in ways that empower others to make better-informed decisions.</li>
+<li>Consider carefully the ethical implications of choices we make when using data, and the impacts of our work on individuals and society.</li>
+<li>Respect and invite fair criticism while promoting the identification and open discussion of errors, risks, and unintended consequences of our work.</li>
+<li>Protect the privacy and security of individuals represented in our data.</li>
+<li>Help others to understand the most useful and appropriate applications of data to solve real-world problems.</li>
+</ol>
+</blockquote>
+</section>
+<section id="logistics" class="level2">
+<h2 class="anchored" data-anchor-id="logistics">Logistics</h2>
+<ul>
+<li>work in your website .Rproj, do not start a new R Project.</li>
+<li>create a new Quarto file (just like you did for previous projects), and type words into it, even though there is no code.</li>
+<li>no code is expected. If, for some reason, you include code, follow the same practices as in previous projects: explain what you are doing, show your code, no messages or warnings, etc.</li>
+<li>include the full citations for your references (of which there should be at least two). If you do not know how to create or format a citation, as me or chatGPT.</li>
+<li>make it clear which information came from which resource.</li>
+</ul>
+</section>
+<section id="potential-examples" class="level2">
+<h2 class="anchored" data-anchor-id="potential-examples">Potential examples</h2>
+<ul>
+<li><p>Biobank samples from the Havasupai lawsuit (informed consent, among other things). Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), <a href="https://www.researchgate.net/publication/260121496_Protecting_Dignitary_Interests_of_Biobank_Research_Participants_Lessons_from_Havasupai_Tribe_v_Arizona_Board_of_RegentsI" target="_blank">Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents</a>, Law, Innovation and Technology, 5, 54–84.</p></li>
+<li><p>Facebook emotional contagion experiment (patient consent, among other things). Kramer, A. D., Guillory, J. E., and Hancock, J. T. (2014), <a href="https://www.pnas.org/doi/10.1073/pnas.1320040111" target="_blank">Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks</a>, Proceedings of the National Academy of Sciences of the United States of America, 111, 8788–8790.</p></li>
+<li><p>OK Cupid data release (privacy and publicly available data). Xiao, T., and Ma, Y. (2021), <a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1930812" target="_blank">A Letter to the Journal of Statistics and Data Science Education — A Call for Review of ‘OkCupid Data for Introductory Statistics and Data Science Courses’ by Albert Y. Kim and Adriana Escobedo-Land</a>, Journal of Statistics and Data Science Education, 29, 214–215.</p></li>
+<li><p>Taxis dataset with 173 million cab rides (poorly anonymized data). Goodin, D. (2014) <a href="https://arstechnica.com/tech-policy/2014/06/poorly-anonymized-logs-reveal-nyc-cab-drivers-detailed-whereabouts/" target="_blank">Poorly anonymized logs reveal NYC cab drivers’ detailed whereabouts</a>, Ars Technical.</p></li>
+<li><p>Netflix “de-anonymized” + link to IMDB (poorly anonymized data). Leetaru, K. (2016), <a href="https://www.forbes.com/sites/kalevleetaru/2016/08/24/the-big-data-era-of-mosaicked-deidentification-can-we-anonymize-data-anymore/" target="_blank">The Big Data Era of Mosaicked Deidentification: Can We Anonymize Data Anymore?</a>, Forbes.</p></li>
+<li><p>COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) (biased algorithm). Angwin, J., Larson, J., Mattu, S., and Kirchner, L. (2016), <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" target="_blank">Machine Bias</a>, ProPublica.</p></li>
+<li><p>Target (what if the algorithm is good at predicting something you don’t want predicted?). Duhigg, C. (2012), <a href="https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?unlocked_article_code=1.6U4.nLSt.-yehBjKHEmPW&amp;smid=url-share" target="_blank">How Companies Learn Your Secrets</a>, The New York Times Magazine.</p></li>
+<li><p>Amazon hiring algorithm (who has moral responsibility) Dastin, J. (2018), “<a href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G" target="_blank">Amazon Scraps Secret AI Recruiting Tool that Showed Bias Against Women</a>, Reuters.</p></li>
+<li><p>Airlines respond differently, depending on who is tweeting (should the algorithm be used?). Gunarathne, P., Rui, H., and Seidmann, A. (2022). <a href="https://pubsonline.informs.org/doi/10.1287/isre.2021.1058" target="_blank">Racial Bias in Customer Service: Evidence from Twitter</a>, Information Systems Research: 33, 43-54. <strong>n.b., log into the Claremont Colleges Library and search for the title. The library has the digital copy available.</strong></p></li>
+<li><p>The Allegheny Family Screening Tool is specifically designed to predict the risk that a child will be placed in foster care in the two years after being investigated (what if the marginalized community is overrepresented?). Ho, S. and Burke, G. (2022). <a href="https://pulitzercenter.org/stories/algorithm-screens-child-neglect-raises-concerns" target="_blank">An Algorithm That Screens for Child Neglect Raises Concerns</a>, Pulitzer Center.</p></li>
+<li><p>Training facial recognition software from publicly available data (what if the marginalized community is underrepresented?). Buolamwini, J. and Gebru, T. (2018). <a href="https://proceedings.mlr.press/v81/buolamwini18a.html" target="_blank">Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification</a>, Proceedings of Machine Learning Research: 81, 77-91.</p></li>
+</ul>
 
 
-<!--
-
-Add something about how sometimes there isn't enough information on marginalized communities. But sometimes there is too much. Example about the Allegheny Family Screening Tool -- 
-
-https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4#data-science-with-whose-interests-and-goals
-
-> The goal of the model is to remove children from potentially abusive households before it happens; this would appear to be a very worthy goal. As Eubanks shows, however, inequities result. For wealthier parents, who can more easily access private health care and mental health services, there is simply not that much data to pull into the model. For poor parents, who more often rely on public resources, the system scoops up records from child welfare services, drug and alcohol treatment programs, mental health services, Medicaid histories, and more. Because there are far more data about poor parents, they are oversampled in the model, and so their children are overtargeted as being at risk for child abuse—a risk that results in children being removed from their families and homes. Eubanks argues that the model “confuse[s] parenting while poor with poor parenting.”
+</section>
 
 
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-3. 
-Jessica Utts also has some great articles to consider as well:
-Integrating ethics into the guidelines for assessment and instruction in statistics education (GAISE)
-R Raman, J Utts, AI Cohen, MJ Hayat
-The American Statistician 77 (3), 323-330
- 
-General and Personal Reflections on Succeeding as a Woman Science Researcher
-J Utts
-Journal of Anomalistics Volume 22, 447-464
-2022
-Enhancing data science ethics through statistical education and practice
-J Utts
-International Statistical Review 89 (1), 1-17
- 
-4.
-This conversation is great! I wanted to chime in with a resource, though it's not particularly about students doing projects. I've been learning good things reading this:
-https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization
-which comes from
-https://www.urban.org/projects/do-no-harm-project
-
-One thing (among many) that caught my eye, from page 17:
-"A main reason more analyses don’t include more racial
-groups is likely sample size. In the data we used here,
-the number of people in poverty ranged from around
-100 people for some groups to tens of thousands for
-others. Sample size limitations are a function of multiple
-factors, including the actual size of the group, staffing,
-and funding as well as the active choices made by the
-surveying organization, survey funders, and society.
-Heather Krause, founder of We All Count, noted in
-our interview that small sample sizes for groups that
-are already underrepresented is a “choice on the part
-of the privileged, not limitations that are inherent in
-small populations.” Thus, the burden to do a better job
-collecting data that reflects the lives of all people should
-not fall on already-marginalized communities but on the
-surveying and research institutions, which should strive
-for better representation of such groups in the
-full dataset."
-
-I'm thinking that "choice on the part of the privileged, not limitations that are inherent in small populations" means that the people running a survey failed to decide (perhaps without realizing it) to put more effort (and money) into "oversampling": getting larger samples from groups that would ordinarily have too low of a sample size to make their estimates have a small enough uncertainty (and then accounting for that when giving overall estimates).
-
-So that's something to think about! In a Stat 101 sort of class we always emphasize the importance of doing a random sample, but this is saying it's better to deliberately "oversample" in many cases. And to allocate budget for it. And maybe that failing to do so is malpractice?
-
-
-
--->
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+<ol>
+<li id="fn1"><p>https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nhrgx0zws6h<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nifnaq2jmn9<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
