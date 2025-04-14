@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  1.22.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  1.27.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - R   WS 3 - Tufte\n HW 1 - due 1.30.25 (Thursday!)\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  2.3.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot   WS 5 - Verbs\n HW 2 - due 2.3.25 (Monday going forward)\n\n\n\nWeek 4  2.10.25\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 6 - Joining\n HW 3 - due 2.10.25  Quiz 1 2.12.25\n\n\n\nWeek 5  2.17.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - String Variables   WS 8 - Factor Variables\n Project 1 - due 2.19.25\n\n\n\nWeek 6  2.24.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 9 - Regular Expressions\n HW 4 - due 2.25.25 (Tuesday going forward)  Quiz 2 2.26.25\n\n\n\nWeek 7  3.3.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - Functions   WS 11 - map\n Project 2 - due 3.5.25\n\n\n\nWeek 8  3.10.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 12 - help me help you   WS 13 - probability sim\n HW 5 - due 3.11.25\n\n\n\n3.17.25\nSpring Break\n\n\n\n\n\nWeek 9  3.24.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations   WS 14 - model simulation   WS 15 - helper & hinderer\n HW 6 - due 3.25.25  Quiz 3 3.26.25\n\n\n\nWeek 10  3.31.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics   WS 16 - permutation test   WS 17 - ethics\n Project 3 - due 4.2.25\n\n\n\nWeek 11  4.7.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping   WS 18 - css selectors\n HW 7 - due 4.8.25  Quiz 4 4.9.25\n\n\n\nWeek 12  4.14.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL clauses\n Project 4 - due 4.16.25\n\n\n\nWeek 13  4.21.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 4.22.25  Quiz 5 4.23.25\n\n\n\nWeek 14  4.28.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 4.30.25\n\n\n\nWeek 15  5.5.25\n\n Fin\nQuiz 6 5.7.25\npresentations (?) 5.8.25\n\n\nWeek 16  5.13.25\n\n\n Project 6 - due 5.13.25  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  1.22.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  1.27.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - R   WS 3 - Tufte\n HW 1 - due 1.30.25 (Thursday!)\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  2.3.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - ggplot   WS 5 - Verbs\n HW 2 - due 2.3.25 (Monday going forward)\n\n\n\nWeek 4  2.10.25\nData Wrangling\n  R4DS Transform   wrangling    Data Verbs    Pivot + Join   WS 6 - Joining\n HW 3 - due 2.10.25  Quiz 1 2.12.25\n\n\n\nWeek 5  2.17.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - String Variables   WS 8 - Factor Variables\n Project 1 - due 2.19.25\n\n\n\nWeek 6  2.24.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 9 - Regular Expressions\n HW 4 - due 2.25.25 (Tuesday going forward)  Quiz 2 2.26.25\n\n\n\nWeek 7  3.3.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 10 - Functions   WS 11 - map\n Project 2 - due 3.5.25\n\n\n\nWeek 8  3.10.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 12 - help me help you   WS 13 - probability sim\n HW 5 - due 3.11.25\n\n\n\n3.17.25\nSpring Break\n\n\n\n\n\nWeek 9  3.24.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations   WS 14 - model simulation   WS 15 - helper & hinderer\n HW 6 - due 3.25.25  Quiz 3 3.26.25\n\n\n\nWeek 10  3.31.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics   WS 16 - permutation test   WS 17 - ethics\n Project 3 - due 4.2.25\n\n\n\nWeek 11  4.7.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping   WS 18 - css selectors\n HW 7 - due 4.8.25  Quiz 4 4.9.25\n\n\n\nWeek 12  4.14.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL clauses   WS 19 - SQL database   WS 20 - SQL clauses\n Project 4 - due 4.16.25\n\n\n\nWeek 13  4.21.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 4.22.25  Quiz 5 4.23.25\n\n\n\nWeek 14  4.28.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 4.30.25\n\n\n\nWeek 15  5.5.25\n\n Fin\nQuiz 6 5.7.25\npresentations (?) 5.8.25\n\n\nWeek 16  5.13.25\n\n\n Project 6 - due 5.13.25  + presentations (?)\n\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -13130,5 +13130,145 @@
     "title": "Project 4",
     "section": "Logistics",
     "text": "Logistics\n\nwork in your website .Rproj, do not start a new R Project.\ncreate a new Quarto file (just like you did for previous projects), and type words into it, even though there is no code.\nno code is expected. If, for some reason, you include code, follow the same practices as in previous projects: explain what you are doing, show your code, no messages or warnings, etc.\ninclude the full citations for your references (of which there should be at least two). If you do not know how to create or format a citation, as me or chatGPT.\nmake it clear which information came from which resource."
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#what-is-a-database",
+    "href": "slides/2025-04-14-db.html#what-is-a-database",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "What is a database?",
+    "text": "What is a database?\n\nstructured collection of data organized with\n\nefficient storage\neasy retrieval\nconsistent management\n\ndata stored in tables which are linked to one another via keys (called a relational database, think join)"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#tidy-data",
+    "href": "slides/2025-04-14-db.html#tidy-data",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Tidy data",
+    "text": "Tidy data\n\ndata frame (R) or table (SQL)\ncolumns of variables\nrows of observational units"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#differences-between-r-and-sql",
+    "href": "slides/2025-04-14-db.html#differences-between-r-and-sql",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Differences between R and SQL",
+    "text": "Differences between R and SQL\n\ntables in SQL databases can be arbitrarily large\n\nlive in storage, computer’s hard drive (usually remote)\n\ndata frames in R\n\nlive in memory (RAM) on your personal computer\n\ntables in a database are linked via a key"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#the-airlines-database",
+    "href": "slides/2025-04-14-db.html#the-airlines-database",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "The airlines database",
+    "text": "The airlines database\nConsider a database of US flights between 2013 and 2015. The flights are downloaded from the Bureau of Transportation Statistics, US Department of Transportation. The database is a superset of the nycflights13 R package that tracks only flights in and out of airports serving New York City in 2013."
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#sql-connection",
+    "href": "slides/2025-04-14-db.html#sql-connection",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL connection",
+    "text": "SQL connection\nTo set up a SQL connection, you need the location of the server (host) as well as a username and password.\n\ncon_air &lt;- DBI::dbConnect(\n  RMariaDB::MariaDB(),\n  dbname = \"airlines\",\n  host = Sys.getenv(\"MDSR_HOST\"),\n  user = Sys.getenv(\"MDSR_USER\"),\n  password = Sys.getenv(\"MDSR_PWD\")\n)\n\nHadley Wickham discusses how to use Sys.getenv: https://cran.r-project.org/web/packages/httr/vignettes/secrets.html"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#tables-in-airlines-database",
+    "href": "slides/2025-04-14-db.html#tables-in-airlines-database",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Tables in airlines database",
+    "text": "Tables in airlines database\n\nDBI::dbListTables(con_air)\n\n[1] \"airports\"        \"planes\"          \"carriers\"        \"flights_summary\"\n[5] \"flights\""
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#sql-tables-as-tbl",
+    "href": "slides/2025-04-14-db.html#sql-tables-as-tbl",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL tables as tbl",
+    "text": "SQL tables as tbl\n\ncarriers &lt;- dplyr::tbl(con_air, \"carriers\")\ndim(carriers)\n\n[1] NA  2\n\nhead(carriers)\n\n# Source:   SQL [6 x 2]\n# Database: mysql  [mdsr_public@mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com:3306/airlines]\n  carrier name                         \n  &lt;chr&gt;   &lt;chr&gt;                        \n1 02Q     Titan Airways                \n2 04Q     Tradewind Aviation           \n3 05Q     Comlux Aviation, AG          \n4 06Q     Master Top Linhas Aereas Ltd.\n5 07Q     Flair Airlines Ltd.          \n6 09Q     Swift Air, LLC"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#sql-tables-as-tibble",
+    "href": "slides/2025-04-14-db.html#sql-tables-as-tibble",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL tables as tibble",
+    "text": "SQL tables as tibble\nThe function collect() copies a SQL table from its server location on disk to your local memory location in R.\n\ncarriers_tibble &lt;- carriers |&gt;\n  dplyr::collect()\n\ndim(carriers_tibble)\n\n[1] 1610    2\n\nhead(carriers_tibble)\n\n# A tibble: 6 × 2\n  carrier name                         \n  &lt;chr&gt;   &lt;chr&gt;                        \n1 02Q     Titan Airways                \n2 04Q     Tradewind Aviation           \n3 05Q     Comlux Aviation, AG          \n4 06Q     Master Top Linhas Aereas Ltd.\n5 07Q     Flair Airlines Ltd.          \n6 09Q     Swift Air, LLC"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#how-much-space-does-carriers-take-up",
+    "href": "slides/2025-04-14-db.html#how-much-space-does-carriers-take-up",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "How much space does carriers take up?",
+    "text": "How much space does carriers take up?\nThe data frame in R takes up 2 orders of magnitude of memory more than the table which just points to the object in SQL.\n\ncarriers |&gt;\n  object.size() |&gt;\n  print(units = \"Kb\")\n\n5.3 Kb\n\ncarriers_tibble |&gt;\n  object.size() |&gt;\n  print(units = \"Kb\")\n\n234.8 Kb"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#what-is-sql",
+    "href": "slides/2025-04-14-db.html#what-is-sql",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "What is SQL?",
+    "text": "What is SQL?\n\nSQL is a programming language for working with relational databases.\nSQL has been around since the 1970s, but has, unfortunately, many different dialects.\nTo connect to the mdsr database (via R and DBeaver), use MySQL.\nTo connect to DuckDB, use the dialect native to DuckDB."
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql",
+    "href": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\nThe function dbListTables() in the DBI package will tell us what tables exist in the airlines database.\n\nDBI::dbListTables(con_air)\n\n[1] \"airports\"        \"planes\"          \"carriers\"        \"flights_summary\"\n[5] \"flights\"        \n\nflights &lt;- dplyr::tbl(con_air, \"flights\")\ncarriers &lt;- dplyr::tbl(con_air, \"carriers\")"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-1",
+    "href": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-1",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\nOver what years is the flights data taken?\n\n\nyrs &lt;- flights |&gt;\n  summarize(min_year = min(year), max_year = max(year))\n\nyrs\n\n# Source:   SQL [1 x 2]\n# Database: mysql  [mdsr_public@mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com:3306/airlines]\n  min_year max_year\n     &lt;int&gt;    &lt;int&gt;\n1     2013     2015"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-2",
+    "href": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-2",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\nBecause flights is not actually a data.frame in R (but instead a tbl in SQL), the work that was done above was actually performed in SQL. To see the SQL code, we can use the function show_query.\n\ndplyr::show_query(yrs)\n\n&lt;SQL&gt;\nSELECT MIN(`year`) AS `min_year`, MAX(`year`) AS `max_year`\nFROM `flights`"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-3",
+    "href": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-3",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\nCreate a data set containing only flights between LAX and BOS in 2015.\n\n\nla_bos &lt;- flights |&gt;\n  filter(year == 2015 & ((origin == \"LAX\" & dest == \"BOS\") | \n           (origin == \"BOS\" & dest == \"LAX\"))) \n\ndplyr::show_query(la_bos)\n\n&lt;SQL&gt;\nSELECT `flights`.*\nFROM `flights`\nWHERE (`year` = 2015.0 AND ((`origin` = 'LAX' AND `dest` = 'BOS') OR (`origin` = 'BOS' AND `dest` = 'LAX')))"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-4",
+    "href": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql-4",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\ndbplyr doesn’t translate every R command into SQL.\nSQL is not a statistical software and doesn’t, for example, have a mechanism for creating data visualizations.\ntrack which R commands are connected to SQL at the dbplyr reference sheet."
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#sql-queries-via-the-dbi-package",
+    "href": "slides/2025-04-14-db.html#sql-queries-via-the-dbi-package",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "2. SQL queries via the DBI package",
+    "text": "2. SQL queries via the DBI package\n\nLook at the first few rows of the flights data.\n\n\nDBI::dbGetQuery(con_air,\n                \"SELECT * FROM flights LIMIT 8;\")\n\n  year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n1 2013    10   1        2             10        -8      453            505\n2 2013    10   1        4           2359         5      730            729\n3 2013    10   1       11             15        -4      528            530\n4 2013    10   1       14           2355        19      544            540\n5 2013    10   1       16             17        -1      515            525\n6 2013    10   1       22             20         2      552            554\n7 2013    10   1       29             35        -6      808            816\n8 2013    10   1       29             35        -6      449            458\n  arr_delay carrier tailnum flight origin dest air_time distance cancelled\n1       -12      AA  N201AA   2400    LAX  DFW      149     1235         0\n2         1      FL  N344AT    710    SFO  ATL      247     2139         0\n3        -2      AA  N3KMAA   1052    SFO  DFW      182     1464         0\n4         4      AA  N3ENAA   2392    SEA  ORD      191     1721         0\n5       -10      UA  N38473   1614    LAX  IAH      157     1379         0\n6        -2      UA  N458UA    291    SFO  IAH      188     1635         0\n7        -8      US  N551UW    436    LAX  CLT      256     2125         0\n8        -9      AS  N402AS    108    ANC  SEA      181     1448         0\n  diverted hour minute           time_hour\n1        0    0     10 2013-10-01 00:10:00\n2        0   23     59 2013-10-01 23:59:00\n3        0    0     15 2013-10-01 00:15:00\n4        0   23     55 2013-10-01 23:55:00\n5        0    0     17 2013-10-01 00:17:00\n6        0    0     20 2013-10-01 00:20:00\n7        0    0     35 2013-10-01 00:35:00\n8        0    0     35 2013-10-01 00:35:00"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#sql-queries-via-the-dbi-package-1",
+    "href": "slides/2025-04-14-db.html#sql-queries-via-the-dbi-package-1",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "2. SQL queries via the DBI package",
+    "text": "2. SQL queries via the DBI package\n\nHow many flights per year are in the flights table?\n\n\nDBI::dbGetQuery(con_air, \n  \"SELECT year, count(*) AS num_flights FROM flights GROUP BY year ORDER BY num_flights;\")\n\n  year num_flights\n1 2015     5819079\n2 2014     5819811\n3 2013     6369482"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#direct-sql-queries-via-sql-chunks",
+    "href": "slides/2025-04-14-db.html#direct-sql-queries-via-sql-chunks",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "3. Direct SQL queries via sql chunks",
+    "text": "3. Direct SQL queries via sql chunks\nSQL queries can be written directly inside a sql chunk in RStudio.\n\n```{sql}\n#| connection: con_air\n\nSELECT * FROM flights LIMIT 8;\n```\n\n\n8 records\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyear\nmonth\nday\ndep_time\nsched_dep_time\ndep_delay\narr_time\nsched_arr_time\narr_delay\ncarrier\ntailnum\nflight\norigin\ndest\nair_time\ndistance\ncancelled\ndiverted\nhour\nminute\ntime_hour\n\n\n\n\n2013\n10\n1\n2\n10\n-8\n453\n505\n-12\nAA\nN201AA\n2400\nLAX\nDFW\n149\n1235\n0\n0\n0\n10\n2013-10-01 00:10:00\n\n\n2013\n10\n1\n4\n2359\n5\n730\n729\n1\nFL\nN344AT\n710\nSFO\nATL\n247\n2139\n0\n0\n23\n59\n2013-10-01 23:59:00\n\n\n2013\n10\n1\n11\n15\n-4\n528\n530\n-2\nAA\nN3KMAA\n1052\nSFO\nDFW\n182\n1464\n0\n0\n0\n15\n2013-10-01 00:15:00\n\n\n2013\n10\n1\n14\n2355\n19\n544\n540\n4\nAA\nN3ENAA\n2392\nSEA\nORD\n191\n1721\n0\n0\n23\n55\n2013-10-01 23:55:00\n\n\n2013\n10\n1\n16\n17\n-1\n515\n525\n-10\nUA\nN38473\n1614\nLAX\nIAH\n157\n1379\n0\n0\n0\n17\n2013-10-01 00:17:00\n\n\n2013\n10\n1\n22\n20\n2\n552\n554\n-2\nUA\nN458UA\n291\nSFO\nIAH\n188\n1635\n0\n0\n0\n20\n2013-10-01 00:20:00\n\n\n2013\n10\n1\n29\n35\n-6\n808\n816\n-8\nUS\nN551UW\n436\nLAX\nCLT\n256\n2125\n0\n0\n0\n35\n2013-10-01 00:35:00\n\n\n2013\n10\n1\n29\n35\n-6\n449\n458\n-9\nAS\nN402AS\n108\nANC\nSEA\n181\n1448\n0\n0\n0\n35\n2013-10-01 00:35:00"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#direct-sql-queries-via-sql-chunks-1",
+    "href": "slides/2025-04-14-db.html#direct-sql-queries-via-sql-chunks-1",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "3. Direct SQL queries via sql chunks",
+    "text": "3. Direct SQL queries via sql chunks\nSQL queries can be written directly inside a sql chunk in RStudio.\n\n```{sql}\n#| connection: con_air\n\nSELECT year, count(*) AS num_flights \n       FROM flights \n       GROUP BY year \n       ORDER BY num_flights;\n```\n\n\n3 records\n\n\nyear\nnum_flights\n\n\n\n\n2015\n5819079\n\n\n2014\n5819811\n\n\n2013\n6369482"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#good-practice",
+    "href": "slides/2025-04-14-db.html#good-practice",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Good practice",
+    "text": "Good practice\nAlways a good idea to terminate the SQL connection when you are done with it.\n\ndbDisconnect(con_air, shutdown = TRUE)"
   }
 ]
