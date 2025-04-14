@@ -29,9 +29,9 @@ options(pillar.width = 70)
 
 # Agenda  4/14/24
 
-1. Database
+1. Databases
 2. SQL connections
-3. SQL in R (3 ways)
+3. SQL in Quarto (3 ways)
 
 
 # **SQL**:\n Structured Query Language
@@ -159,7 +159,7 @@ carriers_tibble |>
 
 
 
-# Using **SQL** in RStudio
+# Using **SQL** in Quarto
 
 We will write **SQL** code in three distinct ways:
 
