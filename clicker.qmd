@@ -2381,13 +2381,24 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) Which **SQL** keyword is used to sort the result-set?[^115]
+(@) Which **SQL** statement is used to sort the result-set?[^115]
     (a) `ORDER BY`
     (b) `ORDER`
     (c) `SORT`
     (d) `SORT BY`
  
 [^115]: a. `ORDER BY`
+
+---
+
+(@) What is the difference between the original data and the results set?[^115a]
+    (a) original comes after `SELECT` and results comes after `FROM`
+    (b) original comes after `FROM` and results comes after `WHERE`
+    (c) original comes after `WHERE` and results comes after `GROUP BY`
+    (d) original is the stored data and results comes after `SELECT`
+    (e) original is the stored data and results comes after `WHERE`
+    
+[^115a]: d. original is the stored data and results comes after `SELECT`
 
 ---
 
