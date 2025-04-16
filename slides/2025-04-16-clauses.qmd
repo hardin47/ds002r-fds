@@ -363,7 +363,7 @@ LIMIT 0, 10;
 
 ## WHERE
 
-`AND` takes precedent over `OR` in the order of operations, when there are no parentheses.  
+`AND` takes precedence over `OR` in the order of operations, when there are no parentheses.  
 
 ```{sql}
 #| connection: con_traffic
@@ -391,7 +391,7 @@ LIMIT 0, 10;
 
 ## WHERE
 
-Parentheses take precedent over `AND` and `OR`.
+Parentheses take precedence over `AND` and `OR`.
 
 ```{sql}
 #| connection: con_traffic
