@@ -13374,7 +13374,7 @@
     "href": "slides/2025-04-16-clauses.html#select-from-7",
     "title": "SQL clauses",
     "section": "SELECT … FROM",
-    "text": "SELECT … FROM\nSolution 1: two layers of SELECT\n\nfirst SELECT (i.e., inside) layer creates the new variables\nsecond SELECT (i.e., outside) layer subtracts the two times\n\n\nSELECT \n   date,\n   vehicle_date, \n   TIMESTAMPDIFF(YEAR, vehicle_date, date) AS car_age \nFROM (\n   SELECT\n      date,\n      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date\n   FROM la_new_orleans_2020_04_01)\n   AS subquery_table\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ndate\nvehicle_date\ncar_age\n\n\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2003-01-01\n7\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01"
+    "text": "SELECT … FROM\nSolution 1: apply the STR_TO_DATE() function inside the TIMESTAMPDIFF() function\n\nSELECT \n   date,\n   vehicle_year,\n   TIMESTAMPDIFF(YEAR, \n                 STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d'),\n                 date) AS car_age \nFROM la_new_orleans_2020_04_01\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ndate\nvehicle_year\ncar_age\n\n\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2003\n7\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01"
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#important-note",
@@ -13570,6 +13570,6 @@
     "href": "slides/2025-04-16-clauses.html#select-from-8",
     "title": "SQL clauses",
     "section": "SELECT … FROM",
-    "text": "SELECT … FROM\nSolution 2: apply the STR_TO_DATE() function inside the TIMESTAMPDIFF() function\n\nSELECT \n   date,\n   vehicle_year,\n   TIMESTAMPDIFF(YEAR, \n                 STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d'),\n                 date) AS car_age \nFROM la_new_orleans_2020_04_01\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ndate\nvehicle_year\ncar_age\n\n\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2003\n7\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01"
+    "text": "SELECT … FROM\nSolution 2: two layers of SELECT\n\nfirst SELECT (i.e., inside) layer creates the new variables\nsecond SELECT (i.e., outside) layer subtracts the two times\n\n\nSELECT \n   date,\n   vehicle_date, \n   TIMESTAMPDIFF(YEAR, vehicle_date, date) AS car_age \nFROM (\n   SELECT\n      date,\n      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date\n   FROM la_new_orleans_2020_04_01)\n   AS subquery_table\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ndate\nvehicle_date\ncar_age\n\n\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2003-01-01\n7\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01"
   }
 ]

@@ -26,8 +26,8 @@ options(pillar.width = 70)
 
 # Agenda  4/16/25
 
-1. Order of clauses
-2. Similarities & differences with **tidyverse**
+1. structure of **SQL** tables
+2. **SQL** clauses
 3. **SQL** queries to **R** objects
 
 ```{r}
@@ -229,7 +229,24 @@ SELECT
 
 ## SELECT ... FROM {.scrollable}
 
-Solution 1:  two layers of `SELECT`  
+Solution 1: apply the `STR_TO_DATE()` function inside the `TIMESTAMPDIFF()` function 
+
+```{sql}
+#| connection: con_traffic
+
+SELECT 
+   date,
+   vehicle_year,
+   TIMESTAMPDIFF(YEAR, 
+                 STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d'),
+                 date) AS car_age 
+FROM la_new_orleans_2020_04_01
+LIMIT 0, 10;
+```
+
+## SELECT ... FROM {.scrollable}
+
+Solution 2:  two layers of `SELECT`  
 
    * first `SELECT` (i.e., inside) layer creates the new variables
    * second `SELECT` (i.e., outside) layer subtracts the two times
@@ -250,22 +267,7 @@ FROM (
 LIMIT 0, 10;
 ```
 
-## SELECT ... FROM {.scrollable}
 
-Solution 2: apply the `STR_TO_DATE()` function inside the `TIMESTAMPDIFF()` function 
-
-```{sql}
-#| connection: con_traffic
-
-SELECT 
-   date,
-   vehicle_year,
-   TIMESTAMPDIFF(YEAR, 
-                 STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d'),
-                 date) AS car_age 
-FROM la_new_orleans_2020_04_01
-LIMIT 0, 10;
-```
 
 
 ## Important note:
