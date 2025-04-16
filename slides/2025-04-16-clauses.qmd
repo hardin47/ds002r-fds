@@ -155,7 +155,17 @@ SELECT * FROM ca_los_angeles_2020_04_01 LIMIT 0, 10;
 
 ```
 
+## SELECT ... FROM {.scrollable}
 
+What if I switch the order of SQL clauses?
+
+```{sql}
+#| connection: con_traffic
+#| error: true
+
+SELECT * LIMIT 0, 10 FROM ca_los_angeles_2020_04_01;
+
+```
 
 ## SELECT ... FROM
 
