@@ -1,5 +1,5 @@
 ---
-title: SQL clauses
+title: SQL statements
 author: "Jo Hardin"
 subtitle: "April 16, 2025"
 format: 
@@ -27,7 +27,7 @@ options(pillar.width = 70)
 # Agenda  4/16/25
 
 1. structure of **SQL** tables
-2. **SQL** clauses
+2. **SQL** keywords
 3. **SQL** queries to **R** objects
 
 ```{r}
@@ -103,11 +103,16 @@ DESCRIBE ca_los_angeles_2020_04_01;
 * `Default` provides the default value of the variable if no value is provided when a row is added to the database.
 
 
-# **SQL** clauses
+# **SQL** keywords
 
-## Order of clauses
+* A **SQL** *query* is a **SQL** *statement* that typically starts in `SELECT` and ends in `;`
+* **SQL** *keywords* are like data verbs in the **tidyverse**
+* A **SQL** *clause* is the keyword + relevant information. E.g., `FROM ca_los_angeles_2020_04_01` or `WHERE search_conducted = 1 AND vehicle_make = "Subaru"`
+* Exactly one **SQL** *statement* can be sent to the remote database in a **SQL** chunk.
 
-Queries in **SQL** start with the `SELECT` keyword and consist of several clauses, which must be written in the following order:
+## Order of keywords
+
+Queries in **SQL** start with the `SELECT` keyword and consist of several keywords, which must be written in the following order:
 
 
 :::: {.columns}
@@ -128,7 +133,7 @@ Queries in **SQL** start with the `SELECT` keyword and consist of several clause
 
 ::::
 
-The clauses are similar to data wrangling verbs in **R**, but the order in **SQL** is super important!
+The keywords are similar to data wrangling verbs in **R**, but the order in **SQL** is super important!
 
 
 ## SELECT ... FROM
@@ -157,7 +162,7 @@ SELECT * FROM ca_los_angeles_2020_04_01 LIMIT 0, 10;
 
 ## SELECT ... FROM {.scrollable}
 
-What if I switch the order of SQL clauses?
+What if I switch the order of SQL keywords?
 
 ```{sql}
 #| connection: con_traffic
@@ -272,7 +277,7 @@ LIMIT 0, 10;
 
 ## Important note:
 
-There is a distinction between clauses that operate on the *variables of the original table* versus those that operate on the *variables of the results set*.  
+There is a distinction between keywords that operate on the *variables of the original table* versus those that operate on the *variables of the results set*.  
 
 `date` and `vehicle_year` are columns in the *original table* - they are written to disk on the **SQL** server.  
 
@@ -310,7 +315,7 @@ LIMIT 0, 10;
 
 ## WHERE
 
-The `WHERE` clause is analogous to the `filter()` function in **dplyr**.  However, keep in mind that there are two **SQL** commands that resemble the **dplyr** `filter()` function. `WHERE` operates on the [original data]{.underline} in the table and `HAVING` operates on the [result set]{.underline}. 
+The `WHERE` keyword is analogous to the `filter()` function in **dplyr**.  However, keep in mind that there are two **SQL** commands that resemble the **dplyr** `filter()` function. `WHERE` operates on the [original data]{.underline} in the table and `HAVING` operates on the [result set]{.underline}. 
 
 ## WHERE {.scrollable}
 
@@ -462,7 +467,7 @@ SELECT * FROM (
 
 ## A `NULL` example
 
-Where does the `WHERE` clause do? It tells us that we only want to keep the rows satisfying the `age <= 20` OR `num_dogs = 3`. Let’s consider each row one at a time:
+Where does the `WHERE` keyword do? It tells us that we only want to keep the rows satisfying the `age <= 20` OR `num_dogs = 3`. Let’s consider each row one at a time:
 
 * For Ace, `age <= 20` evaluates to TRUE so the claim is satisfied.
 * For Ada, `age <= 20` evaluates to `NULL` but `num_dogs = 3` evaluates to TRUE so the claim is satisfied.
@@ -491,7 +496,7 @@ WHERE age <= 20 OR num_dogs = 3;
 
 ## GROUP BY {.scrollable}
 
-The `GROUP BY` clause will direct **SQL** to carry out the query separately for each category in the grouped variable.  
+The `GROUP BY` keyword will direct **SQL** to carry out the query separately for each category in the grouped variable.  
 
 * aggregate functions include `COUNT()`, `SUM()`, `MAX()`, `MIN()`, and `AVG()`.
 

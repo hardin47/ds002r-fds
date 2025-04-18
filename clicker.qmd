@@ -2293,7 +2293,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) Which **SQL** clause is used to extract data from a database?[^106]
+(@) Which **SQL** keyword is used to extract data from a database?[^106]
    (a) OPEN
    (b) EXTRACT
    (c) SELECT
@@ -2303,7 +2303,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) With SQL, how to you retrieve a column named "FirstName" from a table named "Persons"?[^107]
+(@) With **SQL**, how to you retrieve a column named "FirstName" from a table named "Persons"?[^107]
    (a) `SELECT` Persons.FirstName
    (b) EXTRACT FIRSTNAME `FROM` Persons
    (c) `SELECT` FirstName `FROM` Persons
@@ -2313,7 +2313,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) With SQL, how do you select all the columns from a table named "Persons"?[^108]
+(@) With **SQL**, how do you select all the columns from a table named "Persons"?[^108]
    (a) `SELECT` Persons
    (b) `SELECT` * `FROM` Persons
    (c) `SELECT` [all] `FROM` Persons
@@ -2344,7 +2344,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) With SQL, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?[^111]
+(@) With **SQL**, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?[^111]
    (a) `SELECT` FirstName = 'Peter', LastName = 'Jackson' `FROM` Persons
    (b) `SELECT` * `FROM` Persons `WHERE` FirstName = Peter' & LastName = Jackson'
    (c) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
@@ -2354,7 +2354,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) Which operator selects values within a range?[^112]
+(@) Which keyword selects values within a range?[^112]
     (a) `BEWTEEN`
     (b) `WITHIN`
     (c) `RANGE`
@@ -2372,16 +2372,16 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) Which **SQL** statement returns only different values?[^114]
-    (a) `SELECT` `UNIQUE`
-    (b) `SELECT` `DISTINCT`
-    (c) `SELECT` `DIFFERENT`
+(@) Which **SQL** keyword returns only different values?[^114]
+    (a) `SELECT UNIQUE`
+    (b) `SELECT DISTINCT`
+    (c) `SELECT DIFFERENT`
 
 [^114]: b. `SELECT` `DISTINCT`
 
 ---
 
-(@) Which **SQL** statement is used to sort the result-set?[^115]
+(@) Which **SQL** keyword is used to sort the result-set?[^115]
     (a) `ORDER BY`
     (b) `ORDER`
     (c) `SORT`
@@ -2575,7 +2575,7 @@ can use flights data for cities with particular names-->
 <!--
 ---
 
-(@) In **SQL**, which operator is used to search for a specified pattern in a column?[^137]
+(@) In **SQL**, which keyword is used to search for a specified pattern in a column?[^137]
     (a) `LIKE`
     (b) `GET`
     (c) `FROM`
