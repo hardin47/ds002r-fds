@@ -76,6 +76,8 @@ SHOW TABLES;
 
 ## LAPD - glance through tables {.scrollable}
 
+(`0` is the number of rows that are skipped, `10` is the number of rows that are retrieved.)
+
 ```{sql}
 #| connection: con_traffic
 
@@ -141,7 +143,7 @@ The keywords are similar to data wrangling verbs in **R**, but the order in **SQ
 * start with a `SELECT`, include a corresponding `FROM` 
 * columns may be specified or `*` returns every column
 
-The shortest **SQL** query is the following `SELECT` command.  Do not run this command!!! The `ca_los_angeles_2020_04_01` table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.
+The shortest **SQL** query is the following `SELECT` clause.  Do not run this clause!!! The `ca_los_angeles_2020_04_01` table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.
 
 ```{r}
 #| eval: false
@@ -315,13 +317,13 @@ LIMIT 0, 10;
 
 ## WHERE
 
-The `WHERE` keyword is analogous to the `filter()` function in **dplyr**.  However, keep in mind that there are two **SQL** commands that resemble the **dplyr** `filter()` function. `WHERE` operates on the [original data]{.underline} in the table and `HAVING` operates on the [result set]{.underline}. 
+The `WHERE` keyword is analogous to the `filter()` function in **dplyr**.  However, keep in mind that there are two **SQL** keywords that resemble the **dplyr** `filter()` function. `WHERE` operates on the [original data]{.underline} in the table and `HAVING` operates on the [result set]{.underline}. 
 
 ## WHERE {.scrollable}
 
 What was the time of day for those traffic stops `search_conducted` was true and `vehicle_make` was Subaru?
 
-Note that in **SQL** the equality logical is `=` and in **R** the equality logical is `==`.  Note also that the WHERE command is case-insensitive!
+Note that in **SQL** the equality logical is `=` and in **R** the equality logical is `==`.  Note also that the WHERE keyword is case-insensitive!
 
 ```{sql}
 #| connection: con_traffic
@@ -656,7 +658,7 @@ SELECT * FROM la_new_orleans_2020_04_01 LIMIT 154218, 10;
 
 ## Saving **SQL** queries as **R** objects  {.scrollable}
 
-If you are working in **R** to run **SQL** commands, you may want to use the query output for further analysis or visualizations. 
+If you are working in **R** to run **SQL** queries, you may want to use the query output for further analysis or visualizations. 
 
 * use `#| output.var: "name_of_variable"` inside the `{sql}` chunk. 
 * `name_of_variable` will then be available to be used in the R environment.

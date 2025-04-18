@@ -13297,7 +13297,7 @@
     "href": "slides/2025-04-16-clauses.html#lapd---glance-through-tables",
     "title": "SQL statements",
     "section": "LAPD - glance through tables",
-    "text": "LAPD - glance through tables\n\nSELECT * FROM ca_los_angeles_2020_04_01\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nraw_row_number\ndate\ntime\ndistrict\nregion\nsubject_race\nsubject_sex\nofficer_id_hash\ntype\nraw_descent_description\n\n\n\n\n5692933\n\n13:59:00\n0753\nWILSHIRE\nhispanic\nmale\n15ecd81b00\npedestrian\nHISPANIC\n\n\n240731\n2010-01-01\n00:05:00\n665\nWEST TRAFFIC\nother\nmale\nb707de41e0\nvehicular\nOTHER\n\n\n240592|240593\n2010-01-01\n00:10:00\n1258\nSEVENTY-SEVENTH\nhispanic\nmale\nb49ae7078c\npedestrian\nHISPANIC\n\n\n241116\n2010-01-01\n00:10:00\n1635\nFOOTHILL\nhispanic\nmale\ne70ce46248\nvehicular\nHISPANIC\n\n\n240681\n2010-01-01\n00:15:00\n882\nWEST LA\nother\nmale\n8587bd743c\nvehicular\nOTHER\n\n\n240602\n2010-01-01\n00:20:00\n559\nHARBOR\nhispanic\nmale\n601bf1fdff\nvehicular\nHISPANIC\n\n\n240594\n2010-01-01\n00:20:00\n667\nHOLLYWOOD\nhispanic\nmale\nfb2e6d8ab3\npedestrian\nHISPANIC\n\n\n241434\n2010-01-01\n00:25:00\n1658\nFOOTHILL\nhispanic\nfemale\n5100c8c759\nvehicular\nHISPANIC\n\n\n240582\n2010-01-01\n00:30:00\n1041\nWEST VALLEY\nblack\nfemale\nd54d90a4d0\nvehicular\nBLACK\n\n\n240642\n2010-01-01\n00:30:00\n1162\nNORTH EAST\nhispanic\nmale\n5d6fbef1d3\npedestrian\nHISPANIC"
+    "text": "LAPD - glance through tables\n(0 is the number of rows that are skipped, 10 is the number of rows that are retrieved.)\n\nSELECT * FROM ca_los_angeles_2020_04_01\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nraw_row_number\ndate\ntime\ndistrict\nregion\nsubject_race\nsubject_sex\nofficer_id_hash\ntype\nraw_descent_description\n\n\n\n\n5692933\n\n13:59:00\n0753\nWILSHIRE\nhispanic\nmale\n15ecd81b00\npedestrian\nHISPANIC\n\n\n240731\n2010-01-01\n00:05:00\n665\nWEST TRAFFIC\nother\nmale\nb707de41e0\nvehicular\nOTHER\n\n\n240592|240593\n2010-01-01\n00:10:00\n1258\nSEVENTY-SEVENTH\nhispanic\nmale\nb49ae7078c\npedestrian\nHISPANIC\n\n\n241116\n2010-01-01\n00:10:00\n1635\nFOOTHILL\nhispanic\nmale\ne70ce46248\nvehicular\nHISPANIC\n\n\n240681\n2010-01-01\n00:15:00\n882\nWEST LA\nother\nmale\n8587bd743c\nvehicular\nOTHER\n\n\n240602\n2010-01-01\n00:20:00\n559\nHARBOR\nhispanic\nmale\n601bf1fdff\nvehicular\nHISPANIC\n\n\n240594\n2010-01-01\n00:20:00\n667\nHOLLYWOOD\nhispanic\nmale\nfb2e6d8ab3\npedestrian\nHISPANIC\n\n\n241434\n2010-01-01\n00:25:00\n1658\nFOOTHILL\nhispanic\nfemale\n5100c8c759\nvehicular\nHISPANIC\n\n\n240582\n2010-01-01\n00:30:00\n1041\nWEST VALLEY\nblack\nfemale\nd54d90a4d0\nvehicular\nBLACK\n\n\n240642\n2010-01-01\n00:30:00\n1162\nNORTH EAST\nhispanic\nmale\n5d6fbef1d3\npedestrian\nHISPANIC"
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#describe-tables",
@@ -13325,7 +13325,7 @@
     "href": "slides/2025-04-16-clauses.html#select-from",
     "title": "SQL statements",
     "section": "SELECT … FROM",
-    "text": "SELECT … FROM\n\nstart with a SELECT, include a corresponding FROM\ncolumns may be specified or * returns every column\n\nThe shortest SQL query is the following SELECT command. Do not run this command!!! The ca_los_angeles_2020_04_01 table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.\n\nDO NOT RUN:  SELECT * FROM ca_los_angeles_2020_04_01;"
+    "text": "SELECT … FROM\n\nstart with a SELECT, include a corresponding FROM\ncolumns may be specified or * returns every column\n\nThe shortest SQL query is the following SELECT clause. Do not run this clause!!! The ca_los_angeles_2020_04_01 table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.\n\nDO NOT RUN:  SELECT * FROM ca_los_angeles_2020_04_01;"
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#select-from-1",
@@ -13395,14 +13395,14 @@
     "href": "slides/2025-04-16-clauses.html#where",
     "title": "SQL statements",
     "section": "WHERE",
-    "text": "WHERE\nThe WHERE keyword is analogous to the filter() function in dplyr. However, keep in mind that there are two SQL commands that resemble the dplyr filter() function. WHERE operates on the original data in the table and HAVING operates on the result set."
+    "text": "WHERE\nThe WHERE keyword is analogous to the filter() function in dplyr. However, keep in mind that there are two SQL keywords that resemble the dplyr filter() function. WHERE operates on the original data in the table and HAVING operates on the result set."
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#where-1",
     "href": "slides/2025-04-16-clauses.html#where-1",
     "title": "SQL statements",
     "section": "WHERE",
-    "text": "WHERE\nWhat was the time of day for those traffic stops search_conducted was true and vehicle_make was Subaru?\nNote that in SQL the equality logical is = and in R the equality logical is ==. Note also that the WHERE command is case-insensitive!\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE search_conducted = 1\n   AND vehicle_make = \"Subaru\"\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n03:27:00\n1\n1998\nSUBARU\n\n\n19:28:00\n1\n2012\nSUBARU\n\n\n21:40:00\n1\n1998\nSUBARU\n\n\n10:38:00\n1\n2014\nSUBARU\n\n\n05:01:00\n1\n1998\nSUBARU\n\n\n22:00:00\n1\n1998\nSUBARU\n\n\n13:46:00\n1\n2007\nSUBARU\n\n\n22:50:00\n1\n1999\nSUBARU"
+    "text": "WHERE\nWhat was the time of day for those traffic stops search_conducted was true and vehicle_make was Subaru?\nNote that in SQL the equality logical is = and in R the equality logical is ==. Note also that the WHERE keyword is case-insensitive!\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE search_conducted = 1\n   AND vehicle_make = \"Subaru\"\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n03:27:00\n1\n1998\nSUBARU\n\n\n19:28:00\n1\n2012\nSUBARU\n\n\n21:40:00\n1\n1998\nSUBARU\n\n\n10:38:00\n1\n2014\nSUBARU\n\n\n05:01:00\n1\n1998\nSUBARU\n\n\n22:00:00\n1\n1998\nSUBARU\n\n\n13:46:00\n1\n2007\nSUBARU\n\n\n22:50:00\n1\n1999\nSUBARU"
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#where-2",
@@ -13549,7 +13549,7 @@
     "href": "slides/2025-04-16-clauses.html#saving-sql-queries-as-r-objects",
     "title": "SQL statements",
     "section": "Saving SQL queries as R objects",
-    "text": "Saving SQL queries as R objects\nIf you are working in R to run SQL commands, you may want to use the query output for further analysis or visualizations.\n\nuse #| output.var: \"name_of_variable\" inside the {sql} chunk.\nname_of_variable will then be available to be used in the R environment.\n\n\n```{sql}\n#| connection: con_traffic\n#| output.var: \"new_table\"\n\nSELECT *, DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 1000;\n```"
+    "text": "Saving SQL queries as R objects\nIf you are working in R to run SQL queries, you may want to use the query output for further analysis or visualizations.\n\nuse #| output.var: \"name_of_variable\" inside the {sql} chunk.\nname_of_variable will then be available to be used in the R environment.\n\n\n```{sql}\n#| connection: con_traffic\n#| output.var: \"new_table\"\n\nSELECT *, DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 1000;\n```"
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#saving-sql-queries-as-r-objects-1",
