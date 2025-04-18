@@ -283,7 +283,7 @@ There is a distinction between keywords that operate on the *variables of the or
 
 `date` and `vehicle_year` are columns in the *original table* - they are written to disk on the **SQL** server.  
 
-`car_age` exist only in the *results set*, which is passed from the server (**SQL** server) to the client (e.g., **RStudio** or **DBeaver**) in your computer's memory and is not written to disk.
+`car_age` (and previously, `vehicle_date`) exist only in the *results set*, which is passed from the server (**SQL** server) to the client (e.g., **Quarto** or **DBeaver**) in your computer's memory and is not written to disk.
 
 ## SELECT DISTINCT {.scrollable}
 

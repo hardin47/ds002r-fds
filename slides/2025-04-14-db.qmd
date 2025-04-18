@@ -242,7 +242,7 @@ DBI::dbGetQuery(con_air,
 
 ## 3. Direct **SQL** queries via `sql` chunks {.scrollable}
 
-**SQL** queries can be written directly inside a `sql` chunk in RStudio.
+**SQL** queries can be written directly inside a `sql` chunk in Quarto.
 
 ```{sql}
 #| connection: con_air
@@ -254,7 +254,7 @@ SELECT * FROM flights LIMIT 8;
 
 ## 3. Direct **SQL** queries via `sql` chunks {.scrollable}
 
-**SQL** queries can be written directly inside a `sql` chunk in RStudio.
+**SQL** queries can be written directly inside a `sql` chunk in Quarto.
 
 ```{sql}
 #| connection: con_air
