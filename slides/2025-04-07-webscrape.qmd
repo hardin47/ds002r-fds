@@ -318,6 +318,7 @@ Much of the data on the web is available as HTML - while it is structured (hiera
 * `<b>`: bold
 * `<table>`: table
 * `<div>`: a container to group content together
+* `<a>`: the "anchor" element that creates a hyperlink
 
 ## rvest {.smaller}
 
