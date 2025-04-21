@@ -105,7 +105,7 @@ DESCRIBE ca_los_angeles_2020_04_01;
 * `Default` provides the default value of the variable if no value is provided when a row is added to the database.
 
 
-# **SQL** keywords
+# **SQL** bits
 
 * A **SQL** *query* is a **SQL** *statement* that typically starts in `SELECT` and ends in `;`
 * **SQL** *keywords* are like data verbs in the **tidyverse**
@@ -450,7 +450,7 @@ The logic of `NULL`:^[taken from: https://cs186berkeley.net/notes/note1/#filteri
 
 ## A `NULL` example
 
-Consider the following table and **SQL** query to evaluate `WHERE age <= 20 OR num_dogs = 3`:
+Evaluate `WHERE age <= 20 OR num_dogs = 3`:
 
 
 ```{sql}
@@ -469,7 +469,7 @@ SELECT * FROM (
 
 ## A `NULL` example
 
-Where does the `WHERE` keyword do? It tells us that we only want to keep the rows satisfying the `age <= 20` OR `num_dogs = 3`. Let’s consider each row one at a time:
+Keep the rows satisfying: `age <= 20` OR `num_dogs = 3`
 
 * For Ace, `age <= 20` evaluates to TRUE so the claim is satisfied.
 * For Ada, `age <= 20` evaluates to `NULL` but `num_dogs = 3` evaluates to TRUE so the claim is satisfied.
