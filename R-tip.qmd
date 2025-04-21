@@ -62,7 +62,13 @@ schedule <- tribble(
   
   'Tip 18', '$ LaTeX code $', 'formats LaTeX code into math', 'cool way to write mathematical notation',
   
-  'Tip 19', 'cmd + click on a function name', 'shows the inside of the function', 'cntrl + click on a function name for PC'
+  'Tip 19', 'cmd + click on a function name', 'shows the inside of the function', 'cntrl + click on a function name for PC',
+  
+  'Tip 20', 'cmd + shift + P', 'shows the keyboard shortcuts for the pull-down menus', 'cntrl + shift + P on PC',
+  
+  'Tip 21', 'cmd + shift + D', 'duplicate the line', 'cntrl + shift + D',
+  
+  'Tip 22', 'cmd + shift + up (or down) arrow', 'highlights lines', 'cntrl + shift + up (or down) arrow'
   
 )
 ```
