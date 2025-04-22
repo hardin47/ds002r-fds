@@ -7,9 +7,52 @@ bibliography:
   - book.bib
 ---
 
-Project instructions to come!
+You will use **SQL** to query a database which is a compilation of the <a href = "https://openpolicing.stanford.edu/" target = "_blank">Stanford Open Policing Project</a>, published in @pierson2020. 
+
+Recall that there are 88 tables in the **SQL** database. The data come from 42 different states and include both city PD as well as highway patrol traffic incidents. You can find some <a href = "https://openpolicing.stanford.edu/data/" target = "_blank">information on the data tables</a> on the SOPP website.
+
+## Task
+
+Your task is to use at least 3 data tables to say something interesting about traffic stops (or pedestrian stops). It will take a little bit of sleuthing to figure out what you want to look at. In the end, you will present your findings in a figure or table. Some potential areas to explore include:
+
+* Are there differences over time?
+* Are there differences across datasets?
+* Is there anything interesting about pedestrian stops versus vehicular stops? (I'm not sure how many of the datasets have much information on pedestrian stops).
+
+Your analysis should have the following elements:
+
+- queries of at least three of the **SQL** tables
+- at least 6 uses of **SQL** keywords other than `SELECT`, `FROM`, and `LIMIT`.
+- at least 2 illustrative, well-labeled plots or tables
+- a description of what insights can be gained from your plots and tables
+- a reference / documentation of the data source (see below, make sure to include the citation!)^[Amy Shoemaker is PO '14.]
+
+
+
+## Logistics
+
+* The information on how to connect to the **SQL** database was sent to you via email. Please ask if you don't have the email!
+* Recall that the <a href = "https://ds002r-fds.netlify.app/slides/2025-04-16-clauses" target = "_blank">in-class slides on **SQL** statements</a> provide many **SQL** queries that give a sense of the datasets.
+* The goal is to use **SQL** for 100% of the data wrangling. If there is some data wrangling that you need to do and can't figure it out in **SQL**, please ask.
+* All wrangling (i.e., all **SQL** code) should be written in **SQL** chunks, not **R** chunks.
+* In almost every case, you should use the entire table (i.e., no reason to use `LIMIT` on your final analysis). Please confirm with me in advance if you do need to use `LIMIT` for some reason. The expectation is that your `WHERE` clause will filter the data to make it small enough to use in memory.
+* You are unlikely to use a `JOIN`, but you might want to use a `UNION`. `UNION` is similar to `rbind()` in R, so make sure that the columns of the two tables measure exactly the same thing.
+* work in your website .Rproj, do not start a new R Project.
+* at a minimum, start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences).  That is, use words to guide the reader through your analysis.
+* please include all your code used in the analysis (but feel free to use code folding^[code folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code]).
+* make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
+* do not include error or warning messages (see HW YAML for code).
+* include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
+
+
+## Timeline
+
+Project 5 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday April 30**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+
 
 <!--
+
+This was the OG SQL project. It was really good, but because it is so specific, I can't really ask it again because the "solutions" are all online on previous student websites.
 
 You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](https://www.science.smith.edu/wai-database/) hosted by Smith College.  WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles.  The goal of the database is to "enable auditory researchers to share WAI measurements and combine analyses over multiple datasets."^[Thanks to Paul Roback at St. Olaf for sharing this project idea.]
 

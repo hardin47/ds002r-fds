@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -192,8 +212,48 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Project instructions to come!</p>
+<p>You will use <strong>SQL</strong> to query a database which is a compilation of the <a href="https://openpolicing.stanford.edu/" target="_blank">Stanford Open Policing Project</a>, published in <span class="citation" data-cites="pierson2020">Pierson et al. (<a href="#ref-pierson2020" role="doc-biblioref">2020</a>)</span>.</p>
+<p>Recall that there are 88 tables in the <strong>SQL</strong> database. The data come from 42 different states and include both city PD as well as highway patrol traffic incidents. You can find some <a href="https://openpolicing.stanford.edu/data/" target="_blank">information on the data tables</a> on the SOPP website.</p>
+<section id="task" class="level2">
+<h2 class="anchored" data-anchor-id="task">Task</h2>
+<p>Your task is to use at least 3 data tables to say something interesting about traffic stops (or pedestrian stops). It will take a little bit of sleuthing to figure out what you want to look at. In the end, you will present your findings in a figure or table. Some potential areas to explore include:</p>
+<ul>
+<li>Are there differences over time?</li>
+<li>Are there differences across datasets?</li>
+<li>Is there anything interesting about pedestrian stops versus vehicular stops? (I’m not sure how many of the datasets have much information on pedestrian stops).</li>
+</ul>
+<p>Your analysis should have the following elements:</p>
+<ul>
+<li>queries of at least three of the <strong>SQL</strong> tables</li>
+<li>at least 6 uses of <strong>SQL</strong> keywords other than <code>SELECT</code>, <code>FROM</code>, and <code>LIMIT</code>.</li>
+<li>at least 2 illustrative, well-labeled plots or tables</li>
+<li>a description of what insights can be gained from your plots and tables</li>
+<li>a reference / documentation of the data source (see below, make sure to include the citation!)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ul>
+</section>
+<section id="logistics" class="level2">
+<h2 class="anchored" data-anchor-id="logistics">Logistics</h2>
+<ul>
+<li>The information on how to connect to the <strong>SQL</strong> database was sent to you via email. Please ask if you don’t have the email!</li>
+<li>Recall that the <a href="https://ds002r-fds.netlify.app/slides/2025-04-16-clauses" target="_blank">in-class slides on <strong>SQL</strong> statements</a> provide many <strong>SQL</strong> queries that give a sense of the datasets.</li>
+<li>The goal is to use <strong>SQL</strong> for 100% of the data wrangling. If there is some data wrangling that you need to do and can’t figure it out in <strong>SQL</strong>, please ask.</li>
+<li>All wrangling (i.e., all <strong>SQL</strong> code) should be written in <strong>SQL</strong> chunks, not <strong>R</strong> chunks.</li>
+<li>In almost every case, you should use the entire table (i.e., no reason to use <code>LIMIT</code> on your final analysis). Please confirm with me in advance if you do need to use <code>LIMIT</code> for some reason. The expectation is that your <code>WHERE</code> clause will filter the data to make it small enough to use in memory.</li>
+<li>You are unlikely to use a <code>JOIN</code>, but you might want to use a <code>UNION</code>. <code>UNION</code> is similar to <code>rbind()</code> in R, so make sure that the columns of the two tables measure exactly the same thing.</li>
+<li>work in your website .Rproj, do not start a new R Project.</li>
+<li>at a minimum, start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences). That is, use words to guide the reader through your analysis.</li>
+<li>please include all your code used in the analysis (but feel free to use code folding<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>).</li>
+<li>make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).</li>
+<li>do not include error or warning messages (see HW YAML for code).</li>
+<li>include a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.</li>
+</ul>
+</section>
+<section id="timeline" class="level2">
+<h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
+<p>Project 5 must be submitted on Canvas (not Gradescope) by <strong>11:59 PM on Wednesday April 30</strong>. You will add a tab to your Quarto webpage and submit the new page’s URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]</p>
 <!--
+
+This was the OG SQL project. It was really good, but because it is so specific, I can't really ask it again because the "solutions" are all online on previous student websites.
 
 You will use SQL to query the [Wideband Acoustic Immittance (WAI) Database](https://www.science.smith.edu/wai-database/) hosted by Smith College.  WAI measurements are being developed as noninvasive auditory diagnostic tools for people of all ages, and the WAI Database hosts WAI ear measurements that have been published in peer-review articles.  The goal of the database is to "enable auditory researchers to share WAI measurements and combine analyses over multiple datasets."^[Thanks to Paul Roback at St. Olaf for sharing this project idea.]
 
@@ -230,8 +290,6 @@ Logistics:
 - include the source of the data. 
 
 ## Starter Code
-
-
 
 
 
@@ -280,13 +338,24 @@ LIMIT 0, 5;
 
 
 
-
-
 -->
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-pierson2020" class="csl-entry" role="listitem">
+Pierson, Emma, Camelia Simoiu, Jan Overgoor, Sam Corbett-Davies, Daniel Jenson, Amy Shoemaker, Vignesh Ramachandran, et al. 2020. <span>“A Large-Scale Analysis of Racial Disparities in Police Stops Across the <span>United States</span>.”</span> <em><span>Nature Human Behaviour</span></em>, 1–10.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Amy Shoemaker is PO ’14.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>code folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -68,7 +68,11 @@ schedule <- tribble(
   
   'Tip 21', 'cmd + shift + D', 'duplicate the line', 'cntrl + shift + D',
   
-  'Tip 22', 'cmd + shift + up (or down) arrow', 'highlights lines', 'cntrl + shift + up (or down) arrow'
+  'Tip 22', 'cmd + shift + up (or down) arrow', 'highlights lines', 'cntrl + shift + up (or down) arrow on PC',
+  
+  'Tip 23', 'cmd + opt + c', 'runs the chunk', 'cntrl + opt + c on PC',
+  
+  'Tip 24', 'cmd + shift + A', 'reformmats whatever is highlighted', 'cntrl + shift + A on PC'
   
 )
 ```

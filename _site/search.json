@@ -2902,7 +2902,7 @@
     "href": "project5.html",
     "title": "Project 5",
     "section": "",
-    "text": "Project instructions to come!\n\n\n\n\nReuseCC BY 4.0"
+    "text": "You will use SQL to query a database which is a compilation of the Stanford Open Policing Project, published in Pierson et al. (2020).\nRecall that there are 88 tables in the SQL database. The data come from 42 different states and include both city PD as well as highway patrol traffic incidents. You can find some information on the data tables on the SOPP website."
   },
   {
     "objectID": "images/ma154-hwtest.html",
@@ -2930,7 +2930,7 @@
     "href": "R-tip.html",
     "title": "R tip-of-the-day",
     "section": "",
-    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\n\nadds a new R chunk\nlook for it at top of Quarto doc\n\n\nTip 3\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 4\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 5\n\\textcolor{red}{this text will be red}\nLaTeX formatting to change the text color\nwhen render to pdf (different syntax for render to html)\n\n\nTip 6\n\nchanges the figure size\ngear in R chunk\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\nTip 8\n#| echo: false\nevaluates the chunk, but does not show the code\nalternatively: echo = FALSE inside curly braces\n\n\nTip 9\nTool -&gt; Global Options… -&gt; Spelling\nallows for real-time spell check\n\n\n\nTip 10\ncmd + shift + M\nproduces a pipe\ncntrl + shift + M for PC  Tools -&gt; Global Options… -&gt; Code to get the native pipe\n\n\nTip 11\nopt + -\nproduces the assignment operator, &lt;-\n\n\n\nTip 12\nR was adopted as an open source version of S\n\nIt was written by Ross Ihaka and Robert Gentleman, which is why they called it R\n\n\nTip 13\nhighlight with mouse and hit quotation\nwill put quotes around the highlighted phrase\n\n\n\nTip 14\nhighlight with mouse and hit parenthesis\nwill put parentheses around the highlighted phrase\n\n\n\nTip 15\nSession -&gt; Restart R\nrerstart the R session (without restarting RStudio)\nshift + cmd / cntrl + 0\n\n\nTip 16\ncmd + d\ndeletes the line\ncntrl + d for PC (works on code or narrative)\n\n\nTip 17\nTools -&gt; Keyboard Shortcuts Help\nprovides all the keyboard shortcuts\nopt + shift + K on Mac; alt + shift + K on PC\n\n\nTip 18\n$ LaTeX code $\nformats LaTeX code into math\ncool way to write mathematical notation\n\n\nTip 19\ncmd + click on a function name\nshows the inside of the function\ncntrl + click on a function name for PC\n\n\nTip 20\ncmd + shift + P\nshows the keyboard shortcuts for the pull-down menus\ncntrl + shift + P on PC\n\n\nTip 21\ncmd + shift + D\nduplicate the line\ncntrl + shift + D\n\n\nTip 22\ncmd + shift + up (or down) arrow\nhighlights lines\ncntrl + shift + up (or down) arrow\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
+    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\n\nadds a new R chunk\nlook for it at top of Quarto doc\n\n\nTip 3\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 4\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 5\n\\textcolor{red}{this text will be red}\nLaTeX formatting to change the text color\nwhen render to pdf (different syntax for render to html)\n\n\nTip 6\n\nchanges the figure size\ngear in R chunk\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\nTip 8\n#| echo: false\nevaluates the chunk, but does not show the code\nalternatively: echo = FALSE inside curly braces\n\n\nTip 9\nTool -&gt; Global Options… -&gt; Spelling\nallows for real-time spell check\n\n\n\nTip 10\ncmd + shift + M\nproduces a pipe\ncntrl + shift + M for PC  Tools -&gt; Global Options… -&gt; Code to get the native pipe\n\n\nTip 11\nopt + -\nproduces the assignment operator, &lt;-\n\n\n\nTip 12\nR was adopted as an open source version of S\n\nIt was written by Ross Ihaka and Robert Gentleman, which is why they called it R\n\n\nTip 13\nhighlight with mouse and hit quotation\nwill put quotes around the highlighted phrase\n\n\n\nTip 14\nhighlight with mouse and hit parenthesis\nwill put parentheses around the highlighted phrase\n\n\n\nTip 15\nSession -&gt; Restart R\nrerstart the R session (without restarting RStudio)\nshift + cmd / cntrl + 0\n\n\nTip 16\ncmd + d\ndeletes the line\ncntrl + d for PC (works on code or narrative)\n\n\nTip 17\nTools -&gt; Keyboard Shortcuts Help\nprovides all the keyboard shortcuts\nopt + shift + K on Mac; alt + shift + K on PC\n\n\nTip 18\n$ LaTeX code $\nformats LaTeX code into math\ncool way to write mathematical notation\n\n\nTip 19\ncmd + click on a function name\nshows the inside of the function\ncntrl + click on a function name for PC\n\n\nTip 20\ncmd + shift + P\nshows the keyboard shortcuts for the pull-down menus\ncntrl + shift + P on PC\n\n\nTip 21\ncmd + shift + D\nduplicate the line\ncntrl + shift + D\n\n\nTip 22\ncmd + shift + up (or down) arrow\nhighlights lines\ncntrl + shift + up (or down) arrow on PC\n\n\nTip 23\ncmd + opt + c\nruns the chunk\ncntrl + opt + c on PC\n\n\nTip 24\ncmd + shift + A\nreformmats whatever is highlighted\ncntrl + shift + A on PC\n\n\n\n\n\n\n\n\n\n\nReuseCC BY 4.0"
   },
   {
     "objectID": "syllabus.html#links-to-resources",
@@ -8873,7 +8873,7 @@
     "href": "project4.html#timeline",
     "title": "Project 4",
     "section": "Timeline",
-    "text": "Timeline\nMini-Project 4 must be submitted on Canvas (not Gradescope) by 11:59 PM on Tuesday November 26. You will add a tab to your Quarto webpage for Mini-Project 4 and submit the new page’s URL."
+    "text": "Timeline\nProject 4 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday April 16. You will add a tab to your Quarto webpage and submit the new page’s URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]"
   },
   {
     "objectID": "project4.html#hints",
@@ -9006,7 +9006,7 @@
     "href": "project5.html#timeline",
     "title": "Project 5",
     "section": "Timeline",
-    "text": "Timeline\nMini-Project 5 must be submitted on Canvas (not Gradescope) by 11:59 PM on Monday December 9. To Canvas submit two things: 1. the URL of your overall website, 2. a document detailing the changes you have made.\nAdditionally, you will give a ~5 min presentation to the class on some aspect(s) of your project. You can describe one of the mini-projects, the creation of the website, the entire project overall, or any other aspect of the project. (You will present either on the Friday Dec 6th during reading days (9am-noon) or during our regularly scheduled final time, Monday Dec 9th 9am-noon.)"
+    "text": "Timeline\nProject 5 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday April 30. You will add a tab to your Quarto webpage and submit the new page’s URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]"
   },
   {
     "objectID": "project5.html#presentation",
@@ -13830,5 +13830,152 @@
     "title": "SQL joins",
     "section": "Best practice",
     "text": "Best practice\nIt is always a good idea to terminate the SQL connection when you are done with it.\n\nDBI::dbDisconnect(con_imdb, shutdown = TRUE)"
+  },
+  {
+    "objectID": "project5.html#logistics",
+    "href": "project5.html#logistics",
+    "title": "Project 5",
+    "section": "Logistics",
+    "text": "Logistics\n\nThe information on how to connect to the SQL database was sent to you via email. Please ask if you don’t have the email!\nRecall that the in-class slides on SQL statements provide many SQL queries that give a sense of the datasets.\nThe goal is to use SQL for 100% of the data wrangling. If there is some data wrangling that you need to do and can’t figure it out in SQL, please ask.\nAll wrangling (i.e., all SQL code) should be written in SQL chunks, not R chunks.\nIn almost every case, you should use the entire table (i.e., no reason to use LIMIT on your final analysis). Please confirm with me in advance if you do need to use LIMIT for some reason. The expectation is that your WHERE clause will filter the data to make it small enough to use in memory.\nYou are unlikely to use a JOIN, but you might want to use a UNION. UNION is similar to rbind() in R, so make sure that the columns of the two tables measure exactly the same thing.\nwork in your website .Rproj, do not start a new R Project.\nat a minimum, start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences). That is, use words to guide the reader through your analysis.\nplease include all your code used in the analysis (but feel free to use code folding2).\nmake sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).\ndo not include error or warning messages (see HW YAML for code).\ninclude a few sentences describing each of your plots or tables. That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk."
+  },
+  {
+    "objectID": "project5.html#footnotes",
+    "href": "project5.html#footnotes",
+    "title": "Project 5",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAmy Shoemaker is PO ’14.↩︎\ncode folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code↩︎"
+  },
+  {
+    "objectID": "slides/2025-05-05-fin.html#data-science-overview",
+    "href": "slides/2025-05-05-fin.html#data-science-overview",
+    "title": "Fin",
+    "section": "Data Science Overview",
+    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-05-05-fin.html#data-science-overview-1",
+    "href": "slides/2025-05-05-fin.html#data-science-overview-1",
+    "title": "Fin",
+    "section": "Data Science Overview",
+    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-05-05-fin.html#data-scientists",
+    "href": "slides/2025-05-05-fin.html#data-scientists",
+    "title": "Fin",
+    "section": "Data Scientists",
+    "text": "Data Scientists\nWho does data science?\nconnecting, uplifting, and recognizing voices – a database of statisticians and data scientists."
+  },
+  {
+    "objectID": "slides/2025-05-05-fin.html#take-aways",
+    "href": "slides/2025-05-05-fin.html#take-aways",
+    "title": "Fin",
+    "section": "Take-aways",
+    "text": "Take-aways\n\n80-90% of data science work is data wrangling and visualization\nwrangling the data well is usually more important than modeling the data well\nthere are many choices along the way, there is no such thing as truth\nif you can’t reproduce the work, you should question whether to trust it\ncommunicating to your audience is likely the most important aspect of doing data science"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#examples",
+    "href": "slides/2025-04-30-shiny.html#examples",
+    "title": "Shiny",
+    "section": "Examples",
+    "text": "Examples\nSee the following gallery of Shiny example from Posit: https://shiny.posit.co/r/gallery/"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#a-simple-shiny-app",
+    "href": "slides/2025-04-30-shiny.html#a-simple-shiny-app",
+    "title": "Shiny",
+    "section": "A simple Shiny App",
+    "text": "A simple Shiny App\nPut the following into a Shiny App using File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Shiny Web App ... as a file called app.R.\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  \"Hello, world!\"\n)\n\nserver &lt;- function(input, output, session) {\n}\n\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#what-are-the-parts-of-a-shiny-app",
+    "href": "slides/2025-04-30-shiny.html#what-are-the-parts-of-a-shiny-app",
+    "title": "Shiny",
+    "section": "What are the parts of a Shiny App?",
+    "text": "What are the parts of a Shiny App?\nLooking closely at the code above, the app.R does four things:\n\nIt calls library(shiny) to load the shiny package.\nIt defines the user interface, the HTML webpage that humans interact with. In this case, it’s a page containing the words “Hello, world!”.\nIt specifies the behaviour of our app by defining a server function. It’s currently empty, so our app doesn’t do anything, but we’ll be back to revisit this shortly.\nIt executes shinyApp(ui, server) to construct and start a Shiny application from UI and server."
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#how-to-run-a-shiny-app",
+    "href": "slides/2025-04-30-shiny.html#how-to-run-a-shiny-app",
+    "title": "Shiny",
+    "section": "How to run a Shiny App?",
+    "text": "How to run a Shiny App?\n\n\n\nTo run Shiny\n\n\n\nClick the Run App button in the document toolbar.\n\n\n\n\n\n\n\n\n\n\n\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter.\nIf you’re not using RStudio, you can (source()) the whole document, or call shiny::runApp() with the path to the directory containing app.R."
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#what-does-it-look-like",
+    "href": "slides/2025-04-30-shiny.html#what-does-it-look-like",
+    "title": "Shiny",
+    "section": "What does it look like?",
+    "text": "What does it look like?"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#back-in-r",
+    "href": "slides/2025-04-30-shiny.html#back-in-r",
+    "title": "Shiny",
+    "section": "Back in R…",
+    "text": "Back in R…\nGo back and look at the console. You will see something like:\nListening on http://127.0.0.1:7521\nR is busy! It is running your Shiny App. You can’t do anything in R because the processes are engaged with the Shiny App."
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#pieces",
+    "href": "slides/2025-04-30-shiny.html#pieces",
+    "title": "Shiny",
+    "section": "Pieces",
+    "text": "Pieces\nShiny applications will be contained in one app.R file. The file contains two key components:\nui: code for the user interface. The user interface is the webpage that your user will interact with.\nserver: code for the computer part. What should the computer/server do with your inputs as the user changes them.\nThe last code at the bottom, shinyApp(ui = ui, server = server), will compile everything together to result in the interactive webpage.\nPress Run App at the top of RStudio and see what happens!"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#pieces-1",
+    "href": "slides/2025-04-30-shiny.html#pieces-1",
+    "title": "Shiny",
+    "section": "Pieces",
+    "text": "Pieces\n\nlibrary(shiny)\n\nshinyApp(\n  ui = list(\n    # new (to you) widgets go here\n  ),\n  \n  server = function(input, output, session) {\n    # somewhat familiar (to you) code goes here\n  }\n)"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#a-brief-widget-tour",
+    "href": "slides/2025-04-30-shiny.html#a-brief-widget-tour",
+    "title": "Shiny",
+    "section": "A brief widget tour",
+    "text": "A brief widget tour\nhttps://rundel.shinyapps.io/widgets/"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#the-default-shinny-app",
+    "href": "slides/2025-04-30-shiny.html#the-default-shinny-app",
+    "title": "Shiny",
+    "section": "The default Shinny App",
+    "text": "The default Shinny App\n\n#\n# This is a Shiny web application. You can run the application by clicking\n# the 'Run App' button above.\n#\n# Find out more about building applications with Shiny here:\n#\n#    https://shiny.posit.co/\n#\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n\n    # Application title\n    titlePanel(\"Old Faithful Geyser Data\"),\n\n    # Sidebar with a slider input for number of bins \n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"bins\",\n                        \"Number of bins:\",\n                        min = 1,\n                        max = 50,\n                        value = 30)\n        ),\n\n        # Show a plot of the generated distribution\n        mainPanel(\n           plotOutput(\"distPlot\")\n        )\n    )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n\n    output$distPlot &lt;- renderPlot({\n        # generate bins based on input$bins from ui.R\n        x    &lt;- faithful[, 2]\n        bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n\n        # draw the histogram with the specified number of bins\n        hist(x, breaks = bins, col = 'darkgray', border = 'white',\n             xlab = 'Waiting time to next eruption (in mins)',\n             main = 'Histogram of waiting times')\n    })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#running-old-faithful",
+    "href": "slides/2025-04-30-shiny.html#running-old-faithful",
+    "title": "Shiny",
+    "section": "Running Old Faithful",
+    "text": "Running Old Faithful\n\nRun in RStudio\nSee the app in action here: https://shiny.posit.co/r/gallery/start-simple/faithful/"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#reactive",
+    "href": "slides/2025-04-30-shiny.html#reactive",
+    "title": "Shiny",
+    "section": "reactive()",
+    "text": "reactive()\nThe function reactive() is worth pointing out. It is used to create a reactive expression — an expression that is automatically recalculated when any of its inputs change.\nUse reactive() when\n\nYou want to perform calculations that depend on user input and automatically update when those inputs change.\nYou need to pass dynamically calculated values to other parts of the app (outputs, observers, etc.).\nYou need to create reactive data or state, such as subsets or transformations of input data.\n\nDo not use reactive() on the UI inputs because they are inherently reactive already!"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#live-demo",
+    "href": "slides/2025-04-30-shiny.html#live-demo",
+    "title": "Shiny",
+    "section": "Live demo",
+    "text": "Live demo\nLet’s build a weather app! See sample files here: https://github.com/hardin47/ds002r-fds/tree/main/Shiny_weather"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html#shiny-in-python",
+    "href": "slides/2025-04-30-shiny.html#shiny-in-python",
+    "title": "Shiny",
+    "section": "Shiny in Python",
+    "text": "Shiny in Python\nCheck it out!\nhttps://shiny.posit.co/py/"
+  },
+  {
+    "objectID": "project5.html#task",
+    "href": "project5.html#task",
+    "title": "Project 5",
+    "section": "Task",
+    "text": "Task\nYour task is to use at least 3 data tables to say something interesting about traffic stops (or pedestrian stops). It will take a little bit of sleuthing to figure out what you want to look at. In the end, you will present your findings in a figure or table. Some potential areas to explore include:\n\nAre there differences over time?\nAre there differences across datasets?\nIs there anything interesting about pedestrian stops versus vehicular stops? (I’m not sure how many of the datasets have much information on pedestrian stops).\n\nYour analysis should have the following elements:\n\nqueries of at least three of the SQL tables\nat least 6 uses of SQL keywords other than SELECT, FROM, and LIMIT.\nat least 2 illustrative, well-labeled plots or tables\na description of what insights can be gained from your plots and tables\na reference / documentation of the data source (see below, make sure to include the citation!)1"
   }
 ]

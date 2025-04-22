@@ -53,7 +53,17 @@ options(pillar.width = 70)
 * columns of variables
 * rows of observational units
 
+## **SQL** dialects
 
+You may have heard of some of the following **SQL** dialects
+
+* **MySQL**
+* **DuckDB**
+* **PostgreSQL**
+* **BigQuery**
+* **SQLite**
+
+They are very similar, and you will be able to quickly pick up whichever dialect your institution uses. In our work, we will use **MySQL**.
 
 ## Differences between **R** and **SQL**
 
@@ -154,8 +164,7 @@ carriers_tibble |>
 
 * **SQL** is a programming language for working with relational databases.
 * **SQL** has been around since the 1970s, but has, unfortunately, many different dialects.
-* To connect to the **mdsr** database (via **R** and **DBeaver**), use **MySQL**.
-* To connect to **DuckDB**, use the dialect native to **DuckDB**.
+* To connect to the **mdsr** database (via **R**), use **MySQL**.
 
 
 
@@ -276,7 +285,9 @@ dbDisconnect(con_air, shutdown = TRUE)
 
 # Using **SQL** in **DBeaver**
 
-* **DBeaver** is a free **SQL** client that supports MySQL 
+* **DBeaver** is a free **SQL** client that supports **MySQL**
+
+* A "client" means that the software is just for **SQL** (and not for running models or making figures, like **R**)
 
 * writing **SQL** code in **R** has some benefits (e.g., piping results tables into **ggplot2** for visualizations)
 

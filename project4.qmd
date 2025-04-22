@@ -71,6 +71,9 @@ Project 4 examines ethics and power in the data science context. You will invest
 - make it clear which information came from which resource.
 
 
+## Timeline
+
+Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday April 16**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
 
 
 ## Potential examples
