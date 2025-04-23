@@ -13647,7 +13647,7 @@
     "href": "slides/2025-04-21-joins.html#rock-bands---full-join",
     "title": "SQL joins",
     "section": "Rock bands - FULL JOIN",
-    "text": "Rock bands - FULL JOIN\nA full join combines two datasets returning every observation that exists in either one of the original datasets.\n\nband_members |&gt;\n  full_join(band_instruments)\n\n# A tibble: 4 × 3\n  name  band    plays \n  &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; \n1 Mick  Stones  &lt;NA&gt;  \n2 John  Beatles guitar\n3 Paul  Beatles bass  \n4 Keith &lt;NA&gt;    guitar\n\n\nThe full_join() function does not have an equivalent in MySQL. See notes for using JOINs and UNIONs to produce a full join."
+    "text": "Rock bands - FULL JOIN\nA full join combines two datasets returning every observation that exists in either one of the original datasets.\n\nband_members |&gt;\n  full_join(band_instruments)\n\n# A tibble: 4 × 3\n  name  band    plays \n  &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; \n1 Mick  Stones  &lt;NA&gt;  \n2 John  Beatles guitar\n3 Paul  Beatles bass  \n4 Keith &lt;NA&gt;    guitar\n\n\nThe full_join() function does not have an equivalent in MySQL. See later slides for using JOINs and UNIONs to produce a full join."
   },
   {
     "objectID": "slides/2025-04-21-joins.html#rock-bands---left-join",
