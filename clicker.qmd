@@ -2477,7 +2477,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
     (c) both tables.
     (d) neither table
 
-[^123]: a. the first table
+[^123]: b. the second table
 
 ---
 
