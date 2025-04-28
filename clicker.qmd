@@ -2559,6 +2559,79 @@ ggarrange(fig1, fig2, ncol = 2)
 
 [^126]: e. `NULL` (it would be NA in **R**)
  
+---
+
+(@) What is wrong with this **SQL** clause?[^126a]
+    (a) No comma between selected columns
+    (b) Can't have a column and a summary of that column
+    (c) Use `MEAN()` instead of `AVG()`
+    (d) Variables aren't in `flights`
+    (e) Need a `LIMIT`
+
+```{sql}
+#| eval: false
+#| echo: true
+SELECT cancelled, AVG(cancelled)
+FROM flights;
+
+```
+
+[^126a]: b. Can't have a column and a summary of that column.
+
+---
+
+(@) What is wrong with this **SQL** clause?[^126b]
+    (a) Need a `WHERE`
+    (b) Need a `FROM`
+    (c) Need a `LIMIT`
+    (d) Need a `GROUP BY`
+    (e) Need a `SELECT`
+
+```{sql}
+#| eval: false
+#| echo: true
+SELECT flights;
+```
+
+[^126b]: b. Need a `FROM`
+
+---
+
+(@) What is wrong with this **SQL** clause?[^126c]
+    (a) Need a doubl equals: `==`
+    (b) Need quotes around 2014, `"2014"`
+    (c) Need quotes around `dep_delay`, `"dep_delay"`
+    (d) `year = 2014` should go in `WHERE`
+    (e) Need `GROUP BY year`
+
+```{sql}
+#| eval: false
+#| echo: true
+SELECT dep_delay, year = 2014
+FROM flights
+LIMIT 10;
+```
+
+[^126c]: d. `year = 2014` should go in `WHERE`
+
+---
+
+(@) What is wrong with this **SQL** clause?[^126c]
+    (a) Can't `SELECT` a variable from the results set
+    (b) Can't `SELECT` a variable from the original data
+    (c) `SUM()` is not a function in **SQL**
+    (d) No commas
+
+```{sql}
+#| eval: false
+#| echo: true
+SELECT SUM(cancelled) AS num_cancelled,
+       num_cancelled / SUM(1) AS pct_cancelled
+FROM flights
+LIMIT 10;
+```
+
+[^126c]: a. Can't `SELECT` a variable from the results set
 
 ---
 

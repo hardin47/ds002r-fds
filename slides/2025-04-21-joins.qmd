@@ -669,6 +669,28 @@ ORDER BY production_year DESC, num_votes;
 ```
 
 
+## `FULL JOIN` with `UNION`
+
+```{r}
+sqldf::sqldf("SELECT star.name,
+                     star.band,
+                      inst.plays
+              FROM band_members AS star
+              LEFT JOIN band_instruments AS inst 
+              ON star.name = inst.name
+             
+             UNION
+             
+             SELECT star.name, star.band, inst.plays
+             FROM band_instruments AS inst
+             LEFT JOIN band_members AS star
+             ON inst.name = star.name")
+```
+
+
+
+
+
 ## Best practice
 
 It is always a good idea to terminate the **SQL** connection when you are done with it.
