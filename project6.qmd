@@ -5,26 +5,24 @@ description: |
 format: html
 ---
 
-Project instructions to come!
 
-<!--
-
-The plan for project 5 is to update your website (and mini-projects within) so that it puts your best foot forward for anyone who might be looking at it. That is, remove all of the information about the class, and make it a website about you and your work more generally.
+The plan for project 6 is to update your website (and projects within) so that it puts your best foot forward for anyone who might be looking at it. That is, you should remove all of the information about the class and make it a website about you and your work more generally.
 
 ## Tasks
 
-Project 5 has two main tasks:
+Project 6 has three main tasks:
 
-1. The first is to re-do all the previous projects. Not only should you address all the issues that have been previously brought to light (see comments on projects on Canvas), but you should also do things like removing the warnings & messages.  Making sure that all data and ideas have been properly cited.  Rewriting any code so that it is actually **your** work (instead of, for example, copied directly from ChatGPT). Giving all graphs proper captions. Explaining your work.  You will write up (and turn in, separate from your website) a document explaining what changes and updates you've made.
+1. The first is to re-do all the previous projects. Not only should you address all the issues that have been previously brought to light (see comments on projects on Canvas), but you should also do things like removing the warnings & messages.  Make sure that all data and ideas have been properly cited.  Rewrite any code so that it is actually **your** work (instead of, for example, copied directly from ChatGPT). Give all graphs proper captions. Explain your work.  You will write up (and turn in, separate from your website) a document explaining what changes and updates you've made.
 
-2. The second thing to do is to prepare a ~5 min presentation on some aspect of your project.  It can be about any aspect of the project (or all aspects of the project), and your presentation should be as if to a client about the work.  You'll create the presentation in Quarto (formatted as revealjs) rendered to html.  The presentation will be either on Friday Dec 6th during reading days (9am-noon) or during our regularly scheduled final time, Monday Dec 9th 9am-noon (your choice).
+2. The second thing to do is to prepare a ~5 min presentation on some aspect of your project.  It can be about any aspect of the project (or all aspects of the project), and your presentation should be as if to a client about the work.  You'll create the presentation in Quarto (formatted as revealjs) rendered to html.  The presentation will be either on Thursday May 8th during reading days (9am-noon) or during our regularly scheduled final time, Tuesday May 13th 9am-noon (your choice).
 
+3. Write up a document detailing the changes you have made to your website.
 
 ## Timeline
 
-Mini-Project 5 must be submitted on Canvas (not Gradescope) by **11:59 PM on Monday December 9**.  To Canvas submit two things:  1. the URL of your overall website, 2. a document detailing the changes you have made.
+Project 6 must be submitted on Canvas (not Gradescope) by **11:59 PM on Tuesday, May 13, 2025**.  To Canvas submit two things:  1. the URL of your overall website, 2. a document detailing the changes you have made.
 
-Additionally, you will give a ~5 min presentation to the class on some aspect(s) of your project.  You can describe one of the mini-projects, the creation of the website, the entire project overall, or any other aspect of the project.  (You will present either on the Friday Dec 6th during reading days (9am-noon) or during our regularly scheduled final time, Monday Dec 9th 9am-noon.)
+Additionally, you will give a ~5 min presentation to the class on some aspect(s) of your project.  You can describe one of the projects, the creation of the website, the entire project overall, or any other aspect of the project.  (You will present either on the Thursday May 8th during reading days (9am-noon) or during our regularly scheduled final time, Tuesday May 13th 9am-noon.)
 
 ## Presentation
 
@@ -48,11 +46,11 @@ execute:
 ---
 ```
 
-
+The presentation should be on the website (i.e., it should have a URL). Just like with each of the previous projects, open the .RProject from the appropriate folder, then from  the pull down menus click on `File -> New File -> Quarto Presentation`. Link the project from within "_quarto.yml".
 
 ## Hints
 
-IMPORTANT:  you want your website to represent **your** knowledge.  If all the code on the website is from chatGPT, you should go back and re-write the code so that it actually represents what you have learned in the class.
+IMPORTANT: you want your website to represent **your** knowledge.  If all the code on the website is from ChatGPT, you should go back and re-write the code so that it actually represents what you have learned in the class.
 
   * clean up the entire website
      - no warnings or messages
@@ -63,13 +61,11 @@ IMPORTANT:  you want your website to represent **your** knowledge.  If all the c
      - add comments within the code to help the reader navigate what you are doing.
      - making sure that all work, data sources, etc. are documented appropriately
      
-  * create a corresponding document (text, Word, Google doc, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects.
+  * create a corresponding document (text, Word, Google doc, pdf, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects.
   
-  * don't call your analyses "my website" or "mini-project 2", use descriptive names that will make sense after the semester is over (to someone looking at your website who doesn't know about our class).
+  * on the navigation bar at the top of your website, don't call your analyses "my website" or "project 2", use descriptive names that will make sense after the semester is over (to someone looking at your website who doesn't know about our class).
   
-  * make sure that your citations are full.  That is, provide more than the TidyTuesday URL. Who collected the data? Why? What is the original source of the information?
-  
-  * if you didn't put the recent projects onto your website, do so now.
+  * make sure that your citations are full.  That is, provide more than the TidyTuesday URL (include authors, title, publication source, year, etc.). Who collected the data? Why? What is the original source of the information?
   
   * provide a narrative setting up the analysis.  Don't just start with code.
   
@@ -85,10 +81,10 @@ You may earn one extra credit point toward the projects for doing something new 
 Some examples include:
 
    - add extensive regular expressions to the project on string data
+   - add regular expressions to the SQL project (regular expressions in SQL are slightly different)
    - add a shiny or plotly example to the graphs from TidyTuesday
-   - expanding on the website in new ways: adding a resume, including multiple new tabs to highlight other projects you've worked on, changing the format of the website, etc.
+   - expand on the website in new ways: adding a resume, including multiple new tabs to highlight other projects you've worked on, changing the format (colors, fonts) of the website, etc.
 
--->
   
   
 
