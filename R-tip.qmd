@@ -72,7 +72,11 @@ schedule <- tribble(
   
   'Tip 23', 'cmd + opt + c', 'runs the chunk', 'cntrl + opt + c on PC',
   
-  'Tip 24', 'cmd + shift + A', 'reformats whatever is highlighted', 'cntrl + shift + A on PC'
+  'Tip 24', 'cmd + shift + A', 'reformats whatever is highlighted', 'cntrl + shift + A on PC',
+  
+  'Tip 25', 'cntrl + l', 'clears the console', ' ',
+
+  'Tip 26', 'cmd + opt + o', 'collapse R chunks', 'cmd + opt + O to open them back up'
   
 )
 ```
