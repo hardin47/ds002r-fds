@@ -41,7 +41,7 @@ schedule <- tribble(
   
   'Tip 8', '`#| echo: false`', 'evaluates the chunk, but does not show the code', 'alternatively: `echo = FALSE` inside curly braces',
   
-  'Tip 9', 'Tool -> Global Options... -> Spelling', 'allows for real-time spell check', ' ',
+  'Tip 9', 'Tools -> Global Options... -> Spelling', 'allows for real-time spell check', ' ',
   
   'Tip 10', 'cmd + shift + M', 'produces a pipe',  'cntrl + shift + M for PC <br> Tools -> Global Options... -> Code to get the native pipe',
   
@@ -76,7 +76,20 @@ schedule <- tribble(
   
   'Tip 25', 'cntrl + l', 'clears the console', ' ',
 
-  'Tip 26', 'cmd + opt + o', 'collapse R chunks', 'cmd + opt + O to open them back up'
+  'Tip 26', 'cmd + opt + o', 'collapse R chunks', 'cmd + opt + O to open them back up',
+  
+  'Tip 27', 'View(dataframe)', 'opens the dataframe as a new tab', "don't use in .qmd file",
+  
+  'Tip 28', "Tools -> Global Options... -> Code -> Display -> Use rainbow parentheses", "colors parentheses for easier matching", ' ',
+  
+  'Tip 29', '?function_name', 'Opens up the help file on that function', ' ',
+  
+  'Tip 30', 'Only use install.packages() in the console', "don't use it in the .qmd file", ' ',
+  
+  'Tip 31', 'cmd + opt + r', 'runs the entire file', 'cntrl + opt + r on PC',
+  
+  'Tip 32', 'DT::datatable() function', 'creates searchable tables', ' '
+  
   
 )
 ```
