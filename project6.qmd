@@ -55,7 +55,7 @@ IMPORTANT: you want your website to represent **your** knowledge.  If all the co
   * clean up the entire website
      - no warnings or messages
      - all plots with good labeling
-     - alt text on all plots (make your website accessible! <a href = "https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/#what-youll-like" target = "_blank">how to add alt text</a>)
+     - alt text on all plots (make your website accessible! <a href = "https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/#what-youll-like" target = "_blank">how to add alt text</a>. you must have alt text on all your plots to get full credit on this project.)
      - good narrative descriptions 
      - adding a plot when you introduce the data to introduce the reader to the data / context  (e.g., if you are doing a permutation test, start by providing a visualization of the data / variables of interest before you do the test so that the reader understands your context.)
      - add comments within the code to help the reader navigate what you are doing.
