@@ -13199,7 +13199,7 @@
     "href": "slides/2025-04-14-db.html#what-is-sql",
     "title": "Databases and dbplyr and SQL, oh my!",
     "section": "What is SQL?",
-    "text": "What is SQL?\n\nSQL is a programming language for working with relational databases.\nSQL has been around since the 1970s, but has, unfortunately, many different dialects.\nTo connect to the mdsr database (via R and DBeaver), use MySQL.\nTo connect to DuckDB, use the dialect native to DuckDB."
+    "text": "What is SQL?\n\nSQL is a programming language for working with relational databases.\nSQL has been around since the 1970s, but has, unfortunately, many different dialects.\nTo connect to the mdsr database (via R), use MySQL."
   },
   {
     "objectID": "slides/2025-04-14-db.html#translating-dplyr-code-into-sql",
@@ -13984,5 +13984,12 @@
     "title": "SQL joins",
     "section": "FULL JOIN with UNION",
     "text": "FULL JOIN with UNION\n\nsqldf::sqldf(\"SELECT star.name,\n                     star.band,\n                     inst.plays\n              FROM band_members AS star\n              LEFT JOIN band_instruments AS inst \n              ON star.name = inst.name\n             \n             UNION\n             \n             SELECT star.name, \n                    star.band, \n                    inst.plays\n             FROM band_instruments AS inst\n             LEFT JOIN band_members AS star\n             ON inst.name = star.name\")\n\n  name    band  plays\n1 &lt;NA&gt;    &lt;NA&gt; guitar\n2 John Beatles guitar\n3 Mick  Stones   &lt;NA&gt;\n4 Paul Beatles   bass"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html#sql-dialects",
+    "href": "slides/2025-04-14-db.html#sql-dialects",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL dialects",
+    "text": "SQL dialects\nYou may have heard of some of the following SQL dialects\n\nMySQL\nDuckDB\nPostgreSQL\nBigQuery\nSQLite\n\nThey are very similar, and you will be able to quickly pick up whichever dialect your institution uses. In our work, we will use MySQL."
   }
 ]
