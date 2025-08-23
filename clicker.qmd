@@ -1,5 +1,5 @@
 
-# Clicker Questions
+# Clicker Questions for DS2 - Foundations of Data Science
 
 to go along with <br>
 

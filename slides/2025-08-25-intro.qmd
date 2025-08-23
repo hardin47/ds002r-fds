@@ -32,7 +32,7 @@ options(pillar.width = 70)
 3. Tools
 
 ::: {.callout-important}
-Before Monday, listen to the <a href = "https://nssdeviations.com/71-compromised-shoe-situation" target = "_blank">full conversation</a> of Not So Standard Deviations - Compromised Shoe Situation.
+Listen to the <a href = "https://nssdeviations.com/71-compromised-shoe-situation" target = "_blank">full conversation</a> of Not So Standard Deviations - Compromised Shoe Situation.
 :::
 
 ::: {.callout-important}
@@ -132,7 +132,7 @@ knitr::include_graphics("../images/data_lego2.png")
 ```{r}
 #| echo: false
 tribble(~`DS workflow`, ~`in DS002R`, ~`beyond DS002R`,
-       'data acquisition', 'web scraping, relational databases', 'APIs',
+       'data acquisition', 'web scraping, relational databases (SQL)', 'APIs',
        'data exploration', 'wrangling, strings, regular expressions', 'natural language processing',
        'data visualization', 'grammar of graphics', 'animations',
        'data conclusions', 'iteration, permutation tests', 'predictive modeling, machine learning, AI',
@@ -252,7 +252,7 @@ Source: [Modern Dive](https://moderndive.com/1-getting-started.html).
 
 -   **Packages**: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup>
 
--   As of August 26, 2024, there are 21,145 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
+-   As of August 23, 2025, there are 22,553 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
 
 -   We're going to work with a small (but important) subset of these!
 
