@@ -74,7 +74,8 @@ library(googlesheets4)
 gs4_deauth()
 litF <- read_sheet("https://docs.google.com/spreadsheets/d/1hDinTIRHQIaZg1RUn6Z_6mo12PtKwEPFIz_mJVF6P5I/pub?gid=0")
 
-litF
+litF |> 
+  gt::gt()
 ```
 
  
@@ -88,7 +89,8 @@ litF <- litF |>
                values_to = "litRateF") |> 
   filter(!is.na(litRateF))
 
-litF 
+litF |> 
+  gt::gt()
 ```
 
 
@@ -108,50 +110,71 @@ GDP <- GDP |>
                values_to = "gdp") |> 
   filter(!is.na(gdp))
 
-GDP
+GDP |> 
+  gt::gt()
 ```
 
 
  
   
-## `pivot_wider`
+## `pivot_wider()`
 
-`pivot_wider`  will be demonstrated using the `babynames` dataset.
+`pivot_wider()`  will be demonstrated using the `paralympic_1500` dataset in the **openintro** R package.
 
 ```{r}
-library(babynames)
+library(openintro)
 
-babynames
+paralympic_1500 |> 
+  gt::gt()
 ```
 
  
-## `pivot_wider` babynames
+## `pivot_wider()` `paralympic_1500`
+
 
 ```{r}
-babynames |>  
-  select(-prop) |> 
-  pivot_wider(names_from = sex, values_from = n) 
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |> 
+  gt::gt()
 ```
 
-## `pivot_wider` babynames
+. . .
+
+```{r}
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |> 
+  gt::gt()
+```
+> https://www.paralympic.org/news/remarkable-finish-1500m-rio-2016
+
+
+## `pivot_wider()` `paralympic_1500`
  
   
 ```{r}
-babynames |>  
-  select(-prop) |>  
-  pivot_wider(names_from = sex, values_from = n) |> 
-  filter(!is.na(F), !is.na(M)) |> 
-  arrange(desc(year), desc(F))
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  filter(!is.na(T13)) |> 
+  arrange(Olympic) |> 
+  gt::gt()
 ```
 
  
-## `pivot_wider` babynames
+## `pivot_wider()` `paralympic_1500`
   
 ```{r}
-babynames |>  
-  pivot_wider(names_from = sex, values_from = n) |> 
-  mutate(maxcount = pmax(F, M, na.rm = TRUE)) |> 
-  arrange(desc(maxcount))
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |> 
+  mutate(mintime = pmin(Olympic, T13, na.rm = TRUE)) |> 
+  arrange(mintime) |> 
+  gt::gt()
 ```
 
 # Agenda  2/12/25

@@ -70,7 +70,6 @@ detach("package:tidyverse", unload=TRUE)
 
 library(tidyverse)
 library(openintro)
-library(babynames)
 ```
 
 

@@ -4,26 +4,26 @@ format: html
 ---
 
 # Foundations of Data Science in R
-## DS002R, Spring 2025
+## DS002R, Fall 2025
 
-Jo Hardin
-2351 Estella
+Jo Hardin   
+2351 Estella   
 jo.hardin@pomona.edu
 
-Class: Mondays & Wednesday, 11-12:15pm
+Class: Mondays & Wednesdays, 11-12:15pm  
+Estella 2141
 
 
-**Office Hours: (Estella 2351)**
-
-Monday: 2:30-4:30pm  
+**Office Hours: (Estella 2351)**  
+Monday: 2:30-5:00pm  
 Tuesday: 9-11am   
 Thursday: 1:15-3pm 
 
 
 **Mentor Sessions:**  
 Sunday & Tuesday 6-8pm    
-Estella 2141   
-Mentors: Maren Rusk & Taha Disbudak
+Estella 2141     
+Mentor: Evelyn Hao
 
 
 ```{r}
@@ -81,14 +81,14 @@ I (like many people) am still in the process of learning about diverse perspecti
 
 :::{.callout-tip icon=false}
 ### Dates
-* Quizzes on Feb 12, Feb 26, March 26, April 9, April 23, May 7 (in class)
-* 2.19.25 Project 1 due
-* 3.5.25 Project 2 due 
-* 4.2.25 Project 3 due
-* 4.16.25 Project 4 due 
-* 4.30.25 Project 5 due 
-* 5.8.25 (Thursday) or 5.13.25 (Tuesday) Project Presentations (9am-noon)
-* 5.13.25 Project 6 write-up due (on GitHub by midnight) 
+* Quizzes on Sep 17, Oct 1, Oct 3, Nov 5, Nov 19, and Dec 3 (in class)
+* 9.24.25 Project 1 due
+* 10.8.25 Project 2 due 
+* 10.29.25 Project 3 due
+* 11.12.25 Project 4 due 
+* 11.26.25 Project 5 due 
+* 12.5.25 (Friday) or 5.10.25 (Tuesday) Project Presentations (9am-noon)
+* 12.10.25 Project 6 write-up due (on GitHub by midnight) 
 :::
 
 ## Links to resources:

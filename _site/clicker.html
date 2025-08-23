@@ -582,15 +582,15 @@ window.Quarto = {
 <li>What is wrong with the following code?<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>
 <ol type="a">
 <li>should only be one =</li>
-<li>Sidney should be lower case</li>
-<li>name should not be in quotes</li>
+<li><code>Bakery</code> should be upper case</li>
+<li><code>type</code> should not be in quotes</li>
 <li>use mutate instead of filter</li>
-<li>babynames in wrong place</li>
+<li><code>starbucks</code> in wrong place</li>
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Result <span class="ot">&lt;-</span> <span class="er">|&gt;</span> <span class="fu">filter</span>(babynames,</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        name <span class="sc">==</span> “Sidney”)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Result <span class="ot">&lt;-</span> <span class="er">|&gt;</span> <span class="fu">filter</span>(starbucks,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        type <span class="sc">==</span> <span class="st">"bakery"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="26" class="example" type="1">
@@ -598,23 +598,23 @@ window.Quarto = {
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="hllfttzqwm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hllfttzqwm table {
+<div id="axtgoxzcdb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#axtgoxzcdb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hllfttzqwm thead, #hllfttzqwm tbody, #hllfttzqwm tfoot, #hllfttzqwm tr, #hllfttzqwm td, #hllfttzqwm th {
+#axtgoxzcdb thead, #axtgoxzcdb tbody, #axtgoxzcdb tfoot, #axtgoxzcdb tr, #axtgoxzcdb td, #axtgoxzcdb th {
   border-style: none;
 }
 
-#hllfttzqwm p {
+#axtgoxzcdb p {
   margin: 0;
   padding: 0;
 }
 
-#hllfttzqwm .gt_table {
+#axtgoxzcdb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -640,12 +640,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_caption {
+#axtgoxzcdb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hllfttzqwm .gt_title {
+#axtgoxzcdb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -657,7 +657,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#hllfttzqwm .gt_subtitle {
+#axtgoxzcdb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -669,7 +669,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#hllfttzqwm .gt_heading {
+#axtgoxzcdb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -681,13 +681,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_bottom_border {
+#axtgoxzcdb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_col_headings {
+#axtgoxzcdb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -702,7 +702,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_col_heading {
+#axtgoxzcdb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -722,7 +722,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#hllfttzqwm .gt_column_spanner_outer {
+#axtgoxzcdb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -734,15 +734,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#hllfttzqwm .gt_column_spanner_outer:first-child {
+#axtgoxzcdb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hllfttzqwm .gt_column_spanner_outer:last-child {
+#axtgoxzcdb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hllfttzqwm .gt_column_spanner {
+#axtgoxzcdb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -754,11 +754,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#hllfttzqwm .gt_spanner_row {
+#axtgoxzcdb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hllfttzqwm .gt_group_heading {
+#axtgoxzcdb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -784,7 +784,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#hllfttzqwm .gt_empty_group_heading {
+#axtgoxzcdb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -799,15 +799,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#hllfttzqwm .gt_from_md > :first-child {
+#axtgoxzcdb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hllfttzqwm .gt_from_md > :last-child {
+#axtgoxzcdb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hllfttzqwm .gt_row {
+#axtgoxzcdb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -826,7 +826,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#hllfttzqwm .gt_stub {
+#axtgoxzcdb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -839,7 +839,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#hllfttzqwm .gt_stub_row_group {
+#axtgoxzcdb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -853,15 +853,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#hllfttzqwm .gt_row_group_first td {
+#axtgoxzcdb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hllfttzqwm .gt_row_group_first th {
+#axtgoxzcdb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hllfttzqwm .gt_summary_row {
+#axtgoxzcdb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -871,16 +871,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#hllfttzqwm .gt_first_summary_row {
+#axtgoxzcdb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_first_summary_row.thick {
+#axtgoxzcdb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hllfttzqwm .gt_last_summary_row {
+#axtgoxzcdb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -890,7 +890,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_grand_summary_row {
+#axtgoxzcdb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -900,7 +900,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#hllfttzqwm .gt_first_grand_summary_row {
+#axtgoxzcdb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -910,7 +910,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_last_grand_summary_row_top {
+#axtgoxzcdb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -920,11 +920,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_striped {
+#axtgoxzcdb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hllfttzqwm .gt_table_body {
+#axtgoxzcdb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -933,7 +933,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_footnotes {
+#axtgoxzcdb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -947,7 +947,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_footnote {
+#axtgoxzcdb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -956,7 +956,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#hllfttzqwm .gt_sourcenotes {
+#axtgoxzcdb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -970,7 +970,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#hllfttzqwm .gt_sourcenote {
+#axtgoxzcdb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -978,72 +978,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#hllfttzqwm .gt_left {
+#axtgoxzcdb .gt_left {
   text-align: left;
 }
 
-#hllfttzqwm .gt_center {
+#axtgoxzcdb .gt_center {
   text-align: center;
 }
 
-#hllfttzqwm .gt_right {
+#axtgoxzcdb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hllfttzqwm .gt_font_normal {
+#axtgoxzcdb .gt_font_normal {
   font-weight: normal;
 }
 
-#hllfttzqwm .gt_font_bold {
+#axtgoxzcdb .gt_font_bold {
   font-weight: bold;
 }
 
-#hllfttzqwm .gt_font_italic {
+#axtgoxzcdb .gt_font_italic {
   font-style: italic;
 }
 
-#hllfttzqwm .gt_super {
+#axtgoxzcdb .gt_super {
   font-size: 65%;
 }
 
-#hllfttzqwm .gt_footnote_marks {
+#axtgoxzcdb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hllfttzqwm .gt_asterisk {
+#axtgoxzcdb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hllfttzqwm .gt_indent_1 {
+#axtgoxzcdb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hllfttzqwm .gt_indent_2 {
+#axtgoxzcdb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hllfttzqwm .gt_indent_3 {
+#axtgoxzcdb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hllfttzqwm .gt_indent_4 {
+#axtgoxzcdb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hllfttzqwm .gt_indent_5 {
+#axtgoxzcdb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hllfttzqwm .katex-display {
+#axtgoxzcdb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hllfttzqwm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#axtgoxzcdb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1079,23 +1079,23 @@ window.Quarto = {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="awrczozagx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#awrczozagx table {
+<div id="fvnygenbvw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fvnygenbvw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#awrczozagx thead, #awrczozagx tbody, #awrczozagx tfoot, #awrczozagx tr, #awrczozagx td, #awrczozagx th {
+#fvnygenbvw thead, #fvnygenbvw tbody, #fvnygenbvw tfoot, #fvnygenbvw tr, #fvnygenbvw td, #fvnygenbvw th {
   border-style: none;
 }
 
-#awrczozagx p {
+#fvnygenbvw p {
   margin: 0;
   padding: 0;
 }
 
-#awrczozagx .gt_table {
+#fvnygenbvw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1121,12 +1121,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#awrczozagx .gt_caption {
+#fvnygenbvw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#awrczozagx .gt_title {
+#fvnygenbvw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1138,7 +1138,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#awrczozagx .gt_subtitle {
+#fvnygenbvw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1150,7 +1150,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#awrczozagx .gt_heading {
+#fvnygenbvw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1162,13 +1162,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#awrczozagx .gt_bottom_border {
+#fvnygenbvw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#awrczozagx .gt_col_headings {
+#fvnygenbvw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1183,7 +1183,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#awrczozagx .gt_col_heading {
+#fvnygenbvw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1203,7 +1203,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#awrczozagx .gt_column_spanner_outer {
+#fvnygenbvw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1215,15 +1215,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#awrczozagx .gt_column_spanner_outer:first-child {
+#fvnygenbvw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#awrczozagx .gt_column_spanner_outer:last-child {
+#fvnygenbvw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#awrczozagx .gt_column_spanner {
+#fvnygenbvw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1235,11 +1235,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#awrczozagx .gt_spanner_row {
+#fvnygenbvw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#awrczozagx .gt_group_heading {
+#fvnygenbvw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1265,7 +1265,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#awrczozagx .gt_empty_group_heading {
+#fvnygenbvw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1280,15 +1280,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#awrczozagx .gt_from_md > :first-child {
+#fvnygenbvw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#awrczozagx .gt_from_md > :last-child {
+#fvnygenbvw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#awrczozagx .gt_row {
+#fvnygenbvw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1307,7 +1307,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#awrczozagx .gt_stub {
+#fvnygenbvw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1320,7 +1320,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#awrczozagx .gt_stub_row_group {
+#fvnygenbvw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1334,15 +1334,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#awrczozagx .gt_row_group_first td {
+#fvnygenbvw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#awrczozagx .gt_row_group_first th {
+#fvnygenbvw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#awrczozagx .gt_summary_row {
+#fvnygenbvw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1352,16 +1352,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#awrczozagx .gt_first_summary_row {
+#fvnygenbvw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#awrczozagx .gt_first_summary_row.thick {
+#fvnygenbvw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#awrczozagx .gt_last_summary_row {
+#fvnygenbvw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1371,7 +1371,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#awrczozagx .gt_grand_summary_row {
+#fvnygenbvw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1381,7 +1381,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#awrczozagx .gt_first_grand_summary_row {
+#fvnygenbvw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1391,7 +1391,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#awrczozagx .gt_last_grand_summary_row_top {
+#fvnygenbvw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1401,11 +1401,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#awrczozagx .gt_striped {
+#fvnygenbvw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#awrczozagx .gt_table_body {
+#fvnygenbvw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1414,7 +1414,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#awrczozagx .gt_footnotes {
+#fvnygenbvw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1428,7 +1428,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#awrczozagx .gt_footnote {
+#fvnygenbvw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1437,7 +1437,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#awrczozagx .gt_sourcenotes {
+#fvnygenbvw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1451,7 +1451,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#awrczozagx .gt_sourcenote {
+#fvnygenbvw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1459,72 +1459,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#awrczozagx .gt_left {
+#fvnygenbvw .gt_left {
   text-align: left;
 }
 
-#awrczozagx .gt_center {
+#fvnygenbvw .gt_center {
   text-align: center;
 }
 
-#awrczozagx .gt_right {
+#fvnygenbvw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#awrczozagx .gt_font_normal {
+#fvnygenbvw .gt_font_normal {
   font-weight: normal;
 }
 
-#awrczozagx .gt_font_bold {
+#fvnygenbvw .gt_font_bold {
   font-weight: bold;
 }
 
-#awrczozagx .gt_font_italic {
+#fvnygenbvw .gt_font_italic {
   font-style: italic;
 }
 
-#awrczozagx .gt_super {
+#fvnygenbvw .gt_super {
   font-size: 65%;
 }
 
-#awrczozagx .gt_footnote_marks {
+#fvnygenbvw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#awrczozagx .gt_asterisk {
+#fvnygenbvw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#awrczozagx .gt_indent_1 {
+#fvnygenbvw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#awrczozagx .gt_indent_2 {
+#fvnygenbvw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#awrczozagx .gt_indent_3 {
+#fvnygenbvw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#awrczozagx .gt_indent_4 {
+#fvnygenbvw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#awrczozagx .gt_indent_5 {
+#fvnygenbvw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#awrczozagx .katex-display {
+#fvnygenbvw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#awrczozagx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fvnygenbvw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1562,23 +1562,23 @@ window.Quarto = {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="rhvlcgrdgx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rhvlcgrdgx table {
+<div id="lfjmlrophz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lfjmlrophz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rhvlcgrdgx thead, #rhvlcgrdgx tbody, #rhvlcgrdgx tfoot, #rhvlcgrdgx tr, #rhvlcgrdgx td, #rhvlcgrdgx th {
+#lfjmlrophz thead, #lfjmlrophz tbody, #lfjmlrophz tfoot, #lfjmlrophz tr, #lfjmlrophz td, #lfjmlrophz th {
   border-style: none;
 }
 
-#rhvlcgrdgx p {
+#lfjmlrophz p {
   margin: 0;
   padding: 0;
 }
 
-#rhvlcgrdgx .gt_table {
+#lfjmlrophz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1604,12 +1604,12 @@ window.Quarto = {
   border-left-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_caption {
+#lfjmlrophz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rhvlcgrdgx .gt_title {
+#lfjmlrophz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1621,7 +1621,7 @@ window.Quarto = {
   border-bottom-width: 0;
 }
 
-#rhvlcgrdgx .gt_subtitle {
+#lfjmlrophz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1633,7 +1633,7 @@ window.Quarto = {
   border-top-width: 0;
 }
 
-#rhvlcgrdgx .gt_heading {
+#lfjmlrophz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1645,13 +1645,13 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_bottom_border {
+#lfjmlrophz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_col_headings {
+#lfjmlrophz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1666,7 +1666,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_col_heading {
+#lfjmlrophz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1686,7 +1686,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#rhvlcgrdgx .gt_column_spanner_outer {
+#lfjmlrophz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1698,15 +1698,15 @@ window.Quarto = {
   padding-right: 4px;
 }
 
-#rhvlcgrdgx .gt_column_spanner_outer:first-child {
+#lfjmlrophz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rhvlcgrdgx .gt_column_spanner_outer:last-child {
+#lfjmlrophz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rhvlcgrdgx .gt_column_spanner {
+#lfjmlrophz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1718,11 +1718,11 @@ window.Quarto = {
   width: 100%;
 }
 
-#rhvlcgrdgx .gt_spanner_row {
+#lfjmlrophz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rhvlcgrdgx .gt_group_heading {
+#lfjmlrophz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1748,7 +1748,7 @@ window.Quarto = {
   text-align: left;
 }
 
-#rhvlcgrdgx .gt_empty_group_heading {
+#lfjmlrophz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1763,15 +1763,15 @@ window.Quarto = {
   vertical-align: middle;
 }
 
-#rhvlcgrdgx .gt_from_md > :first-child {
+#lfjmlrophz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rhvlcgrdgx .gt_from_md > :last-child {
+#lfjmlrophz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rhvlcgrdgx .gt_row {
+#lfjmlrophz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1790,7 +1790,7 @@ window.Quarto = {
   overflow-x: hidden;
 }
 
-#rhvlcgrdgx .gt_stub {
+#lfjmlrophz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1803,7 +1803,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#rhvlcgrdgx .gt_stub_row_group {
+#lfjmlrophz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1817,15 +1817,15 @@ window.Quarto = {
   vertical-align: top;
 }
 
-#rhvlcgrdgx .gt_row_group_first td {
+#lfjmlrophz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rhvlcgrdgx .gt_row_group_first th {
+#lfjmlrophz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rhvlcgrdgx .gt_summary_row {
+#lfjmlrophz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1835,16 +1835,16 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#rhvlcgrdgx .gt_first_summary_row {
+#lfjmlrophz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_first_summary_row.thick {
+#lfjmlrophz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rhvlcgrdgx .gt_last_summary_row {
+#lfjmlrophz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1854,7 +1854,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_grand_summary_row {
+#lfjmlrophz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1864,7 +1864,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#rhvlcgrdgx .gt_first_grand_summary_row {
+#lfjmlrophz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1874,7 +1874,7 @@ window.Quarto = {
   border-top-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_last_grand_summary_row_top {
+#lfjmlrophz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1884,11 +1884,11 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_striped {
+#lfjmlrophz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rhvlcgrdgx .gt_table_body {
+#lfjmlrophz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1897,7 +1897,7 @@ window.Quarto = {
   border-bottom-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_footnotes {
+#lfjmlrophz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1911,7 +1911,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_footnote {
+#lfjmlrophz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1920,7 +1920,7 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#rhvlcgrdgx .gt_sourcenotes {
+#lfjmlrophz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1934,7 +1934,7 @@ window.Quarto = {
   border-right-color: #D3D3D3;
 }
 
-#rhvlcgrdgx .gt_sourcenote {
+#lfjmlrophz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1942,72 +1942,72 @@ window.Quarto = {
   padding-right: 5px;
 }
 
-#rhvlcgrdgx .gt_left {
+#lfjmlrophz .gt_left {
   text-align: left;
 }
 
-#rhvlcgrdgx .gt_center {
+#lfjmlrophz .gt_center {
   text-align: center;
 }
 
-#rhvlcgrdgx .gt_right {
+#lfjmlrophz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rhvlcgrdgx .gt_font_normal {
+#lfjmlrophz .gt_font_normal {
   font-weight: normal;
 }
 
-#rhvlcgrdgx .gt_font_bold {
+#lfjmlrophz .gt_font_bold {
   font-weight: bold;
 }
 
-#rhvlcgrdgx .gt_font_italic {
+#lfjmlrophz .gt_font_italic {
   font-style: italic;
 }
 
-#rhvlcgrdgx .gt_super {
+#lfjmlrophz .gt_super {
   font-size: 65%;
 }
 
-#rhvlcgrdgx .gt_footnote_marks {
+#lfjmlrophz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rhvlcgrdgx .gt_asterisk {
+#lfjmlrophz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rhvlcgrdgx .gt_indent_1 {
+#lfjmlrophz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rhvlcgrdgx .gt_indent_2 {
+#lfjmlrophz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rhvlcgrdgx .gt_indent_3 {
+#lfjmlrophz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rhvlcgrdgx .gt_indent_4 {
+#lfjmlrophz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rhvlcgrdgx .gt_indent_5 {
+#lfjmlrophz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rhvlcgrdgx .katex-display {
+#lfjmlrophz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rhvlcgrdgx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lfjmlrophz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2064,26 +2064,26 @@ window.Quarto = {
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#(a) </span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span> </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, sex) <span class="sc">|&gt;</span> </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">totalBirths =</span> <span class="fu">sum</span>(n))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>starbucks <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(type) <span class="sc">|&gt;</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#(b) </span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(babynames, year, sex) <span class="sc">|&gt;</span> </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">totalBirths =</span> <span class="fu">sum</span>(n))</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(starbucks, type) <span class="sc">|&gt;</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#(c)</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(babynames, year, sex) <span class="sc">|&gt;</span> </span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">totalBirths =</span> <span class="fu">mean</span>(n))</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(starbucks, type) <span class="sc">|&gt;</span> </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_fat =</span> <span class="fu">sum</span>(fat))</span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#(d)</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">group_by</span>(babynames, year, sex)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">group_by</span>(starbucks, type)</span>
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(temp, <span class="at">totalBirths =</span> <span class="fu">sum</span>(n))</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(temp, <span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">#(e)</span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(<span class="fu">group_by</span>(babynames, year, sex), </span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>          <span class="at">totalBirths =</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(<span class="fu">group_by</span>(starbucks, type), </span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>          <span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="28" class="example" type="1">
@@ -2097,9 +2097,9 @@ window.Quarto = {
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>result <span class="ot">&lt;-</span> babynames <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">Q1</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="co"># just the Janes and Marys</span></span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>result <span class="ot">&lt;-</span> lego_sample <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">Q1</span>(<span class="sc">!</span><span class="fu">is.na</span>(minifigures)) <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="co"># keep only those with minifigures</span></span>
 <span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">group_by</span>(Q2, Q2) <span class="sc">|&gt;</span> </span>
 <span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">summarize</span>(<span class="at">total =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2107,184 +2107,143 @@ window.Quarto = {
 <ol start="29" class="example" type="1">
 <li>Fill in Q2.<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>
 <ol type="a">
-<li><code>(year, sex)</code></li>
-<li><code>(year, name)</code></li>
-<li><code>(year, n)</code></li>
-<li><code>(sex, name)</code></li>
-<li><code>(sex, n)</code></li>
+<li><code>(theme, price)</code></li>
+<li><code>(theme, year)</code></li>
+<li><code>(year, price)</code></li>
+<li><code>(pieces, year)</code></li>
+<li><code>(pieces, price)</code></li>
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>result <span class="ot">&lt;-</span> babynames <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">Q1</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>result <span class="ot">&lt;-</span> lego_sample <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">Q1</span>(<span class="sc">!</span><span class="fu">is.na</span>(minifigures)) <span class="sc">|&gt;</span> </span>
 <span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">group_by</span>(Q2, Q2) <span class="sc">|&gt;</span> </span>
-<span id="cb10-4"><a href="#cb10-4"></a>  <span class="co"># for each year for each name</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="co"># for each theme and year</span></span>
 <span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">summarize</span>(<span class="at">total =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="30" class="example" type="1">
 <li>Fill in Q3.<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>
 <ol type="a">
-<li><code>n_distinct(name)</code></li>
-<li><code>n_distinct(n)</code></li>
-<li><code>sum(name)</code></li>
-<li><code>sum(n)</code></li>
-<li><code>mean(n)</code></li>
+<li><code>n_distinct(pieces)</code></li>
+<li><code>n_distinct(price)</code></li>
+<li><code>sum(pieces)</code></li>
+<li><code>sum(pages)</code></li>
+<li><code>mean(pieces)</code></li>
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>result <span class="ot">&lt;-</span> babynames <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">Q1</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>result <span class="ot">&lt;-</span> lego_sample <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">Q1</span>(<span class="sc">!</span><span class="fu">is.na</span>(minifigures)) <span class="sc">|&gt;</span> </span>
 <span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">group_by</span>(Q2, Q2) <span class="sc">|&gt;</span> </span>
-<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">summarize</span>(<span class="at">total =</span> Q3)</span>
-<span id="cb11-5"><a href="#cb11-5"></a>  <span class="co"># number of babies (each year, each name)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">summarize</span>(<span class="at">ave_pieces =</span> Q3)</span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="co"># average number of pieces (each theme, each year)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="31" class="example" type="1">
 <li>Running the code.<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(babynames)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># just the Janes and Marys</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">|&gt;</span> </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># for each year for each name</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total =</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openintro)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>lego_sample <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(minifigures)) <span class="sc">|&gt;</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># keep only those with minifigures</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(theme, year) <span class="sc">|&gt;</span> </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># for each theme for each year</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">ave_pieces =</span> <span class="fu">mean</span>(pieces))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 276 × 3
-# Groups:   name [2]
-   name   year total
-   &lt;chr&gt; &lt;dbl&gt; &lt;int&gt;
- 1 Jane   1880   215
- 2 Jane   1881   216
- 3 Jane   1882   254
- 4 Jane   1883   247
- 5 Jane   1884   295
- 6 Jane   1885   330
- 7 Jane   1886   306
- 8 Jane   1887   288
- 9 Jane   1888   446
-10 Jane   1889   374
-# ℹ 266 more rows</code></pre>
+<pre><code># A tibble: 9 × 3
+# Groups:   theme [3]
+  theme    year ave_pieces
+  &lt;chr&gt;   &lt;dbl&gt;      &lt;dbl&gt;
+1 City     2018      189. 
+2 City     2019      257. 
+3 City     2020      349  
+4 DUPLO®   2018       50.5
+5 DUPLO®   2019       32.5
+6 DUPLO®   2020       45.8
+7 Friends  2018      354. 
+8 Friends  2019      259. 
+9 Friends  2020      250. </code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">|&gt;</span> </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">number =</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#(a)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>starbucks <span class="sc">|&gt;</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(type) <span class="sc">|&gt;</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 276 × 3
-# Groups:   name [2]
-   name   year number
-   &lt;chr&gt; &lt;dbl&gt;  &lt;int&gt;
- 1 Jane   1880    215
- 2 Jane   1881    216
- 3 Jane   1882    254
- 4 Jane   1883    247
- 5 Jane   1884    295
- 6 Jane   1885    330
- 7 Jane   1886    306
- 8 Jane   1887    288
- 9 Jane   1888    446
-10 Jane   1889    374
-# ℹ 266 more rows</code></pre>
+<pre><code># A tibble: 7 × 2
+  type          average_fat
+  &lt;fct&gt;               &lt;dbl&gt;
+1 bakery              14.6 
+2 bistro box          18.4 
+3 hot breakfast       13.7 
+4 parfait              6.5 
+5 petite               9.33
+6 salad                0   
+7 sandwich            14.7 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">|&gt;</span> </span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">n_distinct</span>(name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#(b) </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(starbucks, type) <span class="sc">|&gt;</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 276 × 3
-# Groups:   name [2]
-   name   year `n_distinct(name)`
-   &lt;chr&gt; &lt;dbl&gt;              &lt;int&gt;
- 1 Jane   1880                  1
- 2 Jane   1881                  1
- 3 Jane   1882                  1
- 4 Jane   1883                  1
- 5 Jane   1884                  1
- 6 Jane   1885                  1
- 7 Jane   1886                  1
- 8 Jane   1887                  1
- 9 Jane   1888                  1
-10 Jane   1889                  1
-# ℹ 266 more rows</code></pre>
+<pre><code># A tibble: 7 × 2
+  type          average_fat
+  &lt;fct&gt;               &lt;dbl&gt;
+1 bakery              14.6 
+2 bistro box          18.4 
+3 hot breakfast       13.7 
+4 parfait              6.5 
+5 petite               9.33
+6 salad                0   
+7 sandwich            14.7 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">|&gt;</span> </span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">n_distinct</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#(c)</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(starbucks, type) <span class="sc">|&gt;</span> </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">average_fat =</span> <span class="fu">sum</span>(fat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 276 × 3
-# Groups:   name [2]
-   name   year `n_distinct(n)`
-   &lt;chr&gt; &lt;dbl&gt;           &lt;int&gt;
- 1 Jane   1880               1
- 2 Jane   1881               1
- 3 Jane   1882               1
- 4 Jane   1883               1
- 5 Jane   1884               1
- 6 Jane   1885               1
- 7 Jane   1886               1
- 8 Jane   1887               1
- 9 Jane   1888               1
-10 Jane   1889               1
-# ℹ 266 more rows</code></pre>
+<pre><code># A tibble: 7 × 2
+  type          average_fat
+  &lt;fct&gt;               &lt;dbl&gt;
+1 bakery              597  
+2 bistro box          147  
+3 hot breakfast       110. 
+4 parfait              19.5
+5 petite               84  
+6 salad                 0  
+7 sandwich            103  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">|&gt;</span> </span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">sum</span>(name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `summarize()`:
-ℹ In argument: `sum(name)`.
-ℹ In group 1: `name = "Jane"` and `year = 1880`.
-Caused by error in `base::sum()`:
-! invalid 'type' (character) of argument</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">|&gt;</span> </span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#(d)</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">group_by</span>(starbucks, type)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(temp, <span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 276 × 3
-# Groups:   name [2]
-   name   year `mean(n)`
-   &lt;chr&gt; &lt;dbl&gt;     &lt;dbl&gt;
- 1 Jane   1880       215
- 2 Jane   1881       216
- 3 Jane   1882       254
- 4 Jane   1883       247
- 5 Jane   1884       295
- 6 Jane   1885       330
- 7 Jane   1886       306
- 8 Jane   1887       288
- 9 Jane   1888       446
-10 Jane   1889       374
-# ℹ 266 more rows</code></pre>
+<pre><code># A tibble: 7 × 2
+  type          average_fat
+  &lt;fct&gt;               &lt;dbl&gt;
+1 bakery              14.6 
+2 bistro box          18.4 
+3 hot breakfast       13.7 
+4 parfait              6.5 
+5 petite               9.33
+6 salad                0   
+7 sandwich            14.7 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Jane"</span>, <span class="st">"Mary"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">|&gt;</span> </span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">median</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#(e)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(<span class="fu">group_by</span>(starbucks, type), </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">average_fat =</span> <span class="fu">mean</span>(fat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 276 × 3
-# Groups:   name [2]
-   name   year `median(n)`
-   &lt;chr&gt; &lt;dbl&gt;       &lt;dbl&gt;
- 1 Jane   1880         215
- 2 Jane   1881         216
- 3 Jane   1882         254
- 4 Jane   1883         247
- 5 Jane   1884         295
- 6 Jane   1885         330
- 7 Jane   1886         306
- 8 Jane   1887         288
- 9 Jane   1888         446
-10 Jane   1889         374
-# ℹ 266 more rows</code></pre>
+<pre><code># A tibble: 7 × 2
+  type          average_fat
+  &lt;fct&gt;               &lt;dbl&gt;
+1 bakery              14.6 
+2 bistro box          18.4 
+3 hot breakfast       13.7 
+4 parfait              6.5 
+5 petite               9.33
+6 salad                0   
+7 sandwich            14.7 </code></pre>
 </div>
 </div>
 <hr>
@@ -2319,11 +2278,11 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>GDP <span class="sc">|&gt;</span>  </span>
-<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="fu">starts_with</span>(<span class="st">"Income"</span>), <span class="fu">everything</span>()) <span class="sc">|&gt;</span> </span>
-<span id="cb26-3"><a href="#cb26-3"></a>       <span class="fu">pivot_longer</span>(<span class="at">cols =</span> Q1, </span>
-<span id="cb26-4"><a href="#cb26-4"></a>                    <span class="at">names_to =</span> Q2, </span>
-<span id="cb26-5"><a href="#cb26-5"></a>                    <span class="at">values_to =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>GDP <span class="sc">|&gt;</span>  </span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="fu">starts_with</span>(<span class="st">"Income"</span>), <span class="fu">everything</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb24-3"><a href="#cb24-3"></a>       <span class="fu">pivot_longer</span>(<span class="at">cols =</span> Q1, </span>
+<span id="cb24-4"><a href="#cb24-4"></a>                    <span class="at">names_to =</span> Q2, </span>
+<span id="cb24-5"><a href="#cb24-5"></a>                    <span class="at">values_to =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="35" class="example" type="1">
@@ -2337,11 +2296,11 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>GDP <span class="sc">|&gt;</span>  </span>
-<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="fu">starts_with</span>(<span class="st">"Income"</span>), <span class="fu">everything</span>()) <span class="sc">|&gt;</span> </span>
-<span id="cb27-3"><a href="#cb27-3"></a>       <span class="fu">pivot_longer</span>(<span class="at">cols =</span> Q1, </span>
-<span id="cb27-4"><a href="#cb27-4"></a>                    <span class="at">names_to =</span> Q2, </span>
-<span id="cb27-5"><a href="#cb27-5"></a>                    <span class="at">values_to =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>GDP <span class="sc">|&gt;</span>  </span>
+<span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="fu">starts_with</span>(<span class="st">"Income"</span>), <span class="fu">everything</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb25-3"><a href="#cb25-3"></a>       <span class="fu">pivot_longer</span>(<span class="at">cols =</span> Q1, </span>
+<span id="cb25-4"><a href="#cb25-4"></a>                    <span class="at">names_to =</span> Q2, </span>
+<span id="cb25-5"><a href="#cb25-5"></a>                    <span class="at">values_to =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="36" class="example" type="1">
@@ -2355,11 +2314,11 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>GDP <span class="sc">|&gt;</span>  </span>
-<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="fu">starts_with</span>(<span class="st">"Income"</span>), <span class="fu">everything</span>()) <span class="sc">|&gt;</span> </span>
-<span id="cb28-3"><a href="#cb28-3"></a>       <span class="fu">pivot_longer</span>(<span class="at">cols =</span> Q1, </span>
-<span id="cb28-4"><a href="#cb28-4"></a>                    <span class="at">names_to =</span> Q2, </span>
-<span id="cb28-5"><a href="#cb28-5"></a>                    <span class="at">values_to =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>GDP <span class="sc">|&gt;</span>  </span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">select</span>(<span class="at">country =</span> <span class="fu">starts_with</span>(<span class="st">"Income"</span>), <span class="fu">everything</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb26-3"><a href="#cb26-3"></a>       <span class="fu">pivot_longer</span>(<span class="at">cols =</span> Q1, </span>
+<span id="cb26-4"><a href="#cb26-4"></a>                    <span class="at">names_to =</span> Q2, </span>
+<span id="cb26-5"><a href="#cb26-5"></a>                    <span class="at">values_to =</span> Q3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="37" class="example" type="1">
@@ -2371,8 +2330,8 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(___, <span class="fu">aes</span>(<span class="at">x =</span> ___, <span class="at">y =</span> ___, <span class="at">color =</span> ___)) <span class="sc">+</span> </span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(___, <span class="fu">aes</span>(<span class="at">x =</span> ___, <span class="at">y =</span> ___, <span class="at">color =</span> ___)) <span class="sc">+</span> </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
@@ -2387,8 +2346,8 @@ Caused by error in `base::sum()`:
 </div>
 <hr>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>grades <span class="sc">|&gt;</span> </span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> test, <span class="at">values_from =</span> score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>grades <span class="sc">|&gt;</span> </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> test, <span class="at">values_from =</span> score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
   student Midterm Final
@@ -2407,8 +2366,8 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(___, <span class="fu">aes</span>(<span class="at">x =</span> ___, <span class="at">y =</span> ___, <span class="at">color =</span> ___)) <span class="sc">+</span> </span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(___, <span class="fu">aes</span>(<span class="at">x =</span> ___, <span class="at">y =</span> ___, <span class="at">color =</span> ___)) <span class="sc">+</span> </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
@@ -2437,13 +2396,13 @@ Caused by error in `base::sum()`:
 </div>
 <hr>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>sleep_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>sleep_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 180 × 3
    Subject day   reaction_time
@@ -2473,8 +2432,8 @@ Caused by error in `base::sum()`:
 <li>Impossible to know</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>band_members <span class="sc">|&gt;</span> </span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(band_instruments, <span class="at">by =</span> <span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>band_members <span class="sc">|&gt;</span> </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(band_instruments, <span class="at">by =</span> <span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="40" class="example" type="1">
@@ -2489,7 +2448,7 @@ Caused by error in `base::sum()`:
 <div class="columns">
 <div class="column" style="width:25%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>band_members</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>band_members</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   name  band   
@@ -2501,7 +2460,7 @@ Caused by error in `base::sum()`:
 </div>
 </div><div class="column" style="width:25%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>band_instruments</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>band_instruments</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   name  plays 
@@ -2514,8 +2473,8 @@ Caused by error in `base::sum()`:
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>band_members <span class="sc">|&gt;</span> </span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(band_instruments, <span class="at">by =</span> <span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>band_members <span class="sc">|&gt;</span> </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">right_join</span>(band_instruments, <span class="at">by =</span> <span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="41" class="example" type="1">
@@ -2531,7 +2490,7 @@ Caused by error in `base::sum()`:
 <div class="columns">
 <div class="column" style="width:25%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>band_members</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>band_members</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   name  band   
@@ -2543,7 +2502,7 @@ Caused by error in `base::sum()`:
 </div>
 </div><div class="column" style="width:25%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>band_instruments</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>band_instruments</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   name  plays 
@@ -2556,8 +2515,8 @@ Caused by error in `base::sum()`:
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>band_members <span class="sc">|&gt;</span> </span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(band_instruments, <span class="at">by =</span> <span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>band_members <span class="sc">|&gt;</span> </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(band_instruments, <span class="at">by =</span> <span class="st">"name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="42" class="example" type="1">
@@ -2571,8 +2530,8 @@ Caused by error in `base::sum()`:
 <li>“abc” “123”</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_c</span>(<span class="at">letters =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>),</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_c</span>(<span class="at">letters =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>),</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="43" class="example" type="1">
@@ -2586,8 +2545,8 @@ Caused by error in `base::sum()`:
 <li>“abc” “123”</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_c</span>(<span class="at">letters =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>),</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">sep =</span> <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_c</span>(<span class="at">letters =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>),</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">sep =</span> <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="44" class="example" type="1">
@@ -2600,8 +2559,8 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"abcde"</span>, <span class="st">"ghifgh"</span>)</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_sub</span>(x, <span class="at">start =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="at">end =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"abcde"</span>, <span class="st">"ghifgh"</span>)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_sub</span>(x, <span class="at">start =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="at">end =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="45" class="example" type="1">
@@ -2613,8 +2572,8 @@ Caused by error in `base::sum()`:
 <li>“on- apple” “two p-ars” “thr-e bananas”</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"one apple"</span>, <span class="st">"two pears"</span>, <span class="st">"three bananas"</span>)</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace</span>(fruits, <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>), <span class="st">"-"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"one apple"</span>, <span class="st">"two pears"</span>, <span class="st">"three bananas"</span>)</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace</span>(fruits, <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"e"</span>, <span class="st">"i"</span>), <span class="st">"-"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="46" class="example" type="1">
@@ -2627,8 +2586,8 @@ Caused by error in `base::sum()`:
 <li>FALSE</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>fruit <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"pear"</span>, <span class="st">"pineapple"</span>)</span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_detect</span>(fruit, <span class="st">"a"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>fruit <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"pear"</span>, <span class="st">"pineapple"</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_detect</span>(fruit, <span class="st">"a"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="47" class="example" type="1">
@@ -2653,8 +2612,8 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>starbucks <span class="sc">|&gt;</span> </span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">fct_reorder</span>(type, calories, <span class="at">.fun =</span> <span class="st">"mean"</span>, <span class="at">.desc =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>starbucks <span class="sc">|&gt;</span> </span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">fct_reorder</span>(type, calories, <span class="at">.fun =</span> <span class="st">"mean"</span>, <span class="at">.desc =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="49" class="example" type="1">
@@ -2669,9 +2628,9 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"bear"</span>, <span class="st">"dear"</span>, <span class="st">"banana"</span>))</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">fct_recode</span>(x, <span class="at">fruit =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"banana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"bear"</span>, <span class="st">"dear"</span>, <span class="st">"banana"</span>))</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">fct_recode</span>(x, <span class="at">fruit =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"banana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="50" class="example" type="1">
@@ -2695,10 +2654,10 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2025-02-19"</span>)</span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">month</span>(today)</span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="fu">month</span>(today, <span class="at">label =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2025-02-19"</span>)</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="fu">month</span>(today)</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="fu">month</span>(today, <span class="at">label =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="52" class="example" type="1">
@@ -2711,8 +2670,8 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2025-02-19"</span>)</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">week</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2025-02-19"</span>)</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">week</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8</code></pre>
 </div>
@@ -2728,22 +2687,22 @@ Caused by error in `base::sum()`:
 <li>Day of weekend and day of month.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 19</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">yday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">yday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 50</code></pre>
 </div>
 </div>
 <hr>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 19</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">yday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">yday</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 50</code></pre>
 </div>
@@ -2759,7 +2718,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>today <span class="sc">&gt;</span> <span class="fu">ymd</span>(<span class="st">"2025-09-01"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>today <span class="sc">&gt;</span> <span class="fu">ymd</span>(<span class="st">"2025-09-01"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="55" class="example" type="1">
@@ -2794,7 +2753,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"My dog is 10 years old"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">d"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"My dog is 10 years old"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">d"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="58" class="example" type="1">
@@ -2807,7 +2766,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"My dog is 10 years old"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">d+"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"My dog is 10 years old"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">d+"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="59" class="example" type="1">
@@ -2820,7 +2779,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"Episode 2: The pie whisperer. (4 August 2015)"</span>, <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"Episode 2: The pie whisperer. (4 August 2015)"</span>, <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="60" class="example" type="1">
@@ -2833,7 +2792,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"Episode 2: The pie whisperer. (4 August 2015)"</span>, <span class="st">".+"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"Episode 2: The pie whisperer. (4 August 2015)"</span>, <span class="st">".+"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="61" class="example" type="1">
@@ -2846,7 +2805,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"Episode 2: The pie whisperer. (4 August 2015)"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="st">"Episode 2: The pie whisperer. (4 August 2015)"</span>, <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="62" class="example" type="1">
@@ -2859,9 +2818,9 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>string <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mary"</span>, <span class="st">"Mar"</span>, <span class="st">"Janet"</span>, <span class="st">"jane"</span>, <span class="st">"Susan"</span>, <span class="st">"Sue"</span>)</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(string, <span class="st">"</span><span class="sc">\\</span><span class="st">bMary|Jane|Sue</span><span class="sc">\\</span><span class="st">b"</span>)</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(string, <span class="st">"</span><span class="sc">\\</span><span class="st">b(Mary|Jane|Sue)</span><span class="sc">\\</span><span class="st">b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>string <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mary"</span>, <span class="st">"Mar"</span>, <span class="st">"Janet"</span>, <span class="st">"jane"</span>, <span class="st">"Susan"</span>, <span class="st">"Sue"</span>)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(string, <span class="st">"</span><span class="sc">\\</span><span class="st">bMary|Jane|Sue</span><span class="sc">\\</span><span class="st">b"</span>)</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(string, <span class="st">"</span><span class="sc">\\</span><span class="st">b(Mary|Jane|Sue)</span><span class="sc">\\</span><span class="st">b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="63" class="example" type="1">
@@ -2885,13 +2844,13 @@ Caused by error in `base::sum()`:
 </ol>
 <hr>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="fu">c</span>(<span class="st">"apple pie"</span>, <span class="st">"chocolate pie"</span>, <span class="st">"peach pie"</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">w+(?= pie)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="fu">c</span>(<span class="st">"apple pie"</span>, <span class="st">"chocolate pie"</span>, <span class="st">"peach pie"</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">w+(?= pie)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "apple"     "chocolate" "peach"    </code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="fu">c</span>(<span class="st">"apple pie"</span>, <span class="st">"chocolate pie"</span>, <span class="st">"peach pie"</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">w+(?=pie)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(<span class="fu">c</span>(<span class="st">"apple pie"</span>, <span class="st">"chocolate pie"</span>, <span class="st">"peach pie"</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">w+(?=pie)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA NA NA</code></pre>
 </div>
@@ -2918,10 +2877,10 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
-<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
-<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="67" class="example" type="1">
@@ -2935,10 +2894,10 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">y =</span> <span class="dv">2</span>){</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">y =</span> <span class="dv">2</span>){</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="68" class="example" type="1">
@@ -2952,10 +2911,10 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">y =</span> <span class="dv">2</span>){</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
-<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">y =</span> <span class="dv">2</span>){</span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="69" class="example" type="1">
@@ -2969,10 +2928,10 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">3</span>){</span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>my_power <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">3</span>){</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">^</span>y)</span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a><span class="fu">my_power</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="70" class="example" type="1">
@@ -2985,9 +2944,9 @@ Caused by error in `base::sum()`:
 <li><code>map_lgl(c(1,4,7), addTen)</code></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>addTen <span class="ot">&lt;-</span> <span class="cf">function</span>(wow) {</span>
-<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(wow <span class="sc">+</span> <span class="dv">10</span>)</span>
-<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>addTen <span class="ot">&lt;-</span> <span class="cf">function</span>(wow) {</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(wow <span class="sc">+</span> <span class="dv">10</span>)</span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output cell-output-stdout">
@@ -3026,7 +2985,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>input</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>input</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
       n  mean    sd
@@ -3037,8 +2996,8 @@ Caused by error in `base::sum()`:
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>input <span class="sc">|&gt;</span> </span>
-<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pmap</span>(rnorm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>input <span class="sc">|&gt;</span> </span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pmap</span>(rnorm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="74" class="example" type="1">
@@ -3052,8 +3011,8 @@ Caused by error in `base::sum()`:
 <li>There is no error</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="75" class="example" type="1">
@@ -3067,10 +3026,10 @@ Caused by error in `base::sum()`:
 <li>There is no error.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2021-01-31"</span>)</span>
-<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in ymd("2021-01-31"): could not find function "ymd"</span></span>
-<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span>
-<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2021-01-31"</span>)</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in ymd("2021-01-31"): could not find function "ymd"</span></span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="76" class="example" type="1">
@@ -3084,17 +3043,17 @@ Caused by error in `base::sum()`:
 <li>There is no error.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(lubridate)</span>
-<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Attaching package: 'lubridate'</span></span>
-<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
-<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     date, intersect, setdiff, union</span></span>
-<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2021-01-31"</span>)</span>
-<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span>
-<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] "2021-03-03" NA           "2021-05-01" NA           "2021-07-01"</span></span>
-<span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [6] NA           "2021-08-31" "2021-10-01" NA           "2021-12-01"</span></span>
-<span id="cb88-11"><a href="#cb88-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [11] NA           "2022-01-31"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(lubridate)</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Attaching package: 'lubridate'</span></span>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     date, intersect, setdiff, union</span></span>
+<span id="cb86-7"><a href="#cb86-7" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2021-01-31"</span>)</span>
+<span id="cb86-8"><a href="#cb86-8" aria-hidden="true" tabindex="-1"></a>  jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span>
+<span id="cb86-9"><a href="#cb86-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [1] "2021-03-03" NA           "2021-05-01" NA           "2021-07-01"</span></span>
+<span id="cb86-10"><a href="#cb86-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  [6] NA           "2021-08-31" "2021-10-01" NA           "2021-12-01"</span></span>
+<span id="cb86-11"><a href="#cb86-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [11] NA           "2022-01-31"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="77" class="example" type="1">
@@ -3108,18 +3067,18 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>day_one</span>
-<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>day_1</span>
-<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a>DayOne</span>
-<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a>dayone</span>
-<span id="cb89-8"><a href="#cb89-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb89-9"><a href="#cb89-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
-<span id="cb89-10"><a href="#cb89-10" aria-hidden="true" tabindex="-1"></a>T <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
-<span id="cb89-11"><a href="#cb89-11" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb89-12"><a href="#cb89-12" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sum</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>day_one</span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>day_1</span>
+<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a>DayOne</span>
+<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a>dayone</span>
+<span id="cb87-8"><a href="#cb87-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb87-9"><a href="#cb87-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb87-10"><a href="#cb87-10" aria-hidden="true" tabindex="-1"></a>T <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb87-11"><a href="#cb87-11" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb87-12"><a href="#cb87-12" aria-hidden="true" tabindex="-1"></a>mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sum</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="78" class="example" type="1">
@@ -3130,12 +3089,12 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span> (x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>( x, <span class="at">na.rm =</span> <span class="cn">TRUE</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span> (x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>( x, <span class="at">na.rm =</span> <span class="cn">TRUE</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="79" class="example" type="1">
@@ -3146,13 +3105,13 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>height<span class="ot">&lt;-</span>feet<span class="sc">*</span><span class="dv">12</span><span class="sc">+</span>inches</span>
-<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a>height <span class="ot">&lt;-</span> (feet <span class="sc">*</span> <span class="dv">12</span>) <span class="sc">+</span> inches</span>
-<span id="cb91-7"><a href="#cb91-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>height<span class="ot">&lt;-</span>feet<span class="sc">*</span><span class="dv">12</span><span class="sc">+</span>inches</span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a>height <span class="ot">&lt;-</span> (feet <span class="sc">*</span> <span class="dv">12</span>) <span class="sc">+</span> inches</span>
+<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="80" class="example" type="1">
@@ -3163,17 +3122,17 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">do_something_very_complicated</span>(</span>
-<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">something =</span> <span class="st">"that"</span>,</span>
-<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">requires =</span> many,</span>
-<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">arguments =</span> <span class="st">"some of which may be long"</span></span>
-<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb92-7"><a href="#cb92-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb92-8"><a href="#cb92-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb92-9"><a href="#cb92-9" aria-hidden="true" tabindex="-1"></a><span class="fu">do_something_very_complicated</span>(<span class="st">"that"</span>, requires, many, arguments,</span>
-<span id="cb92-10"><a href="#cb92-10" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"some of which may be long"</span></span>
-<span id="cb92-11"><a href="#cb92-11" aria-hidden="true" tabindex="-1"></a>                              )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">do_something_very_complicated</span>(</span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">something =</span> <span class="st">"that"</span>,</span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">requires =</span> many,</span>
+<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">arguments =</span> <span class="st">"some of which may be long"</span></span>
+<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb90-7"><a href="#cb90-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb90-8"><a href="#cb90-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb90-9"><a href="#cb90-9" aria-hidden="true" tabindex="-1"></a><span class="fu">do_something_very_complicated</span>(<span class="st">"that"</span>, requires, many, arguments,</span>
+<span id="cb90-10"><a href="#cb90-10" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"some of which may be long"</span></span>
+<span id="cb90-11"><a href="#cb90-11" aria-hidden="true" tabindex="-1"></a>                              )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="81" class="example" type="1">
@@ -3184,17 +3143,17 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">|&gt;</span></span>
-<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Sepal.Length =</span> <span class="fu">mean</span>(Sepal.Length), <span class="at">Sepal.Width =</span> <span class="fu">mean</span>(Sepal.Width), <span class="at">.by =</span> Species)</span>
-<span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb93-5"><a href="#cb93-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb93-6"><a href="#cb93-6" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">|&gt;</span></span>
-<span id="cb93-7"><a href="#cb93-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb93-8"><a href="#cb93-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sepal.Length =</span> <span class="fu">mean</span>(Sepal.Length),</span>
-<span id="cb93-9"><a href="#cb93-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sepal.Width =</span> <span class="fu">mean</span>(Sepal.Width),</span>
-<span id="cb93-10"><a href="#cb93-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> Species</span>
-<span id="cb93-11"><a href="#cb93-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Sepal.Length =</span> <span class="fu">mean</span>(Sepal.Length), <span class="at">Sepal.Width =</span> <span class="fu">mean</span>(Sepal.Width), <span class="at">.by =</span> Species)</span>
+<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb91-7"><a href="#cb91-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb91-8"><a href="#cb91-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sepal.Length =</span> <span class="fu">mean</span>(Sepal.Length),</span>
+<span id="cb91-9"><a href="#cb91-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sepal.Width =</span> <span class="fu">mean</span>(Sepal.Width),</span>
+<span id="cb91-10"><a href="#cb91-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> Species</span>
+<span id="cb91-11"><a href="#cb91-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="82" class="example" type="1">
@@ -3206,19 +3165,19 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">|&gt;</span></span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">semi_join</span>(y <span class="sc">|&gt;</span> <span class="fu">filter</span>(is_valid))</span>
-<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
-<span id="cb94-6"><a href="#cb94-6" aria-hidden="true" tabindex="-1"></a>x <span class="sc">|&gt;</span></span>
-<span id="cb94-7"><a href="#cb94-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(a, b, w) <span class="sc">|&gt;</span></span>
-<span id="cb94-8"><a href="#cb94-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(y <span class="sc">|&gt;</span> <span class="fu">select</span>(a, b, v), <span class="fu">join_by</span>(a, b))</span>
-<span id="cb94-9"><a href="#cb94-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb94-10"><a href="#cb94-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
-<span id="cb94-11"><a href="#cb94-11" aria-hidden="true" tabindex="-1"></a>x_join <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">select</span>(a, b, w)</span>
-<span id="cb94-12"><a href="#cb94-12" aria-hidden="true" tabindex="-1"></a>y_join <span class="ot">&lt;-</span> y <span class="sc">|&gt;</span> <span class="fu">select</span>(a, b, v)</span>
-<span id="cb94-13"><a href="#cb94-13" aria-hidden="true" tabindex="-1"></a><span class="fu">left_join</span>(x_join, y_join, <span class="fu">join_by</span>(a, b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1</span></span>
+<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">|&gt;</span></span>
+<span id="cb92-3"><a href="#cb92-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">semi_join</span>(y <span class="sc">|&gt;</span> <span class="fu">filter</span>(is_valid))</span>
+<span id="cb92-4"><a href="#cb92-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb92-5"><a href="#cb92-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2</span></span>
+<span id="cb92-6"><a href="#cb92-6" aria-hidden="true" tabindex="-1"></a>x <span class="sc">|&gt;</span></span>
+<span id="cb92-7"><a href="#cb92-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(a, b, w) <span class="sc">|&gt;</span></span>
+<span id="cb92-8"><a href="#cb92-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(y <span class="sc">|&gt;</span> <span class="fu">select</span>(a, b, v), <span class="fu">join_by</span>(a, b))</span>
+<span id="cb92-9"><a href="#cb92-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb92-10"><a href="#cb92-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 3</span></span>
+<span id="cb92-11"><a href="#cb92-11" aria-hidden="true" tabindex="-1"></a>x_join <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span> <span class="fu">select</span>(a, b, w)</span>
+<span id="cb92-12"><a href="#cb92-12" aria-hidden="true" tabindex="-1"></a>y_join <span class="ot">&lt;-</span> y <span class="sc">|&gt;</span> <span class="fu">select</span>(a, b, v)</span>
+<span id="cb92-13"><a href="#cb92-13" aria-hidden="true" tabindex="-1"></a><span class="fu">left_join</span>(x_join, y_join, <span class="fu">join_by</span>(a, b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="83" class="example" type="1">
@@ -3243,9 +3202,9 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">30</span>, <span class="dv">5</span>, <span class="cn">NA</span>, <span class="dv">6</span>)</span>
-<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(data <span class="sc">&gt;</span> <span class="dv">5</span>, <span class="st">"cat"</span>, data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">30</span>, <span class="dv">5</span>, <span class="cn">NA</span>, <span class="dv">6</span>)</span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(data <span class="sc">&gt;</span> <span class="dv">5</span>, <span class="st">"cat"</span>, data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="85" class="example" type="1">
@@ -3290,10 +3249,10 @@ Caused by error in `base::sum()`:
 <li>[1] “e” “j” “e” “b” “e” “c” “f” “a” “e” “a”</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># shuffle</span></span>
-<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
-<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># shuffle</span></span>
+<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="89" class="example" type="1">
@@ -3307,10 +3266,10 @@ Caused by error in `base::sum()`:
 <li>[1] “e” “j” “e” “b” “e” “c” “f” “a” “e” “a”</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="co"># resample</span></span>
-<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
-<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb97-4"><a href="#cb97-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co"># resample</span></span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb95-4"><a href="#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="90" class="example" type="1">
@@ -3324,10 +3283,10 @@ Caused by error in `base::sum()`:
 <li>[1] “e” “j” “e” “b” “e” “c” “f” “a” “e” “a”</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sample from an infinite population</span></span>
-<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
-<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sample from an infinite population</span></span>
+<span id="cb96-2"><a href="#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="91" class="example" type="1">
@@ -3341,10 +3300,10 @@ Caused by error in `base::sum()`:
 <li>[1] “e” “j” “e” “b” “e” “c” “f” “a” “e” “a”</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sample from  finite population</span></span>
-<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
-<span id="cb99-3"><a href="#cb99-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb99-4"><a href="#cb99-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sample from  finite population</span></span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb97-4"><a href="#cb97-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="92" class="example" type="1">
@@ -3358,7 +3317,7 @@ Caused by error in `base::sum()`:
 <li>whether or not at least one hat matches</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -3375,7 +3334,7 @@ Caused by error in `base::sum()`:
 <li>whether or not at least one hat matches</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(hats <span class="sc">==</span> random_hats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(hats <span class="sc">==</span> random_hats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2</code></pre>
 </div>
@@ -3392,7 +3351,7 @@ Caused by error in `base::sum()`:
 <li>whether or not at least one hat matches</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -3409,9 +3368,9 @@ Caused by error in `base::sum()`:
 <li>0, the number of matching hats</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>hats <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a>random_hats <span class="ot">&lt;-</span> <span class="fu">sample</span>(hats, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>hats <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>random_hats <span class="ot">&lt;-</span> <span class="fu">sample</span>(hats, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="96" class="example" type="1">
@@ -4076,8 +4035,8 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> cancelled, <span class="fu">AVG</span>(cancelled)</span>
-<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> flights;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> cancelled, <span class="fu">AVG</span>(cancelled)</span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> flights;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="150" class="example" type="1">
@@ -4091,7 +4050,7 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> flights;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> flights;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="151" class="example" type="1">
@@ -4105,9 +4064,9 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> dep_delay, <span class="dt">year</span> <span class="op">=</span> <span class="dv">2014</span></span>
-<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> flights</span>
-<span id="cb109-3"><a href="#cb109-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> dep_delay, <span class="dt">year</span> <span class="op">=</span> <span class="dv">2014</span></span>
+<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> flights</span>
+<span id="cb107-3"><a href="#cb107-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <ol start="152" class="example" type="1">
@@ -4120,10 +4079,10 @@ Caused by error in `base::sum()`:
 </ol></li>
 </ol>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">SUM</span>(cancelled) <span class="kw">AS</span> num_cancelled,</span>
-<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>       num_cancelled <span class="op">/</span> <span class="fu">SUM</span>(<span class="dv">1</span>) <span class="kw">AS</span> pct_cancelled</span>
-<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> flights</span>
-<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">SUM</span>(cancelled) <span class="kw">AS</span> num_cancelled,</span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>       num_cancelled <span class="op">/</span> <span class="fu">SUM</span>(<span class="dv">1</span>) <span class="kw">AS</span> pct_cancelled</span>
+<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> flights</span>
+<span id="cb108-4"><a href="#cb108-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 <!--look at exercises: https://github.com/STAT545-UBC/STAT545-UBC-original-website/blob/master/block022_regular-expression.md
@@ -4366,7 +4325,7 @@ can use flights data for cities with particular names-->
 </ol>
 <a href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn25"><ol start="5" type="a">
-<li>babynames in wrong place</li>
+<li><code>starbucks</code> in wrong place</li>
 </ol>
 <a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn26"><ol start="3" type="a">
@@ -4374,7 +4333,7 @@ can use flights data for cities with particular names-->
 </ol>
 <a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn27"><ol start="3" type="a">
-<li>does something different because it takes the <code>mean()</code> (average) instead of the <code>sum()</code>. The other commands compute the total number of births broken down by <code>year</code> and <code>sex</code>.</li>
+<li>does something different because it takes the <code>sum()</code> instead of the <code>mean()</code>. The other commands compute the average fat broken down by <code>type</code> of Starbucks item</li>
 </ol>
 <a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn28"><ol type="a">
@@ -4382,11 +4341,11 @@ can use flights data for cities with particular names-->
 </ol>
 <a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn29"><ol start="2" type="a">
-<li><code>(year, name)</code></li>
+<li><code>(theme, year)</code></li>
 </ol>
 <a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></li>
-<li id="fn30"><ol start="4" type="a">
-<li><code>sum(n)</code></li>
+<li id="fn30"><ol start="5" type="a">
+<li><code>mean(pieces)</code></li>
 </ol>
 <a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn31"><p>running the different code chunks with relevant output.<a href="#fnref31" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -4852,8 +4811,8 @@ can use flights data for cities with particular names-->
 <li>Need a <code>FROM</code></li>
 </ol>
 <a href="#fnref154" class="footnote-back" role="doc-backlink">↩︎</a></li>
-<li id="fn155"><ol type="a">
-<li>Can’t <code>SELECT</code> a variable from the results set</li>
+<li id="fn155"><ol start="4" type="a">
+<li><code>year = 2014</code> should go in <code>WHERE</code></li>
 </ol>
 <a href="#fnref155" class="footnote-back" role="doc-backlink">↩︎</a></li>
 <li id="fn156"><ol type="a">
@@ -4913,7 +4872,7 @@ can use flights data for cities with particular names-->
 </ol>
 <a href="#fnref169" class="footnote-back" role="doc-backlink">↩︎</a></li>
 </ol>
-</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>CC-BY-SA-4.0</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

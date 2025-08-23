@@ -421,19 +421,19 @@ ggplot(data = Births78,
 
 (@) What is wrong with the following code?[^25]
     (a) should only  be one =
-    (b) Sidney should be lower case
-    (c) name should not be in quotes
+    (b) `Bakery` should be upper case
+    (c) `type` should not be in quotes
     (d) use mutate instead of filter
-    (e) babynames in wrong place
+    (e) `starbucks` in wrong place
 
 ```{r}
 #| eval: false
 #| echo: true
-Result <- |> filter(babynames,
-		name == “Sidney”)
+Result <- |> filter(starbucks,
+		type == "bakery")
 ```
 
-[^25]: e. babynames in wrong place
+[^25]: e. `starbucks` in wrong place
 
 ---
 
@@ -484,29 +484,29 @@ tribble_c |> gt::gt(caption = "table c")
 #| eval: false
 #| echo: true
 #(a) 
-babynames |> 
-  group_by(year, sex) |> 
-  summarize(totalBirths = sum(n))
+starbucks |> 
+  group_by(type) |> 
+  summarize(average_fat = mean(fat))
 
 #(b) 
-group_by(babynames, year, sex) |> 
-  summarize(totalBirths = sum(n))
+group_by(starbucks, type) |> 
+  summarize(average_fat = mean(fat))
 
 #(c)
-group_by(babynames, year, sex) |> 
-  summarize(totalBirths = mean(n))
+group_by(starbucks, type) |> 
+  summarize(average_fat = sum(fat))
 
 #(d)
-temp <- group_by(babynames, year, sex)
+temp <- group_by(starbucks, type)
 
-summarize(temp, totalBirths = sum(n))
+summarize(temp, average_fat = mean(fat))
 
 #(e)
-summarize(group_by(babynames, year, sex), 
-          totalBirths = sum(n))
+summarize(group_by(starbucks, type), 
+          average_fat = mean(fat))
 ```
 
-[^27]: c. does something different because it takes the `mean()` (average) instead of the `sum()`.  The other commands compute the total number of births broken down by `year` and `sex`.
+[^27]: c. does something different because it takes the `sum()` instead of the `mean()`.  The other commands compute the average fat broken down by `type` of Starbucks item
 
 ---
 
@@ -521,9 +521,9 @@ summarize(group_by(babynames, year, sex),
 #| eval: false
 #| echo: true
 #| code-line-numbers: "2,3"
-result <- babynames |>
-  Q1(name %in% c("Jane", "Mary")) |> 
-  # just the Janes and Marys
+result <- lego_sample |>
+  Q1(!is.na(minifigures)) |> 
+  # keep only those with minifigures
   group_by(Q2, Q2) |> 
   summarize(total = Q3)
 ```
@@ -533,46 +533,46 @@ result <- babynames |>
 ---
 
 (@) Fill in Q2.[^29]
-    (a) `(year, sex)`
-    (b) `(year, name)`
-    (c) `(year, n)`
-    (d) `(sex, name)`
-    (e) `(sex, n)`
+    (a) `(theme, price)`
+    (b) `(theme, year)`
+    (c) `(year, price)`
+    (d) `(pieces, year)`
+    (e) `(pieces, price)`
     
 ```{r}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "3,4"
-result <- babynames |>
-  Q1(name %in% c("Jane", "Mary")) |> 
+result <- lego_sample |>
+  Q1(!is.na(minifigures)) |> 
   group_by(Q2, Q2) |> 
-  # for each year for each name
+  # for each theme and year
   summarize(total = Q3)
 ```
 
-[^29]: b. `(year, name)`
+[^29]: b. `(theme, year)`
 
 ---
 
 (@) Fill in Q3.[^30]
-    (a) `n_distinct(name)`
-    (b) `n_distinct(n)`
-    (c) `sum(name)`
-    (d) `sum(n)`
-    (e) `mean(n)`
+    (a) `n_distinct(pieces)`
+    (b) `n_distinct(price)`
+    (c) `sum(pieces)`
+    (d) `sum(pages)`
+    (e) `mean(pieces)`
 
 ```{r}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "4,5"
-result <- babynames |>
-  Q1(name %in% c("Jane", "Mary")) |> 
+result <- lego_sample |>
+  Q1(!is.na(minifigures)) |> 
   group_by(Q2, Q2) |> 
-  summarize(total = Q3)
-  # number of babies (each year, each name)
+  summarize(ave_pieces = Q3)
+  # average number of pieces (each theme, each year)
 ```
 
-[^30]: d. `sum(n)`
+[^30]: e. `mean(pieces)`
 
 ---
 
@@ -580,13 +580,13 @@ result <- babynames |>
 
 ```{r}
 #| echo: true
-library(babynames)
-babynames |>
-  filter(name %in% c("Jane", "Mary")) |> 
-  # just the Janes and Marys
-  group_by(name, year) |> 
-  # for each year for each name
-  summarize(total = sum(n))
+library(openintro)
+lego_sample |>
+  filter(!is.na(minifigures)) |> 
+  # keep only those with minifigures
+  group_by(theme, year) |> 
+  # for each theme for each year
+  summarize(ave_pieces = mean(pieces))
 ```
 
 
@@ -594,35 +594,27 @@ babynames |>
 #| error: true
 #| echo: true
 
-babynames |>
-  filter(name %in% c("Jane", "Mary")) |> 
-  group_by(name, year) |> 
-  summarize(number = sum(n))
+#(a)
+starbucks |> 
+  group_by(type) |> 
+  summarize(average_fat = mean(fat))
 
-babynames |>
-  filter(name %in% c("Jane", "Mary")) |> 
-  group_by(name, year) |> 
-  summarize(n_distinct(name))
+#(b) 
+group_by(starbucks, type) |> 
+  summarize(average_fat = mean(fat))
 
-babynames |>
-  filter(name %in% c("Jane", "Mary")) |> 
-  group_by(name, year) |> 
-  summarize(n_distinct(n))
+#(c)
+group_by(starbucks, type) |> 
+  summarize(average_fat = sum(fat))
 
-babynames |>
-  filter(name %in% c("Jane", "Mary")) |> 
-  group_by(name, year) |> 
-  summarize(sum(name))
+#(d)
+temp <- group_by(starbucks, type)
 
-babynames |>
-  filter(name %in% c("Jane", "Mary")) |> 
-  group_by(name, year) |> 
-  summarize(mean(n))
+summarize(temp, average_fat = mean(fat))
 
-babynames |>
-  filter(name %in% c("Jane", "Mary")) |> 
-  group_by(name, year) |> 
-  summarize(median(n))
+#(e)
+summarize(group_by(starbucks, type), 
+          average_fat = mean(fat))
 ```
 
 [^31]: running the different code chunks with relevant output.
@@ -2616,7 +2608,7 @@ LIMIT 10;
 
 ---
 
-(@) What is wrong with this **SQL** clause?[^126c]
+(@) What is wrong with this **SQL** clause?[^126d]
     (a) Can't `SELECT` a variable from the results set
     (b) Can't `SELECT` a variable from the original data
     (c) `SUM()` is not a function in **SQL**
@@ -2631,7 +2623,7 @@ FROM flights
 LIMIT 10;
 ```
 
-[^126c]: a. Can't `SELECT` a variable from the results set
+[^126d]: a. Can't `SELECT` a variable from the results set
 
 ---
 
