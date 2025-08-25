@@ -47,7 +47,7 @@ quarto add quarto-ext/fontawesome
 schedule <- tribble(
   ~`date`, ~topic, ~`class materials`, ~`due dates`, ~resources,
   "Week 1 <br> 8.25.25", 'intro + <br> R + RStudio + <br> GitHub', 
-  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/01-intro.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-08-25-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_s25_DSproj.pdf" target = "_blank">WS 1 - DS project</a> ',
+  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/01-intro.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-08-25-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f25_DSproj.pdf" target = "_blank">WS 1 - DS project</a> ',
   ' ',
   '{{< fa comments >}} <a href = "http://nssdeviations.com/71-compromised-shoe-situation" target = "_blank">NSSD - Compromised Shoe Situation</a>',
   
