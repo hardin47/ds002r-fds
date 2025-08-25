@@ -10,10 +10,6 @@ execute:
 
 For this application exercise, we'll use the **tidyverse** and **palmerpenguins** packages.
 
-```{r}
-2+2
-```
-
 
 ```{r}
 #| label: load-packages
@@ -29,7 +25,7 @@ The dataset we will visualize is called `penguins`. Let's `glimpse()` at it.
 ```{r}
 #| label: glimpse-penguins
 
-glimpse(penguins)
+# add code here
 ```
 
 
@@ -42,6 +38,6 @@ nrow(penguins)
 ```
 
 
-There are 344 penguins in the `penguins` data frame.
+There are ___ penguins in the `penguins` data frame.
 
 
