@@ -10,7 +10,6 @@ execute:
 
 For this application exercise, we'll use the **tidyverse** and **palmerpenguins** packages.
 
-
 ```{r}
 #| label: load-packages
 
@@ -20,16 +19,15 @@ library(palmerpenguins)
 
 The dataset we will visualize is called `penguins`. Let's `glimpse()` at it.
 
-* **Your turn**: Replace `#add code here` with the code for "glimpse"ing at the `penguins` **data frame** -- `glimpse(penguins)`. Render the document and view the output.
+-   **Your turn**: Replace `#add code here` with the code for "glimpse"ing at the `penguins` **data frame** -- `glimpse(penguins)`. Render the document and view the output.
 
 ```{r}
 #| label: glimpse-penguins
 
-# add code here
+glimpse(penguins)
 ```
 
-
-* **Demo**: Replace the blank below with the number of rows in the `penguins` data frame based on the output of the chunk below.
+-   **Demo**: Replace the blank below with the number of rows in the `penguins` data frame based on the output of the chunk below.
 
 ```{r}
 #| label: nrow-penguins
@@ -37,7 +35,4 @@ The dataset we will visualize is called `penguins`. Let's `glimpse()` at it.
 nrow(penguins)
 ```
 
-
-There are ___ penguins in the `penguins` data frame.
-
-
+There are 344 penguins in the `penguins` data frame.

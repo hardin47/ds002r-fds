@@ -52,7 +52,7 @@ schedule <- tribble(
   '{{< fa comments >}} <a href = "http://nssdeviations.com/71-compromised-shoe-situation" target = "_blank">NSSD - Compromised Shoe Situation</a>',
   
    "Week 2 <br> 9.1.25", 'Data Viz', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-03-dataviz.html" target = "_blank"> Data Viz</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-03-dataviz.html" target = "_blank"> Data Viz</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_f25_ggplot.pdf" target = "_blank">WS 2 - ggplot</a> ',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 1</a> - due 9.3.25',
   '{{< fa comments >}} Tufte. 1997. <a href = "https://www.edwardtufte.com/book/visual-and-statistical-thinking-displays-of-evidence-for-making-decisions/" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>',
   
