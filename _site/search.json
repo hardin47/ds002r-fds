@@ -14564,7 +14564,7 @@
     "href": "slides/2025-09-03-dataviz.html#how-do-we-make-this-plot-1",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoal: scatterplot = a plot with points\nWhat does R need to know?\n\ndata source: Births2015\naesthetics:\n\ndate -&gt; x\nbirths -&gt; y\npoints (!)"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoal: scatterplot = a plot with points\nWhat does R need to know?\n\ndata source: Births2015\naesthetics:\n\ndate -&gt; x\nbirths -&gt; y\n\npoints"
   },
   {
     "objectID": "slides/2025-09-03-dataviz.html#how-do-we-make-this-plot-2",
@@ -14991,7 +14991,7 @@
     "href": "slides/2025-09-03-dataviz.html#how-do-we-make-this-plot-12",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoal: scatterplot = a plot with points\nWhat does R need to know?\n\ndata source: Births2015\naesthetics:\n\ndate -&gt; x\nbirths -&gt; y\npoints (!)"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoal: scatterplot = a plot with points\nWhat does R need to know?\n\ndata source: Births2015\naesthetics:\n\ndate -&gt; x\nbirths -&gt; y\n\npoints"
   },
   {
     "objectID": "slides/2025-09-03-dataviz.html#how-do-we-make-this-plot-13",
@@ -15363,5 +15363,61 @@
     "title": "Better Data Visualizations",
     "section": "What’s around the corner?",
     "text": "What’s around the corner?\nshiny\n\ninteractive graphics / modeling\nhttps://shiny.rstudio.com/\n\nplotly\n\nPlotly is an R package for creating interactive web-based graphs via plotly’s JavaScript graphing library, plotly.js. The plotly R libary contains the ggplotly function , which will convert ggplot2 figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the style function.\n\n\nhttps://plot.ly/ggplot2/getting-started/\n\ngganimate\n\ngganimate tutorial"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-0",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-0",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 0",
+    "text": "Layers: layer 0\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot()"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-1",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-1",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 1",
+    "text": "Layers: layer 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births))"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-2",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-2",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 2",
+    "text": "Layers: layer 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births)) + \n  geom_point()"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-3",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-3",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 3",
+    "text": "Layers: layer 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births)) + \n  geom_point() +\n  labs(title = \"US Births in 2015\")"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-0-1",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-0-1",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 0",
+    "text": "Layers: layer 0\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot()"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-1-1",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-1-1",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 1",
+    "text": "Layers: layer 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births))"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-2-1",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-2-1",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 2",
+    "text": "Layers: layer 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births)) + \n  geom_point()"
+  },
+  {
+    "objectID": "slides/2025-09-03-dataviz.html#layers-layer-3-1",
+    "href": "slides/2025-09-03-dataviz.html#layers-layer-3-1",
+    "title": "Better Data Visualizations",
+    "section": "Layers: layer 3",
+    "text": "Layers: layer 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births)) + \n  geom_point() +\n  labs(title = \"US Births in 2015\")"
   }
 ]

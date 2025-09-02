@@ -20,6 +20,7 @@ execute:
 
 source("../_common.R")
 fontawesome::fa_html_dependency()
+theme_set(theme_gray())
 ```
 
 
@@ -353,7 +354,8 @@ ggplot(
  
         * `date -> x`
         * `births -> y`
-        * points (!)
+
+    * points
 :::
 ::::
 
@@ -388,9 +390,28 @@ ggplot() +
 :::
 ::::
 
-## Layers
+## Layers: layer 0 
 
-### Layer 1 
+:::: {.columns} 
+::: {.column width="40%"}
+```{r}
+#| echo: false
+ggplot()
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "1"
+ggplot() 
+```
+
+:::
+::::
+
+## Layers: layer 1 
 
 :::: {.columns} 
 ::: {.column width="40%"}
@@ -411,9 +432,7 @@ ggplot(data = Births2015,
 :::
 ::::
 
-## Layers
-
-### Layer 2 
+## Layers: layer 2 
 
 :::: {.columns} 
 ::: {.column width="40%"}
@@ -437,9 +456,7 @@ ggplot(data = Births2015,
 ::::
 
 
-## Layers
-
-### Layer 3 
+## Layers: layer 3 
 
 :::: {.columns} 
 ::: {.column width="40%"}
@@ -1950,7 +1967,8 @@ ggplot(
  
         * `date -> x`
         * `births -> y`
-        * points (!)
+
+    * points
 :::
 ::::
 
@@ -1985,9 +2003,29 @@ ggplot() +
 :::
 ::::
 
-## Layers
+## Layers: layer 0 
 
-### Layer 1 
+:::: {.columns} 
+::: {.column width="40%"}
+```{r}
+#| echo: false
+ggplot()
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "1"
+ggplot() 
+```
+
+:::
+::::
+
+
+## Layers: layer 1 
 
 :::: {.columns} 
 ::: {.column width="40%"}
@@ -2008,9 +2046,7 @@ ggplot(data = Births2015,
 :::
 ::::
 
-## Layers
-
-### Layer 2 
+## Layers: layer 2 
 
 :::: {.columns} 
 ::: {.column width="40%"}
@@ -2034,9 +2070,7 @@ ggplot(data = Births2015,
 ::::
 
 
-## Layers
-
-### Layer 3 
+## Layers: layer 3 
 
 :::: {.columns} 
 ::: {.column width="40%"}
