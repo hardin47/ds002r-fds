@@ -52,7 +52,7 @@ smokecancer |>
 
 # Messages and warnings that the reader doesn't need
 
-Ususally, at the top (in the YAML), I'll scaffold the assignment to make the messages and warnings `false`. That is, I'll instruct the computer to not print messages. But for your project (where you don't have a template), you'll have to remember to do this! (Look at the HW YAML.)
+Usually, at the top (in the YAML), I'll scaffold the assignment to make the messages and warnings `false`. That is, I'll instruct the computer to not print messages. But for your project (where you don't have a template), you'll have to remember to do this! (Look at the HW YAML.)
 
 This is what it looks like if you have set the messages to `true`. Again, not very helpful for your reader (unless you are trying to communicate something specific about the versioning of the R package).
 
