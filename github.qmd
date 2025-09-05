@@ -253,6 +253,11 @@ ITS has instructions for how to enable cookies on a range of different browsers:
 :::
 
 
+::: {.callout-important}
+ITS has also put together a knowledge base article describing <a href = "https://servicedesk.pomona.edu/support/solutions/articles/18000119773-Student-Guide-How-to-submit-GitHub-files-to-a-Gradescope-programming-assignment" target = "_blank">How to submit GitHub files to a Gradescope programming assignment.</a>
+:::
+
+
 ## Submitting assignments after having connected to GitHub
 
 To submit your assignment, complete the following steps:
