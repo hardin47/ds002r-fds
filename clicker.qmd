@@ -417,6 +417,40 @@ ggplot(data = Births78,
      
 [^20]: a. It isn’t at the origin. in combination with d. There wasn’t a label explaining why the axes were where they were.  The story associated with the average value axes is not clear to the reader.
 
+
+---
+
+(@) Why is there no `y` designation in the `aes()` function for the `geom_bar()` geometry?[^20a]
+    (a) It is outside the `aes()` function.
+    (b) There is a default value for what `y` should be when not specified.
+    (c) `y` is specified in `ggplot()`.
+    (d) The job of a bar plot is to count the number of instances.
+    (e) The `y` variable is the same as the `x` variable.
+
+[^20a]: d. The job of a bar plot is to count the number of instances.
+
+---
+
+(@) What is the difference between `fill = children` and `position = "fill"`?[^20b]
+    (a) `fill = children` colors and `position = "fill"` changes the y-axis
+    (b) `fill = children` changes the y-axis and `position = "fill"` colors
+    (c) `fill = children` goes in the aes and `position = "fill"` goes outside the aes
+    (d) `fill = children` goes outside the aes and `position = "fill"` goes inside the aes
+    (e) `fill = children` and `position = "fill"` are two different ways to write the same thing.
+
+[^20b]: a. `fill = children` colors and `position = "fill"` changes the y-axis. AND c. `fill = children` goes in the aes and `position = "fill"` goes outside the aes
+
+---
+
+(@) What is the difference between `geom_bar()` and `geom_histogram()`?[20c]
+     (a) They are the different names for the same function.
+     (b) `geom_bar()` is for numbers and `geom_histogram()` is for categorical variables.
+     (c) `geom_bar()` is for categorical variables and `geom_histogram()` is for nubmers.
+     (d) `geom_bar()` produces counts and `geom_histogram()` produces percentages.
+     (e) `geom_bar()` produces percentages and `geom_histogram()` produces counts.
+
+[^20c]: c. `geom_bar()` is for categorical variables and `geom_histogram()` is for nubmers.
+
 ---
 
 (@) What is wrong with the following code?[^25]

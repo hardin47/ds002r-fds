@@ -1197,6 +1197,36 @@ ggplot(data = HELP_data,
 
 * Hmm.  What's up with `y`?
 
+:::
+::::
+
+## Who are the people in the study?
+
+:::: {.columns} 
+::: {.column width="50%"}
+```{r echo=FALSE}
+HELP_data |> 
+  ggplot(aes(x = substance)) + 
+  geom_bar() +
+  labs(title = "HELP trial")
+```
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "3"
+ggplot(data = HELP_data,
+       aes(x = substance)) + 
+  geom_bar() +
+  labs(title = "HELP trial")
+```
+
+
+* Hmm.  What's up with `y`?
+
     * `stat_bin()` is being applied to the data before the 
     `geom_bar()` gets to do its thing.  Binning creates the
     `y` values.
