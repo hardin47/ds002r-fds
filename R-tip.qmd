@@ -22,8 +22,17 @@ schedule <- tribble(
   ~`number`, ~tip, ~`description`, ~`misc`,
   'Tip 1', 'cmd + opt + i', 
   'adds a new R chunk',
-  'cntrl + alt + i for PC'
-)
+  'cntrl + alt + i for PC',
+  
+  'Tip 2', 'Tools -> Global Options... -> Appearance',
+  'allows for dark mode, plus other options!', ' ',
+  
+  'Tip 3', 'cmd + opt + c', 'runs the chunk', 'cntrl + opt + c on PC',
+  
+  'Tip 4', '<img src = "images/sort.jpg" width="50%">', 'within the viewer, sorts the data wrt a variable', 'click on the variable name'
+
+
+  )
 ```
 
 ```{r}
@@ -31,9 +40,6 @@ schedule <- tribble(
 #| echo: false
   'Tip 2', '<img src = "images/add_chunk.png">', 'adds a new R chunk',
   'look for it at top of Quarto doc',
-  
-  'Tip 3', 'Tools -> Global Options... -> Appearance',
-  'allows for dark mode, plus other options!', ' ',
   
   'Tip 4', 'cmd + shift + C', 'comments the line',
   'cntrl + shift + C for PC',
@@ -74,8 +80,6 @@ schedule <- tribble(
   'Tip 21', 'cmd + shift + D', 'duplicate the line', 'cntrl + shift + D',
   
   'Tip 22', 'cmd + shift + up (or down) arrow', 'highlights lines', 'cntrl + shift + up (or down) arrow on PC',
-  
-  'Tip 23', 'cmd + opt + c', 'runs the chunk', 'cntrl + opt + c on PC',
   
   'Tip 24', 'cmd + shift + A', 'reformats whatever is highlighted', 'cntrl + shift + A on PC',
   

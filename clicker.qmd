@@ -453,24 +453,6 @@ ggplot(data = Births78,
 
 ---
 
-(@) What is wrong with the following code?[^25]
-    (a) should only  be one =
-    (b) `Bakery` should be upper case
-    (c) `type` should not be in quotes
-    (d) use mutate instead of filter
-    (e) `starbucks` in wrong place
-
-```{r}
-#| eval: false
-#| echo: true
-Result <- |> filter(starbucks,
-		type == "bakery")
-```
-
-[^25]: e. `starbucks` in wrong place
-
----
-
 (@) Which data represents the ideal format for **ggplot2** and **dplyr**?[^26]
 
 ```{r}
@@ -508,7 +490,27 @@ tribble_c <- tribble(
 tribble_c |> gt::gt(caption = "table c") 
 ```
 
+---
+
 [^26]: c. Table c is best because the columns allow us to work with each of the variable separately.
+
+
+(@) What is wrong with the following code?[^25]
+    (a) should only  be one =
+    (b) `Bakery` should be upper case
+    (c) `type` should not be in quotes
+    (d) use mutate instead of filter
+    (e) `starbucks` in wrong place
+
+```{r}
+#| eval: false
+#| echo: true
+Result <- |> filter(starbucks,
+		type == "bakery")
+```
+
+[^25]: e. `starbucks` in wrong place
+
 
 ---
 
