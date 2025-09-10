@@ -15467,7 +15467,7 @@
     "href": "slides/2025-09-10-verbs.html#some-basic-verbs",
     "title": "Data Wrangling",
     "section": "Some Basic Verbs",
-    "text": "Some Basic Verbs\n\nfilter()\\(^*\\)\narrange()\nselect()\\(^*\\)\ndistinct()\nmutate()\\(^*\\)\nsummarize()\\(^*\\)\nsample_n()\ngroup_by()\\(^*\\)\n\nThe most used verbs are denoted with \\(^*\\)."
+    "text": "Some Basic Verbs\n\nfilter()\narrange()\nselect()\nmutate()\nsummarize()\ngroup_by()"
   },
   {
     "objectID": "slides/2025-09-10-verbs.html#out-of-nyc-flights-data-2013",
@@ -15509,14 +15509,14 @@
     "href": "slides/2025-09-10-verbs.html#arrange",
     "title": "Data Wrangling",
     "section": "arrange()",
-    "text": "arrange()\narrange() reorders the rows: It takes a data frame, and a set of column names (or more complicated expressions) to order by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns:\n\narrange(flights, year, month, day)\n\n\n  \n\n\n\nUse desc() to sort in descending order.\n\narrange(flights, desc(dep_delay))"
+    "text": "arrange()\narrange() reorders the rows: It takes a data frame, and a set of column names (or more complicated expressions) to order by. If you provide more than one column name, each additional column will be used to break ties in the values of preceding columns:\n\narrange(flights, year, month, day)"
   },
   {
     "objectID": "slides/2025-09-10-verbs.html#select",
     "href": "slides/2025-09-10-verbs.html#select",
     "title": "Data Wrangling",
     "section": "select()",
-    "text": "select()\nOften you work with large datasets with many columns where only a few are actually of interest to you. select() allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:\n\nselect(flights, year, month, day)\n\n\n  \n\n\n\nYou can exclude columns using - and specify a range using :.\n\nselect(flights, -(year:day))"
+    "text": "select()\nOften you work with large datasets with many columns where only a few are actually of interest to you. select() allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:\n\nselect(flights, year, month, day)"
   },
   {
     "objectID": "slides/2025-09-10-verbs.html#distinct",
@@ -15558,7 +15558,7 @@
     "href": "slides/2025-09-10-verbs.html#group_by",
     "title": "Data Wrangling",
     "section": "group_by()",
-    "text": "group_by()\nsummarize() and sample_n() are even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.\nThe group_by() function describes how to break a dataset down into groups of rows.\ngroup_by() does not change anything about the data frame. Rather, it holds the rows of the data frame separately so that any future verbs applied to the data frame are done separately per group being held."
+    "text": "group_by()\nsummarize() is even more powerful when combined with the idea of “group by”, repeating the operation separately on groups of observations within the dataset.\nThe group_by() function describes how to break a dataset down into groups of rows.\ngroup_by() does not change anything about the data frame. Rather, it holds the rows of the data frame separately so that any future verbs applied to the data frame are done separately per group being held."
   },
   {
     "objectID": "slides/2025-09-10-verbs.html#group_by-1",
@@ -15678,5 +15678,26 @@
     "title": "Data Wrangling",
     "section": "Visualizing the data",
     "text": "Visualizing the data\n\nVizCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndelay_data |&gt; \n ggplot(aes(dist, delay)) +\n geom_point(aes(size = number), \n            alpha = 1/2) +\n geom_smooth() +\n scale_size_area()\n\nWhen scale_size_area is used, the default behavior is to scale the area of points to be proportional to the value."
+  },
+  {
+    "objectID": "slides/2025-09-10-verbs.html#arrange-1",
+    "href": "slides/2025-09-10-verbs.html#arrange-1",
+    "title": "Data Wrangling",
+    "section": "arrange()",
+    "text": "arrange()\nUse desc() to sort in descending order.\n\narrange(flights, desc(dep_delay))"
+  },
+  {
+    "objectID": "slides/2025-09-10-verbs.html#select-1",
+    "href": "slides/2025-09-10-verbs.html#select-1",
+    "title": "Data Wrangling",
+    "section": "select()",
+    "text": "select()\nYou can exclude columns using - and specify a range using :.\n\nselect(flights, -(year:day))"
+  },
+  {
+    "objectID": "slides/2025-09-10-verbs.html#summarize",
+    "href": "slides/2025-09-10-verbs.html#summarize",
+    "title": "Data Wrangling",
+    "section": "summarize()",
+    "text": "summarize()\nsummarize() collapses a data frame to a single row based on some function. It’s not very useful yet, but it will be.\n\nsummarize(flights, delay = mean(dep_delay, na.rm = TRUE))"
   }
 ]

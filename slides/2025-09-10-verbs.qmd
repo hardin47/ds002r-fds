@@ -89,16 +89,13 @@ The first argument of each data verb is the data frame.
 
 ## Some Basic Verbs
 
-- `filter()`$^*$
+- `filter()`
 - `arrange()`
-- `select()`$^*$
-- `distinct()`
-- `mutate()`$^*$
-- `summarize()`$^*$
-- `sample_n()`
-- `group_by()`$^*$
+- `select()`
+- `mutate()`
+- `summarize()`
+- `group_by()`
 
-The most used verbs are denoted with $^*$.
 
 ## (out of) NYC, flights data (2013)
 
@@ -174,6 +171,8 @@ of preceding columns:
 arrange(flights, year, month, day)
 ```
 
+## `arrange()`
+
 Use `desc()` to sort in descending order.
 
 ```{r}
@@ -184,13 +183,13 @@ arrange(flights, desc(dep_delay))
 
 ## `select()`
 
-Often you work with large datasets with many columns where only a few are 
-actually of interest to you. `select()` allows you to rapidly zoom in on a useful
-subset using operations that usually only work on numeric variable positions:
+Often you work with large datasets with many columns where only a few are actually of interest to you. `select()` allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:
 
 ```{r}
 select(flights, year, month, day)
 ```
+
+## `select()`
 
 You can exclude columns using `-` and specify a range using `:`.
 
@@ -200,7 +199,7 @@ select(flights, -(year:day))
 
 
  
-
+<!--
 ## `distinct()`
 
 A common use of `select()` is to find out which values a set of variables takes.  This is particularly useful in conjunction with the `distinct()` verb which only  returns the unique values in a table.
@@ -211,12 +210,12 @@ What do the following data correspond to?
 distinct(select(flights, origin, dest))
 ```
 
- 
+-->
+
 
 ## `mutate()`
 
-As well as selecting from the set of existing columns, it's often useful to add 
-new columns that are functions of existing columns. This is the job of `mutate()`:
+As well as selecting from the set of existing columns, it's often useful to add new columns that are functions of existing columns. This is the job of `mutate()`:
 
 ```{r}
 select(mutate(flights, gain = dep_delay - arr_delay), 
@@ -225,15 +224,12 @@ select(mutate(flights, gain = dep_delay - arr_delay),
 
  
 
-## `summarize()` and `sample_n()`
+## `summarize()` 
 
 `summarize()` collapses a data frame to a single row based on some function. It's not very useful yet, but it will be. 
 
-`sample_n()` provides you with a random sample of rows.
-
 ```{r}
 summarize(flights, delay = mean(dep_delay, na.rm = TRUE))
-sample_n(flights, 10)
 ```
 
  
@@ -259,7 +255,7 @@ speed_data <- select(flights2, tailnum, speed)
 
 ## `group_by()`
 
-`summarize()` and `sample_n()` are even more powerful when combined with the idea of  "group by", repeating the operation separately on groups of observations within the dataset. 
+`summarize()` is even more powerful when combined with the idea of  "group by", repeating the operation separately on groups of observations within the dataset. 
 
 The `group_by()` function describes how to break a dataset down into groups of rows.
 
