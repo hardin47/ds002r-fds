@@ -29,9 +29,16 @@ schedule <- tribble(
   
   'Tip 3', 'cmd + opt + c', 'runs the chunk', 'cntrl + opt + c on PC',
   
-  'Tip 4', '<img src = "images/sort.jpg" width="50%">', 'within the viewer, sorts the data wrt a variable', 'click on the variable name'
+  'Tip 4', '<img src = "images/sort.jpg" width="50%">', 'within the viewer, sorts the data wrt a variable', 'click on the variable name',
+  
+  'Tip 5', 'cmd + shift + C', 'comments the line',
+  'cntrl + shift + C for PC',
 
+  'Tip 6', 'cmd + shift + enter', 'runs the current chunk',
+  'cntrl + shift + enter for PC',
 
+  'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render'  
+  
   )
 ```
 
@@ -40,15 +47,12 @@ schedule <- tribble(
 #| echo: false
   'Tip 2', '<img src = "images/add_chunk.png">', 'adds a new R chunk',
   'look for it at top of Quarto doc',
-  
-  'Tip 4', 'cmd + shift + C', 'comments the line',
-  'cntrl + shift + C for PC',
+
   
   'Tip 5', '`\\textcolor{red}{this text will be red}`', 'LaTeX formatting to change the text color', 'when render to pdf (different syntax for render to html)',
   
   'Tip 6', '<img src = "images/gear1.png">', 'changes the figure size', 'gear in R chunk',
   
-  'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render',
   
   'Tip 8', '`#| echo: false`', 'evaluates the chunk, but does not show the code', 'alternatively: `echo = FALSE` inside curly braces',
   

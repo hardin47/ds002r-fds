@@ -2930,7 +2930,7 @@
     "href": "R-tip.html",
     "title": "R tip-of-the-day",
     "section": "",
-    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 3\ncmd + opt + c\nruns the chunk\ncntrl + opt + c on PC\n\n\nTip 4\n\nwithin the viewer, sorts the data wrt a variable\nclick on the variable name\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 3\ncmd + opt + c\nruns the chunk\ncntrl + opt + c on PC\n\n\nTip 4\n\nwithin the viewer, sorts the data wrt a variable\nclick on the variable name\n\n\nTip 5\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 6\ncmd + shift + enter\nruns the current chunk\ncntrl + shift + enter for PC\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "syllabus.html#links-to-resources",
