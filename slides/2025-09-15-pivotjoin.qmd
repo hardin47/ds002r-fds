@@ -1,0 +1,814 @@
+---
+title: Pivoting and Joining
+author: "Jo Hardin"
+subtitle: "September 15 + 17, 2025"
+format:
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(palmerpenguins)
+library(nycflights13)
+library(knitr)
+options(pillar.width = 70)
+```
+
+
+# Agenda  9/15/25
+
+1. Pivoting
+2. Joining
+
+
+## Data Exploration
+
+```{r, out.width = "800px", echo=FALSE, fig.cap = "Based on [https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories), original source: [https://www.linkedin.com/learning/instructors/bill-shander](https://www.linkedin.com/learning/instructors/bill-shander)"}
+knitr::include_graphics("../images/data_lego2.png")
+``` 
+ 
+# `pivot`ing
+ 
+```{r out.width = '47%', fig.align='center', echo=FALSE, fig.show='hold'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+knitr::include_graphics("../images/tidyr-pivoting.gif")
+``` 
+ 
+## From wide to long and long to wide
+
+* <mark>`pivot_longer()`</mark> makes the data frame "longer" -- many columns into a few columns (more rows):
+
+`pivot_longer(data,cols,names_to=,value_to=)`
+
+* <mark>`pivot_wider()`</mark> makes the data frame "wider" -- a few columns into many columns (fewer rows): 
+
+`pivot_wider(data,names_from=,values_from=)`
+
+
+## From wide to long and long to wide
+
+```{r out.width = '47%', fig.align='center', echo=FALSE, fig.show='hold'}
+knitr::include_graphics(c("../images/pivotlonger.png", "../images/pivotwider.png"))
+```
+
+ 
+  
+## `pivot_longer`
+  
+`pivot_longer` will be demonstrated using datasets from <a href = "https://www.gapminder.org/" target = "_blank">GapMinder</a>.
+
+`litF` represents country, year, and <mark>female literacy rate</mark>. 
+
+```{r message=FALSE}
+library(googlesheets4)
+gs4_deauth()
+litF <- read_sheet("https://docs.google.com/spreadsheets/d/1hDinTIRHQIaZg1RUn6Z_6mo12PtKwEPFIz_mJVF6P5I/pub?gid=0")
+
+litF |> 
+  gt::gt()
+```
+
+ 
+## `pivot_longer`
+  
+```{r}
+litF <- litF |> 
+  select(country = starts_with("Adult"), everything()) |> 
+  pivot_longer(cols = -country,
+               names_to = "year", 
+               values_to = "litRateF") |> 
+  filter(!is.na(litRateF))
+
+litF |> 
+  gt::gt()
+```
+
+
+ 
+  
+## `pivot_longer`
+  
+`GDP` represents country, year, and <mark>gdp</mark> (in fixed 2000 US$).
+
+```{r message=FALSE}
+GDP <- read_sheet("https://docs.google.com/spreadsheets/d/1RctTQmKB0hzbm1E8rGcufYdMshRdhmYdeL29nXqmvsc/pub?gid=0")
+
+GDP <- GDP |>  
+  select(country = starts_with("Income"), everything()) |> 
+  pivot_longer(cols = -country, 
+               names_to = "year",
+               values_to = "gdp") |> 
+  filter(!is.na(gdp))
+
+GDP |> 
+  gt::gt()
+```
+
+
+ 
+  
+## `pivot_wider()`
+
+`pivot_wider()`  will be demonstrated using the `paralympic_1500` dataset in the **openintro** R package.
+
+```{r}
+library(openintro)
+
+paralympic_1500 |> 
+  gt::gt()
+```
+
+ 
+## `pivot_wider()` `paralympic_1500`
+
+
+```{r}
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |> 
+  gt::gt()
+```
+
+. . .
+
+```{r}
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |> 
+  gt::gt()
+```
+> https://www.paralympic.org/news/remarkable-finish-1500m-rio-2016
+
+
+## `pivot_wider()` `paralympic_1500`
+ 
+  
+```{r}
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  filter(!is.na(T13)) |> 
+  arrange(Olympic) |> 
+  gt::gt()
+```
+
+ 
+## `pivot_wider()` `paralympic_1500`
+  
+```{r}
+paralympic_1500 |>  
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |> 
+  mutate(mintime = pmin(Olympic, T13, na.rm = TRUE)) |> 
+  arrange(mintime) |> 
+  gt::gt()
+```
+
+
+# `_join`ing
+
+## Relational data (multiple data frames)
+
+
+```{r out.width = '70%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/dplyr-joins.png")
+```
+
+See the Posit cheatsheets on <a href = "https://rstudio.github.io/cheatsheets/html/data-transformation.html" target = "_blank">wrangling & joining</a> and <a href = "https://rstudio.github.io/cheatsheets/html/tidyr.html" target = "_blank">pivoting</a>.
+
+ 
+  
+  
+## Joining two (or more) data frames:
+  
+* <mark>`left_join`</mark> returns all rows from the left table, and any rows with matching keys from the right table.
+* <mark>`inner_join`</mark> returns only the rows in which the left table have matching keys in the right table (i.e., matching rows in both sets).
+* <mark>`full_join`</mark> returns all rows from both tables, join records from the left which have matching keys in the right table.
+
+
+Good practice:  always specify the `by` argument when joining data frames.
+
+
+
+## Women in Science
+
+10 women in science who changed the world (source: Discover Magazine)^[Example from [DataScience in a Box](https://datasciencebox.org/)]
+
+```{r echo = FALSE}
+library(kableExtra)
+dates <- read_csv("../data/dates.csv") 
+dates[7,3] <- 2020
+professions <- read_csv("../data/professions.csv")
+works <- read_csv("../data/works.csv")
+```
+
+```{r eval = FALSE, include = FALSE}
+source: https://www.discovermagazine.com/the-sciences/meet-10-women-in-science-who-changed-the-world
+
+From Mine: https://github.com/rstudio-education/datascience-box/tree/master/course-materials/slides/u2-d08-multi-df/data/scientists
+```
+
+
+```{r echo = FALSE}
+professions |> 
+  kable()
+```
+ 
+
+## Inputs
+
+
+::: {.panel-tabset}
+
+## Professions
+```{r}
+professions
+```
+
+## Dates
+```{r}
+dates
+```
+
+## Works
+```{r}
+works
+```
+:::
+ 
+
+## Desired output
+
+We'd like to put together the data to look like:
+
+```{r echo=FALSE}
+professions |> 
+  left_join(dates, by = "name") |> 
+  left_join(works, by = "name")
+```
+
+
+ 
+
+## Inputs, reminder
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r}
+nrow(professions)
+nrow(dates)
+nrow(works)
+```
+:::
+
+::: {.column width=50%}
+```{r}
+names(professions)
+names(dates)
+names(works)
+
+```
+:::
+::::
+
+ 
+
+## Setup
+
+For the next few slides...
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE}
+x <- tibble(
+  id = c(1, 2, 3),
+  value_x = c("x1", "x2", "x3")
+  )
+```
+```{r}
+x
+```
+:::
+
+::: {.column width=50%}
+```{r echo=FALSE}
+y <- tibble(
+  id = c(1, 2, 4),
+  value_y = c("y1", "y2", "y4")
+  )
+```
+```{r}
+y
+```
+:::
+::::
+
+ 
+
+## `left_join()`
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+include_graphics("../images/left-join.gif")
+```
+:::
+
+::: {.column width=50%}
+```{r}
+left_join(x, y, by = "id")
+```
+:::
+::::
+
+ 
+
+## `left_join()`
+
+```{r}
+professions |> 
+  left_join(dates, by = "name") 
+```
+
+ 
+
+## `right_join()`
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+include_graphics("../images/right-join.gif")
+```
+:::
+
+::: {.column width=50%}
+```{r}
+right_join(x, y, by = "id")
+```
+:::
+::::
+
+ 
+
+## `right_join()`
+
+
+```{r}
+professions |> 
+  right_join(dates, by = "name") 
+```
+
+ 
+
+## `full_join()`
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+include_graphics("../images/full-join.gif")
+```
+:::
+
+::: {.column width=50%}
+```{r}
+full_join(x, y, by = "id")
+```
+:::
+::::
+
+ 
+
+## `full_join()`
+
+```{r}
+dates |> 
+  full_join(works, by = "name") 
+```
+
+ 
+
+## `inner_join()`
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+include_graphics("../images/inner-join.gif")
+```
+:::
+
+::: {.column width=50%}
+```{r}
+inner_join(x, y, by = "id")
+```
+:::
+::::
+
+ 
+
+## `inner_join()`
+
+```{r}
+dates |> 
+  inner_join(works, by = "name") 
+```
+
+ 
+
+## `semi_join()`
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+include_graphics("../images/semi-join.gif")
+```
+:::
+
+::: {.column width=50%}
+```{r}
+semi_join(x, y, by = "id")
+```
+:::
+::::
+
+ 
+
+## `semi_join()`
+
+```{r}
+dates |> 
+  semi_join(works, by = "name") 
+```
+
+ 
+
+## `anti_join()`
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+include_graphics("../images/anti-join.gif")
+```
+:::
+
+
+::: {.column width=50%}
+```{r}
+anti_join(x, y, by = "id")
+```
+:::
+::::
+
+ 
+
+## `anti_join()`
+
+```{r}
+dates |> 
+  anti_join(works, by = "name") 
+```
+
+ 
+
+## Putting it all together
+
+```{r}
+professions |> 
+  left_join(dates, by = "name") |> 
+  left_join(works, by = "name")
+```
+
+
+ 
+
+ 
+
+## Practice `litF` and `GDP` from Gapminder.
+
+## left
+```{r}
+litGDPleft <- left_join(litF, GDP, by=c("country", "year"))
+dim(litGDPleft)
+litGDPleft
+```
+
+
+ 
+
+## right
+```{r}
+litGDPright <- right_join(litF, GDP, by=c("country", "year"))
+dim(litGDPright)
+litGDPright
+```
+
+
+ 
+
+## inner
+```{r}
+litGDPinner <- inner_join(litF, GDP, by=c("country", "year"))
+dim(litGDPinner)
+litGDPinner
+```
+
+ 
+
+## full
+```{r}
+litGDPfull <- full_join(litF, GDP, by=c("country", "year"))
+dim(litGDPfull)
+litGDPfull
+```
+ 
+ 
+
+## `join` to **merge** two datasets
+
+```{r out.width = '90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/join.png")
+```
+
+
+
+If you ever need to understand which join is the right join for you, try to find an image that will lay out what the function is doing.  I found this one that is quite good and is taken from the <a href = "https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti" target = "_blank">Statistics Globe blog</a>.
+
+ 
+<!--
+## **purrr** for functional programming
+
+:::: {.columns}
+::: {.column width=50%}
+The `map` functions are *named* by the **output** the produce.  For example: 
+
+* `map(.x, .f)` is the main mapping function and returns a list
+
+* `map_df(.x, .f)` returns a data frame
+
+* `map_dbl(.x, .f)` returns a numeric (double) vector
+
+* `map_chr(.x, .f)` returns a character vector
+
+* `map_lgl(.x, .f)` returns a logical vector
+:::
+
+::: {.column width=50%}
+```{r out.width = '90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/purrr_map.png")
+```
+:::
+::::
+
+
+Note that the first argument is always the data object and the second object is always the function you want to iteratively apply to each element in the input object.
+
+ 
+
+### Input
+
+The **input** to a `map` function is always either a *vector* (like a column), a *list* (which can be non-rectangular), or a *data frame* (like a rectangle).
+
+A list is a way to hold things which might be very different in shape:
+
+```{r}
+a_list <- list(a_number = 5,
+                      a_vector = c("a", "b", "c"),
+                      a_dataframe = data.frame(a = c(1:3), 
+                                               b = c("q", "b", "z"), 
+                                               c = c("bananas", "are", "so very great")))
+
+a_list
+```
+
+ 
+
+###  Output
+
+
+```{r}
+add_ten <- function(x) {
+  return(x + 10)
+  }
+```
+
+We can `map()` the `add_ten()` function across a vector.  Note that the output is a list (the default).
+
+```{r}
+library(tidyverse)
+map(.x = c(2, 5, 10),
+    .f = add_ten)
+```
+
+ 
+
+###  Output & Input
+
+What if we use a different type of input?  The default behavior is to still return a list!
+
+```{r}
+data.frame(a = 2, b = 5, c = 10) |> 
+  map(add_ten)
+```
+
+What if we want a different type of output?  We use a different `map()` function, `map_df()`, for example.
+
+```{r}
+data.frame(a = 2, b = 5, c = 10) |> 
+  map_df(add_ten)
+```
+
+ 
+
+### Shorthand
+
+Shorthand lets us get away from pre-defining the function (which will be useful).  Use the tilde `~` to indicate that you have a function: 
+
+```{r}
+data.frame(a = 2, b = 5, c = 10) |> 
+  map_df(~{.x + 10})
+```
+
+ 
+### Shorthand in more complex settings
+
+```{r}
+library(palmerpenguins)
+library(broom)
+
+penguins_split <- split(penguins, penguins$species)
+penguins_split |>
+  map(~ lm(body_mass_g ~ flipper_length_mm, data = .x)) |>
+  map_df(tidy)  # map(tidy)
+
+penguins |>
+  group_by(species) |>
+  group_map(~lm(body_mass_g ~ flipper_length_mm, data = .x)) |>
+  map(tidy)  # map_df(tidy)
+```
+
+-->
+ 
+<!--
+
+## **lubridate**
+  
+**lubridate** is a another R package meant for data wrangling!  
+
+In particular, **lubridate** makes it very easy to work with days, times, and dates.  The base idea is to start with dates in a `ymd` (year month day) format and transform the information into whatever you want.  
+
+Example from the <a href = "https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html" target = "_blank">lubridate vignette</a>.
+
+ 
+
+## If anyone drove a time machine, they would crash
+
+The length of months and years change so often that doing arithmetic with them can be unintuitive. <mark>Consider a simple operation: January 31st + one month.</mark>
+
+
+ 
+
+## If anyone drove a time machine, they would crash
+
+The length of months and years change so often that doing arithmetic with them can be unintuitive. <mark>Consider a simple operation: January 31st + one month.</mark>
+
+Should the answer be:
+  
+1. February 31st (which doesn't exist)
+2. March 4th (31 days after January 31), or
+3. February 28th (assuming its not a leap year)
+
+A basic property of arithmetic is that a + b - b = a. Only solution 1 obeys the mathematical property, but it is an invalid date. Wickham wants to make **lubridate** as consistent as possible by invoking the following rule: <mark>if adding or subtracting a month or a year creates an invalid date, lubridate will return an NA. </mark>
+
+If you thought solution 2 or 3 was more useful, no problem. You can still get those results with clever arithmetic, or by using the special `%m+%` and `%m-%` operators. `%m+%` and `%m-%` automatically roll dates back to the last day of the month, should that be necessary.
+ 
+
+## basics in `lubridate` 
+
+```{r message=FALSE}
+library(lubridate)
+rightnow <- now()
+
+day(rightnow)
+week(rightnow)
+month(rightnow, label=FALSE)
+month(rightnow, label=TRUE)
+year(rightnow)
+```
+
+ 
+## basics in `lubridate` 
+
+```{r}
+minute(rightnow)
+hour(rightnow)
+
+yday(rightnow)
+mday(rightnow)
+wday(rightnow, label=FALSE)
+wday(rightnow, label=TRUE)
+```
+
+ 
+
+## But how do I create a date object?
+
+```{r}
+jan31 <- ymd("2021-01-31")
+jan31 + months(0:11)
+
+floor_date(jan31, "month") + months(0:11) + days(31)
+jan31 + months(0:11) + days(31)
+
+jan31 %m+% months(0:11)
+```
+
+ 
+
+## NYC flights 
+```{r message=FALSE}
+library(nycflights13)
+names(flights)
+```
+
+ 
+
+## NYC flights 
+```{r message=FALSE}
+flightsWK <- flights |>  
+   mutate(ymdday = ymd(paste(year, month,day, sep="-"))) |> 
+   mutate(weekdy = wday(ymdday, label=TRUE), 
+          whichweek = week(ymdday)) 
+
+flightsWK |>  select(year, month, day, ymdday, weekdy, whichweek, 
+                     dep_time, arr_time, air_time) 
+```
+
+ 
+
+## `reprex`
+
+> Help me help you
+
+`repr`oducible `ex`ample ...
+
+Step 1.  Copy code onto the clipboard
+
+Step 2.  Type `reprex()` into the Console
+
+Step 3.  Look at the Viewer to the right.  Copy the Viewer output into GitHub, Piazza, Discord, an email, stackexchange, etc.
+
+ 
+
+##  `reprex` demo
+
+```
+reprex(
+  jan31 + months(0:11) + days(31)
+)
+```
+multiple lines of code:
+
+```
+reprex({
+  jan31 <- ymd("2021-01-31")
+  jan31 + months(0:11) + days(31)
+})
+```
+
+```
+reprex({
+  library(lubridate)
+  jan31 <- ymd("2021-01-31")
+  jan31 + months(0:11) + days(31)
+})
+```
+
+-->
+
+

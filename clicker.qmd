@@ -785,9 +785,16 @@ grades
 #| echo: true
 grades |> 
   pivot_wider(names_from = test, values_from = score)
-
 ```
 
+
+```{r}
+#| echo: true
+grades |> 
+  pivot_wider(names_from = test, values_from = score) |> 
+  ggplot(aes(x = Midterm, y = Final, color = student)) + 
+  geom_point()
+```
 
 ---
 
@@ -822,6 +829,18 @@ sleep_long <- sleep_wide |>
                values_to = "reaction_time")
 
 sleep_long
+```
+---
+
+```{r}
+#| echo: true
+sleep_wide |>
+  pivot_longer(cols = -Subject,
+               names_to = "day",
+               names_prefix = "day_",
+               values_to = "reaction_time") |>
+  ggplot(aes(x = day, y = reaction_time, color = as.factor(Subject), group = as.factor(Subject))) + 
+  geom_line()
 ```
 
 ---
