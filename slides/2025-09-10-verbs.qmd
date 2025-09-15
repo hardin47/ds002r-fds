@@ -87,6 +87,8 @@ Most data wrangling happens with a set of data verbs.  Verbs are **functions** t
 
 The first argument of each data verb is the data frame.
 
+The output of a data verb is a data frame.
+
 ## Some Basic Verbs
 
 - `filter()`
