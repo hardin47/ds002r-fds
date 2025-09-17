@@ -930,6 +930,269 @@ band_members |>
 [^38]: d. `NA` (it would be `NULL` in **SQL**)
 
 
+---
+
+(@) Students in the roster but not in any class.[^38a]
+     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(students, by = "student_id")`
+     (c) `students |> anti_join(classes, by = "student_id")`
+     (d) `students |> full_join(classes, by = "student_id")`
+     (e) `students |> semi_join(classes, by = "student_id")`
+
+
+```{r}
+#| echo: false
+students <- tibble::tribble(
+  ~student_id, ~name,      ~major,
+  1,           "Alice",    "Math",
+  2,           "Ben",      "CS",
+  3,           "Carla",    "History",
+  4,           "David",    "CS",
+  5,           "Eva",      "Math"
+)
+
+
+classes <- tibble::tribble(
+  ~student_id, ~class,        ~subject,
+  1,           "Calc I",      "Math",
+  2,           "Intro CS",    "CS",
+  2,           "Data Struct", "CS",
+  4,           "Intro CS",    "CS",
+  6,           "Chemistry",   "Chemistry"
+)
+
+```
+
+
+:::: {.columns}
+::: {.column width="45%"}
+```{r}
+#| echo: true
+students
+```
+:::
+
+:::{.column width="45%"}
+```{r}
+#| echo: true
+classes
+```
+:::
+::::
+
+[^38a]: c. `students |> anti_join(classes, by = "student_id")`
+
+
+---
+
+(@) All students and all enrollments.[^38b]
+     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(students, by = "student_id")`
+     (c) `students |> anti_join(classes, by = "student_id")`
+     (d) `students |> full_join(classes, by = "student_id")`
+     (e) `students |> semi_join(classes, by = "student_id")`
+
+
+```{r}
+#| echo: false
+students <- tibble::tribble(
+  ~student_id, ~name,      ~major,
+  1,           "Alice",    "Math",
+  2,           "Ben",      "CS",
+  3,           "Carla",    "History",
+  4,           "David",    "CS",
+  5,           "Eva",      "Math"
+)
+
+
+classes <- tibble::tribble(
+  ~student_id, ~class,        ~subject,
+  1,           "Calc I",      "Math",
+  2,           "Intro CS",    "CS",
+  2,           "Data Struct", "CS",
+  4,           "Intro CS",    "CS",
+  6,           "Chemistry",   "Chemistry"
+)
+
+```
+
+
+:::: {.columns}
+::: {.column width="45%"}
+```{r}
+#| echo: true
+students
+```
+:::
+
+:::{.column width="45%"}
+```{r}
+#| echo: true
+classes
+```
+:::
+::::
+
+[^38b]: d. `students |> full_join(classes, by = "student_id")`
+
+
+---
+
+(@) Students enrolled in at least one class.[^38c]
+     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(students, by = "student_id")`
+     (c) `students |> anti_join(classes, by = "student_id")`
+     (d) `students |> full_join(classes, by = "student_id")`
+     (e) `students |> semi_join(classes, by = "student_id")`
+
+
+```{r}
+#| echo: false
+students <- tibble::tribble(
+  ~student_id, ~name,      ~major,
+  1,           "Alice",    "Math",
+  2,           "Ben",      "CS",
+  3,           "Carla",    "History",
+  4,           "David",    "CS",
+  5,           "Eva",      "Math"
+)
+
+
+classes <- tibble::tribble(
+  ~student_id, ~class,        ~subject,
+  1,           "Calc I",      "Math",
+  2,           "Intro CS",    "CS",
+  2,           "Data Struct", "CS",
+  4,           "Intro CS",    "CS",
+  6,           "Chemistry",   "Chemistry"
+)
+
+```
+
+
+:::: {.columns}
+::: {.column width="45%"}
+```{r}
+#| echo: true
+students
+```
+:::
+
+:::{.column width="45%"}
+```{r}
+#| echo: true
+classes
+```
+:::
+::::
+
+[^38c]: e.`students |> semi_join(classes, by = "student_id")`
+
+
+---
+
+(@) Students class but not in the roster.[^38d]
+     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(students, by = "student_id")`
+     (c) `students |> anti_join(classes, by = "student_id")`
+     (d) `students |> full_join(classes, by = "student_id")`
+     (e) `students |> semi_join(classes, by = "student_id")`
+
+
+```{r}
+#| echo: false
+students <- tibble::tribble(
+  ~student_id, ~name,      ~major,
+  1,           "Alice",    "Math",
+  2,           "Ben",      "CS",
+  3,           "Carla",    "History",
+  4,           "David",    "CS",
+  5,           "Eva",      "Math"
+)
+
+
+classes <- tibble::tribble(
+  ~student_id, ~class,        ~subject,
+  1,           "Calc I",      "Math",
+  2,           "Intro CS",    "CS",
+  2,           "Data Struct", "CS",
+  4,           "Intro CS",    "CS",
+  6,           "Chemistry",   "Chemistry"
+)
+
+```
+
+
+:::: {.columns}
+::: {.column width="45%"}
+```{r}
+#| echo: true
+students
+```
+:::
+
+:::{.column width="45%"}
+```{r}
+#| echo: true
+classes
+```
+:::
+::::
+
+[^38d]: b. `classes |> anti_join(students, by = "student_id")`
+
+
+---
+
+(@) Students taking at least one class outside their major.[^38e]
+     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(students, by = "student_id")`
+     (c) `students |> anti_join(classes, by = "student_id")`
+     (d) `students |> full_join(classes, by = "student_id")`
+     (e) `students |> semi_join(classes, by = "student_id")`
+
+
+```{r}
+#| echo: false
+students <- tibble::tribble(
+  ~student_id, ~name,      ~major,
+  1,           "Alice",    "Math",
+  2,           "Ben",      "CS",
+  3,           "Carla",    "History",
+  4,           "David",    "CS",
+  5,           "Eva",      "Math"
+)
+
+
+classes <- tibble::tribble(
+  ~student_id, ~class,        ~subject,
+  1,           "Calc I",      "Math",
+  2,           "Intro CS",    "CS",
+  2,           "Data Struct", "CS",
+  4,           "Intro CS",    "CS",
+  6,           "Chemistry",   "Chemistry"
+)
+
+```
+
+
+:::: {.columns}
+::: {.column width="45%"}
+```{r}
+#| echo: true
+students
+```
+:::
+
+:::{.column width="45%"}
+```{r}
+#| echo: true
+classes
+```
+:::
+::::
+
+[^38e]: a. `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
 
 ---
 

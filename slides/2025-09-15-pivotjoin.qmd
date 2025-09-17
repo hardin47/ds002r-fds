@@ -83,7 +83,7 @@ litF |>
   
 ```{r}
 litF <- litF |> 
-  select(country = starts_with("Adult"), everything()) |> 
+  rename(country = starts_with("Adult")) |> 
   pivot_longer(cols = -country,
                names_to = "year", 
                values_to = "litRateF") |> 
@@ -104,7 +104,7 @@ litF |>
 GDP <- read_sheet("https://docs.google.com/spreadsheets/d/1RctTQmKB0hzbm1E8rGcufYdMshRdhmYdeL29nXqmvsc/pub?gid=0")
 
 GDP <- GDP |>  
-  select(country = starts_with("Income"), everything()) |> 
+  rename(country = starts_with("Income")) |> 
   pivot_longer(cols = -country, 
                names_to = "year",
                values_to = "gdp") |> 
@@ -139,7 +139,9 @@ paralympic_1500 |>
   gt::gt()
 ```
 
-. . .
+
+## `pivot_wider()` `paralympic_1500`
+
 
 ```{r}
 paralympic_1500 |>  
@@ -506,48 +508,127 @@ professions |>
 
 
  
+## The `by` argument
 
- 
+
+::::: {.panel-tabset}
+
+## data frames
+
+:::: {.columns}
+::: {.column width="50%"}
+```{r}
+#| echo: true
+flights |> 
+   select(origin, dest) |> 
+   distinct() |> 
+   arrange(dest)
+```
+:::
+
+:::{.column width="50%"}
+
+```{r}
+#| echo: false
+#| eval: true
+options(pillar.width = 30)
+```
+
+
+```{r}
+#| echo: true
+airports
+```
+:::
+::::
+
+## travel map
+
+```{r out.width = '90%', fig.align='center', echo=FALSE, fig.cap = "image credit: https://commons.wikimedia.org/wiki/File:PIA_Route_Map.PNG, Sox23 at the English-language Wikipedia"}
+knitr::include_graphics("../images/peoria_map.png")
+```
+
+## join
+
+```{r}
+#| echo: false
+#| eval: true
+options(pillar.width = 70)
+```
+
+```{r}
+flights |> 
+   select(origin, dest) |> 
+   distinct() |> 
+   arrange(dest) |> 
+   left_join(airports, by = c("dest" = "faa"))
+```
+
+:::::
 
 ## Practice `litF` and `GDP` from Gapminder.
 
-## left
+::::: {.panel-tabset}
+
+## OG data
+
+:::: {.columns}
+::: {.column width="50%"}
+
 ```{r}
-litGDPleft <- left_join(litF, GDP, by=c("country", "year"))
-dim(litGDPleft)
-litGDPleft
+#| echo: false
+#| eval: true
+options(pillar.width = 30)
 ```
 
+```{r}
+#| echo: true
+litF
+```
+:::
 
- 
+:::{.column width="50%"}
+
+```{r}
+#| echo: true
+GDP
+```
+:::
+::::
+
+
+## left
+
+```{r}
+#| echo: false
+#| eval: true
+options(pillar.width = 70)
+```
+
+```{r}
+left_join(litF, GDP, by=c("country" = "country", "year" = "year"))
+```
+
 
 ## right
 ```{r}
-litGDPright <- right_join(litF, GDP, by=c("country", "year"))
-dim(litGDPright)
-litGDPright
+right_join(litF, GDP, by=c("country", "year"))
 ```
 
 
- 
-
 ## inner
 ```{r}
-litGDPinner <- inner_join(litF, GDP, by=c("country", "year"))
-dim(litGDPinner)
-litGDPinner
+inner_join(litF, GDP, by=c("country", "year"))
 ```
 
  
 
 ## full
 ```{r}
-litGDPfull <- full_join(litF, GDP, by=c("country", "year"))
-dim(litGDPfull)
-litGDPfull
+full_join(litF, GDP, by=c("country", "year"))
 ```
  
- 
+:::::
 
 ## `join` to **merge** two datasets
 

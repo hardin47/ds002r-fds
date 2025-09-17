@@ -28,7 +28,7 @@ To make the website follow the instructions at <a href = "https://ucsb-meds.gith
 For each of the two analyses, find a TidyTuesday dataset and create a plot (start with a qmd file and create an html file).  Your YAML will look something like this (note that the format here is html, unlike the pdf that we use for the homework). Some considerations:
 
 * Each TidyTuesday analysis has a separate .qmd file.
-* The two analyses compile to html and are linked via a drop-down menu (see example `_quarto.yml` file below).
+* The two analyses compile to two different .html files and are linked via a drop-down menu (see example `_quarto.yml` file below).
 * You should both *link* to the TidyTuesday resource (giving it credit) **and** give a full citation of the original data (that is, credit the original source which is almost surely different from the TidyTuesday link).
 * Remove all messages and warnings (see the YAML on any HW assignment for the code).
 * There should be some words to introduce the dataset, etc.
@@ -44,7 +44,7 @@ format: html
 ---
 ````
 
-The TidyTuesday analysis can be quite minimal. One plot per analysis is fine, and you don't need to annotate or make it beautiful (of course, you might **want** to make it beautiful...). It is your choice whether or not to show the code. (Do you think it is better to show the code or hide the code? No right answer.)^[One option is to use code folding so that the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code.] Please include the source of the data (which includes both the TidyTuesday page + the original source of the information).
+Each TidyTuesday analysis can be quite minimal. One plot per analysis is fine, and you don't need to annotate or make it beautiful (of course, you might **want** to make it beautiful...). It is your choice whether or not to show the code. (Do you think it is better to show the code or hide the code? No right answer.)^[One option is to use code folding so that the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code.] Please include the source of the data (which includes both the TidyTuesday page + the original source of the information).
 
 Inside your `_quarto.yml` file (see https://ucsb-meds.github.io/creating-quarto-websites/#modify-website-appearance-in-_quarto.yml), you might have something like the following:
 
@@ -72,4 +72,4 @@ The assignment as written asks you to submit a public facing website. Generally,
 
 ### Timeline
 
-Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday February 19, 2025**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!
+Mini-Project 1 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday September 2, 2025**.  All you need to submit is a URL for your website (or private GitHub repo if you take that route)!

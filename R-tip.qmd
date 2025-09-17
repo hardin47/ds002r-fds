@@ -37,7 +37,9 @@ schedule <- tribble(
   'Tip 6', 'cmd + shift + enter', 'runs the current chunk',
   'cntrl + shift + enter for PC',
 
-  'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render'  
+  'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render',
+  
+  'Tip 8', 'cmd + shift + opt + j', 'window to jump between chunks', 'cntrl + shift + opt + j for PC'
   
   )
 ```
