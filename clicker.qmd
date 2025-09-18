@@ -442,7 +442,7 @@ ggplot(data = Births78,
 
 ---
 
-(@) What is the difference between `geom_bar()` and `geom_histogram()`?[20c]
+(@) What is the difference between `geom_bar()` and `geom_histogram()`?[^20c]
      (a) They are the different names for the same function.
      (b) `geom_bar()` is for numbers and `geom_histogram()` is for categorical variables.
      (c) `geom_bar()` is for categorical variables and `geom_histogram()` is for nubmers.
@@ -932,17 +932,17 @@ band_members |>
 
 ---
 
-(@) Students in the roster but not in any class.[^38a]
-     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
-     (b) `classes |> anti_join(students, by = "student_id")`
-     (c) `students |> anti_join(classes, by = "student_id")`
-     (d) `students |> full_join(classes, by = "student_id")`
-     (e) `students |> semi_join(classes, by = "student_id")`
+(@) Students on the roster but not in any class.[^38a]
+     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(roster, by = "student_id")`
+     (c) `roster |> anti_join(classes, by = "student_id")`
+     (d) `roster |> full_join(classes, by = "student_id")`
+     (e) `roster |> semi_join(classes, by = "student_id")`
 
 
 ```{r}
 #| echo: false
-students <- tibble::tribble(
+roster <- tibble::tribble(
   ~student_id, ~name,      ~major,
   1,           "Alice",    "Math",
   2,           "Ben",      "CS",
@@ -968,7 +968,7 @@ classes <- tibble::tribble(
 ::: {.column width="45%"}
 ```{r}
 #| echo: true
-students
+roster
 ```
 :::
 
@@ -980,48 +980,24 @@ classes
 :::
 ::::
 
-[^38a]: c. `students |> anti_join(classes, by = "student_id")`
+[^38a]: c. `roster` |> anti_join(classes, by = "student_id")`
 
 
 ---
 
-(@) All students and all enrollments.[^38b]
-     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
-     (b) `classes |> anti_join(students, by = "student_id")`
-     (c) `students |> anti_join(classes, by = "student_id")`
-     (d) `students |> full_join(classes, by = "student_id")`
-     (e) `students |> semi_join(classes, by = "student_id")`
-
-
-```{r}
-#| echo: false
-students <- tibble::tribble(
-  ~student_id, ~name,      ~major,
-  1,           "Alice",    "Math",
-  2,           "Ben",      "CS",
-  3,           "Carla",    "History",
-  4,           "David",    "CS",
-  5,           "Eva",      "Math"
-)
-
-
-classes <- tibble::tribble(
-  ~student_id, ~class,        ~subject,
-  1,           "Calc I",      "Math",
-  2,           "Intro CS",    "CS",
-  2,           "Data Struct", "CS",
-  4,           "Intro CS",    "CS",
-  6,           "Chemistry",   "Chemistry"
-)
-
-```
+(@) All students on the roster and all enrollments.[^38b]
+     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(roster, by = "student_id")`
+     (c) `roster |> anti_join(classes, by = "student_id")`
+     (d) `roster |> full_join(classes, by = "student_id")`
+     (e) `roster |> semi_join(classes, by = "student_id")`
 
 
 :::: {.columns}
 ::: {.column width="45%"}
 ```{r}
 #| echo: true
-students
+roster
 ```
 :::
 
@@ -1033,48 +1009,52 @@ classes
 :::
 ::::
 
-[^38b]: d. `students |> full_join(classes, by = "student_id")`
+[^38b]: d. `roster` |> full_join(classes, by = "student_id")`
 
 
 ---
 
-(@) Students enrolled in at least one class.[^38c]
-     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
-     (b) `classes |> anti_join(students, by = "student_id")`
-     (c) `students |> anti_join(classes, by = "student_id")`
-     (d) `students |> full_join(classes, by = "student_id")`
-     (e) `students |> semi_join(classes, by = "student_id")`
+(@) Students from the roster who are enrolled in at least one class.[^38c]
+     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(roster, by = "student_id")`
+     (c) `roster |> anti_join(classes, by = "student_id")`
+     (d) `roster |> full_join(classes, by = "student_id")`
+     (e) `roster |> semi_join(classes, by = "student_id")`
 
-
+:::: {.columns}
+::: {.column width="45%"}
 ```{r}
-#| echo: false
-students <- tibble::tribble(
-  ~student_id, ~name,      ~major,
-  1,           "Alice",    "Math",
-  2,           "Ben",      "CS",
-  3,           "Carla",    "History",
-  4,           "David",    "CS",
-  5,           "Eva",      "Math"
-)
-
-
-classes <- tibble::tribble(
-  ~student_id, ~class,        ~subject,
-  1,           "Calc I",      "Math",
-  2,           "Intro CS",    "CS",
-  2,           "Data Struct", "CS",
-  4,           "Intro CS",    "CS",
-  6,           "Chemistry",   "Chemistry"
-)
-
+#| echo: true
+roster
 ```
+:::
+
+:::{.column width="45%"}
+```{r}
+#| echo: true
+classes
+```
+:::
+::::
+
+[^38c]: e.`roster |> semi_join(classes, by = "student_id")`
+
+
+---
+
+(@) Students in a class but not on the roster.[^38d]
+     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(roster, by = "student_id")`
+     (c) `roster |> anti_join(classes, by = "student_id")`
+     (d) `roster |> full_join(classes, by = "student_id")`
+     (e) `roster |> semi_join(classes, by = "student_id")`
 
 
 :::: {.columns}
 ::: {.column width="45%"}
 ```{r}
 #| echo: true
-students
+roster
 ```
 :::
 
@@ -1086,48 +1066,23 @@ classes
 :::
 ::::
 
-[^38c]: e.`students |> semi_join(classes, by = "student_id")`
+[^38d]: b. `classes |> anti_join(roster, by = "student_id")`
 
 
 ---
 
-(@) Students class but not in the roster.[^38d]
-     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
-     (b) `classes |> anti_join(students, by = "student_id")`
-     (c) `students |> anti_join(classes, by = "student_id")`
-     (d) `students |> full_join(classes, by = "student_id")`
-     (e) `students |> semi_join(classes, by = "student_id")`
-
-
-```{r}
-#| echo: false
-students <- tibble::tribble(
-  ~student_id, ~name,      ~major,
-  1,           "Alice",    "Math",
-  2,           "Ben",      "CS",
-  3,           "Carla",    "History",
-  4,           "David",    "CS",
-  5,           "Eva",      "Math"
-)
-
-
-classes <- tibble::tribble(
-  ~student_id, ~class,        ~subject,
-  1,           "Calc I",      "Math",
-  2,           "Intro CS",    "CS",
-  2,           "Data Struct", "CS",
-  4,           "Intro CS",    "CS",
-  6,           "Chemistry",   "Chemistry"
-)
-
-```
-
+(@) Students on the roster taking at least one class outside their major.[^38e]
+     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (b) `classes |> anti_join(roster, by = "student_id")`
+     (c) `roster |> anti_join(classes, by = "student_id")`
+     (d) `roster |> full_join(classes, by = "student_id")`
+     (e) `roster |> semi_join(classes, by = "student_id")`
 
 :::: {.columns}
 ::: {.column width="45%"}
 ```{r}
 #| echo: true
-students
+roster
 ```
 :::
 
@@ -1139,64 +1094,11 @@ classes
 :::
 ::::
 
-[^38d]: b. `classes |> anti_join(students, by = "student_id")`
-
-
----
-
-(@) Students taking at least one class outside their major.[^38e]
-     (a) `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
-     (b) `classes |> anti_join(students, by = "student_id")`
-     (c) `students |> anti_join(classes, by = "student_id")`
-     (d) `students |> full_join(classes, by = "student_id")`
-     (e) `students |> semi_join(classes, by = "student_id")`
-
-
-```{r}
-#| echo: false
-students <- tibble::tribble(
-  ~student_id, ~name,      ~major,
-  1,           "Alice",    "Math",
-  2,           "Ben",      "CS",
-  3,           "Carla",    "History",
-  4,           "David",    "CS",
-  5,           "Eva",      "Math"
-)
-
-
-classes <- tibble::tribble(
-  ~student_id, ~class,        ~subject,
-  1,           "Calc I",      "Math",
-  2,           "Intro CS",    "CS",
-  2,           "Data Struct", "CS",
-  4,           "Intro CS",    "CS",
-  6,           "Chemistry",   "Chemistry"
-)
-
-```
-
-
-:::: {.columns}
-::: {.column width="45%"}
-```{r}
-#| echo: true
-students
-```
-:::
-
-:::{.column width="45%"}
-```{r}
-#| echo: true
-classes
-```
-:::
-::::
-
-[^38e]: a. `students |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+[^38e]: a. `roster |> inner_join(classes, by = "student_id") |> filter(major != subject)`
 
 ---
 
-(@) What is the output of the following R code?[^38b]
+(@) What is the output of the following R code?[^38f]
    a. "a 1" "b 2" "c 3"
    b. "a, 1" "b, 2" "c, 3"
    c. "a1" "b2" "c3"
@@ -1210,12 +1112,12 @@ str_c(letters = c("a", "b", "c"),
       numbers = c(1, 2, 3))
 ```
 
-[^38b]: c. "a1" "b2" "c3"
+[^38f]: c. "a1" "b2" "c3"
 
 ---
 
 
-(@) What is the output of the following R code?[^38c]
+(@) What is the output of the following R code?[^38g]
    a. "a 1" "b 2" "c 3"
    b. "a, 1" "b, 2" "c, 3"
    c. "a1" "b2" "c3"
@@ -1229,7 +1131,7 @@ str_c(letters = c("a", "b", "c"),
       numbers = c(1, 2, 3), sep = " ")
 ```
 
-[^38c]: a. "a 1" "b 2" "c 3"
+[^38g]: a. "a 1" "b 2" "c 3"
 
 ---
 

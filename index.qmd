@@ -62,7 +62,7 @@ schedule <- tribble(
   ' ',
 
      "Week 4 <br> 9.15.25", 'Data Wrangling', 
-  '{{< fa book-open >}} <a href="https://r4ds.had.co.nz/transform.html" target = "_blank"> R4DS Transform</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/07-wrangling.html" target = "_blank">wrangling</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-15-pivotjoin.html" target = "_blank"> Pivot + Join</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.had.co.nz/transform.html" target = "_blank"> R4DS Transform</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/07-wrangling.html" target = "_blank">wrangling</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-15-pivotjoin.html" target = "_blank"> Pivot + Join</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws5_ds2_f25_join.pdf" target = "_blank">WS 5 - Join</a>',
 
     '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 3</a> - due 9.17.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 1 9.17.25',
   ' ',
