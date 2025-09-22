@@ -1,7 +1,7 @@
 ---
 title: Variable Types
 author: "Jo Hardin"
-subtitle: "February 17 + 19, 2025"
+subtitle: "September 22 + 24, 2025"
 format:
   revealjs:
     incremental: false
@@ -25,7 +25,7 @@ options(pillar.width = 70)
 
 # Variable Types
 
-Some new variable types: 
+Some variable types: 
 
 :::: {.columns}
 
@@ -45,7 +45,7 @@ Some new variable types:
 A variable's type determines the values that the variable can take on and the operations that can be performed on it.  Specifying variable types ensures the data's integrity and increases performance. 
 
 
-# Agenda  2/17/25
+# Agenda  9/22/25
 
 1. Character strings
 2. `str_*()` functions
@@ -151,6 +151,7 @@ str_replace_all(fruits, "a", "x")
 ```{r}
 fruits
 str_detect(fruits, "a")
+str_detect(fruits, "A")
 ```
 
 
@@ -185,6 +186,48 @@ starwars |>
 ```
 :::
 
+## `str_length()`
+
+Returns the number of pieces in a string (usually a single letter, number, or space).
+
+```{r}
+x <- c("apple", "banana", "cherry pie", "")
+
+str_length(x)
+```
+
+
+## `str_count()`
+
+Counts the number of times `pattern` is found within each element of `string`.
+
+```{r}
+x <- c("apple pie apple tart", "banana apple", "cherry")
+
+str_count(x, "apple")
+```
+
+
+## `str_extract*()`
+
+`str_extract()` extracts the first complete match from each string, 
+
+`str_extract_all()` extracts all matches from each string.
+
+```{r}
+x <- c("apple pie apple tart", "banana apple", "cherry")
+
+
+str_extract(x, "a")
+
+str_extract_all(x, "a")
+
+str_extract(x, "apple")
+
+str_extract_all(x, "apple")
+```
+
+
 ## **stringr** functions
 
 The **stringr** package within tidyverse contains lots of functions to help process strings. Letting x be a string variable...
@@ -203,6 +246,9 @@ tribble(
 "`str_to_lower()`",	"`x`", "a modified string",
 "`str_to_upper()`",	"`x`", "a modified string",
 "`str_length()`",	"`x`", "a number",
+"`str_count()`", "`x`, `pattern`", "an integer vector",
+"`str_extract()`", "`x`, `pattern`", "a character vector",
+"`str_extract_all()`", "`x`, `pattern`", "a list of character vectors"
 ) |> 
   kableExtra::kable()
 ```
@@ -215,6 +261,8 @@ Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" targ
 Do the functions that were built to handle strings work if the variable is not a string?
 
 ## Starbucks data
+
+The `str_*()` functions work:
 
 ::: {.panel-tabset}
 
@@ -259,7 +307,7 @@ starbucks |>
 :::
 
 
-# Agenda  2/19/25
+# Agenda  9/24/25
 
 1. Factor variables, `fct_*()` functions
 2. Time and date objects, **lubridate** package

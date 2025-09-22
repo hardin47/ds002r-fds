@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/syllabus.html</loc>
-    <lastmod>2025-08-23T22:45:57.595Z</lastmod>
+    <lastmod>2025-09-21T21:53:14.297Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/slides/2024-01-17-editing-db.html</loc>
@@ -154,7 +154,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/index.html</loc>
-    <lastmod>2025-09-17T17:56:24.083Z</lastmod>
+    <lastmod>2025-09-22T03:58:40.813Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/handout/ws1_sds261_j24.html</loc>
@@ -391,5 +391,9 @@
   <url>
     <loc>https://ds002r-fds.netlify.app/slides/2025-09-15-pivotjoin.html</loc>
     <lastmod>2025-09-18T01:37:52.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2025-09-22-types.html</loc>
+    <lastmod>2025-09-22T17:19:55.701Z</lastmod>
   </url>
 </urlset>
