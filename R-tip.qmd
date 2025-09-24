@@ -39,7 +39,17 @@ schedule <- tribble(
 
   'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render',
   
-  'Tip 8', 'cmd + shift + opt + j', 'window to jump between chunks', 'cntrl + shift + opt + j for PC'
+  'Tip 8', 'cmd + shift + opt + j', 'window to jump between chunks', 'cntrl + shift + opt + j for PC',
+  
+  'Tip 9', 'cmd + shift + M', 'produces a pipe',  'cntrl + shift + M for PC <br> Tools -> Global Options... -> Code to get the native pipe',
+  
+  'Tip 10', 'highlight with mouse and hit quotation', 'will put quotes around the highlighted phrase', ' ',
+  
+  'Tip 11', 'highlight with mouse and hit parenthesis', 'will put parentheses around the highlighted phrase', ' ',
+  
+  'Tip 12', 'cmd + opt + B', 'runs code start to line', 'cntrl + opt + B on PC <br> (This one did not work on my keyboard)',
+  
+  'Tip 13', 'cmd + opt + E', 'runs code line to end', 'cntrl + opt + E on PC <br> (This one did not work on my keyboard)',
   
   )
 ```
@@ -49,7 +59,6 @@ schedule <- tribble(
 #| echo: false
   'Tip 2', '<img src = "images/add_chunk.png">', 'adds a new R chunk',
   'look for it at top of Quarto doc',
-
   
   'Tip 5', '`\\textcolor{red}{this text will be red}`', 'LaTeX formatting to change the text color', 'when render to pdf (different syntax for render to html)',
   
@@ -60,15 +69,11 @@ schedule <- tribble(
   
   'Tip 9', 'Tools -> Global Options... -> Spelling', 'allows for real-time spell check', ' ',
   
-  'Tip 10', 'cmd + shift + M', 'produces a pipe',  'cntrl + shift + M for PC <br> Tools -> Global Options... -> Code to get the native pipe',
   
   'Tip 11', 'opt + -', "produces the assignment operator, `<-`", ' ',
   
   'Tip 12', 'R was adopted as an open source version of S', ' ', 'It was written by Ross Ihaka and Robert Gentleman, which is why they called it R',
   
-  'Tip 13', 'highlight with mouse and hit quotation', 'will put quotes around the highlighted phrase', ' ',
-  
-   'Tip 14', 'highlight with mouse and hit parenthesis', 'will put parentheses around the highlighted phrase', ' ',
   
   'Tip 15', 'Session -> Restart R', 'rerstart the R session (without restarting RStudio)', 'shift + cmd / cntrl + 0',
 
