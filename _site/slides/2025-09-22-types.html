@@ -637,7 +637,7 @@ character(0)</code></pre>
 </table>
 </div>
 </div>
-<p>Use the <a href="https://rstudio.github.io/cheatsheets/html/strings.html" target="_blank"><strong>stringr</strong> cheatsheet</a>.</p>
+<p>Use the <a href="https://rstudio.github.io/cheatsheets/html/strings.html" target="_blank"><strong>stringr</strong> cheat sheet</a>.</p>
 </section></section>
 <section>
 <section id="str_-functions-on-non-strings" class="title-slide slide level1 center">
@@ -947,61 +947,128 @@ Caused by error in `fct_reorder()`:
 <div class="tab-content">
 <div id="tabset-7-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"bear"</span>, <span class="st">"dear"</span>, <span class="st">"banana"</span>))</span>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"bear"</span>, <span class="st">"dear"</span>, <span class="st">"banana"</span>, <span class="st">"apple"</span>, <span class="st">"apple"</span>, <span class="st">"dear"</span>))</span>
 <span id="cb70-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] apple  bear   dear   banana
+<pre><code>[1] apple  bear   dear   banana apple  apple  dear  
 Levels: apple banana bear dear</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="fu">fct_recode</span>(x, <span class="at">fruit =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"banana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] fruit bear  dear  fruit
+<pre><code>[1] fruit bear  dear  fruit fruit fruit dear 
 Levels: fruit bear dear</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-7-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">data.frame</span>(<span class="at">words =</span> x) <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a>new_fruit <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">words =</span> x) <span class="sc">|&gt;</span> </span>
 <span id="cb74-2"><a></a>  <span class="fu">mutate</span>(<span class="at">x_recode =</span> <span class="fu">fct_recode</span>(words, <span class="at">fruit =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"banana"</span>),</span>
 <span id="cb74-3"><a></a>         <span class="at">x_rewrite =</span> <span class="fu">ifelse</span>(words <span class="sc">==</span> <span class="st">"apple"</span>, <span class="st">"fruit"</span>,</span>
-<span id="cb74-4"><a></a>                            <span class="fu">ifelse</span>(words <span class="sc">==</span> <span class="st">"banana"</span>, <span class="st">"fruit"</span>, words))) <span class="sc">|&gt;</span> </span>
-<span id="cb74-5"><a></a>  <span class="fu">str</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb74-4"><a></a>                            <span class="fu">ifelse</span>(words <span class="sc">==</span> <span class="st">"banana"</span>, <span class="st">"fruit"</span>, words))) </span>
+<span id="cb74-5"><a></a></span>
+<span id="cb74-6"><a></a>new_fruit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>'data.frame':   4 obs. of  3 variables:
- $ words    : Factor w/ 4 levels "apple","banana",..: 1 3 4 2
- $ x_recode : Factor w/ 3 levels "fruit","bear",..: 1 2 3 1
- $ x_rewrite: chr  "fruit" "3" "4" "fruit"</code></pre>
+<pre><code>   words x_recode x_rewrite
+1  apple    fruit     fruit
+2   bear     bear         3
+3   dear     dear         4
+4 banana    fruit     fruit
+5  apple    fruit     fruit
+6  apple    fruit     fruit
+7   dear     dear         4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a>new_fruit <span class="sc">|&gt;</span> </span>
+<span id="cb76-2"><a></a>  <span class="fu">str</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   7 obs. of  3 variables:
+ $ words    : Factor w/ 4 levels "apple","banana",..: 1 3 4 2 1 1 4
+ $ x_recode : Factor w/ 3 levels "fruit","bear",..: 1 2 3 1 1 1 3
+ $ x_rewrite: chr  "fruit" "3" "4" "fruit" ...</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-7-3">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a><span class="co"># If you make a mistake you'll get a warning</span></span>
-<span id="cb76-2"><a></a><span class="fu">fct_recode</span>(x, <span class="at">fruit =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"bananana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a><span class="co"># If you make a mistake you'll get a warning</span></span>
+<span id="cb78-2"><a></a><span class="fu">fct_recode</span>(x, <span class="at">fruit =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"bananana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Unknown levels in `f`: bananana</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] fruit  bear   dear   banana
+<pre><code>[1] fruit  bear   dear   banana fruit  fruit  dear  
 Levels: fruit banana bear dear</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-7-4">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a><span class="co"># If you name the level NULL it will be removed</span></span>
-<span id="cb78-2"><a></a><span class="fu">fct_recode</span>(x, <span class="at">NULL =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"banana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a></a><span class="co"># If you name the level NULL it will be removed</span></span>
+<span id="cb81-2"><a></a><span class="fu">fct_recode</span>(x, <span class="at">NULL =</span> <span class="st">"apple"</span>, <span class="at">fruit =</span> <span class="st">"banana"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &lt;NA&gt;  bear  dear  fruit
+<pre><code>[1] &lt;NA&gt;  bear  dear  fruit &lt;NA&gt;  &lt;NA&gt;  dear 
 Levels: fruit bear dear</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-7-5">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a></a><span class="co"># Wrap the left hand side in quotes if it contains special variables</span></span>
-<span id="cb80-2"><a></a><span class="fu">fct_recode</span>(x, <span class="st">"an apple"</span> <span class="ot">=</span> <span class="st">"apple"</span>, <span class="st">"a bear"</span> <span class="ot">=</span> <span class="st">"bear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a></a><span class="co"># Wrap the left hand side in quotes if it contains special variables</span></span>
+<span id="cb83-2"><a></a><span class="fu">fct_recode</span>(x, <span class="st">"an apple"</span> <span class="ot">=</span> <span class="st">"apple"</span>, <span class="st">"a bear"</span> <span class="ot">=</span> <span class="st">"bear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] an apple a bear   dear     banana  
+<pre><code>[1] an apple a bear   dear     banana   an apple an apple dear    
 Levels: an apple banana a bear dear</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="change-factor-to-character" class="slide level2">
+<h2>Change factor to character</h2>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">data</a></li><li><a href="#tabset-8-2"><code>as.character()</code></a></li><li><a href="#tabset-8-3"><code>as.numeric()</code></a></li><li><a href="#tabset-8-4"><code>ifelse()</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a></a>f <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"cat"</span>))</span>
+<span id="cb85-2"><a></a>f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] cat dog cat
+Levels: cat dog</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a></a><span class="fu">unclass</span>(f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 1
+attr(,"levels")
+[1] "cat" "dog"</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-8-2">
+<p>… produces the <strong>labels</strong> because that is how the function is <em>defined</em>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a></a><span class="fu">as.character</span>(f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "cat" "dog" "cat"</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-8-3">
+<p>… produces the <strong>integer codes</strong> because that is how the function is <em>defined</em>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a></a><span class="fu">as.numeric</span>(f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 1</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-8-4">
+<p>… coerces everything to the lowest common denominator. That is, it strips the labels off the factor variable, uses the integers, and converts them to character strings.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a></a><span class="fu">ifelse</span>(f <span class="sc">==</span> <span class="st">"cat"</span>, <span class="st">"meow"</span>, f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "meow" "2"    "meow"</code></pre>
 </div>
 </div>
 </div>
@@ -1011,47 +1078,49 @@ Levels: an apple banana a bear dear</code></pre>
 <section id="change-character-to-factor" class="slide level2">
 <h2>Change character to factor</h2>
 <div class="panel-tabset">
-<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">OG data</a></li><li><a href="#tabset-8-2">New factor</a></li></ul>
+<ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">OG data</a></li><li><a href="#tabset-9-2">New factor</a></li></ul>
 <div class="tab-content">
-<div id="tabset-8-1">
+<div id="tabset-9-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a>starbucks</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a></a>starbucks <span class="sc">|&gt;</span> </span>
+<span id="cb95-2"><a></a>  <span class="fu">select</span>(item, calories, type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 77 × 7
-   item                       calories   fat  carb fiber protein type 
-   &lt;chr&gt;                         &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt;
- 1 "8-Grain Roll"                  350     8    67     5      10 bake…
- 2 "Apple Bran Muffin"             350     9    64     7       6 bake…
- 3 "Apple Fritter"                 420    20    59     0       5 bake…
- 4 "Banana Nut Loaf"               490    19    75     4       7 bake…
- 5 "Birthday Cake Mini Dough…      130     6    17     0       0 bake…
- 6 "Blueberry Oat Bar"             370    14    47     5       6 bake…
- 7 "Blueberry Scone"               460    22    61     2       7 bake…
- 8 "Bountiful Blueberry Muff…      370    14    55     0       6 bake…
- 9 "Butter Croissant "             310    18    32     0       5 bake…
-10 "Cheese Danish"                 420    25    39     0       7 bake…
+<pre><code># A tibble: 77 × 3
+   item                          calories type  
+   &lt;chr&gt;                            &lt;int&gt; &lt;fct&gt; 
+ 1 "8-Grain Roll"                     350 bakery
+ 2 "Apple Bran Muffin"                350 bakery
+ 3 "Apple Fritter"                    420 bakery
+ 4 "Banana Nut Loaf"                  490 bakery
+ 5 "Birthday Cake Mini Doughnut"      130 bakery
+ 6 "Blueberry Oat Bar"                370 bakery
+ 7 "Blueberry Scone"                  460 bakery
+ 8 "Bountiful Blueberry Muffin"       370 bakery
+ 9 "Butter Croissant "                310 bakery
+10 "Cheese Danish"                    420 bakery
 # ℹ 67 more rows</code></pre>
 </div>
 </div>
 </div>
-<div id="tabset-8-2">
+<div id="tabset-9-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a></a>starbucks <span class="sc">|&gt;</span> </span>
-<span id="cb84-2"><a></a>  <span class="fu">mutate</span>(<span class="at">item =</span> <span class="fu">as.factor</span>(item))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a></a>starbucks <span class="sc">|&gt;</span> </span>
+<span id="cb97-2"><a></a>  <span class="fu">mutate</span>(<span class="at">item_fac =</span> <span class="fu">as.factor</span>(item)) <span class="sc">|&gt;</span> </span>
+<span id="cb97-3"><a></a>  <span class="fu">select</span>(item, calories, type, item_fac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 77 × 7
-   item                       calories   fat  carb fiber protein type 
-   &lt;fct&gt;                         &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt;
- 1 "8-Grain Roll"                  350     8    67     5      10 bake…
- 2 "Apple Bran Muffin"             350     9    64     7       6 bake…
- 3 "Apple Fritter"                 420    20    59     0       5 bake…
- 4 "Banana Nut Loaf"               490    19    75     4       7 bake…
- 5 "Birthday Cake Mini Dough…      130     6    17     0       0 bake…
- 6 "Blueberry Oat Bar"             370    14    47     5       6 bake…
- 7 "Blueberry Scone"               460    22    61     2       7 bake…
- 8 "Bountiful Blueberry Muff…      370    14    55     0       6 bake…
- 9 "Butter Croissant "             310    18    32     0       5 bake…
-10 "Cheese Danish"                 420    25    39     0       7 bake…
+<pre><code># A tibble: 77 × 4
+   item                          calories type   item_fac             
+   &lt;chr&gt;                            &lt;int&gt; &lt;fct&gt;  &lt;fct&gt;                
+ 1 "8-Grain Roll"                     350 bakery "8-Grain Roll"       
+ 2 "Apple Bran Muffin"                350 bakery "Apple Bran Muffin"  
+ 3 "Apple Fritter"                    420 bakery "Apple Fritter"      
+ 4 "Banana Nut Loaf"                  490 bakery "Banana Nut Loaf"    
+ 5 "Birthday Cake Mini Doughnut"      130 bakery "Birthday Cake Mini …
+ 6 "Blueberry Oat Bar"                370 bakery "Blueberry Oat Bar"  
+ 7 "Blueberry Scone"                  460 bakery "Blueberry Scone"    
+ 8 "Bountiful Blueberry Muffin"       370 bakery "Bountiful Blueberry…
+ 9 "Butter Croissant "                310 bakery "Butter Croissant "  
+10 "Cheese Danish"                    420 bakery "Cheese Danish"      
 # ℹ 67 more rows</code></pre>
 </div>
 </div>
@@ -1061,7 +1130,7 @@ Levels: an apple banana a bear dear</code></pre>
 </section>
 <section id="forcats-functions" class="slide level2">
 <h2><strong>forcats</strong> functions</h2>
-<p>The <strong>forcats</strong> package within tidyverse contains lots of functions to help process factor variables Use the <a href="https://rstudio.github.io/cheatsheets/html/factors.html" target="_blank"><strong>forcats</strong> cheatsheet</a>. We’ll focus on the most common functions.</p>
+<p>The <strong>forcats</strong> package within tidyverse contains lots of functions to help process factor variables Use the <a href="https://rstudio.github.io/cheatsheets/html/factors.html" target="_blank"><strong>forcats</strong> cheat sheet</a>. We’ll focus on the most common functions.</p>
 <ul>
 <li>functions for changing the <strong>order</strong> of factor levels
 <ul>
@@ -1082,25 +1151,28 @@ Levels: an apple banana a bear dear</code></pre>
 <section id="time-and-date-objects" class="title-slide slide level1 center">
 <h1>Time and date objects</h1>
 <p>If the variable is formatted as a time or date object, you will find that there are very convenient ways to access, wrangle, and plot the information.</p>
+</section>
+<section id="types-of-time-and-date-objects" class="slide level2">
+<h2>Types of time and date objects</h2>
 <p>There are 3 types of date/time data that refer to an instant in time:</p>
 <p>A <strong>date</strong>. Tibbles print this as <code>&lt;date&gt;</code>.</p>
 <p>A <strong>time</strong> within a day. Tibbles print this as <code>&lt;time&gt;</code>.</p>
-<p>A <strong>date-time</strong> is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as <code>&lt;dttm&gt;</code>. Base R calls these POSIXct, but that doesn’t exactly trip off the tongue.</p>
+<p>A <strong>date-time</strong> is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as <code>&lt;dttm&gt;</code>. Base R calls these POSIXct, but that doesn’t exactly flow off the tongue.</p>
 </section>
-<section id="formatting-time-variablse" class="slide level2">
-<h2>Formatting time variablse</h2>
+<section id="formatting-time-variables" class="slide level2">
+<h2>Formatting time variables</h2>
 
 <img data-src="../images/xkcd_iso_8601.png" style="width:90.0%" alt="xkcd comic listing the many different ways that date objects can be written." class="r-stretch quarto-figure-center"><p class="caption">image credit: https://xkcd.com/1179/</p></section>
 <section id="what-time-is-it" class="slide level2">
 <h2>What time is it?</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a></a><span class="fu">today</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-09-22"</code></pre>
+<pre><code>[1] "2025-09-24"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a><span class="fu">now</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a></a><span class="fu">now</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-09-22 10:20:05 PDT"</code></pre>
+<pre><code>[1] "2025-09-24 10:12:08 PDT"</code></pre>
 </div>
 </div>
 </section>
@@ -1108,15 +1180,15 @@ Levels: an apple banana a bear dear</code></pre>
 <h2>Creating dates</h2>
 <p><code>ymd()</code> and friends create dates</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a></a><span class="fu">ymd</span>(<span class="st">"2025-02-19"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a></a><span class="fu">ymd</span>(<span class="st">"2025-02-19"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-02-19"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a></a><span class="fu">mdy</span>(<span class="st">"February 19th, 2025"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a></a><span class="fu">mdy</span>(<span class="st">"February 19th, 2025"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-02-19"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a></a><span class="fu">dmy</span>(<span class="st">"19-Feb-2025"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a></a><span class="fu">dmy</span>(<span class="st">"19-Feb-2025"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-02-19"</code></pre>
 </div>
@@ -1126,11 +1198,11 @@ Levels: an apple banana a bear dear</code></pre>
 <h2>… with times</h2>
 <p>To create a date-time, add an underscore and one or more of “h”, “m”, and “s” to the name of the parsing function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a></a><span class="fu">ymd_hms</span>(<span class="st">"2025-02-19 11:45:59"</span>, <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a></a><span class="fu">ymd_hms</span>(<span class="st">"2025-02-19 11:45:59"</span>, <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-02-19 11:45:59 PST"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a></a><span class="fu">mdy_hm</span>(<span class="st">"02/19/2025 15:01"</span>)  <span class="co"># default is UTC = GMT</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a></a><span class="fu">mdy_hm</span>(<span class="st">"02/19/2025 15:01"</span>)  <span class="co"># default is UTC = GMT</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-02-19 15:01:00 UTC"</code></pre>
 </div>
@@ -1167,30 +1239,30 @@ Levels: an apple banana a bear dear</code></pre>
 <section id="basics-in-lubridate" class="slide level2">
 <h2>basics in <code>lubridate</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb100-2"><a></a>rightnow <span class="ot">&lt;-</span> <span class="fu">now</span>()</span>
-<span id="cb100-3"><a></a>rightnow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb113-2"><a></a>rightnow <span class="ot">&lt;-</span> <span class="fu">now</span>()</span>
+<span id="cb113-3"><a></a>rightnow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-09-22 10:20:05 PDT"</code></pre>
+<pre><code>[1] "2025-09-24 10:12:08 PDT"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a></a><span class="fu">day</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a></a><span class="fu">day</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 22</code></pre>
+<pre><code>[1] 24</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a></a><span class="fu">week</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a></a><span class="fu">week</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 38</code></pre>
+<pre><code>[1] 39</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a></a><span class="fu">month</span>(rightnow, <span class="at">label=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a></a><span class="fu">month</span>(rightnow, <span class="at">label=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a></a><span class="fu">month</span>(rightnow, <span class="at">label=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a></a><span class="fu">month</span>(rightnow, <span class="at">label=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] Sep
 12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a></a><span class="fu">year</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a></a><span class="fu">year</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2025</code></pre>
 </div>
@@ -1199,29 +1271,29 @@ Levels: an apple banana a bear dear</code></pre>
 <section id="basics-in-lubridate-1" class="slide level2">
 <h2>basics in <code>lubridate</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a></a><span class="fu">minute</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb125"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a></a><span class="fu">minute</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 20</code></pre>
+<pre><code>[1] 12</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a></a><span class="fu">hour</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a></a><span class="fu">hour</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a></a><span class="fu">yday</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a></a><span class="fu">yday</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 265</code></pre>
+<pre><code>[1] 267</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a></a><span class="fu">mday</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a></a><span class="fu">mday</span>(rightnow)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 22</code></pre>
+<pre><code>[1] 24</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a></a><span class="fu">wday</span>(rightnow, <span class="at">label=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a></a><span class="fu">wday</span>(rightnow, <span class="at">label=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>[1] 4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a></a><span class="fu">wday</span>(rightnow, <span class="at">label=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb135"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a></a><span class="fu">wday</span>(rightnow, <span class="at">label=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] Mon
+<pre><code>[1] Wed
 Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 </div>
 </div>
@@ -1229,8 +1301,8 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <section id="working-with-a-date-object" class="slide level2">
 <h2>Working with a date object</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a></a>jan31 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2025-01-31"</span>)</span>
-<span id="cb124-2"><a></a>jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a></a>jan31 <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">"2025-01-31"</span>)</span>
+<span id="cb137-2"><a></a>jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "2025-01-31" NA           "2025-03-31" NA           "2025-05-31"
  [6] NA           "2025-07-31" "2025-08-31" NA           "2025-10-31"
@@ -1239,11 +1311,11 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a></a><span class="fu">floor_date</span>(jan31, <span class="st">"month"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb139"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a></a><span class="fu">floor_date</span>(jan31, <span class="st">"month"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-01-01"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a></a><span class="fu">floor_date</span>(jan31, <span class="st">"month"</span>) <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb141"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a></a><span class="fu">floor_date</span>(jan31, <span class="st">"month"</span>) <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "2025-02-01" "2025-03-04" "2025-04-01" "2025-05-02" "2025-06-01"
  [6] "2025-07-02" "2025-08-01" "2025-09-01" "2025-10-02" "2025-11-01"
@@ -1253,7 +1325,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a></a>jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb143"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a></a>jan31 <span class="sc">+</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>) <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">31</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "2025-03-03" NA           "2025-05-01" NA           "2025-07-01"
  [6] NA           "2025-08-31" "2025-10-01" NA           "2025-12-01"
@@ -1263,7 +1335,7 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a></a>jan31 <span class="sc">%m+%</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a></a>jan31 <span class="sc">%m+%</span> <span class="fu">months</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">11</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "2025-01-31" "2025-02-28" "2025-03-31" "2025-04-30" "2025-05-31"
  [6] "2025-06-30" "2025-07-31" "2025-08-31" "2025-09-30" "2025-10-31"
@@ -1275,8 +1347,8 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <section id="nyc-flights" class="slide level2">
 <h2>NYC flights</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb134-2"><a></a><span class="fu">names</span>(flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a></a><span class="fu">library</span>(nycflights13)</span>
+<span id="cb147-2"><a></a><span class="fu">names</span>(flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "year"           "month"          "day"            "dep_time"      
  [5] "sched_dep_time" "dep_delay"      "arr_time"       "sched_arr_time"
@@ -1290,13 +1362,13 @@ Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
 <h2>NYC flights</h2>
 <p>Creating a date object from variables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a></a>flightsWK <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span>  </span>
-<span id="cb136-2"><a></a>   <span class="fu">mutate</span>(<span class="at">ymdday =</span> <span class="fu">ymd</span>(<span class="fu">str_c</span>(year, month, day, <span class="at">sep=</span><span class="st">"-"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb136-3"><a></a>   <span class="fu">mutate</span>(<span class="at">weekdy =</span> <span class="fu">wday</span>(ymdday, <span class="at">label=</span><span class="cn">TRUE</span>), </span>
-<span id="cb136-4"><a></a>          <span class="at">whichweek =</span> <span class="fu">week</span>(ymdday)) </span>
-<span id="cb136-5"><a></a></span>
-<span id="cb136-6"><a></a>flightsWK <span class="sc">|&gt;</span>  <span class="fu">select</span>(year, month, day, ymdday, weekdy, whichweek, </span>
-<span id="cb136-7"><a></a>                     dep_time, arr_time) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb149"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a></a>flightsWK <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span>  </span>
+<span id="cb149-2"><a></a>   <span class="fu">mutate</span>(<span class="at">ymdday =</span> <span class="fu">ymd</span>(<span class="fu">str_c</span>(year, month, day, <span class="at">sep=</span><span class="st">"-"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb149-3"><a></a>   <span class="fu">mutate</span>(<span class="at">weekdy =</span> <span class="fu">wday</span>(ymdday, <span class="at">label=</span><span class="cn">TRUE</span>), </span>
+<span id="cb149-4"><a></a>          <span class="at">whichweek =</span> <span class="fu">week</span>(ymdday)) </span>
+<span id="cb149-5"><a></a></span>
+<span id="cb149-6"><a></a>flightsWK <span class="sc">|&gt;</span>  <span class="fu">select</span>(year, month, day, ymdday, weekdy, whichweek, </span>
+<span id="cb149-7"><a></a>                     dep_time, arr_time) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 336,776 × 8
     year month   day ymdday     weekdy whichweek dep_time arr_time

@@ -1159,7 +1159,7 @@ str_sub(x, start = c(1, 3), end = c(2, 5))
 #| eval: false
 #| echo: true
 fruits <- c("one apple", "two pears", "three bananas")
-str_replace(fruits, c("a", "e", "i"), "-")
+str_replace(fruits, pattern = c("a", "e", "i"), replacement = "-")
 ```
 [^40]: a. "one -pple"     "two p-ars"     "three bananas"  (because `str_replace()` is vectorized)
 
@@ -1179,7 +1179,7 @@ str_replace(fruits, c("a", "e", "i"), "-")
 #| echo: true
 
 fruit <- c("apple", "banana", "pear", "pineapple")
-str_detect(fruit, "a")
+str_detect(fruit, pattern = "a")
 ```
   
 
@@ -1262,7 +1262,7 @@ fct_recode(x, fruit = "apple", fruit = "banana")
 #| eval: false
 #| echo: true
 library(lubridate)
-today <- ymd("2025-02-19")
+today <- now()
 month(today)
 month(today, label = TRUE)
 ```
@@ -1272,18 +1272,18 @@ month(today, label = TRUE)
 ---
 
 (@) What does this number mean?[^44]
-    a. Today is the 8th day of the month.
-    b. Today is the 8th day of the year.
-    c. Today is the 8th week of the month.
-    d. Today is the 8th week of the year.
+    a. Today is the `r week(now())`th day of the month.
+    b. Today is the `r week(now())`th day of the year.
+    c. Today is the `r week(now())`th week of the month.
+    d. Today is the `r week(now())`th week of the year.
 
 ```{r}
 #| echo: true
-today <- ymd("2025-02-19")
+today <- now()
 week(today)
 ```
 
-[^44]: d. Today is the 8th week of the year.
+[^44]: d. Today is the `r week(now())`th week of the year.
 
 ---
 
@@ -1300,15 +1300,6 @@ yday(today)
 ```
 
 [^45]: a. Day of month and day of year. (Day of year is often called the "Julian Day".)
-
----
-
-```{r}
-#| echo: true
-#| eval: true
-mday(today)
-yday(today)
-```
 
 ---
 

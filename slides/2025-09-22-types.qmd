@@ -253,7 +253,7 @@ tribble(
   kableExtra::kable()
 ```
 
-Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheatsheet</a>. 
+Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheat sheet</a>. 
 
 
 # `str_*()` functions on non-strings?
@@ -467,7 +467,7 @@ starbucks |>
 ## recode
 
 ```{r}
-x <- factor(c("apple", "bear", "dear", "banana"))
+x <- factor(c("apple", "bear", "dear", "banana", "apple", "apple", "dear"))
 x
 
 fct_recode(x, fruit = "apple", fruit = "banana")
@@ -475,10 +475,14 @@ fct_recode(x, fruit = "apple", fruit = "banana")
 ## rewrite
 
 ```{r}
-data.frame(words = x) |> 
+new_fruit <- data.frame(words = x) |> 
   mutate(x_recode = fct_recode(words, fruit = "apple", fruit = "banana"),
          x_rewrite = ifelse(words == "apple", "fruit",
-                            ifelse(words == "banana", "fruit", words))) |> 
+                            ifelse(words == "banana", "fruit", words))) 
+
+new_fruit
+
+new_fruit |> 
   str()
 ```
 
@@ -486,6 +490,7 @@ data.frame(words = x) |>
 ## mistake
 
 ```{r}
+#| warning: true
 # If you make a mistake you'll get a warning
 fct_recode(x, fruit = "apple", fruit = "bananana")
 ```
@@ -506,6 +511,47 @@ fct_recode(x, "an apple" = "apple", "a bear" = "bear")
 
 :::
 
+## Change factor to character
+
+
+::: {.panel-tabset}
+
+## data
+
+```{r}
+f <- factor(c("cat", "dog", "cat"))
+f
+
+unclass(f)
+```
+
+## `as.character()`
+
+... produces the **labels** because that is how the function is *defined*.
+
+```{r}
+as.character(f)
+```
+
+
+## `as.numeric()`
+
+... produces the **integer codes** because that is how the function is *defined*.
+
+```{r}
+as.numeric(f)
+```
+
+## `ifelse()`
+
+... coerces everything to the lowest common denominator. That is, it strips the labels off the factor variable, uses the integers, and converts them to character strings.
+
+```{r}
+ifelse(f == "cat", "meow", f)
+```
+
+:::
+
 ## Change character to factor
 
 ::: {.panel-tabset}
@@ -513,14 +559,16 @@ fct_recode(x, "an apple" = "apple", "a bear" = "bear")
 ## OG data
 
 ```{r}
-starbucks
+starbucks |> 
+  select(item, calories, type)
 ```
 
 ## New factor 
 
 ```{r}
 starbucks |> 
-  mutate(item = as.factor(item))
+  mutate(item_fac = as.factor(item)) |> 
+  select(item, calories, type, item_fac)
 ```
 :::
 
@@ -528,7 +576,7 @@ starbucks |>
 
 ## **forcats** functions
 
-The **forcats** package within tidyverse contains lots of functions to help process factor variables Use the <a href = "https://rstudio.github.io/cheatsheets/html/factors.html" target = "_blank">**forcats** cheatsheet</a>. We'll focus on the most common functions. 
+The **forcats** package within tidyverse contains lots of functions to help process factor variables Use the <a href = "https://rstudio.github.io/cheatsheets/html/factors.html" target = "_blank">**forcats** cheat sheet</a>. We'll focus on the most common functions. 
 
 * functions for changing the **order** of factor levels
     - `fct_relevel()` = *manually* reorder levels
@@ -547,15 +595,17 @@ The **forcats** package within tidyverse contains lots of functions to help proc
 
 If the variable is formatted as a time or date object, you will find that there are very convenient ways to access, wrangle, and plot the information.
 
+## Types of time and date objects
+
 There are 3 types of date/time data that refer to an instant in time:
 
 A **date**. Tibbles print this as `<date>`.
 
 A **time** within a day. Tibbles print this as `<time>`.
 
-A **date-time** is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as `<dttm>`. Base R calls these POSIXct, but that doesn’t exactly trip off the tongue.
+A **date-time** is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as `<dttm>`. Base R calls these POSIXct, but that doesn’t exactly flow off the tongue.
 
-## Formatting time variablse
+## Formatting time variables
 
 ```{r, out.width = "90%", fig.cap = "image credit: https://xkcd.com/1179/", fig.alt = "xkcd comic listing the many different ways that date objects can be written.", echo=FALSE}
 knitr::include_graphics("../images/xkcd_iso_8601.png")

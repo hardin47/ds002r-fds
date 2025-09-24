@@ -69,7 +69,7 @@ schedule <- tribble(
 
   
      "Week 5 <br> 9.22.25", 'Data Types', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/factors" target = "_blank"> R4DS Factors</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/strings" target = "_blank"> R4DS Strings</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/08-text-analysis.html" target = "_blank">Text analysis</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-22-types.html" target = "_blank">Data Types</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws6_ds2_f25_strings.pdf" target = "_blank">WS 6 - Strings</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/factors" target = "_blank"> R4DS Factors</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/strings" target = "_blank"> R4DS Strings</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/08-text-analysis.html" target = "_blank">Text analysis</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-22-types.html" target = "_blank">Data Types</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws6_ds2_f25_strings.pdf" target = "_blank">WS 6 - Strings</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws7_ds2_f25_factors.pdf" target = "_blank">WS 7 - Factors</a>',
 
   '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project1">Project 1</a> - due 9.24.25',
   ' ',
