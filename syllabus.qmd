@@ -81,7 +81,7 @@ I (like many people) am still in the process of learning about diverse perspecti
 
 :::{.callout-tip icon=false}
 ### Dates
-* Quizzes on Sep 17, Oct 1, Oct 3, Nov 5, Nov 19, and Dec 3 (in class)
+* Quizzes on Sep 17, Oct 1, Oct 22, Nov 5, Nov 19, and Dec 3 (in class)
 * 9.24.25 Project 1 due
 * 10.8.25 Project 2 due 
 * 10.29.25 Project 3 due
