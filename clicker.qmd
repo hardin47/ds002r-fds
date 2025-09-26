@@ -1312,10 +1312,10 @@ yday(today)
 ```{r}
 #| echo: true
 #| eval: false
-today > ymd("2025-09-01")
+today() > ymd("2025-09-01")
 ```
     
-[^46]: b. FALSE
+[^46]: b. `r today() > ymd("2025-09-01")`
 
 
 ---
