@@ -66,6 +66,17 @@ Quantifiers specify how many repetitions of the pattern.
 knitr::include_graphics("../images/str_funcs.jpg")
 ```
   
+## `str_*()` review:
+
+```{r}
+fruit  # length 80
+
+str_subset(fruit, "b") # length 23
+
+str_extract(fruit, "[aeiou]")  # length 80
+```
+  
+  
 ## Examples of quantifiers
 
 ```{r}
