@@ -76,7 +76,7 @@ schedule <- tribble(
 
   
      "Week 6 <br> 9.29.25", 'Regular Expressions', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-29-regex.html" target = "_blank">Regular expressions</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/regexps.html" target = "_blank"> R4DS Regular expressions</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/09-reg-expr.html" target = "_blank">Regular expressions</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-09-29-regex.html" target = "_blank">Regular expressions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws8_ds2_f25_regex1.pdf" target = "_blank">WS 8 - Regular Expressions</a>',
 
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 4</a> - due 10.1.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 2 10.1.25',
   ' ',

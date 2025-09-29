@@ -1321,7 +1321,7 @@ today() > ymd("2025-09-01")
 ---
 
 
-(@) `str_subset("q[^u]", very.large.word.list)` would not match which of the following?[^47]
+(@) `str_subset(very.large.word.list, "q[^u]")` would not match which of the following?[^47]
     (a) Iraqi
     (b) Iraqian
     (c) Iraq
