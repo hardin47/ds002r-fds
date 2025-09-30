@@ -8,11 +8,11 @@ format: html
 
 ### Overview
 
-You will find a data set containing string / character data.  The data could be on newspaper articles, tweets, songs, scripts, movie reviews, or anything else you can imagine.  Then you will answer questions of interest and tell a story about your data using the string and regular expression skills you have developed.
+You will first find a data set containing string / character data.  The data could be on newspaper articles, tweets, songs, scripts, movie reviews, or anything else you can imagine.  Then you will answer questions of interest and tell a story about your data using the string and regular expression skills you have developed.
 
 Your analysis must contain the following elements:
 
-- at least 3 `str_*()` functions (3 different functions)
+- at least 3 `str_*()` functions (3 different `str_*()` functions)
 - at least 3 regular expressions
 - at least 1 lookaround
 - at least 2 illustrative, well-labeled plots or tables
@@ -90,5 +90,5 @@ as_tibble(NYTimes)
 
 ### Timeline
 
-Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday March 5**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 8, 2025**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
 
