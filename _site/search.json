@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n HW 5 - due 10.15.25\n\n\n\nWeek 9  10.20.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations\n HW 6 - due 10.22.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics\n Project 3 - due 10.29.25\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 7 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n HW 5 - due 10.15.25\n\n\n\nWeek 9  10.20.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations\n HW 6 - due 10.22.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics\n Project 3 - due 10.29.25\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 7 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 8 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "clicker_study.html",
@@ -11967,7 +11967,7 @@
     "href": "slides/2025-03-10-help.html#long-lines-piping",
     "title": "Help me help you",
     "section": "Long lines (piping)",
-    "text": "Long lines (piping)\nIf the arguments to a function don’t all fit on one line, put each argument on its own line and indent:1\n\n# Good\niris |&gt;\n  summarise(\n    Sepal.Length = mean(Sepal.Length),\n    Sepal.Width = mean(Sepal.Width),\n    .by = Species\n  )\n\n# Bad\niris |&gt;\n  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)\n\n# Also bad\nsummarise(\n  iris,\n  Sepal.Length = mean(Sepal.Length),\n  Sepal.Width = mean(Sepal.Width),\n  .by = Species\n)\n\nThe last one isn’t great because it is hard to distinguish the data frame from the other arguments (which play very different roles in the summarize() function)."
+    "text": "Long lines (piping)\nIf the arguments to a function don’t all fit on one line, put each argument on its own line and indent:2\n\n# Good\niris |&gt;\n  summarise(\n    Sepal.Length = mean(Sepal.Length),\n    Sepal.Width = mean(Sepal.Width),\n    .by = Species\n  )\n\n# Bad\niris |&gt;\n  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)\n\n# Also bad\nsummarise(\n  iris,\n  Sepal.Length = mean(Sepal.Length),\n  Sepal.Width = mean(Sepal.Width),\n  .by = Species\n)"
   },
   {
     "objectID": "slides/2025-03-10-help.html#short-lines-piping",
@@ -11987,50 +11987,50 @@
     "objectID": "slides/2025-03-10-help.html#data-communication",
     "href": "slides/2025-03-10-help.html#data-communication",
     "title": "Help me help you",
-    "section": "Data Communication",
-    "text": "Data Communication\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "section": "",
+    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#goals-of-simulating-complicated-models",
     "href": "slides/2025-03-12-iters.html#goals-of-simulating-complicated-models",
     "title": "Iterations",
-    "section": "Goals of Simulating Complicated Models",
-    "text": "Goals of Simulating Complicated Models\nThe goal of simulating a complicated model is not only to create a program which will provide the desired results. We also hope to be able to write code such that:\n\nThe problem is broken down into small pieces.\nThe problem has checks in it to see what works (run the lines inside the functions!).\nuses simple code (as often as possible)."
+    "section": "",
+    "text": "The goal of simulating a complicated model is not only to create a program which will provide the desired results. We also hope to be able to write code such that:\n\nThe problem is broken down into small pieces.\nThe problem has checks in it to see what works (run the lines inside the functions!).\nuses simple code (as often as possible)."
   },
   {
     "objectID": "slides/2025-03-12-iters.html#simulate-to",
     "href": "slides/2025-03-12-iters.html#simulate-to",
     "title": "Iterations",
-    "section": "Simulate to…",
-    "text": "Simulate to…\n\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
+    "section": "",
+    "text": "… estimate probabilities (easier than calculus).\n… understand complicated models."
   },
   {
     "objectID": "slides/2025-03-12-iters.html#aside-ifelse",
     "href": "slides/2025-03-12-iters.html#aside-ifelse",
     "title": "Iterations",
-    "section": "Aside: ifelse()",
-    "text": "Aside: ifelse()\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;=0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
+    "section": "",
+    "text": "data.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;=0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#aside-case_when",
     "href": "slides/2025-03-12-iters.html#aside-case_when",
     "title": "Iterations",
-    "section": "Aside: case_when()",
-    "text": "Aside: case_when()\n\nset.seed(4747)\ndiamonds |&gt; select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(price_cat = case_when(\n    price &gt; 10000 ~ \"expensive\",\n    price &gt; 1500 ~ \"medium\", \n    TRUE ~ \"inexpensive\"))\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive"
+    "section": "",
+    "text": "set.seed(4747)\ndiamonds |&gt; select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(price_cat = case_when(\n    price &gt; 10000 ~ \"expensive\",\n    price &gt; 1500 ~ \"medium\", \n    TRUE ~ \"inexpensive\"))\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#aside-sample",
     "href": "slides/2025-03-12-iters.html#aside-sample",
     "title": "Iterations",
-    "section": "Aside: sample()",
-    "text": "Aside: sample()\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, 5, replace = FALSE) # sample (from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, 5, replace = TRUE) # sample (from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
+    "section": "",
+    "text": "sampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, 5, replace = FALSE) # sample (from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, 5, replace = TRUE) # sample (from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
   },
   {
     "objectID": "slides/2025-03-12-iters.html#aside-set.seed",
     "href": "slides/2025-03-12-iters.html#aside-set.seed",
     "title": "Iterations",
-    "section": "Aside: set.seed()",
-    "text": "Aside: set.seed()\nWhat if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470"
+    "section": "",
+    "text": "What if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#step-1-representing-the-hats",
@@ -12351,22 +12351,22 @@
     "objectID": "slides/2025-03-12-iters.html#simulate-their-meeting",
     "href": "slides/2025-03-12-iters.html#simulate-their-meeting",
     "title": "Iterations",
-    "section": "Simulate their meeting",
-    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n31.887 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n156.773 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.008 sec elapsed"
+    "section": "",
+    "text": "Assume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n31.887 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n156.773 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.008 sec elapsed"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#results",
     "href": "slides/2025-03-12-iters.html#results",
     "title": "Iterations",
-    "section": "Results",
-    "text": "Results\nThe results themselves are equivalent. Differing values due to randomness in the simulation.\n\nmap()for() loopvectorized\n\n\n\nmeet_map |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306\n\n\n\n\n\nmeet_vect |&gt; \n  group_by(result) |&gt; \n  summarize(number = n()) |&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305"
+    "section": "",
+    "text": "The results themselves are equivalent. Differing values due to randomness in the simulation.\n\nmap()for() loopvectorized\n\n\n\nmeet_map |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306\n\n\n\n\n\nmeet_vect |&gt; \n  group_by(result) |&gt; \n  summarize(number = n()) |&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#visualizing-the-meet-up",
     "href": "slides/2025-03-12-iters.html#visualizing-the-meet-up",
     "title": "Iterations",
-    "section": "Visualizing the meet up",
-    "text": "Visualizing the meet up\n\nmeet_map |&gt; \n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) + \n  geom_abline(intercept = 10, slope = 1) + \n  geom_abline(intercept = -10, slope = 1) + \n  scale_color_brewer(palette = \"Paired\")"
+    "section": "",
+    "text": "meet_map |&gt; \n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) + \n  geom_abline(intercept = 10, slope = 1) + \n  geom_abline(intercept = -10, slope = 1) + \n  scale_color_brewer(palette = \"Paired\")"
   },
   {
     "objectID": "slides/2025-03-12-iters.html#example-3-birthday-problem",
@@ -12386,8 +12386,8 @@
     "objectID": "slides/2025-03-12-iters.html#example-1-alex-jordan",
     "href": "slides/2025-03-12-iters.html#example-1-alex-jordan",
     "title": "Iterations",
-    "section": "Example 1: Alex & Jordan",
-    "text": "Example 1: Alex & Jordan\nConsider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer, Kaplan, and Horton 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?"
+    "section": "",
+    "text": "Consider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer, Kaplan, and Horton 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?"
   },
   {
     "objectID": "slides/2025-03-10-help.html",
@@ -12499,7 +12499,7 @@
     "href": "slides/2025-03-26-perm.html#statistics-without-the-agonizing-pain",
     "title": "Permutation Tests",
     "section": "Statistics Without the Agonizing Pain",
-    "text": "Statistics Without the Agonizing Pain\n\nJohn Rauser of Pintrest (now Amazon), speaking at Strata + Hadoop 2014. https://blog.revolutionanalytics.com/2014/10/statistics-doesnt-have-to-be-that-hard.html"
+    "text": "Statistics Without the Agonizing Pain\n\n\n\n\n\nJohn Rauser of Pintrest (now Amazon), speaking at Strata + Hadoop 2014. https://blog.revolutionanalytics.com/2014/10/statistics-doesnt-have-to-be-that-hard.html"
   },
   {
     "objectID": "slides/2025-03-26-perm.html#logic-of-hypothesis-tests",
@@ -12625,14 +12625,14 @@
     "href": "slides/2025-04-02-ethics.html#stand-your-ground",
     "title": "Ethics in Data Science",
     "section": "Stand Your Ground",
-    "text": "Stand Your Ground\n\nReproduction of a data graphic reporting the number of gun deaths in Florida over time. The original image was published by Reuters. (Baumer, Kaplan, and Horton 2021)"
+    "text": "Stand Your Ground\n\n\n\n\n\nReproduction of a data graphic reporting the number of gun deaths in Florida over time. The original image was published by Reuters. (Baumer, Kaplan, and Horton 2021)"
   },
   {
     "objectID": "slides/2025-04-02-ethics.html#climate",
     "href": "slides/2025-04-02-ethics.html#climate",
     "title": "Ethics in Data Science",
     "section": "Climate",
-    "text": "Climate\n\nA tweet by National Review on December 14, 2015 showing the change in global temperature over time. (Baumer, Kaplan, and Horton 2021)"
+    "text": "Climate\n\n\n\n\n\nA tweet by National Review on December 14, 2015 showing the change in global temperature over time. (Baumer, Kaplan, and Horton 2021)"
   },
   {
     "objectID": "slides/2025-04-02-ethics.html#ga-covid-19-confirmed-cases",
@@ -12737,35 +12737,35 @@
     "href": "slides/2025-04-02-ethics.html#your-role",
     "title": "Ethics in Data Science",
     "section": "Your role",
-    "text": "Your role\nIndividual control:\n\n\ncreate reproducible and extensible work\n\n\nClearly identify the questions and objectives that drive each project and use to guide both planning and refinement.\n\n\nBe open to changing our methods and conclusions in response to new knowledge.\n\n\nPresent our work in ways that empower others to make better-informed decisions.\n\n\nInstitutional control:\n\n\nBuild teams with diverse ideas, backgrounds, and strengths.\n\n\nProtect the privacy and security of individuals represented in our data."
+    "text": "Your role\n\nIndividual control:\n\n\ncreate reproducible and extensible work\n\n\nClearly identify the questions and objectives that drive each project and use to guide both planning and refinement.\n\n\nBe open to changing our methods and conclusions in response to new knowledge.\n\n\nPresent our work in ways that empower others to make better-informed decisions.\n\n\n\n\nInstitutional control:\n\n\nBuild teams with diverse ideas, backgrounds, and strengths.\n\n\nProtect the privacy and security of individuals represented in our data."
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#important-tool",
     "href": "slides/2025-04-07-webscrape.html#important-tool",
     "title": "Web Scraping",
-    "section": "Important tool",
-    "text": "Important tool\nOur approach to web scraping relies on the Chrome browser and an extension called SelectorGadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc."
+    "section": "",
+    "text": "Our approach to web scraping relies on the Chrome browser and an extension called SelectorGadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc."
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#data-acquisition",
     "href": "slides/2025-04-07-webscrape.html#data-acquisition",
     "title": "Web Scraping",
-    "section": "Data Acquisition",
-    "text": "Data Acquisition\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "section": "",
+    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#reading-the-student-life",
     "href": "slides/2025-04-07-webscrape.html#reading-the-student-life",
     "title": "Web Scraping",
-    "section": "Reading The Student Life",
-    "text": "Reading The Student Life\n\nHow often do you read The Student Life?\na. Every day\nb. 3-5 times a week\nc. Once a week\nd. Rarely"
+    "section": "",
+    "text": "How often do you read The Student Life?\na. Every day\nb. 3-5 times a week\nc. Once a week\nd. Rarely"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#reading-the-student-life-1",
     "href": "slides/2025-04-07-webscrape.html#reading-the-student-life-1",
     "title": "Web Scraping",
-    "section": "Reading The Student Life",
-    "text": "Reading The Student Life\n\nWhat do you think is the most common word in the titles of The Student Life opinion pieces?"
+    "section": "",
+    "text": "What do you think is the most common word in the titles of The Student Life opinion pieces?"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#analyzing-the-student-life",
@@ -12778,8 +12778,8 @@
     "objectID": "slides/2025-04-07-webscrape.html#reading-the-student-life-2",
     "href": "slides/2025-04-07-webscrape.html#reading-the-student-life-2",
     "title": "Web Scraping",
-    "section": "Reading The Student Life",
-    "text": "Reading The Student Life\n\nHow do you think the sentiments in opinion pieces in The Student Life compare across authors?\nRoughly the same?\nWildly different?\nSomewhere in between?"
+    "section": "",
+    "text": "How do you think the sentiments in opinion pieces in The Student Life compare across authors?\nRoughly the same?\nWildly different?\nSomewhere in between?"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#analyzing-the-student-life-1",
@@ -12792,36 +12792,36 @@
     "objectID": "slides/2025-04-07-webscrape.html#all-of-this-analysis-is-done-in-r",
     "href": "slides/2025-04-07-webscrape.html#all-of-this-analysis-is-done-in-r",
     "title": "Web Scraping",
-    "section": "All of this analysis is done in R!",
-    "text": "All of this analysis is done in R!\n\n(mostly) with tools you already know!"
+    "section": "",
+    "text": "(mostly) with tools you already know!"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#common-words-in-the-student-life-titles",
     "href": "slides/2025-04-07-webscrape.html#common-words-in-the-student-life-titles",
     "title": "Web Scraping",
-    "section": "Common words in The Student Life titles",
-    "text": "Common words in The Student Life titles\nCode for the earlier plot:\n\ndata(stop_words)  # from tidytext\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, title) |&gt;\n  anti_join(stop_words) |&gt;\n  count(word, sort = TRUE) |&gt;\n  slice_head(n = 20) |&gt;\n  mutate(word = fct_reorder(word, n)) |&gt;\n  ggplot(aes(y = word, x = n, fill = log(n))) +\n  geom_col(show.legend = FALSE) +\n  theme_minimal(base_size = 16) +\n  labs(\n    x = \"Number of mentions\",\n    y = \"Word\",\n    title = \"The Student Life - Opinion pieces\",\n    subtitle = \"Common words in the 500 most recent opinion pieces\",\n    caption = \"Source: Data scraped from The Student Life on April 6, 2025\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.caption = element_text(color = \"gray30\")\n  )"
+    "section": "",
+    "text": "Code for the earlier plot:\n\ndata(stop_words)  # from tidytext\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, title) |&gt;\n  anti_join(stop_words) |&gt;\n  count(word, sort = TRUE) |&gt;\n  slice_head(n = 20) |&gt;\n  mutate(word = fct_reorder(word, n)) |&gt;\n  ggplot(aes(y = word, x = n, fill = log(n))) +\n  geom_col(show.legend = FALSE) +\n  theme_minimal(base_size = 16) +\n  labs(\n    x = \"Number of mentions\",\n    y = \"Word\",\n    title = \"The Student Life - Opinion pieces\",\n    subtitle = \"Common words in the 500 most recent opinion pieces\",\n    caption = \"Source: Data scraped from The Student Life on April 6, 2025\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.caption = element_text(color = \"gray30\")\n  )"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#avg-sentiment-scores-of-first-paragraph",
     "href": "slides/2025-04-07-webscrape.html#avg-sentiment-scores-of-first-paragraph",
     "title": "Web Scraping",
-    "section": "Avg sentiment scores of first paragraph",
-    "text": "Avg sentiment scores of first paragraph\nCode for the earlier plot:\n\nafinn_sentiments &lt;- get_sentiments(\"afinn\")  # need tidytext and textdata\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, first_p) |&gt;\n  anti_join(stop_words) |&gt;\n  left_join(afinn_sentiments) |&gt; \n  group_by(authors, title) |&gt;\n  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = \"drop\") |&gt;\n  group_by(authors) |&gt;\n  summarize(\n    n_articles = n(),\n    avg_sentiment = mean(total_sentiment, na.rm = TRUE),\n  ) |&gt;\n  filter(n_articles &gt; 1 & !is.na(authors)) |&gt;\n  arrange(desc(avg_sentiment)) |&gt;\n  slice(c(1:10, 69:78)) |&gt;\n  mutate(\n    authors = fct_reorder(authors, avg_sentiment),\n    neg_pos = if_else(avg_sentiment &lt; 0, \"neg\", \"pos\"),\n    label_position = if_else(neg_pos == \"neg\", 0.25, -0.25)\n  ) |&gt;\n  ggplot(aes(y = authors, x = avg_sentiment)) +\n  geom_col(aes(fill = neg_pos), show.legend = FALSE) +\n  geom_text(\n    aes(x = label_position, label = authors, color = neg_pos),\n    hjust = c(rep(1,10), rep(0, 10)),\n    show.legend = FALSE,\n    fontface = \"bold\"\n  ) +\n  geom_text(\n    aes(label = round(avg_sentiment, 1)),\n    hjust = c(rep(1.25,10), rep(-0.25, 10)),\n    color = \"white\",\n    fontface = \"bold\"\n  ) +\n  scale_fill_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_color_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_x_continuous(breaks = -5:5, minor_breaks = NULL) +\n  scale_y_discrete(breaks = NULL) +\n  coord_cartesian(xlim = c(-5, 5)) +\n  labs(\n    x = \"negative  ←     Average sentiment score (AFINN)     →  positive\",\n    y = NULL,\n    title = \"The Student Life - Opinion pieces\\nAverage sentiment scores of first paragraph by author\",\n    subtitle = \"Top 10 average positive and negative scores\",\n    caption = \"Source: Data scraped from The Student Life on April 6, 2025\"\n  ) +\n  theme_void(base_size = 16) +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    plot.subtitle = element_text(hjust = 0.5, margin = unit(c(0.5, 0, 1, 0), \"lines\")),\n    axis.text.y = element_blank(),\n    plot.caption = element_text(color = \"gray30\")\n  )"
+    "section": "",
+    "text": "Code for the earlier plot:\n\nafinn_sentiments &lt;- get_sentiments(\"afinn\")  # need tidytext and textdata\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, first_p) |&gt;\n  anti_join(stop_words) |&gt;\n  left_join(afinn_sentiments) |&gt; \n  group_by(authors, title) |&gt;\n  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = \"drop\") |&gt;\n  group_by(authors) |&gt;\n  summarize(\n    n_articles = n(),\n    avg_sentiment = mean(total_sentiment, na.rm = TRUE),\n  ) |&gt;\n  filter(n_articles &gt; 1 & !is.na(authors)) |&gt;\n  arrange(desc(avg_sentiment)) |&gt;\n  slice(c(1:10, 69:78)) |&gt;\n  mutate(\n    authors = fct_reorder(authors, avg_sentiment),\n    neg_pos = if_else(avg_sentiment &lt; 0, \"neg\", \"pos\"),\n    label_position = if_else(neg_pos == \"neg\", 0.25, -0.25)\n  ) |&gt;\n  ggplot(aes(y = authors, x = avg_sentiment)) +\n  geom_col(aes(fill = neg_pos), show.legend = FALSE) +\n  geom_text(\n    aes(x = label_position, label = authors, color = neg_pos),\n    hjust = c(rep(1,10), rep(0, 10)),\n    show.legend = FALSE,\n    fontface = \"bold\"\n  ) +\n  geom_text(\n    aes(label = round(avg_sentiment, 1)),\n    hjust = c(rep(1.25,10), rep(-0.25, 10)),\n    color = \"white\",\n    fontface = \"bold\"\n  ) +\n  scale_fill_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_color_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_x_continuous(breaks = -5:5, minor_breaks = NULL) +\n  scale_y_discrete(breaks = NULL) +\n  coord_cartesian(xlim = c(-5, 5)) +\n  labs(\n    x = \"negative  ←     Average sentiment score (AFINN)     →  positive\",\n    y = NULL,\n    title = \"The Student Life - Opinion pieces\\nAverage sentiment scores of first paragraph by author\",\n    subtitle = \"Top 10 average positive and negative scores\",\n    caption = \"Source: Data scraped from The Student Life on April 6, 2025\"\n  ) +\n  theme_void(base_size = 16) +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    plot.subtitle = element_text(hjust = 0.5, margin = unit(c(0.5, 0, 1, 0), \"lines\")),\n    axis.text.y = element_blank(),\n    plot.caption = element_text(color = \"gray30\")\n  )"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#where-is-the-data-coming-from",
     "href": "slides/2025-04-07-webscrape.html#where-is-the-data-coming-from",
     "title": "Web Scraping",
-    "section": "Where is the data coming from?",
-    "text": "Where is the data coming from?\n\nhttps://tsl.news/category/opinions/"
+    "section": "",
+    "text": "https://tsl.news/category/opinions/"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#where-is-the-data-coming-from-1",
     "href": "slides/2025-04-07-webscrape.html#where-is-the-data-coming-from-1",
     "title": "Web Scraping",
-    "section": "Where is the data coming from?",
-    "text": "Where is the data coming from?\n\n\n\n\n\n\n\n\n\ntsl_opinion_titles\n\n# A tibble: 500 × 4\n   title                           authors date                first_p\n   &lt;chr&gt;                           &lt;chr&gt;   &lt;dttm&gt;              &lt;chr&gt;  \n 1 Stop buying your books          Sarah … 2025-04-04 08:03:00 from b…\n 2 The case for fleeing the count… Alex B… 2025-04-04 07:27:00 when t…\n 3 Tolerate thy neighbor           Parker… 2025-04-04 07:22:00 it’s s…\n 4 Confronting furry hate          Xavier… 2025-04-04 07:16:00 furrie…\n 5 Shame on the governor: Gavin N… Akshay… 2025-03-28 06:56:00 gavin …\n 6 Accessibility at the 5Cs requi… Zena A… 2025-03-28 06:42:00 althou…\n 7 Your spring break destination … Nicole… 2025-03-15 04:44:00 spring…\n 8 Pomona College’s Merritt Field… Katie … 2025-03-15 03:03:00 with l…\n 9 Seminars should be tech-free s… Elias … 2025-03-14 09:15:00 we hav…\n10 The bitter truth to the bitter… Daniel… 2025-03-14 09:13:00 have y…\n# ℹ 490 more rows"
+    "section": "",
+    "text": "tsl_opinion_titles\n\n# A tibble: 500 × 4\n   title                           authors date                first_p\n   &lt;chr&gt;                           &lt;chr&gt;   &lt;dttm&gt;              &lt;chr&gt;  \n 1 Stop buying your books          Sarah … 2025-04-04 08:03:00 from b…\n 2 The case for fleeing the count… Alex B… 2025-04-04 07:27:00 when t…\n 3 Tolerate thy neighbor           Parker… 2025-04-04 07:22:00 it’s s…\n 4 Confronting furry hate          Xavier… 2025-04-04 07:16:00 furrie…\n 5 Shame on the governor: Gavin N… Akshay… 2025-03-28 06:56:00 gavin …\n 6 Accessibility at the 5Cs requi… Zena A… 2025-03-28 06:42:00 althou…\n 7 Your spring break destination … Nicole… 2025-03-15 04:44:00 spring…\n 8 Pomona College’s Merritt Field… Katie … 2025-03-15 03:03:00 with l…\n 9 Seminars should be tech-free s… Elias … 2025-03-14 09:15:00 we hav…\n10 The bitter truth to the bitter… Daniel… 2025-03-14 09:13:00 have y…\n# ℹ 490 more rows"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#scraping-the-web-what-why",
@@ -12863,35 +12863,35 @@
     "href": "slides/2025-04-07-webscrape.html#html-rvest",
     "title": "Web Scraping",
     "section": "html & rvest",
-    "text": "html & rvest\n\nhtml &lt;- \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html)\n\n{html_document}\n&lt;html&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body&gt;\\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\\n    &lt;br&gt;&lt;div class=\"name\" ..."
+    "text": "html & rvest\n\nhtml &lt;- \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n    &lt;br&gt;\n    &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n    &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n    &lt;div class=\"contact\"&gt;\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n      &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n      &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n      &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n. . .\n\nread_html(html)\n\n{html_document}\n&lt;html&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body&gt;\\n    &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\\n    &lt;br&gt;&lt;div class=\"name\" ..."
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#selecting-elements",
     "href": "slides/2025-04-07-webscrape.html#selecting-elements",
     "title": "Web Scraping",
     "section": "Selecting elements",
-    "text": "Selecting elements\n\nread_html(html) |&gt; html_elements(\"p\")\n\n{xml_nodeset (1)}\n[1] &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_text()\n\n[1] \"Hello world!\"\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_name()\n\n[1] \"p\"\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attrs()\n\n[[1]]\n   align \n\"center\" \n\n\n\n\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attr(\"align\")\n\n[1] \"center\""
+    "text": "Selecting elements\n\nread_html(html) |&gt; html_elements(\"p\")\n\n{xml_nodeset (1)}\n[1] &lt;p align=\"center\"&gt;Hello world!&lt;/p&gt;\n\n\n. . .\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_text()\n\n[1] \"Hello world!\"\n\n\n. . .\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_name()\n\n[1] \"p\"\n\n\n. . .\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attrs()\n\n[[1]]\n   align \n\"center\" \n\n\n. . .\n\nread_html(html) |&gt; html_elements(\"p\") |&gt; html_attr(\"align\")\n\n[1] \"center\""
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#more-selecting-elements",
     "href": "slides/2025-04-07-webscrape.html#more-selecting-elements",
     "title": "Web Scraping",
     "section": "More selecting elements",
-    "text": "More selecting elements\n\n\nread_html(html) |&gt; html_elements(\"div\")\n\n{xml_nodeset (7)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n[3] &lt;div class=\"contact\"&gt;\\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\\n       ...\n[4] &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n[5] &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n[6] &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n[7] &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"div\") |&gt; html_text()\n\n[1] \"John\"                                                                                  \n[2] \"Doe\"                                                                                   \n[3] \"\\n      555-555-1234\\n      555-555-2345\\n      555-555-9999\\n      555-555-8888\\n    \"\n[4] \"555-555-1234\"                                                                          \n[5] \"555-555-2345\"                                                                          \n[6] \"555-555-9999\"                                                                          \n[7] \"555-555-8888\""
+    "text": "More selecting elements\n\n\nread_html(html) |&gt; html_elements(\"div\")\n\n{xml_nodeset (7)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n[3] &lt;div class=\"contact\"&gt;\\n      &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\\n       ...\n[4] &lt;div class=\"home\"&gt;555-555-1234&lt;/div&gt;\n[5] &lt;div class=\"home\"&gt;555-555-2345&lt;/div&gt;\n[6] &lt;div class=\"work\"&gt;555-555-9999&lt;/div&gt;\n[7] &lt;div class=\"fax\"&gt;555-555-8888&lt;/div&gt;\n\n\n\n. . .\n\n\nread_html(html) |&gt; html_elements(\"div\") |&gt; html_text()\n\n[1] \"John\"                                                                                  \n[2] \"Doe\"                                                                                   \n[3] \"\\n      555-555-1234\\n      555-555-2345\\n      555-555-9999\\n      555-555-8888\\n    \"\n[4] \"555-555-1234\"                                                                          \n[5] \"555-555-2345\"                                                                          \n[6] \"555-555-9999\"                                                                          \n[7] \"555-555-8888\""
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#css-selectors",
     "href": "slides/2025-04-07-webscrape.html#css-selectors",
     "title": "Web Scraping",
     "section": "CSS selectors",
-    "text": "CSS selectors\n\nWe will use a tool called SelectorGadget to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.\n\n\n\nSome examples of basic selector syntax is below,\n\n\n\n\n\n\n\n\n\n\nSelector\nExample\nDescription\n\n\n\n\n.class\n.title\nSelect all elements with class=“title”\n\n\n#id\n#name\nSelect all elements with id=“name”\n\n\nelement\np\nSelect all &lt;p&gt; elements\n\n\nelement element\ndiv p\nSelect all &lt;p&gt; elements inside a &lt;div&gt; element\n\n\nelement&gt;element\ndiv &gt; p\nSelect all &lt;p&gt; elements with &lt;div&gt; as a direct parent\n\n\n[attribute]\n[class]\nSelect all elements with a class attribute\n\n\n[attribute=value]\n[class=title]\nSelect all elements with class=“title”"
+    "text": "CSS selectors\n\nWe will use a tool called SelectorGadget to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.\n\n. . .\n\nSome examples of basic selector syntax is below,\n\n\n\n\n\n\n\n\n\n\nSelector\nExample\nDescription\n\n\n\n\n.class\n.title\nSelect all elements with class=“title”\n\n\n#id\n#name\nSelect all elements with id=“name”\n\n\nelement\np\nSelect all &lt;p&gt; elements\n\n\nelement element\ndiv p\nSelect all &lt;p&gt; elements inside a &lt;div&gt; element\n\n\nelement&gt;element\ndiv &gt; p\nSelect all &lt;p&gt; elements with &lt;div&gt; as a direct parent\n\n\n[attribute]\n[class]\nSelect all elements with a class attribute\n\n\n[attribute=value]\n[class=title]\nSelect all elements with class=“title”"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#css-classes-and-ids",
     "href": "slides/2025-04-07-webscrape.html#css-classes-and-ids",
     "title": "Web Scraping",
     "section": "CSS classes and ids",
-    "text": "CSS classes and ids\n\nclass and id are used to style elements (e.g., change their color!). They are special types of attributes.\nclass can be applied to multiple different elements (class is identified with ., for example .name)\nid is unique to each element (id is identified with #, for example, #first)\n\n\nread_html(html) |&gt; html_elements(\".name\")\n\n{xml_nodeset (2)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n\n\n\n\nread_html(html) |&gt; html_elements(\"div.name\")\n\n{xml_nodeset (2)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n\n\n\n\n\nread_html(html) |&gt; html_elements(\"#first\")\n\n{xml_nodeset (1)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;"
+    "text": "CSS classes and ids\n\nclass and id are used to style elements (e.g., change their color!). They are special types of attributes.\nclass can be applied to multiple different elements (class is identified with ., for example .name)\nid is unique to each element (id is identified with #, for example, #first)\n\n\nread_html(html) |&gt; html_elements(\".name\")\n\n{xml_nodeset (2)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n\n\n. . .\n\nread_html(html) |&gt; html_elements(\"div.name\")\n\n{xml_nodeset (2)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;\n[2] &lt;div class=\"name\" id=\"last\"&gt;Doe&lt;/div&gt;\n\n\n. . .\n\nread_html(html) |&gt; html_elements(\"#first\")\n\n{xml_nodeset (1)}\n[1] &lt;div class=\"name\" id=\"first\"&gt;John&lt;/div&gt;"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#text-with-html_text-vs.-html_text2",
@@ -12905,7 +12905,7 @@
     "href": "slides/2025-04-07-webscrape.html#html-tables-with-html_table",
     "title": "Web Scraping",
     "section": "HTML tables with html_table()",
-    "text": "HTML tables with html_table()\n\nhtml_table = \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;table&gt;\n      &lt;tr&gt; &lt;th&gt;a&lt;/th&gt; &lt;th&gt;b&lt;/th&gt; &lt;th&gt;c&lt;/th&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;1&lt;/td&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;td&gt;5&lt;/td&gt; &lt;/tr&gt;\n    &lt;/table&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n\n\nread_html(html_table) |&gt;\n  html_elements(\"table\") |&gt; \n  html_table()\n\n[[1]]\n# A tibble: 3 × 3\n      a     b     c\n  &lt;int&gt; &lt;int&gt; &lt;int&gt;\n1     1     2     3\n2     2     3     4\n3     3     4     5"
+    "text": "HTML tables with html_table()\n\nhtml_table = \n'&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;This is a title&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;table&gt;\n      &lt;tr&gt; &lt;th&gt;a&lt;/th&gt; &lt;th&gt;b&lt;/th&gt; &lt;th&gt;c&lt;/th&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;1&lt;/td&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;/tr&gt;\n      &lt;tr&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;td&gt;5&lt;/td&gt; &lt;/tr&gt;\n    &lt;/table&gt;\n  &lt;/body&gt;\n&lt;/html&gt;'\n\n. . .\n\nread_html(html_table) |&gt;\n  html_elements(\"table\") |&gt; \n  html_table()\n\n[[1]]\n# A tibble: 3 × 3\n      a     b     c\n  &lt;int&gt; &lt;int&gt; &lt;int&gt;\n1     1     2     3\n2     2     3     4\n3     3     4     5"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#html_attr",
@@ -12947,14 +12947,14 @@
     "href": "slides/2025-04-07-webscrape.html#read-in-the-entire-page",
     "title": "Web Scraping",
     "section": "Read in the entire page",
-    "text": "Read in the entire page\n\ntsl_page &lt;- read_html(\"https://tsl.news/category/opinions/\")\ntsl_page\n\n{html_document}\n&lt;html lang=\"en-US\"&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body class=\"archive category category-opinions category-2244 custom-back ...\n\n\n\n\ntypeof(tsl_page)\n\n[1] \"list\"\n\nclass(tsl_page)\n\n[1] \"xml_document\" \"xml_node\"    \n\n\n\nwe need to convert into something more familiar, like a data frame"
+    "text": "Read in the entire page\n\ntsl_page &lt;- read_html(\"https://tsl.news/category/opinions/\")\ntsl_page\n\n{html_document}\n&lt;html lang=\"en-US\"&gt;\n[1] &lt;head&gt;\\n&lt;meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8 ...\n[2] &lt;body class=\"archive category category-opinions category-2244 custom-back ...\n\n\n. . .\n\ntypeof(tsl_page)\n\n[1] \"list\"\n\nclass(tsl_page)\n\n[1] \"xml_document\" \"xml_node\"    \n\n\n\nwe need to convert into something more familiar, like a data frame"
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#scrape-title-and-save-as-title",
     "href": "slides/2025-04-07-webscrape.html#scrape-title-and-save-as-title",
     "title": "Web Scraping",
     "section": "Scrape title and save as title",
-    "text": "Scrape title and save as title\n\ntsl_page |&gt; \nhtml_elements(\".entry-title a\") \n\n{xml_nodeset (10)}\n [1] &lt;a href=\"https://tsl.news/opinion-the-real-cost-of-administrative-bloat/ ...\n [2] &lt;a href=\"https://tsl.news/opinion-finding-hope-in-the-courts/\" title=\"OP ...\n [3] &lt;a href=\"https://tsl.news/opinion-your-vote-for-aspc-president-didnt-mat ...\n [4] &lt;a href=\"https://tsl.news/opinion-stop-buying-your-books/\" title=\"OPINIO ...\n [5] &lt;a href=\"https://tsl.news/opinion-the-case-for-fleeing-the-country/\" tit ...\n [6] &lt;a href=\"https://tsl.news/opinion-tolerate-thy-neighbor/\" title=\"OPINION ...\n [7] &lt;a href=\"https://tsl.news/opinion-confronting-furry-hate/\" title=\"OPINIO ...\n [8] &lt;a href=\"https://tsl.news/shame-on-the-governor-gavin-newsom-is-his-own- ...\n [9] &lt;a href=\"https://tsl.news/opinions-accessibility-at-the-5cs-requires-mor ...\n[10] &lt;a href=\"https://tsl.news/opinion-your-spring-break-destination-isnt-rea ...\n\n\n\n\ntitle &lt;- tsl_page |&gt; \nhtml_elements(\".entry-title a\") |&gt; \nhtml_text()\n\ntitle\n\n [1] \"Opinion: The real cost of administrative bloat\"                           \n [2] \"OPINION: Finding hope in the courts\"                                      \n [3] \"OPINION: Your vote for ASPC president didn’t matter. Here’s why\"          \n [4] \"OPINION: Stop buying your books\"                                          \n [5] \"OPINION: The case for fleeing the country\"                                \n [6] \"OPINION: Tolerate thy neighbor\"                                           \n [7] \"OPINION: Confronting furry hate\"                                          \n [8] \"Shame on the governor: Gavin Newsom is his own worst enemy\"               \n [9] \"OPINION: Accessibility at the 5Cs requires more than just good intentions\"\n[10] \"OPINION: Your spring break destination isn’t really yours\"                \n\ntitle &lt;- title |&gt; \nstr_remove(\"OPINION: \")\n\ntitle\n\n [1] \"Opinion: The real cost of administrative bloat\"                  \n [2] \"Finding hope in the courts\"                                      \n [3] \"Your vote for ASPC president didn’t matter. Here’s why\"          \n [4] \"Stop buying your books\"                                          \n [5] \"The case for fleeing the country\"                                \n [6] \"Tolerate thy neighbor\"                                           \n [7] \"Confronting furry hate\"                                          \n [8] \"Shame on the governor: Gavin Newsom is his own worst enemy\"      \n [9] \"Accessibility at the 5Cs requires more than just good intentions\"\n[10] \"Your spring break destination isn’t really yours\""
+    "text": "Scrape title and save as title\n\ntsl_page |&gt; \nhtml_elements(\".entry-title a\") \n\n{xml_nodeset (10)}\n [1] &lt;a href=\"https://tsl.news/opinion-the-real-cost-of-administrative-bloat/ ...\n [2] &lt;a href=\"https://tsl.news/opinion-finding-hope-in-the-courts/\" title=\"OP ...\n [3] &lt;a href=\"https://tsl.news/opinion-your-vote-for-aspc-president-didnt-mat ...\n [4] &lt;a href=\"https://tsl.news/opinion-stop-buying-your-books/\" title=\"OPINIO ...\n [5] &lt;a href=\"https://tsl.news/opinion-the-case-for-fleeing-the-country/\" tit ...\n [6] &lt;a href=\"https://tsl.news/opinion-tolerate-thy-neighbor/\" title=\"OPINION ...\n [7] &lt;a href=\"https://tsl.news/opinion-confronting-furry-hate/\" title=\"OPINIO ...\n [8] &lt;a href=\"https://tsl.news/shame-on-the-governor-gavin-newsom-is-his-own- ...\n [9] &lt;a href=\"https://tsl.news/opinions-accessibility-at-the-5cs-requires-mor ...\n[10] &lt;a href=\"https://tsl.news/opinion-your-spring-break-destination-isnt-rea ...\n\n\n. . .\n\ntitle &lt;- tsl_page |&gt; \nhtml_elements(\".entry-title a\") |&gt; \nhtml_text()\n\ntitle\n\n [1] \"Opinion: The real cost of administrative bloat\"                           \n [2] \"OPINION: Finding hope in the courts\"                                      \n [3] \"OPINION: Your vote for ASPC president didn’t matter. Here’s why\"          \n [4] \"OPINION: Stop buying your books\"                                          \n [5] \"OPINION: The case for fleeing the country\"                                \n [6] \"OPINION: Tolerate thy neighbor\"                                           \n [7] \"OPINION: Confronting furry hate\"                                          \n [8] \"Shame on the governor: Gavin Newsom is his own worst enemy\"               \n [9] \"OPINION: Accessibility at the 5Cs requires more than just good intentions\"\n[10] \"OPINION: Your spring break destination isn’t really yours\"                \n\ntitle &lt;- title |&gt; \nstr_remove(\"OPINION: \")\n\ntitle\n\n [1] \"Opinion: The real cost of administrative bloat\"                  \n [2] \"Finding hope in the courts\"                                      \n [3] \"Your vote for ASPC president didn’t matter. Here’s why\"          \n [4] \"Stop buying your books\"                                          \n [5] \"The case for fleeing the country\"                                \n [6] \"Tolerate thy neighbor\"                                           \n [7] \"Confronting furry hate\"                                          \n [8] \"Shame on the governor: Gavin Newsom is his own worst enemy\"      \n [9] \"Accessibility at the 5Cs requires more than just good intentions\"\n[10] \"Your spring break destination isn’t really yours\""
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#scrape-author-and-save-as-author",
@@ -13080,7 +13080,7 @@
     "href": "slides/2025-04-02-ethics.html#compas",
     "title": "Ethics in Data Science",
     "section": "COMPAS",
-    "text": "COMPAS\n\nDylan Fugett had three subsequent arrests for drug possession. Bernard Parker had no subsequent offenses."
+    "text": "COMPAS\n\n\n\n\n\nDylan Fugett had three subsequent arrests for drug possession. Bernard Parker had no subsequent offenses."
   },
   {
     "objectID": "slides/2025-04-02-ethics.html#compas-1",
@@ -13094,14 +13094,14 @@
     "href": "slides/2025-04-02-ethics.html#compas-2",
     "title": "Ethics in Data Science",
     "section": "COMPAS",
-    "text": "COMPAS\n\nFalse positive and false negative rates broken down by race."
+    "text": "COMPAS\n\n\n\n\n\nFalse positive and false negative rates broken down by race."
   },
   {
     "objectID": "slides/2025-04-07-webscrape.html#text-with-html_text-vs.-html_text2-1",
     "href": "slides/2025-04-07-webscrape.html#text-with-html_text-vs.-html_text2-1",
     "title": "Web Scraping",
     "section": "Text with html_text() vs. html_text2()",
-    "text": "Text with html_text() vs. html_text2()\n\nhtml = read_html(\n  \"&lt;p&gt;  \n    This is the first sentence in the paragraph.\n    This is the second sentence that should be on the same line as the first sentence.&lt;br&gt;This third sentence should start on a new line.\n  &lt;/p&gt;\"\n)\n\n\n\nhtml |&gt; html_text()\n\n[1] \"  \\n    This is the first sentence in the paragraph.\\n    This is the second sentence that should be on the same line as the first sentence.This third sentence should start on a new line.\\n  \"\n\nhtml |&gt; html_text2()\n\n[1] \"This is the first sentence in the paragraph. This is the second sentence that should be on the same line as the first sentence.\\nThis third sentence should start on a new line.\""
+    "text": "Text with html_text() vs. html_text2()\n\nhtml = read_html(\n  \"&lt;p&gt;  \n    This is the first sentence in the paragraph.\n    This is the second sentence that should be on the same line as the first sentence.&lt;br&gt;This third sentence should start on a new line.\n  &lt;/p&gt;\"\n)\n\n. . .\n\nhtml |&gt; html_text()\n\n[1] \"  \\n    This is the first sentence in the paragraph.\\n    This is the second sentence that should be on the same line as the first sentence.This third sentence should start on a new line.\\n  \"\n\nhtml |&gt; html_text2()\n\n[1] \"This is the first sentence in the paragraph. This is the second sentence that should be on the same line as the first sentence.\\nThis third sentence should start on a new line.\""
   },
   {
     "objectID": "project4.html#your-task",
@@ -13444,7 +13444,7 @@
     "href": "slides/2025-04-16-clauses.html#a-null-example",
     "title": "SQL statements",
     "section": "A NULL example",
-    "text": "A NULL example\nThe logic of NULL:1\n\nIf you do anything with NULL, you’ll just get NULL. For instance if \\(x\\) is NULL, then \\(x &gt; 3\\), \\(1 = x\\), and \\(x + 4\\) all evaluate to NULL. Even \\(x =\\) NULL evaluates to NULL! if you want to check whether \\(x\\) is NULL, use x IS NULL or x IS NOT NULL.\nNULL short-circuits with boolean operators. That means a boolean expression involving NULL will evaluate to:\n\nTRUE, if it’d evaluate to TRUE regardless of whether the NULL value is really TRUE or FALSE.\nFALSE, if it’d evaluate to FALSE regardless of whether the NULL value is really TRUE or FALSE.\nOr NULL, if it depends on the NULL value.\n\n\ntaken from: https://cs186berkeley.net/notes/note1/#filtering-null-values"
+    "text": "A NULL example\nThe logic of NULL:1\n\nIf you do anything with NULL, you’ll just get NULL. For instance if \\(x\\) is NULL, then \\(x &gt; 3\\), \\(1 = x\\), and \\(x + 4\\) all evaluate to NULL. Even \\(x =\\) NULL evaluates to NULL! if you want to check whether \\(x\\) is NULL, use x IS NULL or x IS NOT NULL.\nNULL short-circuits with boolean operators. That means a boolean expression involving NULL will evaluate to:\n\nTRUE, if it’d evaluate to TRUE regardless of whether the NULL value is really TRUE or FALSE.\nFALSE, if it’d evaluate to FALSE regardless of whether the NULL value is really TRUE or FALSE.\nOr NULL, if it depends on the NULL value."
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#a-null-example-1",
@@ -13514,7 +13514,7 @@
     "href": "slides/2025-04-16-clauses.html#order-by-3",
     "title": "SQL statements",
     "section": "ORDER BY",
-    "text": "ORDER BY\n\n\n\nNote that both GROUP BY and ORDER BY evaluate the data after it has been retrieved. Therefore, the functions operate on the results set, not the original rows of the data.\n\n\n\nWe are able to GROUP BY and ORDER BY on the new variables we had created, wday."
+    "text": "ORDER BY\n\n\n\n\n\n\nNote that both GROUP BY and ORDER BY evaluate the data after it has been retrieved. Therefore, the functions operate on the results set, not the original rows of the data.\n\n\n\nWe are able to GROUP BY and ORDER BY on the new variables we had created, wday."
   },
   {
     "objectID": "slides/2025-04-16-clauses.html#having",
@@ -13577,7 +13577,7 @@
     "href": "slides/2025-04-16-clauses.html#order-of-keywords",
     "title": "SQL statements",
     "section": "Order of keywords",
-    "text": "Order of keywords\nQueries in SQL start with the SELECT keyword and consist of several keywords, which must be written in the following order:\n\n\n\nSELECT\nFROM\nJOIN\nWHERE\n\n\n\nGROUP BY\nHAVING\nORDER BY\nLIMIT\n\n\nThe keywords are similar to data wrangling verbs in R, but the order in SQL is super important!"
+    "text": "Order of keywords\nQueries in SQL start with the SELECT keyword and consist of several keywords, which must be written in the following order:\n\n\n\nSELECT\nFROM\nJOIN\nWHERE\n\n\n\nGROUP BY\nHAVING\nORDER BY\nLIMIT\n\n\n\nThe keywords are similar to data wrangling verbs in R, but the order in SQL is super important!"
   },
   {
     "objectID": "slides/2025-04-21-joins.html#imdb",
@@ -13612,14 +13612,14 @@
     "href": "slides/2025-04-21-joins.html#all-the-joins-1",
     "title": "SQL joins",
     "section": "All the JOINs",
-    "text": "All the JOINs\nVenn diagrams of the different types of joins.\n\nVenn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join"
+    "text": "All the JOINs\nVenn diagrams of the different types of joins.\n\n\n\n\n\nVenn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join"
   },
   {
     "objectID": "slides/2025-04-21-joins.html#all-the-joins-2",
     "href": "slides/2025-04-21-joins.html#all-the-joins-2",
     "title": "SQL joins",
     "section": "All the JOINs",
-    "text": "All the JOINs\nMini data tables of the different types of JOIN. (In SQL the missing values will be labeled as NULL (not NA).)\n\nMini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
+    "text": "All the JOINs\nMini data tables of the different types of JOIN. (In SQL the missing values will be labeled as NULL (not NA).)\n\n\n\n\n\nMini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
   },
   {
     "objectID": "slides/2025-04-21-joins.html#all-the-joins-3",
@@ -13780,7 +13780,7 @@
     "href": "slides/2025-04-21-joins.html#unioning",
     "title": "SQL joins",
     "section": "UNIONing",
-    "text": "UNIONing\nIn SQL a UNION clause combines two different tables by their rows (whereas JOIN combines two tables by columns). Think about UNION similarly to the bind_rows() command in R.\n\nUNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html"
+    "text": "UNIONing\nIn SQL a UNION clause combines two different tables by their rows (whereas JOIN combines two tables by columns). Think about UNION similarly to the bind_rows() command in R.\n\n\n\n\n\nUNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html"
   },
   {
     "objectID": "slides/2025-04-21-joins.html#unions",
@@ -13849,15 +13849,15 @@
     "objectID": "slides/2025-05-05-fin.html#data-science-overview",
     "href": "slides/2025-05-05-fin.html#data-science-overview",
     "title": "Fin",
-    "section": "Data Science Overview",
-    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "section": "",
+    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2025-05-05-fin.html#data-science-overview-1",
     "href": "slides/2025-05-05-fin.html#data-science-overview-1",
     "title": "Fin",
     "section": "Data Science Overview",
-    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "text": "Data Science Overview\n\n\n\n\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2025-05-05-fin.html#data-scientists",
@@ -13899,7 +13899,7 @@
     "href": "slides/2025-04-30-shiny.html#how-to-run-a-shiny-app",
     "title": "Shiny",
     "section": "How to run a Shiny App?",
-    "text": "How to run a Shiny App?\n\n\n\nTo run Shiny\n\n\n\nClick the Run App button in the document toolbar.\n\n\n\n\n\n\n\n\n\n\n\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter.\nIf you’re not using RStudio, you can (source()) the whole document, or call shiny::runApp() with the path to the directory containing app.R."
+    "text": "How to run a Shiny App?\n\n\n\n\n\n\nTo run Shiny\n\n\n\n\nClick the Run App button in the document toolbar.\n\n\n\n\n\n\n\n\n\n\n\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter.\nIf you’re not using RStudio, you can (source()) the whole document, or call shiny::runApp() with the path to the directory containing app.R."
   },
   {
     "objectID": "slides/2025-04-30-shiny.html#what-does-it-look-like",
@@ -16769,7 +16769,7 @@
     "href": "slides/2025-10-06-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5704805\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5747807"
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.5760295\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.5753476"
   },
   {
     "objectID": "slides/2025-10-06-funcmap.html#functions-summary",
@@ -16867,27 +16867,97 @@
     "href": "slides/2025-10-06-funcmap.html#pmap",
     "title": "Functions + Iteration",
     "section": "pmap()",
-    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 5.383696\n\n[[2]]\n[1] 39.94604 42.74258\n\n[[3]]\n[1] 361.5649 764.6317 456.7828\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 8.350917\n\n[[2]]\n[1] 27.63166 29.34328\n\n[[3]]\n[1] 309.1219 746.8372 475.0359"
+    "text": "pmap()\n\nyou can pass a named list or dataframe as arguments to a function\nfor example runif() has the parameters n, min and max\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\npmap(params, runif)\n\n[[1]]\n[1] 8.322762\n\n[[2]]\n[1] 39.54062 59.72295\n\n[[3]]\n[1] 500.8812 214.3584 942.4770\n\n\nOr use the pipe into pmap():\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 2.310254\n\n[[2]]\n[1] 15.80798 28.66618\n\n[[3]]\n[1] 195.4624 134.3226 814.9644"
   },
   {
     "objectID": "slides/2025-10-06-funcmap.html#an-aside",
     "href": "slides/2025-10-06-funcmap.html#an-aside",
     "title": "Functions + Iteration",
     "section": "An aside…",
-    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.7179086 0.2185746 0.8083787\n\nrunif(n = c(1,3))\n\n[1] 0.8857254 0.5868562\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.7164719 0.5441710\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.4964627 0.7445588"
+    "text": "An aside…\nInterestingly, runif() will take either a scalar or a vector as its first argument. If the first argument is a vector, runif() will return N random uniforms, where N is the length of the vector.\n\nrunif(n = 3)\n\n[1] 0.2167713 0.3386662 0.7446348\n\nrunif(n = c(1,3))\n\n[1] 0.5797215 0.7613608\n\nrunif(n = c(10000,12321412424))\n\n[1] 0.1054466 0.5370089\n\nrunif(n = c(\"rainbow\", \"unicorn\"))\n\n[1] 0.5730786 0.4519306"
   },
   {
     "objectID": "slides/2025-10-06-funcmap.html#pmap-vs-map",
     "href": "slides/2025-10-06-funcmap.html#pmap-vs-map",
     "title": "Functions + Iteration",
     "section": "pmap() vs map()",
-    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 2.651853\n\n[[2]]\n[1] 11.27564 93.30096\n\n[[3]]\n[1] 758.7219 105.4999 415.6940\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.4344762 0.0292914 0.1825619\n\n$min\n[1] 0.7107950 0.3126411 0.3779749\n\n$max\n[1] 0.457144607 0.031251148 0.004070793"
+    "text": "pmap() vs map()\nWhich means that the pmap() code will “work” in map() as well:\n\nparamspmapmap\n\n\n\nparams\n\n# A tibble: 3 × 3\n      n   min   max\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1    10\n2     2    10   100\n3     3   100  1000\n\n\n\n\n\nparams |&gt; \n  pmap(runif)\n\n[[1]]\n[1] 8.410353\n\n[[2]]\n[1] 93.18102 77.37283\n\n[[3]]\n[1] 997.1286 325.4311 282.7293\n\n\n\n\n\nparams |&gt; \n  map(runif)\n\n$n\n[1] 0.11880336 0.57987091 0.07279283\n\n$min\n[1] 0.7637776 0.1686833 0.2114898\n\n$max\n[1] 0.5813259 0.1143630 0.9048103"
   },
   {
     "objectID": "slides/2025-10-06-funcmap.html#pmap-with-expand_grid",
     "href": "slides/2025-10-06-funcmap.html#pmap-with-expand_grid",
     "title": "Functions + Iteration",
     "section": "pmap() with expand_grid()",
-    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 4.83381\n\n[[2]]\n[1] 67.65842\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 49.84755\n\n[[5]]\n[1] 8.749548 5.869100\n\n[[6]]\n[1] 32.60315 31.65934\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 99.46302 21.76290\n\n[[9]]\n[1] 4.333053 8.536060 3.879867\n\n[[10]]\n[1] 50.28393 23.04113 30.74129\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 38.23185 62.19547 91.92328"
+    "text": "pmap() with expand_grid()\n\nI like to use expand_grid() when I want all possible parameter combinations.\n\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) \n\n# A tibble: 12 × 3\n       n   min   max\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     1    10\n 2     1     1   100\n 3     1    10    10\n 4     1    10   100\n 5     2     1    10\n 6     2     1   100\n 7     2    10    10\n 8     2    10   100\n 9     3     1    10\n10     3     1   100\n11     3    10    10\n12     3    10   100\n\nexpand_grid(n = c(1, 2, 3), \n            min = c(1, 10),\n            max = c(10, 100)) |&gt; \npmap(runif)\n\n[[1]]\n[1] 4.984422\n\n[[2]]\n[1] 26.58753\n\n[[3]]\n[1] 10\n\n[[4]]\n[1] 80.03655\n\n[[5]]\n[1] 5.153392 5.875358\n\n[[6]]\n[1] 94.36282 52.04948\n\n[[7]]\n[1] 10 10\n\n[[8]]\n[1] 45.25994 99.74786\n\n[[9]]\n[1] 2.183414 1.971093 3.156937\n\n[[10]]\n[1] 79.84332 36.33117 36.99037\n\n[[11]]\n[1] 10 10 10\n\n[[12]]\n[1] 24.41636 76.13352 48.07594"
+  },
+  {
+    "objectID": "slides/2025-03-26-perm.html",
+    "href": "slides/2025-03-26-perm.html",
+    "title": "Permutation Tests",
+    "section": "",
+    "text": "Hypothesis testing"
+  },
+  {
+    "objectID": "slides/2025-03-12-iters.html",
+    "href": "slides/2025-03-12-iters.html",
+    "title": "Iterations",
+    "section": "",
+    "text": "Why simulate?\nSimulating to calculate probabilities\nWhat makes a good simulation?\n\n\n\nThe goal of simulating a complicated model is not only to create a program which will provide the desired results. We also hope to be able to write code such that:\n\nThe problem is broken down into small pieces.\nThe problem has checks in it to see what works (run the lines inside the functions!).\nuses simple code (as often as possible).\n\n\n\n\n\n\n… estimate probabilities (easier than calculus).\n… understand complicated models.\n\n\n\n\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;=0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2\n\n\n\n\n\n\nset.seed(4747)\ndiamonds |&gt; select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(price_cat = case_when(\n    price &gt; 10000 ~ \"expensive\",\n    price &gt; 1500 ~ \"medium\", \n    TRUE ~ \"inexpensive\"))\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive\n\n\n\n\n\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, 5, replace = FALSE) # sample (from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, 5, replace = TRUE) # sample (from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\"\n\n\n\n\n\nWhat if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\n\n\n\n\nConsider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer, Kaplan, and Horton 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?\n\n\n\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n31.887 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n156.773 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.008 sec elapsed\n\n\n\n\n\n\n\n\nThe results themselves are equivalent. Differing values due to randomness in the simulation.\n\nmap()for() loopvectorized\n\n\n\nmeet_map |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306\n\n\n\n\n\nmeet_vect |&gt; \n  group_by(result) |&gt; \n  summarize(number = n()) |&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305\n\n\n\n\n\n\n\n\n\nmeet_map |&gt; \n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) + \n  geom_abline(intercept = 10, slope = 1) + \n  geom_abline(intercept = -10, slope = 1) + \n  scale_color_brewer(palette = \"Paired\")"
+  },
+  {
+    "objectID": "slides/2025-04-16-clauses.html",
+    "href": "slides/2025-04-16-clauses.html",
+    "title": "SQL statements",
+    "section": "",
+    "text": "structure of SQL tables\nSQL keywords\nSQL queries to R objects"
+  },
+  {
+    "objectID": "slides/2025-04-16-clauses.html#footnotes",
+    "href": "slides/2025-04-16-clauses.html#footnotes",
+    "title": "SQL statements",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\ntaken from: https://cs186berkeley.net/notes/note1/#filtering-null-values↩︎"
+  },
+  {
+    "objectID": "slides/2025-05-05-fin.html",
+    "href": "slides/2025-05-05-fin.html",
+    "title": "Fin",
+    "section": "",
+    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-04-02-ethics.html",
+    "href": "slides/2025-04-02-ethics.html",
+    "title": "Ethics in Data Science",
+    "section": "",
+    "text": "Ethics in Data Viz\nPrinciples\nExamples\n\nn.b., the majority of examples are taken from Baumer, Kaplan, and Horton (2021) which I encourage you to read!"
+  },
+  {
+    "objectID": "slides/2025-04-30-shiny.html",
+    "href": "slides/2025-04-30-shiny.html",
+    "title": "Shiny",
+    "section": "",
+    "text": "Shiny examples\nparts of a Shiny file"
+  },
+  {
+    "objectID": "slides/2025-04-21-joins.html",
+    "href": "slides/2025-04-21-joins.html",
+    "title": "SQL joins",
+    "section": "",
+    "text": "Joining\nOther combinations"
+  },
+  {
+    "objectID": "slides/2025-04-14-db.html",
+    "href": "slides/2025-04-14-db.html",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "",
+    "text": "Databases\nSQL connections\nSQL in Quarto (3 ways)"
+  },
+  {
+    "objectID": "slides/2025-04-07-webscrape.html",
+    "href": "slides/2025-04-07-webscrape.html",
+    "title": "Web Scraping",
+    "section": "",
+    "text": "web scraping\nrvest\n\n\n\nOur approach to web scraping relies on the Chrome browser and an extension called SelectorGadget. Download them here:\n\nChrome\nSelectorGadget from Chrome or SelectorGadget vignette etc.\n\n\n\n\n\n\n\n\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander\n\n\n\n\n\n\n\n\nHow often do you read The Student Life?\na. Every day\nb. 3-5 times a week\nc. Once a week\nd. Rarely\n\n\n\n\n\nWhat do you think is the most common word in the titles of The Student Life opinion pieces?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do you think the sentiments in opinion pieces in The Student Life compare across authors?\nRoughly the same?\nWildly different?\nSomewhere in between?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(mostly) with tools you already know!\n\n\n\n\nCode for the earlier plot:\n\ndata(stop_words)  # from tidytext\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, title) |&gt;\n  anti_join(stop_words) |&gt;\n  count(word, sort = TRUE) |&gt;\n  slice_head(n = 20) |&gt;\n  mutate(word = fct_reorder(word, n)) |&gt;\n  ggplot(aes(y = word, x = n, fill = log(n))) +\n  geom_col(show.legend = FALSE) +\n  theme_minimal(base_size = 16) +\n  labs(\n    x = \"Number of mentions\",\n    y = \"Word\",\n    title = \"The Student Life - Opinion pieces\",\n    subtitle = \"Common words in the 500 most recent opinion pieces\",\n    caption = \"Source: Data scraped from The Student Life on April 6, 2025\"\n  ) +\n  theme(\n    plot.title.position = \"plot\",\n    plot.caption = element_text(color = \"gray30\")\n  )\n\n\n\n\nCode for the earlier plot:\n\nafinn_sentiments &lt;- get_sentiments(\"afinn\")  # need tidytext and textdata\ntsl_opinion_titles |&gt;\n  tidytext::unnest_tokens(word, first_p) |&gt;\n  anti_join(stop_words) |&gt;\n  left_join(afinn_sentiments) |&gt; \n  group_by(authors, title) |&gt;\n  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = \"drop\") |&gt;\n  group_by(authors) |&gt;\n  summarize(\n    n_articles = n(),\n    avg_sentiment = mean(total_sentiment, na.rm = TRUE),\n  ) |&gt;\n  filter(n_articles &gt; 1 & !is.na(authors)) |&gt;\n  arrange(desc(avg_sentiment)) |&gt;\n  slice(c(1:10, 69:78)) |&gt;\n  mutate(\n    authors = fct_reorder(authors, avg_sentiment),\n    neg_pos = if_else(avg_sentiment &lt; 0, \"neg\", \"pos\"),\n    label_position = if_else(neg_pos == \"neg\", 0.25, -0.25)\n  ) |&gt;\n  ggplot(aes(y = authors, x = avg_sentiment)) +\n  geom_col(aes(fill = neg_pos), show.legend = FALSE) +\n  geom_text(\n    aes(x = label_position, label = authors, color = neg_pos),\n    hjust = c(rep(1,10), rep(0, 10)),\n    show.legend = FALSE,\n    fontface = \"bold\"\n  ) +\n  geom_text(\n    aes(label = round(avg_sentiment, 1)),\n    hjust = c(rep(1.25,10), rep(-0.25, 10)),\n    color = \"white\",\n    fontface = \"bold\"\n  ) +\n  scale_fill_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_color_manual(values = c(\"neg\" = \"#4d4009\", \"pos\" = \"#FF4B91\")) +\n  scale_x_continuous(breaks = -5:5, minor_breaks = NULL) +\n  scale_y_discrete(breaks = NULL) +\n  coord_cartesian(xlim = c(-5, 5)) +\n  labs(\n    x = \"negative  ←     Average sentiment score (AFINN)     →  positive\",\n    y = NULL,\n    title = \"The Student Life - Opinion pieces\\nAverage sentiment scores of first paragraph by author\",\n    subtitle = \"Top 10 average positive and negative scores\",\n    caption = \"Source: Data scraped from The Student Life on April 6, 2025\"\n  ) +\n  theme_void(base_size = 16) +\n  theme(\n    plot.title = element_text(hjust = 0.5),\n    plot.subtitle = element_text(hjust = 0.5, margin = unit(c(0.5, 0, 1, 0), \"lines\")),\n    axis.text.y = element_blank(),\n    plot.caption = element_text(color = \"gray30\")\n  )\n\n\n\n\n\nhttps://tsl.news/category/opinions/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntsl_opinion_titles\n\n# A tibble: 500 × 4\n   title                           authors date                first_p\n   &lt;chr&gt;                           &lt;chr&gt;   &lt;dttm&gt;              &lt;chr&gt;  \n 1 Stop buying your books          Sarah … 2025-04-04 08:03:00 from b…\n 2 The case for fleeing the count… Alex B… 2025-04-04 07:27:00 when t…\n 3 Tolerate thy neighbor           Parker… 2025-04-04 07:22:00 it’s s…\n 4 Confronting furry hate          Xavier… 2025-04-04 07:16:00 furrie…\n 5 Shame on the governor: Gavin N… Akshay… 2025-03-28 06:56:00 gavin …\n 6 Accessibility at the 5Cs requi… Zena A… 2025-03-28 06:42:00 althou…\n 7 Your spring break destination … Nicole… 2025-03-15 04:44:00 spring…\n 8 Pomona College’s Merritt Field… Katie … 2025-03-15 03:03:00 with l…\n 9 Seminars should be tech-free s… Elias … 2025-03-14 09:15:00 we hav…\n10 The bitter truth to the bitter… Daniel… 2025-03-14 09:13:00 have y…\n# ℹ 490 more rows"
   }
 ]

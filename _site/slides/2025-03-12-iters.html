@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jo Hardin">
+
+<title>Iterations – Foundations of Data Science in R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-643cb54a90563409bf607ca7ddb324ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://ds002r-fds.netlify.app/" class="navbar-brand navbar-brand-logo">
+    <img src="../images/st47s.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://ds002r-fds.netlify.app/">
+    <span class="navbar-title">Foundations of Data Science in R</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notes.html"> 
+<span class="menu-text">Class Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../clicker_study.html"> 
+<span class="menu-text">Clicker Q</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../R-tip.html"> 
+<span class="menu-text">R tip</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="../project.html">
+ <span class="dropdown-text">semester mini-projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../project1.html">
+ <span class="dropdown-text">project 1 - website</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../project2.html">
+ <span class="dropdown-text">project 2 - text analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://hardin47.netlify.app/courses/data/">
+ <span class="dropdown-text">Data Sources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../github.html"> 
+<span class="menu-text">GitHub</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="2025-03-12-iters.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Iterations</h1>
+<p class="subtitle lead">March 12 + 24, 2025</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jo Hardin </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="agenda-31225" class="level1">
+<h1>Agenda 3/12/25</h1>
+<ol type="1">
+<li>Why simulate?</li>
+<li>Simulating to calculate probabilities</li>
+<li>What makes a good simulation?</li>
+</ol>
+<section id="goals-of-simulating-complicated-models" class="level2">
+<h2 class="anchored" data-anchor-id="goals-of-simulating-complicated-models">Goals of Simulating Complicated Models</h2>
+<p>The goal of simulating a complicated model is not only to create a program which will provide the desired results. We also hope to be able to write code such that:</p>
+<ol type="1">
+<li>The problem is broken down into small pieces.</li>
+<li>The problem has checks in it to see what works (run the lines <em>inside</em> the functions!).</li>
+<li>uses simple code (as often as possible).</li>
+</ol>
+</section>
+<section id="simulate-to" class="level2">
+<h2 class="anchored" data-anchor-id="simulate-to">Simulate to…</h2>
+<style>
+.semi-transparent {
+  opacity: 0.5;
+}
+</style>
+<ul>
+<li>… estimate probabilities (easier than calculus).</li>
+<li><span class="semi-transparent">… understand complicated models.</span></li>
+</ul>
+</section>
+<section id="aside-ifelse" class="level2">
+<h2 class="anchored" data-anchor-id="aside-ifelse">Aside: <code>ifelse()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">value =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">:</span><span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">abs_value =</span> <span class="fu">ifelse</span>(value <span class="sc">&gt;=</span><span class="dv">0</span>, value, <span class="sc">-</span>value))  <span class="co"># abs val</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  value abs_value
+1    -2         2
+2    -1         1
+3     0         0
+4     1         1
+5     2         2</code></pre>
+</div>
+</div>
+</section>
+<section id="aside-case_when" class="level2">
+<h2 class="anchored" data-anchor-id="aside-case_when">Aside: <code>case_when()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4747</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">|&gt;</span> <span class="fu">select</span>(carat, cut, color, price) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample_n</span>(<span class="dv">20</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">price_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    price <span class="sc">&gt;</span> <span class="dv">10000</span> <span class="sc">~</span> <span class="st">"expensive"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    price <span class="sc">&gt;</span> <span class="dv">1500</span> <span class="sc">~</span> <span class="st">"medium"</span>, </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"inexpensive"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 20 × 5
+   carat cut       color price price_cat  
+   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      
+ 1  1.23 Very Good F     10276 expensive  
+ 2  0.35 Premium   H       706 inexpensive
+ 3  0.7  Good      E      2782 medium     
+ 4  0.4  Ideal     D      1637 medium     
+ 5  0.53 Ideal     G      1255 inexpensive
+ 6  2.22 Ideal     G     14637 expensive  
+ 7  0.3  Ideal     G       878 inexpensive
+ 8  1.05 Ideal     H      4223 medium     
+ 9  0.53 Premium   E      1654 medium     
+10  1.7  Ideal     H      7068 medium     
+11  0.31 Good      E       698 inexpensive
+12  0.31 Ideal     F       840 inexpensive
+13  1.03 Ideal     H      4900 medium     
+14  0.31 Premium   G       698 inexpensive
+15  1.56 Premium   G      8858 medium     
+16  1.71 Premium   G     11032 expensive  
+17  1    Good      E      5345 medium     
+18  1.86 Ideal     J     10312 expensive  
+19  1.08 Very Good E      3726 medium     
+20  0.31 Premium   E       698 inexpensive</code></pre>
+</div>
+</div>
+</section>
+<section id="aside-sample" class="level2">
+<h2 class="anchored" data-anchor-id="aside-sample">Aside: <code>sample()</code></h2>
+<p><em>sampling</em>, <em>shuffling</em>, and <em>resampling</em>: <code>sample()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>alph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>) <span class="co"># sample (from a population)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "i" "b" "g" "d" "a"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>) <span class="co"># sample (from a population)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "j" "g" "f" "i" "f"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)  <span class="co"># shuffle</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "f" "h" "i" "e" "g" "d" "c" "j" "b" "a"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(alph, <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)  <span class="co"># resample</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "e" "j" "e" "b" "e" "c" "f" "a" "e" "a"</code></pre>
+</div>
+</div>
+</section>
+<section id="aside-set.seed" class="level2">
+<h2 class="anchored" data-anchor-id="aside-set.seed">Aside: <code>set.seed()</code></h2>
+<p>What if we want to be able to generate the <strong>same</strong> random numbers (here on the interval from 0 to 1) over and over?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4747</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co"># random uniform numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1949071 0.3390270 0.5147919 0.4516470</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co"># random uniform numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2875775 0.7883051 0.4089769 0.8830174</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4747</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co"># random uniform numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1949071 0.3390270 0.5147919 0.4516470</code></pre>
+</div>
+</div>
+</section>
+<section id="example-1-alex-jordan" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-alex-jordan">Example 1: Alex &amp; Jordan</h2>
+<p>Consider a situation where Alex and Jordan plan to meet to study in their college campus center <span class="citation" data-cites="mosteller1987 MDSR">(<a href="#ref-mosteller1987" role="doc-biblioref">Mosteller 1987</a>; <a href="#ref-MDSR" role="doc-biblioref">Baumer, Kaplan, and Horton 2021</a>)</span>. They are both impatient people who will wait only 10 minutes for the other before leaving.</p>
+<p>But their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?</p>
+</section>
+<section id="simulate-their-meeting" class="level2">
+<h2 class="anchored" data-anchor-id="simulate-their-meeting">Simulate their meeting</h2>
+<p>Assume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">function</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><code>map()</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><code>for()</code> loop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">vectorized</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>meet_func <span class="ot">&lt;-</span> <span class="cf">function</span>(nada){</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">alex =</span> <span class="fu">runif</span>(<span class="dv">1</span>, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">60</span>),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">jordan =</span> <span class="fu">runif</span>(<span class="dv">1</span>, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">60</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">result =</span> <span class="fu">ifelse</span>(<span class="fu">abs</span>(alex <span class="sc">-</span> jordan) <span class="sc">&lt;=</span> <span class="dv">10</span>, </span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"They meet"</span>, </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"They do not"</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">100000</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>meet_map <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span>n <span class="sc">|&gt;</span> </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(meet_func) <span class="sc">|&gt;</span> </span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>()</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>31.887 sec elapsed</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>meet_for <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>n)){</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  meet_for <span class="ot">&lt;-</span> meet_for <span class="sc">|&gt;</span> <span class="fu">rbind</span>(</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">alex =</span> <span class="fu">runif</span>(<span class="dv">1</span>, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">60</span>),</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">jordan =</span> <span class="fu">runif</span>(<span class="dv">1</span>, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">60</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">result =</span> <span class="fu">ifelse</span>(<span class="fu">abs</span>(alex <span class="sc">-</span> jordan) <span class="sc">&lt;=</span> <span class="dv">10</span>,</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"They meet"</span>, </span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"They do not"</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  )))</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>156.773 sec elapsed</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>meet_vect <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">alex =</span> <span class="fu">runif</span>(n, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">60</span>),</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">jordan =</span> <span class="fu">runif</span>(n, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">60</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">result =</span> <span class="fu">ifelse</span>(<span class="fu">abs</span>(alex <span class="sc">-</span> jordan) <span class="sc">&lt;=</span> <span class="dv">10</span>, </span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"They meet"</span>, </span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"They do not"</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.008 sec elapsed</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>The results themselves are equivalent. Differing values due to randomness in the simulation.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><code>map()</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><code>for()</code> loop</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">vectorized</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>meet_map <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(result) <span class="sc">|&gt;</span> </span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">number =</span> <span class="fu">n</span>())<span class="sc">|&gt;</span> </span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">proprotion =</span> number <span class="sc">/</span> <span class="fu">sum</span>(number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  result      number proprotion
+  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;
+1 They do not  69600      0.696
+2 They meet    30400      0.304</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>meet_for <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(result) <span class="sc">|&gt;</span> </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">number =</span> <span class="fu">n</span>())<span class="sc">|&gt;</span> </span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">proprotion =</span> number <span class="sc">/</span> <span class="fu">sum</span>(number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  result      number proprotion
+  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;
+1 They do not  69408      0.694
+2 They meet    30592      0.306</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>meet_vect <span class="sc">|&gt;</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(result) <span class="sc">|&gt;</span> </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">number =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">proprotion =</span> number <span class="sc">/</span> <span class="fu">sum</span>(number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  result      number proprotion
+  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;
+1 They do not  69529      0.695
+2 They meet    30471      0.305</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizing-the-meet-up" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing-the-meet-up">Visualizing the meet up</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>meet_map <span class="sc">|&gt;</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> jordan, <span class="at">y =</span> alex, <span class="at">color =</span> result)) <span class="sc">+</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span> </span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">10</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="sc">-</span><span class="dv">10</span>, <span class="at">slope =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Paired"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="example-2-hats" class="level1">
+<h1>Example 2: hats</h1>
+<p>10 people are at a party, and all of them are wearing hats. They each place their hat in a pile; when they leave, they choose a hat at random. What is the probability at least one person selected the correct hat?</p>
+<section id="step-1-representing-the-hats" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-representing-the-hats">Step 1: representing the hats</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>hats <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>hats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+</div>
+</section>
+<section id="step-2-everyone-draws-a-hat" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-everyone-draws-a-hat">Step 2: everyone draws a hat</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>random_hats <span class="ot">&lt;-</span> <span class="fu">sample</span>(hats, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>hats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>random_hats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  9  2  7  4  1 10  6  3  5  8</code></pre>
+</div>
+</div>
+</section>
+<section id="step-3-who-got-their-original-hat" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-who-got-their-original-hat">Step 3: who got their original hat?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>hats <span class="sc">==</span> random_hats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TRUE is 1, FALSE is 0</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># did at least one person get their hat?</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="code-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="code-so-far">Code so far</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>hats <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>random_hats <span class="ot">&lt;-</span> <span class="fu">sample</span>(hats, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(hats <span class="sc">==</span> random_hats) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<ul>
+<li>Do we have a good estimate of the probability of interest?</li>
+</ul>
+</section>
+<section id="function-1" class="level2">
+<h2 class="anchored" data-anchor-id="function-1">Function</h2>
+<ul>
+<li>remove the magic number <code>10</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>hat_match <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  hats <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>n)</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  random_hats <span class="ot">&lt;-</span> <span class="fu">sample</span>(hats, <span class="at">size =</span> n, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(hats <span class="sc">==</span> random_hats) <span class="sc">&gt;</span> <span class="dv">0</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="fu">hat_match</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hat_match</span>(<span class="dv">47</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="iterate" class="level2">
+<h2 class="anchored" data-anchor-id="iterate">Iterate</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_lgl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="sc">~</span><span class="fu">hat_match</span>(<span class="at">n =</span> <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_lgl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="sc">~</span><span class="fu">hat_match</span>(<span class="at">n =</span> <span class="dv">10</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
+</div>
+</section>
+<section id="reproducible" class="level2">
+<h2 class="anchored" data-anchor-id="reproducible">Reproducible</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4747</span>)</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>num_iter <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a><span class="fu">map_lgl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>num_iter), <span class="sc">~</span><span class="fu">hat_match</span>(<span class="at">n =</span> <span class="dv">10</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6329</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>num_iter <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="fu">map_lgl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>num_iter), <span class="sc">~</span><span class="fu">hat_match</span>(<span class="at">n =</span> <span class="dv">10</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.6333</code></pre>
+</div>
+</div>
+</section>
+<section id="vary-number-of-hats" class="level2">
+<h2 class="anchored" data-anchor-id="vary-number-of-hats">Vary number of hats</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>hat_match_prob <span class="ot">&lt;-</span> <span class="cf">function</span>(n, reps){</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  prob <span class="ot">&lt;-</span> <span class="fu">map_lgl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>reps), <span class="sc">~</span><span class="fu">hat_match</span>(<span class="at">n =</span> n)) <span class="sc">|&gt;</span> </span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mean</span>()</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">match_prob =</span> prob, <span class="at">num_hats =</span> n))</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a><span class="fu">hat_match_prob</span>(<span class="dv">47</span>, <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  match_prob num_hats
+1       0.62       47</code></pre>
+</div>
+</div>
+</section>
+<section id="vary-number-of-hats-1" class="level2">
+<h2 class="anchored" data-anchor-id="vary-number-of-hats-1">Vary number of hats</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>hat_match_prob <span class="ot">&lt;-</span> <span class="cf">function</span>(n, reps){</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>  prob <span class="ot">&lt;-</span> <span class="fu">map_lgl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>reps), <span class="sc">~</span><span class="fu">hat_match</span>(<span class="at">n =</span> n)) <span class="sc">|&gt;</span> </span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mean</span>()</span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">match_prob =</span> prob, <span class="at">num_hats =</span> n))</span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>), hat_match_prob, <span class="at">reps =</span> num_iter) <span class="sc">|&gt;</span> </span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   match_prob num_hats
+1      1.0000        1
+2      0.4964        2
+3      0.6695        3
+4      0.6241        4
+5      0.6376        5
+6      0.6290        6
+7      0.6299        7
+8      0.6299        8
+9      0.6373        9
+10     0.6273       10
+11     0.6319       11
+12     0.6348       12
+13     0.6393       13
+14     0.6300       14
+15     0.6280       15
+16     0.6396       16
+17     0.6355       17
+18     0.6283       18
+19     0.6304       19
+20     0.6461       20</code></pre>
+</div>
+</div>
+</section>
+<section id="visualizing" class="level2">
+<h2 class="anchored" data-anchor-id="visualizing">Visualizing</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>num_iter <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>), hat_match_prob, <span class="at">reps =</span> num_iter) <span class="sc">|&gt;</span> </span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> num_hats, <span class="at">y =</span> match_prob)) <span class="sc">+</span> </span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"probability of at least one match"</span>,</span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"number of hats"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-3-birthday-problem" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-birthday-problem">Example 3: Birthday Problem</h2>
+<p>What is the probability that in a room of 28 people, at least 2 of them have the same birthday?</p>
+</section>
+<section id="step-1-representing-the-birthdays" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-representing-the-birthdays">Step 1: representing the birthdays</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7474</span>)</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>class_birthdays <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>), <span class="at">size =</span> <span class="dv">28</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>class_birthdays </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  65 340 246 244 355 248 298 271 363 173 307 260 195 300 189 154 319  51 139
+[20] 241 275 271 102 363 201 165  35  13</code></pre>
+</div>
+</div>
+</section>
+<section id="step-2-any-duplicates" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-any-duplicates">Step 2: any duplicates?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">duplicated</span>(class_birthdays)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE
+[25] FALSE FALSE FALSE FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">duplicated</span>(class_birthdays))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+</section>
+<section id="function-2" class="level2">
+<h2 class="anchored" data-anchor-id="function-2">Function</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>class_duplicates <span class="ot">&lt;-</span> <span class="cf">function</span>(unicorn){</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  class_birthdays <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>), <span class="at">size =</span> <span class="dv">28</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>  num_duplicates <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">duplicated</span>(class_birthdays))</span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">ifelse</span>(num_duplicates <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="fu">class_duplicates</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class_duplicates</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+</section>
+<section id="iterate-1" class="level2">
+<h2 class="anchored" data-anchor-id="iterate-1">Iterate</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map_dbl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), class_duplicates)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0 1 0 0 0 0 0 0 1 0</code></pre>
+</div>
+</div>
+</section>
+<section id="improve" class="level2">
+<h2 class="anchored" data-anchor-id="improve">Improve</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>class_duplicates <span class="ot">&lt;-</span> <span class="cf">function</span>(class_size){</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>  class_birthdays <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>), <span class="at">size =</span> class_size, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>  num_duplicates <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">duplicated</span>(class_birthdays))</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">ifelse</span>(num_duplicates <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb78-8"><a href="#cb78-8" aria-hidden="true" tabindex="-1"></a>num_stud <span class="ot">&lt;-</span> <span class="dv">28</span></span>
+<span id="cb78-9"><a href="#cb78-9" aria-hidden="true" tabindex="-1"></a><span class="fu">map_dbl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>), <span class="sc">~</span><span class="fu">class_duplicates</span>(<span class="at">class_size =</span> num_stud))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0 1 0 1 1 1 1 0 1 0</code></pre>
+</div>
+</div>
+</section>
+<section id="many-classrooms" class="level2">
+<h2 class="anchored" data-anchor-id="many-classrooms">Many classrooms</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>num_stud <span class="ot">&lt;-</span> <span class="dv">28</span></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>num_class <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="fu">map_dbl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>num_class), <span class="sc">~</span><span class="fu">class_duplicates</span>(<span class="at">class_size =</span> num_stud)) <span class="sc">|&gt;</span> </span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.649</code></pre>
+</div>
+</div>
+</section>
+<section id="vary-number-of-students" class="level2">
+<h2 class="anchored" data-anchor-id="vary-number-of-students">Vary number of students</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">47</span>)</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>num_stud_upper <span class="ot">&lt;-</span> <span class="dv">28</span></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>num_class <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a>birth_match_prob <span class="ot">&lt;-</span> <span class="cf">function</span>(num_stud, reps){</span>
+<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>  prob <span class="ot">&lt;-</span> <span class="fu">map_dbl</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>reps), <span class="sc">~</span><span class="fu">class_duplicates</span>(<span class="at">class_size =</span> num_stud)) <span class="sc">|&gt;</span> </span>
+<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mean</span>()</span>
+<span id="cb82-8"><a href="#cb82-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">match_prob =</span> prob, <span class="at">num_stud =</span> num_stud))</span>
+<span id="cb82-9"><a href="#cb82-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb82-10"><a href="#cb82-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-11"><a href="#cb82-11" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>num_stud_upper), birth_match_prob, <span class="at">reps =</span> num_class) <span class="sc">|&gt;</span> </span>
+<span id="cb82-12"><a href="#cb82-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   match_prob num_stud
+1        0.00        1
+2        0.00        2
+3        0.00        3
+4        0.00        4
+5        0.03        5
+6        0.03        6
+7        0.04        7
+8        0.06        8
+9        0.11        9
+10       0.13       10
+11       0.14       11
+12       0.18       12
+13       0.18       13
+14       0.25       14
+15       0.25       15
+16       0.32       16
+17       0.37       17
+18       0.43       18
+19       0.44       19
+20       0.40       20
+21       0.43       21
+22       0.47       22
+23       0.48       23
+24       0.47       24
+25       0.61       25
+26       0.67       26
+27       0.63       27
+28       0.66       28</code></pre>
+</div>
+</div>
+</section>
+<section id="visualize" class="level2">
+<h2 class="anchored" data-anchor-id="visualize">Visualize</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>num_stud_upper <span class="ot">&lt;-</span> <span class="dv">40</span></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>num_class <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>num_stud_upper), birth_match_prob, <span class="at">reps =</span> num_class) <span class="sc">|&gt;</span> </span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>()  <span class="sc">|&gt;</span> </span>
+<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> num_stud, <span class="at">y =</span> match_prob)) <span class="sc">+</span> </span>
+<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb84-9"><a href="#cb84-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"probability of birthday match"</span>,</span>
+<span id="cb84-10"><a href="#cb84-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"number of students in class"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="good-simulation-practice" class="level1">
+<h1>Good simulation practice</h1>
+<ul>
+<li>avoid magic numbers</li>
+<li>set a seed for reproducibility</li>
+<li>use meaningful names</li>
+<li>add comments</li>
+</ul>
+</section>
+<section id="agenda-32425" class="level1">
+<h1>Agenda 3/24/25</h1>
+<ol type="1">
+<li>Simulating for model sensitivity</li>
+</ol>
+<section id="simulate-to-1" class="level2">
+<h2 class="anchored" data-anchor-id="simulate-to-1">Simulate to…</h2>
+<ul>
+<li><span class="semi-transparent">… estimate probabilities (easier than calculus)</span>.</li>
+<li>… understand complicated models.</li>
+</ul>
+</section>
+<section id="bias-in-a-model" class="level2">
+<h2 class="anchored" data-anchor-id="bias-in-a-model">Bias in a model</h2>
+<p>Population:</p>
+<pre><code>talent ~ Normal (100, 15)
+grades ~ Normal (talent, 15)
+SAT ~ Normal (talent, 15)</code></pre>
+<p>The example is taken directly (and mostly verbatim) from a blog by Aaron Roth <a href="http://aaronsadventures.blogspot.com/2019/01/discussion-of-unfairness-in-machine.html">Algorithmic Unfairness Without Any Bias Baked In</a>.</p>
+</section>
+<section id="goal-for-admitting-students" class="level2">
+<h2 class="anchored" data-anchor-id="goal-for-admitting-students">Goal for admitting students</h2>
+<p>College wants to admit students with</p>
+<blockquote class="blockquote">
+<p><code>talent &gt; 115</code></p>
+</blockquote>
+<p>… but they only have access to <code>grades</code> and <code>SAT</code> which are noisy estimates of <code>talent</code>.</p>
+</section>
+<section id="plan-for-accepting-students" class="level2">
+<h2 class="anchored" data-anchor-id="plan-for-accepting-students">Plan for accepting students</h2>
+<ul>
+<li>Run a regression on a training dataset (<code>talent</code> is known for existing students)</li>
+<li>Find a model which predicts <code>talent</code> based on <code>grades</code> and <code>SAT</code></li>
+<li>Choose students for whom predicted <code>talent</code> is above 115</li>
+</ul>
+</section>
+<section id="flaw-in-the-plan" class="level2">
+<h2 class="anchored" data-anchor-id="flaw-in-the-plan">Flaw in the plan …</h2>
+<ul>
+<li>there are two populations of students, the Reds and Blues.</li>
+<li>Reds are the majority population (99%), and Blues are a small minority population (1%)</li>
+<li>the Reds and the Blues are no different when it comes to talent: they both have the same talent distribution, as described above.</li>
+<li>there is no bias baked into the grading or the exams: both the Reds and the Blues also have exactly the same grade and exam score distributions</li>
+</ul>
+</section>
+<section id="what-is-really-different" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-really-different">What is really different?</h2>
+<blockquote class="blockquote">
+<p>But there is one difference: the Blues have more money than the Reds, so they each take the <strong>SAT twice</strong>, and report only the highest of the two scores to the college. This results in a small but noticeable bump in their average SAT scores, compared to the Reds.</p>
+</blockquote>
+</section>
+<section id="key-aspect" class="level2">
+<h2 class="anchored" data-anchor-id="key-aspect">Key aspect:</h2>
+<blockquote class="blockquote">
+<p>The value of <code>SAT</code> means something different for the Reds versus the Blues</p>
+</blockquote>
+<p>(They have different feature distributions.)</p>
+</section>
+<section id="lets-see-what-happens" class="level2">
+<h2 class="anchored" data-anchor-id="lets-see-what-happens">Let’s see what happens …</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="two-models" class="level2">
+<h2 class="anchored" data-anchor-id="two-models">Two models:</h2>
+<p>Red model (SAT taken once):</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term        estimate std.error statistic p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 (Intercept)   33.2     0.152        218.       0
+2 SAT            0.334   0.00149      224.       0
+3 grades         0.334   0.00149      225.       0</code></pre>
+</div>
+</div>
+<p>Blue model (SAT is max score of two):</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term        estimate std.error statistic   p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)   25.3      1.60        15.8 2.04e- 50
+2 SAT            0.432    0.0161      26.7 3.35e-119
+3 grades         0.277    0.0154      18.0 6.83e- 63</code></pre>
+</div>
+</div>
+</section>
+<section id="new-data" class="level2">
+<h2 class="anchored" data-anchor-id="new-data">New data</h2>
+<ul>
+<li><p>Generate new data, use the <strong>two</strong> models separately.</p></li>
+<li><p>Can the models predict if a student has <code>talent</code> &gt; 115?</p></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="new-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="new-data-1">New data</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  color   tpr    fpr   fnr error
+  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 blue  0.503 0.0379 0.497 0.109
+2 red   0.509 0.0378 0.491 0.109</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="two-models-doesnt-seem-right" class="level2">
+<h2 class="anchored" data-anchor-id="two-models-doesnt-seem-right"><strong>TWO</strong> models doesn’t seem right????</h2>
+<p>What if we fit only one model to the entire dataset?</p>
+<p>After all, there are laws against using protected classes to make decisions (housing, jobs, money loans, college, etc.)</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term        estimate std.error statistic p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 (Intercept)   33.1     0.151        219.       0
+2 SAT            0.334   0.00148      225.       0
+3 grades         0.334   0.00148      226.       0</code></pre>
+</div>
+</div>
+<p>(The coefficients kinda look like the red model…)</p>
+</section>
+<section id="how-do-the-error-rates-change" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-the-error-rates-change">How do the error rates change?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-41-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>One model:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  color   tpr    fpr   fnr error
+  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 blue  0.619 0.0627 0.381 0.112
+2 red   0.507 0.0375 0.493 0.109</code></pre>
+</div>
+</div>
+<p>Two separate models:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  color   tpr    fpr   fnr error
+  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 blue  0.503 0.0379 0.497 0.109
+2 red   0.509 0.0378 0.491 0.109</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-did-we-learn" class="level2">
+<h2 class="anchored" data-anchor-id="what-did-we-learn">What did we learn?</h2>
+<blockquote class="blockquote">
+<p>with two populations that have different feature distributions, learning a single classifier (that is prohibited from discriminating based on population) will fit the bigger of the two populations</p>
+</blockquote>
+<ul>
+<li><p>depending on the nature of the distribution difference, it can be either to the benefit or the detriment of the minority population</p></li>
+<li><p>no explicit human bias, either on the part of the algorithm designer or the data gathering process</p></li>
+<li><p>the problem is exacerbated if we artificially force the algorithm to be group blind</p></li>
+<li><p>well-intentioned “fairness” regulations prohibiting decision makers form taking sensitive attributes into account can actually make things less fair and less accurate at the same time</p></li>
+</ul>
+</section>
+<section id="simulate" class="level2">
+<h2 class="anchored" data-anchor-id="simulate">Simulate?</h2>
+<ul>
+<li>different varying proportions</li>
+<li>effect due to variability</li>
+<li>effect due to SAT coefficient</li>
+<li>different number of times the blues get to take the test</li>
+<li>etc.</li>
+</ul>
+</section>
+</section>
+<section id="asset-allocation" class="level1">
+<h1>Asset allocation</h1>
+<ul>
+<li>repeatedly run a model on a simulated outcome based on varying inputs</li>
+<li>inputs are uncertain and variable.</li>
+<li>output is a large set of results, creating a distribution of outcomes rather than a single point estimate.</li>
+<li>easy to change the conditions of the models by varying the distribution type or properties of the inputs.</li>
+</ul>
+<p>Taken from <a href="https://www.pluralsight.com/resources/blog/guides/risk-analysis-using-monte-carlo-simulations-in-r">Risk Analysis Using Monte Carlo Simulations in R</a>.</p>
+<section id="aside-rnorm" class="level2">
+<h2 class="anchored" data-anchor-id="aside-rnorm">Aside: <code>rnorm()</code></h2>
+<p><code>rnorm()</code> calculates random normal values</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.0598770 0.2813142 0.1483487</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">3</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -1.5222088 -0.2609479  0.1393759</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">4</span>, <span class="at">mean =</span> <span class="dv">47</span>, <span class="at">sd =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 48.91283 45.11651 50.69179 42.14037</code></pre>
+</div>
+</div>
+</section>
+<section id="asset-allocation-1" class="level2">
+<h2 class="anchored" data-anchor-id="asset-allocation-1">Asset allocation</h2>
+<p>Task: to model an asset allocation problem where you decide what portion of wealth should be allocated to risk-free investment or high-risk investment</p>
+<ul>
+<li>the function calculates returns based on different asset allocations.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>calculate_return <span class="ot">&lt;-</span> <span class="cf">function</span>(step, alpha) {</span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a>  risk_free_rate <span class="ot">&lt;-</span> <span class="fl">1.03</span></span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>  risky_rate <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="fl">0.05</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb98-4"><a href="#cb98-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">step =</span> step, </span>
+<span id="cb98-5"><a href="#cb98-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">return =</span> (<span class="dv">1</span> <span class="sc">-</span> alpha) <span class="sc">*</span> risk_free_rate <span class="sc">+</span> alpha <span class="sc">*</span> risky_rate))</span>
+<span id="cb98-6"><a href="#cb98-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb98-7"><a href="#cb98-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb98-8"><a href="#cb98-8" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_return</span>(<span class="st">"unicorn"</span>, <span class="fl">0.47</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     step   return
+1 unicorn 1.034815</code></pre>
+</div>
+</div>
+</section>
+<section id="let-alpha-0.5" class="level2">
+<h2 class="anchored" data-anchor-id="let-alpha-0.5">Let alpha = 0.5</h2>
+<p>(half risky, half risk free)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>decision_steps <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a><span class="fu">pmap</span>(<span class="fu">data.frame</span>(<span class="at">step =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>decision_steps),</span>
+<span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">alpha =</span> <span class="fu">rep</span>(<span class="fl">0.5</span>, decision_steps)),</span>
+<span id="cb100-5"><a href="#cb100-5" aria-hidden="true" tabindex="-1"></a>     calculate_return) <span class="sc">|&gt;</span> </span>
+<span id="cb100-6"><a href="#cb100-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   step    return
+1     1 1.0244265
+2     2 0.9740712
+3     3 1.0111959
+4     4 1.0382488
+5     5 1.0019058
+6     6 0.9847674
+7     7 1.0296142
+8     8 0.9924038
+9     9 1.0381949
+10   10 1.0088956
+11   11 1.0370043
+12   12 1.0107057</code></pre>
+</div>
+</div>
+</section>
+<section id="many-runs" class="level2">
+<h2 class="anchored" data-anchor-id="many-runs">Many runs</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>runs <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>decision_steps <span class="ot">&lt;-</span> <span class="dv">12</span></span>
+<span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-4"><a href="#cb102-4" aria-hidden="true" tabindex="-1"></a>run_func <span class="ot">&lt;-</span> <span class="cf">function</span>(run, steps, alpha){</span>
+<span id="cb102-5"><a href="#cb102-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pmap</span>(<span class="fu">data.frame</span>(<span class="at">step =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>steps),</span>
+<span id="cb102-6"><a href="#cb102-6" aria-hidden="true" tabindex="-1"></a>                  <span class="at">alpha =</span> <span class="fu">rep</span>(alpha, steps)),</span>
+<span id="cb102-7"><a href="#cb102-7" aria-hidden="true" tabindex="-1"></a>       calculate_return) <span class="sc">|&gt;</span> </span>
+<span id="cb102-8"><a href="#cb102-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb102-9"><a href="#cb102-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(<span class="at">run_number =</span> <span class="fu">as.factor</span>(run))</span>
+<span id="cb102-10"><a href="#cb102-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb102-11"><a href="#cb102-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb102-12"><a href="#cb102-12" aria-hidden="true" tabindex="-1"></a><span class="fu">run_func</span>(<span class="st">"happy"</span>, <span class="dv">12</span>, <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   step    return run_number
+1     1 0.9972576      happy
+2     2 1.0503818      happy
+3     3 1.0133106      happy
+4     4 1.0305766      happy
+5     5 1.0424264      happy
+6     6 1.0278066      happy
+7     7 1.0088744      happy
+8     8 1.0280513      happy
+9     9 1.0270015      happy
+10   10 1.0495620      happy
+11   11 1.0483569      happy
+12   12 1.0089000      happy</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>runs), run_func, </span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">steps =</span> decision_steps,</span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb104-4"><a href="#cb104-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    step    return run_number
+1      1 1.0037332          1
+2      2 1.0305053          1
+3      3 1.0177365          1
+4      4 0.9851848          1
+5      5 1.0200471          1
+6      6 0.9777514          1
+7      7 1.0139097          1
+8      8 1.0394459          1
+9      9 1.0311656          1
+10    10 1.0111325          1
+11    11 1.0600142          1
+12    12 0.9529528          1
+13     1 1.0511925          2
+14     2 1.0188551          2
+15     3 1.0546398          2
+16     4 1.0286009          2
+17     5 1.0090312          2
+18     6 1.0116230          2
+19     7 0.9982508          2
+20     8 1.0397553          2
+21     9 0.9748453          2
+22    10 0.9994628          2
+23    11 1.0325967          2
+24    12 1.0265163          2
+25     1 0.9846161          3
+26     2 1.0106626          3
+27     3 1.0085478          3
+28     4 1.0253148          3
+29     5 0.9879959          3
+30     6 1.0761028          3
+31     7 1.0095107          3
+32     8 1.0417969          3
+33     9 1.0299429          3
+34    10 1.0483370          3
+35    11 1.0039636          3
+36    12 1.0177251          3
+37     1 0.9957903          4
+38     2 1.0446025          4
+39     3 1.0151633          4
+40     4 1.0208127          4
+41     5 1.0138992          4
+42     6 1.0241599          4
+43     7 0.9636553          4
+44     8 1.0330971          4
+45     9 1.0707355          4
+46    10 1.0341161          4
+47    11 1.0076286          4
+48    12 1.0437015          4
+49     1 1.0166442          5
+50     2 1.0424126          5
+51     3 0.9944647          5
+52     4 0.9669553          5
+53     5 1.0152975          5
+54     6 1.0145272          5
+55     7 1.0372179          5
+56     8 1.0407917          5
+57     9 0.9811040          5
+58    10 1.0213106          5
+59    11 0.9962674          5
+60    12 1.0518327          5
+61     1 0.9804384          6
+62     2 1.0313983          6
+63     3 1.0456102          6
+64     4 1.0019782          6
+65     5 0.9848773          6
+66     6 1.0166534          6
+67     7 1.0338028          6
+68     8 1.0222348          6
+69     9 0.9802758          6
+70    10 1.0156817          6
+71    11 1.0424656          6
+72    12 1.0575701          6
+73     1 1.0750144          7
+74     2 1.0058097          7
+75     3 0.9927478          7
+76     4 1.0009444          7
+77     5 1.0055233          7
+78     6 1.0573874          7
+79     7 0.9575212          7
+80     8 0.9957913          7
+81     9 1.0893832          7
+82    10 1.0135442          7
+83    11 1.0152496          7
+84    12 1.0331392          7
+85     1 1.0304361          8
+86     2 1.0111527          8
+87     3 1.0077437          8
+88     4 1.0031964          8
+89     5 1.0507032          8
+90     6 0.9713326          8
+91     7 1.0101054          8
+92     8 1.0556004          8
+93     9 0.9991680          8
+94    10 1.0232786          8
+95    11 1.0182200          8
+96    12 0.9987042          8
+97     1 1.0250592          9
+98     2 1.0300056          9
+99     3 0.9890955          9
+100    4 1.0395173          9
+101    5 1.0147912          9
+102    6 1.0243437          9
+103    7 0.9964191          9
+104    8 1.0782102          9
+105    9 0.9746246          9
+106   10 1.0194040          9
+107   11 1.0383502          9
+108   12 1.0508320          9
+109    1 1.0563048         10
+110    2 0.9850083         10
+111    3 1.0395162         10
+112    4 0.9711030         10
+113    5 1.0193429         10
+114    6 1.0259306         10
+115    7 0.9889117         10
+116    8 1.0418063         10
+117    9 1.0055857         10
+118   10 1.0155720         10
+119   11 1.0350093         10
+120   12 0.9916229         10</code></pre>
+</div>
+</div>
+</section>
+<section id="cummulative-product" class="level2">
+<h2 class="anchored" data-anchor-id="cummulative-product">Cummulative product</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5 4 2 1 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cumprod</span>(numbers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]   5  20  40  40 120</code></pre>
+</div>
+</div>
+</section>
+<section id="cummulative-rates" class="level2">
+<h2 class="anchored" data-anchor-id="cummulative-rates">Cummulative rates</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>runs), run_func, </span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">steps =</span> decision_steps,</span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb110-5"><a href="#cb110-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(run_number) <span class="sc">|&gt;</span> </span>
+<span id="cb110-6"><a href="#cb110-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">compound_return =</span> <span class="fu">cumprod</span>(return))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 120 × 4
+# Groups:   run_number [10]
+    step return run_number compound_return
+   &lt;int&gt;  &lt;dbl&gt; &lt;fct&gt;                &lt;dbl&gt;
+ 1     1  0.984 1                    0.984
+ 2     2  1.01  1                    0.990
+ 3     3  1.04  1                    1.03 
+ 4     4  0.987 1                    1.02 
+ 5     5  1.04  1                    1.05 
+ 6     6  1.04  1                    1.09 
+ 7     7  0.994 1                    1.09 
+ 8     8  1.01  1                    1.10 
+ 9     9  1.01  1                    1.12 
+10    10  0.994 1                    1.11 
+# ℹ 110 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="returns-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="returns-over-time">Returns over time</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">graph</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-50-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a>runs <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>runs), run_func, </span>
+<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">steps =</span> decision_steps,</span>
+<span id="cb112-4"><a href="#cb112-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb112-5"><a href="#cb112-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb112-6"><a href="#cb112-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(run_number) <span class="sc">|&gt;</span> </span>
+<span id="cb112-7"><a href="#cb112-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">compound_return =</span> <span class="fu">cumprod</span>(return)) <span class="sc">|&gt;</span> </span>
+<span id="cb112-8"><a href="#cb112-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> step, <span class="at">y =</span> compound_return)) <span class="sc">+</span></span>
+<span id="cb112-9"><a href="#cb112-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> run_number)) <span class="sc">+</span></span>
+<span id="cb112-10"><a href="#cb112-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb112-11"><a href="#cb112-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">12</span>)) <span class="sc">+</span> </span>
+<span id="cb112-12"><a href="#cb112-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulations of returns from asset allocation, alpha = 0.5"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="change-the-allocation" class="level2">
+<h2 class="anchored" data-anchor-id="change-the-allocation">Change the allocation</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">graph</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-52-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>runs <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>runs), run_func, </span>
+<span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">steps =</span> decision_steps, </span>
+<span id="cb113-4"><a href="#cb113-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb113-5"><a href="#cb113-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb113-6"><a href="#cb113-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(run_number) <span class="sc">|&gt;</span> </span>
+<span id="cb113-7"><a href="#cb113-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">compound_return =</span> <span class="fu">cumprod</span>(return)) <span class="sc">|&gt;</span> </span>
+<span id="cb113-8"><a href="#cb113-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> step, <span class="at">y =</span> compound_return)) <span class="sc">+</span></span>
+<span id="cb113-9"><a href="#cb113-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> run_number)) <span class="sc">+</span></span>
+<span id="cb113-10"><a href="#cb113-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb113-11"><a href="#cb113-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">12</span>)) <span class="sc">+</span> </span>
+<span id="cb113-12"><a href="#cb113-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulations of returns from asset allocation, alpha = 0.1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="change-the-allocation-1" class="level2">
+<h2 class="anchored" data-anchor-id="change-the-allocation-1">Change the allocation</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">graph</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-54-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a>runs <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>runs), run_func, </span>
+<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">steps =</span> decision_steps, </span>
+<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb114-6"><a href="#cb114-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(run_number) <span class="sc">|&gt;</span> </span>
+<span id="cb114-7"><a href="#cb114-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">compound_return =</span> <span class="fu">cumprod</span>(return)) <span class="sc">|&gt;</span> </span>
+<span id="cb114-8"><a href="#cb114-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> step, <span class="at">y =</span> compound_return)) <span class="sc">+</span></span>
+<span id="cb114-9"><a href="#cb114-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> run_number)) <span class="sc">+</span></span>
+<span id="cb114-10"><a href="#cb114-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb114-11"><a href="#cb114-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">12</span>)) <span class="sc">+</span> </span>
+<span id="cb114-12"><a href="#cb114-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulations of returns from asset allocation, alpha = 0.9"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="change-the-return" class="level2">
+<h2 class="anchored" data-anchor-id="change-the-return">Change the return</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">calculate return</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">run function</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1"></a>calculate_return_sd10 <span class="ot">&lt;-</span> <span class="cf">function</span>(step, alpha) {</span>
+<span id="cb115-2"><a href="#cb115-2"></a>  risk_free_rate <span class="ot">&lt;-</span> <span class="fl">1.03</span></span>
+<span id="cb115-3"><a href="#cb115-3"></a>  risky_rate <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">10</span>) <span class="sc">*</span> <span class="fl">0.05</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb115-4"><a href="#cb115-4"></a>  <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">step =</span> step, </span>
+<span id="cb115-5"><a href="#cb115-5"></a>                    <span class="at">return =</span> (<span class="dv">1</span> <span class="sc">-</span> alpha) <span class="sc">*</span> risk_free_rate <span class="sc">+</span> alpha <span class="sc">*</span> risky_rate))</span>
+<span id="cb115-6"><a href="#cb115-6"></a>}</span>
+<span id="cb115-7"><a href="#cb115-7"></a></span>
+<span id="cb115-8"><a href="#cb115-8"></a><span class="fu">calculate_return</span>(<span class="st">"unicorn"</span>, <span class="fl">0.47</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     step   return
+1 unicorn 0.987021</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1"></a>run_func_sd10 <span class="ot">&lt;-</span> <span class="cf">function</span>(run, steps, alpha){</span>
+<span id="cb117-2"><a href="#cb117-2"></a>  <span class="fu">pmap</span>(<span class="fu">data.frame</span>(<span class="at">step =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>steps),</span>
+<span id="cb117-3"><a href="#cb117-3"></a>                  <span class="at">alpha =</span> <span class="fu">rep</span>(alpha, steps)),</span>
+<span id="cb117-4"><a href="#cb117-4"></a>       calculate_return_sd10) <span class="sc">|&gt;</span> </span>
+<span id="cb117-5"><a href="#cb117-5"></a>    <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb117-6"><a href="#cb117-6"></a>    <span class="fu">cbind</span>(<span class="at">run_number =</span> <span class="fu">as.factor</span>(run))</span>
+<span id="cb117-7"><a href="#cb117-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="does-the-change-impact-long-term" class="level2">
+<h2 class="anchored" data-anchor-id="does-the-change-impact-long-term">Does the change impact long-term?</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">graph</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-03-12-iters_files/figure-revealjs/unnamed-chunk-58-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1"></a>runs <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb118-2"><a href="#cb118-2"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>runs), run_func_sd10, </span>
+<span id="cb118-3"><a href="#cb118-3"></a>    <span class="at">steps =</span> decision_steps,</span>
+<span id="cb118-4"><a href="#cb118-4"></a>    <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb118-5"><a href="#cb118-5"></a>  <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb118-6"><a href="#cb118-6"></a>  <span class="fu">group_by</span>(run_number) <span class="sc">|&gt;</span> </span>
+<span id="cb118-7"><a href="#cb118-7"></a>  <span class="fu">mutate</span>(<span class="at">compound_return =</span> <span class="fu">cumprod</span>(return)) <span class="sc">|&gt;</span> </span>
+<span id="cb118-8"><a href="#cb118-8"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> step, <span class="at">y =</span> compound_return)) <span class="sc">+</span></span>
+<span id="cb118-9"><a href="#cb118-9"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> run_number)) <span class="sc">+</span></span>
+<span id="cb118-10"><a href="#cb118-10"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb118-11"><a href="#cb118-11"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">12</span>)) <span class="sc">+</span> </span>
+<span id="cb118-12"><a href="#cb118-12"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulations of returns from asset allocation, alpha = 0.5"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section" class="level2">
+
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-MDSR" class="csl-entry" role="listitem">
+Baumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. <em>Modern Data Science with r</em>. CRC Press. <a href="https://mdsr-book.github.io/mdsr2e/">https://mdsr-book.github.io/mdsr2e/</a>.
+</div>
+<div id="ref-mosteller1987" class="csl-entry" role="listitem">
+Mosteller, Frederick. 1987. <em>Fifty Challenging Problems in Probability with Solutions</em>. Dover Publications: Mineola, NY.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>CC-BY-SA-4.0</div></div></section></div></main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ds002r-fds\.netlify\.app\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://hardin47.netlify.app/research/"><i class="fa-solid fa-book" aria-label="book"></i></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
+<a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <br> © Jo Hardin, 2025 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+DS002R -- Foundations of Data Science in R -- Pomona College <br>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

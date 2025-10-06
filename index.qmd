@@ -83,7 +83,7 @@ schedule <- tribble(
 
   
      "Week 7 <br> 10.6.25", 'functions + <br> iteration', 
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-06-funcmap.html" target = "_blank">functions + iteration</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-06-funcmap.html" target = "_blank">functions + iteration</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws9_ds2_f25_funcs.pdf" target = "_blank">WS 9 - Functions</a>',
 
     '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 10.8.25',
   ' ',

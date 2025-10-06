@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jo Hardin">
+
+<title>Web Scraping – Foundations of Data Science in R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-643cb54a90563409bf607ca7ddb324ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://ds002r-fds.netlify.app/" class="navbar-brand navbar-brand-logo">
+    <img src="../images/st47s.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="https://ds002r-fds.netlify.app/">
+    <span class="navbar-title">Foundations of Data Science in R</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notes.html"> 
+<span class="menu-text">Class Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../clicker_study.html"> 
+<span class="menu-text">Clicker Q</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../R-tip.html"> 
+<span class="menu-text">R tip</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="../project.html">
+ <span class="dropdown-text">semester mini-projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../project1.html">
+ <span class="dropdown-text">project 1 - website</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../project2.html">
+ <span class="dropdown-text">project 2 - text analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://hardin47.netlify.app/courses/data/">
+ <span class="dropdown-text">Data Sources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../github.html"> 
+<span class="menu-text">GitHub</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="2025-04-07-webscrape.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Web Scraping</h1>
+<p class="subtitle lead">April 7 + 9, 2025</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jo Hardin </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="agenda-40725" class="level1">
+<h1>Agenda 4/07/25</h1>
+<ol type="1">
+<li>web scraping</li>
+<li><code>rvest</code></li>
+</ol>
+<section id="important-tool" class="level2">
+<h2 class="anchored" data-anchor-id="important-tool">Important tool</h2>
+<p>Our approach to web scraping relies on the Chrome browser and an extension called SelectorGadget. Download them here:</p>
+<ul>
+<li><p><a href="https://www.google.com/chrome/" target="_blank">Chrome</a></p></li>
+<li><p><a href="https://chromewebstore.google.com/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=en&amp;pli=1" target="_blank">SelectorGadget from Chrome</a> or <a href="https://selectorgadget.com/" target="_blank">SelectorGadget vignette etc.</a></p></li>
+</ul>
+</section>
+<section id="data-acquisition" class="level2">
+<h2 class="anchored" data-anchor-id="data-acquisition">Data Acquisition</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/data_lego2.png" class="img-fluid figure-img" width="800"></p>
+<figcaption>Based on <a href="https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories">https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories</a>, original source: <a href="https://www.linkedin.com/learning/instructors/bill-shander">https://www.linkedin.com/learning/instructors/bill-shander</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="reading-the-student-life" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-student-life">Reading The Student Life</h2>
+<div class="question">
+<p>How often do you read The Student Life?<br>
+a. Every day<br>
+b. 3-5 times a week<br>
+c.&nbsp;Once a week<br>
+d.&nbsp;Rarely</p>
+</div>
+</section>
+<section id="reading-the-student-life-1" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-student-life-1">Reading The Student Life</h2>
+<div class="question">
+<p>What do you think is the most common word in the titles of The Student Life opinion pieces?</p>
+</div>
+</section>
+<section id="analyzing-the-student-life" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-the-student-life">Analyzing The Student Life</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2025-04-07-webscrape_files/figure-revealjs/tsl-common-words-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="reading-the-student-life-2" class="level2">
+<h2 class="anchored" data-anchor-id="reading-the-student-life-2">Reading The Student Life</h2>
+<div class="question">
+<p>How do you think the sentiments in opinion pieces in The Student Life compare across authors?<br>
+Roughly the same?<br>
+Wildly different?<br>
+Somewhere in between?</p>
+</div>
+</section>
+<section id="analyzing-the-student-life-1" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-the-student-life-1">Analyzing The Student Life</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="2025-04-07-webscrape_files/figure-revealjs/tsl-sentiments-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="all-of-this-analysis-is-done-in-r" class="level2 centered">
+<h2 class="centered anchored" data-anchor-id="all-of-this-analysis-is-done-in-r">All of this analysis is done in R!</h2>
+<div class="hand">
+<p>(mostly) with tools you already know!</p>
+</div>
+</section>
+<section id="common-words-in-the-student-life-titles" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="common-words-in-the-student-life-titles">Common words in The Student Life titles</h2>
+<p>Code for the earlier plot:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">data</span>(stop_words)  <span class="co"># from tidytext</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>tsl_opinion_titles <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, title) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">fct_reorder</span>(word, n)) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> word, <span class="at">x =</span> n, <span class="at">fill =</span> <span class="fu">log</span>(n))) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="at">x =</span> <span class="st">"Number of mentions"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="at">y =</span> <span class="st">"Word"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="at">title =</span> <span class="st">"The Student Life - Opinion pieces"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="at">subtitle =</span> <span class="st">"Common words in the 500 most recent opinion pieces"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16"></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Student Life on April 6, 2025"</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="avg-sentiment-scores-of-first-paragraph" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="avg-sentiment-scores-of-first-paragraph">Avg sentiment scores of first paragraph</h2>
+<p>Code for the earlier plot:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>afinn_sentiments <span class="ot">&lt;-</span> <span class="fu">get_sentiments</span>(<span class="st">"afinn"</span>)  <span class="co"># need tidytext and textdata</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tsl_opinion_titles <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, first_p) <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(afinn_sentiments) <span class="sc">|&gt;</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(authors, title) <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_sentiment =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(authors) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_articles =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_sentiment =</span> <span class="fu">mean</span>(total_sentiment, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(n_articles <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(authors)) <span class="sc">|&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_sentiment)) <span class="sc">|&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">69</span><span class="sc">:</span><span class="dv">78</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">authors =</span> <span class="fu">fct_reorder</span>(authors, avg_sentiment),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">neg_pos =</span> <span class="fu">if_else</span>(avg_sentiment <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"neg"</span>, <span class="st">"pos"</span>),</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">label_position =</span> <span class="fu">if_else</span>(neg_pos <span class="sc">==</span> <span class="st">"neg"</span>, <span class="fl">0.25</span>, <span class="sc">-</span><span class="fl">0.25</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> authors, <span class="at">x =</span> avg_sentiment)) <span class="sc">+</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">fill =</span> neg_pos), <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> label_position, <span class="at">label =</span> authors, <span class="at">color =</span> neg_pos),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>)),</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(avg_sentiment, <span class="dv">1</span>)),</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fl">1.25</span>,<span class="dv">10</span>), <span class="fu">rep</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">10</span>)),</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">minor_breaks =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_discrete</span>(<span class="at">breaks =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"negative  ←     Average sentiment score (AFINN)     →  positive"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"The Student Life - Opinion pieces</span><span class="sc">\n</span><span class="st">Average sentiment scores of first paragraph by author"</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Top 10 average positive and negative scores"</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Student Life on April 6, 2025"</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), <span class="st">"lines"</span>)),</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="where-is-the-data-coming-from" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="where-is-the-data-coming-from">Where is the data coming from?</h2>
+<div class="center">
+<p><a href="https://tsl.news/category/opinions/" class="uri">https://tsl.news/category/opinions/</a></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://tsl.news/category/opinions/?page=1&amp;per_page=500"><img src="../images/tsl-opinion-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></a></p>
+</figure>
+</div>
+</section>
+<section id="where-is-the-data-coming-from-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="where-is-the-data-coming-from-1">Where is the data coming from?</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://tsl.news/category/opinions/?page=1&amp;per_page=500"><img src="../images/tsl-opinion-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:80%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tsl_opinion_titles</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 500 × 4
+   title                           authors date                first_p
+   &lt;chr&gt;                           &lt;chr&gt;   &lt;dttm&gt;              &lt;chr&gt;  
+ 1 Stop buying your books          Sarah … 2025-04-04 08:03:00 from b…
+ 2 The case for fleeing the count… Alex B… 2025-04-04 07:27:00 when t…
+ 3 Tolerate thy neighbor           Parker… 2025-04-04 07:22:00 it’s s…
+ 4 Confronting furry hate          Xavier… 2025-04-04 07:16:00 furrie…
+ 5 Shame on the governor: Gavin N… Akshay… 2025-03-28 06:56:00 gavin …
+ 6 Accessibility at the 5Cs requi… Zena A… 2025-03-28 06:42:00 althou…
+ 7 Your spring break destination … Nicole… 2025-03-15 04:44:00 spring…
+ 8 Pomona College’s Merritt Field… Katie … 2025-03-15 03:03:00 with l…
+ 9 Seminars should be tech-free s… Elias … 2025-03-14 09:15:00 we hav…
+10 The bitter truth to the bitter… Daniel… 2025-03-14 09:13:00 have y…
+# ℹ 490 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="web-scraping" class="level1">
+<h1>Web scraping</h1>
+<section id="scraping-the-web-what-why" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="scraping-the-web-what-why">Scraping the web: what? why?</h2>
+<ul>
+<li><p>Increasing amount of data is available on the web</p></li>
+<li><p>These data are provided in an unstructured format: you can always copy &amp; paste, but it’s time-consuming and prone to errors</p></li>
+<li><p>Web scraping is the process of extracting information automatically and transforming it into a structured dataset</p></li>
+<li><p>Two different scenarios:</p>
+<ul>
+<li><p>Screen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy).</p></li>
+<li><p>Web APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="hypertext-markup-language" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="hypertext-markup-language">Hypertext Markup Language</h2>
+<p>Much of the data on the web is available as HTML - while it is structured (hierarchical), often it is not immediately available in a form useful for analysis (flat / tidy).</p>
+<div class="small">
+<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>This is a title<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> align</span><span class="op">=</span><span class="st">"center"</span><span class="dt">&gt;</span>Hello world!<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"first"</span><span class="dt">&gt;</span>John<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"last"</span><span class="dt">&gt;</span>Doe<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"contact"</span><span class="dt">&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"home"</span><span class="dt">&gt;</span>555-555-1234<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"home"</span><span class="dt">&gt;</span>555-555-2345<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"work"</span><span class="dt">&gt;</span>555-555-9999<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fax"</span><span class="dt">&gt;</span>555-555-8888<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="some-html-elements" class="level2">
+<h2 class="anchored" data-anchor-id="some-html-elements">Some HTML elements</h2>
+<ul>
+<li><code>&lt;html&gt;</code>: start of the HTML page</li>
+<li><code>&lt;head&gt;</code>: header information (metadata about the page)</li>
+<li><code>&lt;body&gt;</code>: everything that is on the page</li>
+<li><code>&lt;p&gt;</code>: paragraphs</li>
+<li><code>&lt;b&gt;</code>: bold</li>
+<li><code>&lt;table&gt;</code>: table</li>
+<li><code>&lt;div&gt;</code>: a container to group content together</li>
+<li><code>&lt;a&gt;</code>: the “anchor” element that creates a hyperlink</li>
+</ul>
+</section>
+<section id="rvest" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="rvest">rvest</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The <strong>rvest</strong> package makes basic processing and manipulation of HTML data straight forward</li>
+<li>It is designed to work with pipelines built with <code>|&gt;</code></li>
+<li><a href="https://rvest.tidyverse.org">rvest.tidyverse.org</a></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><a href="https://rvest.tidyverse.org/"><img src="../images/rvest.png" class="img-fluid quarto-figure quarto-figure-right figure-img" alt="rvest hex logo" width="400"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="rvest-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="rvest-1">rvest</h2>
+<p>Core functions:</p>
+<ul>
+<li><p><code>read_html()</code> - read HTML data from a url or character string.</p></li>
+<li><p><code>html_elements()</code> - select specified elements from the HTML document using CSS selectors.</p></li>
+<li><p><code>html_element()</code> - select a single element from the HTML document using CSS selectors.</p></li>
+<li><p><code>html_table()</code> - parse an HTML table into a data frame.</p></li>
+<li><p><code>html_text()</code> / <code>html_text2()</code> - extract element’s text content.</p></li>
+<li><p><code>html_name</code> - extract a element’s name(s).</p></li>
+<li><p><code>html_attrs</code> - extract all attributes.</p></li>
+<li><p><code>html_attr</code> - extract attribute value(s) by name.</p></li>
+</ul>
+</section>
+<section id="html-rvest" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="html-rvest">html &amp; rvest</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>html <span class="ot">&lt;-</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="st">'&lt;html&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;head&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;title&gt;This is a title&lt;/title&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;/head&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;body&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;p align="center"&gt;Hello world!&lt;/p&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;br&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div class="name" id="first"&gt;John&lt;/div&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div class="name" id="last"&gt;Doe&lt;/div&gt;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div class="contact"&gt;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;div class="home"&gt;555-555-1234&lt;/div&gt;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;div class="home"&gt;555-555-2345&lt;/div&gt;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;div class="work"&gt;555-555-9999&lt;/div&gt;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;div class="fax"&gt;555-555-8888&lt;/div&gt;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;/body&gt;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/html&gt;'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{html_document}
+&lt;html&gt;
+[1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
+[2] &lt;body&gt;\n    &lt;p align="center"&gt;Hello world!&lt;/p&gt;\n    &lt;br&gt;&lt;div class="name" ...</code></pre>
+</div>
+</div>
+</section>
+<section id="selecting-elements" class="level2">
+<h2 class="anchored" data-anchor-id="selecting-elements">Selecting elements</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"p"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (1)}
+[1] &lt;p align="center"&gt;Hello world!&lt;/p&gt;</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span> <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello world!"</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span> <span class="fu">html_name</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "p"</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span> <span class="fu">html_attrs</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+   align 
+"center" </code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span> <span class="fu">html_attr</span>(<span class="st">"align"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "center"</code></pre>
+</div>
+</div>
+</section>
+<section id="more-selecting-elements" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="more-selecting-elements">More selecting elements</h2>
+<div class="medium">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"div"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (7)}
+[1] &lt;div class="name" id="first"&gt;John&lt;/div&gt;
+[2] &lt;div class="name" id="last"&gt;Doe&lt;/div&gt;
+[3] &lt;div class="contact"&gt;\n      &lt;div class="home"&gt;555-555-1234&lt;/div&gt;\n       ...
+[4] &lt;div class="home"&gt;555-555-1234&lt;/div&gt;
+[5] &lt;div class="home"&gt;555-555-2345&lt;/div&gt;
+[6] &lt;div class="work"&gt;555-555-9999&lt;/div&gt;
+[7] &lt;div class="fax"&gt;555-555-8888&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<div class="medium">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"div"</span>) <span class="sc">|&gt;</span> <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "John"                                                                                  
+[2] "Doe"                                                                                   
+[3] "\n      555-555-1234\n      555-555-2345\n      555-555-9999\n      555-555-8888\n    "
+[4] "555-555-1234"                                                                          
+[5] "555-555-2345"                                                                          
+[6] "555-555-9999"                                                                          
+[7] "555-555-8888"                                                                          </code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="css-selectors" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="css-selectors">CSS selectors</h2>
+<ul>
+<li>We will use a tool called <a href="https://selectorgadget.com/" target="_blank">SelectorGadget</a> to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Some examples of basic selector syntax is below,</li>
+</ul>
+<div class="small">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Selector</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">.class</td>
+<td style="text-align: left;"><code>.title</code></td>
+<td style="text-align: left;">Select all elements with class=“title”</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">#id</td>
+<td style="text-align: left;"><code>#name</code></td>
+<td style="text-align: left;">Select all elements with id=“name”</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">element</td>
+<td style="text-align: left;"><code>p</code></td>
+<td style="text-align: left;">Select all &lt;p&gt; elements</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">element element</td>
+<td style="text-align: left;"><code>div p</code></td>
+<td style="text-align: left;">Select all &lt;p&gt; elements inside a &lt;div&gt; element</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">element&gt;element</td>
+<td style="text-align: left;"><code>div &gt; p</code></td>
+<td style="text-align: left;">Select all &lt;p&gt; elements with &lt;div&gt; as a direct parent</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[attribute]</td>
+<td style="text-align: left;"><code>[class]</code></td>
+<td style="text-align: left;">Select all elements with a class attribute</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[attribute=value]</td>
+<td style="text-align: left;"><code>[class=title]</code></td>
+<td style="text-align: left;">Select all elements with class=“title”</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="agenda-4925" class="level1">
+<h1>Agenda 4/9/25</h1>
+<ol type="1">
+<li><code>rvest</code> continues</li>
+<li>SelectorGadget</li>
+<li>ethics</li>
+</ol>
+<section id="css-classes-and-ids" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="css-classes-and-ids">CSS classes and ids</h2>
+<ul>
+<li><p><code>class</code> and <code>id</code> are used to style elements (e.g., change their color!). They are special types of attributes.</p></li>
+<li><p><code>class</code> can be applied to multiple different elements (<code>class</code> is identified with <code>.</code>, for example <code>.name</code>)</p></li>
+<li><p><code>id</code> is unique to each element (<code>id</code> is identified with <code>#</code>, for example, <code>#first</code>)</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">".name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (2)}
+[1] &lt;div class="name" id="first"&gt;John&lt;/div&gt;
+[2] &lt;div class="name" id="last"&gt;Doe&lt;/div&gt;</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"div.name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (2)}
+[1] &lt;div class="name" id="first"&gt;John&lt;/div&gt;
+[2] &lt;div class="name" id="last"&gt;Doe&lt;/div&gt;</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html) <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="st">"#first"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (1)}
+[1] &lt;div class="name" id="first"&gt;John&lt;/div&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="text-with-html_text-vs.-html_text2" class="level2">
+<h2 class="anchored" data-anchor-id="text-with-html_text-vs.-html_text2">Text with <code>html_text()</code> vs.&nbsp;<code>html_text2()</code></h2>
+<ul>
+<li>The two functions handle whitespace differently:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"&lt;p&gt;  Hello,</span><span class="sc">\n</span><span class="st">   world! &lt;/p&gt;"</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span>  <span class="fu">html_element</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span>  <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "  Hello,\n   world! "</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span>  <span class="fu">html_element</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span>  <span class="fu">html_text2</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello, world!"</code></pre>
+</div>
+</div>
+</section>
+<section id="text-with-html_text-vs.-html_text2-1" class="level2">
+<h2 class="anchored" data-anchor-id="text-with-html_text-vs.-html_text2-1">Text with <code>html_text()</code> vs.&nbsp;<code>html_text2()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>html <span class="ot">=</span> <span class="fu">read_html</span>(</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;p&gt;  </span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="st">    This is the first sentence in the paragraph.</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="st">    This is the second sentence that should be on the same line as the first sentence.&lt;br&gt;This third sentence should start on a new line.</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;/p&gt;"</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> <span class="fu">html_text</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "  \n    This is the first sentence in the paragraph.\n    This is the second sentence that should be on the same line as the first sentence.This third sentence should start on a new line.\n  "</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> <span class="fu">html_text2</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "This is the first sentence in the paragraph. This is the second sentence that should be on the same line as the first sentence.\nThis third sentence should start on a new line."</code></pre>
+</div>
+</div>
+</section>
+<section id="html-tables-with-html_table" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="html-tables-with-html_table">HTML tables with <code>html_table()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>html_table <span class="ot">=</span> </span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="st">'&lt;html&gt;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;head&gt;</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;title&gt;This is a title&lt;/title&gt;</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;/head&gt;</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;body&gt;</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;table&gt;</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;tr&gt; &lt;th&gt;a&lt;/th&gt; &lt;th&gt;b&lt;/th&gt; &lt;th&gt;c&lt;/th&gt; &lt;/tr&gt;</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;tr&gt; &lt;td&gt;1&lt;/td&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;/tr&gt;</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;tr&gt; &lt;td&gt;2&lt;/td&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;/tr&gt;</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;tr&gt; &lt;td&gt;3&lt;/td&gt; &lt;td&gt;4&lt;/td&gt; &lt;td&gt;5&lt;/td&gt; &lt;/tr&gt;</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/table&gt;</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;/body&gt;</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/html&gt;'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_html</span>(html_table) <span class="sc">|&gt;</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+# A tibble: 3 × 3
+      a     b     c
+  &lt;int&gt; &lt;int&gt; &lt;int&gt;
+1     1     2     3
+2     2     3     4
+3     3     4     5</code></pre>
+</div>
+</div>
+</section>
+<section id="html_attr" class="level2">
+<h2 class="anchored" data-anchor-id="html_attr"><code>html_attr()</code></h2>
+<p>extracts data from attributes:</p>
+<p>(n.b., the <code>&lt;a&gt;</code> tag refers to “anchor” and is used to create hyperlinks)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>html <span class="ot">&lt;-</span> <span class="fu">minimal_html</span>(<span class="st">"</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;p&gt;&lt;a href='https://en.wikipedia.org/wiki/Cat'&gt;cats&lt;/a&gt;&lt;/p&gt;</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;p&gt;&lt;a href='https://en.wikipedia.org/wiki/Dog'&gt;dogs&lt;/a&gt;&lt;/p&gt;</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{html_document}
+&lt;html&gt;
+[1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
+[2] &lt;body&gt;\n&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Cat"&gt;cats&lt;/a&gt;&lt;/p&gt;\n  &lt;p ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">html_attr</span>(<span class="st">"href"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">"[href]"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">html_attr</span>(<span class="st">"href"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "https://en.wikipedia.org/wiki/Cat" "https://en.wikipedia.org/wiki/Dog"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">"p"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (2)}
+[1] &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Cat"&gt;cats&lt;/a&gt;&lt;/p&gt;
+[2] &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Dog"&gt;dogs&lt;/a&gt;&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">"a"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (2)}
+[1] &lt;a href="https://en.wikipedia.org/wiki/Cat"&gt;cats&lt;/a&gt;
+[2] &lt;a href="https://en.wikipedia.org/wiki/Dog"&gt;dogs&lt;/a&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">"p"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">"a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "https://en.wikipedia.org/wiki/Cat" "https://en.wikipedia.org/wiki/Dog"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">"p a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "https://en.wikipedia.org/wiki/Cat" "https://en.wikipedia.org/wiki/Dog"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">"a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "https://en.wikipedia.org/wiki/Cat"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>html <span class="sc">|&gt;</span> </span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">"a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "https://en.wikipedia.org/wiki/Cat" "https://en.wikipedia.org/wiki/Dog"</code></pre>
+</div>
+</div>
+<ul>
+<li><code>html_attr()</code> always returns a string, so if you’re extracting numbers or dates, you’ll need to do some post-processing.</li>
+</ul>
+</section>
+<section id="div-p-vs-div-p" class="level2">
+<h2 class="anchored" data-anchor-id="div-p-vs-div-p"><code>div p</code> vs <code>div &gt; p</code></h2>
+<ul>
+<li><code>div p</code> selects all <code>&lt;p&gt;</code> elements within <code>&lt;div&gt;</code>, regardless of depth.</li>
+<li><code>div &gt; p</code> selects only direct child <code>&lt;p&gt;</code> elements of <code>&lt;div&gt;</code>.</li>
+</ul>
+<pre><code>&lt;div&gt;
+  &lt;p&gt;This will be selected by both `div p` and `div &gt; p`.&lt;/p&gt; 
+  &lt;section&gt;
+   &lt;p&gt;This will be selected only by `div p`, not by `div &gt; p`. Because it is inside the section tag.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre>
+</section>
+<section id="selectorgadget" class="level2">
+<h2 class="anchored" data-anchor-id="selectorgadget">SelectorGadget</h2>
+<p><strong>SelectorGadget</strong> (<a href="http://selectorgadget.com">selectorgadget.com</a>) is a javascript based tool that helps you interactively build an appropriate CSS selector for the content you are interested in.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tsl-selectorgadget.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
+</div>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<ul>
+<li>Use the <a href="https://selectorgadget.com/" target="_blank">SelectorGadget</a> identify elements you want to grab</li>
+<li>Use the <strong>rvest</strong> R package to first read in the entire page (into R) and then parse the object you’ve read in to the elements you’re interested in</li>
+<li>Put the components together in a data frame (a tibble) and analyze it like you analyze any other data</li>
+</ul>
+</section>
+<section id="plan" class="level2">
+<h2 class="anchored" data-anchor-id="plan">Plan</h2>
+<ol type="1">
+<li>Read in the entire page</li>
+<li>Scrape opinion title and save as <code>title</code></li>
+<li>Scrape author and save as <code>author</code></li>
+<li>Scrape date and save as <code>date</code></li>
+<li>Create a new data frame called <code>tsl_opinion</code> with variables <code>title</code>, <code>author</code>, and <code>date</code></li>
+</ol>
+</section>
+<section id="read-in-the-entire-page" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="read-in-the-entire-page">Read in the entire page</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>tsl_page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">"https://tsl.news/category/opinions/"</span>)</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>tsl_page</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{html_document}
+&lt;html lang="en-US"&gt;
+[1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
+[2] &lt;body class="archive category category-opinions category-2244 custom-back ...</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(tsl_page)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "list"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(tsl_page)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "xml_document" "xml_node"    </code></pre>
+</div>
+</div>
+<ul>
+<li>we need to convert into something more familiar, like a data frame</li>
+</ul>
+</section>
+<section id="scrape-title-and-save-as-title" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="scrape-title-and-save-as-title">Scrape title and save as <code>title</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">".entry-title a"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (10)}
+ [1] &lt;a href="https://tsl.news/opinion-the-real-cost-of-administrative-bloat/ ...
+ [2] &lt;a href="https://tsl.news/opinion-finding-hope-in-the-courts/" title="OP ...
+ [3] &lt;a href="https://tsl.news/opinion-your-vote-for-aspc-president-didnt-mat ...
+ [4] &lt;a href="https://tsl.news/opinion-stop-buying-your-books/" title="OPINIO ...
+ [5] &lt;a href="https://tsl.news/opinion-the-case-for-fleeing-the-country/" tit ...
+ [6] &lt;a href="https://tsl.news/opinion-tolerate-thy-neighbor/" title="OPINION ...
+ [7] &lt;a href="https://tsl.news/opinion-confronting-furry-hate/" title="OPINIO ...
+ [8] &lt;a href="https://tsl.news/shame-on-the-governor-gavin-newsom-is-his-own- ...
+ [9] &lt;a href="https://tsl.news/opinions-accessibility-at-the-5cs-requires-mor ...
+[10] &lt;a href="https://tsl.news/opinion-your-spring-break-destination-isnt-rea ...</code></pre>
+</div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>title <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">".entry-title a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">html_text</span>()</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>title</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Opinion: The real cost of administrative bloat"                           
+ [2] "OPINION: Finding hope in the courts"                                      
+ [3] "OPINION: Your vote for ASPC president didn’t matter. Here’s why"          
+ [4] "OPINION: Stop buying your books"                                          
+ [5] "OPINION: The case for fleeing the country"                                
+ [6] "OPINION: Tolerate thy neighbor"                                           
+ [7] "OPINION: Confronting furry hate"                                          
+ [8] "Shame on the governor: Gavin Newsom is his own worst enemy"               
+ [9] "OPINION: Accessibility at the 5Cs requires more than just good intentions"
+[10] "OPINION: Your spring break destination isn’t really yours"                </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>title <span class="ot">&lt;-</span> title <span class="sc">|&gt;</span> </span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_remove</span>(<span class="st">"OPINION: "</span>)</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>title</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Opinion: The real cost of administrative bloat"                  
+ [2] "Finding hope in the courts"                                      
+ [3] "Your vote for ASPC president didn’t matter. Here’s why"          
+ [4] "Stop buying your books"                                          
+ [5] "The case for fleeing the country"                                
+ [6] "Tolerate thy neighbor"                                           
+ [7] "Confronting furry hate"                                          
+ [8] "Shame on the governor: Gavin Newsom is his own worst enemy"      
+ [9] "Accessibility at the 5Cs requires more than just good intentions"
+[10] "Your spring break destination isn’t really yours"                </code></pre>
+</div>
+</div>
+</section>
+<section id="scrape-author-and-save-as-author" class="level2">
+<h2 class="anchored" data-anchor-id="scrape-author-and-save-as-author">Scrape author and save as <code>author</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>author <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">"span.author"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="fu">html_text</span>()</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>author</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "By Eric Lu"                                    
+ [2] "By Daniel Han Tae Choi"                        
+ [3] "By Luke Brown"                                 
+ [4] "By Sarah Russo"                                
+ [5] "By Alex Benach"                                
+ [6] "By Parker DeVore"                              
+ [7] "By Xavier Callan"                              
+ [8] "By Akshay Seetharam"                           
+ [9] "By Zena Almeida-Warwin and Jackie Kostyuchenko"
+[10] "By Nicole Teh"                                 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>author <span class="ot">&lt;-</span> author <span class="sc">|&gt;</span> </span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace</span>(<span class="st">"By "</span>, <span class="st">""</span>)</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>author</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Eric Lu"                                    
+ [2] "Daniel Han Tae Choi"                        
+ [3] "Luke Brown"                                 
+ [4] "Sarah Russo"                                
+ [5] "Alex Benach"                                
+ [6] "Parker DeVore"                              
+ [7] "Xavier Callan"                              
+ [8] "Akshay Seetharam"                           
+ [9] "Zena Almeida-Warwin and Jackie Kostyuchenko"
+[10] "Nicole Teh"                                 </code></pre>
+</div>
+</div>
+</section>
+<section id="scrape-date-and-save-as-date" class="level2">
+<h2 class="anchored" data-anchor-id="scrape-date-and-save-as-date">Scrape date and save as <code>date</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>date <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">".published"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a><span class="fu">html_text</span>()</span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a>date</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "April 10, 2025 10:41 pm" "April 10, 2025 9:11 pm" 
+ [3] "April 10, 2025 7:39 pm"  "April 4, 2025 1:03 am"  
+ [5] "April 4, 2025 12:27 am"  "April 4, 2025 12:22 am" 
+ [7] "April 4, 2025 12:16 am"  "March 27, 2025 11:56 pm"
+ [9] "March 27, 2025 11:42 pm" "March 14, 2025 9:44 pm" </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>date <span class="ot">&lt;-</span> date <span class="sc">|&gt;</span> </span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">mdy_hm</span>(<span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>date</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "2025-04-10 22:41:00 PDT" "2025-04-10 21:11:00 PDT"
+ [3] "2025-04-10 19:39:00 PDT" "2025-04-04 01:03:00 PDT"
+ [5] "2025-04-04 00:27:00 PDT" "2025-04-04 00:22:00 PDT"
+ [7] "2025-04-04 00:16:00 PDT" "2025-03-27 23:56:00 PDT"
+ [9] "2025-03-27 23:42:00 PDT" "2025-03-14 21:44:00 PDT"</code></pre>
+</div>
+</div>
+</section>
+<section id="create-a-new-data-frame" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="create-a-new-data-frame">Create a new data frame</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a>tsl_opinion <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>    title,</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a>    author,</span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a>    date</span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>tsl_opinion</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 3
+   title                                    author date               
+   &lt;chr&gt;                                    &lt;chr&gt;  &lt;dttm&gt;             
+ 1 Opinion: The real cost of administrativ… Eric … 2025-04-10 22:41:00
+ 2 Finding hope in the courts               Danie… 2025-04-10 21:11:00
+ 3 Your vote for ASPC president didn’t mat… Luke … 2025-04-10 19:39:00
+ 4 Stop buying your books                   Sarah… 2025-04-04 01:03:00
+ 5 The case for fleeing the country         Alex … 2025-04-04 00:27:00
+ 6 Tolerate thy neighbor                    Parke… 2025-04-04 00:22:00
+ 7 Confronting furry hate                   Xavie… 2025-04-04 00:16:00
+ 8 Shame on the governor: Gavin Newsom is … Aksha… 2025-03-27 23:56:00
+ 9 Accessibility at the 5Cs requires more … Zena … 2025-03-27 23:42:00
+10 Your spring break destination isn’t rea… Nicol… 2025-03-14 21:44:00</code></pre>
+</div>
+</div>
+</section>
+<section id="opinion-titles" class="level2">
+<h2 class="anchored" data-anchor-id="opinion-titles">Opinion titles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>tsl_opinions <span class="ot">&lt;-</span> <span class="cf">function</span>(i){</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>tsl_page <span class="ot">&lt;-</span> rvest<span class="sc">::</span><span class="fu">read_html</span>(<span class="fu">paste0</span>(<span class="st">"https://tsl.news/category/opinions/page/"</span>,i))</span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>title <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">".entry-title a"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb83-6"><a href="#cb83-6" aria-hidden="true" tabindex="-1"></a><span class="fu">html_text</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb83-7"><a href="#cb83-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str_remove</span>(<span class="st">"OPINION: "</span>)</span>
+<span id="cb83-8"><a href="#cb83-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb83-9"><a href="#cb83-9" aria-hidden="true" tabindex="-1"></a>author <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb83-10"><a href="#cb83-10" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">"span.author"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb83-11"><a href="#cb83-11" aria-hidden="true" tabindex="-1"></a><span class="fu">html_text</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb83-12"><a href="#cb83-12" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb83-13"><a href="#cb83-13" aria-hidden="true" tabindex="-1"></a><span class="fu">set_names</span>(<span class="at">nm =</span> <span class="st">"authors"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb83-14"><a href="#cb83-14" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">authors =</span> <span class="fu">str_replace</span>(authors, <span class="st">"By "</span>, <span class="st">""</span>)) </span>
+<span id="cb83-15"><a href="#cb83-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb83-16"><a href="#cb83-16" aria-hidden="true" tabindex="-1"></a>date <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb83-17"><a href="#cb83-17" aria-hidden="true" tabindex="-1"></a><span class="fu">html_elements</span>(<span class="st">".published"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb83-18"><a href="#cb83-18" aria-hidden="true" tabindex="-1"></a><span class="fu">html_text</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb83-19"><a href="#cb83-19" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">mdy_hm</span>(<span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span>
+<span id="cb83-20"><a href="#cb83-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb83-21"><a href="#cb83-21" aria-hidden="true" tabindex="-1"></a>first_p <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span> </span>
+<span id="cb83-22"><a href="#cb83-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">".entry-content p:nth-child(1)"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb83-23"><a href="#cb83-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb83-24"><a href="#cb83-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tolower</span>()</span>
+<span id="cb83-25"><a href="#cb83-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb83-26"><a href="#cb83-26" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb83-27"><a href="#cb83-27" aria-hidden="true" tabindex="-1"></a>    title,</span>
+<span id="cb83-28"><a href="#cb83-28" aria-hidden="true" tabindex="-1"></a>    author,</span>
+<span id="cb83-29"><a href="#cb83-29" aria-hidden="true" tabindex="-1"></a>    date,</span>
+<span id="cb83-30"><a href="#cb83-30" aria-hidden="true" tabindex="-1"></a>    first_p</span>
+<span id="cb83-31"><a href="#cb83-31" aria-hidden="true" tabindex="-1"></a>)  </span>
+<span id="cb83-32"><a href="#cb83-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb83-33"><a href="#cb83-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb83-34"><a href="#cb83-34" aria-hidden="true" tabindex="-1"></a>tsl_opinion_titles <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>) <span class="sc">|&gt;</span> purrr<span class="sc">::</span><span class="fu">map</span>(tsl_opinions) <span class="sc">|&gt;</span> </span>
+<span id="cb83-35"><a href="#cb83-35" aria-hidden="true" tabindex="-1"></a><span class="fu">list_rbind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="web-scraping-considerations" class="level1 page-columns page-full">
+<h1>Web scraping considerations</h1>
+<section id="check-if-you-are-allowed" class="level2">
+<h2 class="anchored" data-anchor-id="check-if-you-are-allowed">Check if you are allowed!</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(robotstxt)</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">paths_allowed</span>(<span class="st">"https://tsl.news/category/opinions/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paths_allowed</span>(<span class="st">"http://www.facebook.com"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+</section>
+<section id="ethics-can-you-vs-should-you" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="ethics-can-you-vs-should-you">Ethics: “Can you?” vs “Should you?”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/ok-cupid-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>Source: Brian Resnick, <a href="https://www.vox.com/2016/5/12/11666116/70000-okcupid-users-data-release">Researchers just released profile data on 70,000 OkCupid users without permission</a>, Vox.</p>
+</div></div></section>
+<section id="can-you-vs-should-you" class="level2">
+<h2 class="anchored" data-anchor-id="can-you-vs-should-you">“Can you?” vs “Should you?”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/ok-cupid-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="699"></p>
+</figure>
+</div>
+</section>
+<section id="challenges-unreliable-formatting" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="challenges-unreliable-formatting">Challenges: Unreliable formatting</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/unreliable-formatting.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="699"></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p><a href="https://alumni.duke.edu/news/notable-alumni">alumni.duke.edu/news/notable-alumni</a></p>
+</div></div></section>
+<section id="challenges-data-broken-into-many-pages" class="level2">
+<h2 class="anchored" data-anchor-id="challenges-data-broken-into-many-pages">Challenges: Data broken into many pages</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/many-pages.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>CC-BY-SA-4.0</div></div></section></div></main> <!-- /main -->
+
+<script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ds002r-fds\.netlify\.app\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://hardin47.netlify.app/research/"><i class="fa-solid fa-book" aria-label="book"></i></a> <a href="https://hardin47.netlify.app/resume.pdf" target="_blank"><i class="fa-solid fa-bookmark"></i></a> <a href="mailto:jo.hardin@pomona.edu" target="_blank"><i class="fa-solid fa-at"></i></a> <a href="https://scholar.google.com/citations?user=c5Y77poAAAAJ&amp;hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> <a href="https://www.researchgate.net/scientific-contributions/Johanna-Hardin-9764530" target="_blank"><i class="fa-brands fa-researchgate"></i></a><br>
+<a href="https://github.com/hardin47" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ <br> © Jo Hardin, 2025 -- <a href="mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+DS002R -- Foundations of Data Science in R -- Pomona College <br>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
