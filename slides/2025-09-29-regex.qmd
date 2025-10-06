@@ -7,6 +7,7 @@ format:
     incremental: false
     scrollable: true
     slide-number: true
+    embed-resources: true
     show-slide-number: all
 execute:
   echo: true
@@ -123,6 +124,7 @@ str_subset(strings, "ab")
 str_subset(strings, "^ab")
 str_subset(strings, "ab$")
 str_subset(strings, "\\bab")
+str_subset(strings, "ab\\b")
 ```
 
 ## Examples of positions - solution
@@ -135,6 +137,7 @@ str_subset(strings, "ab")
 str_subset(strings, "^ab")
 str_subset(strings, "ab$")
 str_subset(strings, "\\bab")
+str_subset(strings, "ab\\b")
 ```
 
 
@@ -171,13 +174,13 @@ str_extract(strings, "^apple pie$")
 ## Operators
 
 
-  * `.`: matches any single character,
+  * `.`: matches any single character, including letters, numbers, punctuation, and spaces (not new line)
   * `[...]`: a character list, matches **any one of the characters** inside the square brackets. A `-` inside the brackets specifies a range of characters.   
   * `[^...]`: an inverted character list, similar to `[...]`, but matches any characters __except__ those inside the square brackets.  
   * `\`: suppress the special meaning of metacharacters in regular expression, i.e. `$ * + . ? [ ] ^ { } | ( ) \`. Since `\` itself needs to be escaped in R, we need to escape metacharacters with double backslash like `\\$`.   
   * `|`: an "or" operator, matches patterns on either side of the `|`.  
   * `(...)`: grouping in regular expressions. This allows you to retrieve the bits that matched various parts of your regular expression so you can alter them or use them for building up a new string.
-  * note: both `(ab|cde)` or `ab|cde` match either the string `ab` or the string `cde`.  However, `ab | cde` matches `ab cde` (and does not match either of `ab` or `cde`) because the "or" is now whitespace on either side of `|`.
+  * note: both `(ab|cde)` or `ab|cde` match either the string `ab` or the string `cde`.  However, `ab | cde` matches `ab cde` (and does not match either of `ab` or `cde`) because the "or" is now whitespace on either side of `|`. That is, it matches `ab` and a space or space and `cde`.
   
 ## Examples of operators
 
@@ -256,7 +259,7 @@ str_subset(strings, "apple((?i)pie)")
 
 ## Thoughts on characters and spaces
 
-* `.` matches **any** single character except a newline `\n`.
+* `.` matches **any** single character except a newline `\n` (including letters, numbers, punctuation, and spaces).
 * `.` does match whitespace (e.g., a space or tab)
 * `\s` matches any whitespace including: spaces, tabs, new lines, and carriage returns
 * `[ \t]` matches spaces and tabs only (not new lines or carriage returns)

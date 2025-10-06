@@ -7,6 +7,7 @@ format:
     incremental: false
     scrollable: true
     slide-number: true
+    embed-resources: true
     show-slide-number: all
 execute:
   echo: true
@@ -469,8 +470,11 @@ starbucks |>
 ```{r}
 x <- factor(c("apple", "bear", "dear", "banana", "apple", "apple", "dear"))
 x
+unclass(x)
 
-fct_recode(x, fruit = "apple", fruit = "banana")
+x <- fct_recode(x, fruit = "apple", fruit = "banana")
+x
+unclass(x)
 ```
 ## rewrite
 
