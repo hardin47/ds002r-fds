@@ -91,12 +91,12 @@ schedule <- tribble(
   
      "Week 8 <br> 10.13.25", 'code review + <br> reprex', 
  '{{< fa book-open >}} <a href="https://www.tidyverse.org/help/" target = "_blank"> reproducible examples</a> <br>  {{< fa book-open >}} <a href="https://style.tidyverse.org/" target = "_blank"> Tidyverse style guide</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/16-reprex.html" target = "_blank">Reproducible examples</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-13-help.html" target = "_blank">help me help you</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 5</a> - due 10.15.25',
+  ' ',
   ' ',
 
      "Week 9 <br> 10.20.25", 'iterations + <br> simulations', 
  '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Iterations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-20-iters.html" target = "_blank">Iterations</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 6</a> - due 10.22.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 3 10.22.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 5</a> - due <b> Monday </b> 10.20.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 3 10.22.25',
 
   ' ',
 
@@ -109,7 +109,7 @@ schedule <- tribble(
   
      "Week 11 <br> 11.3.25", 'web scraping', 
  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-03-webscrape.html" target = "_blank">Web scraping</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 7</a> - due 11.5.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 4 11.5.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 6</a> - due 11.5.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 4 11.5.25',
 
   ' ',
   
@@ -122,7 +122,7 @@ schedule <- tribble(
   
      "Week 13 <br> 11.17.25", 'SQL', 
  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/06-sql-joins.html" target = "_blank">SQL joins</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-17-joins.html" target = "_blank">SQL joins</a>',
-  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 8</a> - due 11.19.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 5 11.19.25',
+  '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 7</a> - due 11.19.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 5 11.19.25',
   ' ',
 
      "Week 14 <br> 11.24.25", 'Shiny', 

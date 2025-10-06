@@ -20,8 +20,7 @@ knitr::include_graphics("images/R_first_then.png")
 #| echo: false
 schedule <- tribble(
   ~`number`, ~tip, ~`description`, ~`misc`,
-  'Tip 1', 'cmd + opt + i', 
-  'adds a new R chunk',
+  'Tip 1', 'cmd + opt + i', 'adds a new R chunk',
   'cntrl + alt + i for PC',
   
   'Tip 2', 'Tools -> Global Options... -> Appearance',
@@ -50,6 +49,10 @@ schedule <- tribble(
   'Tip 12', 'cmd + opt + B', 'runs code start to line', 'cntrl + opt + B on PC <br> (This one did not work on my keyboard)',
   
   'Tip 13', 'cmd + opt + E', 'runs code line to end', 'cntrl + opt + E on PC <br> (This one did not work on my keyboard)',
+  
+  'Tip 14', 'up arrow (on keyboard)', 'brings back the previous line', 'works in Console or Terminal',
+  
+  'Tip 15', 'tab complete', ' ', 'works in Console or in the R chunk'
   
   )
 ```
