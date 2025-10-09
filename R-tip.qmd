@@ -52,7 +52,9 @@ schedule <- tribble(
   
   'Tip 14', 'up arrow (on keyboard)', 'brings back the previous line', 'works in Console or Terminal',
   
-  'Tip 15', 'tab complete', ' ', 'works in Console or in the R chunk'
+  'Tip 15', 'tab complete', ' ', 'works in Console or in the R chunk',
+  
+  'Tip 16', '`usethis::use_github()`', ' ', 'make sure to direct to the correct folder!'
   
   )
 ```
