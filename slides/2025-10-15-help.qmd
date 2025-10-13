@@ -1,7 +1,7 @@
 ---
 title: "Help me help you"
 author: "Jo Hardin"
-subtitle: "March 10, 2025"
+subtitle: "October 15, 2025"
 format: 
   revealjs:
     incremental: false
@@ -15,7 +15,7 @@ execute:
 --- 
 
 
-# Agenda 3/10/25
+# Agenda 10/15/25
 
 1. Reproducible examples (`reprex()`)
 2. Code style
@@ -120,9 +120,10 @@ knitr::include_graphics(path = '../images/chatgpt_factor.jpg')
 
 The following must be included in order for a reproducible example to work (i.e., for someone else to run the code and get the same output):
 
-* R pacakges
+* R packages
 * relevant dataset(s)
 * all of the code
+* setting the seed so that you and your collaborator get the same answer!
 
 ## Checklist for a good `reprex()`
 
@@ -167,7 +168,7 @@ mean <- function(x) sum(x)
 
 ## Spacing
 
-Do not put spaces inside or outside parentheses for regular funtion calls.
+Do not put spaces inside or outside parentheses for regular function calls.
 
 ```{r}
 #| eval: false

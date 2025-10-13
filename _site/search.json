@@ -4597,5 +4597,117 @@
     "title": "Project",
     "section": "",
     "text": "Artwork by @allison_horst.\n\n\n\n\nThroughout the semester, you will complete a series of mini-projects. The first project is the creation of a website connected to your GitHub account. Subsequent projects will be posted onto the website you create.\nEach individual project has instructions that are given separately, and will be graded according to the specific instructions. However, I encourage you to consider the overall project as a potential deliverable that you could include on a resume, show to future employers, discuss in graduate school interviews, etc. That is, approach the assignment as an opportunity for you to take something away from the class which is bigger than just a grade.\n\n\n\nReuseCC-BY-SA-4.0"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#data-communication",
+    "href": "slides/2025-10-15-help.html#data-communication",
+    "title": "Help me help you",
+    "section": "Data Communication",
+    "text": "Data Communication\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#how-to-reprex",
+    "href": "slides/2025-10-15-help.html#how-to-reprex",
+    "title": "Help me help you",
+    "section": "How to reprex()?",
+    "text": "How to reprex()?\nStep 1. Write some R code and copy it into the clipboard (command-c or ctrl-c).\nStep 2. Type reprex() into the Console.\nStep 3. Look at the Viewer to the right. Copy the Viewer output into GitHub, Slack, an email, Stack Overflow, Posit Community, ChatGPT, etc."
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#reprex-example---1st-try",
+    "href": "slides/2025-10-15-help.html#reprex-example---1st-try",
+    "title": "Help me help you",
+    "section": "reprex() example - 1st try",
+    "text": "reprex() example - 1st try\nCode:\n\njan31 + months(0:11) + days(31)\n\nOutput of reprex():\n\njan31 + months(0:11) + days(31)\n#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#reprex-example---2nd-try",
+    "href": "slides/2025-10-15-help.html#reprex-example---2nd-try",
+    "title": "Help me help you",
+    "section": "reprex() example - 2nd try",
+    "text": "reprex() example - 2nd try\nCode:\n\n  jan31 &lt;- ymd(\"2021-01-31\")\n  jan31 + months(0:11) + days(31)\n\nOutput of reprex():\n\n  jan31 &lt;- ymd(\"2021-01-31\")\n#&gt; Error in ymd(\"2021-01-31\"): could not find function \"ymd\"\n  jan31 + months(0:11) + days(31)\n#&gt; Error in eval(expr, envir, enclos): object 'jan31' not found"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#reprex-example---3rd-try",
+    "href": "slides/2025-10-15-help.html#reprex-example---3rd-try",
+    "title": "Help me help you",
+    "section": "reprex() example - 3rd try",
+    "text": "reprex() example - 3rd try\nCode:\n\n  library(lubridate)\n  jan31 &lt;- ymd(\"2021-01-31\")\n  jan31 + months(0:11) + days(31)\n\nOutput of reprex():\n\n  library(lubridate)\n#&gt; \n#&gt; Attaching package: 'lubridate'\n#&gt; The following objects are masked from 'package:base':\n#&gt; \n#&gt;     date, intersect, setdiff, union\n  jan31 &lt;- ymd(\"2021-01-31\")\n  jan31 + months(0:11) + days(31)\n#&gt;  [1] \"2021-03-03\" NA           \"2021-05-01\" NA           \"2021-07-01\"\n#&gt;  [6] NA           \"2021-08-31\" \"2021-10-01\" NA           \"2021-12-01\"\n#&gt; [11] NA           \"2022-01-31\""
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#reproducible-example-w-chatgpt",
+    "href": "slides/2025-10-15-help.html#reproducible-example-w-chatgpt",
+    "title": "Help me help you",
+    "section": "Reproducible example w ChatGPT",
+    "text": "Reproducible example w ChatGPT\n\ngenerate a reprex in R to demonstrate how to reorder a factor variable"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#must-haves-for-reprex",
+    "href": "slides/2025-10-15-help.html#must-haves-for-reprex",
+    "title": "Help me help you",
+    "section": "Must-haves for reprex()",
+    "text": "Must-haves for reprex()\nThe following must be included in order for a reproducible example to work (i.e., for someone else to run the code and get the same output):\n\nR packages\nrelevant dataset(s)\nall of the code\nsetting the seed so that you and your collaborator get the same answer!"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#checklist-for-a-good-reprex",
+    "href": "slides/2025-10-15-help.html#checklist-for-a-good-reprex",
+    "title": "Help me help you",
+    "section": "Checklist for a good reprex()",
+    "text": "Checklist for a good reprex()\n✅ Minimal\n✅ Complete\n✅ Runnable\n✅ Clearly explains the problem"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#object-names",
+    "href": "slides/2025-10-15-help.html#object-names",
+    "title": "Help me help you",
+    "section": "Object names",
+    "text": "Object names\n\nThere are only two hard things in Computer Science: cache invalidation and naming things.\n\n\n– Phil Karlton"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#object-names-1",
+    "href": "slides/2025-10-15-help.html#object-names-1",
+    "title": "Help me help you",
+    "section": "Object names",
+    "text": "Object names\nVariable and function names should use only lowercase letters, numbers, and _. Use underscores (_) (so called snake case) to separate words within a name.\n\n# Good\nday_one\nday_1\n\n# Bad\nDayOne\ndayone\n\n# Really bad\nT &lt;- FALSE\nc &lt;- 10\nmean &lt;- function(x) sum(x)"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#spacing",
+    "href": "slides/2025-10-15-help.html#spacing",
+    "title": "Help me help you",
+    "section": "Spacing",
+    "text": "Spacing\nDo not put spaces inside or outside parentheses for regular function calls.\n\n# Good\nmean(x, na.rm = TRUE)\n\n# Bad\nmean (x, na.rm = TRUE)\nmean( x, na.rm = TRUE )"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#infix-operators",
+    "href": "slides/2025-10-15-help.html#infix-operators",
+    "title": "Help me help you",
+    "section": "Infix operators",
+    "text": "Infix operators\nMost infix operators (==, +, -, &lt;-, etc.) should always be surrounded by spaces:\n\n# Good\nheight &lt;- (feet * 12) + inches\nmean(x, na.rm = TRUE)\n\n# Bad\nheight&lt;-feet*12+inches\nmean(x, na.rm=TRUE)"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#long-function-calls",
+    "href": "slides/2025-10-15-help.html#long-function-calls",
+    "title": "Help me help you",
+    "section": "Long function calls",
+    "text": "Long function calls\nIf a function call is too long to fit on a single line, use one line each for the function name, each argument, and the closing ). This makes the code easier to read and to change later.\n\n# Good\ndo_something_very_complicated(\n  something = \"that\",\n  requires = many,\n  arguments = \"some of which may be long\"\n)\n\n# Bad\ndo_something_very_complicated(\"that\", requires, many, arguments,\n                              \"some of which may be long\"\n                              )"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#long-lines-piping",
+    "href": "slides/2025-10-15-help.html#long-lines-piping",
+    "title": "Help me help you",
+    "section": "Long lines (piping)",
+    "text": "Long lines (piping)\nIf the arguments to a function don’t all fit on one line, put each argument on its own line and indent:1\n\n# Good\niris |&gt;\n  summarise(\n    Sepal.Length = mean(Sepal.Length),\n    Sepal.Width = mean(Sepal.Width),\n    .by = Species\n  )\n\n# Bad\niris |&gt;\n  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)\n\n# Also bad\nsummarise(\n  iris,\n  Sepal.Length = mean(Sepal.Length),\n  Sepal.Width = mean(Sepal.Width),\n  .by = Species\n)\n\nThe last one isn’t great because it is hard to distinguish the data frame from the other arguments (which play very different roles in the summarize() function)."
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#short-lines-piping",
+    "href": "slides/2025-10-15-help.html#short-lines-piping",
+    "title": "Help me help you",
+    "section": "Short lines (piping)",
+    "text": "Short lines (piping)\nSometimes it’s useful to include a short pipe as an argument to a function in a longer pipe. Carefully consider whether the code is more readable with a short inline pipe or if it’s better to move the code outside the pipe and give it an evocative name.\n\n# Good\nx |&gt;\n  semi_join(y |&gt; filter(is_valid))\n\n# Ok\nx |&gt;\n  select(a, b, w) |&gt;\n  left_join(y |&gt; select(a, b, v), join_by(a, b))\n\n# Better\nx_join &lt;- x |&gt; select(a, b, w)\ny_join &lt;- y |&gt; select(a, b, v)\nleft_join(x_join, y_join, join_by(a, b))"
+  },
+  {
+    "objectID": "slides/2025-10-15-help.html#style",
+    "href": "slides/2025-10-15-help.html#style",
+    "title": "Help me help you",
+    "section": "Style",
+    "text": "Style\n\nThe point is that coding happens in community.\n\nNot only do you want your code to run well, but you want other people to be able to understand it and use it.\nThe more that you and others use the same syntax, the better the communication will be."
   }
 ]
