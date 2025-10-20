@@ -95,7 +95,7 @@ schedule <- tribble(
   ' ',
 
      "Week 9 <br> 10.20.25", 'iterations + <br> simulations', 
- '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Iterations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-20-iters.html" target = "_blank">Iterations</a>',
+ '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Iterations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-20-iters.html" target = "_blank">Iterations</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws12_ds2_f25_probsim.pdf" target = "_blank">WS 12 - probability simulation</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 5</a> - due <b> Monday </b> 10.20.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 3 10.22.25',
 
   ' ',
