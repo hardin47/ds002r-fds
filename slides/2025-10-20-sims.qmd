@@ -30,6 +30,12 @@ library(tidyverse)
 library(tictoc)
 ```
 
+## Data Conclusions
+
+```{r, out.width = "800px", echo=FALSE, fig.cap = "Based on [https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories), original source: [https://www.linkedin.com/learning/instructors/bill-shander](https://www.linkedin.com/learning/instructors/bill-shander)"}
+knitr::include_graphics("../images/data_lego2.png")
+```
+
 ## Goals of Simulating Complicated Models
 
 The goal of simulating a complicated model is not only to create a program which will provide the desired results.  We also hope to be able to write code such that:

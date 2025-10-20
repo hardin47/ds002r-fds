@@ -5366,7 +5366,7 @@
     "href": "slides/2025-10-20-sims.html#simulate-their-meeting",
     "title": "Simulations",
     "section": "Simulate their meeting",
-    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n32.288 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n169.642 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed"
+    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n31.383 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n166.134 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed"
   },
   {
     "objectID": "slides/2025-10-20-sims.html#results",
@@ -5703,5 +5703,12 @@
     "title": "Simulations",
     "section": "References",
     "text": "References\n\n\n\n\nBaumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. Modern Data Science with r. CRC Press. https://mdsr-book.github.io/mdsr2e/.\n\n\nMosteller, Frederick. 1987. Fifty Challenging Problems in Probability with Solutions. Dover Publications: Mineola, NY."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#data-conclusions",
+    "href": "slides/2025-10-20-sims.html#data-conclusions",
+    "title": "Simulations",
+    "section": "Data Conclusions",
+    "text": "Data Conclusions\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   }
 ]
