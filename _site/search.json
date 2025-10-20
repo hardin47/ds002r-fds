@@ -5331,7 +5331,7 @@
     "href": "slides/2025-10-20-sims.html#aside-ifelse",
     "title": "Simulations",
     "section": "Aside: ifelse()",
-    "text": "Aside: ifelse()\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;=0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
+    "text": "Aside: ifelse()\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;= 0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
   },
   {
     "objectID": "slides/2025-10-20-sims.html#aside-case_when",
@@ -5345,7 +5345,7 @@
     "href": "slides/2025-10-20-sims.html#aside-sample",
     "title": "Simulations",
     "section": "Aside: sample()",
-    "text": "Aside: sample()\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, 5, replace = FALSE) # sample (from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, 5, replace = TRUE) # sample (from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
+    "text": "Aside: sample()\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, size = 5, replace = FALSE) # sample (e.g., from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, size = 5, replace = TRUE) # sample (e.g., from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, size = 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, size = 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
   },
   {
     "objectID": "slides/2025-10-20-sims.html#aside-set.seed",
@@ -5366,7 +5366,7 @@
     "href": "slides/2025-10-20-sims.html#simulate-their-meeting",
     "title": "Simulations",
     "section": "Simulate their meeting",
-    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n31.383 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n166.134 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed"
+    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n33.258 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n176.833 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.008 sec elapsed"
   },
   {
     "objectID": "slides/2025-10-20-sims.html#results",

@@ -36,13 +36,6 @@ library(tictoc)
 knitr::include_graphics("../images/data_lego2.png")
 ```
 
-## Goals of Simulating Complicated Models
-
-The goal of simulating a complicated model is not only to create a program which will provide the desired results.  We also hope to be able to write code such that:
-
-1. The problem is broken down into small pieces.
-2. The problem has checks in it to see what works (run the lines *inside* the functions!).
-3. uses simple code (as often as possible).
 
 ## Simulate to...
 
@@ -66,7 +59,7 @@ The goal of simulating a complicated model is not only to create a program which
 ## Aside: `ifelse()`
 ```{r}
 data.frame(value = c(-2:2)) |>
-  mutate(abs_value = ifelse(value >=0, value, -value))  # abs val
+  mutate(abs_value = ifelse(value >= 0, value, -value))  # abs val
 ```
 
 
@@ -89,13 +82,13 @@ set.seed(47)
 alph <- letters[1:10]
 alph
 
-sample(alph, 5, replace = FALSE) # sample (from a population)
+sample(alph, size = 5, replace = FALSE) # sample (e.g., from a population)
 
-sample(alph, 5, replace = TRUE) # sample (from a population)
+sample(alph, size = 5, replace = TRUE) # sample (e.g., from a population)
 
-sample(alph, 10, replace = FALSE)  # shuffle
+sample(alph, size = 10, replace = FALSE)  # shuffle
 
-sample(alph, 10, replace = TRUE)  # resample
+sample(alph, size = 10, replace = TRUE)  # resample
 ```
 
 ## Aside: `set.seed()`
@@ -493,6 +486,13 @@ map(c(1:num_stud_upper), birth_match_prob, reps = num_class) |>
 * [... estimate probabilities (easier than calculus)]{.semi-transparent}.
 * ... understand complicated models.
 
+## Goals of Simulating Complicated Models
+
+The goal of simulating a complicated model is not only to create a program which will provide the desired results.  We also hope to be able to write code such that:
+
+1. The problem is broken down into small pieces.
+2. The problem has checks in it to see what works (run the lines *inside* the functions!).
+3. uses simple code (as often as possible).
 
 ## Bias in a model
 
