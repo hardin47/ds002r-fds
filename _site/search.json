@@ -2440,7 +2440,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\niterations +  simulations\n  MDSR Simulations   Iterations   Iterations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics\n Project 3 - due 10.29.25\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\nsimulations\n  MDSR Simulations   Simulations   Simulations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics\n Project 3 - due 10.29.25\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "slides/2025-04-30-shiny.html#examples",
@@ -5302,6 +5302,405 @@
     "objectID": "slides/2025-10-20-iters.html#references",
     "href": "slides/2025-10-20-iters.html#references",
     "title": "Iterations",
+    "section": "References",
+    "text": "References\n\n\n\n\nBaumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. Modern Data Science with r. CRC Press. https://mdsr-book.github.io/mdsr2e/.\n\n\nMosteller, Frederick. 1987. Fifty Challenging Problems in Probability with Solutions. Dover Publications: Mineola, NY."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html",
+    "href": "slides/2025-10-20-sims.html",
+    "title": "Iterations",
+    "section": "",
+    "text": "Why simulate?\nSimulating to calculate probabilities\nWhat makes a good simulation?\n\n\n\nThe goal of simulating a complicated model is not only to create a program which will provide the desired results. We also hope to be able to write code such that:\n\nThe problem is broken down into small pieces.\nThe problem has checks in it to see what works (run the lines inside the functions!).\nuses simple code (as often as possible).\n\n\n\n\n\n\n… estimate probabilities (easier than calculus).\n… understand complicated models.\n\n\n\n\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;=0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2\n\n\n\n\n\n\nset.seed(4747)\ndiamonds |&gt; select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(price_cat = case_when(\n    price &gt; 10000 ~ \"expensive\",\n    price &gt; 1500 ~ \"medium\", \n    TRUE ~ \"inexpensive\"))\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive\n\n\n\n\n\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, 5, replace = FALSE) # sample (from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, 5, replace = TRUE) # sample (from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\"\n\n\n\n\n\nWhat if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\n\n\n\n\nConsider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer, Kaplan, and Horton 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?\n\n\n\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n31.291 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n153.93 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed\n\n\n\n\n\n\n\n\nThe results themselves are equivalent. Differing values due to randomness in the simulation.\n\nmap()for() loopvectorized\n\n\n\nmeet_map |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306\n\n\n\n\n\nmeet_vect |&gt; \n  group_by(result) |&gt; \n  summarize(number = n()) |&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305\n\n\n\n\n\n\n\n\n\nmeet_map |&gt; \n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) + \n  geom_abline(intercept = 10, slope = 1) + \n  geom_abline(intercept = -10, slope = 1) + \n  scale_color_brewer(palette = \"Paired\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#goals-of-simulating-complicated-models",
+    "href": "slides/2025-10-20-sims.html#goals-of-simulating-complicated-models",
+    "title": "Simulations",
+    "section": "Goals of Simulating Complicated Models",
+    "text": "Goals of Simulating Complicated Models\nThe goal of simulating a complicated model is not only to create a program which will provide the desired results. We also hope to be able to write code such that:\n\nThe problem is broken down into small pieces.\nThe problem has checks in it to see what works (run the lines inside the functions!).\nuses simple code (as often as possible)."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#simulate-to",
+    "href": "slides/2025-10-20-sims.html#simulate-to",
+    "title": "Simulations",
+    "section": "Simulate to…",
+    "text": "Simulate to…\n\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#aside-ifelse",
+    "href": "slides/2025-10-20-sims.html#aside-ifelse",
+    "title": "Simulations",
+    "section": "Aside: ifelse()",
+    "text": "Aside: ifelse()\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = ifelse(value &gt;=0, value, -value))  # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#aside-case_when",
+    "href": "slides/2025-10-20-sims.html#aside-case_when",
+    "title": "Simulations",
+    "section": "Aside: case_when()",
+    "text": "Aside: case_when()\n\nset.seed(4747)\ndiamonds |&gt; select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(price_cat = case_when(\n    price &gt; 10000 ~ \"expensive\",\n    price &gt; 1500 ~ \"medium\", \n    TRUE ~ \"inexpensive\"))\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#aside-sample",
+    "href": "slides/2025-10-20-sims.html#aside-sample",
+    "title": "Simulations",
+    "section": "Aside: sample()",
+    "text": "Aside: sample()\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, 5, replace = FALSE) # sample (from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, 5, replace = TRUE) # sample (from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, 10, replace = FALSE)  # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, 10, replace = TRUE)  # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#aside-set.seed",
+    "href": "slides/2025-10-20-sims.html#aside-set.seed",
+    "title": "Simulations",
+    "section": "Aside: set.seed()",
+    "text": "Aside: set.seed()\nWhat if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#example-1-alex-jordan",
+    "href": "slides/2025-10-20-sims.html#example-1-alex-jordan",
+    "title": "Simulations",
+    "section": "Example 1: Alex & Jordan",
+    "text": "Example 1: Alex & Jordan\nConsider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer, Kaplan, and Horton 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#simulate-their-meeting",
+    "href": "slides/2025-10-20-sims.html#simulate-their-meeting",
+    "title": "Simulations",
+    "section": "Simulate their meeting",
+    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada){\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)) |&gt; \n    mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                           \"They meet\", \n                           \"They do not\"\n  )\n  )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt; \n  map(meet_func) |&gt; \n  list_rbind()\ntoc()\n\n32.288 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor(i in c(1:n)){\n  meet_for &lt;- meet_for |&gt; rbind(\n    data.frame(\n      alex = runif(1, min = 0, max = 60),\n      jordan = runif(1, min = 0, max = 60)) |&gt; \n      mutate(result = ifelse(abs(alex - jordan) &lt;= 10,\n                             \"They meet\", \n                             \"They do not\"\n  )))\n}\ntoc()\n\n169.642 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)) |&gt; \n  mutate(result = ifelse(abs(alex - jordan) &lt;= 10, \n                         \"They meet\", \n                         \"They do not\"\n  )\n)\ntoc()\n\n0.009 sec elapsed"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#results",
+    "href": "slides/2025-10-20-sims.html#results",
+    "title": "Simulations",
+    "section": "Results",
+    "text": "Results\nThe results themselves are equivalent. Differing values due to randomness in the simulation.\n\nmap()for() loopvectorized\n\n\n\nmeet_map |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt; \n  group_by(result) |&gt; \n  summarize(number = n())|&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306\n\n\n\n\n\nmeet_vect |&gt; \n  group_by(result) |&gt; \n  summarize(number = n()) |&gt; \n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#visualizing-the-meet-up",
+    "href": "slides/2025-10-20-sims.html#visualizing-the-meet-up",
+    "title": "Simulations",
+    "section": "Visualizing the meet up",
+    "text": "Visualizing the meet up\n\nmeet_map |&gt; \n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) + \n  geom_abline(intercept = 10, slope = 1) + \n  geom_abline(intercept = -10, slope = 1) + \n  scale_color_brewer(palette = \"Paired\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#step-1-representing-the-hats",
+    "href": "slides/2025-10-20-sims.html#step-1-representing-the-hats",
+    "title": "Simulations",
+    "section": "Step 1: representing the hats",
+    "text": "Step 1: representing the hats\n\nhats &lt;- c(1:10)\nhats\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#step-2-everyone-draws-a-hat",
+    "href": "slides/2025-10-20-sims.html#step-2-everyone-draws-a-hat",
+    "title": "Simulations",
+    "section": "Step 2: everyone draws a hat",
+    "text": "Step 2: everyone draws a hat\n\nset.seed(47)\nrandom_hats &lt;- sample(hats, size = 10, replace = FALSE)\n\nhats\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nrandom_hats\n\n [1]  9  2  7  4  1 10  6  3  5  8"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#step-3-who-got-their-original-hat",
+    "href": "slides/2025-10-20-sims.html#step-3-who-got-their-original-hat",
+    "title": "Simulations",
+    "section": "Step 3: who got their original hat?",
+    "text": "Step 3: who got their original hat?\n\nhats == random_hats\n\n [1] FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE\n\n# TRUE is 1, FALSE is 0\nsum(hats == random_hats)\n\n[1] 2\n\n# did at least one person get their hat?\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#code-so-far",
+    "href": "slides/2025-10-20-sims.html#code-so-far",
+    "title": "Simulations",
+    "section": "Code so far",
+    "text": "Code so far\n\nset.seed(47)\nhats &lt;- c(1:10)\nrandom_hats &lt;- sample(hats, size = 10, replace = FALSE)\nsum(hats == random_hats) &gt; 0\n\n[1] TRUE\n\n\n\nDo we have a good estimate of the probability of interest?"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#function-1",
+    "href": "slides/2025-10-20-sims.html#function-1",
+    "title": "Simulations",
+    "section": "Function",
+    "text": "Function\n\nremove the magic number 10\n\n\nhat_match &lt;- function(n){\n  hats &lt;- c(1:n)\n  random_hats &lt;- sample(hats, size = n, replace = FALSE)\n  sum(hats == random_hats) &gt; 0\n}\n\nhat_match(10)\n\n[1] TRUE\n\nhat_match(47)\n\n[1] TRUE"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#iterate",
+    "href": "slides/2025-10-20-sims.html#iterate",
+    "title": "Simulations",
+    "section": "Iterate",
+    "text": "Iterate\n\nmap_lgl(c(1:10), ~hat_match(n = 10))\n\n [1]  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE\n\nmap_lgl(c(1:10), ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.5"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#reproducible",
+    "href": "slides/2025-10-20-sims.html#reproducible",
+    "title": "Simulations",
+    "section": "Reproducible",
+    "text": "Reproducible\n\nset.seed(4747)\nnum_iter &lt;- 10000\n\nmap_lgl(c(1:num_iter), ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.6329\n\n\n\nset.seed(123)\nnum_iter &lt;- 10000\n\nmap_lgl(c(1:num_iter), ~hat_match(n = 10)) |&gt; \n  mean()\n\n[1] 0.6333"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#vary-number-of-hats",
+    "href": "slides/2025-10-20-sims.html#vary-number-of-hats",
+    "title": "Simulations",
+    "section": "Vary number of hats",
+    "text": "Vary number of hats\n\nhat_match_prob &lt;- function(n, reps){\n  prob &lt;- map_lgl(c(1:reps), ~hat_match(n = n)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_hats = n))\n}\n\nhat_match_prob(47, 200)\n\n  match_prob num_hats\n1       0.62       47"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#vary-number-of-hats-1",
+    "href": "slides/2025-10-20-sims.html#vary-number-of-hats-1",
+    "title": "Simulations",
+    "section": "Vary number of hats",
+    "text": "Vary number of hats\n\nhat_match_prob &lt;- function(n, reps){\n  prob &lt;- map_lgl(c(1:reps), ~hat_match(n = n)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_hats = n))\n}\n\nset.seed(47)\nmap(c(1:20), hat_match_prob, reps = num_iter) |&gt; \n  list_rbind()\n\n   match_prob num_hats\n1      1.0000        1\n2      0.4964        2\n3      0.6695        3\n4      0.6241        4\n5      0.6376        5\n6      0.6290        6\n7      0.6299        7\n8      0.6299        8\n9      0.6373        9\n10     0.6273       10\n11     0.6319       11\n12     0.6348       12\n13     0.6393       13\n14     0.6300       14\n15     0.6280       15\n16     0.6396       16\n17     0.6355       17\n18     0.6283       18\n19     0.6304       19\n20     0.6461       20"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#visualizing",
+    "href": "slides/2025-10-20-sims.html#visualizing",
+    "title": "Simulations",
+    "section": "Visualizing",
+    "text": "Visualizing\n\nset.seed(47)\nnum_iter &lt;- 10000\nmap(c(1:20), hat_match_prob, reps = num_iter) |&gt; \n  list_rbind() |&gt; \n  ggplot(aes(x = num_hats, y = match_prob)) + \n  geom_line() + \n  labs(y = \"probability of at least one match\",\n       x = \"number of hats\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#example-3-birthday-problem",
+    "href": "slides/2025-10-20-sims.html#example-3-birthday-problem",
+    "title": "Simulations",
+    "section": "Example 3: Birthday Problem",
+    "text": "Example 3: Birthday Problem\nWhat is the probability that in a room of 28 people, at least 2 of them have the same birthday?"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#step-1-representing-the-birthdays",
+    "href": "slides/2025-10-20-sims.html#step-1-representing-the-birthdays",
+    "title": "Simulations",
+    "section": "Step 1: representing the birthdays",
+    "text": "Step 1: representing the birthdays\n\nset.seed(7474)\nclass_birthdays &lt;- sample(c(1:365), size = 28, replace = TRUE)\nclass_birthdays \n\n [1]  65 340 246 244 355 248 298 271 363 173 307 260 195 300 189 154 319  51 139\n[20] 241 275 271 102 363 201 165  35  13"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#step-2-any-duplicates",
+    "href": "slides/2025-10-20-sims.html#step-2-any-duplicates",
+    "title": "Simulations",
+    "section": "Step 2: any duplicates?",
+    "text": "Step 2: any duplicates?\n\nduplicated(class_birthdays)\n\n [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n[13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE\n[25] FALSE FALSE FALSE FALSE\n\nsum(duplicated(class_birthdays))\n\n[1] 2"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#function-2",
+    "href": "slides/2025-10-20-sims.html#function-2",
+    "title": "Simulations",
+    "section": "Function",
+    "text": "Function\n\nclass_duplicates &lt;- function(unicorn){\n  class_birthdays &lt;- sample(c(1:365), size = 28, replace = TRUE)\n  num_duplicates &lt;- sum(duplicated(class_birthdays))\n  return(ifelse(num_duplicates &gt; 0, 1, 0))\n}\n\nclass_duplicates()\n\n[1] 0\n\nclass_duplicates()\n\n[1] 1"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#iterate-1",
+    "href": "slides/2025-10-20-sims.html#iterate-1",
+    "title": "Simulations",
+    "section": "Iterate",
+    "text": "Iterate\n\nmap_dbl(c(1:10), class_duplicates)\n\n [1] 0 1 0 0 0 0 0 0 1 0"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#improve",
+    "href": "slides/2025-10-20-sims.html#improve",
+    "title": "Simulations",
+    "section": "Improve",
+    "text": "Improve\n\nclass_duplicates &lt;- function(class_size){\n  class_birthdays &lt;- sample(c(1:365), size = class_size, replace = TRUE)\n  num_duplicates &lt;- sum(duplicated(class_birthdays))\n  return(ifelse(num_duplicates &gt; 0, 1, 0))\n}\n\nset.seed(47)\nnum_stud &lt;- 28\nmap_dbl(c(1:10), ~class_duplicates(class_size = num_stud))\n\n [1] 0 1 0 1 1 1 1 0 1 0"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#many-classrooms",
+    "href": "slides/2025-10-20-sims.html#many-classrooms",
+    "title": "Simulations",
+    "section": "Many classrooms",
+    "text": "Many classrooms\n\nset.seed(47)\nnum_stud &lt;- 28\nnum_class &lt;- 1000\nmap_dbl(c(1:num_class), ~class_duplicates(class_size = num_stud)) |&gt; \n  mean()\n\n[1] 0.649"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#vary-number-of-students",
+    "href": "slides/2025-10-20-sims.html#vary-number-of-students",
+    "title": "Simulations",
+    "section": "Vary number of students",
+    "text": "Vary number of students\n\nset.seed(47)\nnum_stud_upper &lt;- 28\nnum_class &lt;- 100\n\nbirth_match_prob &lt;- function(num_stud, reps){\n  prob &lt;- map_dbl(c(1:reps), ~class_duplicates(class_size = num_stud)) |&gt; \n    mean()\n  return(data.frame(match_prob = prob, num_stud = num_stud))\n}\n\nmap(c(1:num_stud_upper), birth_match_prob, reps = num_class) |&gt; \n  list_rbind()\n\n   match_prob num_stud\n1        0.00        1\n2        0.00        2\n3        0.00        3\n4        0.00        4\n5        0.03        5\n6        0.03        6\n7        0.04        7\n8        0.06        8\n9        0.11        9\n10       0.13       10\n11       0.14       11\n12       0.18       12\n13       0.18       13\n14       0.25       14\n15       0.25       15\n16       0.32       16\n17       0.37       17\n18       0.43       18\n19       0.44       19\n20       0.40       20\n21       0.43       21\n22       0.47       22\n23       0.48       23\n24       0.47       24\n25       0.61       25\n26       0.67       26\n27       0.63       27\n28       0.66       28"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#visualize",
+    "href": "slides/2025-10-20-sims.html#visualize",
+    "title": "Simulations",
+    "section": "Visualize",
+    "text": "Visualize\n\nset.seed(123)\nnum_stud_upper &lt;- 40\nnum_class &lt;- 1000\n\nmap(c(1:num_stud_upper), birth_match_prob, reps = num_class) |&gt; \n  list_rbind()  |&gt; \n  ggplot(aes(x = num_stud, y = match_prob)) + \n  geom_line() + \n  labs(y = \"probability of birthday match\",\n       x = \"number of students in class\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#simulate-to-1",
+    "href": "slides/2025-10-20-sims.html#simulate-to-1",
+    "title": "Simulations",
+    "section": "Simulate to…",
+    "text": "Simulate to…\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#bias-in-a-model",
+    "href": "slides/2025-10-20-sims.html#bias-in-a-model",
+    "title": "Simulations",
+    "section": "Bias in a model",
+    "text": "Bias in a model\nPopulation:\ntalent ~ Normal (100, 15)\ngrades ~ Normal (talent, 15)\nSAT ~ Normal (talent, 15)\nThe example is taken directly (and mostly verbatim) from a blog by Aaron Roth Algorithmic Unfairness Without Any Bias Baked In."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#goal-for-admitting-students",
+    "href": "slides/2025-10-20-sims.html#goal-for-admitting-students",
+    "title": "Simulations",
+    "section": "Goal for admitting students",
+    "text": "Goal for admitting students\nCollege wants to admit students with\n\ntalent &gt; 115\n\n… but they only have access to grades and SAT which are noisy estimates of talent."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#plan-for-accepting-students",
+    "href": "slides/2025-10-20-sims.html#plan-for-accepting-students",
+    "title": "Simulations",
+    "section": "Plan for accepting students",
+    "text": "Plan for accepting students\n\nRun a regression on a training dataset (talent is known for existing students)\nFind a model which predicts talent based on grades and SAT\nChoose students for whom predicted talent is above 115"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#flaw-in-the-plan",
+    "href": "slides/2025-10-20-sims.html#flaw-in-the-plan",
+    "title": "Simulations",
+    "section": "Flaw in the plan …",
+    "text": "Flaw in the plan …\n\nthere are two populations of students, the Reds and Blues.\nReds are the majority population (99%), and Blues are a small minority population (1%)\nthe Reds and the Blues are no different when it comes to talent: they both have the same talent distribution, as described above.\nthere is no bias baked into the grading or the exams: both the Reds and the Blues also have exactly the same grade and exam score distributions"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#what-is-really-different",
+    "href": "slides/2025-10-20-sims.html#what-is-really-different",
+    "title": "Simulations",
+    "section": "What is really different?",
+    "text": "What is really different?\n\nBut there is one difference: the Blues have more money than the Reds, so they each take the SAT twice, and report only the highest of the two scores to the college. This results in a small but noticeable bump in their average SAT scores, compared to the Reds."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#key-aspect",
+    "href": "slides/2025-10-20-sims.html#key-aspect",
+    "title": "Simulations",
+    "section": "Key aspect:",
+    "text": "Key aspect:\n\nThe value of SAT means something different for the Reds versus the Blues\n\n(They have different feature distributions.)"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#lets-see-what-happens",
+    "href": "slides/2025-10-20-sims.html#lets-see-what-happens",
+    "title": "Simulations",
+    "section": "Let’s see what happens …",
+    "text": "Let’s see what happens …"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#two-models",
+    "href": "slides/2025-10-20-sims.html#two-models",
+    "title": "Simulations",
+    "section": "Two models:",
+    "text": "Two models:\nRed model (SAT taken once):\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)   33.2     0.152        218.       0\n2 SAT            0.334   0.00149      224.       0\n3 grades         0.334   0.00149      225.       0\n\n\nBlue model (SAT is max score of two):\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   25.3      1.60        15.8 2.04e- 50\n2 SAT            0.432    0.0161      26.7 3.35e-119\n3 grades         0.277    0.0154      18.0 6.83e- 63"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#new-data",
+    "href": "slides/2025-10-20-sims.html#new-data",
+    "title": "Simulations",
+    "section": "New data",
+    "text": "New data\n\nGenerate new data, use the two models separately.\nCan the models predict if a student has talent &gt; 115?"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#new-data-1",
+    "href": "slides/2025-10-20-sims.html#new-data-1",
+    "title": "Simulations",
+    "section": "New data",
+    "text": "New data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 5\n  color   tpr    fpr   fnr error\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 blue  0.503 0.0379 0.497 0.109\n2 red   0.509 0.0378 0.491 0.109"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#two-models-doesnt-seem-right",
+    "href": "slides/2025-10-20-sims.html#two-models-doesnt-seem-right",
+    "title": "Simulations",
+    "section": "TWO models doesn’t seem right????",
+    "text": "TWO models doesn’t seem right????\nWhat if we fit only one model to the entire dataset?\nAfter all, there are laws against using protected classes to make decisions (housing, jobs, money loans, college, etc.)\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)   33.1     0.151        219.       0\n2 SAT            0.334   0.00148      225.       0\n3 grades         0.334   0.00148      226.       0\n\n\n(The coefficients kinda look like the red model…)"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#how-do-the-error-rates-change",
+    "href": "slides/2025-10-20-sims.html#how-do-the-error-rates-change",
+    "title": "Simulations",
+    "section": "How do the error rates change?",
+    "text": "How do the error rates change?\n\n\n\n\n\n\n\n\n\n\n\n\nOne model:\n\n\n# A tibble: 2 × 5\n  color   tpr    fpr   fnr error\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 blue  0.619 0.0627 0.381 0.112\n2 red   0.507 0.0375 0.493 0.109\n\n\nTwo separate models:\n\n\n# A tibble: 2 × 5\n  color   tpr    fpr   fnr error\n  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 blue  0.503 0.0379 0.497 0.109\n2 red   0.509 0.0378 0.491 0.109"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#what-did-we-learn",
+    "href": "slides/2025-10-20-sims.html#what-did-we-learn",
+    "title": "Simulations",
+    "section": "What did we learn?",
+    "text": "What did we learn?\n\nwith two populations that have different feature distributions, learning a single classifier (that is prohibited from discriminating based on population) will fit the bigger of the two populations\n\n\ndepending on the nature of the distribution difference, it can be either to the benefit or the detriment of the minority population\nno explicit human bias, either on the part of the algorithm designer or the data gathering process\nthe problem is exacerbated if we artificially force the algorithm to be group blind\nwell-intentioned “fairness” regulations prohibiting decision makers form taking sensitive attributes into account can actually make things less fair and less accurate at the same time"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#simulate",
+    "href": "slides/2025-10-20-sims.html#simulate",
+    "title": "Simulations",
+    "section": "Simulate?",
+    "text": "Simulate?\n\ndifferent varying proportions\neffect due to variability\neffect due to SAT coefficient\ndifferent number of times the blues get to take the test\netc."
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#aside-rnorm",
+    "href": "slides/2025-10-20-sims.html#aside-rnorm",
+    "title": "Simulations",
+    "section": "Aside: rnorm()",
+    "text": "Aside: rnorm()\nrnorm() calculates random normal values\n\nrnorm(3)\n\n[1] 1.0598770 0.2813142 0.1483487\n\nrnorm(3, mean = 0, sd = 1)\n\n[1] -1.5222088 -0.2609479  0.1393759\n\nrnorm(4, mean = 47, sd = 5)\n\n[1] 48.91283 45.11651 50.69179 42.14037"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#asset-allocation-1",
+    "href": "slides/2025-10-20-sims.html#asset-allocation-1",
+    "title": "Simulations",
+    "section": "Asset allocation",
+    "text": "Asset allocation\nTask: to model an asset allocation problem where you decide what portion of wealth should be allocated to risk-free investment or high-risk investment\n\nthe function calculates returns based on different asset allocations.\n\n\ncalculate_return &lt;- function(step, alpha) {\n  risk_free_rate &lt;- 1.03\n  risky_rate &lt;- rnorm(1, mean = 0, sd = 1) * 0.05 + 1\n  return(data.frame(step = step, \n                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))\n}\n\ncalculate_return(\"unicorn\", 0.47)\n\n     step   return\n1 unicorn 1.034815"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#let-alpha-0.5",
+    "href": "slides/2025-10-20-sims.html#let-alpha-0.5",
+    "title": "Simulations",
+    "section": "Let alpha = 0.5",
+    "text": "Let alpha = 0.5\n(half risky, half risk free)\n\ndecision_steps &lt;- 12\n\npmap(data.frame(step = c(1:decision_steps),\n                alpha = rep(0.5, decision_steps)),\n     calculate_return) |&gt; \n  list_rbind()\n\n   step    return\n1     1 1.0244265\n2     2 0.9740712\n3     3 1.0111959\n4     4 1.0382488\n5     5 1.0019058\n6     6 0.9847674\n7     7 1.0296142\n8     8 0.9924038\n9     9 1.0381949\n10   10 1.0088956\n11   11 1.0370043\n12   12 1.0107057"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#many-runs",
+    "href": "slides/2025-10-20-sims.html#many-runs",
+    "title": "Simulations",
+    "section": "Many runs",
+    "text": "Many runs\n\nruns &lt;- 10\ndecision_steps &lt;- 12\n\nrun_func &lt;- function(run, steps, alpha){\n  pmap(data.frame(step = c(1:steps),\n                  alpha = rep(alpha, steps)),\n       calculate_return) |&gt; \n    list_rbind() |&gt; \n    cbind(run_number = as.factor(run))\n}\n\nrun_func(\"happy\", 12, 0.5)\n\n   step    return run_number\n1     1 0.9972576      happy\n2     2 1.0503818      happy\n3     3 1.0133106      happy\n4     4 1.0305766      happy\n5     5 1.0424264      happy\n6     6 1.0278066      happy\n7     7 1.0088744      happy\n8     8 1.0280513      happy\n9     9 1.0270015      happy\n10   10 1.0495620      happy\n11   11 1.0483569      happy\n12   12 1.0089000      happy\n\nmap(c(1:runs), run_func, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind()\n\n    step    return run_number\n1      1 1.0037332          1\n2      2 1.0305053          1\n3      3 1.0177365          1\n4      4 0.9851848          1\n5      5 1.0200471          1\n6      6 0.9777514          1\n7      7 1.0139097          1\n8      8 1.0394459          1\n9      9 1.0311656          1\n10    10 1.0111325          1\n11    11 1.0600142          1\n12    12 0.9529528          1\n13     1 1.0511925          2\n14     2 1.0188551          2\n15     3 1.0546398          2\n16     4 1.0286009          2\n17     5 1.0090312          2\n18     6 1.0116230          2\n19     7 0.9982508          2\n20     8 1.0397553          2\n21     9 0.9748453          2\n22    10 0.9994628          2\n23    11 1.0325967          2\n24    12 1.0265163          2\n25     1 0.9846161          3\n26     2 1.0106626          3\n27     3 1.0085478          3\n28     4 1.0253148          3\n29     5 0.9879959          3\n30     6 1.0761028          3\n31     7 1.0095107          3\n32     8 1.0417969          3\n33     9 1.0299429          3\n34    10 1.0483370          3\n35    11 1.0039636          3\n36    12 1.0177251          3\n37     1 0.9957903          4\n38     2 1.0446025          4\n39     3 1.0151633          4\n40     4 1.0208127          4\n41     5 1.0138992          4\n42     6 1.0241599          4\n43     7 0.9636553          4\n44     8 1.0330971          4\n45     9 1.0707355          4\n46    10 1.0341161          4\n47    11 1.0076286          4\n48    12 1.0437015          4\n49     1 1.0166442          5\n50     2 1.0424126          5\n51     3 0.9944647          5\n52     4 0.9669553          5\n53     5 1.0152975          5\n54     6 1.0145272          5\n55     7 1.0372179          5\n56     8 1.0407917          5\n57     9 0.9811040          5\n58    10 1.0213106          5\n59    11 0.9962674          5\n60    12 1.0518327          5\n61     1 0.9804384          6\n62     2 1.0313983          6\n63     3 1.0456102          6\n64     4 1.0019782          6\n65     5 0.9848773          6\n66     6 1.0166534          6\n67     7 1.0338028          6\n68     8 1.0222348          6\n69     9 0.9802758          6\n70    10 1.0156817          6\n71    11 1.0424656          6\n72    12 1.0575701          6\n73     1 1.0750144          7\n74     2 1.0058097          7\n75     3 0.9927478          7\n76     4 1.0009444          7\n77     5 1.0055233          7\n78     6 1.0573874          7\n79     7 0.9575212          7\n80     8 0.9957913          7\n81     9 1.0893832          7\n82    10 1.0135442          7\n83    11 1.0152496          7\n84    12 1.0331392          7\n85     1 1.0304361          8\n86     2 1.0111527          8\n87     3 1.0077437          8\n88     4 1.0031964          8\n89     5 1.0507032          8\n90     6 0.9713326          8\n91     7 1.0101054          8\n92     8 1.0556004          8\n93     9 0.9991680          8\n94    10 1.0232786          8\n95    11 1.0182200          8\n96    12 0.9987042          8\n97     1 1.0250592          9\n98     2 1.0300056          9\n99     3 0.9890955          9\n100    4 1.0395173          9\n101    5 1.0147912          9\n102    6 1.0243437          9\n103    7 0.9964191          9\n104    8 1.0782102          9\n105    9 0.9746246          9\n106   10 1.0194040          9\n107   11 1.0383502          9\n108   12 1.0508320          9\n109    1 1.0563048         10\n110    2 0.9850083         10\n111    3 1.0395162         10\n112    4 0.9711030         10\n113    5 1.0193429         10\n114    6 1.0259306         10\n115    7 0.9889117         10\n116    8 1.0418063         10\n117    9 1.0055857         10\n118   10 1.0155720         10\n119   11 1.0350093         10\n120   12 0.9916229         10"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#cummulative-product",
+    "href": "slides/2025-10-20-sims.html#cummulative-product",
+    "title": "Simulations",
+    "section": "Cummulative product",
+    "text": "Cummulative product\n\nnumbers &lt;- sample(1:5)\nnumbers\n\n[1] 5 4 2 1 3\n\ncumprod(numbers)\n\n[1]   5  20  40  40 120"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#cummulative-rates",
+    "href": "slides/2025-10-20-sims.html#cummulative-rates",
+    "title": "Simulations",
+    "section": "Cummulative rates",
+    "text": "Cummulative rates\n\nmap(c(1:runs), run_func, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return))\n\n# A tibble: 120 × 4\n# Groups:   run_number [10]\n    step return run_number compound_return\n   &lt;int&gt;  &lt;dbl&gt; &lt;fct&gt;                &lt;dbl&gt;\n 1     1  0.984 1                    0.984\n 2     2  1.01  1                    0.990\n 3     3  1.04  1                    1.03 \n 4     4  0.987 1                    1.02 \n 5     5  1.04  1                    1.05 \n 6     6  1.04  1                    1.09 \n 7     7  0.994 1                    1.09 \n 8     8  1.01  1                    1.10 \n 9     9  1.01  1                    1.12 \n10    10  0.994 1                    1.11 \n# ℹ 110 more rows"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#returns-over-time",
+    "href": "slides/2025-10-20-sims.html#returns-over-time",
+    "title": "Simulations",
+    "section": "Returns over time",
+    "text": "Returns over time\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#change-the-allocation",
+    "href": "slides/2025-10-20-sims.html#change-the-allocation",
+    "title": "Simulations",
+    "section": "Change the allocation",
+    "text": "Change the allocation\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, \n    steps = decision_steps, \n    alpha = 0.1) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.1\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#change-the-allocation-1",
+    "href": "slides/2025-10-20-sims.html#change-the-allocation-1",
+    "title": "Simulations",
+    "section": "Change the allocation",
+    "text": "Change the allocation\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, \n    steps = decision_steps, \n    alpha = 0.9) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.9\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#change-the-return",
+    "href": "slides/2025-10-20-sims.html#change-the-return",
+    "title": "Simulations",
+    "section": "Change the return",
+    "text": "Change the return\n\ncalculate returnrun function\n\n\n\ncalculate_return_sd10 &lt;- function(step, alpha) {\n  risk_free_rate &lt;- 1.03\n  risky_rate &lt;- rnorm(1, mean = 0, sd = 10) * 0.05 + 1\n  return(data.frame(step = step, \n                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))\n}\n\ncalculate_return(\"unicorn\", 0.47)\n\n     step   return\n1 unicorn 0.987021\n\n\n\n\n\nrun_func_sd10 &lt;- function(run, steps, alpha){\n  pmap(data.frame(step = c(1:steps),\n                  alpha = rep(alpha, steps)),\n       calculate_return_sd10) |&gt; \n    list_rbind() |&gt; \n    cbind(run_number = as.factor(run))\n}"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#does-the-change-impact-long-term",
+    "href": "slides/2025-10-20-sims.html#does-the-change-impact-long-term",
+    "title": "Simulations",
+    "section": "Does the change impact long-term?",
+    "text": "Does the change impact long-term?\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func_sd10, \n    steps = decision_steps,\n    alpha = 0.5) |&gt; \n  list_rbind() |&gt; \n  group_by(run_number) |&gt; \n  mutate(compound_return = cumprod(return)) |&gt; \n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1,12)) + \n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
+  },
+  {
+    "objectID": "slides/2025-10-20-sims.html#references",
+    "href": "slides/2025-10-20-sims.html#references",
+    "title": "Simulations",
     "section": "References",
     "text": "References\n\n\n\n\nBaumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. Modern Data Science with r. CRC Press. https://mdsr-book.github.io/mdsr2e/.\n\n\nMosteller, Frederick. 1987. Fifty Challenging Problems in Probability with Solutions. Dover Publications: Mineola, NY."
   }

@@ -1,0 +1,1093 @@
+---
+title: "Simulations"
+author: "Jo Hardin"
+subtitle: "October 20 + 22, 2025"
+format: 
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+bibliography: 
+  - ../book.bib
+--- 
+
+
+# Agenda  10/20/25
+
+1. Why simulate?
+2. Simulating to calculate probabilities
+3. What makes a good simulation?
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(tictoc)
+```
+
+## Goals of Simulating Complicated Models
+
+The goal of simulating a complicated model is not only to create a program which will provide the desired results.  We also hope to be able to write code such that:
+
+1. The problem is broken down into small pieces.
+2. The problem has checks in it to see what works (run the lines *inside* the functions!).
+3. uses simple code (as often as possible).
+
+## Simulate to...
+
+
+```{=html}
+<style>
+.semi-transparent {
+  opacity: 0.5;
+}
+</style>
+```
+
+
+* ... estimate probabilities (easier than calculus).
+* [... understand complicated models.]{.semi-transparent}
+
+
+
+
+
+## Aside: `ifelse()`
+```{r}
+data.frame(value = c(-2:2)) |>
+  mutate(abs_value = ifelse(value >=0, value, -value))  # abs val
+```
+
+
+## Aside: `case_when()`
+```{r}
+set.seed(4747)
+diamonds |> select(carat, cut, color, price) |>
+  sample_n(20) |>
+  mutate(price_cat = case_when(
+    price > 10000 ~ "expensive",
+    price > 1500 ~ "medium", 
+    TRUE ~ "inexpensive"))
+```
+
+## Aside: `sample()`
+*sampling*, *shuffling*,  and *resampling*: `sample()` 
+
+```{r}
+set.seed(47)
+alph <- letters[1:10]
+alph
+
+sample(alph, 5, replace = FALSE) # sample (from a population)
+
+sample(alph, 5, replace = TRUE) # sample (from a population)
+
+sample(alph, 10, replace = FALSE)  # shuffle
+
+sample(alph, 10, replace = TRUE)  # resample
+```
+
+## Aside: `set.seed()`
+
+What if we want to be able to generate the **same** random numbers (here on the interval from 0 to 1) over and over?
+
+```{r}
+set.seed(4747)
+runif(4, 0, 1) # random uniform numbers
+
+set.seed(123)
+runif(4, 0, 1) # random uniform numbers
+
+set.seed(4747)
+runif(4, 0, 1) # random uniform numbers
+```
+
+
+## Example 1: Alex & Jordan
+
+Consider a situation where Alex and Jordan plan to meet to study in their college campus center [@mosteller1987;@MDSR]. They are both impatient people who will wait only 10 minutes for the other before leaving.
+
+But their planning was incomplete. Alex said, "Meet me between 7 and 8 tonight at the student center." When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?
+
+## Simulate their meeting
+
+Assume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm. 
+
+::: {.panel-tabset}
+
+
+
+## function
+
+```{r}
+meet_func <- function(nada){
+  data.frame(
+    alex = runif(1, min = 0, max = 60),
+    jordan = runif(1, min = 0, max = 60)) |> 
+    mutate(result = ifelse(abs(alex - jordan) <= 10, 
+                           "They meet", 
+                           "They do not"
+  )
+  )
+}
+```
+
+
+## `map()`
+
+```{r}
+n <- 100000
+
+tic()
+meet_map <- 1:n |> 
+  map(meet_func) |> 
+  list_rbind()
+toc()
+```
+
+## `for()` loop
+
+```{r}
+tic()
+meet_for <- data.frame()
+for(i in c(1:n)){
+  meet_for <- meet_for |> rbind(
+    data.frame(
+      alex = runif(1, min = 0, max = 60),
+      jordan = runif(1, min = 0, max = 60)) |> 
+      mutate(result = ifelse(abs(alex - jordan) <= 10,
+                             "They meet", 
+                             "They do not"
+  )))
+}
+toc()
+
+```
+
+## vectorized 
+
+```{r}
+tic()
+meet_vect <- data.frame(
+  alex = runif(n, min = 0, max = 60),
+  jordan = runif(n, min = 0, max = 60)) |> 
+  mutate(result = ifelse(abs(alex - jordan) <= 10, 
+                         "They meet", 
+                         "They do not"
+  )
+)
+toc()
+```
+
+:::
+
+
+##  Results
+
+The results themselves are equivalent.  Differing values due to randomness in the simulation.
+
+::: {.panel-tabset}
+
+## `map()`
+
+```{r}
+
+meet_map |> 
+  group_by(result) |> 
+  summarize(number = n())|> 
+  mutate(proprotion = number / sum(number))
+```
+
+## `for()` loop
+
+```{r}
+meet_for |> 
+  group_by(result) |> 
+  summarize(number = n())|> 
+  mutate(proprotion = number / sum(number))
+```
+
+## vectorized
+
+```{r}
+meet_vect |> 
+  group_by(result) |> 
+  summarize(number = n()) |> 
+  mutate(proprotion = number / sum(number))
+```
+
+:::
+
+## Visualizing the meet up
+
+
+```{r}
+meet_map |> 
+  ggplot(aes(x = jordan, y = alex, color = result)) +
+  geom_point(alpha = 0.3) + 
+  geom_abline(intercept = 10, slope = 1) + 
+  geom_abline(intercept = -10, slope = 1) + 
+  scale_color_brewer(palette = "Paired")
+```
+
+
+
+
+# Example 2: hats
+
+10 people are at a party, and all of them are wearing hats. They each place their hat in a pile; when they leave, they choose a hat at random. What is the probability at least one person selected the correct hat?
+
+## Step 1: representing the hats
+
+```{r}
+hats <- c(1:10)
+hats
+```
+
+## Step 2: everyone draws a hat
+
+```{r}
+set.seed(47)
+random_hats <- sample(hats, size = 10, replace = FALSE)
+
+hats
+random_hats
+```
+
+## Step 3: who got their original hat?
+
+```{r}
+hats == random_hats
+
+# TRUE is 1, FALSE is 0
+sum(hats == random_hats)
+
+# did at least one person get their hat?
+sum(hats == random_hats) > 0
+```
+
+## Code so far
+
+```{r}
+set.seed(47)
+hats <- c(1:10)
+random_hats <- sample(hats, size = 10, replace = FALSE)
+sum(hats == random_hats) > 0
+```
+
+* Do we have a good estimate of the probability of interest?
+
+## Function
+
+* remove the magic number `10`
+
+```{r}
+hat_match <- function(n){
+  hats <- c(1:n)
+  random_hats <- sample(hats, size = n, replace = FALSE)
+  sum(hats == random_hats) > 0
+}
+
+hat_match(10)
+hat_match(47)
+```
+
+## Iterate
+
+```{r}
+map_lgl(c(1:10), ~hat_match(n = 10))
+
+map_lgl(c(1:10), ~hat_match(n = 10)) |> 
+  mean()
+```
+
+## Reproducible
+
+```{r}
+set.seed(4747)
+num_iter <- 10000
+
+map_lgl(c(1:num_iter), ~hat_match(n = 10)) |> 
+  mean()
+```
+
+```{r}
+set.seed(123)
+num_iter <- 10000
+
+map_lgl(c(1:num_iter), ~hat_match(n = 10)) |> 
+  mean()
+```
+
+## Vary number of hats
+
+```{r}
+hat_match_prob <- function(n, reps){
+  prob <- map_lgl(c(1:reps), ~hat_match(n = n)) |> 
+    mean()
+  return(data.frame(match_prob = prob, num_hats = n))
+}
+
+hat_match_prob(47, 200)
+```
+
+## Vary number of hats
+
+```{r}
+hat_match_prob <- function(n, reps){
+  prob <- map_lgl(c(1:reps), ~hat_match(n = n)) |> 
+    mean()
+  return(data.frame(match_prob = prob, num_hats = n))
+}
+
+set.seed(47)
+map(c(1:20), hat_match_prob, reps = num_iter) |> 
+  list_rbind()
+```
+
+
+## Visualizing
+
+```{r}
+set.seed(47)
+num_iter <- 10000
+map(c(1:20), hat_match_prob, reps = num_iter) |> 
+  list_rbind() |> 
+  ggplot(aes(x = num_hats, y = match_prob)) + 
+  geom_line() + 
+  labs(y = "probability of at least one match",
+       x = "number of hats")
+```
+
+
+
+
+
+## Example 3: Birthday Problem
+
+What is the probability that in a room of 28 people, at least 2 of them have the same birthday?
+
+## Step 1: representing the birthdays
+
+```{r}
+set.seed(7474)
+class_birthdays <- sample(c(1:365), size = 28, replace = TRUE)
+class_birthdays 
+```
+
+## Step 2: any duplicates?
+
+```{r}
+duplicated(class_birthdays)
+sum(duplicated(class_birthdays))
+```
+
+## Function
+
+```{r}
+class_duplicates <- function(unicorn){
+  class_birthdays <- sample(c(1:365), size = 28, replace = TRUE)
+  num_duplicates <- sum(duplicated(class_birthdays))
+  return(ifelse(num_duplicates > 0, 1, 0))
+}
+
+class_duplicates()
+class_duplicates()
+```
+
+## Iterate
+
+```{r}
+map_dbl(c(1:10), class_duplicates)
+```
+
+## Improve
+
+```{r}
+class_duplicates <- function(class_size){
+  class_birthdays <- sample(c(1:365), size = class_size, replace = TRUE)
+  num_duplicates <- sum(duplicated(class_birthdays))
+  return(ifelse(num_duplicates > 0, 1, 0))
+}
+
+set.seed(47)
+num_stud <- 28
+map_dbl(c(1:10), ~class_duplicates(class_size = num_stud))
+
+```
+
+## Many classrooms
+
+```{r}
+set.seed(47)
+num_stud <- 28
+num_class <- 1000
+map_dbl(c(1:num_class), ~class_duplicates(class_size = num_stud)) |> 
+  mean()
+```
+
+
+## Vary number of students
+
+```{r}
+set.seed(47)
+num_stud_upper <- 28
+num_class <- 100
+
+birth_match_prob <- function(num_stud, reps){
+  prob <- map_dbl(c(1:reps), ~class_duplicates(class_size = num_stud)) |> 
+    mean()
+  return(data.frame(match_prob = prob, num_stud = num_stud))
+}
+
+map(c(1:num_stud_upper), birth_match_prob, reps = num_class) |> 
+  list_rbind()
+
+```
+
+
+## Visualize
+
+```{r}
+set.seed(123)
+num_stud_upper <- 40
+num_class <- 1000
+
+map(c(1:num_stud_upper), birth_match_prob, reps = num_class) |> 
+  list_rbind()  |> 
+  ggplot(aes(x = num_stud, y = match_prob)) + 
+  geom_line() + 
+  labs(y = "probability of birthday match",
+       x = "number of students in class")
+```
+
+
+
+# Good simulation practice
+
+* avoid magic numbers
+* set a seed for reproducibility
+* use meaningful names
+* add comments
+
+
+# Agenda  10/22/25
+
+1. Simulating for model sensitivity
+
+
+## Simulate to...
+
+
+* [... estimate probabilities (easier than calculus)]{.semi-transparent}.
+* ... understand complicated models.
+
+
+## Bias in a model
+
+Population:
+
+```
+talent ~ Normal (100, 15)
+grades ~ Normal (talent, 15)
+SAT ~ Normal (talent, 15)
+```
+
+
+The example is taken directly (and mostly verbatim) from a blog by Aaron Roth [Algorithmic Unfairness Without Any Bias Baked In](http://aaronsadventures.blogspot.com/2019/01/discussion-of-unfairness-in-machine.html).  
+
+
+## Goal for admitting students
+
+College wants to admit students with 
+
+> `talent > 115` 
+
+... but they only have access to `grades` and `SAT` which are noisy estimates of `talent`.
+
+
+## Plan for accepting students
+
+* Run a regression on a training dataset (`talent` is known for existing students)
+* Find a model which predicts `talent` based on `grades` and `SAT`
+* Choose students for whom predicted `talent` is above 115
+
+
+##  Flaw in the plan ...
+
+* there are two populations of students, the Reds and Blues. 
+* Reds are the majority population (99%), and Blues are a small minority population (1%) 
+* the Reds and the Blues are no different when it comes to talent: they both have the same talent distribution, as described above. 
+* there is no bias baked into the grading or the exams: both the Reds and the Blues also have exactly the same grade and exam score distributions
+
+## What is really different?
+
+> But there is one difference: the Blues have more money than the Reds, so they each take the **SAT twice**, and report only the highest of the two scores to the college. This results in a small but noticeable bump in their average SAT scores, compared to the Reds.
+
+
+
+##  Key aspect:
+
+> The value of `SAT` means something different for the Reds versus the Blues
+
+(They have different feature distributions.)
+
+
+##  Let's see what happens ...
+
+```{r echo=FALSE}
+set.seed(470)
+n_obs <- 100000
+n.red <- n_obs*0.99
+n.blue <- n_obs*0.01
+reds <- rnorm(n.red, mean = 100, sd = 15)
+blues <- rnorm(n.blue, mean = 100, sd = 15)
+
+red.sat <- reds + rnorm(n.red, mean = 0, sd = 15)
+blue.sat <- blues + 
+    pmax(rnorm(n.blue, mean = 0, sd = 15),
+         rnorm(n.blue, mean = 0, sd = 15))
+
+red.grade <- reds + rnorm(n.red, mean = 0, sd = 15)
+blue.grade <- blues + rnorm(n.blue, mean = 0, sd = 15)
+
+college.data <- data.frame(talent = c(reds, blues),
+                           SAT = c(red.sat, blue.sat),
+                           grades = c(red.grade, blue.grade),
+                           color = c(rep("red", n.red), rep("blue", n.blue)))
+
+ggplot(college.data, aes(x = grades, y = SAT, color = color)) +
+  geom_point(size = 0.5) +
+  scale_color_identity(name = "Color Group",
+                       guide = "legend") +
+  geom_abline(intercept = 0, slope = 1)
+  
+```
+
+
+## Two models:
+
+```{r echo = FALSE}
+red.lm = college.data |>
+  dplyr::filter(color == "red") %>%
+  lm(talent ~ SAT + grades, data = .)
+
+blue.lm = college.data |>
+  dplyr::filter(color == "blue") %>%
+  lm(talent ~ SAT + grades, data = .)
+```
+
+Red model (SAT taken once):
+```{r echo = FALSE}
+red.lm |> broom::tidy()
+```
+Blue model (SAT is max score of two):
+```{r echo = FALSE}
+blue.lm |> broom::tidy()
+```
+
+
+
+## New data
+
+* Generate new data, use the **two** models separately. 
+
+* Can the models predict if a student has `talent` > 115?
+
+```{r echo=FALSE}
+set.seed(4747)
+new.reds <- rnorm(n.red, mean = 100, sd = 15)
+new.blues <- rnorm(n.blue, mean = 100, sd = 15)
+
+new.red.sat <- new.reds + rnorm(n.red, mean = 0, sd = 15)
+new.blue.sat <- new.blues + 
+    pmax(rnorm(n.blue, mean = 0, sd = 15),
+         rnorm(n.blue, mean = 0, sd = 15))
+
+new.red.grade <- new.reds + rnorm(n.red, mean = 0, sd = 15)
+new.blue.grade <- new.blues + rnorm(n.blue, mean = 0, sd = 15)
+
+new.college.data <- data.frame(talent = c(new.reds, new.blues),
+                           SAT = c(new.red.sat, new.blue.sat),
+                           grades = c(new.red.grade, new.blue.grade),
+                           color = c(rep("red", n.red), rep("blue", n.blue)))
+
+
+new.red.pred <- new.college.data |>
+  filter(color == "red") %>%
+  predict.lm(red.lm, newdata = .)
+
+new.blue.pred <- new.college.data |>
+  filter(color == "blue") %>%
+  predict.lm(blue.lm, newdata = .)
+
+new.college.data <- new.college.data |> 
+  cbind(predicted = c(new.red.pred, new.blue.pred))
+
+ggplot(new.college.data, aes(x = talent, y = predicted, color = color)) + 
+  geom_point(size = 0.5) + 
+  geom_hline(yintercept = 115) + 
+  geom_vline(xintercept = 115) +
+  scale_color_identity(name = "Color Group",
+                       guide = "legend")
+```
+
+
+
+## New data
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE}
+ggplot(new.college.data, aes(x = talent, y = predicted, color = color)) + 
+  geom_point(size = 0.5) + 
+  geom_hline(yintercept = 115) + 
+  geom_vline(xintercept = 115) +
+  scale_color_identity(name = "Color Group",
+                       guide = "legend")
+```
+:::
+
+
+::: {.column width=50%}
+```{r echo=FALSE}
+new.college.data <- new.college.data |> 
+  mutate(fp = ifelse(talent < 115 & predicted > 115, 1, 0),
+         tp = ifelse(talent > 115 & predicted > 115, 1, 0),
+         fn = ifelse(talent > 115 & predicted < 115, 1, 0),
+         tn = ifelse(talent < 115 & predicted < 115, 1, 0))
+
+error.rates <- new.college.data |> group_by(color) |>
+  summarize(tpr = sum(tp) / (sum(tp) + sum(fn)),
+            fpr = sum(fp) / (sum(fp) + sum(tn)),
+            fnr = sum(fn) / (sum(fn) + sum(tp)),
+            #fdr = sum(fp) / (sum(fp) + sum(tp)),
+            error = (sum(fp) + sum(fn)) / (sum(fp) + sum(tp) + sum(fn) + sum(tn) ))
+
+error.rates
+```
+:::
+
+::::
+
+
+
+## **TWO** models doesn't seem right????
+
+What if we fit only one model to the entire dataset?
+
+After all, there are laws against using protected classes to make decisions (housing, jobs, money loans, college, etc.)
+
+```{r echo = FALSE}
+global.lm = college.data %>%
+  lm(talent ~ SAT + grades, data = .)
+
+global.lm |> broom::tidy()
+```
+
+(The coefficients kinda look like the red model...)
+
+
+## How do the error rates change?
+
+:::: {.columns}
+
+::: {.column width=50%}
+```{r echo=FALSE}
+new.pred <- new.college.data %>%
+  predict.lm(global.lm, newdata = .)
+
+new.college.data <- new.college.data |> 
+  cbind(global.predicted = new.pred)
+
+ggplot(new.college.data, aes(x = talent, 
+                             y = global.predicted, 
+                             color = color)) + 
+  geom_point(size = 0.5) + 
+  geom_hline(yintercept = 115) + 
+  geom_vline(xintercept = 115) +
+  scale_color_identity(name = "Color Group",
+                       guide = "legend")
+```
+:::
+
+::: {.column width=50%}
+One model:
+```{r echo = FALSE}
+new.college.data.glb <- new.college.data |> 
+  mutate(fp = ifelse(talent < 115 & global.predicted > 115, 1, 0),
+         tp = ifelse(talent > 115 & global.predicted > 115, 1, 0),
+         fn = ifelse(talent > 115 & global.predicted < 115, 1, 0),
+         tn = ifelse(talent < 115 & global.predicted < 115, 1, 0))
+
+error.rates <- new.college.data.glb |> group_by(color) |>
+  summarize(tpr = sum(tp) / (sum(tp) + sum(fn)),
+            fpr = sum(fp) / (sum(fp) + sum(tn)),
+            fnr = sum(fn) / (sum(fn) + sum(tp)),
+            #fdr = sum(fp) / (sum(fp) + sum(tp)),
+            error = (sum(fp) + sum(fn)) / (sum(fp) + sum(tp) + sum(fn) + sum(tn) ))
+
+error.rates
+```
+
+Two separate models:
+```{r echo = FALSE}
+new.college.data.2mod <- new.college.data |> 
+  mutate(fp = ifelse(talent < 115 & predicted > 115, 1, 0),
+         tp = ifelse(talent > 115 & predicted > 115, 1, 0),
+         fn = ifelse(talent > 115 & predicted < 115, 1, 0),
+         tn = ifelse(talent < 115 & predicted < 115, 1, 0))
+
+error.rates <- new.college.data.2mod |> group_by(color) |>
+  summarize(tpr = sum(tp) / (sum(tp) + sum(fn)),
+            fpr = sum(fp) / (sum(fp) + sum(tn)),
+            fnr = sum(fn) / (sum(fn) + sum(tp)),
+            #fdr = sum(fp) / (sum(fp) + sum(tp)),
+            error = (sum(fp) + sum(fn)) / (sum(fp) + sum(tp) + sum(fn) + sum(tn) ))
+
+error.rates
+```
+:::
+::::
+
+##  What did we learn?
+
+> with two populations that have different feature distributions, learning a single classifier (that is prohibited from discriminating based on population) will fit the bigger of the two populations
+
+* depending on the nature of the distribution difference, it can be either to the benefit or the detriment of the minority population
+
+* no explicit human bias, either on the part of the algorithm designer or the data gathering process
+
+* the problem is exacerbated if we artificially force the algorithm to be group blind
+
+* well-intentioned "fairness" regulations prohibiting decision makers form taking sensitive attributes into account can actually make things less fair and less accurate at the same time
+
+## Simulate?
+
+* different varying proportions
+* effect due to variability
+* effect due to SAT coefficient
+* different number of times the blues get to take the test
+* etc.
+
+
+# Asset allocation 
+
+* repeatedly run a model on a simulated outcome based on varying inputs
+* inputs are uncertain and variable.
+* output is a large set of results, creating a distribution of outcomes rather than a single point estimate.
+* easy to change the conditions of the models by varying the distribution type or properties of the inputs.
+
+
+Taken from [Risk Analysis Using Monte Carlo Simulations in R](https://www.pluralsight.com/resources/blog/guides/risk-analysis-using-monte-carlo-simulations-in-r). 
+
+
+## Aside: `rnorm()`
+
+`rnorm()` calculates random normal values
+
+```{r}
+rnorm(3)
+rnorm(3, mean = 0, sd = 1)
+
+rnorm(4, mean = 47, sd = 5)
+```
+
+
+
+## Asset allocation 
+
+Task: to model an asset allocation problem where you decide what portion of wealth should be allocated to risk-free investment or high-risk investment
+
+* the function calculates returns based on different asset allocations.
+
+```{r}
+calculate_return <- function(step, alpha) {
+  risk_free_rate <- 1.03
+  risky_rate <- rnorm(1, mean = 0, sd = 1) * 0.05 + 1
+  return(data.frame(step = step, 
+                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))
+}
+
+calculate_return("unicorn", 0.47)
+```
+
+## Let alpha = 0.5
+
+(half risky, half risk free)
+
+```{r}
+decision_steps <- 12
+
+pmap(data.frame(step = c(1:decision_steps),
+                alpha = rep(0.5, decision_steps)),
+     calculate_return) |> 
+  list_rbind()
+
+```
+
+
+## Many runs
+
+```{r}
+runs <- 10
+decision_steps <- 12
+
+run_func <- function(run, steps, alpha){
+  pmap(data.frame(step = c(1:steps),
+                  alpha = rep(alpha, steps)),
+       calculate_return) |> 
+    list_rbind() |> 
+    cbind(run_number = as.factor(run))
+}
+
+run_func("happy", 12, 0.5)
+
+map(c(1:runs), run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind()
+```
+
+
+## Cummulative product
+
+```{r}
+numbers <- sample(1:5)
+numbers
+
+cumprod(numbers)
+```
+
+
+## Cummulative rates
+
+```{r}
+map(c(1:runs), run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return))
+```
+
+
+## Returns over time
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+
+runs <- 20
+map(c(1:runs), run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+
+## code
+
+```{r}
+#| eval: false
+
+runs <- 20
+map(c(1:runs), run_func, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+:::
+
+## Change the allocation
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+runs <- 20
+map(c(1:runs), run_func, 
+    steps = decision_steps, 
+    alpha = 0.1) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.1")
+```
+
+## code
+
+```{r}
+#| eval: false
+runs <- 20
+map(c(1:runs), run_func, 
+    steps = decision_steps, 
+    alpha = 0.1) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.1")
+```
+
+:::
+
+## Change the allocation
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+
+runs <- 20
+map(c(1:runs), run_func, 
+    steps = decision_steps, 
+    alpha = 0.9) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.9")
+```
+
+## code
+
+```{r}
+#| eval: false
+
+runs <- 20
+map(c(1:runs), run_func, 
+    steps = decision_steps, 
+    alpha = 0.9) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.9")
+```
+
+:::
+
+
+## Change the return
+
+::: {.panel-tabset}
+
+## calculate return
+```{r}
+#| code-line-numbers: "3"
+calculate_return_sd10 <- function(step, alpha) {
+  risk_free_rate <- 1.03
+  risky_rate <- rnorm(1, mean = 0, sd = 10) * 0.05 + 1
+  return(data.frame(step = step, 
+                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))
+}
+
+calculate_return("unicorn", 0.47)
+```
+
+
+## run function
+
+```{r}
+#| code-line-numbers: "4"
+run_func_sd10 <- function(run, steps, alpha){
+  pmap(data.frame(step = c(1:steps),
+                  alpha = rep(alpha, steps)),
+       calculate_return_sd10) |> 
+    list_rbind() |> 
+    cbind(run_number = as.factor(run))
+}
+```
+
+:::
+
+
+## Does the change impact long-term?
+
+::: {.panel-tabset}
+
+## graph
+
+```{r}
+#| echo: false
+#| code-line-numbers: "2"
+runs <- 20
+map(c(1:runs), run_func_sd10, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+## code
+```{r}
+#| eval: false
+#| code-line-numbers: "2"
+runs <- 20
+map(c(1:runs), run_func_sd10, 
+    steps = decision_steps,
+    alpha = 0.5) |> 
+  list_rbind() |> 
+  group_by(run_number) |> 
+  mutate(compound_return = cumprod(return)) |> 
+  ggplot(aes(x = step, y = compound_return)) +
+  geom_line(aes(color = run_number)) +
+  theme(legend.position = "none") +
+  scale_x_continuous(breaks = seq(1,12)) + 
+  labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
+```
+
+:::
+
+
+## References
+
+
