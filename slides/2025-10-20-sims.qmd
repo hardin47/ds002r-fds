@@ -818,7 +818,7 @@ calculate_return <- function(step, alpha) {
   risk_free_rate <- 1.03
   risky_rate <- rnorm(1, mean = 0, sd = 1) * 0.05 + 1
   return(data.frame(step = step, 
-                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))
+                    return_rate = (1 - alpha) * risk_free_rate + alpha * risky_rate))
 }
 
 calculate_return("unicorn", 0.47)
@@ -880,7 +880,7 @@ map(c(1:runs), run_func,
     alpha = 0.5) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return))
+  mutate(compound_return = cumprod(return_rate))
 ```
 
 
@@ -899,7 +899,7 @@ map(c(1:runs), run_func,
     alpha = 0.5) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
@@ -919,7 +919,7 @@ map(c(1:runs), run_func,
     alpha = 0.5) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
@@ -943,7 +943,7 @@ map(c(1:runs), run_func,
     alpha = 0.1) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
@@ -961,7 +961,7 @@ map(c(1:runs), run_func,
     alpha = 0.1) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
@@ -986,7 +986,7 @@ map(c(1:runs), run_func,
     alpha = 0.9) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
@@ -1005,7 +1005,7 @@ map(c(1:runs), run_func,
     alpha = 0.9) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
@@ -1020,14 +1020,14 @@ map(c(1:runs), run_func,
 
 ::: {.panel-tabset}
 
-## calculate return
+## calculate return rate
 ```{r}
 #| code-line-numbers: "3"
 calculate_return_sd10 <- function(step, alpha) {
   risk_free_rate <- 1.03
   risky_rate <- rnorm(1, mean = 0, sd = 10) * 0.05 + 1
   return(data.frame(step = step, 
-                    return = (1 - alpha) * risk_free_rate + alpha * risky_rate))
+                    return_rate = (1 - alpha) * risk_free_rate + alpha * risky_rate))
 }
 
 calculate_return("unicorn", 0.47)
@@ -1065,7 +1065,7 @@ map(c(1:runs), run_func_sd10,
     alpha = 0.5) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
@@ -1083,7 +1083,7 @@ map(c(1:runs), run_func_sd10,
     alpha = 0.5) |> 
   list_rbind() |> 
   group_by(run_number) |> 
-  mutate(compound_return = cumprod(return)) |> 
+  mutate(compound_return = cumprod(return_rate)) |> 
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
   theme(legend.position = "none") +
