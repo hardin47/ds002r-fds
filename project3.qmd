@@ -39,5 +39,5 @@ Logistics:
 
 ### Timeline
 
-Project 3 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 29, 2025**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 3 must be submitted on Canvas (not Gradescope) by **11:59 PM on Thursday October 30, 2025**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
 
