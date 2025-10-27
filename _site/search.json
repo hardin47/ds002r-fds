@@ -5184,7 +5184,7 @@
     "href": "slides/2025-10-27-perm.html#statistics-without-the-agonizing-pain",
     "title": "Permutation Tests",
     "section": "Statistics Without the Agonizing Pain",
-    "text": "Statistics Without the Agonizing Pain\n\n\n\n\n\nJohn Rauser of Pintrest (now Amazon), speaking at Strata + Hadoop 2014. https://blog.revolutionanalytics.com/2014/10/statistics-doesnt-have-to-be-that-hard.html"
+    "text": "Statistics Without the Agonizing Pain\n\nJohn Rauser of Pintrest (now Amazon), speaking at Strata + Hadoop 2014. https://blog.revolutionanalytics.com/2014/10/statistics-doesnt-have-to-be-that-hard.html"
   },
   {
     "objectID": "slides/2025-10-27-perm.html#logic-of-hypothesis-tests",
@@ -5710,5 +5710,12 @@
     "title": "Simulations",
     "section": "Data Conclusions",
     "text": "Data Conclusions\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-10-27-perm.html#references",
+    "href": "slides/2025-10-27-perm.html#references",
+    "title": "Permutation Tests",
+    "section": "References",
+    "text": "References\n\n\n\n\nHamlin, J. Kiley, Karen Wynn, and Paul Bloom. 2007. “Social Evaluation by Preverbal Infants.” Nature 450: 557–59."
   }
 ]
