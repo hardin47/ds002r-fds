@@ -1,0 +1,281 @@
+---
+title: "Ethics in Data Science"
+author: "Jo Hardin"
+subtitle: "October 29, 2025"
+format: 
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+    embed-resources: true
+    html-math-method: mathjax
+execute:
+  echo: true
+  warning: false
+  message: false
+bibliography: 
+  - ../book.bib
+--- 
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(purrr)
+options(pillar.width = 70)
+```
+
+
+# Agenda  10/29/25
+1. Ethics in Data Viz
+2. Principles
+3. Examples
+
+n.b., the majority of examples are taken from @MDSR which I <a href = "https://mdsr-book.github.io/mdsr3e/08-ethics.html" target = "_blank">encourage you to read</a>!
+
+# Data Viz
+
+There are so many ways to use graphics to mislead your reader. 
+
+## Stand Your Ground
+
+```{r}
+#| fig.cap: "Reproduction of a data graphic reporting the number of gun deaths in Florida over time. The original image was published by Reuters.  [@MDSR]"
+#| out-width: '100%'
+#| fig-align: 'center'
+#| echo: FALSE
+knitr::include_graphics("../images/FLguns.jpg")
+```
+
+## Climate
+
+```{r fig.cap = "A tweet by *National Review* on December 14, 2015 showing the change in global temperature over time.  [@MDSR]", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/climate.jpg")
+```
+
+## GA COVID-19 confirmed cases
+
+```{r fig.cap = "May 10, 2020, Georgia Department of Health, COVID-19 cases for 5 counties across time. https://dph.georgia.gov/covid-19-daily-status-report", out.width='90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/GAcovid.jpg")
+```
+
+```{r fig.cap = "May 17, 2020, Georgia Department of Health, COVID-19 cases for 5 counties across time. https://dph.georgia.gov/covid-19-daily-status-report", out.width='90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/GAcovid2.jpg")
+```
+
+
+## GA COVID-19 cases per 100K
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{r}
+#| fig-cap: "July 2, 2020, Georgia Department of Health, COVID-19 cases per 100K"
+#| fig-align: 'center'
+#| echo: false
+knitr::include_graphics("../images/GAheatmap1.jpeg")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig-cap: "July 17, 2020, https://dph.georgia.gov/covid-19-daily-status-report"
+#| fig-align: 'center'
+#| echo: false
+knitr::include_graphics("../images/GAheatmap2.jpeg")
+```
+:::
+::::
+
+
+## Examples
+
+It is impossible to predict every ethical quandary that a data scientist might face.
+
+Instead, we tour some examples which help us think carefully about a set of guiding principles.
+
+## Predicting Sexuality
+
+@wang2018 used a deep neural network and logistic regression to build a classifier for sexual orientation based on pictures of people's faces. The authors claim that if given five images of a person's face, their model would correctly predict the sexual orientation of 91% of men and 83% of women. The authors highlight the potential harm that their work could do in their abstract:
+
+> Additionally, given that companies and governments are increasingly using computer vision algorithms to detect people's intimate traits, our findings expose a threat to the privacy and safety of gay men and women.
+
+A subsequent <a href = "https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data" target = "_blank">article in The New Yorker</a> also notes that:
+
+> the study consisted entirely of white faces, but only because the dating site had served up too few faces of color to provide for meaningful analysis.
+
+Was the research ethical? Were the authors justified in creating and publishing this model?
+
+## Predicting race
+
+Consider a racial prediction algorithm including published software for the classier under an open-source license as the R package **wru** [@imai2016]. (Trained using <a href = "https://www.census.gov/topics/population/genealogy/data.html" target = "_blank">US Census Surname Data</a>.)
+
+The main function `predict_race()` returns predicted probabilities for a person's race based on either their last name alone, or their last name and their address.
+
+```{r}
+library(tidyverse)
+library(wru)
+predict_race(voter.file = voters, surname.only = TRUE) |>
+  select(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth)
+```
+
+
+Given the long history of <a href = "https://en.wikipedia.org/wiki/Institutional_racism" target = "_blank">systemic racism</a> in the <a href = "https://en.wikipedia.org/wiki/Institutional_racism_in_the_United_States" target = "_blank">United States</a>, it is clear how this software could be used to discriminate against people of color. 
+
+What if we partnered with a progressive voting rights organization that wanted to use racial prediction to target members of a particular ethnic group to help them register to vote?
+
+Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?
+
+## Data scraping
+
+"The OkCupid data set: A very large public data set of dating site users" [@kirkegaard2016]:
+
+* 2,620 variables
+* including usernames, gender, and dating preferences
+* 68,371 people scraped from the OkCupid dating website
+
+The data scraping did not involve any illicit technology such as breaking passwords. Nonetheless, the author received many challenges to the work as an ethical breach and accusing him of doxing people by releasing personal data.
+
+Does the work raise ethical issues?
+
+
+## Reproducible spreadsheet
+
+"Growth in a Time of Debt" [@reinhart2010] argued that countries which pursued austerity measures did not necessarily suffer from slow economic growth. 
+
+<a href = "https://en.wikipedia.org/wiki/Thomas_Herndon" target = "_blank">Thomas Herndon</a> requested access to the data and analysis contained in the paper. After receiving the original spreadsheet from Reinhart, Herndon found several errors.
+
+> I clicked on cell L51, and saw that they had only averaged rows 30 through 44, instead of rows 30 through 49.” —Thomas Herndon [@roose2013]
+
+In a critique of the paper, @herndon2013 point out coding errors, selective inclusion of data, and odd weighting of summary statistics that shaped the conclusions of @reinhart2010.
+
+What ethical questions does publishing a flawed analysis raise?
+
+
+# Principles
+
+Ethical guidelines for data science are given in the <a href = "https://datapractices.org/manifesto/" target = "_blank">Data Values and Principles manifesto</a> published by <a href = "DataPractices.org" target = "_blank">DataPractices.org</a>.
+
+It includes four values (inclusion, experimentation, accountability, and impact) and 12 principles that provide a guide for the ethical practice of data science.
+
+## 12 principles
+
+As data teams, we aim to...
+
+1. Use data to improve life for our users, customers, organizations, and communities.
+
+2. Create reproducible and extensible work.
+
+3. Build teams with diverse ideas, backgrounds, and strengths.
+
+4. Prioritize the continuous collection and availability of discussions and metadata.
+
+5. Clearly identify the questions and objectives that drive each project and use to guide both planning and refinement.
+
+6. Be open to changing our methods and conclusions in response to new knowledge.
+
+7. Recognize and mitigate bias in ourselves and in the data we use.
+
+8. Present our work in ways that empower others to make better-informed decisions.
+
+9. Consider carefully the ethical implications of choices we make when using data, and the impacts of our work on individuals and society.
+
+10. Respect and invite fair criticism while promoting the identification and open discussion of errors, risks, and unintended consequences of our work.
+
+11. Protect the privacy and security of individuals represented in our data.
+
+12. Help others to understand the most useful and appropriate applications of data to solve real-world problems.
+
+
+## Principles in action
+
+To think clearly about ethics, we need to apply principles directly to the examples...
+
+## Predicting sexuality
+
+* principle 1: Does the prediction of sexual orientation based on facial recognition improve life for communities? 
+
+* principle 9: As noted in the abstract, the researchers did consider the ethical implications of their work, 
+
+* principle 11: but did they protect the privacy and security of the individuals presented in their data? 
+
+* principle 7: The exclusion of non-white faces from the study casts doubt on whether the authors recognized their own biases.
+
+
+## Predicting race
+
+
+* using this software to discriminate against historically marginalized people would violate some combination of principles 3, 7, and 9. 
+
+* is it ethical to use this software to try and help underrepresented groups if those same principles are not violated? 
+
+* The authors of the **wru** package admirably met principle 2, but they may not have fully adhered to principle 9.
+
+## Data scraping
+
+stakeholders: OKCupid users (principles 1, 9, 11)
+
+  * research involving humans requires that the human not be exposed to any risk for which consent has not been explicitly given. The OkCupid members did not provide such consent.
+  * the data contain information that makes it possible to identify individual humans, there is a realistic risk of the release of potentially embarrassing information, or worse, information that jeopardizes the physical safety of certain users. 
+  
+stakeholders: OKCupid itself (principle 4)
+
+  * were the terms of agreement (set by OKCupid) violated?
+
+## Reproducible spreadsheet
+
+* principle 10 was met: Reinhart and Rogoff shared their work when it was challenged
+
+* principle 2 is violated: Microsoft Excel, the tool used by Reinhart and Rogoff, is an unfortunate choice because it mixes the data with the analysis.
+
+## Your role
+
+#### Individual control:
+  * 2. create reproducible and extensible work
+  * 5. Clearly identify the questions and objectives that drive each project and use to guide both planning and refinement.
+  * 6. Be open to changing our methods and conclusions in response to new knowledge.
+  * 8. Present our work in ways that empower others to make better-informed decisions.
+  
+  
+#### Institutional control:
+  * 3. Build teams with diverse ideas, backgrounds, and strengths.
+  * 11. Protect the privacy and security of individuals represented in our data.
+
+
+# Algorithms
+
+
+1. disparate treatment $\rightarrow$ means that the differential treatment is intentional
+
+2. disparate impact $\rightarrow$ means that the differential treatment is unintentional or implicit (some examples include advancing mortgage credit, employment selection, predictive policing)
+
+
+## COMPAS
+
+```{r fig.cap = "Dylan Fugett had three subsequent arrests for drug possession.  Bernard Parker had no subsequent offenses.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/recid1.jpg")
+```
+
+
+## COMPAS
+
+| DYLAN FUGETT 	| BERNARD PARKER 	|
+|----------------------	|-------------------------------------	|
+| Prior Offense 	| Prior Offense 	|
+| 1 attempted burglary 	| 1 resisting arrest without violence 	|
+| LOW RISK - 3 	| HIGH RISK - 10 	|
+| Subsequent Offenses 	| Subsequent Offenses 	|
+| 3 drug possessions 	| None 	|
+
+
+## COMPAS
+
+```{r fig.cap = "False positive and false negative rates broken down by race.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../images/recid2.jpg")
+```
+
+
+
+
+## References
+

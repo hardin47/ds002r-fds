@@ -102,7 +102,7 @@ schedule <- tribble(
 
   
      "Week 10 <br> 10.27.25", 'permutation tests', 
- '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/13-permutation-tests.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-27-perm.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-29-ethics.html" target = "_blank">Data Science Ethics</a>',
+ '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/13-permutation-tests.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-27-perm.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-10-29-ethics.html" target = "_blank">Data Science Ethics</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws13_ds2_f25_helper.pdf" target = "_blank">WS 13 - helper vs. hinderer</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws14_ds2_f25_ethics.pdf" target = "_blank">WS 14 - ethical considerations</a>',
   '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 10.30.25 (<b>Thursday!</b>)',
   ' ',
   

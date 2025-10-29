@@ -2440,7 +2440,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\nsimulations\n  MDSR Simulations   Simulations   Simulations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics\n Project 3 - due 10.29.25\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\nsimulations\n  MDSR Simulations   Simulations   Simulations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics   WS 13 - helper vs. hinderer   WS 14 - ethical considerations\n Project 3 - due 10.30.25 (Thursday!)\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "slides/2025-04-30-shiny.html#examples",
@@ -5717,5 +5717,145 @@
     "title": "Permutation Tests",
     "section": "References",
     "text": "References\n\n\n\n\nHamlin, J. Kiley, Karen Wynn, and Paul Bloom. 2007. “Social Evaluation by Preverbal Infants.” Nature 450: 557–59."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#stand-your-ground",
+    "href": "slides/2025-10-29-ethics.html#stand-your-ground",
+    "title": "Ethics in Data Science",
+    "section": "Stand Your Ground",
+    "text": "Stand Your Ground\n\nReproduction of a data graphic reporting the number of gun deaths in Florida over time. The original image was published by Reuters. (Baumer, Kaplan, and Horton 2021)"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#climate",
+    "href": "slides/2025-10-29-ethics.html#climate",
+    "title": "Ethics in Data Science",
+    "section": "Climate",
+    "text": "Climate\n\nA tweet by National Review on December 14, 2015 showing the change in global temperature over time. (Baumer, Kaplan, and Horton 2021)"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#ga-covid-19-confirmed-cases",
+    "href": "slides/2025-10-29-ethics.html#ga-covid-19-confirmed-cases",
+    "title": "Ethics in Data Science",
+    "section": "GA COVID-19 confirmed cases",
+    "text": "GA COVID-19 confirmed cases\n\n\n\n\n\nMay 10, 2020, Georgia Department of Health, COVID-19 cases for 5 counties across time. https://dph.georgia.gov/covid-19-daily-status-report\n\n\n\n\n\n\n\n\n\nMay 17, 2020, Georgia Department of Health, COVID-19 cases for 5 counties across time. https://dph.georgia.gov/covid-19-daily-status-report"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#ga-covid-19-cases-per-100k",
+    "href": "slides/2025-10-29-ethics.html#ga-covid-19-cases-per-100k",
+    "title": "Ethics in Data Science",
+    "section": "GA COVID-19 cases per 100K",
+    "text": "GA COVID-19 cases per 100K\n\n\n\n\n\n\n\nJuly 2, 2020, Georgia Department of Health, COVID-19 cases per 100K\n\n\n\n\n\n\n\n\n\n\nJuly 17, 2020, https://dph.georgia.gov/covid-19-daily-status-report"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#examples",
+    "href": "slides/2025-10-29-ethics.html#examples",
+    "title": "Ethics in Data Science",
+    "section": "Examples",
+    "text": "Examples\nIt is impossible to predict every ethical quandary that a data scientist might face.\nInstead, we tour some examples which help us think carefully about a set of guiding principles."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#predicting-sexuality",
+    "href": "slides/2025-10-29-ethics.html#predicting-sexuality",
+    "title": "Ethics in Data Science",
+    "section": "Predicting Sexuality",
+    "text": "Predicting Sexuality\nWang and Kosinski (2018) used a deep neural network and logistic regression to build a classifier for sexual orientation based on pictures of people’s faces. The authors claim that if given five images of a person’s face, their model would correctly predict the sexual orientation of 91% of men and 83% of women. The authors highlight the potential harm that their work could do in their abstract:\n\nAdditionally, given that companies and governments are increasingly using computer vision algorithms to detect people’s intimate traits, our findings expose a threat to the privacy and safety of gay men and women.\n\nA subsequent article in The New Yorker also notes that:\n\nthe study consisted entirely of white faces, but only because the dating site had served up too few faces of color to provide for meaningful analysis.\n\nWas the research ethical? Were the authors justified in creating and publishing this model?"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#predicting-race",
+    "href": "slides/2025-10-29-ethics.html#predicting-race",
+    "title": "Ethics in Data Science",
+    "section": "Predicting race",
+    "text": "Predicting race\nConsider a racial prediction algorithm including published software for the classier under an open-source license as the R package wru (Imai and Khanna 2016). (Trained using US Census Surname Data.)\nThe main function predict_race() returns predicted probabilities for a person’s race based on either their last name alone, or their last name and their address.\n\nlibrary(tidyverse)\nlibrary(wru)\npredict_race(voter.file = voters, surname.only = TRUE) |&gt;\n  select(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth)\n\n      surname    pred.whi    pred.bla     pred.his    pred.asi    pred.oth\n1      Khanna 0.045110474 0.003067623 0.0068522723 0.860411906 0.084557725\n2        Imai 0.052645440 0.001334812 0.0558160072 0.719376581 0.170827160\n3      Rivera 0.043285692 0.008204605 0.9136195794 0.024316883 0.010573240\n4     Fifield 0.895405704 0.001911388 0.0337464844 0.011079323 0.057857101\n5        Zhou 0.006572555 0.001298962 0.0005388581 0.982365594 0.009224032\n6    Ratkovic 0.861236727 0.008212824 0.0095395642 0.011334635 0.109676251\n7     Johnson 0.543815322 0.344128607 0.0272403940 0.007405765 0.077409913\n8       Lopez 0.038939877 0.004920643 0.9318797791 0.012154125 0.012105576\n10 Wantchekon 0.330697188 0.194700665 0.4042849478 0.021379541 0.048937658\n9       Morse 0.866360147 0.044429853 0.0246568086 0.010219712 0.054333479\n\n\nGiven the long history of systemic racism in the United States, it is clear how this software could be used to discriminate against people of color.\nWhat if we partnered with a progressive voting rights organization that wanted to use racial prediction to target members of a particular ethnic group to help them register to vote?\nWas the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#data-scraping",
+    "href": "slides/2025-10-29-ethics.html#data-scraping",
+    "title": "Ethics in Data Science",
+    "section": "Data scraping",
+    "text": "Data scraping\n“The OkCupid data set: A very large public data set of dating site users” (Kirkegaard and Bjerrekær 2016):\n\n2,620 variables\nincluding usernames, gender, and dating preferences\n68,371 people scraped from the OkCupid dating website\n\nThe data scraping did not involve any illicit technology such as breaking passwords. Nonetheless, the author received many challenges to the work as an ethical breach and accusing him of doxing people by releasing personal data.\nDoes the work raise ethical issues?"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#reproducible-spreadsheet",
+    "href": "slides/2025-10-29-ethics.html#reproducible-spreadsheet",
+    "title": "Ethics in Data Science",
+    "section": "Reproducible spreadsheet",
+    "text": "Reproducible spreadsheet\n“Growth in a Time of Debt” (Reinhart and Rogoff 2010) argued that countries which pursued austerity measures did not necessarily suffer from slow economic growth.\nThomas Herndon requested access to the data and analysis contained in the paper. After receiving the original spreadsheet from Reinhart, Herndon found several errors.\n\nI clicked on cell L51, and saw that they had only averaged rows 30 through 44, instead of rows 30 through 49.” —Thomas Herndon (Roose 2013)\n\nIn a critique of the paper, Herndon, Ash, and Pollin (2013) point out coding errors, selective inclusion of data, and odd weighting of summary statistics that shaped the conclusions of Reinhart and Rogoff (2010).\nWhat ethical questions does publishing a flawed analysis raise?"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#principles-1",
+    "href": "slides/2025-10-29-ethics.html#principles-1",
+    "title": "Ethics in Data Science",
+    "section": "12 principles",
+    "text": "12 principles\nAs data teams, we aim to…\n\nUse data to improve life for our users, customers, organizations, and communities.\nCreate reproducible and extensible work.\nBuild teams with diverse ideas, backgrounds, and strengths.\nPrioritize the continuous collection and availability of discussions and metadata.\nClearly identify the questions and objectives that drive each project and use to guide both planning and refinement.\nBe open to changing our methods and conclusions in response to new knowledge.\nRecognize and mitigate bias in ourselves and in the data we use.\nPresent our work in ways that empower others to make better-informed decisions.\nConsider carefully the ethical implications of choices we make when using data, and the impacts of our work on individuals and society.\nRespect and invite fair criticism while promoting the identification and open discussion of errors, risks, and unintended consequences of our work.\nProtect the privacy and security of individuals represented in our data.\nHelp others to understand the most useful and appropriate applications of data to solve real-world problems."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#principles-in-action",
+    "href": "slides/2025-10-29-ethics.html#principles-in-action",
+    "title": "Ethics in Data Science",
+    "section": "Principles in action",
+    "text": "Principles in action\nTo think clearly about ethics, we need to apply principles directly to the examples…"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#predicting-sexuality-1",
+    "href": "slides/2025-10-29-ethics.html#predicting-sexuality-1",
+    "title": "Ethics in Data Science",
+    "section": "Predicting sexuality",
+    "text": "Predicting sexuality\n\nprinciple 1: Does the prediction of sexual orientation based on facial recognition improve life for communities?\nprinciple 9: As noted in the abstract, the researchers did consider the ethical implications of their work,\nprinciple 11: but did they protect the privacy and security of the individuals presented in their data?\nprinciple 7: The exclusion of non-white faces from the study casts doubt on whether the authors recognized their own biases."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#predicting-race-1",
+    "href": "slides/2025-10-29-ethics.html#predicting-race-1",
+    "title": "Ethics in Data Science",
+    "section": "Predicting race",
+    "text": "Predicting race\n\nusing this software to discriminate against historically marginalized people would violate some combination of principles 3, 7, and 9.\nis it ethical to use this software to try and help underrepresented groups if those same principles are not violated?\nThe authors of the wru package admirably met principle 2, but they may not have fully adhered to principle 9."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#data-scraping-1",
+    "href": "slides/2025-10-29-ethics.html#data-scraping-1",
+    "title": "Ethics in Data Science",
+    "section": "Data scraping",
+    "text": "Data scraping\nstakeholders: OKCupid users (principles 1, 9, 11)\n\nresearch involving humans requires that the human not be exposed to any risk for which consent has not been explicitly given. The OkCupid members did not provide such consent.\nthe data contain information that makes it possible to identify individual humans, there is a realistic risk of the release of potentially embarrassing information, or worse, information that jeopardizes the physical safety of certain users.\n\nstakeholders: OKCupid itself (principle 4)\n\nwere the terms of agreement (set by OKCupid) violated?"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#reproducible-spreadsheet-1",
+    "href": "slides/2025-10-29-ethics.html#reproducible-spreadsheet-1",
+    "title": "Ethics in Data Science",
+    "section": "Reproducible spreadsheet",
+    "text": "Reproducible spreadsheet\n\nprinciple 10 was met: Reinhart and Rogoff shared their work when it was challenged\nprinciple 2 is violated: Microsoft Excel, the tool used by Reinhart and Rogoff, is an unfortunate choice because it mixes the data with the analysis."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#your-role",
+    "href": "slides/2025-10-29-ethics.html#your-role",
+    "title": "Ethics in Data Science",
+    "section": "Your role",
+    "text": "Your role\nIndividual control:\n\n\ncreate reproducible and extensible work\n\n\nClearly identify the questions and objectives that drive each project and use to guide both planning and refinement.\n\n\nBe open to changing our methods and conclusions in response to new knowledge.\n\n\nPresent our work in ways that empower others to make better-informed decisions.\n\n\nInstitutional control:\n\n\nBuild teams with diverse ideas, backgrounds, and strengths.\n\n\nProtect the privacy and security of individuals represented in our data."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#compas",
+    "href": "slides/2025-10-29-ethics.html#compas",
+    "title": "Ethics in Data Science",
+    "section": "COMPAS",
+    "text": "COMPAS\n\nDylan Fugett had three subsequent arrests for drug possession. Bernard Parker had no subsequent offenses."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#compas-1",
+    "href": "slides/2025-10-29-ethics.html#compas-1",
+    "title": "Ethics in Data Science",
+    "section": "COMPAS",
+    "text": "COMPAS\n\n\n\nDYLAN FUGETT\nBERNARD PARKER\n\n\n\n\nPrior Offense\nPrior Offense\n\n\n1 attempted burglary\n1 resisting arrest without violence\n\n\nLOW RISK - 3\nHIGH RISK - 10\n\n\nSubsequent Offenses\nSubsequent Offenses\n\n\n3 drug possessions\nNone"
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#compas-2",
+    "href": "slides/2025-10-29-ethics.html#compas-2",
+    "title": "Ethics in Data Science",
+    "section": "COMPAS",
+    "text": "COMPAS\n\nFalse positive and false negative rates broken down by race."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#references",
+    "href": "slides/2025-10-29-ethics.html#references",
+    "title": "Ethics in Data Science",
+    "section": "References",
+    "text": "References\n\n\n\n\nBaumer, Ben, Daniel Kaplan, and Nicholas Horton. 2021. Modern Data Science with r. CRC Press. https://mdsr-book.github.io/mdsr2e/.\n\n\nHerndon, Thomas, Michael Ash, and Robert Pollin. 2013. “Does High Public Debt Consistently Stifle Economic Growth? A Critique of Reinhart and Rogo ff.” Working Papers wp322. Political Economy Research Institute, University of Massachusetts at Amherst. https://ideas.repec.org/p/uma/periwp/wp322.html.\n\n\nImai, Kosuke, and Kabir Khanna. 2016. “Improving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Records.” Political Analysis 24 (2): 263–72. https://doi.org/10.1093/pan/mpw001.\n\n\nKirkegaard, Emil O. W., and Julius D. Bjerrekær. 2016. “The OKCupid Dataset: A Very Large Public Dataset of Dating Site Users.” Open Differential Psychology, November. https://doi.org/10.26775/odp.2016.11.03.\n\n\nReinhart, Carmen M, and Kenneth S Rogoff. 2010. “Growth in a Time of Debt.” Working Paper 15639. Working Paper Series. National Bureau of Economic Research. https://doi.org/10.3386/w15639.\n\n\nRoose, Kevin. 2013. “Meet the 28-Year-Old Grad Student Who Just Shook the Global Austerity Movement.” New York Magazine. http://nymag.com/daily/intelligencer/2013/04/grad-student-who-shook-global-austerity-movement.html.\n\n\nWang, Y., and M. Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57."
   }
 ]
