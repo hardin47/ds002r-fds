@@ -2229,6 +2229,28 @@ sum(hats == random_hats) > 0
 
 [^86]: d. A number which (is almost always unknown and) describes a population.
 
+
+---
+
+(@) What does a sampling distribution describe?[^86a]
+    (a) The data
+    (b) The statistic
+    (c) The parameter
+
+[^86a]: b. The statistic
+
+---
+
+(@) In hypothesis testing, why do we need a null sampling distribution?[^86b]
+    (a) To understand the variability of the data
+    (b) To understand the variability of the statistic
+    (c) To understand the variability of the statistic when $H_0$ is true.
+    (d) To understand the variability of the statistic when $H_0$ is false.
+    (e) To understand the variability of the parameter.
+    
+
+[^86b]: c. To understand the variability of the statistic when $H_0$ is true.
+
 ---
 
 (@) To run a two-sample permutation test, should you permute the variable with or without replacement?[^87]
