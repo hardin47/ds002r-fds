@@ -54,7 +54,11 @@ schedule <- tribble(
   
   'Tip 15', 'tab complete', ' ', 'works in Console or in the R chunk',
   
-  'Tip 16', '`usethis::use_github()`', ' ', 'make sure to direct to the correct folder!'
+  'Tip 16', '`usethis::use_github()`', ' ', 'make sure to direct to the correct folder!',
+  
+  'Tip 17', 'cmd + shift + F', 'Find in Files', 'cntrl + shift + F on PC',
+  
+  'Tip 18', 'cmd + click on function name', 'opens a tab with function details', 'cntrl + click on function name on PC'
   
   )
 ```
