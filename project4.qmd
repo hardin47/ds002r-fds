@@ -73,10 +73,12 @@ Project 4 examines ethics and power in the data science context. You will invest
 
 ## Timeline
 
-Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday April 16**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday November 12**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
 
 
 ## Potential examples
+
+(Feel free to find your own example if you prefer.)
 
 * Biobank samples from the Havasupai lawsuit (informed consent, among other things).  Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), <a href = "https://www.researchgate.net/publication/260121496_Protecting_Dignitary_Interests_of_Biobank_Research_Participants_Lessons_from_Havasupai_Tribe_v_Arizona_Board_of_RegentsI" target = "_blank">Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents</a>, Law, Innovation and Technology, 5, 54–84.
 
