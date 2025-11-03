@@ -29,7 +29,7 @@ options(pillar.width = 70)
 
 
 # Agenda  11/03/25
-1. web scraping
+1. HTML / web scraping
 2. css selectors
 3. `rvest`
 
@@ -267,7 +267,7 @@ tsl_opinion_titles
 :::
 :::
 
-# Web scraping
+# HTML / Web scraping
 
 ## Scraping the web: what? why? {.smaller}
 
