@@ -2426,7 +2426,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) How can you tell the difference between an element and an attribute?[^92]
+(@) How can you tell the difference between an element and an attribute (when looking at HTML code)?[^92]
     a. the elements have `.`
     b. the elements have `#`
     c. the elements have `< >`
@@ -2449,7 +2449,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 (@) How do I find all the instances of the `href=` (URL) attribute?[^94]
     a. use selector: `<href>`
-    b. use selector: `href`
+    b. use selector: `.href`
     c. use selector: `#href`
     d. use selector: `[href]`
     e. use selector: `href`

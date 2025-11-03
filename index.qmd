@@ -108,7 +108,7 @@ schedule <- tribble(
   
   
      "Week 11 <br> 11.3.25", 'web scraping', 
- '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-03-webscrape.html" target = "_blank">Web scraping</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws15_ds2_f25_webscrapt.pdf" target = "_blank">WS 15 - web scraping</a>',
+ '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/webscraping" target = "_blank">R4DS Web scraping</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/03-rvest.html" target = "_blank">Web scraping</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-03-webscrape.html" target = "_blank">Web scraping</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws15_ds2_f25_css.pdf" target = "_blank">WS 15 - web scraping</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 6</a> - due 11.5.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 4 11.5.25',
 
   ' ',
