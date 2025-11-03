@@ -2436,7 +2436,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) How do I find all the instances of the `<img>` (image) element?[^93]
+(@) How do I find (using `html_elements()`) all the instances of the `<img>` (image) element?[^93]
     a. use selector: `<img>`
     b. use selector: `.img`
     c. use selector: `#img`
@@ -2447,7 +2447,7 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 ---
 
-(@) How do I find all the instances of the `href=` (URL) attribute?[^94]
+(@) How do I find (using `html_elements()`) all the instances of the `href=` (URL) attribute?[^94]
     a. use selector: `<href>`
     b. use selector: `.href`
     c. use selector: `#href`
