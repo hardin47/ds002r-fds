@@ -28,9 +28,10 @@ options(pillar.width = 70)
 ```
 
 
-# Agenda  11/01/25
+# Agenda  11/03/25
 1. web scraping
-2. `rvest`
+2. css selectors
+3. `rvest`
 
 ## Important tool
 
@@ -136,7 +137,7 @@ tsl_opinion_titles |>
     y = "Word",
     title = "The Student Life - Opinion pieces",
     subtitle = "Common words in the 500 most recent opinion pieces",
-    caption = "Source: Data scraped from The Student Life on April 6, 2025"
+    caption = "Source: Data scraped from The Student Life on November 2, 2025"
   ) +
   theme(
     plot.title.position = "plot",
@@ -206,7 +207,7 @@ tsl_opinion_titles |>
     y = NULL,
     title = "The Student Life - Opinion pieces\nAverage sentiment scores of first paragraph by author",
     subtitle = "Top 10 average positive and negative scores",
-    caption = "Source: Data scraped from The Student Life on April 6, 2025"
+    caption = "Source: Data scraped from The Student Life on November 2, 2025"
   ) +
   theme_void(base_size = 16) +
   theme(
@@ -319,6 +320,12 @@ Much of the data on the web is available as HTML - while it is structured (hiera
 * `<table>`: table
 * `<div>`: a container to group content together
 * `<a>`: the "anchor" element that creates a hyperlink
+
+## HTML attribute
+
+An **attribute** in HTML is a name–value pair that gives extra information about an element. It sits inside the opening tag and modifies the element's behavior, appearance, identity, or data.
+
+Think of the **attribute** as the argument to the **element** (which would be the function in this analogy).
 
 ## rvest {.smaller}
 
