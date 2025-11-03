@@ -510,8 +510,8 @@ html |>  html_element("p") |>  html_text2()
 ```{r}
 html = read_html(
   "<p>  
-    This is the first sentence in the paragraph.
-    This is the second sentence that should be on the same line as the first sentence.<br>This third sentence should start on a new line.
+    First sentence in the paragraph.
+    Second sentence that follows a literal line break. <br>Third sentence will start on a new line in the rendered html, but doesn't have a line break as part of the code.
   </p>"
 )
 ```
@@ -522,6 +522,10 @@ html = read_html(
 html |> html_text()
 html |> html_text2()
 ```
+
+.  .  .
+
+`html_text2()` collapses any white space (including `\n`) into a single space, and turns `<br>` into `\n`.
 
 ## HTML tables with `html_table()` {.smaller}
 
