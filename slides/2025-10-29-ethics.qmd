@@ -134,7 +134,7 @@ Was the publication of this model ethical? Does the open-source nature of the co
 * including usernames, gender, and dating preferences
 * 68,371 people scraped from the OkCupid dating website
 
-The data scraping did not involve any illicit technology such as breaking passwords. Nonetheless, the author received many challenges to the work as an ethical breach and accusing him of doxing people by releasing personal data.
+The data scraping did not involve any illicit technology such as breaking passwords. Nonetheless, the authors received many challenges to the work as an ethical breach and accusing them of doxing people by releasing personal data.
 
 Does the work raise ethical issues?
 
@@ -157,6 +157,17 @@ What ethical questions does publishing a flawed analysis raise?
 Ethical guidelines for data science are given in the <a href = "https://datapractices.org/manifesto/" target = "_blank">Data Values and Principles manifesto</a> published by <a href = "DataPractices.org" target = "_blank">DataPractices.org</a>.
 
 It includes four values (inclusion, experimentation, accountability, and impact) and 12 principles that provide a guide for the ethical practice of data science.
+
+## 4 values
+
+* **Inclusion:** Maximize diversity, connectivity, and accessibility among data projects, collaborators, and outputs.
+
+* **Experimentation:** Emphasize continuously iterative testing and data analysis.
+
+* **Accountability:** Behave ethically and transparently, fix mistakes quickly, and hold ourselves and others accountable.
+
+* **Impact:** Prioritize projects with well-defined goals, and design them to achieve measurable, substantive outcomes.
+
 
 ## 12 principles
 

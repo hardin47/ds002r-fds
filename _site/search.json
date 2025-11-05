@@ -5772,7 +5772,7 @@
     "href": "slides/2025-10-29-ethics.html#data-scraping",
     "title": "Ethics in Data Science",
     "section": "Data scraping",
-    "text": "Data scraping\n“The OkCupid data set: A very large public data set of dating site users” (Kirkegaard and Bjerrekær 2016):\n\n2,620 variables\nincluding usernames, gender, and dating preferences\n68,371 people scraped from the OkCupid dating website\n\nThe data scraping did not involve any illicit technology such as breaking passwords. Nonetheless, the author received many challenges to the work as an ethical breach and accusing him of doxing people by releasing personal data.\nDoes the work raise ethical issues?"
+    "text": "Data scraping\n“The OkCupid data set: A very large public data set of dating site users” (Kirkegaard and Bjerrekær 2016):\n\n2,620 variables\nincluding usernames, gender, and dating preferences\n68,371 people scraped from the OkCupid dating website\n\nThe data scraping did not involve any illicit technology such as breaking passwords. Nonetheless, the authors received many challenges to the work as an ethical breach and accusing them of doxing people by releasing personal data.\nDoes the work raise ethical issues?"
   },
   {
     "objectID": "slides/2025-10-29-ethics.html#reproducible-spreadsheet",
@@ -6151,5 +6151,12 @@
     "title": "Web Scraping",
     "section": "HTML attribute",
     "text": "HTML attribute\nAn attribute in HTML is a name–value pair that gives extra information about an element. It sits inside the opening tag and modifies the element’s behavior, appearance, identity, or data.\nThink of the attribute as the argument to the element (which would be the function in this analogy)."
+  },
+  {
+    "objectID": "slides/2025-10-29-ethics.html#values",
+    "href": "slides/2025-10-29-ethics.html#values",
+    "title": "Ethics in Data Science",
+    "section": "4 values",
+    "text": "4 values\n\nInclusion: Maximize diversity, connectivity, and accessibility among data projects, collaborators, and outputs.\nExperimentation: Emphasize continuously iterative testing and data analysis.\nAccountability: Behave ethically and transparently, fix mistakes quickly, and hold ourselves and others accountable.\nImpact: Prioritize projects with well-defined goals, and design them to achieve measurable, substantive outcomes."
   }
 ]
