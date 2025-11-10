@@ -7,7 +7,7 @@ format: html
 
 For Project 3 you will conduct a small simulation study which does one of the following tasks (you can choose!):
 
-a) conducts a permutation test by simulating behavior under the null hypothesis (you will need to find a dataset and develop a related research question). Please include the full context of the problem. That is, what are the variables and why is testing them interesting?  Include a visualization of the original data / variables of interest so that the reader can sense the extent of difference in the original relationship.
+a) conducts a permutation test by simulating behavior under the null hypothesis (you will need to find a dataset and develop a related research question). Please include the full context of the problem. That is, what are the variables and why is testing them interesting?  Include a visualization of the original data / variables of interest so that the reader can sense the extent of difference in the original relationship. Also include a conlcusion (which will naturally describe the population to which you are inferring).
 
 b) develops a lineup protocol for visual inference, as in <a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1920866#d1e209" target = "_blank">"Bringing Visual Inference to the Classroom"</a>, (you'll need to write the function to do the mapping.  The ggplot part will be straightforward using faceting.).  [That is, you will use a dataset, with a related research question, and test the research question using a series of null plots.]
 
