@@ -315,10 +315,10 @@ Much of the data on the web is available as HTML - while it is structured (hiera
 * `<html>`: start of the HTML page
 * `<head>`: header information (metadata about the page)
 * `<body>`: everything that is on the page
-* `<p>`: paragraphs
+* `<p>`: paragraph
 * `<b>`: bold
 * `<table>`: table
-* `<div>`: a container to group content together
+* `<div>`: a container to group content together ("division") (used to group other HRML elements together)
 * `<a>`: the "anchor" element that creates a hyperlink
 
 ## HTML attribute

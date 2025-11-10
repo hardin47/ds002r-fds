@@ -5961,7 +5961,7 @@
     "href": "slides/2025-11-03-webscrape.html#some-html-elements",
     "title": "Web Scraping",
     "section": "Some HTML elements",
-    "text": "Some HTML elements\n\n&lt;html&gt;: start of the HTML page\n&lt;head&gt;: header information (metadata about the page)\n&lt;body&gt;: everything that is on the page\n&lt;p&gt;: paragraphs\n&lt;b&gt;: bold\n&lt;table&gt;: table\n&lt;div&gt;: a container to group content together\n&lt;a&gt;: the “anchor” element that creates a hyperlink"
+    "text": "Some HTML elements\n\n&lt;html&gt;: start of the HTML page\n&lt;head&gt;: header information (metadata about the page)\n&lt;body&gt;: everything that is on the page\n&lt;p&gt;: paragraph\n&lt;b&gt;: bold\n&lt;table&gt;: table\n&lt;div&gt;: a container to group content together (“division”) (used to group other HRML elements together)\n&lt;a&gt;: the “anchor” element that creates a hyperlink"
   },
   {
     "objectID": "slides/2025-11-03-webscrape.html#rvest",
@@ -6080,28 +6080,28 @@
     "href": "slides/2025-11-03-webscrape.html#scrape-title-and-save-as-title",
     "title": "Web Scraping",
     "section": "Scrape title and save as title",
-    "text": "Scrape title and save as title\n\ntsl_page |&gt; \nhtml_elements(\".entry-title a\") \n\n{xml_nodeset (10)}\n [1] &lt;a href=\"https://tsl.news/opinion-aesthetic-feminism-is-super-anti-femin ...\n [2] &lt;a href=\"https://tsl.news/opinion-trumps-authoritarianism-doesnt-listen- ...\n [3] &lt;a href=\"https://tsl.news/opinion-chosen-family-is-not-enough-we-must-be ...\n [4] &lt;a href=\"https://tsl.news/opinion-why-san-quentins-reform-model-doesnt-d ...\n [5] &lt;a href=\"https://tsl.news/opinion-under-media-oligarchy-tiktok-isnt-the- ...\n [6] &lt;a href=\"https://tsl.news/opinion-trumps-bigotry-drove-latino-conservati ...\n [7] &lt;a href=\"https://tsl.news/opinion-la-cant-keep-neglecting-downtown-conve ...\n [8] &lt;a href=\"https://tsl.news/opinion-use-a-condom-before-its-too-late/\" tit ...\n [9] &lt;a href=\"https://tsl.news/opinion-on-poppin-and-lockin-how-i-developed-a ...\n[10] &lt;a href=\"https://tsl.news/opinion-in-defense-of-celebrity-body-autonomy/ ...\n\n\n\n\ntitle &lt;- tsl_page |&gt; \nhtml_elements(\".entry-title a\") |&gt; \nhtml_text()\n\ntitle\n\n [1] \"OPINION: Aesthetic feminism is super anti-feminist\"                                      \n [2] \"OPINION: Trump’s authoritarianism doesn’t listen to your No Kings Day cardboard signs\"   \n [3] \"OPINION: Chosen family is not enough, we must be blood brothers\"                         \n [4] \"OPINION: Why San Quentin’s reform model doesn’t do the trick\"                            \n [5] \"OPINION: Under media oligarchy, TikTok isn’t the problem\"                                \n [6] \"OPINION: Trump’s bigotry drove Latino conservatism\"                                      \n [7] \"OPINION: LA can’t keep neglecting downtown; Convention Center expansion isn’t the answer\"\n [8] \"OPINION: Use a condom before it’s too late\"                                              \n [9] \"OPINION: On Poppin’ and Lockin’: How I developed a breakdancing addiction\"               \n[10] \"OPINION: Celebrities can lose weight and still preach body positivity\"                   \n\ntitle &lt;- title |&gt; \nstr_remove(\"OPINION: \")\n\ntitle\n\n [1] \"Aesthetic feminism is super anti-feminist\"                                      \n [2] \"Trump’s authoritarianism doesn’t listen to your No Kings Day cardboard signs\"   \n [3] \"Chosen family is not enough, we must be blood brothers\"                         \n [4] \"Why San Quentin’s reform model doesn’t do the trick\"                            \n [5] \"Under media oligarchy, TikTok isn’t the problem\"                                \n [6] \"Trump’s bigotry drove Latino conservatism\"                                      \n [7] \"LA can’t keep neglecting downtown; Convention Center expansion isn’t the answer\"\n [8] \"Use a condom before it’s too late\"                                              \n [9] \"On Poppin’ and Lockin’: How I developed a breakdancing addiction\"               \n[10] \"Celebrities can lose weight and still preach body positivity\""
+    "text": "Scrape title and save as title\n\ntsl_page |&gt; \nhtml_elements(\".entry-title a\") \n\n{xml_nodeset (10)}\n [1] &lt;a href=\"https://tsl.news/opinion-before-rebuilding-gaza-the-world-must- ...\n [2] &lt;a href=\"https://tsl.news/opinion-ai-can-take-the-credit-for-this-new-cu ...\n [3] &lt;a href=\"https://tsl.news/opinion-what-democrats-can-learn-from-mexicos- ...\n [4] &lt;a href=\"https://tsl.news/opinion-aesthetic-feminism-is-super-anti-femin ...\n [5] &lt;a href=\"https://tsl.news/opinion-trumps-authoritarianism-doesnt-listen- ...\n [6] &lt;a href=\"https://tsl.news/opinion-chosen-family-is-not-enough-we-must-be ...\n [7] &lt;a href=\"https://tsl.news/opinion-why-san-quentins-reform-model-doesnt-d ...\n [8] &lt;a href=\"https://tsl.news/opinion-under-media-oligarchy-tiktok-isnt-the- ...\n [9] &lt;a href=\"https://tsl.news/opinion-trumps-bigotry-drove-latino-conservati ...\n[10] &lt;a href=\"https://tsl.news/opinion-la-cant-keep-neglecting-downtown-conve ...\n\n\n\n\ntitle &lt;- tsl_page |&gt; \nhtml_elements(\".entry-title a\") |&gt; \nhtml_text()\n\ntitle\n\n [1] \"OPINION: Before Rebuilding Gaza, the World Must Confront Who Destroyed It\"               \n [2] \"OPINION: AI can take the credit for this new cultural normalization of cheating\"         \n [3] \"OPINION: What Democrats can learn from Mexico’s governing party\"                         \n [4] \"OPINION: Aesthetic feminism is super anti-feminist\"                                      \n [5] \"OPINION: Trump’s authoritarianism doesn’t listen to your No Kings Day cardboard signs\"   \n [6] \"OPINION: Chosen family is not enough, we must be blood brothers\"                         \n [7] \"OPINION: Why San Quentin’s reform model doesn’t do the trick\"                            \n [8] \"OPINION: Under media oligarchy, TikTok isn’t the problem\"                                \n [9] \"OPINION: Trump’s bigotry drove Latino conservatism\"                                      \n[10] \"OPINION: LA can’t keep neglecting downtown; Convention Center expansion isn’t the answer\"\n\ntitle &lt;- title |&gt; \nstr_remove(\"OPINION: \")\n\ntitle\n\n [1] \"Before Rebuilding Gaza, the World Must Confront Who Destroyed It\"               \n [2] \"AI can take the credit for this new cultural normalization of cheating\"         \n [3] \"What Democrats can learn from Mexico’s governing party\"                         \n [4] \"Aesthetic feminism is super anti-feminist\"                                      \n [5] \"Trump’s authoritarianism doesn’t listen to your No Kings Day cardboard signs\"   \n [6] \"Chosen family is not enough, we must be blood brothers\"                         \n [7] \"Why San Quentin’s reform model doesn’t do the trick\"                            \n [8] \"Under media oligarchy, TikTok isn’t the problem\"                                \n [9] \"Trump’s bigotry drove Latino conservatism\"                                      \n[10] \"LA can’t keep neglecting downtown; Convention Center expansion isn’t the answer\""
   },
   {
     "objectID": "slides/2025-11-03-webscrape.html#scrape-author-and-save-as-author",
     "href": "slides/2025-11-03-webscrape.html#scrape-author-and-save-as-author",
     "title": "Web Scraping",
     "section": "Scrape author and save as author",
-    "text": "Scrape author and save as author\n\nauthor &lt;- tsl_page |&gt; \nhtml_elements(\"span.author\") |&gt; \nhtml_text()\nauthor\n\n [1] \"By Ansley Kang\"               \"By Jason Murillo\"            \n [3] \"By Alex Benach\"               \"By Leili Kamali\"             \n [5] \"By Nicole Teh\"                \"By Rafael Hernandez Guerrero\"\n [7] \"By Nicholas Steinman\"         \"By Alex Benach\"              \n [9] \"By Leili Kamali\"              \"By Joelle Rudolf\"            \n\n\n\nauthor &lt;- author |&gt; \nstr_replace(\"By \", \"\")\n\nauthor\n\n [1] \"Ansley Kang\"               \"Jason Murillo\"            \n [3] \"Alex Benach\"               \"Leili Kamali\"             \n [5] \"Nicole Teh\"                \"Rafael Hernandez Guerrero\"\n [7] \"Nicholas Steinman\"         \"Alex Benach\"              \n [9] \"Leili Kamali\"              \"Joelle Rudolf\""
+    "text": "Scrape author and save as author\n\nauthor &lt;- tsl_page |&gt; \nhtml_elements(\"span.author\") |&gt; \nhtml_text()\nauthor\n\n [1] \"By Leili Kamali\"              \"By Ansley Kang\"              \n [3] \"By Rafael Hernandez Guerrero\" \"By Ansley Kang\"              \n [5] \"By Jason Murillo\"             \"By Alex Benach\"              \n [7] \"By Leili Kamali\"              \"By Nicole Teh\"               \n [9] \"By Rafael Hernandez Guerrero\" \"By Nicholas Steinman\"        \n\n\n\nauthor &lt;- author |&gt; \nstr_replace(\"By \", \"\")\n\nauthor\n\n [1] \"Leili Kamali\"              \"Ansley Kang\"              \n [3] \"Rafael Hernandez Guerrero\" \"Ansley Kang\"              \n [5] \"Jason Murillo\"             \"Alex Benach\"              \n [7] \"Leili Kamali\"              \"Nicole Teh\"               \n [9] \"Rafael Hernandez Guerrero\" \"Nicholas Steinman\""
   },
   {
     "objectID": "slides/2025-11-03-webscrape.html#scrape-date-and-save-as-date",
     "href": "slides/2025-11-03-webscrape.html#scrape-date-and-save-as-date",
     "title": "Web Scraping",
     "section": "Scrape date and save as date",
-    "text": "Scrape date and save as date\n\ndate &lt;- tsl_page |&gt; \nhtml_elements(\".published\") |&gt; \nhtml_text()\ndate\n\n [1] \"October 30, 2025 7:48 pm\" \"October 30, 2025 7:22 pm\"\n [3] \"October 30, 2025 7:22 pm\" \"October 30, 2025 7:22 pm\"\n [5] \"October 24, 2025 1:49 am\" \"October 24, 2025 1:34 am\"\n [7] \"October 24, 2025 1:29 am\" \"October 24, 2025 1:13 am\"\n [9] \"October 10, 2025 2:47 am\" \"October 10, 2025 2:41 am\"\n\ndate &lt;- date |&gt; \nlubridate::mdy_hm(tz = \"America/Los_Angeles\")\ndate\n\n [1] \"2025-10-30 19:48:00 PDT\" \"2025-10-30 19:22:00 PDT\"\n [3] \"2025-10-30 19:22:00 PDT\" \"2025-10-30 19:22:00 PDT\"\n [5] \"2025-10-24 01:49:00 PDT\" \"2025-10-24 01:34:00 PDT\"\n [7] \"2025-10-24 01:29:00 PDT\" \"2025-10-24 01:13:00 PDT\"\n [9] \"2025-10-10 02:47:00 PDT\" \"2025-10-10 02:41:00 PDT\""
+    "text": "Scrape date and save as date\n\ndate &lt;- tsl_page |&gt; \nhtml_elements(\".published\") |&gt; \nhtml_text()\ndate\n\n [1] \"November 7, 2025 12:44 am\" \"November 7, 2025 12:41 am\"\n [3] \"November 7, 2025 12:05 am\" \"October 30, 2025 7:48 pm\" \n [5] \"October 30, 2025 7:22 pm\"  \"October 30, 2025 7:22 pm\" \n [7] \"October 30, 2025 7:22 pm\"  \"October 24, 2025 1:49 am\" \n [9] \"October 24, 2025 1:34 am\"  \"October 24, 2025 1:29 am\" \n\ndate &lt;- date |&gt; \nlubridate::mdy_hm(tz = \"America/Los_Angeles\")\ndate\n\n [1] \"2025-11-07 00:44:00 PST\" \"2025-11-07 00:41:00 PST\"\n [3] \"2025-11-07 00:05:00 PST\" \"2025-10-30 19:48:00 PDT\"\n [5] \"2025-10-30 19:22:00 PDT\" \"2025-10-30 19:22:00 PDT\"\n [7] \"2025-10-30 19:22:00 PDT\" \"2025-10-24 01:49:00 PDT\"\n [9] \"2025-10-24 01:34:00 PDT\" \"2025-10-24 01:29:00 PDT\""
   },
   {
     "objectID": "slides/2025-11-03-webscrape.html#create-a-new-data-frame",
     "href": "slides/2025-11-03-webscrape.html#create-a-new-data-frame",
     "title": "Web Scraping",
     "section": "Create a new data frame",
-    "text": "Create a new data frame\n\ntsl_opinion &lt;- tibble(\n    title,\n    author,\n    date\n)\n\ntsl_opinion\n\n# A tibble: 10 × 3\n   title                                    author date               \n   &lt;chr&gt;                                    &lt;chr&gt;  &lt;dttm&gt;             \n 1 Aesthetic feminism is super anti-femini… Ansle… 2025-10-30 19:48:00\n 2 Trump’s authoritarianism doesn’t listen… Jason… 2025-10-30 19:22:00\n 3 Chosen family is not enough, we must be… Alex … 2025-10-30 19:22:00\n 4 Why San Quentin’s reform model doesn’t … Leili… 2025-10-30 19:22:00\n 5 Under media oligarchy, TikTok isn’t the… Nicol… 2025-10-24 01:49:00\n 6 Trump’s bigotry drove Latino conservati… Rafae… 2025-10-24 01:34:00\n 7 LA can’t keep neglecting downtown; Conv… Nicho… 2025-10-24 01:29:00\n 8 Use a condom before it’s too late        Alex … 2025-10-24 01:13:00\n 9 On Poppin’ and Lockin’: How I developed… Leili… 2025-10-10 02:47:00\n10 Celebrities can lose weight and still p… Joell… 2025-10-10 02:41:00"
+    "text": "Create a new data frame\n\ntsl_opinion &lt;- tibble(\n    title,\n    author,\n    date\n)\n\ntsl_opinion\n\n# A tibble: 10 × 3\n   title                                    author date               \n   &lt;chr&gt;                                    &lt;chr&gt;  &lt;dttm&gt;             \n 1 Before Rebuilding Gaza, the World Must … Leili… 2025-11-07 00:44:00\n 2 AI can take the credit for this new cul… Ansle… 2025-11-07 00:41:00\n 3 What Democrats can learn from Mexico’s … Rafae… 2025-11-07 00:05:00\n 4 Aesthetic feminism is super anti-femini… Ansle… 2025-10-30 19:48:00\n 5 Trump’s authoritarianism doesn’t listen… Jason… 2025-10-30 19:22:00\n 6 Chosen family is not enough, we must be… Alex … 2025-10-30 19:22:00\n 7 Why San Quentin’s reform model doesn’t … Leili… 2025-10-30 19:22:00\n 8 Under media oligarchy, TikTok isn’t the… Nicol… 2025-10-24 01:49:00\n 9 Trump’s bigotry drove Latino conservati… Rafae… 2025-10-24 01:34:00\n10 LA can’t keep neglecting downtown; Conv… Nicho… 2025-10-24 01:29:00"
   },
   {
     "objectID": "slides/2025-11-03-webscrape.html#opinion-titles",
@@ -6158,5 +6158,166 @@
     "title": "Ethics in Data Science",
     "section": "4 values",
     "text": "4 values\n\nInclusion: Maximize diversity, connectivity, and accessibility among data projects, collaborators, and outputs.\nExperimentation: Emphasize continuously iterative testing and data analysis.\nAccountability: Behave ethically and transparently, fix mistakes quickly, and hold ourselves and others accountable.\nImpact: Prioritize projects with well-defined goals, and design them to achieve measurable, substantive outcomes."
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#what-is-a-database",
+    "href": "slides/2025-11-10-db.html#what-is-a-database",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "What is a database?",
+    "text": "What is a database?\n\nstructured collection of data organized with\n\nefficient storage\neasy retrieval\nconsistent management\n\ndata stored in tables which are linked to one another via keys (called a relational database, think join)\nSQL is a database management system (DBMS)"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#tidy-data",
+    "href": "slides/2025-11-10-db.html#tidy-data",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Tidy data",
+    "text": "Tidy data\n\ndata frame (R) or table (SQL)\ncolumns of variables\nrows of observational units"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#sql-dialects",
+    "href": "slides/2025-11-10-db.html#sql-dialects",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL dialects",
+    "text": "SQL dialects\nYou may have heard of some of the following SQL dialects\n\nMySQL\nDuckDB\nPostgreSQL\nBigQuery\nSQLite\n\nThey are very similar, and you will be able to quickly pick up whichever dialect your institution uses. In our work, we will use MySQL."
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#differences-between-r-and-sql",
+    "href": "slides/2025-11-10-db.html#differences-between-r-and-sql",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Differences between R and SQL",
+    "text": "Differences between R and SQL\n\ntables in SQL databases can be arbitrarily large\n\nlive in storage, computer’s hard drive (usually remote)\n\ndata frames in R\n\nlive in memory (RAM) on your personal computer\n\ntables in a database are linked via a key"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#the-airlines-database",
+    "href": "slides/2025-11-10-db.html#the-airlines-database",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "The airlines database",
+    "text": "The airlines database\nConsider a database of US flights between 2013 and 2015. The flights are downloaded from the Bureau of Transportation Statistics, US Department of Transportation. The database is a superset of the nycflights13 R package that tracks only flights in and out of airports serving New York City in 2013."
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#sql-connection",
+    "href": "slides/2025-11-10-db.html#sql-connection",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL connection",
+    "text": "SQL connection\nTo set up a SQL connection, you need the location of the server (host) as well as a username and password.\n\ncon_air &lt;- DBI::dbConnect(\n  RMariaDB::MariaDB(),\n  dbname = \"airlines\",\n  host = \"mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com\",\n  user = Sys.getenv(\"MDSR_USER\"),\n  password = Sys.getenv(\"MDSR_PWD\")\n)\n\nHadley Wickham discusses how to use Sys.getenv: https://cran.r-project.org/web/packages/httr/vignettes/secrets.html"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#tables-in-airlines-database",
+    "href": "slides/2025-11-10-db.html#tables-in-airlines-database",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Tables in airlines database",
+    "text": "Tables in airlines database\n\nDBI::dbListTables(con_air)\n\n[1] \"airports\"        \"planes\"          \"carriers\"        \"flights_summary\"\n[5] \"flights\""
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#sql-tables-as-tbl",
+    "href": "slides/2025-11-10-db.html#sql-tables-as-tbl",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL tables as tbl",
+    "text": "SQL tables as tbl\n\ncarriers &lt;- dplyr::tbl(con_air, \"carriers\")\ndim(carriers)\n\n[1] NA  2\n\nhead(carriers)\n\n# Source:   SQL [?? x 2]\n# Database: mysql  [mdsr_public@mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com:3306/airlines]\n  carrier name                         \n  &lt;chr&gt;   &lt;chr&gt;                        \n1 02Q     Titan Airways                \n2 04Q     Tradewind Aviation           \n3 05Q     Comlux Aviation, AG          \n4 06Q     Master Top Linhas Aereas Ltd.\n5 07Q     Flair Airlines Ltd.          \n6 09Q     Swift Air, LLC"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#sql-tables-as-tibble",
+    "href": "slides/2025-11-10-db.html#sql-tables-as-tibble",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "SQL tables as tibble",
+    "text": "SQL tables as tibble\nThe function collect() copies a SQL table from its server location on disk to your local memory location in R.\n\ncarriers_tibble &lt;- carriers |&gt;\n  dplyr::collect()\n\ndim(carriers_tibble)\n\n[1] 1610    2\n\nhead(carriers_tibble)\n\n# A tibble: 6 × 2\n  carrier name                         \n  &lt;chr&gt;   &lt;chr&gt;                        \n1 02Q     Titan Airways                \n2 04Q     Tradewind Aviation           \n3 05Q     Comlux Aviation, AG          \n4 06Q     Master Top Linhas Aereas Ltd.\n5 07Q     Flair Airlines Ltd.          \n6 09Q     Swift Air, LLC"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#how-much-space-does-carriers-take-up",
+    "href": "slides/2025-11-10-db.html#how-much-space-does-carriers-take-up",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "How much space does carriers take up?",
+    "text": "How much space does carriers take up?\nThe data frame in R takes up 2 orders of magnitude of memory more than the table which just points to the object in SQL.\n\ncarriers |&gt;\n  object.size() |&gt;\n  print(units = \"Kb\")\n\n5.3 Kb\n\ncarriers_tibble |&gt;\n  object.size() |&gt;\n  print(units = \"Kb\")\n\n234.8 Kb"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#what-is-sql",
+    "href": "slides/2025-11-10-db.html#what-is-sql",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "What is SQL?",
+    "text": "What is SQL?\n\nSQL is a programming language for working with relational databases.\nSQL has been around since the 1970s, but has, unfortunately, many different dialects.\nTo connect to the mdsr database (via R), use MySQL."
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql",
+    "href": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\nThe function dbListTables() in the DBI package will tell us what tables exist in the airlines database.\n\nDBI::dbListTables(con_air)\n\n[1] \"airports\"        \"planes\"          \"carriers\"        \"flights_summary\"\n[5] \"flights\"        \n\nflights &lt;- dplyr::tbl(con_air, \"flights\")\ncarriers &lt;- dplyr::tbl(con_air, \"carriers\")"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-1",
+    "href": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-1",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\nOver what years is the flights data taken?\n\n\nyrs &lt;- flights |&gt;\n  summarize(min_year = min(year), max_year = max(year))\n\nyrs\n\n# Source:   SQL [?? x 2]\n# Database: mysql  [mdsr_public@mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com:3306/airlines]\n  min_year max_year\n     &lt;int&gt;    &lt;int&gt;\n1     2013     2015"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-2",
+    "href": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-2",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\nBecause flights is not actually a data.frame in R (but instead a tbl in SQL), the work that was done above was actually performed in SQL. To see the SQL code, we can use the function show_query.\n\ndplyr::show_query(yrs)\n\n&lt;SQL&gt;\nSELECT MIN(`year`) AS `min_year`, MAX(`year`) AS `max_year`\nFROM `flights`"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-3",
+    "href": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-3",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\nCreate a data set containing only flights between LAX and BOS in 2015.\n\n\nla_bos &lt;- flights |&gt;\n  filter(year == 2015 & ((origin == \"LAX\" & dest == \"BOS\") | \n           (origin == \"BOS\" & dest == \"LAX\"))) \n\ndplyr::show_query(la_bos)\n\n&lt;SQL&gt;\nSELECT `flights`.*\nFROM `flights`\nWHERE (`year` = 2015.0 AND ((`origin` = 'LAX' AND `dest` = 'BOS') OR (`origin` = 'BOS' AND `dest` = 'LAX')))"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-4",
+    "href": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-4",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\nflights_head &lt;- flights |&gt; \n  head(8)\n\ndplyr::show_query(flights_head)\n\n&lt;SQL&gt;\nSELECT `flights`.*\nFROM `flights`\nLIMIT 8"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#sql-queries-via-the-dbi-package",
+    "href": "slides/2025-11-10-db.html#sql-queries-via-the-dbi-package",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "2. SQL queries via the DBI package",
+    "text": "2. SQL queries via the DBI package\n\nLook at the first few rows of the flights data.\n\n\nDBI::dbGetQuery(con_air,\n                \"SELECT * FROM flights LIMIT 8;\")\n\n  year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n1 2013    10   1        2             10        -8      453            505\n2 2013    10   1        4           2359         5      730            729\n3 2013    10   1       11             15        -4      528            530\n4 2013    10   1       14           2355        19      544            540\n5 2013    10   1       16             17        -1      515            525\n6 2013    10   1       22             20         2      552            554\n7 2013    10   1       29             35        -6      808            816\n8 2013    10   1       29             35        -6      449            458\n  arr_delay carrier tailnum flight origin dest air_time distance cancelled\n1       -12      AA  N201AA   2400    LAX  DFW      149     1235         0\n2         1      FL  N344AT    710    SFO  ATL      247     2139         0\n3        -2      AA  N3KMAA   1052    SFO  DFW      182     1464         0\n4         4      AA  N3ENAA   2392    SEA  ORD      191     1721         0\n5       -10      UA  N38473   1614    LAX  IAH      157     1379         0\n6        -2      UA  N458UA    291    SFO  IAH      188     1635         0\n7        -8      US  N551UW    436    LAX  CLT      256     2125         0\n8        -9      AS  N402AS    108    ANC  SEA      181     1448         0\n  diverted hour minute           time_hour\n1        0    0     10 2013-10-01 00:10:00\n2        0   23     59 2013-10-01 23:59:00\n3        0    0     15 2013-10-01 00:15:00\n4        0   23     55 2013-10-01 23:55:00\n5        0    0     17 2013-10-01 00:17:00\n6        0    0     20 2013-10-01 00:20:00\n7        0    0     35 2013-10-01 00:35:00\n8        0    0     35 2013-10-01 00:35:00"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#sql-queries-via-the-dbi-package-1",
+    "href": "slides/2025-11-10-db.html#sql-queries-via-the-dbi-package-1",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "2. SQL queries via the DBI package",
+    "text": "2. SQL queries via the DBI package\n\nHow many flights per year are in the flights table?\n\n\nDBI::dbGetQuery(con_air, \n  \"SELECT year, count(*) AS num_flights \n  FROM flights \n  GROUP BY year \n  ORDER BY num_flights;\")\n\n  year num_flights\n1 2015     5819079\n2 2014     5819811\n3 2013     6369482"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#direct-sql-queries-via-sql-chunks",
+    "href": "slides/2025-11-10-db.html#direct-sql-queries-via-sql-chunks",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "3. Direct SQL queries via sql chunks",
+    "text": "3. Direct SQL queries via sql chunks\nSQL queries can be written directly inside a sql chunk in Quarto.\n\n```{sql}\n#| connection: con_air\n\nSELECT * FROM flights LIMIT 8;\n```\n\n\n8 records\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyear\nmonth\nday\ndep_time\nsched_dep_time\ndep_delay\narr_time\nsched_arr_time\narr_delay\ncarrier\ntailnum\nflight\norigin\ndest\nair_time\ndistance\ncancelled\ndiverted\nhour\nminute\ntime_hour\n\n\n\n\n2013\n10\n1\n2\n10\n-8\n453\n505\n-12\nAA\nN201AA\n2400\nLAX\nDFW\n149\n1235\n0\n0\n0\n10\n2013-10-01 00:10:00\n\n\n2013\n10\n1\n4\n2359\n5\n730\n729\n1\nFL\nN344AT\n710\nSFO\nATL\n247\n2139\n0\n0\n23\n59\n2013-10-01 23:59:00\n\n\n2013\n10\n1\n11\n15\n-4\n528\n530\n-2\nAA\nN3KMAA\n1052\nSFO\nDFW\n182\n1464\n0\n0\n0\n15\n2013-10-01 00:15:00\n\n\n2013\n10\n1\n14\n2355\n19\n544\n540\n4\nAA\nN3ENAA\n2392\nSEA\nORD\n191\n1721\n0\n0\n23\n55\n2013-10-01 23:55:00\n\n\n2013\n10\n1\n16\n17\n-1\n515\n525\n-10\nUA\nN38473\n1614\nLAX\nIAH\n157\n1379\n0\n0\n0\n17\n2013-10-01 00:17:00\n\n\n2013\n10\n1\n22\n20\n2\n552\n554\n-2\nUA\nN458UA\n291\nSFO\nIAH\n188\n1635\n0\n0\n0\n20\n2013-10-01 00:20:00\n\n\n2013\n10\n1\n29\n35\n-6\n808\n816\n-8\nUS\nN551UW\n436\nLAX\nCLT\n256\n2125\n0\n0\n0\n35\n2013-10-01 00:35:00\n\n\n2013\n10\n1\n29\n35\n-6\n449\n458\n-9\nAS\nN402AS\n108\nANC\nSEA\n181\n1448\n0\n0\n0\n35\n2013-10-01 00:35:00"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#direct-sql-queries-via-sql-chunks-1",
+    "href": "slides/2025-11-10-db.html#direct-sql-queries-via-sql-chunks-1",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "3. Direct SQL queries via sql chunks",
+    "text": "3. Direct SQL queries via sql chunks\nSQL queries can be written directly inside a sql chunk in Quarto.\n\n```{sql}\n#| connection: con_air\n\nSELECT year, count(*) AS num_flights \n       FROM flights \n       GROUP BY year \n       ORDER BY num_flights;\n```\n\n\n3 records\n\n\nyear\nnum_flights\n\n\n\n\n2015\n5819079\n\n\n2014\n5819811\n\n\n2013\n6369482"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#good-practice",
+    "href": "slides/2025-11-10-db.html#good-practice",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "Good practice",
+    "text": "Good practice\nAlways a good idea to terminate the SQL connection when you are done with it.\n\ndbDisconnect(con_air, shutdown = TRUE)"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-5",
+    "href": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-5",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\nflights_number&lt;- flights |&gt; \n  group_by(year) |&gt; \n  summarize(num_flights = n()) |&gt; \n  arrange(num_flights)\n\ndplyr::show_query(flights_number)\n\n&lt;SQL&gt;\nSELECT `year`, COUNT(*) AS `num_flights`\nFROM `flights`\nGROUP BY `year`\nORDER BY `num_flights`"
+  },
+  {
+    "objectID": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-6",
+    "href": "slides/2025-11-10-db.html#translating-dplyr-code-into-sql-6",
+    "title": "Databases and dbplyr and SQL, oh my!",
+    "section": "1. Translating dplyr code into SQL",
+    "text": "1. Translating dplyr code into SQL\n\ndbplyr doesn’t translate every R command into SQL.\nSQL is not a statistical software and doesn’t, for example, have a mechanism for creating data visualizations.\ntrack which R commands are connected to SQL at the dbplyr reference sheet."
   }
 ]

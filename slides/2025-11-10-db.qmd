@@ -1,0 +1,325 @@
+---
+title: Databases and **dbplyr** and **SQL**, oh my!
+author: "Jo Hardin"
+subtitle: "November 10, 2025"
+format: 
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+    embed-resources: true
+    html-math-method: mathjax
+execute:
+  echo: true
+  warning: false
+  message: false
+bibliography: 
+  - ../book.bib
+---
+
+
+```{r}
+#| include: false
+
+source("../_common.R")
+fontawesome::fa_html_dependency()
+options(pillar.width = 60)
+```
+
+# Agenda  11/10/25
+
+1. Databases
+2. SQL connections
+3. SQL in Quarto (3 ways)
+
+
+# **SQL**:\n Structured Query Language
+
+## What is a database?
+
+* structured collection of data organized with
+    - efficient storage
+    - easy retrieval
+    - consistent management
+    
+* data stored in tables which are linked to one another via keys (called a relational database, think `join`)
+
+* SQL is a database management system (DBMS)
+
+
+## Tidy data
+
+* data frame (R) or table (SQL)
+* columns of variables
+* rows of observational units
+
+## **SQL** dialects
+
+You may have heard of some of the following **SQL** dialects
+
+* **MySQL**
+* **DuckDB**
+* **PostgreSQL**
+* **BigQuery**
+* **SQLite**
+
+They are very similar, and you will be able to quickly pick up whichever dialect your institution uses. In our work, we will use **MySQL**.
+
+## Differences between **R** and **SQL**
+
+* tables in **SQL** databases can be arbitrarily large
+    - live in storage, computer's hard drive (usually remote)
+    
+* data frames in **R** 
+    - live in memory (RAM) on your personal computer
+    
+    
+* tables in a database are linked via a key
+
+
+# Today's example
+
+## The `airlines` database
+
+Consider a database of US flights between 2013 and 2015.  The flights are downloaded from the <a href = "https://www.transtats.bts.gov/Homepage.asp" target = "_blank">Bureau of Transportation Statistics</a>, US Department of Transportation. The database is a superset of the `nycflights13` **R** package that tracks only flights in and out of airports serving New York City in 2013.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("../images/airport-terminal.jpg")
+```
+
+
+
+
+## **SQL** connection
+
+To set up a **SQL** connection, you need the location of the server (`host`) as well as a `user`name and `password`.
+
+```{r}
+con_air <- DBI::dbConnect(
+  RMariaDB::MariaDB(),
+  dbname = "airlines",
+  host = "mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com",
+  user = Sys.getenv("MDSR_USER"),
+  password = Sys.getenv("MDSR_PWD")
+)
+```
+
+Hadley Wickham discusses how to use Sys.getenv: https://cran.r-project.org/web/packages/httr/vignettes/secrets.html
+
+
+## Tables in `airlines` database
+
+
+```{r}
+DBI::dbListTables(con_air)
+```
+
+
+
+
+## **SQL** tables as `tbl`
+
+```{r}
+carriers <- dplyr::tbl(con_air, "carriers")
+dim(carriers)
+head(carriers)
+```
+
+
+
+## **SQL** tables as `tibble`
+
+The function `collect()` copies a **SQL** table from its server location on disk to your local memory location in **R**.
+
+```{r}
+carriers_tibble <- carriers |>
+  dplyr::collect()
+
+dim(carriers_tibble)
+head(carriers_tibble)
+```
+
+
+
+
+## How much space does `carriers` take up?
+
+The data frame in **R** takes up 2 orders of magnitude of memory more than the table which just points to the object in **SQL**.
+
+```{r}
+carriers |>
+  object.size() |>
+  print(units = "Kb")
+
+carriers_tibble |>
+  object.size() |>
+  print(units = "Kb")
+```
+
+
+
+## What is **SQL**?
+
+* **SQL** is a programming language for working with relational databases.
+* **SQL** has been around since the 1970s, but has, unfortunately, many different dialects.
+* To connect to the **mdsr** database (via **R**), use **MySQL**.
+
+
+
+# Using **SQL** in Quarto
+
+We will write **SQL** code in three distinct ways:
+
+1. Using the package **dbplyr** **R** will directly translate **dplyr** code into **SQL**.
+2. Using the **DBI** package, we can send **SQL** queries through an `r` chunk.
+3. Using a `sql` chunk, we can write actual **SQL** code inside a Quarto document.
+
+
+
+## 1. Translating **dplyr** code into **SQL**
+
+The function `dbListTables()` in the **DBI** package will tell us what tables exist in the **airlines** database.
+
+```{r}
+DBI::dbListTables(con_air)
+flights <- dplyr::tbl(con_air, "flights")
+carriers <- dplyr::tbl(con_air, "carriers")
+```
+
+
+## 1. Translating **dplyr** code into **SQL**
+
+* Over what years is the `flights` data taken?
+
+```{r}
+yrs <- flights |>
+  summarize(min_year = min(year), max_year = max(year))
+
+yrs
+```
+
+## 1. Translating **dplyr** code into **SQL**
+
+Because `flights` is not actually a `data.frame` in **R** (but instead a `tbl` in **SQL**), the work that was done above was actually performed in **SQL**.  To see the **SQL** code, we can use the function `show_query`.
+
+```{r}
+dplyr::show_query(yrs)
+```
+
+
+## 1. Translating **dplyr** code into **SQL**
+
+
+* Create a data set containing only flights between `LAX` and `BOS` in 2015.
+
+```{r}
+la_bos <- flights |>
+  filter(year == 2015 & ((origin == "LAX" & dest == "BOS") | 
+           (origin == "BOS" & dest == "LAX"))) 
+
+dplyr::show_query(la_bos)
+```
+
+## 1. Translating **dplyr** code into **SQL**
+
+```{r}
+flights_head <- flights |> 
+  head(8)
+
+dplyr::show_query(flights_head)
+```
+
+## 1. Translating **dplyr** code into **SQL**
+
+```{r}
+flights_number<- flights |> 
+  group_by(year) |> 
+  summarize(num_flights = n()) |> 
+  arrange(num_flights)
+
+dplyr::show_query(flights_number)
+```
+
+## 1. Translating **dplyr** code into **SQL**
+
+* **dbplyr** doesn't translate every **R** command into **SQL**.
+
+* **SQL** is not a statistical software and doesn't, for example, have a mechanism for creating data visualizations.
+
+* track which **R** commands are connected to **SQL** at the <a href = "https://dbplyr.tidyverse.org/reference/" target= "_blank">**dbplyr** reference sheet</a>.
+
+## 2. **SQL** queries via the **DBI** package
+
+* Look at the first few rows of the `flights` data.
+
+```{r}
+DBI::dbGetQuery(con_air,
+                "SELECT * FROM flights LIMIT 8;")
+```
+
+
+## 2. **SQL** queries via the **DBI** package
+
+* How many flights per year are in the `flights` table?
+
+```{r}
+DBI::dbGetQuery(con_air, 
+  "SELECT year, count(*) AS num_flights 
+  FROM flights 
+  GROUP BY year 
+  ORDER BY num_flights;")
+```
+
+## 3. Direct **SQL** queries via `sql` chunks {.scrollable}
+
+**SQL** queries can be written directly inside a `sql` chunk in Quarto.
+
+```{sql}
+#| connection: con_air
+#| echo: fenced
+
+SELECT * FROM flights LIMIT 8;
+```
+
+
+## 3. Direct **SQL** queries via `sql` chunks {.scrollable}
+
+**SQL** queries can be written directly inside a `sql` chunk in Quarto.
+
+```{sql}
+#| connection: con_air
+#| echo: fenced
+
+SELECT year, count(*) AS num_flights 
+       FROM flights 
+       GROUP BY year 
+       ORDER BY num_flights;
+```
+
+## Good practice
+
+Always a good idea to terminate the **SQL** connection when you are done with it.
+
+```{r}
+dbDisconnect(con_air, shutdown = TRUE)
+```
+
+
+# Using **SQL** in **DBeaver**
+
+(we won't use **DBeaver** but info is here, FYI)
+
+* **DBeaver** is a free **SQL** client that supports **MySQL**.
+
+* A "client" means that the software is just for **SQL** (and not for running models or making visualizations, like **R**).
+
+* writing **SQL** code in **R** has some benefits (e.g., piping results tables into **ggplot2** for visualizations).
+
+* using a **SQL** client that is designed for **SQL** queries has benefits as well.  
+
+* to use **DBeaver**, <a href = "https://dbeaver.io/download/" target = "_blank">download the client</a> onto your computer and open it from your Applications.
+
+
