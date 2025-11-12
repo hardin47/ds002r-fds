@@ -6500,7 +6500,7 @@
     "href": "slides/2025-11-12-clauses.html#a-null-example",
     "title": "SQL statements",
     "section": "A NULL example",
-    "text": "A NULL example\nThe logic of NULL:1\n\nIf you do anything with NULL, you’ll just get NULL. For instance if \\(x\\) is NULL, then \\(x &gt; 3\\), \\(1 = x\\), and \\(x + 4\\) all evaluate to NULL. Even \\(x =\\) NULL evaluates to NULL! if you want to check whether \\(x\\) is NULL, use x IS NULL or x IS NOT NULL.\nNULL short-circuits with boolean operators. That means a boolean expression involving NULL will evaluate to:\n\nTRUE, if it’d evaluate to TRUE regardless of whether the NULL value is really TRUE or FALSE.\nFALSE, if it’d evaluate to FALSE regardless of whether the NULL value is really TRUE or FALSE.\nOr NULL, if it depends on the NULL value.\n\n\ntaken from: https://cs186berkeley.net/notes/note1/#filtering-null-values"
+    "text": "A NULL example\nThe logic of NULL:1\n\nIf you do anything with NULL, you’ll just get NULL. For instance if \\(x\\) is NULL, then \\(x &gt; 3\\), \\(1 = x\\), and \\(x + 4\\) all evaluate to NULL. Even \\(x =\\) NULL evaluates to NULL! if you want to check whether \\(x\\) is NULL, use x IS NULL or x IS NOT NULL.\nNULL short-circuits with Boolean operators. That means a Boolean expression involving NULL will evaluate to:\n\nTRUE, if it’d evaluate to TRUE regardless of whether the NULL value is really TRUE or FALSE.\nFALSE, if it’d evaluate to FALSE regardless of whether the NULL value is really TRUE or FALSE.\nOr NULL, if it depends on the NULL value.\n\n\ntaken from: https://cs186berkeley.net/notes/note1/#filtering-null-values"
   },
   {
     "objectID": "slides/2025-11-12-clauses.html#a-null-example-1",
