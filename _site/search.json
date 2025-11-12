@@ -6395,7 +6395,7 @@
     "href": "slides/2025-11-12-clauses.html#select-from-3",
     "title": "SQL statements",
     "section": "SELECT … FROM",
-    "text": "SELECT … FROM\nHow do we know how many traffic stops are in the database? Two different ways of counting the rows (that produce the same number):\n\nSELECT COUNT(*), SUM(1) \nFROM ca_los_angeles_2020_04_01 \nLIMIT 0, 10;\n\n\n1 records\n\n\nCOUNT(*)\nSUM(1)\n\n\n\n\n5418402\n5418402\n\n\n\n\n\nMore than 5.4 million LAPD traffic stops.\n\n\nSELECT COUNT(region) \nFROM ca_los_angeles_2020_04_01 \nLIMIT 0, 10;\n\n\n1 records\n\n\nCOUNT(region)\n\n\n\n\n5416491\n\n\n\n\n\nCOUNT(region) counts the number of non-NULL values in the `region`` column."
+    "text": "SELECT … FROM\nHow do we know how many traffic stops are in the database? Two different ways of counting the rows (that produce the same number):\n\nSELECT COUNT(*), SUM(1) \nFROM ca_los_angeles_2020_04_01 \nLIMIT 0, 10;\n\n\n1 records\n\n\nCOUNT(*)\nSUM(1)\n\n\n\n\n5418402\n5418402\n\n\n\n\n\nMore than 5.4 million LAPD traffic stops.\n\n\nSELECT COUNT(region) \nFROM ca_los_angeles_2020_04_01 \nLIMIT 0, 10;\n\n\n1 records\n\n\nCOUNT(region)\n\n\n\n\n5416491\n\n\n\n\n\nCOUNT(region) counts the number of non-NULL values in the region column."
   },
   {
     "objectID": "slides/2025-11-12-clauses.html#select-from-4",

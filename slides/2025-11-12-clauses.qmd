@@ -203,7 +203,7 @@ FROM ca_los_angeles_2020_04_01
 LIMIT 0, 10;
 ```
 
-`COUNT(region)` counts the number of non-NULL values in the `region`` column.
+`COUNT(region)` counts the number of non-NULL values in the `region` column.
 
 
 ## SELECT ... FROM
