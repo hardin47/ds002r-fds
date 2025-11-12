@@ -47,7 +47,7 @@ Your analysis should have the following elements:
 
 ## Timeline
 
-Project 5 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday April 30**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 5 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday November 26**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
 
 
 <!--

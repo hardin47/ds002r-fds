@@ -41,6 +41,8 @@ website:
            href: project3.html
          - text: "project 4 - ethics"
            href: project4.html         
+         - text: "project 5 - SQL"
+           href: project5.html  
          - text: "Data Sources"
            href: https://hardin47.netlify.app/courses/data/
       - text: "GitHub"

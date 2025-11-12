@@ -2216,7 +2216,7 @@
     "href": "project5.html#timeline",
     "title": "Project 5",
     "section": "Timeline",
-    "text": "Timeline\nProject 5 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday April 30. You will add a tab to your Quarto webpage and submit the new page’s URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]"
+    "text": "Timeline\nProject 5 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday November 26. You will add a tab to your Quarto webpage and submit the new page’s URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]"
   },
   {
     "objectID": "project5.html#footnotes",
@@ -2370,7 +2370,7 @@
     "href": "R-tip.html",
     "title": "R tip-of-the-day",
     "section": "",
-    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 3\ncmd + opt + c\nruns the chunk\ncntrl + opt + c on PC\n\n\nTip 4\n\nwithin the viewer, sorts the data wrt a variable\nclick on the variable name\n\n\nTip 5\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 6\ncmd + shift + enter\nruns the current chunk\ncntrl + shift + enter for PC\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\nTip 8\ncmd + shift + opt + j\nwindow to jump between chunks\ncntrl + shift + opt + j for PC\n\n\nTip 9\ncmd + shift + M\nproduces a pipe\ncntrl + shift + M for PC  Tools -&gt; Global Options… -&gt; Code to get the native pipe\n\n\nTip 10\nhighlight with mouse and hit quotation\nwill put quotes around the highlighted phrase\n\n\n\nTip 11\nhighlight with mouse and hit parenthesis\nwill put parentheses around the highlighted phrase\n\n\n\nTip 12\ncmd + opt + B\nruns code start to line\ncntrl + opt + B on PC  (This one did not work on my keyboard)\n\n\nTip 13\ncmd + opt + E\nruns code line to end\ncntrl + opt + E on PC  (This one did not work on my keyboard)\n\n\nTip 14\nup arrow (on keyboard)\nbrings back the previous line\nworks in Console or Terminal\n\n\nTip 15\ntab complete\n\nworks in Console or in the R chunk\n\n\nTip 16\nusethis::use_github()\n\nmake sure to direct to the correct folder!\n\n\nTip 17\ncmd + shift + F\nFind in Files\ncntrl + shift + F on PC\n\n\nTip 18\ncmd + click on function name\nopens a tab with function details\ncntrl + click on function name on PC\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 3\ncmd + opt + c\nruns the chunk\ncntrl + opt + c on PC\n\n\nTip 4\n\nwithin the viewer, sorts the data wrt a variable\nclick on the variable name\n\n\nTip 5\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 6\ncmd + shift + enter\nruns the current chunk\ncntrl + shift + enter for PC\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\nTip 8\ncmd + shift + opt + j\nwindow to jump between chunks\ncntrl + shift + opt + j for PC\n\n\nTip 9\ncmd + shift + M\nproduces a pipe\ncntrl + shift + M for PC  Tools -&gt; Global Options… -&gt; Code to get the native pipe\n\n\nTip 10\nhighlight with mouse and hit quotation\nwill put quotes around the highlighted phrase\n\n\n\nTip 11\nhighlight with mouse and hit parenthesis\nwill put parentheses around the highlighted phrase\n\n\n\nTip 12\ncmd + opt + B\nruns code start to line\ncntrl + opt + B on PC  (This one did not work on my keyboard)\n\n\nTip 13\ncmd + opt + E\nruns code line to end\ncntrl + opt + E on PC  (This one did not work on my keyboard)\n\n\nTip 14\nup arrow (on keyboard)\nbrings back the previous line\nworks in Console or Terminal\n\n\nTip 15\ntab complete\n\nworks in Console or in the R chunk\n\n\nTip 16\nusethis::use_github()\n\nmake sure to direct to the correct folder!\n\n\nTip 17\ncmd + shift + F\nFind in Files\ncntrl + shift + F on PC\n\n\nTip 18\ncmd + click on function name\nopens a tab with function details\ncntrl + click on function name on PC\n\n\nTip 19\ncmd + shift + D\ndeletes a line\ncntrl + shift + D on PC\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "project4.html",
@@ -2440,7 +2440,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\nsimulations\n  MDSR Simulations   Simulations   Simulations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics   WS 13 - helper vs. hinderer   WS 14 - ethical considerations\n Project 3 - due 10.30.25 (Thursday!)\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping   WS 15 - web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\nsimulations\n  MDSR Simulations   Simulations   Simulations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics   WS 13 - helper vs. hinderer   WS 14 - ethical considerations\n Project 3 - due 10.30.25 (Thursday!)\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping   WS 15 - web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements   WS 16 - SQL as DBMS   WS 17 - reading SQL queries\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "slides/2025-04-30-shiny.html#examples",
@@ -6319,5 +6319,306 @@
     "title": "Databases and dbplyr and SQL, oh my!",
     "section": "1. Translating dplyr code into SQL",
     "text": "1. Translating dplyr code into SQL\n\ndbplyr doesn’t translate every R command into SQL.\nSQL is not a statistical software and doesn’t, for example, have a mechanism for creating data visualizations.\ntrack which R commands are connected to SQL at the dbplyr reference sheet."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#traffic-stops",
+    "href": "slides/2025-11-12-clauses.html#traffic-stops",
+    "title": "SQL statements",
+    "section": "Traffic Stops",
+    "text": "Traffic Stops\nConsider a database of information from Stanford Open Policing Project on over 200 million traffic stops in the US."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#establishing-a-sql-connection",
+    "href": "slides/2025-11-12-clauses.html#establishing-a-sql-connection",
+    "title": "SQL statements",
+    "section": "Establishing a SQL connection",
+    "text": "Establishing a SQL connection\n\ncon_traffic &lt;- DBI::dbConnect(\n  RMariaDB::MariaDB(),\n  dbname = \"traffic\",\n  host = \"traffic.st47s.com\",\n  user = Sys.getenv(\"TRAFFIC_USER\"),\n  password = Sys.getenv(\"TRAFFIC_PWD\")\n)"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#traffic-stops-1",
+    "href": "slides/2025-11-12-clauses.html#traffic-stops-1",
+    "title": "SQL statements",
+    "section": "Traffic Stops",
+    "text": "Traffic Stops\n88 tables in the traffic database! Lots of details on traffic stops across cities and highway patrols.\n\nSHOW TABLES;\n\n\nDisplaying records 1 - 10\n\n\nTables_in_traffic\n\n\n\n\nar_little_rock_2020_04_01\n\n\naz_gilbert_2020_04_01\n\n\naz_mesa_2023_01_26\n\n\naz_statewide_2020_04_01\n\n\nca_anaheim_2020_04_01\n\n\nca_bakersfield_2020_04_01\n\n\nca_long_beach_2020_04_01\n\n\nca_los_angeles_2020_04_01\n\n\nca_oakland_2020_04_01\n\n\nca_san_bernardino_2020_04_01"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#lapd---glance-through-tables",
+    "href": "slides/2025-11-12-clauses.html#lapd---glance-through-tables",
+    "title": "SQL statements",
+    "section": "LAPD - glance through tables",
+    "text": "LAPD - glance through tables\n(0 is the number of rows that are skipped, 10 is the number of rows that are retrieved.)\n\nSELECT * FROM ca_los_angeles_2020_04_01\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nraw_row_number\ndate\ntime\ndistrict\nregion\nsubject_race\nsubject_sex\nofficer_id_hash\ntype\nraw_descent_description\n\n\n\n\n5692933\n\n13:59:00\n0753\nWILSHIRE\nhispanic\nmale\n15ecd81b00\npedestrian\nHISPANIC\n\n\n240731\n2010-01-01\n00:05:00\n665\nWEST TRAFFIC\nother\nmale\nb707de41e0\nvehicular\nOTHER\n\n\n240592|240593\n2010-01-01\n00:10:00\n1258\nSEVENTY-SEVENTH\nhispanic\nmale\nb49ae7078c\npedestrian\nHISPANIC\n\n\n241116\n2010-01-01\n00:10:00\n1635\nFOOTHILL\nhispanic\nmale\ne70ce46248\nvehicular\nHISPANIC\n\n\n240681\n2010-01-01\n00:15:00\n882\nWEST LA\nother\nmale\n8587bd743c\nvehicular\nOTHER\n\n\n240602\n2010-01-01\n00:20:00\n559\nHARBOR\nhispanic\nmale\n601bf1fdff\nvehicular\nHISPANIC\n\n\n240594\n2010-01-01\n00:20:00\n667\nHOLLYWOOD\nhispanic\nmale\nfb2e6d8ab3\npedestrian\nHISPANIC\n\n\n241434\n2010-01-01\n00:25:00\n1658\nFOOTHILL\nhispanic\nfemale\n5100c8c759\nvehicular\nHISPANIC\n\n\n240582\n2010-01-01\n00:30:00\n1041\nWEST VALLEY\nblack\nfemale\nd54d90a4d0\nvehicular\nBLACK\n\n\n240642\n2010-01-01\n00:30:00\n1162\nNORTH EAST\nhispanic\nmale\n5d6fbef1d3\npedestrian\nHISPANIC"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#describe-tables",
+    "href": "slides/2025-11-12-clauses.html#describe-tables",
+    "title": "SQL statements",
+    "section": "DESCRIBE tables",
+    "text": "DESCRIBE tables\nStill using a {sql} chunk. The DESCRIBE command shows the 10 field names (variables) in the ca_los_angeles_2020_04_01 table. Some of the variables are characters (text) and some are date or time.\n\nDESCRIBE ca_los_angeles_2020_04_01;\n\n\nDisplaying records 1 - 10\n\n\nField\nType\nNull\nKey\nDefault\nExtra\n\n\n\n\nraw_row_number\ntext\nYES\n\n\n\n\n\ndate\ndate\nYES\n\n\n\n\n\ntime\ntime\nYES\n\n\n\n\n\ndistrict\ntext\nYES\n\n\n\n\n\nregion\ntext\nYES\n\n\n\n\n\nsubject_race\ntext\nYES\n\n\n\n\n\nsubject_sex\ntext\nYES\n\n\n\n\n\nofficer_id_hash\ntext\nYES\n\n\n\n\n\ntype\ntext\nYES\n\n\n\n\n\nraw_descent_description\ntext\nYES"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#parts-of-a-sql-table",
+    "href": "slides/2025-11-12-clauses.html#parts-of-a-sql-table",
+    "title": "SQL statements",
+    "section": "Parts of a SQL table",
+    "text": "Parts of a SQL table\n\nField is the name of the variable\nType is the type of the variable (numeric, character, etc.)\nNull indicates whether or not NULL values are acceptable. NULL values are never allowed for a Primary Key.\nKey designates whether the variable is a Primary Key. PRI is a primary key, all unique, no NULL values. UNI is a unique key, but NULL values are allowed. MUL is a non-unique (“Multiple”) key, allowing for duplicates, can speed up queries.\nDefault provides the default value of the variable if no value is provided when a row is added to the database."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#order-of-keywords",
+    "href": "slides/2025-11-12-clauses.html#order-of-keywords",
+    "title": "SQL statements",
+    "section": "Order of keywords",
+    "text": "Order of keywords\nQueries in SQL start with the SELECT keyword and consist of several keywords, which must be written in the following order:\n\n\n\nSELECT\nFROM\nJOIN\nWHERE\n\n\n\nGROUP BY\nHAVING\nORDER BY\nLIMIT\n\n\nThe keywords are similar to data wrangling verbs in R, but the order in SQL is super important!"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from",
+    "href": "slides/2025-11-12-clauses.html#select-from",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\n\nstart with a SELECT, include a corresponding FROM\ncolumns may be specified or * returns every column\n\nThe shortest SQL query is the following SELECT clause. Do not run this clause!!! The ca_los_angeles_2020_04_01 table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.\n\nDO NOT RUN:  SELECT * FROM ca_los_angeles_2020_04_01;"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-1",
+    "href": "slides/2025-11-12-clauses.html#select-from-1",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nMuch better for big tables:\n\nSELECT * FROM ca_los_angeles_2020_04_01 LIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nraw_row_number\ndate\ntime\ndistrict\nregion\nsubject_race\nsubject_sex\nofficer_id_hash\ntype\nraw_descent_description\n\n\n\n\n5692933\n\n13:59:00\n0753\nWILSHIRE\nhispanic\nmale\n15ecd81b00\npedestrian\nHISPANIC\n\n\n240731\n2010-01-01\n00:05:00\n665\nWEST TRAFFIC\nother\nmale\nb707de41e0\nvehicular\nOTHER\n\n\n240592|240593\n2010-01-01\n00:10:00\n1258\nSEVENTY-SEVENTH\nhispanic\nmale\nb49ae7078c\npedestrian\nHISPANIC\n\n\n241116\n2010-01-01\n00:10:00\n1635\nFOOTHILL\nhispanic\nmale\ne70ce46248\nvehicular\nHISPANIC\n\n\n240681\n2010-01-01\n00:15:00\n882\nWEST LA\nother\nmale\n8587bd743c\nvehicular\nOTHER\n\n\n240602\n2010-01-01\n00:20:00\n559\nHARBOR\nhispanic\nmale\n601bf1fdff\nvehicular\nHISPANIC\n\n\n240594\n2010-01-01\n00:20:00\n667\nHOLLYWOOD\nhispanic\nmale\nfb2e6d8ab3\npedestrian\nHISPANIC\n\n\n241434\n2010-01-01\n00:25:00\n1658\nFOOTHILL\nhispanic\nfemale\n5100c8c759\nvehicular\nHISPANIC\n\n\n240582\n2010-01-01\n00:30:00\n1041\nWEST VALLEY\nblack\nfemale\nd54d90a4d0\nvehicular\nBLACK\n\n\n240642\n2010-01-01\n00:30:00\n1162\nNORTH EAST\nhispanic\nmale\n5d6fbef1d3\npedestrian\nHISPANIC"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-2",
+    "href": "slides/2025-11-12-clauses.html#select-from-2",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nWhat if I switch the order of SQL keywords?\n\nSELECT * LIMIT 0, 10 FROM ca_los_angeles_2020_04_01;\n\nError: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM ca_los_angeles_2020_04_01' at line 1 [1064]"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-3",
+    "href": "slides/2025-11-12-clauses.html#select-from-3",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nHow do we know how many traffic stops are in the database? Two different ways of counting the rows (that produce the same number):\n\nSELECT COUNT(*), SUM(1) FROM ca_los_angeles_2020_04_01 LIMIT 0, 10;\n\n\n1 records\n\n\nCOUNT(*)\nSUM(1)\n\n\n\n\n5418402\n5418402\n\n\n\n\n\nMore than 5.4 million LAPD traffic stops."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-4",
+    "href": "slides/2025-11-12-clauses.html#select-from-4",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nLet’s look at New Orleans, LA\n\nDESCRIBE la_new_orleans_2020_04_01;\n\n\nDisplaying records 1 - 10\n\n\nField\nType\nNull\nKey\nDefault\nExtra\n\n\n\n\nraw_row_number\ntext\nYES\n\n\n\n\n\ndate\ndate\nYES\n\n\n\n\n\ntime\ntime\nYES\n\n\n\n\n\nlocation\ntext\nYES\n\n\n\n\n\nlat\ndouble\nYES\n\n\n\n\n\nlng\ndouble\nYES\n\n\n\n\n\ndistrict\ndouble\nYES\n\n\n\n\n\nzone\ntext\nYES\n\n\n\n\n\nsubject_age\nbigint(20)\nYES\n\n\n\n\n\nsubject_race\ntext\nYES"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-5",
+    "href": "slides/2025-11-12-clauses.html#select-from-5",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nHow old was the car being driven?\nUnfortunately, date is saved as a date variable, and vehicle_year is saved as a double. Fortunately, we can convert vehicle_year to a date variable.\n\nSELECT\n      date, vehicle_year,\n      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date\n   FROM la_new_orleans_2020_04_01\n   LIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ndate\nvehicle_year\nvehicle_date\n\n\n\n\n2010-01-01\n2005\n2005-01-01\n\n\n2010-01-01\n2005\n2005-01-01\n\n\n2010-01-01\n2005\n2005-01-01\n\n\n2010-01-01\n2003\n2003-01-01\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-6",
+    "href": "slides/2025-11-12-clauses.html#select-from-6",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nWhy can’t we find the difference between the two time variables?\n\nSELECT\n      date, vehicle_year,\n      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date\n      TIMESTAMPDIFF(YEAR, vehicle_date, date) AS car_age\n   FROM la_new_orleans_2020_04_01\n   LIMIT 0, 10;\n\nError: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TIMESTAMPDIFF(YEAR, vehicle_date, date) AS car_age\n   FROM la_new_orleans_2020_0' at line 4 [1064]"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-7",
+    "href": "slides/2025-11-12-clauses.html#select-from-7",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nSolution 1: apply the STR_TO_DATE() function inside the TIMESTAMPDIFF() function\n\nSELECT \n   date,\n   vehicle_year,\n   TIMESTAMPDIFF(YEAR, \n                 STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d'),\n                 date) AS car_age \nFROM la_new_orleans_2020_04_01\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ndate\nvehicle_year\ncar_age\n\n\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2005\n5\n\n\n2010-01-01\n2003\n7\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-from-8",
+    "href": "slides/2025-11-12-clauses.html#select-from-8",
+    "title": "SQL statements",
+    "section": "SELECT … FROM",
+    "text": "SELECT … FROM\nSolution 2: two layers of SELECT\n\nfirst SELECT (i.e., inside) layer creates the new variables\nsecond SELECT (i.e., outside) layer subtracts the two times\n\n\nSELECT \n   date,\n   vehicle_date, \n   TIMESTAMPDIFF(YEAR, vehicle_date, date) AS car_age \nFROM (\n   SELECT\n      date,\n      STR_TO_DATE(CONCAT(vehicle_year, '-01-01'), '%Y-%m-%d') AS vehicle_date\n   FROM la_new_orleans_2020_04_01)\n   AS subquery_table\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ndate\nvehicle_date\ncar_age\n\n\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2005-01-01\n5\n\n\n2010-01-01\n2003-01-01\n7\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01\n\n\n\n\n2010-01-01"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#important-note",
+    "href": "slides/2025-11-12-clauses.html#important-note",
+    "title": "SQL statements",
+    "section": "Important note:",
+    "text": "Important note:\nThere is a distinction between keywords that operate on the variables of the original table versus those that operate on the variables of the results set.\ndate and vehicle_year are columns in the original table - they are written to disk on the SQL server.\ncar_age (and previously, vehicle_date) exist only in the results set, which is passed from the server (SQL server) to the client (e.g., Quarto or DBeaver) in your computer’s memory and is not written to disk."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#select-distinct",
+    "href": "slides/2025-11-12-clauses.html#select-distinct",
+    "title": "SQL statements",
+    "section": "SELECT DISTINCT",
+    "text": "SELECT DISTINCT\nReturns only unique rows.\n\nSELECT DISTINCT raw_actions_taken\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 200;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\nraw_actions_taken\n\n\n\n\n\n\n\nStop Results: Citation Issued;Subject Type: Driver\n\n\nStop Results: Verbal Warning;Search Occurred: Yes;Search Types: Vehicle;Search Types: Pat-down;Search Types: Driver;Legal Basises: Consent to search;Legal Basises: Probable cause\n\n\nStop Results: Verbal Warning;Subject Type: Driver;Search Occurred: No;Evidence Seized: No\n\n\nStop Results: Verbal Warning;Subject Type: Driver\n\n\nStop Results: Verbal Warning;Subject Type: Driver;Search Occurred: No\n\n\nStop Results: No action taken;Search Occurred: No\n\n\nStop Results: Citation Issued;Subject Type: Driver;Search Occurred: No\n\n\nStop Results: Citation Issued;Subject Type: Driver;Search Occurred: No;Evidence Seized: No\n\n\nStop Results: No action taken;Search Occurred: No;Search Types: Pat-down\n\n\n\n\n\n\nSELECT DISTINCT outcome\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 10;\n\n\n4 records\n\n\noutcome\n\n\n\n\n\n\n\ncitation\n\n\nwarning\n\n\narrest\n\n\n\n\n\n\nSELECT DISTINCT vehicle_make, vehicle_color\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\nvehicle_make\nvehicle_color\n\n\n\n\nDODGE\nBLACK\n\n\nNISSAN\nBLUE\n\n\nJEEP\nGRAY\n\n\n\n\n\n\nGMC - GENERAL MOTORS CORP.\nBLUE\n\n\nCHEVROLET\nYELLOW\n\n\nOLDSMOBILE\nSILVER\n\n\nTOYOTA\nGREEN\n\n\nPONTIAC\nBRONZE\n\n\nCHEVROLET\nWHITE\n\n\n\n\n\n(note that we haven’t yet arranged the distinct values!)"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#where",
+    "href": "slides/2025-11-12-clauses.html#where",
+    "title": "SQL statements",
+    "section": "WHERE",
+    "text": "WHERE\nThe WHERE keyword is analogous to the filter() function in dplyr. However, keep in mind that there are two SQL keywords that resemble the dplyr filter() function. WHERE operates on the original data in the table and HAVING operates on the result set."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#where-1",
+    "href": "slides/2025-11-12-clauses.html#where-1",
+    "title": "SQL statements",
+    "section": "WHERE",
+    "text": "WHERE\nWhat was the time of day for those traffic stops search_conducted was true and vehicle_make was Subaru?\nNote that in SQL the equality logical is = and in R the equality logical is ==. Note also that the WHERE keyword is case-insensitive!\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE search_conducted = 1\n   AND vehicle_make = \"Subaru\"\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n03:27:00\n1\n1998\nSUBARU\n\n\n19:28:00\n1\n2012\nSUBARU\n\n\n21:40:00\n1\n1998\nSUBARU\n\n\n10:38:00\n1\n2014\nSUBARU\n\n\n05:01:00\n1\n1998\nSUBARU\n\n\n22:00:00\n1\n1998\nSUBARU\n\n\n13:46:00\n1\n2007\nSUBARU\n\n\n22:50:00\n1\n1999\nSUBARU"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#where-2",
+    "href": "slides/2025-11-12-clauses.html#where-2",
+    "title": "SQL statements",
+    "section": "WHERE",
+    "text": "WHERE\nBETWEEN can be used to specify a range of values for a numeric value. BETWEEN is inclusive.\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_year BETWEEN 1970 and 1999\n   AND vehicle_make = \"Subaru\"\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n20:16:00\n0\n1991\nSUBARU\n\n\n20:54:00\n0\n1998\nSUBARU\n\n\n17:09:00\n0\n1999\nSUBARU\n\n\n13:20:00\n0\n1996\nSUBARU\n\n\n20:44:00\n0\n1998\nSUBARU\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n21:05:00\n1\n1996\nSUBARU\n\n\n18:52:00\n0\n1995\nSUBARU\n\n\n17:36:00\n0\n1996\nSUBARU\n\n\n08:40:00\n0\n1999\nSUBARU"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#where-3",
+    "href": "slides/2025-11-12-clauses.html#where-3",
+    "title": "SQL statements",
+    "section": "WHERE",
+    "text": "WHERE\nIN is similar to the dplyr %in% function which specifies distinct values for the variable.\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_make IN (\"Subaru\", \"Dodge\")\n   AND search_conducted = 1\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n03:45:00\n1\n2010\nDODGE\n\n\n20:29:00\n1\n2012\nDODGE\n\n\n21:12:00\n1\n2011\nDODGE\n\n\n21:12:00\n1\n2011\nDODGE\n\n\n02:00:00\n1\n2014\nDODGE\n\n\n20:46:00\n1\n2008\nDODGE\n\n\n20:46:00\n1\n2008\nDODGE\n\n\n04:47:00\n1\n2014\nDODGE\n\n\n19:16:00\n1\n1995\nDODGE\n\n\n09:43:00\n1\n2009\nDODGE"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#where-4",
+    "href": "slides/2025-11-12-clauses.html#where-4",
+    "title": "SQL statements",
+    "section": "WHERE",
+    "text": "WHERE\nAND takes precedence over OR in the order of operations, when there are no parentheses.\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_year BETWEEN 1970 and 1999 OR\n      vehicle_make IN (\"Subaru\", \"Dodge\") AND \n      search_conducted = 1\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n16:03:00\n0\n1997\nGMC - GENERAL MOTORS CORP.\n\n\n16:03:00\n0\n1997\nGMC - GENERAL MOTORS CORP.\n\n\n07:54:00\n0\n1995\nTOYOTA\n\n\n21:01:00\n0\n1997\nGMC - GENERAL MOTORS CORP.\n\n\n21:06:00\n0\n1996\nDODGE\n\n\n21:16:00\n0\n1996\nDODGE\n\n\n10:20:00\n0\n1994\nMERCEDES-BENZ\n\n\n10:35:00\n0\n1998\nPONTIAC\n\n\n12:46:00\n0\n1996\nACURA\n\n\n15:17:00\n0\n1997\nOLDSMOBILE\n\n\n\n\n\nsame as:\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_year BETWEEN 1970 and 1999 OR\n      (vehicle_make IN (\"Subaru\", \"Dodge\") AND \n      search_conducted = 1)\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n16:03:00\n0\n1997\nGMC - GENERAL MOTORS CORP.\n\n\n16:03:00\n0\n1997\nGMC - GENERAL MOTORS CORP.\n\n\n07:54:00\n0\n1995\nTOYOTA\n\n\n21:01:00\n0\n1997\nGMC - GENERAL MOTORS CORP.\n\n\n21:06:00\n0\n1996\nDODGE\n\n\n21:16:00\n0\n1996\nDODGE\n\n\n10:20:00\n0\n1994\nMERCEDES-BENZ\n\n\n10:35:00\n0\n1998\nPONTIAC\n\n\n12:46:00\n0\n1996\nACURA\n\n\n15:17:00\n0\n1997\nOLDSMOBILE"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#where-5",
+    "href": "slides/2025-11-12-clauses.html#where-5",
+    "title": "SQL statements",
+    "section": "WHERE",
+    "text": "WHERE\nParentheses take precedence over AND and OR.\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE (vehicle_year BETWEEN 1970 and 1999 OR\n      vehicle_make IN (\"Subaru\", \"Dodge\") ) AND \n      search_conducted = 1\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n03:45:00\n1\n2010\nDODGE\n\n\n07:11:00\n1\n1999\nCADILLAC\n\n\n20:21:00\n1\n1999\nMERCURY\n\n\n20:29:00\n1\n2012\nDODGE\n\n\n20:31:00\n1\n1993\nINFINITY\n\n\n21:12:00\n1\n2011\nDODGE\n\n\n21:12:00\n1\n2011\nDODGE\n\n\n02:00:00\n1\n2014\nDODGE\n\n\n14:31:00\n1\n1994\nJEEP\n\n\n04:39:00\n1\n1995\nCHEVROLET"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#where-6",
+    "href": "slides/2025-11-12-clauses.html#where-6",
+    "title": "SQL statements",
+    "section": "WHERE",
+    "text": "WHERE\nIS NULL not = NULL (because NULL indicates unknown). (Just like how we need to use is.na() in R!)\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_make IS NULL\nLIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\ntime\nsearch_conducted\nvehicle_year\nvehicle_make\n\n\n\n\n02:06:00\n0\n\n\n\n\n02:06:00\n0\n\n\n\n\n02:06:00\n0\n\n\n\n\n02:06:00\n0\n\n\n\n\n02:06:00\n0\n\n\n\n\n02:06:00\n0\n\n\n\n\n02:06:00\n0\n\n\n\n\n08:02:00\n0\n\n\n\n\n20:05:00\n0\n\n\n\n\n20:05:00\n0\n\n\n\n\n\n\n\n\nSELECT time, search_conducted, vehicle_year, vehicle_make\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_make = NULL\nLIMIT 0, 10;"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#a-null-example",
+    "href": "slides/2025-11-12-clauses.html#a-null-example",
+    "title": "SQL statements",
+    "section": "A NULL example",
+    "text": "A NULL example\nThe logic of NULL:1\n\nIf you do anything with NULL, you’ll just get NULL. For instance if \\(x\\) is NULL, then \\(x &gt; 3\\), \\(1 = x\\), and \\(x + 4\\) all evaluate to NULL. Even \\(x =\\) NULL evaluates to NULL! if you want to check whether \\(x\\) is NULL, use x IS NULL or x IS NOT NULL.\nNULL short-circuits with boolean operators. That means a boolean expression involving NULL will evaluate to:\n\nTRUE, if it’d evaluate to TRUE regardless of whether the NULL value is really TRUE or FALSE.\nFALSE, if it’d evaluate to FALSE regardless of whether the NULL value is really TRUE or FALSE.\nOr NULL, if it depends on the NULL value.\n\n\ntaken from: https://cs186berkeley.net/notes/note1/#filtering-null-values"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#a-null-example-1",
+    "href": "slides/2025-11-12-clauses.html#a-null-example-1",
+    "title": "SQL statements",
+    "section": "A NULL example",
+    "text": "A NULL example\nEvaluate WHERE age &lt;= 20 OR num_dogs = 3:\n\nSELECT * FROM (\n   SELECT 'Ace' AS name, 20 AS age, 4 as num_dogs\n   UNION\n   SELECT 'Ada' AS name, NULL AS age, 3 as num_dogs   \n   UNION\n   SELECT 'Ben' AS name, NULL AS age, NULL as num_dogs\n   UNION\n   SELECT 'Cho' AS name, 27 AS age, NULL as num_dogs\n   ) AS temptable;\n\n\n4 records\n\n\nname\nage\nnum_dogs\n\n\n\n\nAce\n20\n4\n\n\nAda\n\n3\n\n\nBen\n\n\n\n\nCho\n27"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#a-null-example-2",
+    "href": "slides/2025-11-12-clauses.html#a-null-example-2",
+    "title": "SQL statements",
+    "section": "A NULL example",
+    "text": "A NULL example\nKeep the rows satisfying: age &lt;= 20 OR num_dogs = 3\n\nFor Ace, age &lt;= 20 evaluates to TRUE so the claim is satisfied.\nFor Ada, age &lt;= 20 evaluates to NULL but num_dogs = 3 evaluates to TRUE so the claim is satisfied.\nFor Ben, age &lt;= 20 evaluates to NULL and num_dogs = 3 evaluates to NULL so the overall expression is NULL which has a FALSE value.\nFor Cho, age &lt;= 20 evaluates to FALSE and num_dogs = 3 evaluates to NULL so the overall expression evaluates to NULL (because it depends on the value of the NULL).\n\nThus we keep only Ace and Ada."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#a-null-example-3",
+    "href": "slides/2025-11-12-clauses.html#a-null-example-3",
+    "title": "SQL statements",
+    "section": "A NULL example",
+    "text": "A NULL example\n\nSELECT * FROM (\n   SELECT 'Ace' AS name, 20 AS age, 4 as num_dogs\n   UNION\n   SELECT 'Ada' AS name, NULL AS age, 3 as num_dogs   \n   UNION\n   SELECT 'Ben' AS name, NULL AS age, NULL as num_dogs\n   UNION\n   SELECT 'Cho' AS name, 27 AS age, NULL as num_dogs\n   ) AS temptable\nWHERE age &lt;= 20 OR num_dogs = 3;\n\n\n2 records\n\n\nname\nage\nnum_dogs\n\n\n\n\nAce\n20\n4\n\n\nAda\n\n3"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#group-by",
+    "href": "slides/2025-11-12-clauses.html#group-by",
+    "title": "SQL statements",
+    "section": "GROUP BY",
+    "text": "GROUP BY\nThe GROUP BY keyword will direct SQL to carry out the query separately for each category in the grouped variable.\n\naggregate functions include COUNT(), SUM(), MAX(), MIN(), and AVG().\n\n\nSELECT subject_race,\n       COUNT(*) AS num_stops, \n       SUM(1) AS num_stops_also,\n       SUM(2) AS double_stops\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_year BETWEEN 1970 and 1999\nGROUP BY subject_race;\n\n\n7 records\n\n\nsubject_race\nnum_stops\nnum_stops_also\ndouble_stops\n\n\n\n\n\n2217\n2217\n4434\n\n\nasian/pacific islander\n315\n315\n630\n\n\nblack\n31586\n31586\n63172\n\n\nhispanic\n2347\n2347\n4694\n\n\nother\n23\n23\n46\n\n\nunknown\n211\n211\n422\n\n\nwhite\n11475\n11475\n22950"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#group-by-1",
+    "href": "slides/2025-11-12-clauses.html#group-by-1",
+    "title": "SQL statements",
+    "section": "GROUP BY",
+    "text": "GROUP BY\nFor those people whose cars are between 1970 and 1999, how old is the youngest and oldest person for each subject_race?\n\nSELECT subject_race,\n       COUNT(*) AS num_stops, \n       MIN(subject_age) AS min_age,\n       MAX(subject_age) AS max_age\nFROM la_new_orleans_2020_04_01\nWHERE vehicle_year BETWEEN 1970 and 1999\nGROUP BY subject_race;\n\n\n7 records\n\n\nsubject_race\nnum_stops\nmin_age\nmax_age\n\n\n\n\n\n2217\n\n\n\n\nasian/pacific islander\n315\n17\n78\n\n\nblack\n31586\n10\n100\n\n\nhispanic\n2347\n13\n87\n\n\nother\n23\n19\n68\n\n\nunknown\n211\n17\n81\n\n\nwhite\n11475\n12\n99"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#group-by-2",
+    "href": "slides/2025-11-12-clauses.html#group-by-2",
+    "title": "SQL statements",
+    "section": "GROUP BY",
+    "text": "GROUP BY\nGROUP BY will work applied to multiple columns.\n\nSELECT subject_race,\n       COUNT(*) AS num_stops, \n       MIN(subject_age) AS min_age,\n       MAX(subject_age) AS max_age,\n       DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nGROUP BY subject_race, wday;\n\n\nDisplaying records 1 - 10\n\n\nsubject_race\nnum_stops\nmin_age\nmax_age\nwday\n\n\n\n\n\n1800\n\n\nFriday\n\n\n\n1590\n\n\nMonday\n\n\n\n1332\n\n\nSaturday\n\n\n\n1172\n\n\nSunday\n\n\n\n1953\n\n\nThursday\n\n\n\n1877\n\n\nTuesday\n\n\n\n2006\n\n\nWednesday\n\n\nasian/pacific islander\n551\n16\n78\nFriday\n\n\nasian/pacific islander\n484\n13\n78\nMonday\n\n\nasian/pacific islander\n475\n15\n78\nSaturday"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#order-by",
+    "href": "slides/2025-11-12-clauses.html#order-by",
+    "title": "SQL statements",
+    "section": "ORDER BY",
+    "text": "ORDER BY\nORDER BY allows us to look at interesting aspects of the data by sorting the data.\n\nSELECT subject_race,\n       COUNT(*) AS num_stops, \n       MIN(subject_age) AS min_age,\n       MAX(subject_age) AS max_age,\n       DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nGROUP BY subject_race, wday\nORDER BY min_age ASC;\n\n\nDisplaying records 1 - 10\n\n\nsubject_race\nnum_stops\nmin_age\nmax_age\nwday\n\n\n\n\n\n1332\n\n\nSaturday\n\n\n\n1172\n\n\nSunday\n\n\n\n1877\n\n\nTuesday\n\n\n\n2006\n\n\nWednesday\n\n\n\n1953\n\n\nThursday\n\n\n\n1800\n\n\nFriday\n\n\n\n1590\n\n\nMonday\n\n\nblack\n49945\n10\n110\nFriday\n\n\nblack\n42593\n10\n106\nSaturday\n\n\nblack\n39252\n10\n92\nSunday\n\n\n\n\n\nWHAT?!?!! How are 10 year olds getting pulled over for traffic stops?"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#order-by-1",
+    "href": "slides/2025-11-12-clauses.html#order-by-1",
+    "title": "SQL statements",
+    "section": "ORDER BY",
+    "text": "ORDER BY\n\nSELECT subject_race,\n       COUNT(*) AS num_stops, \n       MIN(subject_age) AS min_age,\n       MAX(subject_age) AS max_age,\n       DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nGROUP BY subject_race, wday\nORDER BY max_age DESC;\n\n\nDisplaying records 1 - 10\n\n\nsubject_race\nnum_stops\nmin_age\nmax_age\nwday\n\n\n\n\nblack\n49945\n10\n110\nFriday\n\n\nblack\n56459\n10\n110\nTuesday\n\n\nblack\n57153\n10\n110\nWednesday\n\n\nblack\n54858\n10\n110\nThursday\n\n\nhispanic\n2007\n11\n110\nThursday\n\n\nblack\n49557\n10\n110\nMonday\n\n\nwhite\n18494\n11\n107\nFriday\n\n\nblack\n42593\n10\n106\nSaturday\n\n\nwhite\n20764\n11\n105\nWednesday\n\n\nwhite\n15778\n11\n104\nSunday\n\n\n\n\n\nSo many people over 100 years old… the data seem fishy!"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#order-by-2",
+    "href": "slides/2025-11-12-clauses.html#order-by-2",
+    "title": "SQL statements",
+    "section": "ORDER BY",
+    "text": "ORDER BY\n\nSELECT subject_race,\n       COUNT(*) AS num_stops, \n       MIN(subject_age) AS min_age,\n       MAX(subject_age) AS max_age,\n       DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nGROUP BY subject_race, wday\nORDER BY wday, subject_race;\n\n\nDisplaying records 1 - 10\n\n\nsubject_race\nnum_stops\nmin_age\nmax_age\nwday\n\n\n\n\nblack\n2\n17\n24\n\n\n\nwhite\n2\n23\n57\n\n\n\n\n1800\n\n\nFriday\n\n\nasian/pacific islander\n551\n16\n78\nFriday\n\n\nblack\n49945\n10\n110\nFriday\n\n\nhispanic\n1851\n11\n83\nFriday\n\n\nother\n61\n19\n66\nFriday\n\n\nunknown\n510\n17\n75\nFriday\n\n\nwhite\n18494\n11\n107\nFriday\n\n\n\n1590\n\n\nMonday"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#order-by-3",
+    "href": "slides/2025-11-12-clauses.html#order-by-3",
+    "title": "SQL statements",
+    "section": "ORDER BY",
+    "text": "ORDER BY\n\n\n\nNote that both GROUP BY and ORDER BY evaluate the data after it has been retrieved. Therefore, the functions operate on the results set, not the original rows of the data.\n\n\n\nWe are able to GROUP BY and ORDER BY on the new variables we had created, wday."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#having",
+    "href": "slides/2025-11-12-clauses.html#having",
+    "title": "SQL statements",
+    "section": "HAVING",
+    "text": "HAVING\nRecall that WHERE acts only on the original data. If we are interested in traffic stops that happened on Friday, we need to use the derived variable wday instead of the raw variable date. Fortunately, HAVING works on the results set."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#having-1",
+    "href": "slides/2025-11-12-clauses.html#having-1",
+    "title": "SQL statements",
+    "section": "HAVING",
+    "text": "HAVING\n\nSELECT subject_race,\n       COUNT(*) AS num_stops, \n       MIN(subject_age) AS min_age,\n       MAX(subject_age) AS max_age,\n       DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nGROUP BY subject_race, wday\nHAVING wday = 'Friday';\n\n\n7 records\n\n\nsubject_race\nnum_stops\nmin_age\nmax_age\nwday\n\n\n\n\n\n1800\n\n\nFriday\n\n\nasian/pacific islander\n551\n16\n78\nFriday\n\n\nblack\n49945\n10\n110\nFriday\n\n\nhispanic\n1851\n11\n83\nFriday\n\n\nother\n61\n19\n66\nFriday\n\n\nunknown\n510\n17\n75\nFriday\n\n\nwhite\n18494\n11\n107\nFriday"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#having-2",
+    "href": "slides/2025-11-12-clauses.html#having-2",
+    "title": "SQL statements",
+    "section": "HAVING",
+    "text": "HAVING\nWhile it worked out quite well for us that HAVING was able to filter the data based on the results set, the use of HAVING was quite onerous because the entire data set was considered before the filter was applied. That is, if the filter can be done on the original data using WHERE, the query will be much faster and more efficient.\nNote: HAVING requires a GROUP BY clause. And the variable(s) used in HAVING must also be part of the GROUP BY clause."
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#limit",
+    "href": "slides/2025-11-12-clauses.html#limit",
+    "title": "SQL statements",
+    "section": "LIMIT",
+    "text": "LIMIT\nLIMIT truncates the query to specified rows. The first number is the offset (i.e., the number of rows to skip), the second number is the (maximum) number of rows to return. Here, we return rows 154219 through 154228.\nThe first number is optional.\n\nSELECT * FROM la_new_orleans_2020_04_01 LIMIT 154218, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nraw_row_number\ndate\ntime\nlocation\nlat\nlng\ndistrict\nzone\nsubject_age\nsubject_race\nsubject_sex\nofficer_assignment\ntype\narrest_made\ncitation_issued\nwarning_issued\noutcome\ncontraband_found\ncontraband_drugs\ncontraband_weapons\nfrisk_performed\nsearch_conducted\nsearch_person\nsearch_vehicle\nsearch_basis\nreason_for_stop\nvehicle_color\nvehicle_make\nvehicle_model\nvehicle_year\nraw_actions_taken\nraw_subject_race\n\n\n\n\n442170\n2017-04-20\n13:15:00\nGentilly Blvd & Franklin Ave\n30.0\n-90.0\n3\nY\n31\nblack\nmale\n3rd District\nvehicular\n0\n0\n1\nwarning\n\n\n\n0\n0\n0\n0\n\nTRAFFIC VIOLATION\nBLACK\nDODGE\nCHARGER\n2008\nStop Results: Verbal Warning;Subject Type: Driver;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: No\nBLACK\n\n\n442169\n2017-04-20\n13:15:00\nGentilly Blvd & Franklin Ave\n30.0\n-90.0\n3\nY\n32\nblack\nmale\n3rd District\nvehicular\n1\n0\n0\narrest\n\n\n\n0\n0\n0\n0\n\nTRAFFIC VIOLATION\nBLACK\nDODGE\nCHARGER\n2008\nStop Results: Physical Arrest;Subject Type: Passenger;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: No\nBLACK\n\n\n442094\n2017-04-20\n01:16:00\nBroadway & Freret St\n29.9\n-90.1\n2\nH\n41\nblack\nmale\n2nd District\npedestrian\n0\n0\n0\n\n0\n0\n0\n1\n1\n1\n1\nconsent\nSUSPECT PERSON\n\n\n\n\nStop Results: No action taken;Subject Type: Pedestrian;Search Occurred: Yes;Search Types: Pat-down;Evidence Seized: No;Legal Basises: Consent to search;Consent To Search: Yes;Exit Vehicle: No\nBLACK\n\n\n442171\n2017-04-20\n13:17:00\nFranklin Ave & Gentilly Blvd\n30.0\n-90.0\n3\nY\n27\nblack\nmale\n3rd District\nvehicular\n0\n1\n0\ncitation\n\n\n\n0\n0\n0\n0\n\nTRAFFIC VIOLATION\nGRAY\nPONTIAC\nGRAND PRIX\n2008\nStop Results: Citation Issued;Subject Type: Driver;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: Yes\nBLACK\n\n\n442093\n2017-04-20\n01:22:00\nS Claiborne Ave & Thalia St\n29.9\n-90.1\n6\nJ\n28\nwhite\nfemale\n6th District\nvehicular\n0\n0\n1\nwarning\n\n\n\n0\n0\n0\n0\n\nTRAFFIC VIOLATION\nBLUE\nJEEP\nGRAND CHEROKEE\n2002\nStop Results: Verbal Warning;Subject Type: Driver;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: No\nWHITE\n\n\n442162\n2017-04-20\n13:27:00\n007XX Saint Charles Ave\n\n\n8\nH\n30\nwhite\nmale\n8th District\nvehicular\n0\n1\n0\ncitation\n\n\n\n0\n0\n0\n0\n\nTRAFFIC VIOLATION\nYELLOW\nDODGE\nGRAND CARAVAN\n2013\nStop Results: Citation Issued;Subject Type: Driver;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: No\nWHITE\n\n\n442160\n2017-04-20\n13:27:00\nTulane Ave & S Jefferson Davis Pkwy\n30.0\n-90.1\n1\nL\n22\nblack\nfemale\n1st District\nvehicular\n0\n1\n1\ncitation\n\n\n\n0\n0\n0\n0\n\nTRAFFIC VIOLATION\nWHITE\nCHEVROLET\nOTHER\n2007\nStop Results: Citation Issued;Stop Results: Verbal Warning;Subject Type: Driver;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: No\nBLACK\n\n\n442159\n2017-04-20\n13:31:00\nDiana St & Wagner St\n29.9\n-90.0\n4\nH\n20\nblack\nfemale\n4th District\nvehicular\n0\n0\n1\nwarning\n\n\n\n0\n0\n0\n0\n\nTRAFFIC VIOLATION\nWHITE\nNISSAN\nALTIMA\n2003\nStop Results: Verbal Warning;Subject Type: Driver;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: No\nBLACK\n\n\n442161\n2017-04-20\n13:35:00\nS Jefferson Davis Pkwy & Tulane Ave\n30.0\n-90.1\n1\nL\n28\nblack\nmale\n1st District\nvehicular\n0\n1\n0\ncitation\n0\n0\n0\n0\n1\n1\n1\nconsent\nTRAFFIC VIOLATION\nBLACK\nHONDA\nACCORD\n1991\nStop Results: Citation Issued;Subject Type: Driver;Search Occurred: Yes;Search Types: Vehicle;Evidence Seized: No;Legal Basises: Consent to search;Consent To Search: Yes;Exit Vehicle: Yes\nBLACK\n\n\n442650\n2017-04-20\n13:37:00\nSaint Louis St & N Peters St\n30.0\n-90.1\n8\nD\n57\nblack\nmale\n8th District\n\n0\n1\n0\ncitation\n\n\n\n0\n0\n0\n0\n\nCRIMINAL VIOLATION\n\n\n\n\nStop Results: Citation Issued;Subject Type: Pedestrian;Search Occurred: No;Evidence Seized: No;Consent To Search: No;Exit Vehicle: No\nBLACK"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#saving-sql-queries-as-r-objects",
+    "href": "slides/2025-11-12-clauses.html#saving-sql-queries-as-r-objects",
+    "title": "SQL statements",
+    "section": "Saving SQL queries as R objects",
+    "text": "Saving SQL queries as R objects\nIf you are working in R to run SQL queries, you may want to use the query output for further analysis or visualizations.\n\nuse #| output.var: \"name_of_variable\" inside the {sql} chunk.\nname_of_variable will then be available to be used in the R environment.\n\n\n```{sql}\n#| connection: con_traffic\n#| output.var: \"new_table\"\n\nSELECT *, DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 1000;\n```"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#saving-sql-queries-as-r-objects-1",
+    "href": "slides/2025-11-12-clauses.html#saving-sql-queries-as-r-objects-1",
+    "title": "SQL statements",
+    "section": "Saving SQL queries as R objects",
+    "text": "Saving SQL queries as R objects\n\n```{r}\nnew_table |&gt;\n  drop_na(wday) |&gt;\n  ggplot(aes(x = vehicle_year, y = subject_age, color = wday)) + \n  geom_point() +\n  xlim(1985, 2025)\n```"
+  },
+  {
+    "objectID": "slides/2025-11-12-clauses.html#good-practice",
+    "href": "slides/2025-11-12-clauses.html#good-practice",
+    "title": "SQL statements",
+    "section": "Good practice",
+    "text": "Good practice\nAlways a good idea to terminate the SQL connection when you are done with it.\n\ndbDisconnect(con_traffic, shutdown = TRUE)"
   }
 ]
