@@ -47,6 +47,7 @@ Consider a database of information from <a href = "https://openpolicing.stanford
 ```{r}
 #| echo: false
 #| fig-align: center
+#| fig-cap: 'Photo by Kindel Media from Pexels: https://www.pexels.com/photo/police-officer-standing-next-to-the-gray-car-7715104/'
 knitr::include_graphics("../images/traffic_police.jpeg")
 ```
 
@@ -674,6 +675,23 @@ The first number is optional.
 SELECT * FROM la_new_orleans_2020_04_01 LIMIT 154218, 10;
 
 ```
+
+
+<!--
+There is a lot here. I'm not sure it's worth teaching at this early pass. But maybe??
+
+| Clause                           | Stage of execution | Operates on              | Can use columns from **original data**? | Can use **aggregates / grouped results**? | Can use **aliases from SELECT**? | Purpose                                               |
+| :------------------------------- | :----------------- | :----------------------- | :-------------------------------------: | :---------------------------------------: | :------------------------------: | :---------------------------------------------------- |
+| **FROM / JOIN**                  | 1️⃣                | Raw tables               |                  ✅ Yes                  |                    ❌ No                   |               ❌ No               | Define where data comes from and how tables connect   |
+| **WHERE**                        | 2️⃣                | Row-level data           |                  ✅ Yes                  |                    ❌ No                   |               ❌ No               | Filter individual rows before grouping                |
+| **GROUP BY**                     | 3️⃣                | Filtered rows            |                  ✅ Yes                  |                    ❌ No                   |               ❌ No               | Define groups for aggregation                         |
+| **HAVING**                       | 4️⃣                | Grouped data             |        ✅ Yes (only grouped cols)        |                   ✅ Yes                   |      ❌ No (except some DBs)      | Filter groups based on aggregated values              |
+| **SELECT**                       | 5️⃣                | Post-grouping            |            ✅ Yes (if grouped)           |                   ✅ Yes                   |                N/A               | Choose columns or expressions to display              |
+| **DISTINCT**                     | 6️⃣                | After SELECT expressions |         ✅ Yes (those in SELECT)         |                   ✅ Yes                   |               ✅ Yes              | Remove duplicate rows from the result set             |
+| **ORDER BY**                     | 7️⃣                | Final result set         |                  ✅ Yes                  |                   ✅ Yes                   |               ✅ Yes              | Sort the returned rows                                |
+| **LIMIT** | 8️⃣                | After ordering           |                  ✅ Yes                  |                   ✅ Yes                   |               ✅ Yes              | Restrict how many rows to return                      |
+
+-->
 
 
 ## Saving **SQL** queries as **R** objects  {.scrollable}

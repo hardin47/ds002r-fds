@@ -87,6 +87,7 @@ Consider a database of US flights between 2013 and 2015.  The flights are downlo
 ```{r}
 #| echo: false
 #| fig-align: center
+#| fig-cap: 'Photo from pxhere: https://pxhere.com/en/photo/677564'
 knitr::include_graphics("../images/airport-terminal.jpg")
 ```
 

@@ -2571,9 +2571,9 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 
 (@) With **SQL**, how do you select all the records from a table named "Persons" where the "FirstName" is "Peter" and the "LastName" is "Jackson"?[^111]
    (a) `SELECT` FirstName = 'Peter', LastName = 'Jackson' `FROM` Persons
-   (b) `SELECT` * `FROM` Persons `WHERE` FirstName = Peter' & LastName = Jackson'
+   (b) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' & LastName = 'Jackson'
    (c) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
-   (d) `SELECT` * `FROM` Persons `WHERE` FirstName = Peter' | LastName = Jackson'
+   (d) `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' | LastName = 'Jackson'
 
 [^111]: c. `SELECT` * `FROM` Persons `WHERE` FirstName = 'Peter' AND LastName = 'Jackson'
 
