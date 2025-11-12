@@ -15,7 +15,6 @@ execute:
   message: false
 ---
 
-
 ```{r}
 #| include: false
 
@@ -24,11 +23,15 @@ fontawesome::fa_html_dependency()
 options(pillar.width = 70)
 ```
 
+
+
 # Agenda  11/12/25
 
 1. structure of **SQL** tables
 2. **SQL** keywords
 3. **SQL** queries to **R** objects
+
+
 
 ```{r}
 #| include: false
@@ -38,11 +41,15 @@ fontawesome::fa_html_dependency()
 ```
 
 
+
+
 # Today's example
 
 ## Traffic Stops
 
 Consider a database of information from <a href = "https://openpolicing.stanford.edu/data/" target = "_blank">Stanford Open Policing Project</a> on over 200 million traffic stops in the US.
+
+
 
 ```{r}
 #| echo: false
@@ -50,7 +57,11 @@ Consider a database of information from <a href = "https://openpolicing.stanford
 knitr::include_graphics("../images/traffic_police.jpeg")
 ```
 
+
+
 ## Establishing a SQL connection
+
+
 
 ```{r}
 con_traffic <- DBI::dbConnect(
@@ -64,9 +75,13 @@ con_traffic <- DBI::dbConnect(
 
 
 
+
+
 ## Traffic Stops {.scrollable}
 
 88 tables in the `traffic` database!  Lots of details on traffic stops across cities and highway patrols.
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -74,9 +89,13 @@ con_traffic <- DBI::dbConnect(
 SHOW TABLES;
 ```
 
+
+
 ## LAPD - glance through tables {.scrollable}
 
 (`0` is the number of rows that are skipped, `10` is the number of rows that are retrieved.)
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -87,15 +106,21 @@ LIMIT 0, 10;
 ```
 
 
+
+
 ## DESCRIBE tables {.scrollable}
 
 Still using a `{sql}` chunk.  The `DESCRIBE` command shows the 10 field names (variables) in the `ca_los_angeles_2020_04_01` table.  Some of the variables are characters (`text`) and some are `date` or `time`.
+
+
 
 ```{sql}
 #| connection: con_traffic
 
 DESCRIBE ca_los_angeles_2020_04_01;
 ```
+
+
 
 ## Parts of a SQL table
 
@@ -146,15 +171,21 @@ The keywords are similar to data wrangling verbs in **R**, but the order in **SQ
 
 The shortest **SQL** query is the following `SELECT` clause.  Do not run this clause!!! The `ca_los_angeles_2020_04_01` table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.
 
+
+
 ```{r}
 #| eval: false
 
 DO NOT RUN:  SELECT * FROM ca_los_angeles_2020_04_01;
 ```
 
+
+
 ## SELECT ... FROM {.scrollable}
 
 Much better for big tables:
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -165,9 +196,13 @@ LIMIT 0, 10;
 
 ```
 
+
+
 ## SELECT ... FROM {.scrollable}
 
 What if I switch the order of SQL keywords?
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -179,9 +214,13 @@ FROM ca_los_angeles_2020_04_01;
 
 ```
 
+
+
 ## SELECT ... FROM
 
 How do we know how many traffic stops are in the database?  Two different ways of counting the rows (that produce the same number):
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -191,9 +230,13 @@ FROM ca_los_angeles_2020_04_01
 LIMIT 0, 10;
 ```
 
+
+
 More than 5.4 million LAPD traffic stops.
 
 .  .  .
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -203,12 +246,16 @@ FROM ca_los_angeles_2020_04_01
 LIMIT 0, 10;
 ```
 
+
+
 `COUNT(region)` counts the number of non-NULL values in the `region`` column.
 
 
 ## SELECT ... FROM
 
 Let's look at New Orleans, LA
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -217,12 +264,16 @@ DESCRIBE la_new_orleans_2020_04_01;
 ```
 
 
+
+
 ## SELECT ... FROM
 
 How old was the car being driven? 
 
 Unfortunately, `date` is saved as a date variable, and `vehicle_year` is saved as a double.
 Fortunately, we can convert `vehicle_year` to a date variable.
+
+
 
 
 ```{sql}
@@ -237,9 +288,13 @@ SELECT
 
 
 
+
+
 ## SELECT ... FROM
 
 Why can't we find the difference between the two time variables?
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -254,9 +309,13 @@ SELECT
 ```
 
 
+
+
 ## SELECT ... FROM {.scrollable}
 
 Solution 1: apply the `STR_TO_DATE()` function inside the `TIMESTAMPDIFF()` function 
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -271,12 +330,16 @@ FROM la_new_orleans_2020_04_01
 LIMIT 0, 10;
 ```
 
+
+
 ## SELECT ... FROM {.scrollable}
 
 Solution 2:  two layers of `SELECT`  
 
    * first `SELECT` (i.e., inside) layer creates the new variables
    * second `SELECT` (i.e., outside) layer subtracts the two times
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -297,6 +360,8 @@ LIMIT 0, 10;
 
 
 
+
+
 ## Important note:
 
 There is a distinction between keywords that operate on the *variables of the original table* versus those that operate on the *variables of the results set*.  
@@ -308,6 +373,8 @@ There is a distinction between keywords that operate on the *variables of the or
 ## SELECT DISTINCT {.scrollable}
 
 Returns only unique rows.
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -333,6 +400,8 @@ FROM la_new_orleans_2020_04_01
 LIMIT 0, 10;
 ```
 
+
+
 (note that we haven't yet arranged the distinct values!)
 
 ## WHERE
@@ -344,6 +413,8 @@ The `WHERE` keyword is analogous to the `filter()` function in **dplyr**.  Howev
 What was the time of day for those traffic stops `search_conducted` was true and `vehicle_make` was Subaru?
 
 Note that in **SQL** the equality logical is `=` and in **R** the equality logical is `==`.  Note also that the WHERE keyword is case-insensitive!
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -357,9 +428,13 @@ LIMIT 0, 10;
 ```
 
 
+
+
 ## WHERE
 
 `BETWEEN` can be used to specify a range of values for a numeric value.  `BETWEEN` is inclusive.
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -372,9 +447,13 @@ LIMIT 0, 10;
 
 ```
 
+
+
 ## WHERE
 
 `IN` is similar to the **dplyr** `%in%` function which specifies distinct values for the variable.
+
+
 
 
 ```{sql}
@@ -388,9 +467,13 @@ LIMIT 0, 10;
 
 ```
 
+
+
 ## WHERE
 
 `AND` takes precedence over `OR` in the order of operations, when there are no parentheses.  
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -403,7 +486,11 @@ WHERE vehicle_year BETWEEN 1970 and 1999 OR
 LIMIT 0, 10;
 ```
 
+
+
 same as:
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -416,9 +503,13 @@ WHERE vehicle_year BETWEEN 1970 and 1999 OR
 LIMIT 0, 10;
 ```
 
+
+
 ## WHERE
 
 Parentheses take precedence over `AND` and `OR`.
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -432,9 +523,13 @@ LIMIT 0, 10;
 ```
 
 
+
+
 ## WHERE
 
 `IS NULL` not `= NULL` (because `NULL` indicates *unknown*).  (Just like how we need to use `is.na()` in **R**!)
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -445,8 +540,6 @@ WHERE vehicle_make IS NULL
 LIMIT 0, 10;
 ```
 
-
-
 ```{sql}
 #| connection: con_traffic
 #| eval: false
@@ -456,6 +549,8 @@ FROM la_new_orleans_2020_04_01
 WHERE vehicle_make = NULL
 LIMIT 0, 10;
 ```
+
+
 
 
 ## A `NULL` example
@@ -473,6 +568,8 @@ The logic of `NULL`:^[taken from: https://cs186berkeley.net/notes/note1/#filteri
 Evaluate `WHERE age <= 20 OR num_dogs = 3`:
 
 
+
+
 ```{sql}
 #| connection: con_traffic
 
@@ -487,6 +584,8 @@ SELECT * FROM (
    ) AS temptable;
 ```
 
+
+
 ## A `NULL` example
 
 Keep the rows satisfying: `age <= 20` OR `num_dogs = 3`
@@ -499,6 +598,8 @@ Keep the rows satisfying: `age <= 20` OR `num_dogs = 3`
 Thus we keep only Ace and Ada.
 
 ## A `NULL` example
+
+
 
 
 ```{sql}
@@ -516,11 +617,15 @@ SELECT * FROM (
 WHERE age <= 20 OR num_dogs = 3;
 ```
 
+
+
 ## GROUP BY {.scrollable}
 
 The `GROUP BY` keyword will direct **SQL** to carry out the query separately for each category in the grouped variable.  
 
 * aggregate functions include `COUNT()`, `SUM()`, `MAX()`, `MIN()`, and `AVG()`.
+
+
 
 
 ```{sql}
@@ -535,9 +640,13 @@ WHERE vehicle_year BETWEEN 1970 and 1999
 GROUP BY subject_race;
 ```
 
+
+
 ## GROUP BY
 
 For those people whose cars are between 1970 and 1999, how old is the youngest and oldest person for each `subject_race`?
+
+
 
 
 ```{sql}
@@ -554,9 +663,13 @@ GROUP BY subject_race;
 ```
 
 
+
+
 ## GROUP BY {.scrollable}
 
 `GROUP BY` will work applied to multiple columns.  
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -571,9 +684,13 @@ GROUP BY subject_race, wday;
 ```
 
 
+
+
 ## ORDER BY {.scrollable}
 
 `ORDER BY` allows us to look at interesting aspects of the data by sorting the data.
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -590,10 +707,14 @@ ORDER BY min_age ASC;
 ```
 
 
+
+
 WHAT?!?!!  How are 10 year olds getting pulled over for traffic stops?
 
 
 ## ORDER BY {.scrollable}
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -608,9 +729,13 @@ GROUP BY subject_race, wday
 ORDER BY max_age DESC;
 ```
 
+
+
 So many people over 100 years old...  the data seem fishy!
 
 ## ORDER BY {.scrollable}
+
+
 
 ```{sql}
 #| connection: con_traffic
@@ -624,6 +749,8 @@ FROM la_new_orleans_2020_04_01
 GROUP BY subject_race, wday
 ORDER BY wday, subject_race;
 ```
+
+
 
 
 ## ORDER BY
@@ -641,6 +768,8 @@ Recall that `WHERE` acts only on the original data.  If we are interested in tra
 
 ## HAVING
 
+
+
 ```{sql}
 #| connection: con_traffic
 
@@ -653,6 +782,8 @@ FROM la_new_orleans_2020_04_01
 GROUP BY subject_race, wday
 HAVING wday = 'Friday';
 ```
+
+
 
 
 ## HAVING
@@ -668,6 +799,8 @@ Note: `HAVING` requires a `GROUP BY` clause.  And the variable(s) used in `HAVIN
 
 The first number is optional.
 
+
+
 ```{sql}
 #| connection: con_traffic
 
@@ -676,12 +809,16 @@ SELECT * FROM la_new_orleans_2020_04_01 LIMIT 154218, 10;
 ```
 
 
+
+
 ## Saving **SQL** queries as **R** objects  {.scrollable}
 
 If you are working in **R** to run **SQL** queries, you may want to use the query output for further analysis or visualizations. 
 
 * use `#| output.var: "name_of_variable"` inside the `{sql}` chunk. 
 * `name_of_variable` will then be available to be used in the R environment.
+
+
 
 
 ```{sql}
@@ -694,7 +831,11 @@ FROM la_new_orleans_2020_04_01
 LIMIT 0, 1000;
 ```
 
+
+
 ## Saving **SQL** queries as **R** objects  {.scrollable}
+
+
 
 ```{r}
 #| echo: fenced
@@ -708,10 +849,15 @@ new_table |>
 
 
 
+
+
 ## Good practice
 
 Always a good idea to terminate the **SQL** connection when you are done with it.
 
+
+
 ```{r}
 dbDisconnect(con_traffic, shutdown = TRUE)
 ```
+
