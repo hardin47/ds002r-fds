@@ -2880,7 +2880,6 @@ can use flights data for cities with particular names-->
 
 [^137]: a. `LIKE` (We didn't cover, and **SQL** has it's own characters, for example `%` for wildcard.)-->
 
----
 
 (@) With **SQL**, how do you select all the records from a table named "Persons" where the value of the column "FirstName" starts with an "a"?[^137]
     (a) `SELECT` * `FROM` Persons `WHERE` FirstName = 'a.*'
