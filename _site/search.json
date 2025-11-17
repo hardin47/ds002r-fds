@@ -2440,7 +2440,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\nsimulations\n  MDSR Simulations   Simulations   Simulations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics   WS 13 - helper vs. hinderer   WS 14 - ethical considerations\n Project 3 - due 10.30.25 (Thursday!)\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping   WS 15 - web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements   WS 16 - SQL as DBMS   WS 17 - reading SQL queries\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text \nAttend class, review the  worksheet and solutions if you have any questions after working on it during class.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.25.25\nintro +  R + RStudio +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.1.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 2 - ggplot\n HW 1 - due 9.3.25\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.8.25\nData Viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 3 - Tufte   WS 4 - Data Verbs\n HW 2 - due 9.10.25\n\n\n\nWeek 4  9.15.25\nData Wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 5 - Join\n HW 3 - due 9.17.25   Quiz 1 9.17.25\n\n\n\nWeek 5  9.22.25\nData Types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 6 - Strings   WS 7 - Factors\n Project 1 - due 9.24.25\n\n\n\nWeek 6  9.29.25\nRegular Expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions   WS 8 - Regular Expressions\n HW 4 - due 10.1.25   Quiz 2 10.1.25\n\n\n\nWeek 7  10.6.25\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration   WS 9 - Functions   WS 10 - map\n Project 2 - due 10.8.25\n\n\n\nWeek 8  10.13.25\ncode review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you   WS 11 - reproducible example\n\n\n\n\nWeek 9  10.20.25\nsimulations\n  MDSR Simulations   Simulations   Simulations   WS 12 - probability simulation\n HW 5 - due  Monday  10.20.25   Quiz 3 10.22.25\n\n\n\nWeek 10  10.27.25\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics   WS 13 - helper vs. hinderer   WS 14 - ethical considerations\n Project 3 - due 10.30.25 (Thursday!)\n\n\n\nWeek 11  11.3.25\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping   WS 15 - web scraping\n HW 6 - due 11.5.25   Quiz 4 11.5.25\n\n\n\nWeek 12  11.10.25\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements   WS 16 - SQL as DBMS   WS 17 - reading SQL queries\n Project 4 - due 11.12.25\n\n\n\nWeek 13  11.17.25\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins   WS 18 - writing SQL queries\n HW 7 - due 11.19.25   Quiz 5 11.19.25\n\n\n\nWeek 14  11.24.25\nShiny\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n Project 5 - due 11.26.25\n\n\n\nWeek 15  12.1.25\n\n Fin\n Quiz 6 12.3.25\npresentations (?) 12.5.25, 9am - noon\n\n\nWeek 16  12.10.25\n\n\n Project 6 - due 12.10.25\npresentations (?) 12.10.25, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "slides/2025-04-30-shiny.html#examples",
@@ -6620,5 +6620,264 @@
     "title": "SQL statements",
     "section": "Good practice",
     "text": "Good practice\nAlways a good idea to terminate the SQL connection when you are done with it.\n\ndbDisconnect(con_traffic, shutdown = TRUE)"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#all-the-joins",
+    "href": "slides/2025-11-17-joins.html#all-the-joins",
+    "title": "SQL joins",
+    "section": "All the JOINs",
+    "text": "All the JOINs\n\nJOIN (aka INNER JOIN): include all of the rows that exist in both tables\nLEFT JOIN: include all of the rows in the first table.\n\nRIGHT JOIN: include all of the rows in the second table.\nFULL OUTER JOIN: include all rows in either table. (The functionality doesn’t exist in MySQL but can be created using joins and UNION.)\nCROSS JOIN: match each row of the first table with each row in the second table."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#all-the-joins-1",
+    "href": "slides/2025-11-17-joins.html#all-the-joins-1",
+    "title": "SQL joins",
+    "section": "All the JOINs",
+    "text": "All the JOINs\nVenn diagrams of the different types of joins.\n\nVenn diagrams describing different JOINs, image credit: phoenixNAP https://phoenixnap.com/kb/mysql-join"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#all-the-joins-2",
+    "href": "slides/2025-11-17-joins.html#all-the-joins-2",
+    "title": "SQL joins",
+    "section": "All the JOINs",
+    "text": "All the JOINs\nMini data tables of the different types of JOIN. (In SQL the missing values will be labeled as NULL (not NA).)\n\nMini data tables describing different JOINs, image credit: Statistics Globe blog, https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#all-the-joins-3",
+    "href": "slides/2025-11-17-joins.html#all-the-joins-3",
+    "title": "SQL joins",
+    "section": "All the JOINs",
+    "text": "All the JOINs\nEach JOIN clause needs four specific pieces of information:\n\nThe name of the first table you want to JOIN.\nThe type of JOIN being used.\nThe name of the second table you want to JOIN.\nThe condition(s) under which you want the records in the first table to match records in the second table."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#a-toy-example",
+    "href": "slides/2025-11-17-joins.html#a-toy-example",
+    "title": "SQL joins",
+    "section": "A toy example",
+    "text": "A toy example\nRock bands from the 60s.\n\nband_members\n\n# A tibble: 3 × 2\n  name  band   \n  &lt;chr&gt; &lt;chr&gt;  \n1 Mick  Stones \n2 John  Beatles\n3 Paul  Beatles\n\nband_instruments\n\n# A tibble: 3 × 2\n  name  plays \n  &lt;chr&gt; &lt;chr&gt; \n1 John  guitar\n2 Paul  bass  \n3 Keith guitar\n\n\nThe function sqldf() in the sqldf R package allows for SQL commands on R objects."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#rock-bands---inner-join",
+    "href": "slides/2025-11-17-joins.html#rock-bands---inner-join",
+    "title": "SQL joins",
+    "section": "Rock bands - INNER JOIN",
+    "text": "Rock bands - INNER JOIN\nAn inner join combines two datasets returning only the observations that exist in both of the original datasets.\n\nsqldf::sqldf(\"SELECT star.name,\n                     star.band,\n                     inst.plays\n              FROM band_members AS star\n              JOIN band_instruments AS inst ON star.name = inst.name\")\n\n  name    band  plays\n1 John Beatles guitar\n2 Paul Beatles   bass"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#rock-bands---full-join",
+    "href": "slides/2025-11-17-joins.html#rock-bands---full-join",
+    "title": "SQL joins",
+    "section": "Rock bands - FULL JOIN",
+    "text": "Rock bands - FULL JOIN\nA full join combines two datasets returning every observation that exists in either one of the original datasets.\n\nband_members |&gt;\n  full_join(band_instruments)\n\n# A tibble: 4 × 3\n  name  band    plays \n  &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; \n1 Mick  Stones  &lt;NA&gt;  \n2 John  Beatles guitar\n3 Paul  Beatles bass  \n4 Keith &lt;NA&gt;    guitar\n\n\nThe full_join() function does not have an equivalent in MySQL. See later slides for using JOINs and UNIONs to produce a full join."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#rock-bands---left-join",
+    "href": "slides/2025-11-17-joins.html#rock-bands---left-join",
+    "title": "SQL joins",
+    "section": "Rock bands - LEFT JOIN",
+    "text": "Rock bands - LEFT JOIN\nA left join combines two datasets returning every observation that exists in the left (or first) original dataset.\n\nsqldf::sqldf(\"SELECT star.name,\n                     star.band,\n                      inst.plays\n              FROM band_members AS star\n              LEFT JOIN band_instruments AS inst \n              ON star.name = inst.name\")\n\n  name    band  plays\n1 Mick  Stones   &lt;NA&gt;\n2 John Beatles guitar\n3 Paul Beatles   bass"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#rock-bands---right-join",
+    "href": "slides/2025-11-17-joins.html#rock-bands---right-join",
+    "title": "SQL joins",
+    "section": "Rock bands - RIGHT JOIN",
+    "text": "Rock bands - RIGHT JOIN\nA right join combines two datasets returning every observation that exists in the right (or second) original dataset.\n\nsqldf::sqldf(\"SELECT inst.name,\n                     star.band,\n                      inst.plays\n              FROM band_members AS star\n              RIGHT JOIN band_instruments AS inst \n              ON star.name = inst.name\")\n\n   name    band  plays\n1  John Beatles guitar\n2  Paul Beatles   bass\n3 Keith    &lt;NA&gt; guitar"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#rock-bands---cross-join",
+    "href": "slides/2025-11-17-joins.html#rock-bands---cross-join",
+    "title": "SQL joins",
+    "section": "Rock bands - CROSS JOIN",
+    "text": "Rock bands - CROSS JOIN\nA cross join combines every row from one table with every row from another table to produce the Cartesian product of the two tables.\n\nsqldf::sqldf(\"SELECT *\n              FROM band_members AS star\n              CROSS JOIN band_instruments AS inst\")\n\n  name    band  name  plays\n1 Mick  Stones  John guitar\n2 Mick  Stones  Paul   bass\n3 Mick  Stones Keith guitar\n4 John Beatles  John guitar\n5 John Beatles  Paul   bass\n6 John Beatles Keith guitar\n7 Paul Beatles  John guitar\n8 Paul Beatles  Paul   bass\n9 Paul Beatles Keith guitar"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#imdb",
+    "href": "slides/2025-11-17-joins.html#imdb",
+    "title": "SQL joins",
+    "section": "IMDb",
+    "text": "IMDb\nConsider a database of information from IMDb."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#imdb-1",
+    "href": "slides/2025-11-17-joins.html#imdb-1",
+    "title": "SQL joins",
+    "section": "IMDb",
+    "text": "IMDb\n21 tables in the imdb database! Lots of details on movies, TV series, video games, and more. Today interest is in movies (and details within, like actors and ratings).\n\nSHOW TABLES;\n\n\nDisplaying records 1 - 10\n\n\nTables_in_imdb\n\n\n\n\naka_name\n\n\naka_title\n\n\ncast_info\n\n\nchar_name\n\n\ncomp_cast_type\n\n\ncompany_name\n\n\ncompany_type\n\n\ncomplete_cast\n\n\ninfo_type\n\n\nkeyword"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#imdb---glance-through-tables",
+    "href": "slides/2025-11-17-joins.html#imdb---glance-through-tables",
+    "title": "SQL joins",
+    "section": "IMDb - glance through tables",
+    "text": "IMDb - glance through tables\n\nSELECT * FROM kind_type\nLIMIT 0, 10;\n\n\n7 records\n\n\nid\nkind\n\n\n\n\n1\nmovie\n\n\n2\ntv series\n\n\n3\ntv movie\n\n\n4\nvideo movie\n\n\n5\ntv mini series\n\n\n6\nvideo game\n\n\n7\nepisode"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#join-imdb-title-votes",
+    "href": "slides/2025-11-17-joins.html#join-imdb-title-votes",
+    "title": "SQL joins",
+    "section": "JOIN IMDb title + votes",
+    "text": "JOIN IMDb title + votes\nIn the imdb database, the title table includes information about the 4,626,322 titles in the database, including the id, title, kind_id (indicator for the kind of ID it is), and production_year. It does not, however, include the review of the title.\n\nSELECT * FROM title LIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\ntitle\nimdb_index\nkind_id\nproduction_year\nimdb_id\nphonetic_code\nepisode_of_id\nseason_nr\nepisode_nr\nseries_years\nmd5sum\n\n\n\n\n78460\nAdults Recat to the Simpsons (30th Anniversary)\n\n7\n2017\n\nA3432\n78406\n\n\n\n2ae09eed7d576cc2c24774fed5b18168\n\n\n70273\n(2016-05-18)\n\n7\n2016\n\n\n68058\n\n\n\n511dfc14cfff7589d29a95abb30cd66a\n\n\n60105\n(2014-04-11)\n\n7\n2014\n\n\n59138\n\n\n\nc6cdce7e667e07713e431805c407feed\n\n\n32120\n(2008-05-01)\n\n7\n2008\n\n\n32060\n\n\n\n100df65742caf5afd092b2e0ead67d8e\n\n\n97554\nSchmÃ¶lders Traum\n\n7\n2001\n\nS2543\n97302\n10\n1\n\n46862a2f96f9fb2d59e8c9a11ecfdd28\n\n\n57966\n(#1.1)\n\n7\n2013\n\n\n57965\n1\n1\n\n409c37703766c4b24f8a86162fd9cf85\n\n\n76391\nAnniversary\n\n7\n1971\n\nA5162\n76385\n4\n9\n\n5e12ce73fac1d1dcf94136b6e9acd8f8\n\n\n11952\nAngus Black/Lester Barrie/DC Curry\n\n7\n2009\n\nA5214\n11937\n4\n7\n\n9c38b9e5601dc154444b73b518034aa1\n\n\n1554\nNew Orleans\n\n7\n2003\n\nN6452\n1508\n2\n11\n\n621bea735740a547e862e4a3226f35d2\n\n\n58442\nKiss Me Kate\n\n7\n2011\n\nK2523\n58436\n1\n10\n\n293e8c75c7f35a4035abf617962be5a9"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#join-imdb-title-votes-1",
+    "href": "slides/2025-11-17-joins.html#join-imdb-title-votes-1",
+    "title": "SQL joins",
+    "section": "JOIN IMDb title + votes",
+    "text": "JOIN IMDb title + votes\nThe movie_info_idx table does not contain much information about each particular film. It does, however, have an indicator for the movie ID (given by movie_id) as well as the number of votes (given by info where type_id = 100).\n\nSELECT * FROM movie_info_idx LIMIT 0, 6;\n\n\n6 records\n\n\nid\nmovie_id\ninfo_type_id\ninfo\nnote\n\n\n\n\n1\n1\n99\n31.2.1..2.\n\n\n\n2\n1\n100\n9\n\n\n\n3\n1\n101\n4.1\n\n\n\n4\n2\n99\n1000000102\n\n\n\n5\n2\n100\n61\n\n\n\n6\n2\n101\n6.4"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#join-imdb-title-votes-2",
+    "href": "slides/2025-11-17-joins.html#join-imdb-title-votes-2",
+    "title": "SQL joins",
+    "section": "JOIN IMDb title + votes",
+    "text": "JOIN IMDb title + votes\n\ncombine the titles with the number of votes so that each title with user votes is included (INNER JOIN)\n\n\nSELECT title.id,\n       title.title,\n       movie_info_idx.info\nFROM title\nJOIN movie_info_idx ON title.id = movie_info_idx.movie_id \nWHERE title.production_year = 2015 \n    AND title.kind_id = 1                  # movies only\n    AND movie_info_idx.info_type_id = 100  # info_type is votes\n    AND movie_info_idx.info &gt; 150000       # at least 150,000 votes\nORDER BY movie_info_idx.info DESC\nLIMIT 0, 20;\n\n\nDisplaying records 1 - 10\n\n\nid\ntitle\ninfo\n\n\n\n\n4260166\nStar Wars: Episode VII - The Force Awakens\n691691\n\n\n3915213\nMad Max: Fury Road\n666484\n\n\n4389619\nThe Martian\n583987\n\n\n3313672\nAvengers: Age of Ultron\n540606\n\n\n4414139\nThe Revenant\n526189\n\n\n3787790\nJurassic World\n471237\n\n\n3752999\nInside Out\n443051\n\n\n3292159\nAnt-Man\n390965\n\n\n4364483\nThe Hateful Eight\n363199\n\n\n4251736\nSpectre\n319875\n\n\n\n\n\nSome aspects of the query are worth pointing out:\n\nThe variables in the output are given in the SELECT clause. The id and title (both from the title table) and the info from the movie_info_idx which represents the number of IMDb votes.\nThe variables are preceded by the table from which they came. While not always necessary, it is good practice so as to avoid confusion.\nThe JOIN happens by linking the id variable in the title table with the movie_id variable in the movie_info_idx table.\nThe LIMIT wasn’t necessary (there are only 12 observations), but it’s good practice so that we don’t end up with unwieldy query results.\nThe WHERE clause happens before the JOIN action, despite being written after.\nIn the WHERE clause, we keep only movies, only 2015 production year, and only at least 150,000 votes."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#join-imdb-title-actress",
+    "href": "slides/2025-11-17-joins.html#join-imdb-title-actress",
+    "title": "SQL joins",
+    "section": "JOIN IMDb title + actress",
+    "text": "JOIN IMDb title + actress\ncast_info contains the person_id and the movie_id\n\nSELECT * FROM cast_info LIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\nid\nperson_id\nmovie_id\nperson_role_id\nnote\nnr_order\nrole_id\n\n\n\n\n1\n1\n3432997\n1\n\n31\n1\n\n\n2\n2\n1901690\n2\n\n\n1\n\n\n3\n3\n4027567\n2\n\n25\n1\n\n\n4\n3\n4282876\n3\n\n22\n1\n\n\n5\n4\n3542672\n\n\n12\n1\n\n\n6\n5\n3331520\n4\n(as $hutter Boy)\n10\n1\n\n\n7\n5\n4027191\n2\n(as $hutter Boy)\n1\n1\n\n\n8\n5\n4195731\n5\n(uncredited)\n\n1\n\n\n9\n5\n4263956\n6\n(uncredited)\n\n1\n\n\n10\n5\n4267787\n7\n(uncredited)\n\n1\n\n\n\n\n\nperson_role_id is 1 if actor and 2 if actress"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#join-imdb-title-actress-1",
+    "href": "slides/2025-11-17-joins.html#join-imdb-title-actress-1",
+    "title": "SQL joins",
+    "section": "JOIN IMDb title + actress",
+    "text": "JOIN IMDb title + actress\naka_name contains person_id and name (of actor)\n\nSELECT * FROM aka_name LIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\nid\nperson_id\nname\nimdb_index\nname_pcode_cf\nname_pcode_nf\nsurname_pcode\nmd5sum\n\n\n\n\n1\n6188450\nSmith, Jessica Noel\n\nS5325\nJ2542\nS53\n25c9d464e3ff2957533546aa92b397ed\n\n\n2\n5125059\nPain, L. $ham\n\nP545\nL515\nP5\n569b1e885ccb51211c01753f0dad9b2c\n\n\n3\n5\nBoy, \\(hutter               |           |B36           |H361          |B             |35092b5604ce378fc48c8a6fc0038a49 |\n|4  |   4152053|Dollasign, Ty              |           |D4253         |T3425         |D425          |0f565a2d8027cfb8ed6c5f4bba719fcd |\n|5  |   4152053|Sign, Ty Dolla             |           |S2534         |T3425         |S25           |2eded1b021b96333b4b74e0fec959650 |\n|6  |         6|Moore, Brandon             |           |M6165         |B6535         |M6            |193a6f5adf4756320f622162d2475608 |\n|7  |         8|\\)torm, Country\n\nT6525\nC5363\nT65\n1654400b707d34323ea392b87060e6cc\n\n\n8\n19\n‘Hooper’, Simon P.J. Kelly\n\nH1625\nS5124\nH16\n3fd8885372c23f8c74e583da91d1fd05\n\n\n9\n19\nHooper\n\nH16\n\n\n24ddc68ab605ee95857ad45b65ffa2d8\n\n\n10\n19\nKelly, Simon P.J.\n\nK4251\nS5124\nK4\n33d976f22e276b73c61513bc5f6e72a6"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#join-imdb-title-actress-2",
+    "href": "slides/2025-11-17-joins.html#join-imdb-title-actress-2",
+    "title": "SQL joins",
+    "section": "JOIN IMDb title + actress",
+    "text": "JOIN IMDb title + actress\ntitle contains id and title (of the movie)\n\nSELECT * FROM title LIMIT 0, 10;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\ntitle\nimdb_index\nkind_id\nproduction_year\nimdb_id\nphonetic_code\nepisode_of_id\nseason_nr\nepisode_nr\nseries_years\nmd5sum\n\n\n\n\n78460\nAdults Recat to the Simpsons (30th Anniversary)\n\n7\n2017\n\nA3432\n78406\n\n\n\n2ae09eed7d576cc2c24774fed5b18168\n\n\n70273\n(2016-05-18)\n\n7\n2016\n\n\n68058\n\n\n\n511dfc14cfff7589d29a95abb30cd66a\n\n\n60105\n(2014-04-11)\n\n7\n2014\n\n\n59138\n\n\n\nc6cdce7e667e07713e431805c407feed\n\n\n32120\n(2008-05-01)\n\n7\n2008\n\n\n32060\n\n\n\n100df65742caf5afd092b2e0ead67d8e\n\n\n97554\nSchmÃ¶lders Traum\n\n7\n2001\n\nS2543\n97302\n10\n1\n\n46862a2f96f9fb2d59e8c9a11ecfdd28\n\n\n57966\n(#1.1)\n\n7\n2013\n\n\n57965\n1\n1\n\n409c37703766c4b24f8a86162fd9cf85\n\n\n76391\nAnniversary\n\n7\n1971\n\nA5162\n76385\n4\n9\n\n5e12ce73fac1d1dcf94136b6e9acd8f8\n\n\n11952\nAngus Black/Lester Barrie/DC Curry\n\n7\n2009\n\nA5214\n11937\n4\n7\n\n9c38b9e5601dc154444b73b518034aa1\n\n\n1554\nNew Orleans\n\n7\n2003\n\nN6452\n1508\n2\n11\n\n621bea735740a547e862e4a3226f35d2\n\n\n58442\nKiss Me Kate\n\n7\n2011\n\nK2523\n58436\n1\n10\n\n293e8c75c7f35a4035abf617962be5a9"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#join-imdb-title-actress-3",
+    "href": "slides/2025-11-17-joins.html#join-imdb-title-actress-3",
+    "title": "SQL joins",
+    "section": "JOIN IMDb title + actress",
+    "text": "JOIN IMDb title + actress\nGoal: identify the actresses in those movies with the highest number of votes.\n\nSELECT DISTINCT t.title,\n       idx.info,\n       a.person_id,\n       n.name\nFROM title AS t\nJOIN movie_info_idx AS idx ON t.id = idx.movie_id \nJOIN cast_info AS a ON idx.movie_id = a.movie_id\nJOIN aka_name AS n ON a.person_id = n.person_id\nWHERE t.production_year = 2015 \n    AND t.kind_id = 1           # movies only\n    AND idx.info_type_id = 100  # info_type is votes\n    AND idx.info &gt; 150000       # at least 150,000 votes\n    AND a.role_id = 2           # actresses only\nORDER BY a.person_id\nLIMIT 0, 50;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\ntitle\ninfo\nperson_id\nname\n\n\n\n\nMission: Impossible - Rogue Nation\n266759\n2674172\nSofz\n\n\nMission: Impossible - Rogue Nation\n266759\n2674172\nSof\n\n\nFocus\n172680\n2678594\nLabouisse, Kate\n\n\nMad Max: Fury Road\n666484\n2681098\nMichelle, Debra\n\n\nThe Hunger Games: Mockingjay - Part 2\n214569\n2685496\nHarris, Ahnie\n\n\nThe Hunger Games: Mockingjay - Part 2\n214569\n2685496\nHarris, Jasmine\n\n\nCreed\n183904\n2686218\nKareema, Kiana A.\n\n\nAnt-Man\n390965\n2687271\nAkana, Anna Kay\n\n\nInside Out\n443051\n2689505\nAllen, Lori\n\n\nInside Out\n443051\n2689505\nDenniberg, Lori Alan\n\n\n\n\n\nConnecting the most popular movies of 2015 with the actresses in those movies requires a series of JOINs. Note that to make the code less onerous, the title table has been aliased by t, the movie_info_idx table has been aliased by idx, the cast_info table has been aliased by a, and the aka_name table has been aliased by n.\nThere is a lot of data cleaning to do as some of the person_id values are one to many!! That is, the person_id matches multiple names in the aka_name database."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#other-joins",
+    "href": "slides/2025-11-17-joins.html#other-joins",
+    "title": "SQL joins",
+    "section": "Other JOINs",
+    "text": "Other JOINs\nLet’s look at RIGHT JOIN and LEFT JOIN using two new smaller tables.\n\nThe first has seven movies in it (from 2015 with at least 400,000 IMDb votes).\nThe second consists of almost 3 million actresses (person_role_id = 2). In order to find a subset of actresses, the person_id &gt; 3900000 was set arbitrarily (in order to have a smaller group with which to work).\n\nUsing subqueries, we can JOIN the two datasets using different JOIN techniques."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#movies",
+    "href": "slides/2025-11-17-joins.html#movies",
+    "title": "SQL joins",
+    "section": "movies:",
+    "text": "movies:\n\nSELECT t.id,\n       t.title,\n       idx.info,\n       (SELECT COUNT(*)\n       FROM title AS t\n       JOIN movie_info_idx AS idx ON idx.movie_id = t.id\n       WHERE t.production_year = 2015  \n             AND t.kind_id = 1\n             AND idx.info_type_id = 100\n             AND idx.info &gt; 400000) AS row_count\nFROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1             # movies only\n    AND idx.info_type_id = 100    # info_type is votes\n    AND idx.info &gt; 400000         # at least 400,000 votes\nORDER BY idx.info DESC;\n\n\n7 records\n\n\n\n\n\n\n\n\nid\ntitle\ninfo\nrow_count\n\n\n\n\n4260166\nStar Wars: Episode VII - The Force Awakens\n691691\n7\n\n\n3915213\nMad Max: Fury Road\n666484\n7\n\n\n4389619\nThe Martian\n583987\n7\n\n\n3313672\nAvengers: Age of Ultron\n540606\n7\n\n\n4414139\nThe Revenant\n526189\n7\n\n\n3787790\nJurassic World\n471237\n7\n\n\n3752999\nInside Out\n443051\n7"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#actresses",
+    "href": "slides/2025-11-17-joins.html#actresses",
+    "title": "SQL joins",
+    "section": "actresses:",
+    "text": "actresses:\n\n\nSELECT a.person_id,\n       a.movie_id,\n       n.name,\n       (SELECT COUNT(*)\n       FROM cast_info AS a\n       JOIN aka_name AS n ON a.person_id = n.person_id\n       WHERE a.person_role_id = 2  \n             AND a.person_id &gt; 390000) AS row_count\nFROM cast_info AS a\nJOIN aka_name AS n ON a.person_id = n.person_id\n       WHERE a.person_role_id = 2  \n             AND a.person_id &gt; 3900000\nLIMIT 0, 20;\n\n\nDisplaying records 1 - 10\n\n\nperson_id\nmovie_id\nname\nrow_count\n\n\n\n\n3900141\n759802\nSimons, Rita Joanne\n2904759\n\n\n3902258\n4365829\nSinger, Rabbi Tovia\n2904759\n\n\n3902699\n3109788\nSingh, Sabine Erika\n2904759\n\n\n3903035\n3215866\nVal\n2904759\n\n\n3904831\n2468067\nMasha\n2904759\n\n\n3904928\n3654347\nFei, Siu Yin\n2904759\n\n\n3904928\n3654347\nHsiao, Yen-fei\n2904759\n\n\n3904928\n3654347\nSiu, Yinfei\n2904759\n\n\n3904928\n3654347\nXiao, Yanfei\n2904759\n\n\n3904928\n3654347\nYin-Fai, Siu\n2904759"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#inner-join",
+    "href": "slides/2025-11-17-joins.html#inner-join",
+    "title": "SQL joins",
+    "section": "Inner JOIN",
+    "text": "Inner JOIN\nWith an inner JOIN, there are 32 rows corresponding to all the actresses in the seven 2015 films with the most votes. Because the JOIN is an intersection of the two tables, only the actresses with person_id above 3900000 are included.\n\nSELECT * FROM\n(SELECT t.id,\n       t.title\nFROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               # movies only\n    AND idx.info_type_id = 100      # info_type is votes\n    AND idx.info &gt; 400000) AS movs  # at least 400,000 votes     \nINNER JOIN (SELECT a.person_id,\n       a.movie_id,\n       n.name\n    FROM cast_info AS a\n    JOIN aka_name AS n ON a.person_id = n.person_id\n    WHERE a.role_id = 2             # acresses only\n        AND a.person_id &gt; 3900000) AS acts ON acts.movie_id = movs.id\nLIMIT 0, 300;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\nid\ntitle\nperson_id\nmovie_id\nname\n\n\n\n\n3313672\nAvengers: Age of Ultron\n3916648\n3313672\nSmulders, Jacoba Francisca Maria\n\n\n3752999\nInside Out\n4122876\n3752999\nKuzniar, Lennon Wynn\n\n\n3787790\nJurassic World\n3938423\n3787790\nNorvell, Ingrid\n\n\n3787790\nJurassic World\n3938423\n3787790\nNorvell, Ingrid\n\n\n3787790\nJurassic World\n3950111\n3787790\nSallaway, Seannon Jane\n\n\n3787790\nJurassic World\n4079047\n3787790\nWashington, Kelly Lynn\n\n\n3787790\nJurassic World\n4079047\n3787790\nWashington, Kelly Lynn\n\n\n3787790\nJurassic World\n4084626\n3787790\nWeeks, Jency\n\n\n3787790\nJurassic World\n4084626\n3787790\nJenc\n\n\n3787790\nJurassic World\n4084626\n3787790\nLittle J"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#right-join",
+    "href": "slides/2025-11-17-joins.html#right-join",
+    "title": "SQL joins",
+    "section": "RIGHT JOIN",
+    "text": "RIGHT JOIN\nWith a RIGHT JOIN, there are more than 300 rows (the LIMIT clause keeps us from knowing how many rows, but there are a LOT!) corresponding to all the actresses whose person_id above 3900000 are included. Those actresses who acted in one of the seven top 2015 films are also included in the full results table, but they don’t happen to be in the truncated output here.\n\nSELECT * FROM\n(SELECT t.id,\n       t.title\nFROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               # movies only\n    AND idx.info_type_id = 100      # info_type is votes\n    AND idx.info &gt; 400000) AS movs  # at least 400,000 votes     \nRIGHT JOIN (SELECT a.person_id,\n       a.movie_id,\n       n.name\n    FROM cast_info AS a\n    JOIN aka_name AS n ON a.person_id = n.person_id\n    WHERE a.role_id = 2             # acresses only\n        AND a.person_id &gt; 3900000) AS acts ON acts.movie_id = movs.id\nLIMIT 0, 300;\n\n\nDisplaying records 1 - 10\n\n\nid\ntitle\nperson_id\nmovie_id\nname\n\n\n\n\n\n\n3900001\n3355298\nSimonis, Heidi\n\n\n\n\n3900001\n3509490\nSimonis, Heidi\n\n\n\n\n3900001\n3739780\nSimonis, Heidi\n\n\n\n\n3900001\n3943329\nSimonis, Heidi\n\n\n\n\n3900001\n165963\nSimonis, Heidi\n\n\n\n\n3900001\n268249\nSimonis, Heidi\n\n\n\n\n3900001\n268370\nSimonis, Heidi\n\n\n\n\n3900001\n268406\nSimonis, Heidi\n\n\n\n\n3900001\n268475\nSimonis, Heidi\n\n\n\n\n3900001\n279082\nSimonis, Heidi"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#left-join",
+    "href": "slides/2025-11-17-joins.html#left-join",
+    "title": "SQL joins",
+    "section": "LEFT JOIN",
+    "text": "LEFT JOIN\nWith a LEFT JOIN, there are 33 rows corresponding to the actresses in the seven top 2015 movies. Only The Revenant did not have any actresses whose person_id is greater than 3900000.\n\nSELECT * FROM\n(SELECT t.id,\n       t.title\nFROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               # movies only\n    AND idx.info_type_id = 100      # info_type is votes\n    AND idx.info &gt; 400000) AS movs  # at least 400,000 votes     \nLEFT JOIN (SELECT a.person_id,\n       a.movie_id,\n       n.name\n    FROM cast_info AS a\n    JOIN aka_name AS n ON a.person_id = n.person_id\n    WHERE a.role_id = 2             # acresses only\n        AND a.person_id &gt; 3900000) AS acts ON acts.movie_id = movs.id\nLIMIT 0, 300;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\n\n\nid\ntitle\nperson_id\nmovie_id\nname\n\n\n\n\n3313672\nAvengers: Age of Ultron\n3916648\n3313672\nSmulders, Jacoba Francisca Maria\n\n\n3752999\nInside Out\n4122876\n3752999\nKuzniar, Lennon Wynn\n\n\n3787790\nJurassic World\n3938423\n3787790\nNorvell, Ingrid\n\n\n3787790\nJurassic World\n3938423\n3787790\nNorvell, Ingrid\n\n\n3787790\nJurassic World\n3950111\n3787790\nSallaway, Seannon Jane\n\n\n3787790\nJurassic World\n4079047\n3787790\nWashington, Kelly Lynn\n\n\n3787790\nJurassic World\n4079047\n3787790\nWashington, Kelly Lynn\n\n\n3787790\nJurassic World\n4084626\n3787790\nWeeks, Jency\n\n\n3787790\nJurassic World\n4084626\n3787790\nJenc\n\n\n3787790\nJurassic World\n4084626\n3787790\nLittle J"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#counting-repeat-actresses",
+    "href": "slides/2025-11-17-joins.html#counting-repeat-actresses",
+    "title": "SQL joins",
+    "section": "Counting repeat actresses",
+    "text": "Counting repeat actresses\nWe might, for example, want to know how many names / spellings of a name with a specific person_id (above 3900000) exist for each person_id in each of the top voted seven films of 2015.\n\nSELECT acts.person_id, \n       COUNT(*) AS num_repeat_names\nFROM (SELECT t.id,\n       t.title\nFROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               # movies only\n    AND idx.info_type_id = 100      # info_type is votes\n    AND idx.info &gt; 400000) AS movs  # at least 400,000 votes\nJOIN (SELECT a.person_id,\n       a.movie_id,\n       n.name\n    FROM cast_info AS a\n    JOIN aka_name AS n ON a.person_id = n.person_id\n    WHERE a.role_id = 2             # acresses only\n        AND a.person_id &gt; 3900000) AS acts ON acts.movie_id = movs.id\nGROUP BY acts.person_id;\n\n\nDisplaying records 1 - 10\n\n\nperson_id\nnum_repeat_names\n\n\n\n\n3916648\n1\n\n\n4122876\n1\n\n\n3938423\n2\n\n\n3950111\n1\n\n\n4079047\n2\n\n\n4084626\n3\n\n\n4099458\n1\n\n\n3958614\n1\n\n\n3990819\n2\n\n\n4081131\n2"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#counting-number-of-actresses-per-film",
+    "href": "slides/2025-11-17-joins.html#counting-number-of-actresses-per-film",
+    "title": "SQL joins",
+    "section": "Counting number of actresses per film",
+    "text": "Counting number of actresses per film\nWe might, for example, want to know how many actresses with a specific person_id (above 3900000) are in each of the top voted seven films of 2015.\n\nSELECT movs.id, \n       movs.title,\n       COUNT(*) AS num_actress\nFROM (SELECT t.id,\n       t.title\nFROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               # movies only\n    AND idx.info_type_id = 100      # info_type is votes\n    AND idx.info &gt; 400000) AS movs  # at least 400,000 votes\nJOIN (SELECT a.person_id,\n       a.movie_id,\n       n.name\n    FROM cast_info AS a\n    JOIN aka_name AS n ON a.person_id = n.person_id\n    WHERE a.role_id = 2             # acresses only\n        AND a.person_id &gt; 3900000) AS acts ON acts.movie_id = movs.id\nGROUP BY movs.id;\n\n\n6 records\n\n\nid\ntitle\nnum_actress\n\n\n\n\n3313672\nAvengers: Age of Ultron\n1\n\n\n3752999\nInside Out\n1\n\n\n3787790\nJurassic World\n9\n\n\n3915213\nMad Max: Fury Road\n5\n\n\n4260166\nStar Wars: Episode VII - The Force Awakens\n15\n\n\n4389619\nThe Martian\n1"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#unioning",
+    "href": "slides/2025-11-17-joins.html#unioning",
+    "title": "SQL joins",
+    "section": "UNIONing",
+    "text": "UNIONing\nIn SQL a UNION clause combines two different tables by their rows (whereas JOIN combines two tables by columns). Think about UNION similarly to the bind_rows() command in R.\n\nUNION binds rows while JOIN appends columns, image credit: Jane Williams https://blog.devart.com/mysql-union-tutorial-html.html"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#unions",
+    "href": "slides/2025-11-17-joins.html#unions",
+    "title": "SQL joins",
+    "section": "UNIONs",
+    "text": "UNIONs\nSilly example where the column names are ignored.\n\nSELECT \n    1 AS bar,\n    2 AS foo\n\nUNION\n\nSELECT \n    10 AS foo,\n    20 AS bar;\n\n\n2 records\n\n\nbar\nfoo\n\n\n\n\n1\n2\n\n\n10\n20"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#union",
+    "href": "slides/2025-11-17-joins.html#union",
+    "title": "SQL joins",
+    "section": "UNION",
+    "text": "UNION\nUNION is specifically designed to bind rows from two different SELECT queries where the variables have been selected in the same order.\nCombine the top voted movies from 2015 with the top voted movies from 2019.\nHowever, to account for time, we require the movies from 2015 to have more votes (400,000) than the movies from 2017 (200,000).\nThat is, the WHERE clause is different for the two subqueries."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#union-1",
+    "href": "slides/2025-11-17-joins.html#union-1",
+    "title": "SQL joins",
+    "section": "UNION",
+    "text": "UNION\n\n(SELECT t.title, \n        t.production_year, \n        idx.info AS num_votes\n    FROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               \n    AND idx.info_type_id = 100      \n    AND idx.info &gt; 400000)\n\nUNION\n\n(SELECT t.title, \n        t.production_year, \n        idx.info AS num_votes\n    FROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2017  \n    AND t.kind_id = 1               \n    AND idx.info_type_id = 100      \n    AND idx.info &gt; 200000)\nLIMIT 0, 100;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\ntitle\nproduction_year\nnum_votes\n\n\n\n\nAvengers: Age of Ultron\n2015\n540606\n\n\nInside Out\n2015\n443051\n\n\nJurassic World\n2015\n471237\n\n\nMad Max: Fury Road\n2015\n666484\n\n\nStar Wars: Episode VII - The Force Awakens\n2015\n691691\n\n\nThe Martian\n2015\n583987\n\n\nThe Revenant\n2015\n526189\n\n\nDunkirk\n2017\n229089\n\n\nGuardians of the Galaxy Vol. 2\n2017\n281845\n\n\nLogan\n2017\n397056"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#union-all",
+    "href": "slides/2025-11-17-joins.html#union-all",
+    "title": "SQL joins",
+    "section": "UNION ALL",
+    "text": "UNION ALL\nIf the goal is to include duplicates across two tables, use UNION ALL instead of UNION.\nLet’s say that the first table is all movies with production year after 2012 and number of votes greater than 500,000. The second table is movies with production year equal to 2015 and number of votes greater than 400,000.\nThe Martian would be in both tables."
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#union-all-1",
+    "href": "slides/2025-11-17-joins.html#union-all-1",
+    "title": "SQL joins",
+    "section": "UNION ALL",
+    "text": "UNION ALL\nWith just UNION\n\n(SELECT t.title,\n        t.production_year, \n        idx.info AS num_votes\n    FROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year &gt; 2012  \n    AND t.kind_id = 1               \n    AND idx.info_type_id = 100      \n    AND idx.info &gt; 500000)\n\nUNION\n\n(SELECT t.title, \n        t.production_year, \n        idx.info AS num_votes\n    FROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               \n    AND idx.info_type_id = 100      \n    AND idx.info &gt; 400000)\nORDER BY production_year DESC, num_votes;\n\n\nDisplaying records 1 - 10\n\n\n\n\n\n\n\ntitle\nproduction_year\nnum_votes\n\n\n\n\nBatman v Superman: Dawn of Justice\n2016\n500037\n\n\nDeadpool\n2016\n673887\n\n\nInside Out\n2015\n443051\n\n\nJurassic World\n2015\n471237\n\n\nThe Revenant\n2015\n526189\n\n\nAvengers: Age of Ultron\n2015\n540606\n\n\nThe Martian\n2015\n583987\n\n\nMad Max: Fury Road\n2015\n666484\n\n\nStar Wars: Episode VII - The Force Awakens\n2015\n691691\n\n\nInterstellar\n2014\n1102826"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#union-all-2",
+    "href": "slides/2025-11-17-joins.html#union-all-2",
+    "title": "SQL joins",
+    "section": "UNION ALL",
+    "text": "UNION ALL\nWhen UNION ALL is applied, The Martian is listed twice in the results table.\n\n(SELECT t.title,\n        t.production_year, \n        idx.info AS num_votes\n    FROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year &gt; 2012  \n    AND t.kind_id = 1               \n    AND idx.info_type_id = 100      \n    AND idx.info &gt; 500000)\n\nUNION ALL\n\n(SELECT t.title, \n        t.production_year, \n        idx.info AS num_votes\n    FROM title AS t\nJOIN movie_info_idx AS idx ON idx.movie_id = t.id\nWHERE t.production_year = 2015  \n    AND t.kind_id = 1               \n    AND idx.info_type_id = 100      \n    AND idx.info &gt; 400000)\nORDER BY production_year DESC, num_votes;\n\n\nDisplaying records 1 - 10\n\n\ntitle\nproduction_year\nnum_votes\n\n\n\n\nBatman v Superman: Dawn of Justice\n2016\n500037\n\n\nDeadpool\n2016\n673887\n\n\nInside Out\n2015\n443051\n\n\nJurassic World\n2015\n471237\n\n\nThe Revenant\n2015\n526189\n\n\nThe Revenant\n2015\n526189\n\n\nAvengers: Age of Ultron\n2015\n540606\n\n\nAvengers: Age of Ultron\n2015\n540606\n\n\nThe Martian\n2015\n583987\n\n\nThe Martian\n2015\n583987"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#full-join-with-union",
+    "href": "slides/2025-11-17-joins.html#full-join-with-union",
+    "title": "SQL joins",
+    "section": "FULL JOIN with UNION",
+    "text": "FULL JOIN with UNION\n\nsqldf::sqldf(\"SELECT star.name,\n                     star.band,\n                     inst.plays\n              FROM band_members AS star\n              LEFT JOIN band_instruments AS inst \n              ON star.name = inst.name\n             \n             UNION\n             \n             SELECT star.name, \n                    star.band, \n                    inst.plays\n             FROM band_instruments AS inst\n             LEFT JOIN band_members AS star\n             ON inst.name = star.name\")\n\n  name    band  plays\n1 &lt;NA&gt;    &lt;NA&gt; guitar\n2 John Beatles guitar\n3 Mick  Stones   &lt;NA&gt;\n4 Paul Beatles   bass"
+  },
+  {
+    "objectID": "slides/2025-11-17-joins.html#best-practice",
+    "href": "slides/2025-11-17-joins.html#best-practice",
+    "title": "SQL joins",
+    "section": "Best practice",
+    "text": "Best practice\nIt is always a good idea to terminate the SQL connection when you are done with it.\n\nDBI::dbDisconnect(con_imdb, shutdown = TRUE)"
   }
 ]

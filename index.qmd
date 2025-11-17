@@ -121,7 +121,7 @@ schedule <- tribble(
   
   
      "Week 13 <br> 11.17.25", 'SQL', 
- '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/06-sql-joins.html" target = "_blank">SQL joins</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-17-joins.html" target = "_blank">SQL joins</a>',
+ '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/06-sql-joins.html" target = "_blank">SQL joins</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2025-11-17-joins.html" target = "_blank">SQL joins</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws18_ds2_f25_sql3.pdf" target = "_blank">WS 18 - writing SQL queries</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall2025/repositories" target = "_blank">HW 7</a> - due 11.19.25 <br> <i class="fa-regular fa-circle-question"></i> Quiz 5 11.19.25',
   ' ',
 
