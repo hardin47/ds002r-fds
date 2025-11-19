@@ -24,10 +24,10 @@ source("../_common.R")
 fontawesome::fa_html_dependency()
 ```
 
-# Agenda  11/17/25 + 11/19/25
+# Agenda  11/17/25
 
 1. Joining
-2. Other combinations
+
 
 # `JOIN`ing
 
@@ -512,6 +512,11 @@ JOIN (SELECT a.person_id,
         AND a.person_id > 3900000) AS acts ON acts.movie_id = movs.id
 GROUP BY movs.id;
 ```
+
+
+# Agenda  11/19/25
+
+1. Unions
 
 ## `UNION`ing
 
