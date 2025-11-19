@@ -686,7 +686,7 @@ sqldf::sqldf("SELECT star.name,
              
              UNION
              
-             SELECT star.name, 
+             SELECT inst.name, 
                     star.band, 
                     inst.plays
              FROM band_instruments AS inst

@@ -2824,8 +2824,8 @@ SELECT flights;
 
 (@) What is wrong with this **SQL** clause?[^126c]
     (a) Need a doubl equals: `==`
-    (b) Need quotes around 2014, `"2014"`
-    (c) Need quotes around `dep_delay`, `"dep_delay"`
+    (b) Need quotes around 2014: `"2014"`
+    (c) Need quotes around `dep_delay`: `"dep_delay"`
     (d) `year = 2014` should go in `WHERE`
     (e) Need `GROUP BY year`
 
