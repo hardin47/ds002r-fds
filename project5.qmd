@@ -31,8 +31,8 @@ Your analysis should have the following elements:
 
 ## Logistics
 
-* The information on how to connect to the **SQL** database was sent to you via email. Please ask if you don't have the email!
-* Recall that the <a href = "https://ds002r-fds.netlify.app/slides/2025-04-16-clauses" target = "_blank">in-class slides on **SQL** statements</a> provide many **SQL** queries that give a sense of the datasets.
+* The information on how to connect to the **SQL** database was sent / posted via Canvas announcements. Please ask if you don't have the email!
+* Recall that the <a href = "https://ds002r-fds.netlify.app/slides/2025-11-12-clauses" target = "_blank">in-class slides on **SQL** statements</a> provide many **SQL** queries that give a sense of the datasets.
 * The goal is to use **SQL** for 100% of the data wrangling. If there is some data wrangling that you need to do and can't figure it out in **SQL**, please ask.
 * All wrangling (i.e., all **SQL** code) should be written in **SQL** chunks, not **R** chunks.
 * In almost every case, you should use the entire table (i.e., no reason to use `LIMIT` on your final analysis). Please confirm with me in advance if you do need to use `LIMIT` for some reason. The expectation is that your `WHERE` clause will filter the data to make it small enough to use in memory.
@@ -47,7 +47,7 @@ Your analysis should have the following elements:
 
 ## Timeline
 
-Project 5 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday November 26**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 5 must be submitted on Canvas (not Gradescope) by **11:59 PM on Monday December 1**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
 
 
 <!--

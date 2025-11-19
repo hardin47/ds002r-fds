@@ -14,15 +14,15 @@ Project 6 has three main tasks:
 
 1. The first is to re-do all the previous projects. Not only should you address all the issues that have been previously brought to light (see comments on projects on Canvas), but you should also do things like removing the warnings & messages.  Make sure that all data and ideas have been properly cited.  Rewrite any code so that it is actually **your** work (instead of, for example, copied directly from ChatGPT). Give all graphs proper captions. Explain your work.  You will write up (and turn in, separate from your website) a document explaining what changes and updates you've made.
 
-2. The second thing to do is to prepare a ~5 min presentation on some aspect of your project.  It can be about any aspect of the project (or all aspects of the project), and your presentation should be as if to a client about the work.  You'll create the presentation in Quarto (formatted as revealjs) rendered to html.  The presentation will be either on Thursday May 8th during reading days (9am-noon) or during our regularly scheduled final time, Tuesday May 13th 9am-noon (your choice).
+2. The second thing to do is to prepare a ~5 min presentation on some aspect of your project.  It can be about any aspect of the project (or all aspects of the project), and your presentation should be as if to a client about the work.  You'll create the presentation in Quarto (formatted as revealjs) rendered to html.  The presentation will be either on Friday December 5th during reading days (9am-noon) or during our regularly scheduled final time, Wednesday December 10th 9am-noon (your choice).
 
 3. Write up a document detailing the changes you have made to your website.
 
 ## Timeline
 
-Project 6 must be submitted on Canvas (not Gradescope) by **11:59 PM on Tuesday, May 13, 2025**.  To Canvas submit two things:  1. the URL of your overall website, 2. a document detailing the changes you have made.
+Project 6 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday, December 10, 2025**.  To Canvas submit two things:  1. the URL of your overall website, 2. a document detailing the changes you have made.
 
-Additionally, you will give a ~5 min presentation to the class on some aspect(s) of your project.  You can describe one of the projects, the creation of the website, the entire project overall, or any other aspect of the project.  (You will present either on the Thursday May 8th during reading days (9am-noon) or during our regularly scheduled final time, Tuesday May 13th 9am-noon.)
+Additionally, you will give a ~5 min presentation to the class on some aspect(s) of your project.  You can describe one of the projects, the creation of the website, the entire project overall, or any other aspect of the project.  (You will present either on the Friday December 5th during reading days (9am-noon) or during our regularly scheduled final time, Wednesday December 10th 9am-noon.)
 
 ## Presentation
 
@@ -61,7 +61,7 @@ IMPORTANT: you want your website to represent **your** knowledge.  If all the co
      - add comments within the code to help the reader navigate what you are doing.
      - making sure that all work, data sources, etc. are documented appropriately
      
-  * create a corresponding document (text, Word, Google doc, pdf, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects.
+  * create a corresponding document (text, Word, Google doc, pdf, etc.) describing (in enough detail to receive credit!) all of the changes you've made from the original set of projects. The document does not need to be long or formatted in any particular way. It does need to communicate what you have done.
   
   * on the navigation bar at the top of your website, don't call your analyses "my website" or "project 2", use descriptive names that will make sense after the semester is over (to someone looking at your website who doesn't know about our class).
   
