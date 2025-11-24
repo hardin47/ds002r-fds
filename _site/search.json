@@ -494,7 +494,7 @@
     "href": "slides/2025-11-24-shiny.html#reactive",
     "title": "Shiny",
     "section": "reactive()",
-    "text": "reactive()\nThe function reactive() is worth pointing out. It is used to create a reactive expression — an expression that is automatically recalculated when any of its inputs change.\nUse reactive() when\n\nYou want to perform calculations that depend on user input and automatically update when those inputs change.\nYou need to pass dynamically calculated values to other parts of the app (outputs, observers, etc.).\nYou need to create reactive data or state, such as subsets or transformations of input data.\n\nDo not use reactive() on the UI inputs because they are inherently reactive already!"
+    "text": "reactive()\nThe function reactive() is worth pointing out. It is used to create a reactive expression — an expression that is automatically recalculated when any of its inputs change.\nUse reactive() when\n\nYou want to perform calculations that depend on user input and automatically update when those inputs change.\nYou need to pass dynamically calculated values to other parts of the app (outputs, observers, etc.).\nYou need to create reactive data or state, such as subsets or transformations of input data.\n\nDo not use reactive() within any of the render*() functions because they are inherently reactive already!"
   },
   {
     "objectID": "slides/2025-11-24-shiny.html#live-demo",

@@ -237,7 +237,7 @@ Use `reactive()` when
 * You need to pass dynamically calculated values to other parts of the app (outputs, observers, etc.).
 * You need to create reactive data or state, such as subsets or transformations of input data.
 
-Do not use `reactive()` on the UI inputs because they are inherently reactive already!
+Do not use `reactive()` within any of the `render*()` functions because they are inherently reactive already!
 
 ## Live demo
 
