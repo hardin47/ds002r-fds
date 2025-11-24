@@ -1,0 +1,250 @@
+---
+title: Shiny
+author: "Jo Hardin"
+subtitle: "November 24, 2025"
+format:
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+
+source("../_common.R")
+fontawesome::fa_html_dependency()
+options(pillar.width = 70)
+```
+
+
+```{r}
+#| include: false
+library(tidyverse)
+library(mosaic)
+library(knitr)
+library(ggthemes)
+```
+
+
+# Agenda  11/24/25
+
+1. Shiny examples
+2. parts of a Shiny file
+
+
+# What is Shiny?
+
+
+> Shiny is an R package that allows you to easily create rich, interactive web apps. Shiny allows you to take your work in R or Python and expose it via a web browser so that anyone can use it. 
+
+## Examples
+
+See the following gallery of Shiny example from Posit: <a href = "https://shiny.posit.co/r/gallery/" target = "_blank">https://shiny.posit.co/r/gallery/</a>
+
+
+<iframe width="780" height="500" src="https://shiny.posit.co/r/gallery/" title="Widgets" data-external="1"></iframe>
+
+## A simple Shiny App
+
+Put the following into a Shiny App using `File` $\rightarrow$ `New File` $\rightarrow$ `Shiny Web App ...` as a file called `app.R`.
+
+```{r}
+#| eval: false
+library(shiny)
+
+ui <- fluidPage(
+  "Hello, world!"
+)
+
+server <- function(input, output, session) {
+}
+
+shinyApp(ui, server)
+```
+
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("../images/shiny_start.png")
+```
+
+## What are the parts of a Shiny App?
+
+Looking closely at the code above, the `app.R` does four things:
+
+1. It calls `library(shiny)` to load the shiny package.
+
+2. It defines the user interface, the HTML webpage that humans interact with. In this case, it’s a page containing the words "Hello, world!".
+
+3. It specifies the behaviour of our app by defining a server function. It’s currently empty, so our app doesn’t do anything, but we’ll be back to revisit this shortly.
+
+4. It executes `shinyApp(ui, server)` to construct and start a Shiny application from UI and server.
+
+## How to run a Shiny App?
+
+::: {.callout-tip icon=false}
+## To run Shiny
+
+* Click the Run App button in the document toolbar.
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("../images/shiny_run.png")
+```
+
+* Use a keyboard shortcut: Cmd/Ctrl + Shift + Enter.
+
+* If you're not using RStudio, you can (`source()`) the whole document, or call `shiny::runApp()` with the path to the directory containing `app.R`.
+:::
+
+## What does it look like?
+
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("../images/shiny_running.png")
+```
+
+## Back in R...
+
+Go back and look at the console.  You will see something like:
+
+```
+Listening on http://127.0.0.1:7521
+```
+
+R is busy!  It is running your Shiny App.  You can't do anything in R because the processes are engaged with the Shiny App.
+
+
+# Deconstructing Shiny
+
+## Pieces
+
+Shiny applications will be contained in one `app.R` file. The file contains two key components:
+
+`ui`: code for the user interface. The user interface is the webpage that your user will interact with. 
+
+`server`: code for the computer part. What should the computer/server do with your inputs as the user changes them. 
+
+The last code at the bottom, `shinyApp(ui = ui, server = server)`, will compile everything together to result in the interactive webpage.
+
+Press Run App at the top of RStudio and see what happens!
+
+## Pieces
+
+```{r}
+#| eval: false
+library(shiny)
+
+shinyApp(
+  ui = list(
+    # new (to you) widgets go here
+  ),
+  
+  server = function(input, output, session) {
+    # somewhat familiar (to you) code goes here
+  }
+)
+```
+
+## A brief widget tour
+
+<a href = "https://rundel.shinyapps.io/widgets/" target = "_blank">https://rundel.shinyapps.io/widgets/</a>
+
+<iframe width="780" height="500" src="https://rundel.shinyapps.io/widgets/" title="Widgets" data-external="1"></iframe>
+
+## The default Shinny App
+
+```{r}
+#| eval: false
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    https://shiny.posit.co/
+#
+
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("Old Faithful Geyser Data"),
+
+    # Sidebar with a slider input for number of bins 
+    sidebarLayout(
+        sidebarPanel(
+            sliderInput("bins",
+                        "Number of bins:",
+                        min = 1,
+                        max = 50,
+                        value = 30)
+        ),
+
+        # Show a plot of the generated distribution
+        mainPanel(
+           plotOutput("distPlot")
+        )
+    )
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+
+    output$distPlot <- renderPlot({
+        # generate bins based on input$bins from ui.R
+        x    <- faithful[, 2]
+        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+
+        # draw the histogram with the specified number of bins
+        hist(x, breaks = bins, col = 'darkgray', border = 'white',
+             xlab = 'Waiting time to next eruption (in mins)',
+             main = 'Histogram of waiting times')
+    })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
+```
+
+## Running Old Faithful
+
+* Run in RStudio
+
+* See the app in action here: <a href = "https://shiny.posit.co/r/gallery/start-simple/faithful/" target = "_blank">https://shiny.posit.co/r/gallery/start-simple/faithful/</a>
+
+## reactive()
+
+The function `reactive()` is worth pointing out.  It is used to create a reactive expression — an expression that is automatically recalculated when any of its inputs change.
+
+Use `reactive()` when
+
+* You want to perform calculations that depend on user input and automatically update when those inputs change.
+* You need to pass dynamically calculated values to other parts of the app (outputs, observers, etc.).
+* You need to create reactive data or state, such as subsets or transformations of input data.
+
+Do not use `reactive()` on the UI inputs because they are inherently reactive already!
+
+## Live demo
+
+Let's build a weather app!  See sample files here:  <a href = "https://github.com/hardin47/ds002r-fds/tree/main/Shiny_weather" target = "_blank">https://github.com/hardin47/ds002r-fds/tree/main/Shiny_weather</a>
+
+## Shiny in Python
+
+Check it out!
+
+<a href = "https://shiny.posit.co/py/" target = "_blank">https://shiny.posit.co/py/</a>

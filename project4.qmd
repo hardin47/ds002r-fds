@@ -94,7 +94,7 @@ Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesda
 
 * Target (what if the algorithm is good at predicting something you don't want predicted?). Duhigg, C. (2012), <a href = "https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?unlocked_article_code=1.6U4.nLSt.-yehBjKHEmPW&smid=url-share" target = "_blank">How Companies Learn Your Secrets</a>, The New York Times Magazine.
 
-* Amazon hiring algorithm (who has moral responsibility) Dastin, J. (2018), "<a href = "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G" target = "_blank">Amazon Scraps Secret AI Recruiting Tool that Showed Bias Against Women</a>, Reuters.
+* Amazon hiring algorithm (who has moral responsibility?) Dastin, J. (2018), "<a href = "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G" target = "_blank">Amazon Scraps Secret AI Recruiting Tool that Showed Bias Against Women</a>, Reuters.
 
 * Airlines respond differently, depending on who is tweeting (should the algorithm be used?). Gunarathne, P., Rui, H., and Seidmann, A. (2022). <a href = "https://pubsonline.informs.org/doi/10.1287/isre.2021.1058" target = "_blank">Racial Bias in Customer Service: Evidence from Twitter</a>, Information Systems Research: 33, 43-54. **n.b., log into the Claremont Colleges Library and search for the title. The library has the digital copy available.**
 
