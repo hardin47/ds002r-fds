@@ -2943,7 +2943,7 @@ can use flights data for cities with particular names-->
 
 ---
 
-(@) Which of the following Shiny components contains the code for handling user inputs and generating outputs?[^143]
+(@) Which of the following Shiny components contains the code for handling user inputs and realizing outputs?[^143]
     a. `ui`
     b. `server`
     c. `runApp()`
