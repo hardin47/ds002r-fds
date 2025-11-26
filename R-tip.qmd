@@ -62,15 +62,15 @@ schedule <- tribble(
   
   'Tip 19', 'cmd + shift + D', 'deletes a line', 'cntrl + shift + D on PC',
   
-  'Tip 20', '`glimpse()`', 'function which displays data info', '',
+  'Tip 20', '`glimpse()`', 'function which displays data info', ' ',
   
   'Tip 21', 'cmd + opt + L', 'collapse a section', 'alt + L on PC',
   
   'Tip 22', 'cmd + opt + shift + L', 'expand a section', 'alt + shift + L on PC',
   
-  'Tip 23', 'cmd + opt + O', 'collapse all section', 'alt + O on PC',
+  'Tip 23', 'cmd + opt + O', 'collapse all sections', 'alt + O on PC',
   
-  'Tip 24', 'cmd + opt + shift + O', 'collapse a section', 'alt + shift + O on PC'
+  'Tip 24', 'cmd + opt + shift + O', 'expand all sections', 'alt + shift + O on PC'
   
   )
 ```
