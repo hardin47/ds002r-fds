@@ -572,5 +572,33 @@
     "title": "R tip-of-the-day",
     "section": "",
     "text": "Artwork by @allison_horst.\n\n\n\n\n\n\n\n\n\n\n\n\n\nnumber\ntip\ndescription\nmisc\n\n\n\n\nTip 1\ncmd + opt + i\nadds a new R chunk\ncntrl + alt + i for PC\n\n\nTip 2\nTools -&gt; Global Options… -&gt; Appearance\nallows for dark mode, plus other options!\n\n\n\nTip 3\ncmd + opt + c\nruns the chunk\ncntrl + opt + c on PC\n\n\nTip 4\n\nwithin the viewer, sorts the data wrt a variable\nclick on the variable name\n\n\nTip 5\ncmd + shift + C\ncomments the line\ncntrl + shift + C for PC\n\n\nTip 6\ncmd + shift + enter\nruns the current chunk\ncntrl + shift + enter for PC\n\n\nTip 7\n\nchanges the viewer output\ngear near Render\n\n\nTip 8\ncmd + shift + opt + j\nwindow to jump between chunks\ncntrl + shift + opt + j for PC\n\n\nTip 9\ncmd + shift + M\nproduces a pipe\ncntrl + shift + M for PC  Tools -&gt; Global Options… -&gt; Code to get the native pipe\n\n\nTip 10\nhighlight with mouse and hit quotation\nwill put quotes around the highlighted phrase\n\n\n\nTip 11\nhighlight with mouse and hit parenthesis\nwill put parentheses around the highlighted phrase\n\n\n\nTip 12\ncmd + opt + B\nruns code start to line\ncntrl + opt + B on PC  (This one did not work on my keyboard)\n\n\nTip 13\ncmd + opt + E\nruns code line to end\ncntrl + opt + E on PC  (This one did not work on my keyboard)\n\n\nTip 14\nup arrow (on keyboard)\nbrings back the previous line\nworks in Console or Terminal\n\n\nTip 15\ntab complete\n\nworks in Console or in the R chunk\n\n\nTip 16\nusethis::use_github()\n\nmake sure to direct to the correct folder!\n\n\nTip 17\ncmd + shift + F\nFind in Files\ncntrl + shift + F on PC\n\n\nTip 18\ncmd + click on function name\nopens a tab with function details\ncntrl + click on function name on PC\n\n\nTip 19\ncmd + shift + D\ndeletes a line\ncntrl + shift + D on PC\n\n\nTip 20\nglimpse()\nfunction which displays data info\n\n\n\nTip 21\ncmd + opt + L\ncollapse a section\nalt + L on PC\n\n\nTip 22\ncmd + opt + shift + L\nexpand a section\nalt + shift + L on PC\n\n\nTip 23\ncmd + opt + O\ncollapse all sections\nalt + O on PC\n\n\nTip 24\ncmd + opt + shift + O\nexpand all sections\nalt + shift + O on PC\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+  },
+  {
+    "objectID": "slides/2025-12-01-fin.html#data-science-overview",
+    "href": "slides/2025-12-01-fin.html#data-science-overview",
+    "title": "Fin",
+    "section": "Data Science Overview",
+    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-12-01-fin.html#data-science-overview-1",
+    "href": "slides/2025-12-01-fin.html#data-science-overview-1",
+    "title": "Fin",
+    "section": "Data Science Overview",
+    "text": "Data Science Overview\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+  },
+  {
+    "objectID": "slides/2025-12-01-fin.html#data-scientists",
+    "href": "slides/2025-12-01-fin.html#data-scientists",
+    "title": "Fin",
+    "section": "Data Scientists",
+    "text": "Data Scientists\nWho does data science?\nconnecting, uplifting, and recognizing voices – a database of statisticians and data scientists."
+  },
+  {
+    "objectID": "slides/2025-12-01-fin.html#take-aways",
+    "href": "slides/2025-12-01-fin.html#take-aways",
+    "title": "Fin",
+    "section": "Take-aways",
+    "text": "Take-aways\n\n80-90% of data science work is data wrangling and visualization\nwrangling the data well is usually more important than modeling the data well\nthere are many choices along the way, there is no such thing as truth\nif you can’t reproduce the work, you should question whether to trust it\ncommunicating to your audience is likely the most important aspect of doing data science"
   }
 ]
