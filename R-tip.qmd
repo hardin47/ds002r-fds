@@ -70,7 +70,17 @@ schedule <- tribble(
   
   'Tip 23', 'cmd + opt + O', 'collapse all sections', 'alt + O on PC',
   
-  'Tip 24', 'cmd + opt + shift + O', 'expand all sections', 'alt + shift + O on PC'
+  'Tip 24', 'cmd + opt + shift + O', 'expand all sections', 'alt + shift + O on PC',
+  
+  'Tip 25', 'highlight code + cmd + shift + a', 'reformats spacing', ' ',
+  
+  'Tip 26', 'opt + cmd + arrow', 'duplicates line', ' ',
+  
+  'Tip 27', 'highlight word + cmd + e', 'finds that word everywhere', ' ',
+  
+  'Tip 28', 'opt + -', 'produces <-', ' ',
+  
+  'Tip 29', 'highlight code + cmd + i', 'resets indenting', ' '
   
   )
 ```
