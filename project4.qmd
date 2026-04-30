@@ -80,7 +80,7 @@ Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesda
 
 (Feel free to find your own example if you prefer.)
 
-* Biobank samples from the Havasupai lawsuit (informed consent, among other things).  Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), <a href = "https://www.researchgate.net/publication/260121496_Protecting_Dignitary_Interests_of_Biobank_Research_Participants_Lessons_from_Havasupai_Tribe_v_Arizona_Board_of_RegentsI" target = "_blank">Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents</a>, Law, Innovation and Technology, 5, 54–84.
+* Biobank samples from the Havasupai lawsuit (informed consent, among other things).  Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), <a href = "https://www.tandfonline.com/doi/abs/10.5235/17579961.5.1.54" target = "_blank">Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents</a>, Law, Innovation and Technology, 5, 54–84.
 
 * Facebook emotional contagion experiment (patient consent, among other things). Kramer, A. D., Guillory, J. E., and Hancock, J. T. (2014), <a href = "https://www.pnas.org/doi/10.1073/pnas.1320040111" target = "_blank">Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks</a>, Proceedings of the National Academy of Sciences of the United States of America, 111, 8788–8790.
 
