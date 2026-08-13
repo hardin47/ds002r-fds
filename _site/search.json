@@ -600,5 +600,61 @@
     "title": "Fin",
     "section": "Take-aways",
     "text": "Take-aways\n\n80-90% of data science work is data wrangling and visualization\nwrangling the data well is usually more important than modeling the data well\nthere are many choices along the way, there is no such thing as truth\nif you can’t reproduce the work, you should question whether to trust it\ncommunicating to your audience is likely the most important aspect of doing data science"
+  },
+  {
+    "objectID": "github.html",
+    "href": "github.html",
+    "title": "Working on assignments with GitHub",
+    "section": "",
+    "text": "In DS002R, we will use GitHub + Gradescope to access and submit assignments. Here is the basic structure of how it will work:\n\nGet the assignment materials from GitHub.\nClone the repository to any machine you are using (the copy of the repo is called a “fork”).\nWork on the assignment and push back to GitHub.\nSubmit the assignment on Gradescope.\n\n\n\n\n\n\n\nimage credit: https://xkcd.com/1597/,\n\n\n\n\n\nThe following diagram lays out the process, and the rest of the document provides a more detailed set of instructions.\n\n\n\n\n\nFlowchart of assignment process."
+  },
+  {
+    "objectID": "github.html#pull",
+    "href": "github.html#pull",
+    "title": "Working on assignments with GitHub",
+    "section": "pull",
+    "text": "pull\nIf you are working with a colleague or on different machines it is incredibly important to get in the habit of immediately pulling their work just as you sit down to start your own work. (If you are working alone on a single machine pull won’t hurt! You’ll just be told that your files are already up to date.)\n\n\n\n\n\nAlways pull before you start. pull-work-save-commit-push"
+  },
+  {
+    "objectID": "github.html#render-or-preview-your-work",
+    "href": "github.html#render-or-preview-your-work",
+    "title": "Working on assignments with GitHub",
+    "section": "render or preview your work",
+    "text": "render or preview your work\nDon’t forget to put your name on the assignment. Also, make sure that you create a pdf file by previewing or rendering. Render early and often. The more often you render, the fewer headaches you will have.\n\n\n\n\n\nworkflow: pull-work-render-commit-push"
+  },
+  {
+    "objectID": "github.html#commit-your-work",
+    "href": "github.html#commit-your-work",
+    "title": "Working on assignments with GitHub",
+    "section": "commit your work",
+    "text": "commit your work\nYou don’t need to commit every file, but you do need to commit files that are integral to the analysis (always commit the following files: .qmd, .pdf, data files, images that created the pdf, etc.).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nworkflow: pull-work-render-commit-push"
+  },
+  {
+    "objectID": "github.html#push-your-work-to-github",
+    "href": "github.html#push-your-work-to-github",
+    "title": "Working on assignments with GitHub",
+    "section": "push your work to GitHub",
+    "text": "push your work to GitHub\nIt is good practice to use meaningful commit messages to help your future self figure out your past work.\n\n\n\n\n\nworkflow: pull-work-render-commit-push"
+  },
+  {
+    "objectID": "github.html#check-your-work-on-github",
+    "href": "github.html#check-your-work-on-github",
+    "title": "Working on assignments with GitHub",
+    "section": "check your work on GitHub",
+    "text": "check your work on GitHub\nTo make sure that the work went through, always check your GitHub repo online to confirm any changes you made.\n\n\n\n\n\nCheck that your changes are correct."
+  },
+  {
+    "objectID": "github.html#connecting-your-github-account-to-gradescope",
+    "href": "github.html#connecting-your-github-account-to-gradescope",
+    "title": "Working on assignments with GitHub",
+    "section": "Connecting your GitHub account to Gradescope",
+    "text": "Connecting your GitHub account to Gradescope\nThe first time you go to submit an assignment on Gradescope, you will be asked to connect to GitHub. Here are the steps to follow to make that connection:\n\nAccess Gradescope from Canvas: From Canvas, click on Gradescope in the Course Navigation menu. You will be asked to authorize the Gradescope integration.\nNavigate to Gradescope.com: In a new tab (same browser), navigate to https://www.gradescope.com/. Gradescope should recognize your student user account from the Canvas integration.\nGo to Gradescope Account Settings: Click on Account (bottom left of the screen) and then Edit Account.\n\n\n\n\n\n\nChange your Gradescope account settings.\n\n\n\n\nThis will take you to your Account Settings in Gradescope. Here, you’ll have the option to verify your Pomona email address and set up a password.\n\nLink Your GitHub Account to Gradescope: Scroll to the bottom of the page to the Link External Account menu. Click on Link a GitHub account.\n\n\n\n\n\n\nLinking GitHub to Gradescope.\n\n\n\n\nYou’ll be prompted to authorize GitHub and connect it to Gradescope. In the drop-down menu under Repositories, be sure to select “Public and private” to enable full access.\n\n\n\n\n\nAuthorizing Gradescope to talk to GitHub.\n\n\n\n\nWhen prompted, log in to your GitHub account to complete the process (I don’t know if you need your PAT or your “Go(ubs!” password, try both!).\nAfter your accounts have been linked, you’ll see a message that says “Successfully authenticated with GitHub.”\n\n\n\n\n\nSuccessful integration of GitHub and Gradescope\n\n\n\n\n\nReturn to Canvas & Verify the Connection\n\nNow, you can return to Canvas and navigate back to Gradescope. If you are returning to your previous tab, you may need to refresh the page to make sure your account settings are updated.\nClick on your programming assignment in Gradescope. Verify that the GitHub connection is working, and that you can see a list of your GitHub files in the drop-down menu when you are submitting an assignment.\n\n\n\n\n\nSubmitting HW from GitHub to Gradescope.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you see a blank window when you click on Gradescope within Canvas, that means you need to enable third-party cookies in your browser. Since Gradescope is a third party integration in Canvas, cookies need to be enabled for it to work properly.\nITS has instructions for how to enable cookies on a range of different browsers: How do I enable third-party cookies in my browser?\n\n\n\n\n\n\n\n\nImportant\n\n\n\nITS has also put together a knowledge base article describing How to submit GitHub files to a Gradescope programming assignment."
+  },
+  {
+    "objectID": "github.html#submitting-assignments-after-having-connected-to-github",
+    "href": "github.html#submitting-assignments-after-having-connected-to-github",
+    "title": "Working on assignments with GitHub",
+    "section": "Submitting assignments after having connected to GitHub",
+    "text": "Submitting assignments after having connected to GitHub\nTo submit your assignment, complete the following steps:\n\nVia Canvas, access the course’s Gradescope site, select the appropriate assignment, and then choose GitHub as the submission method.\nSelect the appropriate GitHub repository. The branch will always be “main”.\n\nYou can submit multiple times before the deadline. Your last submission will determine your grade.\nOnce assignments are completely graded, you will be able to see your grade and assignment feedback on Gradescope. Grades will also be synced with Canvas."
   }
 ]
