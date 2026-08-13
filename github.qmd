@@ -164,41 +164,33 @@ include_graphics("images/name-render-positron.png")
 You don't need to commit every file, but you do need to commit files that are integral to the analysis (always commit the following files: .qmd, .pdf, data files, images that created the pdf, etc.).
 
 :::: {.columns} 
-::: {.column width="33%"}
-```{r, fig.cap = "", fig.alt = "workflow: pull-work-render-commit-push.", fig.show='hold', echo=FALSE}
-knitr::include_graphics("images/choose-commit-positron1.png")
-``` 
-:::
 
-::: {.column width="33%"}
+::: {.column width="50%"}
 ```{r, fig.cap = "", fig.alt = "workflow: pull-work-render-commit-push.", fig.show='hold', echo=FALSE}
 knitr::include_graphics("images/choose-commit-positron2.png")
 ``` 
 :::
 
-::: {.column width="33%"}
+::: {.column width="50%"}
 ```{r, fig.cap = "", fig.alt = "workflow: pull-work-render-commit-push.", fig.show='hold', echo=FALSE}
 knitr::include_graphics("images/choose-commit-positron3.png")
 ``` 
 :::
+
+
 ::::
 
 :::: {.columns}
-::: {.column width="33%"}
+
+::: {.column width="40%"}
 ```{r, fig.cap = "", fig.alt = "workflow: pull-work-render-commit-push.", fig.show='hold', echo=FALSE}
 knitr::include_graphics("images/choose-commit-positron4.png")
 ``` 
 :::
 
-::: {.column width="33%"}
+::: {.column width="40%"}
 ```{r, fig.cap = "", fig.alt = "workflow: pull-work-render-commit-push.", fig.show='hold', echo=FALSE}
 knitr::include_graphics("images/choose-commit-positron5.png")
-``` 
-:::
-
-::: {.column width="33%"}
-```{r, fig.cap = "", fig.alt = "workflow: pull-work-render-commit-push.", fig.show='hold', echo=FALSE}
-knitr::include_graphics("images/choose-commit-positron6.png")
 ``` 
 :::
 
@@ -210,9 +202,18 @@ workflow: pull-work-render-commit-push
 
 It is good practice to use meaningful commit messages to help your future self figure out your past work.
 
+::: {.column width="40%"}
 ```{r echo = FALSE, fig.cap="workflow: pull-work-render-commit-push", fig.alt = "Screen shot of how to push using Positron."}
 include_graphics("images/commit-push-positron.png")
 ```
+:::
+
+::: {.column width="40%"}
+```{r, fig.cap = "", fig.alt = "workflow: pull-work-render-commit-push.", fig.show='hold', echo=FALSE}
+knitr::include_graphics("images/choose-commit-positron6.png")
+``` 
+:::
+
 
 ## check your work on GitHub
 

@@ -627,14 +627,14 @@
     "href": "github.html#commit-your-work",
     "title": "Working on assignments with GitHub",
     "section": "commit your work",
-    "text": "commit your work\nYou don’t need to commit every file, but you do need to commit files that are integral to the analysis (always commit the following files: .qmd, .pdf, data files, images that created the pdf, etc.).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nworkflow: pull-work-render-commit-push"
+    "text": "commit your work\nYou don’t need to commit every file, but you do need to commit files that are integral to the analysis (always commit the following files: .qmd, .pdf, data files, images that created the pdf, etc.).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nworkflow: pull-work-render-commit-push"
   },
   {
     "objectID": "github.html#push-your-work-to-github",
     "href": "github.html#push-your-work-to-github",
     "title": "Working on assignments with GitHub",
     "section": "push your work to GitHub",
-    "text": "push your work to GitHub\nIt is good practice to use meaningful commit messages to help your future self figure out your past work.\n\n\n\n\n\nworkflow: pull-work-render-commit-push"
+    "text": "push your work to GitHub\nIt is good practice to use meaningful commit messages to help your future self figure out your past work.\n\n\n\n\n\n\nworkflow: pull-work-render-commit-push"
   },
   {
     "objectID": "github.html#check-your-work-on-github",
