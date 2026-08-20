@@ -5,6 +5,9 @@ project:
   output-dir: _site
   resources: 
     - "handout/*"
+  render:
+    - "*.qmd"
+    - "!clicker.qmd"
   
 website:
   title: "Foundations of Data Science in R"
@@ -16,7 +19,7 @@ website:
   navbar:
     title: "Foundations of Data Science in R"
     description: |
-      DS002R, Foundations of Data Science in R, Fall 2025
+      DS002R, Foundations of Data Science in R, Fall 2026
     background: success
     foreground: secondary
     search: true
@@ -62,7 +65,7 @@ website:
       <a href="https://www.linkedin.com/in/jo-hardin-b91a4b55" target = "_blank"><i class="fa-brands fa-linkedin-in"></i></a>
     center:
       - text: |
-          <br> © Jo Hardin, 2025 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
+          <br> © Jo Hardin, 2026 -- <a href = "mailto: jo.hardin@pomona.edu">jo.hardin@pomona.edu</a> -- <a href="https://hardin47.netlify.app/">https://hardin47.netlify.app/</a> <br> <br>
           DS002R -- Foundations of Data Science in R -- Pomona College <br>
 license: "CC-BY-SA-4.0"
 format:

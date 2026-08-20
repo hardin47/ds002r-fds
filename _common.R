@@ -7,7 +7,6 @@ options(digits = 3)
 suppressMessages(library(tidymodels))
 suppressMessages(library(gghighlight))
 suppressMessages(library(glue))
-suppressMessages(library(ggmosaic))
 suppressMessages(library(ggridges))
 suppressMessages(library(gridExtra))
 suppressMessages(library(infer))
@@ -24,8 +23,6 @@ suppressMessages(library(scales))
 suppressMessages(library(skimr))
 suppressMessages(library(caret))
 suppressMessages(library(palmerpenguins))
-suppressMessages(library(survival))
-suppressMessages(library(waffle))
 suppressMessages(library(ggrepel))
 suppressMessages(library(ggpubr))
 suppressMessages(library(unvotes))
@@ -38,6 +35,9 @@ suppressMessages(library(DBI))
 suppressMessages(library(dbplyr))
 suppressMessages(library(RMariaDB))
 suppressMessages(library(duckdb))
+suppressMessages(library(textdata))
+suppressMessages(library(tidytext))
+suppressMessages(library(rvest))
 
 # knitr chunk options ----------------------------------------------------------
 
@@ -86,9 +86,10 @@ if (knitr::is_html_output()) {
 # function: caption helper -----------------------------------------------------
 
 caption_helper <- function(txt) {
-  if (knitr::is_latex_output())
+  if (knitr::is_latex_output()) {
     stringr::str_replace_all(txt, "([^`]*)`(.*?)`", "\\1\\\\texttt{\\2}") %>%
-    stringr::str_replace_all("_", "\\\\_")
-  else
+      stringr::str_replace_all("_", "\\\\_")
+  } else {
     txt
+  }
 }

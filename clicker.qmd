@@ -25,16 +25,21 @@ to go along with <br>
 #| warning: false
 
 # figure options
-knitr::opts_chunk$set(warning = FALSE, message = FALSE,
-  fig.width = 10, fig.asp = 0.618, out.width = "90%",
-  fig.retina = 3, dpi = 300, fig.align = "center"
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 10,
+  fig.asp = 0.618,
+  out.width = "90%",
+  fig.retina = 3,
+  dpi = 300,
+  fig.align = "center"
 )
 
 library(tidyverse)
 library(lubridate)
 
 # Make sure to put a space before and after every slide break "---"
-
 ```
 
 
@@ -96,7 +101,7 @@ library(lubridate)
 ```{r}
 #| eval: false
 #| echo: true
-shup2 <-- "Hello to you!"
+shup2 <- -"Hello to you!"
 ```
 
 ---
@@ -112,7 +117,8 @@ shup2 <-- "Hello to you!"
 #| eval: false
 #| echo: true
 #| error: true
-3shup <-  "Hello to you!"
+3
+shup <- "Hello to you!"
 ```
 
 [^5]: d. invalid object name
@@ -146,7 +152,7 @@ shup4 <-  "Hello to you!
 ```{r}
 #| eval: false
 #| echo: true
-shup5 <-  date()
+shup5 <- date()
 ```
 
 [^7]: e. no mistake
@@ -163,7 +169,8 @@ shup5 <-  date()
 ```{r}
 #| eval: false
 #| echo: true
-shup6 <-  sqrt 10
+shup6 <- sqrt
+10
 ```
 
 [^8]: c. improper syntax for a function argument
@@ -235,13 +242,13 @@ shup6 <-  sqrt 10
 ```{r, echo=FALSE}
 library(mosaic)
 library(mosaicData)
-SAT |> subset(frac > 50) |>
-  ggplot(aes(x = state, y =  math)) + 
-  labs(x = "state",
-       y = "average SAT score") + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
-  geom_point() + 
-  geom_linerange(aes(x = state, ymin=0, ymax = math))
+SAT |>
+  subset(frac > 50) |>
+  ggplot(aes(x = state, y = math)) +
+  labs(x = "state", y = "average SAT score") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_point() +
+  geom_linerange(aes(x = state, ymin = 0, ymax = math))
 ```
 :::
 ::::
@@ -265,11 +272,10 @@ SAT |> subset(frac > 50) |>
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 SwimRecords |>
-  ggplot(aes(x = year, y = time, color = sex)) + 
-  geom_point() + 
+  ggplot(aes(x = year, y = time, color = sex)) +
+  geom_point() +
   geom_line() +
-  labs(title = "100m Swimming World Records",
-       y = "World Record Time (seconds)")
+  labs(title = "100m Swimming World Records", y = "World Record Time (seconds)")
 ```
 :::
 ::::
@@ -291,12 +297,13 @@ SwimRecords |>
 
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
-HELPrct |> group_by(substance) |>
+HELPrct |>
+  group_by(substance) |>
   summarize(count = n()) |>
-  mutate(lab.ypos = cumsum(count) - 0.5*count) |>
-  ggplot(aes(x = "", y =count, fill = substance)) + 
+  mutate(lab.ypos = cumsum(count) - 0.5 * count) |>
+  ggplot(aes(x = "", y = count, fill = substance)) +
   geom_bar(width = 1, stat = "identity", color = "white") +
-  coord_polar("y", start = 0)+
+  coord_polar("y", start = 0) +
   geom_text(aes(y = lab.ypos, label = count), color = "white") +
   scale_fill_brewer(palette = "Greens") +
   theme_void() +
@@ -325,9 +332,8 @@ HELPrct |> group_by(substance) |>
 #| echo: false
 library(mosaic)
 data(Births78)
-ggplot(data = Births78, 
-       aes(x = date, y = births, color = "navy")) + 
-  geom_point() +          
+ggplot(data = Births78, aes(x = date, y = births, color = "navy")) +
+  geom_point() +
   labs(title = "US Births in 1978")
 ```
 :::
@@ -336,9 +342,8 @@ ggplot(data = Births78,
 ```{r}
 #| eval: false
 #| echo: true
-ggplot(data = Births78, 
-       aes(x = date, y = births, color = "navy")) + 
-  geom_point() +          
+ggplot(data = Births78, aes(x = date, y = births, color = "navy")) +
+  geom_point() +
   labs(title = "US Births in 1978")
 ```
 :::
@@ -360,10 +365,9 @@ ggplot(data = Births78,
 #| out-width: 60%
 library(mosaic)
 data(Births78)
-ggplot(data = Births78, 
-       aes(x = date, y = births)) + 
-  geom_line(aes(color = wday)) +       
-  geom_point(color = "navy") +          
+ggplot(data = Births78, aes(x = date, y = births)) +
+  geom_line(aes(color = wday)) +
+  geom_point(color = "navy") +
   labs(title = "US Births in 1978")
 ```
      
@@ -458,36 +462,36 @@ ggplot(data = Births78,
 ```{r}
 #| echo: false
 tribble_a <- tribble(
-  ~year, ~Algeria, ~Brazil, ~Columbia,
-  2000, 7, 12, 16,
-  2001, 9, 14, 18
+  ~year , ~Algeria , ~Brazil , ~Columbia ,
+   2000 ,        7 ,      12 ,        16 ,
+   2001 ,        9 ,      14 ,        18
 )
-tribble_a |> gt::gt(caption = "table a") 
+tribble_a |> gt::gt(caption = "table a")
 ```
 
 ```{r}
 #| echo: false
 tribble_b <- tribble(
-  ~country, ~Y2000, ~Y2001,
-  "Algeria", 7, 9,
-  "Brazil", 12, 14,
-  "Columbia", 16, 18
+  ~country   , ~Y2000 , ~Y2001 ,
+  "Algeria"  ,      7 ,      9 ,
+  "Brazil"   ,     12 ,     14 ,
+  "Columbia" ,     16 ,     18
 )
-tribble_b |> gt::gt(caption = "table b") 
+tribble_b |> gt::gt(caption = "table b")
 ```
 
 ```{r}
 #| echo: false
 tribble_c <- tribble(
-  ~country, ~year, ~value,
-  "Algeria", 2000, 7,
-  "Algeria", 2001, 9,
-  "Brazil", 2000, 12,
-  "Brazil", 2001, 14,
-  "Columbia", 2000, 16, 
-  "Columbia", 2001, 18
+  ~country   , ~year , ~value ,
+  "Algeria"  ,  2000 ,      7 ,
+  "Algeria"  ,  2001 ,      9 ,
+  "Brazil"   ,  2000 ,     12 ,
+  "Brazil"   ,  2001 ,     14 ,
+  "Columbia" ,  2000 ,     16 ,
+  "Columbia" ,  2001 ,     18
 )
-tribble_c |> gt::gt(caption = "table c") 
+tribble_c |> gt::gt(caption = "table c")
 ```
 
 ---
@@ -519,17 +523,17 @@ Result <- |> filter(starbucks,
 ```{r}
 #| eval: false
 #| echo: true
-#(a) 
-starbucks |> 
-  group_by(type) |> 
+#(a)
+starbucks |>
+  group_by(type) |>
   summarize(average_fat = mean(fat))
 
-#(b) 
-group_by(starbucks, type) |> 
+#(b)
+group_by(starbucks, type) |>
   summarize(average_fat = mean(fat))
 
 #(c)
-group_by(starbucks, type) |> 
+group_by(starbucks, type) |>
   summarize(average_fat = sum(fat))
 
 #(d)
@@ -538,8 +542,7 @@ temp <- group_by(starbucks, type)
 summarize(temp, average_fat = mean(fat))
 
 #(e)
-summarize(group_by(starbucks, type), 
-          average_fat = mean(fat))
+summarize(group_by(starbucks, type), average_fat = mean(fat))
 ```
 
 [^27]: c. does something different because it takes the `sum()` instead of the `mean()`.  The other commands compute the average fat broken down by `type` of Starbucks item
@@ -558,9 +561,9 @@ summarize(group_by(starbucks, type),
 #| echo: true
 #| code-line-numbers: "2,3"
 result <- lego_sample |>
-  Q1(!is.na(minifigures)) |> 
+  Q1(!is.na(minifigures)) |>
   # keep only those with minifigures
-  group_by(Q2, Q2) |> 
+  group_by(Q2, Q2) |>
   summarize(total = Q3)
 ```
 
@@ -580,8 +583,8 @@ result <- lego_sample |>
 #| echo: true
 #| code-line-numbers: "3,4"
 result <- lego_sample |>
-  Q1(!is.na(minifigures)) |> 
-  group_by(Q2, Q2) |> 
+  Q1(!is.na(minifigures)) |>
+  group_by(Q2, Q2) |>
   # for each theme and year
   summarize(total = Q3)
 ```
@@ -602,10 +605,10 @@ result <- lego_sample |>
 #| echo: true
 #| code-line-numbers: "4,5"
 result <- lego_sample |>
-  Q1(!is.na(minifigures)) |> 
-  group_by(Q2, Q2) |> 
+  Q1(!is.na(minifigures)) |>
+  group_by(Q2, Q2) |>
   summarize(ave_pieces = Q3)
-  # average number of pieces (each theme, each year)
+# average number of pieces (each theme, each year)
 ```
 
 [^30]: e. `mean(pieces)`
@@ -618,9 +621,9 @@ result <- lego_sample |>
 #| echo: true
 library(openintro)
 lego_sample |>
-  filter(!is.na(minifigures)) |> 
+  filter(!is.na(minifigures)) |>
   # keep only those with minifigures
-  group_by(theme, year) |> 
+  group_by(theme, year) |>
   # for each theme for each year
   summarize(ave_pieces = mean(pieces))
 ```
@@ -631,16 +634,16 @@ lego_sample |>
 #| echo: true
 
 #(a)
-starbucks |> 
-  group_by(type) |> 
+starbucks |>
+  group_by(type) |>
   summarize(average_fat = mean(fat))
 
-#(b) 
-group_by(starbucks, type) |> 
+#(b)
+group_by(starbucks, type) |>
   summarize(average_fat = mean(fat))
 
 #(c)
-group_by(starbucks, type) |> 
+group_by(starbucks, type) |>
   summarize(average_fat = sum(fat))
 
 #(d)
@@ -649,8 +652,7 @@ temp <- group_by(starbucks, type)
 summarize(temp, average_fat = mean(fat))
 
 #(e)
-summarize(group_by(starbucks, type), 
-          average_fat = mean(fat))
+summarize(group_by(starbucks, type), average_fat = mean(fat))
 ```
 
 [^31]: running the different code chunks with relevant output.
@@ -690,18 +692,18 @@ summarize(group_by(starbucks, type),
 #| echo: false
 library(googlesheets4)
 gs4_deauth()
-GDP <- read_sheet("https://docs.google.com/spreadsheets/d/1RctTQmKB0hzbm1E8rGcufYdMshRdhmYdeL29nXqmvsc/pub?gid=0")
+GDP <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1RctTQmKB0hzbm1E8rGcufYdMshRdhmYdeL29nXqmvsc/pub?gid=0"
+)
 ```
 
 ```{r}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "3"
-GDP |>  
-  select(country = starts_with("Income"), everything()) |> 
-       pivot_longer(cols = Q1, 
-                    names_to = Q2, 
-                    values_to = Q3)
+GDP |>
+  select(country = starts_with("Income"), everything()) |>
+  pivot_longer(cols = Q1, names_to = Q2, values_to = Q3)
 ```
 
 [^32]: e. `-country`
@@ -719,11 +721,9 @@ GDP |>
 #| eval: false
 #| echo: true
 #| code-line-numbers: "4"
-GDP |>  
-  select(country = starts_with("Income"), everything()) |> 
-       pivot_longer(cols = Q1, 
-                    names_to = Q2, 
-                    values_to = Q3)
+GDP |>
+  select(country = starts_with("Income"), everything()) |>
+  pivot_longer(cols = Q1, names_to = Q2, values_to = Q3)
 ```
 
 [^33]: b. `year`
@@ -741,11 +741,9 @@ GDP |>
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5"
-GDP |>  
-  select(country = starts_with("Income"), everything()) |> 
-       pivot_longer(cols = Q1, 
-                    names_to = Q2, 
-                    values_to = Q3)
+GDP |>
+  select(country = starts_with("Income"), everything()) |>
+  pivot_longer(cols = Q1, names_to = Q2, values_to = Q3)
 ```
 
 [^34]: c. `gdpval`  (if possible, good idea to name variables something different from the name of the data frame)
@@ -760,7 +758,7 @@ GDP |>
 ```{r}
 #| echo: true
 #| eval: false
-ggplot(___, aes(x = ___, y = ___, color = ___)) + 
+ggplot(___, aes(x = ___, y = ___, color = ___)) +
   geom_point()
 ```
 
@@ -783,16 +781,16 @@ grades
 
 ```{r}
 #| echo: true
-grades |> 
+grades |>
   pivot_wider(names_from = test, values_from = score)
 ```
 
 
 ```{r}
 #| echo: true
-grades |> 
-  pivot_wider(names_from = test, values_from = score) |> 
-  ggplot(aes(x = Midterm, y = Final, color = student)) + 
+grades |>
+  pivot_wider(names_from = test, values_from = score) |>
+  ggplot(aes(x = Midterm, y = Final, color = student)) +
   geom_point()
 ```
 
@@ -806,7 +804,7 @@ grades |>
 ```{r}
 #| echo: true
 #| eval: false
-ggplot(___, aes(x = ___, y = ___, color = ___)) + 
+ggplot(___, aes(x = ___, y = ___, color = ___)) +
   geom_line()
 ```
 
@@ -823,10 +821,12 @@ sleep_wide
 ```{r}
 #| echo: true
 sleep_long <- sleep_wide |>
-  pivot_longer(cols = -Subject,
-               names_to = "day",
-               names_prefix = "day_",
-               values_to = "reaction_time")
+  pivot_longer(
+    cols = -Subject,
+    names_to = "day",
+    names_prefix = "day_",
+    values_to = "reaction_time"
+  )
 
 sleep_long
 ```
@@ -835,11 +835,18 @@ sleep_long
 ```{r}
 #| echo: true
 sleep_wide |>
-  pivot_longer(cols = -Subject,
-               names_to = "day",
-               names_prefix = "day_",
-               values_to = "reaction_time") |>
-  ggplot(aes(x = day, y = reaction_time, color = as.factor(Subject), group = as.factor(Subject))) + 
+  pivot_longer(
+    cols = -Subject,
+    names_to = "day",
+    names_prefix = "day_",
+    values_to = "reaction_time"
+  ) |>
+  ggplot(aes(
+    x = day,
+    y = reaction_time,
+    color = as.factor(Subject),
+    group = as.factor(Subject)
+  )) +
   geom_line()
 ```
 
@@ -855,7 +862,7 @@ sleep_wide |>
 ```{r}
 #| echo: true
 #| eval: false
-band_members |> 
+band_members |>
   right_join(band_instruments, by = "name")
 ```
 
@@ -889,7 +896,7 @@ band_instruments
 ```{r}
 #| echo: true
 #| eval: false
-band_members |> 
+band_members |>
   right_join(band_instruments, by = "name")
 ```
 
@@ -923,7 +930,7 @@ band_instruments
 ```{r}
 #| echo: true
 #| eval: false
-band_members |> 
+band_members |>
   full_join(band_instruments, by = "name")
 ```
 
@@ -943,24 +950,23 @@ band_members |>
 ```{r}
 #| echo: false
 roster <- tibble::tribble(
-  ~student_id, ~name,      ~major,
-  1,           "Alice",    "Math",
-  2,           "Ben",      "CS",
-  3,           "Carla",    "History",
-  4,           "David",    "CS",
-  5,           "Eva",      "Math"
+  ~student_id , ~name   , ~major    ,
+            1 , "Alice" , "Math"    ,
+            2 , "Ben"   , "CS"      ,
+            3 , "Carla" , "History" ,
+            4 , "David" , "CS"      ,
+            5 , "Eva"   , "Math"
 )
 
 
 classes <- tibble::tribble(
-  ~student_id, ~class,        ~subject,
-  1,           "Calc I",      "Math",
-  2,           "Intro CS",    "CS",
-  2,           "Data Struct", "CS",
-  4,           "Intro CS",    "CS",
-  6,           "Chemistry",   "Chemistry"
+  ~student_id , ~class        , ~subject    ,
+            1 , "Calc I"      , "Math"      ,
+            2 , "Intro CS"    , "CS"        ,
+            2 , "Data Struct" , "CS"        ,
+            4 , "Intro CS"    , "CS"        ,
+            6 , "Chemistry"   , "Chemistry"
 )
-
 ```
 
 
@@ -1108,8 +1114,7 @@ classes
 ```{r}
 #| eval: false
 #| echo: true
-str_c(letters = c("a", "b", "c"),
-      numbers = c(1, 2, 3))
+str_c(letters = c("a", "b", "c"), numbers = c(1, 2, 3))
 ```
 
 [^38f]: c. "a1" "b2" "c3"
@@ -1127,8 +1132,7 @@ str_c(letters = c("a", "b", "c"),
 ```{r}
 #| eval: false
 #| echo: true
-str_c(letters = c("a", "b", "c"),
-      numbers = c(1, 2, 3), sep = " ")
+str_c(letters = c("a", "b", "c"), numbers = c(1, 2, 3), sep = " ")
 ```
 
 [^38g]: a. "a 1" "b 2" "c 3"
@@ -1209,9 +1213,8 @@ str_detect(fruit, pattern = "a")
 #| eval: false
 #| echo: true
 
-starbucks |> 
+starbucks |>
   mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE))
-
 ```
 
 [^39c]: e. Changes the order of the levels of `type`
@@ -1234,7 +1237,6 @@ starbucks |>
 x <- factor(c("apple", "bear", "dear", "banana"))
 x
 fct_recode(x, fruit = "apple", fruit = "banana")
-
 ```
 
 [^39d]: e. Some of the above (b. Changes the values of `x` and c. Changes the levels of `x` and sort of d. Changes the order of the levels of `x`, jut by the nature of c.)
@@ -1306,16 +1308,16 @@ yday(today)
 (@) What is the result of the code?[^46]
     a. TRUE
     b. FALSE
-    c. "2025-09-01"
-    d. "2025-02-19"
+    c. "2026-09-01"
+    d. "2026-02-19"
     
 ```{r}
 #| echo: true
 #| eval: false
-today() > ymd("2025-09-01")
+today() > ymd("2026-09-01")
 ```
     
-[^46]: b. `r today() > ymd("2025-09-01")`
+[^46]: b. `r today() > ymd("2026-09-01")`
 
 
 ---
@@ -1512,7 +1514,7 @@ str_extract(c("apple pie", "chocolate pie", "peach pie"), "\\w+(?=pie)")
 #| error: true
 #| echo: true
 #| eval: false
-my_power <- function(x, y){
+my_power <- function(x, y) {
   return(x^y)
 }
 my_power(3)
@@ -1532,7 +1534,7 @@ my_power(3)
 ```{r}
 #| echo: true
 #| eval: false
-my_power <- function(x, y = 2){
+my_power <- function(x, y = 2) {
   return(x^y)
 }
 my_power(3)
@@ -1552,7 +1554,7 @@ my_power(3)
 ```{r}
 #| echo: true
 #| eval: false
-my_power <- function(x, y = 2){
+my_power <- function(x, y = 2) {
   return(x^y)
 }
 my_power(2, 3)
@@ -1572,10 +1574,10 @@ my_power(2, 3)
 ```{r}
 #| echo: true
 #| eval: false
-my_power <- function(x = 2, y = 3){
+my_power <- function(x = 2, y = 3) {
   return(x^y)
 }
-my_power( )
+my_power()
 ```
 
 [^60]: b. 8
@@ -1597,10 +1599,35 @@ addTen <- function(wow) {
 
 ```{r}
 #| echo: false
-map_chr(c(1,4,7), addTen)
+
+map_dbl(c(1, 4, 7), addTen)
 ```
 
-[^61]: c. `map_chr(c(1,4,7), addTen)` because the output is in quotes, the values are strings, not numbers.
+[^61]: c. `map_dbl(c(1,4,7), addTen)` because the output is a vector of numbers.
+
+---
+
+(@) Consider the `addTen()` function.  The following output is a result of which `map_*()` call?[^61b]
+   a. `map(c(1,4,7), addTen)`
+   b. `map_dbl(c(1,4,7), addTen)`
+   c. `map_chr(c(1,4,7), addTen)`
+   d. `map_lgl(c(1,4,7), addTen)`
+   
+```{r}
+#| echo: true
+addTen <- function(wow) {
+  return(wow + 10)
+}
+```
+
+```{r}
+#| echo: false
+#| error: true
+
+map_chr(c(1, 4, 7), addTen)
+```
+
+[^61b]: c. `map_chr(c(1,4,7), addTen)` gives an error because the function output is numeric but the `map_*` call is for a string variable.
 
 ---
 
@@ -1635,10 +1662,10 @@ map_chr(c(1,4,7), addTen)
 #| echo: false
 #| eval: true
 input <- tibble::tribble(
-  ~ n, ~ mean, ~ sd,
-   1,     1,    3,
-   2,    3,   1,
-   3,   47,  10
+  ~n , ~mean , ~sd ,
+   1 ,     1 ,   3 ,
+   2 ,     3 ,   1 ,
+   3 ,    47 ,  10
 )
 ```
 ```{r}
@@ -1650,7 +1677,7 @@ input
 ```{r}
 #| echo: true
 #| eval: false
-input |> 
+input |>
   pmap(rnorm)
 ```
 [^64]: b. 6 random normals (1 with mean 1, sd 3; 2 with mean 3, sd 1; 3 with mean 47, sd 10)
@@ -1685,9 +1712,9 @@ jan31 + months(0:11) + days(31)
 ```{r}
 #| eval: false
 #| echo: true
-  jan31 <- ymd("2021-01-31")
+jan31 <- ymd("2021-01-31")
 #> Error in ymd("2021-01-31"): could not find function "ymd"
-  jan31 + months(0:11) + days(31)
+jan31 + months(0:11) + days(31)
 #> Error in eval(expr, envir, enclos): object 'jan31' not found
 ```
 
@@ -1705,14 +1732,14 @@ jan31 + months(0:11) + days(31)
 ```{r}
 #| eval: false
 #| echo: true
-  library(lubridate)
-#> 
+library(lubridate)
+#>
 #> Attaching package: 'lubridate'
 #> The following objects are masked from 'package:base':
-#> 
+#>
 #>     date, intersect, setdiff, union
-  jan31 <- ymd("2021-01-31")
-  jan31 + months(0:11) + days(31)
+jan31 <- ymd("2021-01-31")
+jan31 + months(0:11) + days(31)
 #>  [1] "2021-03-03" NA           "2021-05-01" NA           "2021-07-01"
 #>  [6] NA           "2021-08-31" "2021-10-01" NA           "2021-12-01"
 #> [11] NA           "2022-01-31"
@@ -1761,8 +1788,8 @@ mean <- function(x) sum(x)
 mean(x, na.rm = TRUE)
 
 # 2
-mean (x, na.rm = TRUE)
-mean( x, na.rm = TRUE )
+mean(x, na.rm = TRUE)
+mean(x, na.rm = TRUE)
 ```
    
 [^67b]: a. 1
@@ -1778,8 +1805,8 @@ mean( x, na.rm = TRUE )
 #| echo: true
 
 # 1
-height<-feet*12+inches
-mean(x, na.rm=TRUE)
+height <- feet * 12 + inches
+mean(x, na.rm = TRUE)
 
 # 2
 height <- (feet * 12) + inches
@@ -1805,9 +1832,13 @@ do_something_very_complicated(
 )
 
 # 2
-do_something_very_complicated("that", requires, many, arguments,
-                              "some of which may be long"
-                              )
+do_something_very_complicated(
+  "that",
+  requires,
+  many,
+  arguments,
+  "some of which may be long"
+)
 ```
 
 [^67d]: a. 1
@@ -1825,7 +1856,11 @@ do_something_very_complicated("that", requires, many, arguments,
 
 # 1
 iris |>
-  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)
+  summarise(
+    Sepal.Length = mean(Sepal.Length),
+    Sepal.Width = mean(Sepal.Width),
+    .by = Species
+  )
 
 # 2
 iris |>
@@ -2277,10 +2312,10 @@ sum(hats == random_hats) > 0
 #| eval: true
 
 set.seed(47)
-data.frame(perm_diff = rnorm(200)) |>  
-  ggplot(aes(x = perm_diff)) + 
-  geom_histogram() + 
-  geom_vline(xintercept = -1.3, color = "red") 
+data.frame(perm_diff = rnorm(200)) |>
+  ggplot(aes(x = perm_diff)) +
+  geom_histogram() +
+  geom_vline(xintercept = -1.3, color = "red")
 ```
 :::
 
@@ -2306,10 +2341,10 @@ data.frame(perm_diff = rnorm(200)) |>
 #| eval: true
 
 set.seed(47)
-data.frame(perm_diff = rnorm(200)) |>  
-  ggplot(aes(x = perm_diff)) + 
-  geom_histogram() + 
-  geom_vline(xintercept = -1.3, color = "red") 
+data.frame(perm_diff = rnorm(200)) |>
+  ggplot(aes(x = perm_diff)) +
+  geom_histogram() +
+  geom_vline(xintercept = -1.3, color = "red")
 ```
 :::
 ::::
@@ -2794,8 +2829,8 @@ ggarrange(fig1, fig2, ncol = 2)
     (e) Need a `LIMIT`
 
 ```{sql}
-#| eval: false
-#| echo: true
+--| eval: false
+--| echo: true
 SELECT cancelled, AVG(cancelled)
 FROM flights;
 
@@ -2813,8 +2848,8 @@ FROM flights;
     (e) Need a `SELECT`
 
 ```{sql}
-#| eval: false
-#| echo: true
+--| eval: false
+--| echo: true
 SELECT flights;
 ```
 
@@ -2830,8 +2865,8 @@ SELECT flights;
     (e) Need `GROUP BY year`
 
 ```{sql}
-#| eval: false
-#| echo: true
+--| eval: false
+--| echo: true
 SELECT dep_delay, year = 2014
 FROM flights
 LIMIT 10;
@@ -2848,8 +2883,8 @@ LIMIT 10;
     (d) No commas
 
 ```{sql}
-#| eval: false
-#| echo: true
+--| eval: false
+--| echo: true
 SELECT SUM(cancelled) AS num_cancelled,
        num_cancelled / SUM(1) AS pct_cancelled
 FROM flights

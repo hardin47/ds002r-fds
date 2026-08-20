@@ -1,0 +1,105 @@
+---
+title: "Project 4"
+description: |
+  ethics: data and power
+format: html
+---
+
+Project 4 examines ethics and power in the data science context. You will investigate a particular data science ethical quandary and the power dynamics within. Our work is grounded in the following two quotes from <a href = "https://data-feminism.mitpress.mit.edu/" target = "_blank">Data Feminism</a>. The first asks about *who* and the second asks about *why*.
+
+
+> [Examine] how power operates in the world today. This consists of asking who questions about data science: Who does the work (and who is pushed out)? Who benefits (and who is neglected or harmed)? Whose priorities get turned into products (and whose are overlooked)?^[https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nhrgx0zws6h]
+
+> How did we get to the point where data science is used almost exclusively in the service of profit (for a few), surveillance (of the minoritized), and efficiency (amidst scarcity)?^[https://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nifnaq2jmn9]
+
+## Your task
+
+1. First, find an ethical dilemma with a data science component. Please take on only one ethical dilemma, it is too difficult to compare multiple dilemmsas in one short blog entry. There are many examples below, and within each example you should start with the reference provided and find **at least one more article** (possibly from another angle? or go find the privacy policy / user agreement if there is one!) to expand your understanding of the topic. It should be clear from your report what information came from which article. Feel free to choose an example different from those below.
+
+2. Describe the example / scenario as if to someone who is not at all familiar with the setting. In particular, it should be clear both what is the data science component and what is the ethical dilemma.
+
+3. Respond to at least 4 of the items below (from the list of questions or the Data Values and Principles Manifesto). Four separate paragraphs that explain both the issue (e.g., consent) and how the issue played out in the data science example. Note: totally fine if there are items that were done *well* in your example.
+
+4. Given what you described in #3 (above), summarize by explaining why it matters. Who benefits? Who is neglected or harmed? Were the ethical violations in the interest of profit? Surveillance? Power?
+
+
+## Questions to respond to
+
+* What is the permission structure for using the data? Was it followed?
+
+* What was the consent structure for recruiting participants? Were the participants aware of the ways their data would be used for research? Was informed consent possible? Can you provide informed consent for applications that are yet foreseen?
+
+* What was the data collection process? Were the observations collected ethically? Are there missing observations?
+
+* Were the data made publicly available? Why? How? On what platform?
+
+* Is the data identifiable? All of it? Some of it? In what way? Are the data sufficiently anonymized or old to be free of ethical concerns? Is anonymity guaranteed?
+
+* How were the variables collected? Were they accurately recorded? Is there any missing data?
+
+* Who was measured? Are those individuals representative of the people to whom we'd like to generalize / apply the algorithm? Should we analyze data if we do not know how the data were collected?
+
+* Is the data being used in unintended ways to the original study?
+
+* Should race be used as a variable? Is it a proxy for something else (e.g., amount of melanin in the skin, stress of navigating microaggressions, zip-code, etc.)? What about gender?
+
+* <a href = "https://datapractices.org/manifesto/" target = "_blank">Data Values and Principles manifesto</a>
+
+
+> As data teams, we aim to...
+
+> 1. Use data to improve life for our users, customers, organizations, and communities.
+> 2. Create reproducible and extensible work.
+> 3. Build teams with diverse ideas, backgrounds, and strengths.
+> 4. Prioritize the continuous collection and availability of discussions and metadata.
+> 5. Clearly identify the questions and objectives that drive each project and use to guide both planning and refinement.
+> 6. Be open to changing our methods and conclusions in response to new knowledge.
+> 7. Recognize and mitigate bias in ourselves and in the data we use.
+> 8. Present our work in ways that empower others to make better-informed decisions.
+> 9. Consider carefully the ethical implications of choices we make when using data, and the impacts of our work on individuals and society.
+> 10. Respect and invite fair criticism while promoting the identification and open discussion of errors, risks, and unintended consequences of our work.
+> 11. Protect the privacy and security of individuals represented in our data.
+> 12. Help others to understand the most useful and appropriate applications of data to solve real-world problems.
+
+
+## Logistics
+
+- work in your website .Rproj, do not start a new R Project.
+- create a new Quarto file (just like you did for previous projects), and type words into it, even though there is no code.
+- no code is expected. If, for some reason, you include code, follow the same practices as in previous projects: explain what you are doing, show your code, no messages or warnings, etc.
+- include the full citations for your references (of which there should be at least two), not just the hyperlink. If you do not know how to create or format a citation, as me or chatGPT.
+- make it clear which information came from which resource.
+
+
+## Timeline
+
+Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday November 12**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+
+
+## Potential examples
+
+(Feel free to find your own example if you prefer.)
+
+* Biobank samples from the Havasupai lawsuit (informed consent, among other things).  Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), <a href = "https://www.tandfonline.com/doi/abs/10.5235/17579961.5.1.54" target = "_blank">Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents</a>, Law, Innovation and Technology, 5, 54–84.
+
+* Facebook emotional contagion experiment (patient consent, among other things). Kramer, A. D., Guillory, J. E., and Hancock, J. T. (2014), <a href = "https://www.pnas.org/doi/10.1073/pnas.1320040111" target = "_blank">Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks</a>, Proceedings of the National Academy of Sciences of the United States of America, 111, 8788–8790.
+
+* OK Cupid data release (privacy and publicly available data). Xiao, T., and Ma, Y. (2021), <a href = "https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1930812" target = "_blank">A Letter to the Journal of Statistics and Data Science Education — A Call for Review of 'OkCupid Data for Introductory Statistics and Data Science Courses' by Albert Y. Kim and Adriana Escobedo-Land</a>, Journal of Statistics and Data Science Education, 29, 214–215.
+
+* Taxis dataset with 173 million cab rides (poorly anonymized data). Goodin, D. (2014) <a href = "https://arstechnica.com/tech-policy/2014/06/poorly-anonymized-logs-reveal-nyc-cab-drivers-detailed-whereabouts/" target = "_blank">Poorly anonymized logs reveal NYC cab drivers' detailed whereabouts</a>, Ars Technical.
+
+* Netflix "de-anonymized" + link to IMDB (poorly anonymized data). Leetaru, K. (2016), <a href = "https://www.forbes.com/sites/kalevleetaru/2016/08/24/the-big-data-era-of-mosaicked-deidentification-can-we-anonymize-data-anymore/" target = "_blank">The Big Data Era of Mosaicked Deidentification: Can We Anonymize Data Anymore?</a>, Forbes.
+
+* COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) (biased algorithm). Angwin, J., Larson, J., Mattu, S., and Kirchner, L. (2016), <a href = "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" target = "_blank">Machine Bias</a>, ProPublica.
+
+* Target (what if the algorithm is good at predicting something you don't want predicted?). Duhigg, C. (2012), <a href = "https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?unlocked_article_code=1.6U4.nLSt.-yehBjKHEmPW&smid=url-share" target = "_blank">How Companies Learn Your Secrets</a>, The New York Times Magazine.
+
+* Amazon hiring algorithm (who has moral responsibility?) Dastin, J. (2018), "<a href = "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G" target = "_blank">Amazon Scraps Secret AI Recruiting Tool that Showed Bias Against Women</a>, Reuters.
+
+* Airlines respond differently, depending on who is tweeting (should the algorithm be used?). Gunarathne, P., Rui, H., and Seidmann, A. (2022). <a href = "https://pubsonline.informs.org/doi/10.1287/isre.2021.1058" target = "_blank">Racial Bias in Customer Service: Evidence from Twitter</a>, Information Systems Research: 33, 43-54. **n.b., log into the Claremont Colleges Library and search for the title. The library has the digital copy available.**
+
+* The Allegheny Family Screening Tool is specifically designed to predict the risk that a child will be placed in foster care in the two years after being investigated (what if the marginalized community is overrepresented?). Ho, S. and Burke, G. (2022). <a href = "https://pulitzercenter.org/stories/algorithm-screens-child-neglect-raises-concerns" target = "_blank">An Algorithm That Screens for Child Neglect Raises Concerns</a>, Pulitzer Center.
+
+* Training facial recognition software from publicly available data (what if the marginalized community is underrepresented?). Buolamwini, J. and Gebru, T. (2018). <a href = "https://proceedings.mlr.press/v81/buolamwini18a.html" target = "_blank">Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification</a>, Proceedings of Machine Learning Research: 81, 77-91.
+
+

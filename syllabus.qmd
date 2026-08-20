@@ -4,7 +4,7 @@ format: html
 ---
 
 # Foundations of Data Science in R
-## DS002R, Fall 2025
+## DS002R, Fall 2026
 
 Jo Hardin   
 2351 Estella   
@@ -15,15 +15,15 @@ Estella 2141
 
 
 **Office Hours: (Estella 2351)**  
-Monday: 2:30-5:00pm  
+Monday: 1:30-4:30pm  
 Tuesday: 9-11am   
-Thursday: 1:15-3pm 
+Thursday: 1:30-3pm 
 
 
 **Mentor Sessions:**  
-Sunday 4-6pm & Tuesday 6-8pm    
-Estella 2141     
-Mentor: Evelyn Hao
+Sunday: 8-10pm  
+Tuesday: 8-10pm
+
 
 
 ```{r}
@@ -58,18 +58,18 @@ By the end of the term, students will be able to:
 * communicate data-driven decisions
 
 
-## Inclusion Goals^[adapted from Monica Linden, Brown University]
+## Inclusion Goals
 
-In an ideal world, science would be objective. However, much of science is subjective and is historically built on a small subset of privileged voices. In this class, we will make an effort to recognize how science (and data science!) has played a role in both understanding diversity as well as in promoting systems of power and privilege. I acknowledge that there may be both overt and covert biases in the material due to the lens with which it was written, even though the material is primarily of a scientific nature. Integrating a diverse set of experiences is important for a more comprehensive understanding of science. I would like to discuss issues of diversity in statistics as part of the course from time to time.
+> Inclusive teaching is intentional and reflective. Inclusive teaching builds community, is student-centered, acknowledges the whole student, and is accessible to all students. Inclusive teaching develops critical and creative thinkers who positively contribute to our community.
 
-Please contact me if you have any suggestions to improve the quality of the course materials.
+The above definition of inclusive teaching was developed by Pomona faculty over the past few years, and it is what I aim to practice in our classroom. Please contact me if you have any suggestions to improve the quality of the course materials.
 
 Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:
 
 * If you have a name and/or set of pronouns that differ from those that appear in your official records, please let me know!
 * If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me.  You can also relay information to me via your mentors.  I want to be a resource for you. 
 
-I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.  As a participant in course discussions, you should also strive to honor the diversity of your classmates.
+I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. As a participant in course discussions, you should also strive to honor the diversity of your classmates.
 
 ## Technical Details
 
@@ -81,14 +81,14 @@ I (like many people) am still in the process of learning about diverse perspecti
 
 :::{.callout-tip icon=false}
 ### Dates
-* Quizzes on Sep 17, Oct 1, Oct 22, Nov 5, Nov 19, and Dec 3 (in class)
-* 9.24.25 Project 1 due
-* 10.8.25 Project 2 due 
-* 10.29.25 Project 3 due
-* 11.12.25 Project 4 due 
-* 11.26.25 Project 5 due 
-* 12.5.25 (Friday) or 5.10.25 (Tuesday) Project Presentations (9am-noon)
-* 12.10.25 Project 6 write-up due (on GitHub by midnight) 
+* Quizzes on Sep 23, Oct 7, Oct 26, Nov 11, Nov 23, and Dec 9 (in class)
+* 9.29.26 Project 1 due
+* 10.13.26 Project 2 due 
+* 11.3.26 Project 3 due
+* 11.17.26 Project 4 due 
+* 12.1.26 Project 5 due 
+* 12.11.26 (Friday) or 12.18.26 (Friday) Project Presentations (9am-noon)
+* 12.18.26 Project 6 write-up due (on GitHub by midnight) 
 :::
 
 ## Links to resources:
@@ -97,6 +97,7 @@ I (like many people) am still in the process of learning about diverse perspecti
 
 :::note
 * Best and most comprehensive Git help: <a href="http://happygitwithr.com/" target="_blank">http://happygitwithr.com/</a>
+* Git within Positron: <a href = "https://positron.posit.co/git.html" target = "_blank">https://positron.posit.co/git.html</a>
 * <a href="http://swcarpentry.github.io/git-novice/" target="_blank">Version control with Git</a>
 * <a href="https://aberdeenstudygroup.github.io/studyGroup/lessons/SG-T1-GitHubVersionControl/VersionControl/#2.4.2." target="_blank">More on Git</a>
 * <a href="https://git-scm.com/book/en/v2" target="_blank">Online Git book</a> with lots of info
@@ -105,19 +106,15 @@ I (like many people) am still in the process of learning about diverse perspecti
 ### R resources
 
 :::note
-<!--* <a href="https://rstudio.cloud/learn/primers" target="_blank">interactive tutorials</a> for working through "R for Data Science"
-* <a href="https://education.rstudio.com/learn/" target="_blank">for a good start</a> to R in general
-* some <a href = "someRideas.html" target="_blank">R ideas</a> that I wrote up 
--->
 * A fantastic <a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/" target="_blank">ggplot2 tutorial</a>
-* Great tutorials through the <a href="https://ourcodingclub.github.io/tutorials/" target="_blank">Coding Club</a>
+* Tutorials through the <a href="https://ourcodingclub.github.io/tutorials/" target="_blank">Coding Club</a>
 * <a href="http://www.rseek.org/" target="_blank">Google for R</a>
-* Incredibly helpful <a href="https://posit.co/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
+* Helpful <a href="https://posit.co/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
    * <a href="https://rstudio.github.io/cheatsheets/html/data-transformation.html" target="_blank">data wrangling</a>
    * <a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html" target="_blank">ggplot2</a>
    * <a href="https://rstudio.github.io/cheatsheets/html/shiny.html" target="_blank">Shiny</a>
    * <a href="https://rstudio.github.io/cheatsheets/html/quarto.html" target="_blank">Quarto</a>
-   * <a href="https://rstudio.github.io/cheatsheets/html/rstudio-ide.html" target="_blank">RStudio IDE</a>
+   * <a href="https://rstudio.github.io/cheatsheets/html/positron.html" target="_blank">Positron IDE</a>
 :::
 
 ### SQL resources
@@ -163,9 +160,9 @@ There will be 5 mini-projects (due roughly every other week). You will also comp
 
 * GitHub will be used as a way to practice reproducible and collaborative science. There may be a slight learning curve, but knowing Git will be an extremely useful skill as you venture beyond this class.
 
-* R will be used for all homework assignments. R is freely available at <a href="http://www.r-project.org/" target="_blank">http://www.r-project.org/</a> and is already installed on college computers. Additionally, you need to install R Studio in order to use Quarto, <a href="https://posit.co/downloads/" target="_blank">https://posit.co/downloads/</a>. If you are not already familiar with R, please work through some of the materials provided ASAP. 
+* R will be used for all homework assignments. R is freely available at <a href="http://www.r-project.org/" target="_blank">http://www.r-project.org/</a> and is already installed on college computers. Additionally, you need to install Positron in order to use Quarto, <a href="https://positron.posit.co/" target="_blank">https://positron.posit.co/</a>. If you are not already familiar with R, please work through some of the materials provided ASAP. 
 
-* You are welcome to use Pomona's R Studio server at <a href="https://rstudio.campus.pomona.edu/" target="_blank">https://rstudio.campus.pomona.edu/</a> (or <a href="https://rstudio.pomona.edu" target="_blank">https://rstudio.pomona.edu</a> if you are off campus). If you use the server, you can connect directly to your Git account without installing Git locally on your own computer. [If you are not a Pomona student, you will need to get an account from Pomona's ITS. Go to ITS, tell them that you are taking a Pomona course, and ask for an account for using RStudio.]
+* You are welcome to use Pomona's Positron server at <a href="https://rstudio.campus.pomona.edu/" target="_blank">https://rstudio.campus.pomona.edu/</a> (or <a href="https://rstudio.pomona.edu" target="_blank">https://rstudio.pomona.edu</a> if you are off campus). If you use the server, you can connect directly to your Git account without installing Git locally on your own computer. [If you are not a Pomona student, you will need to get an account from Pomona's ITS. Go to ITS, tell them that you are taking a Pomona course, and ask for an account for using Positron.]
 
 ## Engagement:
 
@@ -176,43 +173,100 @@ There will be 5 mini-projects (due roughly every other week). You will also comp
 * To get full participation points, you will be expected to contribute at least one R tip of the day, sometime during the semester.
  	
 
-## Academic Honesty:
-You are on your honor to present only your work as part of your course  assessments.  Below, I've provided Pomona's academic honesty policy.  But before the policy, I've given some thoughts on cheating which I have taken from Nick Ball's CHEM 147 Collective (thank you, Prof Ball!).  Prof Ball gives us all something to think about when we are learning in a classroom as well as on our journey to become scientists and professionals:
+#### Academic Honesty:
 
+Throughout the semester, you will be challenged, and you may find yourself stuck.
+Every single one of us has been there, I promise.
+Below, I've provided Pomona's academic honesty policy.  But before the policy, I've given some thoughts on cheating which I have taken from Nick Ball's CHEM 147 Collective (thank you, Prof Ball!).
+Prof Ball gives us all something to think about when we are learning in a classroom as well as on our journey to become scientists and professionals:
+
+:::{.callout-tip icon=false}
+## Why Cheat?
 There are many known reasons why we may feel the need to "cheat" on problem sets or exams:
 
-::: {note}
-  * An academic environment that values grades above learning.
-  * Financial aid is critical for remaining in school that places undue pressure on maintaining a high GPA.
-  * Navigating school, work, and/or family obligations that  have diverted focus from class.
-  * Challenges balancing coursework and mental health.
-  * Balancing academic, family, peer, or personal issues.
+* An academic environment that values grades above learning.
+* Financial aid is critical for remaining in school that places undue pressure on maintaining a high GPA.
+* Navigating school, work, and/or family obligations that  have diverted focus from class.
+* Challenges balancing coursework and mental health.
+* Balancing academic, family, peer, or personal issues.
+
+Being accused of cheating – whether it has occurred or not – can be devastating for students. The college requires me to respond to potential academic dishonesty with a process that is very long and damaging. As your instructor, I care about you and want to offer alternatives to prevent us from having to go through this process.
 :::
 
-Being accused of cheating – whether it has occurred or not – can be devastating for students. The college requires me to respond to potential academic dishonesty with a process that is very long and damaging. As your instructor, I care about you and want to offer alternatives to prevent us from having to go through this process. If you find yourself in a situation where "cheating" seems like the only option:
+If you find yourself in a situation where "cheating" seems like the only option, please come talk to me.  We will figure this out together.
 
-**Please come talk to me.  We will figure this out together.**
 
-Pomona College is an academic community, all of whose members are expected to abide by ethical standards both in their conduct and in their exercise of responsibilities toward other members of the community. The college expects students to understand and adhere to basic standards of honesty and academic integrity. These standards include, but are not limited to, the following:
+##### Pomona's Academic Honesty Policy
+The College expects students to understand and adhere to basic standards of honesty and academic integrity. These standards include but are not limited to the following: 
 
-:::note
-* In projects and assignments prepared independently, students never represent the ideas or the language of others as their own.
-* Students do not destroy or alter either the work of other students or the educational resources and materials of the College.
-* Students neither give nor receive assistance in examinations.
-* Students do not take unfair advantage of fellow students by representing work completed for one course as original work for another or by deliberately disregarding course rules and regulations.
-* In laboratory or research projects involving the collection of data, students accurately report data observed and do not alter these data for any reason.
+* In projects and assignments (including homework) prepared independently, students never intentionally represent the ideas or the language of others as their own, examples include but are not limited to plagiarism, failing to use citations, unapproved use of artificial intelligence and resubmitted personal work for another course. 
+* Students do not destroy or alter either the work of other students or the educational resources and materials of the College. 
+* Students neither give nor receive assistance with examinations. 
+* Students do not represent work completed for one course as original work for another or deliberately disregard course rules and regulations. 
+* In laboratory or research projects involving the collection of data, students accurately report data observed and do not alter or fabricate data for any reason 
+
+
+:::{.callout-tip icon=false}
+## AI use policy^[Many of the ideas below are from https://provost.tufts.edu/celt/online-resources/artificial-intelligence/ai-syllabus-statements/]
+
+If you choose to use AI for any of the assignments for this class, you should pay attention to where you obtained any relevant information.
+Submitting work created by a generative AI as your own in any assignment is considered plagiarism, and therefore an academic integrity violation, just the same as copying work from any other source.
+
+**Attribution**
+
+* As with any other reference you might find, any directly copied text from generative AI should be in quotes and given a citation. Any summarized text from generative AI should be referenced.
+* Cite all AI tools when used or referred to in assigned work.  For example, see how to cite generative AI in <a href = "https://apastyle.apa.org/blog/how-to-cite-chatgpt" target = "_blank">APA</a>, <a href = "https://style.mla.org/citing-generative-ai/" target = "_blank">MLA</a>, or <a href = "https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Documentation/faq0422.html" target = "_blank">Chicago</a> styles. 
+
+**Permitted**
+
+* Clarifying concepts (after attempting to understand them yourself, and then checking course materials or other credible sources for accuracy)
+* Brainstorming initial topic ideas or approaches (after you have spent some time thinking on your own)
+* Organizing and outlining your thoughts
+* Grammar and spelling assistance
+* Asking AI for practice questions or explanations of concepts (after attempting them yourself first), then checking your understanding against course materials
+* Using AI to generate examples, counterarguments, or alternative perspectives that help you develop more nuanced thinking
+* Debugging code, checking syntax, or troubleshooting errors (with the expectation that you understand and can explain any code you submit)
+
+**Not permitted**
+
+* Having AI generate any sentences or paragraphs that appear in your final work without quotation marks and attribution
+* Using AI to write arguments, code, proofs, or problem solutions that you submit as your own
+* Asking AI to outline or structure your assignment before you have developed your own approach
+* Using AI to summarize readings or course materials in place of doing the reading yourself
+* Submitting code (or full chunks of code) that has been written in whole by AI 
+
 :::
 
 
-## Advice:
 
-Please email and / or set up a time to talk if you have any questions about or difficulty with the material, the computing, or the course.  Talk to me as soon as possible if you find yourself struggling. The material will build on itself, so it will be much easier to catch up if the concepts get clarified earlier rather than later.  **This semester is going to be fun.**  Let's do it.
+#### Advice:
+
+Please email and / or set up a time to talk if you have any questions about or difficulty with the material, the computing, or the course.  Talk to me as soon as possible if you find yourself struggling. The material will build on itself, so it will be much easier to catch up if the concepts get clarified earlier rather than later.  This semester is going to be fun.  Let's do it.
+
+
+
+## Philosophy on AI use
+
+The goals of the course including **learning** core content and becoming skilled at using analysis tools accurately and effectively. While sometimes quite helpful, there are ways that AI can get in the way of the **learning**, for example:
+
+* Learning takes struggle, and LLMs often remove the struggle.
+* AI will often be wrong, maybe because it doesn't understand the prompt or maybe because it is hallucinating.
+* Learning takes practice, particularly by building muscles related to creative and independent thinking. LLMs remove the practice.
+
+There are also ways that AI can be **ethically problematic**, for example:
+
+* LLM queries use large amounts of resources.
+* LLMs are based on intellectual property (often illegally) taken from scholars, artists, and journalists.
+* The rise of LLMs impact the number of jobs available to people like you.
+
+I encourage you to reflect on your use of AI in this class and elsewhere. Is your use consistent with the **learning** that brings you to a place like Pomona College? Are you considering the **ethical ramifications** associated with using AI?  See the academic honesty part of the syllabus for generative AI policy.
+
 
    
 :::{.callout-tip icon=false}
 ## Grading
-  * 30% Homework
-  * 30% Quizzes 
-  * 30% Projects & Final Presentation 
-  * 10% Class engagement 
+  * 15% Homework
+  * 60% Quizzes 
+  * 20% Projects & Final Presentation 
+  * 5% Class engagement 
 :::

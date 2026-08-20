@@ -1,7 +1,7 @@
 ---
-title: "R tip-of-the-day"
+title: "R / Positron tip-of-the-day"
 description: |
-  So many awesome ways to do R.  I'll share some, you'll share some, it will be fun.
+  So many awesome ways to do R in Positron.  I'll share some, you'll share some, it will be fun.
 format: html
 ---
 
@@ -19,10 +19,17 @@ knitr::include_graphics("images/R_first_then.png")
 ```{r}
 #| echo: false
 schedule <- tribble(
-  ~`number`, ~tip, ~`description`, ~`misc`,
-  'Tip 1', 'cmd + opt + i', 'adds a new R chunk',
-  'cntrl + alt + i for PC',
-  
+  ~`number`                  , ~tip              , ~`description`       , ~`misc` ,
+  'Tip 1'                    , 'cmd + shift + i' , 'adds a new R chunk' ,
+  'cntrl + shift + i for PC'
+)
+```
+
+
+```{r}
+#| eval: false
+#| echo: false
+
   'Tip 2', 'Tools -> Global Options... -> Appearance',
   'allows for dark mode, plus other options!', ' ',
   
@@ -82,12 +89,7 @@ schedule <- tribble(
   
   'Tip 29', 'highlight code + cmd + i', 'resets indenting', ' '
   
-  )
-```
 
-```{r}
-#| eval: false
-#| echo: false
   'Tip 2', '<img src = "images/add_chunk.png">', 'adds a new R chunk',
   'look for it at top of Quarto doc',
   
@@ -151,11 +153,10 @@ schedule <- tribble(
 # can also use column: screen-inset also the entire page??
 # can use column: page for the entire page
 # can use column: body-outset to bleed outside the center column of text
-schedule |> 
-  gt::gt() |> 
-  gt::fmt_markdown(columns = everything()) |> 
-  gt::cols_width(number ~ px(100),
-                 everything() ~ px(200))
+schedule |>
+  gt::gt() |>
+  gt::fmt_markdown(columns = everything()) |>
+  gt::cols_width(number ~ px(100), everything() ~ px(200))
 ```
 
 

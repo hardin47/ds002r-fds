@@ -1,0 +1,782 @@
+---
+title: Variable Types
+author: "Jo Hardin"
+subtitle: "September 22 + 24, 2025"
+format:
+  revealjs:
+    incremental: false
+    scrollable: true
+    slide-number: true
+    embed-resources: true
+    show-slide-number: all
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(openintro)
+options(pillar.width = 70)
+```
+
+
+# Variable Types
+
+Some variable types: 
+
+:::: {.columns}
+
+::: {.column width=50%}
+* character strings
+* factor variables
+* dates
+:::
+
+
+::: {.column width=50%}
+* numeric (decimal)
+* integer
+* logical (Boolean)
+:::
+::::
+A variable's type determines the values that the variable can take on and the operations that can be performed on it.  Specifying variable types ensures the data's integrity and increases performance. 
+
+
+# Agenda  9/22/25
+
+1. Character strings
+2. `str_*()` functions
+
+
+
+# Character strings
+
+When working with character strings, we might want to detect, replace, or extract certain patterns. 
+
+Strings are objects of the **character** class (abbreviated as `<chr>` in tibbles). When you print out strings, they display with double quotes:
+
+```{r}
+some_string <- "banana"
+some_string
+```
+
+## Creating strings
+
+Creating strings by hand is useful for testing out regular expressions.
+
+To create a string, type any text in either double quotes `"` or single quotes `'`. Using double or single quotes doesn't matter unless your string itself has single or double quotes.
+
+```{r}
+string1 <- "This is a string"
+string2 <- 'If I want to include a "quote" inside a string, I use single quotes'
+
+string1
+string2
+```
+
+## `str_view()`
+
+We can view these strings "naturally" (without the opening and closing quotes) `with str_view()`:
+
+```{r}
+str_view(string1)
+str_view(string2)
+```
+
+## Working with strings
+
+* yes, lots of code to learn
+* no, the code doesn't really matter
+* learning goal for today: 
+
+> what can you even do with string variables???
+
+## `str_c`
+
+Similar to `paste()` (gluing strings together), but works well in a tidy pipeline.
+
+```{r}
+df <- tibble(name = c("Flora", "David", "Terra", NA))
+df |> mutate(greeting = str_c("Hi ", name, "!"))
+```
+
+## `str_sub()`
+
+`str_sub(string, start, end)` will extract parts of a `string` where `start` and `end` are the positions where the substring starts and ends.
+
+```{r}
+fruits <- c("Apple", "Banana", "Pear")
+str_sub(fruits, 1, 3)
+str_sub(fruits, -3, -1)
+```
+
+
+Won't fail if the string is too short.
+
+```{r}
+str_sub(fruits, 1, 5)
+```
+
+## `str_sub()` in a pipeline
+
+We can use the `str_*()` functions inside the `mutate()` function.
+
+```{r}
+#| echo: false
+titanic <- Titanic |> 
+  as.data.frame()
+```
+
+```{r}
+titanic |> 
+  mutate(class1 = str_sub(Class, 1, 1))
+```
+
+
+## `str_replace*()`
+
+`str_replace()` replaces the first match of a pattern. `str_replace_all()` replaces all the matches of a pattern.
+
+```{r}
+fruits
+str_replace(fruits, "a", "x")
+str_replace_all(fruits, "a", "x")
+```
+
+## `str_detect()`
+
+```{r}
+fruits
+str_detect(fruits, "a")
+str_detect(fruits, "A")
+```
+
+
+## `str_detect()` in pipeline
+
+`str_detect()` used in a `filter()` pipeline.
+
+::: {.panel-tabset}
+
+## original data
+
+```{r}
+starwars |> 
+  select(name, films) 
+```
+
+## unnested data
+
+```{r}
+starwars |> 
+  select(name, films) |> 
+  unnest_wider(films, names_sep = "")
+```
+
+## filtered unnested data
+
+```{r}
+starwars |> 
+  filter(str_detect(films, "Empire")) |> 
+  select(name, films) |> 
+  unnest_wider(films, names_sep = "")
+```
+:::
+
+## `str_length()`
+
+Returns the number of pieces in a string (usually a single letter, number, or space).
+
+```{r}
+x <- c("apple", "banana", "cherry pie", "")
+
+str_length(x)
+```
+
+
+## `str_count()`
+
+Counts the number of times `pattern` is found within each element of `string`.
+
+```{r}
+x <- c("apple pie apple tart", "banana apple", "cherry")
+
+str_count(x, "apple")
+```
+
+
+## `str_extract*()`
+
+`str_extract()` extracts the first complete match from each string, 
+
+`str_extract_all()` extracts all matches from each string.
+
+```{r}
+x <- c("apple pie apple tart", "banana apple", "cherry")
+
+
+str_extract(x, "a")
+
+str_extract_all(x, "a")
+
+str_extract(x, "apple")
+
+str_extract_all(x, "apple")
+```
+
+
+## **stringr** functions
+
+The **stringr** package within tidyverse contains lots of functions to help process strings. Letting x be a string variable...
+
+```{r}
+#| echo: false
+
+tribble(
+  ~`str function`, ~arguments, ~returns,
+"`str_view()`", "`x`", "the string",
+"`str_c()`", " ..., `sep`, `collapse`", "a new concatenated string",
+"`str_sub()`",	"`x`, `start`, `end`", "a modified string",
+"`str_replace()`",	"`x`, `pattern`, `replacement`",	"a modified string",
+"`str_replace_all()`",	"`x`, `pattern`, `replacement`", "a modified string",
+"`str_detect()`",	"`x`, `pattern`",	"TRUE/FALSE",
+"`str_to_lower()`",	"`x`", "a modified string",
+"`str_to_upper()`",	"`x`", "a modified string",
+"`str_length()`",	"`x`", "a number",
+"`str_count()`", "`x`, `pattern`", "an integer vector",
+"`str_extract()`", "`x`, `pattern`", "a character vector",
+"`str_extract_all()`", "`x`, `pattern`", "a list of character vectors"
+) |> 
+  kableExtra::kable()
+```
+
+Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheat sheet</a>. 
+
+
+# `str_*()` functions on non-strings?
+
+Do the functions that were built to handle strings work if the variable is not a string?
+
+## Starbucks data
+
+The `str_*()` functions work:
+
+::: {.panel-tabset}
+
+## data
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type)
+```
+
+## on factor
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type) |> 
+  mutate(TYPE = str_to_upper(type))
+```
+
+## on numeric
+
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type) |> 
+  filter(str_detect(fat, "1"))
+```
+
+## on integers
+
+```{r}
+set.seed(47)
+starbucks |> 
+  sample_n(10) |> 
+  select(item, calories, fat, type) |> 
+  mutate(newcal = str_replace(calories, "0", "&"))
+```
+
+
+:::
+
+
+# Agenda  9/24/25
+
+1. Factor variables, `fct_*()` functions
+2. Time and date objects, **lubridate** package
+
+
+# Factor variables
+
+Factor variables are a special type of character string.
+The computer actually stores them as *integers* (?!?!!?) with a label (abbreviated as `<fct>` in tibbles). 
+
+* categorical variable
+* represented in discrete levels with an ordering
+
+
+## Where do we order?
+
+The ordering of the factor variable is important in:
+
+* plots (e.g., barplots)
+* tables (e.g., `group_by()`)
+* modeling (e.g., the baseline level in a linear regression)
+
+## Order matters
+
+SurveyUSA poll from 2012 on views of the DREAM Act.
+
+What is off about the data viz part of the report?
+
+::: {.panel-tabset}
+
+## Data
+```{r}
+openintro::dream
+```
+
+## Plot
+```{r}
+dream |> 
+  ggplot(aes(x = ideology, fill = stance)) + 
+  geom_bar()
+```
+
+## Levels
+
+The `levels()` function reports the levels and their order.
+
+```{r}
+dream |> 
+  select(ideology) |> 
+  pull() |>  # because levels() works only on vectors, not data frames
+  levels()
+```
+
+
+:::
+
+## Change the order
+
+We can fix the order of the `ideology` variable.
+
+::: {.panel-tabset}
+
+## Code
+```{r}
+#| eval: false
+dream |> 
+  mutate(ideology = fct_relevel(ideology, 
+                                c("Liberal", "Moderate", "Conservative"))) |> 
+  ggplot(aes(x = ideology, fill = stance)) + 
+  geom_bar()
+```
+
+## Plot
+```{r}
+#| echo: false
+dream |> 
+  mutate(ideology = fct_relevel(ideology, 
+                                c("Liberal", "Moderate", "Conservative"))) |> 
+  ggplot(aes(x = ideology, fill = stance)) + 
+  geom_bar()
+```
+:::
+
+## Factor and character variables
+
+
+::: {.panel-tabset}
+
+## Data
+```{r}
+starbucks |> 
+  select(item, type, calories)
+```
+
+## Plot
+```{r}
+#| echo: false
+starbucks |> 
+  ggplot(aes(x = type, y = calories)) + 
+  geom_point() + 
+  labs(x = "type of food",
+       y = "",
+       title = "Calories for food items at Starbucks")
+```
+:::
+
+
+## Reorder according to another variable
+
+Lets say that we wanted to order the type of food item based on the average number of calories in that food.
+
+
+::: {.panel-tabset}
+
+## Code
+```{r}
+#| eval: false
+starbucks |> 
+  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |> 
+  ggplot(aes(x = type, y = calories)) + 
+  geom_point() + 
+  labs(x = "type of food",
+       y = "",
+       title = "Calories for food items at Starbucks")
+ 
+```
+
+## Plot
+```{r}
+#| echo: false
+starbucks |> 
+  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |> 
+  ggplot(aes(x = type, y = calories)) + 
+  geom_point() + 
+  labs(x = "type of food",
+       y = "",
+       title = "Calories for food items at Starbucks")
+ 
+```
+
+## For funzies
+
+```{r}
+#| echo: true
+#| error: true
+
+starbucks |> 
+  mutate(type = fct_reorder(fiber, calories, .fun = "mean", .desc = TRUE)) 
+
+```
+:::
+
+## What really are levels?
+
+::: {.panel-tabset}
+
+## recode
+
+```{r}
+x <- factor(c("apple", "bear", "dear", "banana", "apple", "apple", "dear"))
+x
+unclass(x)
+
+x <- fct_recode(x, fruit = "apple", fruit = "banana")
+x
+unclass(x)
+```
+## rewrite
+
+```{r}
+new_fruit <- data.frame(words = x) |> 
+  mutate(x_recode = fct_recode(words, fruit = "apple", fruit = "banana"),
+         x_rewrite = ifelse(words == "apple", "fruit",
+                            ifelse(words == "banana", "fruit", words))) 
+
+new_fruit
+
+new_fruit |> 
+  str()
+```
+
+
+## mistake
+
+```{r}
+#| warning: true
+# If you make a mistake you'll get a warning
+fct_recode(x, fruit = "apple", fruit = "bananana")
+```
+
+## NULL
+
+```{r}
+# If you name the level NULL it will be removed
+fct_recode(x, NULL = "apple", fruit = "banana")
+```
+
+## special variables
+
+```{r}
+# Wrap the left hand side in quotes if it contains special variables
+fct_recode(x, "an apple" = "apple", "a bear" = "bear")
+```
+
+:::
+
+## Change factor to character
+
+
+::: {.panel-tabset}
+
+## data
+
+```{r}
+f <- factor(c("cat", "dog", "cat"))
+f
+
+unclass(f)
+```
+
+## `as.character()`
+
+... produces the **labels** because that is how the function is *defined*.
+
+```{r}
+as.character(f)
+```
+
+
+## `as.numeric()`
+
+... produces the **integer codes** because that is how the function is *defined*.
+
+```{r}
+as.numeric(f)
+```
+
+## `ifelse()`
+
+... coerces everything to the lowest common denominator. That is, it strips the labels off the factor variable, uses the integers, and converts them to character strings.
+
+```{r}
+ifelse(f == "cat", "meow", f)
+```
+
+:::
+
+## Change character to factor
+
+::: {.panel-tabset}
+
+## OG data
+
+```{r}
+starbucks |> 
+  select(item, calories, type)
+```
+
+## New factor 
+
+```{r}
+starbucks |> 
+  mutate(item_fac = as.factor(item)) |> 
+  select(item, calories, type, item_fac)
+```
+:::
+
+
+
+## **forcats** functions
+
+The **forcats** package within tidyverse contains lots of functions to help process factor variables Use the <a href = "https://rstudio.github.io/cheatsheets/html/factors.html" target = "_blank">**forcats** cheat sheet</a>. We'll focus on the most common functions. 
+
+* functions for changing the **order** of factor levels
+    - `fct_relevel()` = *manually* reorder levels
+    - `fct_reorder()` = reorder levels according to values of another *variable*
+    - `fct_infreq()` = order levels from highest to lowest frequency
+    - `fct_rev()` = reverse the current order
+
+* functions for changing the **labels** or values of factor levels
+    - `fct_recode()` = *manually* change levels
+    - `fct_lump()` = *group together*  least common levels
+    - `fct_other()` = manually replace some levels with "other"
+
+
+
+# Time and date objects
+
+If the variable is formatted as a time or date object, you will find that there are very convenient ways to access, wrangle, and plot the information.
+
+## Types of time and date objects
+
+There are 3 types of date/time data that refer to an instant in time:
+
+A **date**. Tibbles print this as `<date>`.
+
+A **time** within a day. Tibbles print this as `<time>`.
+
+A **date-time** is a date plus a time: it uniquely identifies an instant in time (typically to the nearest second). Tibbles print this as `<dttm>`. Base R calls these POSIXct, but that doesn’t exactly flow off the tongue.
+
+## Formatting time variables
+
+```{r, out.width = "90%", fig.cap = "image credit: https://xkcd.com/1179/", fig.alt = "xkcd comic listing the many different ways that date objects can be written.", echo=FALSE}
+knitr::include_graphics("../images/xkcd_iso_8601.png")
+``` 
+
+## What time is it?
+
+```{r}
+today()
+
+now()
+```
+
+## Creating dates
+
+`ymd()` and friends create dates
+
+```{r}
+ymd("2025-02-19")
+mdy("February 19th, 2025")
+dmy("19-Feb-2025")
+```
+## ... with times
+
+To create a date-time, add an underscore and one or more of "h", "m", and "s" to the name of the parsing function:
+
+```{r}
+ymd_hms("2025-02-19 11:45:59", tz = "America/Los_Angeles")
+
+mdy_hm("02/19/2025 15:01")  # default is UTC = GMT
+```
+
+More <a href = "https://r4ds.hadley.nz/datetimes#time-zones" target = "_blank">information about time zones in R</a>.
+
+## **lubridate**
+  
+**lubridate** is a another R package meant for data wrangling!  
+
+In particular, **lubridate** makes it very easy to work with days, times, and dates.  The base idea is to start with dates in a `ymd` (year month day) format and transform the information into whatever you want.  
+
+Examples from the <a href = "https://lubridate.tidyverse.org/reference/lubridate-package.html" target = "_blank">lubridate vignette</a>.
+
+ 
+
+## If anyone drove a time machine, they would crash
+
+The length of months and years change so often that doing arithmetic with them can be unintuitive. 
+
+<mark>Consider a simple operation: January 31st + one month.</mark>
+
+
+## If anyone drove a time machine, they would crash
+
+The length of months and years change so often that doing arithmetic with them can be unintuitive. 
+
+<mark>Consider a simple operation: January 31st + one month.</mark>
+
+Should the answer be:
+  
+1. February 31st (which doesn't exist)?
+2. March 3rd (31 days after January 31)?
+3. February 28th (assuming its not a leap year)?
+
+## If anyone drove a time machine, they would crash
+
+A basic property of arithmetic is that a + b - b = a. Only solution 1 obeys the mathematical property, but it is an invalid date. Wickham wants to make **lubridate** as consistent as possible by invoking the following rule: <mark>if adding or subtracting a month or a year creates an invalid date, **lubridate** will return an NA. </mark>
+
+If you thought solution 2 or 3 was more useful, no problem. You can still get those results with clever arithmetic, or by using the special `%m+%` and `%m-%` operators. `%m+%` and `%m-%` automatically roll dates back to the last day of the month, should that be necessary.
+ 
+
+## basics in `lubridate` 
+
+```{r message=FALSE}
+library(lubridate)
+rightnow <- now()
+rightnow
+
+day(rightnow)
+week(rightnow)
+month(rightnow, label=FALSE)
+month(rightnow, label=TRUE)
+year(rightnow)
+```
+
+ 
+## basics in `lubridate` 
+
+```{r}
+minute(rightnow)
+hour(rightnow)
+
+yday(rightnow)
+mday(rightnow)
+wday(rightnow, label=FALSE)
+wday(rightnow, label=TRUE)
+```
+
+ 
+
+## Working with a date object
+
+
+```{r}
+jan31 <- ymd("2025-01-31")
+jan31 + months(0:11)
+```
+
+. . .
+
+```{r}
+floor_date(jan31, "month")
+floor_date(jan31, "month") + months(0:11) + days(31)
+```
+
+. . .
+
+```{r}
+jan31 + months(0:11) + days(31)
+```
+
+. . .
+
+```{r}
+jan31 %m+% months(0:11)
+```
+
+
+## NYC flights 
+```{r message=FALSE}
+library(nycflights13)
+names(flights)
+```
+
+ 
+
+## NYC flights 
+
+Creating a date object from variables.
+
+```{r message=FALSE}
+flightsWK <- flights |>  
+   mutate(ymdday = ymd(str_c(year, month, day, sep="-"))) |> 
+   mutate(weekdy = wday(ymdday, label=TRUE), 
+          whichweek = week(ymdday)) 
+
+flightsWK |>  select(year, month, day, ymdday, weekdy, whichweek, 
+                     dep_time, arr_time) 
+```
+
+
+ 
+
+<!--
+
+FOR REGEXP
+
+## **stringr** functions
+
+The following are core **stringr** functions that use regular expressions:
+
+* `str_view()` - View the first occurrence in a string that matches the regex
+* `str_count()` - Count the number of times a regex matches within a string
+* `str_detect()` - Determine if (TRUE/FALSE) the regex is found within string
+* `str_subset()` - Return subset of strings that match the regex
+* `str_extract()`, `str_extract_all()` - Return portion of each string that matches the regex. `str_extract()` extracts the first instance of the match. `str_extract_all()` extracts all matches.
+* `str_replace()`, `str_replace_all()` - Replace portion of string that matches the regex with something else. str_replace() replaces the first instance of the match. `str_replace_all()` replaces all instances of the match.
+* `str_remove()`, `str_remove_all()` - Removes the portion of the string that matches the pattern. Equivalent to `str_replace(x, "THE REGEX PATTERN", "")`
+-->
+
+

@@ -1,55 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ds002r-fds.netlify.app/clicker_study.html</loc>
-    <lastmod>2025-01-14T22:52:37.002Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ds002r-fds.netlify.app/project.html</loc>
-    <lastmod>2024-09-12T03:30:17.243Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ds002r-fds.netlify.app/superfluous_material.html</loc>
-    <lastmod>2025-09-05T16:55:23.835Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ds002r-fds.netlify.app/clicker.html</loc>
-    <lastmod>2025-11-24T20:41:55.743Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ds002r-fds.netlify.app/slides/2025-11-17-joins.html</loc>
-    <lastmod>2025-11-19T20:58:28.969Z</lastmod>
-  </url>
-  <url>
     <loc>https://ds002r-fds.netlify.app/syllabus.html</loc>
-    <lastmod>2025-09-25T20:49:29.084Z</lastmod>
+    <lastmod>2026-08-20T22:34:11.201Z</lastmod>
   </url>
   <url>
-    <loc>https://ds002r-fds.netlify.app/clicker_slides.html</loc>
-    <lastmod>2025-02-17T17:54:24.342Z</lastmod>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-11-30-joins.html</loc>
+    <lastmod>2026-08-20T23:19:20.353Z</lastmod>
   </url>
   <url>
-    <loc>https://ds002r-fds.netlify.app/slides/2025-11-24-shiny.html</loc>
-    <lastmod>2025-11-24T20:56:34.308Z</lastmod>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-11-18-clauses.html</loc>
+    <lastmod>2026-08-20T23:19:22.407Z</lastmod>
   </url>
   <url>
-    <loc>https://ds002r-fds.netlify.app/index.html</loc>
-    <lastmod>2026-01-12T22:21:20.159Z</lastmod>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-11-09-webscrape.html</loc>
+    <lastmod>2026-08-20T23:35:31.305Z</lastmod>
   </url>
   <url>
-    <loc>https://ds002r-fds.netlify.app/project4.html</loc>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-11-02-perm.html</loc>
+    <lastmod>2025-10-20T04:41:45.001Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-10-19-help.html</loc>
+    <lastmod>2025-10-13T17:24:08.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-10-05-regex.html</loc>
+    <lastmod>2026-08-20T22:44:57.288Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-09-21-pivotjoin.html</loc>
+    <lastmod>2025-10-06T04:56:29.572Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-09-07-dataviz.html</loc>
+    <lastmod>2025-09-08T16:19:44.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/project6_old.html</loc>
+    <lastmod>2025-11-19T06:19:51.355Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/project4_old.html</loc>
     <lastmod>2026-04-30T17:54:55.543Z</lastmod>
   </url>
   <url>
-    <loc>https://ds002r-fds.netlify.app/R-tip.html</loc>
-    <lastmod>2025-12-05T21:24:03.710Z</lastmod>
+    <loc>https://ds002r-fds.netlify.app/project2_old.html</loc>
+    <lastmod>2025-09-30T05:00:08.780Z</lastmod>
   </url>
   <url>
-    <loc>https://ds002r-fds.netlify.app/slides/2025-12-01-fin.html</loc>
-    <lastmod>2025-11-30T23:41:15.546Z</lastmod>
+    <loc>https://ds002r-fds.netlify.app/project.html</loc>
+    <lastmod>2026-08-20T23:06:19.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/index.html</loc>
+    <lastmod>2026-08-20T22:10:30.665Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/github.html</loc>
     <lastmod>2026-08-13T05:15:26.889Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/clicker_slides.html</loc>
+    <lastmod>2026-08-20T23:21:19.798Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/R-tip.html</loc>
+    <lastmod>2026-08-20T22:58:15.164Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/clicker_study.html</loc>
+    <lastmod>2026-08-20T23:18:25.640Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/images/ma154-hwtest.html</loc>
+    <lastmod>2023-12-26T02:12:24.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/notes.html</loc>
+    <lastmod>2024-08-21T23:54:36.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/project1_old.html</loc>
+    <lastmod>2026-08-17T17:51:41.604Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/project3_old.html</loc>
+    <lastmod>2025-11-10T01:34:10.412Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/project5_old.html</loc>
+    <lastmod>2026-08-20T22:27:32.808Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-08-31-intro.html</loc>
+    <lastmod>2025-08-23T23:19:33.082Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-09-14-verbs.html</loc>
+    <lastmod>2025-10-06T04:57:08.839Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-09-28-types.html</loc>
+    <lastmod>2025-10-06T04:59:05.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-10-12-funcmap.html</loc>
+    <lastmod>2025-10-08T17:17:04.199Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-10-26-sims.html</loc>
+    <lastmod>2025-10-22T19:02:44.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-11-04-ethics.html</loc>
+    <lastmod>2025-11-05T14:06:33.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-11-16-db.html</loc>
+    <lastmod>2026-08-20T22:34:50.585Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-11-223-shiny.html</loc>
+    <lastmod>2025-11-24T20:56:34.308Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-12-07-fin.html</loc>
+    <lastmod>2025-11-30T23:41:15.546Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/superfluous_material.html</loc>
+    <lastmod>2025-09-05T16:55:23.835Z</lastmod>
   </url>
 </urlset>
