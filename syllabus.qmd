@@ -207,34 +207,36 @@ The College expects students to understand and adhere to basic standards of hone
 
 
 :::{.callout-tip icon=false}
-## AI use policy^[Many of the ideas below are from https://provost.tufts.edu/celt/online-resources/artificial-intelligence/ai-syllabus-statements/]
+# My AI use policy^[Many of the ideas below are from https://provost.tufts.edu/celt/online-resources/artificial-intelligence/ai-syllabus-statements/]
 
 If you choose to use AI for any of the assignments for this class, you should pay attention to where you obtained any relevant information.
 Submitting work created by a generative AI as your own in any assignment is considered plagiarism, and therefore an academic integrity violation, just the same as copying work from any other source.
 
-**Attribution**
-
+**Attribution**  
 * As with any other reference you might find, any directly copied text from generative AI should be in quotes and given a citation. Any summarized text from generative AI should be referenced.
 * Cite all AI tools when used or referred to in assigned work.  For example, see how to cite generative AI in <a href = "https://apastyle.apa.org/blog/how-to-cite-chatgpt" target = "_blank">APA</a>, <a href = "https://style.mla.org/citing-generative-ai/" target = "_blank">MLA</a>, or <a href = "https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Documentation/faq0422.html" target = "_blank">Chicago</a> styles. 
 
-**Permitted**
-
+**Permitted**  
 * Clarifying concepts (after attempting to understand them yourself, and then checking course materials or other credible sources for accuracy)
-* Brainstorming initial topic ideas or approaches (after you have spent some time thinking on your own)
 * Organizing and outlining your thoughts
 * Grammar and spelling assistance
 * Asking AI for practice questions or explanations of concepts (after attempting them yourself first), then checking your understanding against course materials
 * Using AI to generate examples, counterarguments, or alternative perspectives that help you develop more nuanced thinking
-* Debugging code, checking syntax, or troubleshooting errors (with the expectation that you understand and can explain any code you submit)
+* Debugging code, checking syntax, or troubleshooting errors (with the expectation that you understand and **can explain** any final code that you submit)
+* Asking for help understanding a concept (please include "do not generate code. only explain in words." to the prompt).
 
-**Not permitted**
-
+**Not permitted**  
 * Having AI generate any sentences or paragraphs that appear in your final work without quotation marks and attribution
 * Using AI to write arguments, code, proofs, or problem solutions that you submit as your own
+* Generating code for an assignment (please include "do not generate code. only explain
+in words.” within any prompt designed to help you understand ideas from the course)
 * Asking AI to outline or structure your assignment before you have developed your own approach
 * Using AI to summarize readings or course materials in place of doing the reading yourself
 * Submitting code (or full chunks of code) that has been written in whole by AI 
 
+
+**My commitment**  
+I commit to not using AI to assess any part of your work. I will fully engage with your assignments without the use of AI.
 :::
 
 
@@ -249,15 +251,15 @@ Please email and / or set up a time to talk if you have any questions about or d
 
 The goals of the course including **learning** core content and becoming skilled at using analysis tools accurately and effectively. While sometimes quite helpful, there are ways that AI can get in the way of the **learning**, for example:
 
-* Learning takes struggle, and LLMs often remove the struggle.
-* AI will often be wrong, maybe because it doesn't understand the prompt or maybe because it is hallucinating.
-* Learning takes practice, particularly by building muscles related to creative and independent thinking. LLMs remove the practice.
+* Learning takes struggle, and generative AI usually removes the struggle.
+* Generative AI will often be wrong, maybe because it doesn't understand the prompt or maybe because it is hallucinating.
+* Learning takes practice, particularly by building muscles related to creative and independent thinking. Generative AI removes the practice.
 
 There are also ways that AI can be **ethically problematic**, for example:
 
-* LLM queries use large amounts of resources.
-* LLMs are based on intellectual property (often illegally) taken from scholars, artists, and journalists.
-* The rise of LLMs impact the number of jobs available to people like you.
+* Generative AI queries use large amounts of resources.
+* Generative AI is based on intellectual property (often illegally) taken from scholars, artists, and journalists.
+* The rise of generative AI impacts the number of jobs available to people like you.
 
 I encourage you to reflect on your use of AI in this class and elsewhere. Is your use consistent with the **learning** that brings you to a place like Pomona College? Are you considering the **ethical ramifications** associated with using AI?  See the academic honesty part of the syllabus for generative AI policy.
 
@@ -265,8 +267,8 @@ I encourage you to reflect on your use of AI in this class and elsewhere. Is you
    
 :::{.callout-tip icon=false}
 ## Grading
-  * 15% Homework
-  * 60% Quizzes 
-  * 20% Projects & Final Presentation 
-  * 5% Class engagement 
+  * 15% homework
+  * 60% in-class quizzes 
+  * 20% projects & final presentation 
+  * 5% class engagement 
 :::
