@@ -1644,12 +1644,12 @@ map_chr(c(1, 4, 7), addTen)
 
 (@) Which of the following produces a different output?[^63]
     a. `map(c(1, 4, 7), addTen)`
-    b. `map(c(1, 4, 7), ~addTen(.x))`
-    c. `map(c(1, 4, 7), ~addTen)`
+    b. `map(c(1, 4, 7), \(x) addTen(x))`
+    c. `map(c(1, 4, 7), \(x) addTen)`
     d. `map(c(1, 4, 7), function(hi) (hi + 10))`
-    e. `map(c(1, 4, 7), ~(.x + 10))`
+    e. `map(c(1, 4, 7), \(x) (x + 10))`
     
-[^63]: c. `map(c(1, 4, 7), ~addTen)`.  The `~` acts on functions that do not have their own name or that are defined by `function(...)`.  By adding the argument `(.x)` we've expanded the `addTen()` function, and so it needs a `~`.  The `addTen()` function all alone does not use a `~`.
+[^63]: c. `map(c(1, 4, 7), \(x) addTen)`. By making a new function (with an argument of `x`), we then run the inside (which is **only** `addTen`, it is not `addTen(x)`). Running `addTen` won't actually run the function, it will just print the function. Try it out! In the console type: `addTen`.  Then type: `addTen(47)`. Do you see the difference?
 
 ---
 

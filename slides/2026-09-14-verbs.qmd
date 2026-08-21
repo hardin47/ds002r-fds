@@ -36,7 +36,7 @@ options(pillar.width = 70)
 
 ```{r}
 #| echo: false
-head(penguins) |> 
+head(penguins) |>
   gt::gt()
 ```
 
@@ -158,7 +158,7 @@ than 5 hours.
 filter(flights, month == 3, day == 17)
 filter(flights, dest == "ORD")
 filter(flights, dest == "ORD", carrier == "UA")
-filter(flights, distance > 2000 | air_time > 5*60)
+filter(flights, distance > 2000 | air_time > 5 * 60)
 ```
 
  
@@ -221,8 +221,13 @@ distinct(select(flights, origin, dest))
 As well as selecting from the set of existing columns, it's often useful to add new columns that are functions of existing columns. This is the job of `mutate()`:
 
 ```{r}
-select(mutate(flights, gain = dep_delay - arr_delay), 
-       flight, dep_delay, arr_delay, gain)
+select(
+  mutate(flights, gain = dep_delay - arr_delay),
+  flight,
+  dep_delay,
+  arr_delay,
+  gain
+)
 ```
 
  
@@ -250,7 +255,7 @@ summarize(flights, delay = mean(dep_delay, na.rm = TRUE))
 **Select** the new variable and save it, along with tailnum, as a new data frame object.
 
 ```{r}
-flights2 <- mutate(flights, speed = distance/(air_time/60))
+flights2 <- mutate(flights, speed = distance / (air_time / 60))
 speed_data <- select(flights2, tailnum, speed)
 ```
 
@@ -272,9 +277,11 @@ Find the fastest airplanes in the bunch, measured as the average speed per airpl
 
 ```{r}
 by_tailnum <- group_by(speed_data, tailnum)
-avg_speed <- summarize(by_tailnum, 
-                       count = n(), 
-                       avg_speed = mean(speed, na.rm = TRUE))
+avg_speed <- summarize(
+  by_tailnum,
+  count = n(),
+  avg_speed = mean(speed, na.rm = TRUE)
+)
 arrange(avg_speed, desc(avg_speed))
 ```
 
@@ -299,11 +306,11 @@ The pipe syntax (`|> `) takes a data frame and sends it to the argument of a fun
 
 ```{r}
 #| eval: false
-me_step1 <- dress(me, what = sports)  
-me_step2 <- exercise(me_step1, how = running)  
-me_step3 <- eat(me_step2, choice = cereal)  
-me_step4 <- dress(me_step3, what = school)  
-me_step5 <- commute(me_step4, transportation = bike)  
+me_step1 <- dress(me, what = sports)
+me_step2 <- exercise(me_step1, how = running)
+me_step3 <- eat(me_step2, choice = cereal)
+me_step4 <- dress(me_step3, what = school)
+me_step5 <- commute(me_step4, transportation = bike)
 ```
  
 
@@ -311,7 +318,13 @@ me_step5 <- commute(me_step4, transportation = bike)
 
 ```{r}
 #| eval: false
-commute(dress(eat(exercise(dress(me, what = sports), how = running), choice = cereal), what = school), transportation = bike)
+commute(
+  dress(
+    eat(exercise(dress(me, what = sports), how = running), choice = cereal),
+    what = school
+  ),
+  transportation = bike
+)
 ```
 
  
@@ -326,12 +339,15 @@ commute(
   dress(
     eat(
       exercise(
-        dress(me, 
-              what = sports), 
-        how = running), 
-      choice = cereal), 
-    what = school), 
-  transportation = bike)
+        dress(me, what = sports),
+        how = running
+      ),
+      choice = cereal
+    ),
+    what = school
+  ),
+  transportation = bike
+)
 ```
 
  
@@ -340,11 +356,11 @@ commute(
 
 ```{r}
 #| eval: false
-me |> 
-  dress(what = sports) |> 
-  exercise(how = running) |> 
-  eat(choice = cereal) |> 
-  dress(what = school) |> 
+me |>
+  dress(what = sports) |>
+  exercise(how = running) |>
+  eat(choice = cereal) |>
+  dress(what = school) |>
   commute(transportation = bike)
 ```
 
@@ -386,10 +402,12 @@ Another approach is to concatenate the functions so that there is only one outpu
 ```{r}
 #| eval: false
 bop(
-   scoop(
-      hop(foo_foo, through = forest),
-      up = field_mice),
-   on = head)
+  scoop(
+    hop(foo_foo, through = forest),
+    up = field_mice
+  ),
+  on = head
+)
 ```
  
 
@@ -408,10 +426,10 @@ Instead, the code can be written using the pipe in the **order** in which the fu
 
 ```{r}
 #| eval: false
-foo_foo |> 
-   hop(through = forest) |> 
-       scoop(up = field_mice) |> 
-           bop(on = head)
+foo_foo |>
+  hop(through = forest) |>
+  scoop(up = field_mice) |>
+  bop(on = head)
 ```
 -->
 
@@ -424,27 +442,59 @@ foo_foo |>
 ## No pipe
 
 ```{r}
-flights2 <- mutate(flights, speed = distance/(air_time/60))
+flights2 <- mutate(flights, speed = distance / (air_time / 60))
 tail_speed <- select(flights2, tailnum, speed)
 tail_speed_grp <- group_by(tail_speed, tailnum)
-tail_ave <- summarize(tail_speed_grp, number = n(),
-                      avg_speed = mean(speed, na.rm = TRUE))
+tail_ave <- summarize(
+  tail_speed_grp,
+  number = n(),
+  avg_speed = mean(speed, na.rm = TRUE)
+)
 arrange(tail_ave, desc(avg_speed))
 ```
 
 ## Pipe
 
 ```{r}
-flights |> 
-  mutate(speed = distance / (air_time/60)) |> 
-  select(tailnum, speed) |> 
-  group_by(tailnum) |>  
-  summarize(number = n(), 
-            avg_speed = mean(speed, na.rm = TRUE)) |> 
+flights |>
+  mutate(speed = distance / (air_time / 60)) |>
+  select(tailnum, speed) |>
+  group_by(tailnum) |>
+  summarize(number = n(), avg_speed = mean(speed, na.rm = TRUE)) |>
   arrange(desc(avg_speed))
 ```
 
 ::: 
+
+
+## Order matters
+
+::: {.panel-tabset}
+
+## filter then mutate
+
+```{r}
+#| eval: true
+flights |>
+  filter(dep_delay > 500) |>
+  group_by(carrier) |>
+  mutate(mean_delay = mean(dep_delay, na.rm = TRUE)) |>
+  select(year, month, day, dep_delay, mean_delay, origin, dest, carrier)
+```
+
+## mutate then filter
+
+```{r}
+#| eval: true
+flights |>
+  group_by(carrier) |>
+  mutate(mean_delay = mean(dep_delay, na.rm = TRUE)) |>
+  filter(dep_delay > 500) |>
+  select(year, month, day, dep_delay, mean_delay, origin, dest, carrier)
+```
+
+::: 
+
 
 ## Practice
 
@@ -457,9 +507,9 @@ Form a chain that creates a data frame containing only carrier and the mean depa
 Form a chain that creates a data frame containing only carrier and the mean departure delay time. Which carriers have the highest and lowest mean delays?
 
 ```{r}
-flights |> 
-  group_by(carrier) |> 
-  summarize(avg_delay = mean(dep_delay, na.rm = TRUE)) |> 
+flights |>
+  group_by(carrier) |>
+  summarize(avg_delay = mean(dep_delay, na.rm = TRUE)) |>
   arrange(desc(avg_delay))
 ```
 
@@ -474,11 +524,13 @@ Say you're curious about the relationship between the number of flights that eac
 ## Solution
 
 ```{r}
-delay_data <- flights |> 
-  group_by(tailnum) |> 
-  summarize(number = n(),
-            dist = mean(distance, na.rm = TRUE), 
-            delay = mean(arr_delay, na.rm = TRUE)) |> 
+delay_data <- flights |>
+  group_by(tailnum) |>
+  summarize(
+    number = n(),
+    dist = mean(distance, na.rm = TRUE),
+    delay = mean(arr_delay, na.rm = TRUE)
+  ) |>
   filter(number > 20, dist < 2000)
 ```
 
@@ -493,19 +545,18 @@ delay_data <- flights |>
 ```{r eval = TRUE, message = FALSE, warning = FALSE, echo = FALSE}
 library(ggplot2)
 ggplot(delay_data, aes(dist, delay)) +
- geom_point(aes(size = number), alpha = 1/2) +
- geom_smooth() +
- scale_size_area()
+  geom_point(aes(size = number), alpha = 1 / 2) +
+  geom_smooth() +
+  scale_size_area()
 ```
 
 ## Code
 ```{r eval = FALSE, message = FALSE, warning = FALSE, echo = TRUE}
-delay_data |> 
- ggplot(aes(dist, delay)) +
- geom_point(aes(size = number), 
-            alpha = 1/2) +
- geom_smooth() +
- scale_size_area()
+delay_data |>
+  ggplot(aes(dist, delay)) +
+  geom_point(aes(size = number), alpha = 1 / 2) +
+  geom_smooth() +
+  scale_size_area()
 ```
 When `scale_size_area` is used, the default behavior is to scale the area of points to be proportional to the value.
 :::

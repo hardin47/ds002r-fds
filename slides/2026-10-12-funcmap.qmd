@@ -17,10 +17,7 @@ execute:
 
 
 ```{r include=FALSE}
-library(tidyverse)
-library(knitr)
-library(lubridate)
-library(openintro)
+source("../_common.R")
 options(pillar.width = 70)
 ```
 
@@ -44,8 +41,8 @@ knitr::include_graphics("../images/data_lego2.png")
 Here is a simple function to compute the absolute value.
 
 ```{r}
-my_abs <- function(x){
-  return(ifelse(x >= 0, x, -1*x))
+my_abs <- function(x) {
+  return(ifelse(x >= 0, x, -1 * x))
 }
 
 my_abs(-3)
@@ -60,7 +57,7 @@ my_abs(c(-2, 5))
 ## Ordering and arguments
 
 ```{r}
-my_power <- function(x, y){
+my_power <- function(x, y) {
   return(x^y)
 }
 
@@ -78,7 +75,7 @@ my_power(3, 2)
 
 ## function
 ```{r}
-my_power <- function(x, y){
+my_power <- function(x, y) {
   return(x^y)
 }
 ```
@@ -103,7 +100,7 @@ my_power(3)
 
 ## function
 ```{r}
-my_power <- function(x, y = 2){
+my_power <- function(x, y = 2) {
   return(x^y)
 }
 ```
@@ -127,7 +124,7 @@ my_power(3)
 
 ## function
 ```{r}
-my_power <- function(x, y = 2){
+my_power <- function(x, y = 2) {
   return(x^y)
 }
 ```
@@ -151,7 +148,7 @@ my_power(2, 3)
 
 ## function
 ```{r}
-my_power <- function(x = 2, y = 3){
+my_power <- function(x = 2, y = 3) {
   return(x^y)
 }
 ```
@@ -175,15 +172,15 @@ my_power()
 ## functions
 ```{r}
 average1 <- function(x, remove_nas) {
-    sum(x, na.rm = remove_nas)/sum(!is.na(x))
+  sum(x, na.rm = remove_nas) / sum(!is.na(x))
 }
 
 average2 <- function(x, remove_nas) {
-    return(sum(x, na.rm = remove_nas)/sum(!is.na(x)))
+  return(sum(x, na.rm = remove_nas) / sum(!is.na(x)))
 }
 
 average3 <- function(x, remove_nas = TRUE) {
-    sum(x, na.rm = remove_nas)/sum(!is.na(x))
+  sum(x, na.rm = remove_nas) / sum(!is.na(x))
 }
 ```
 
@@ -219,11 +216,11 @@ Often in functions, you will want to execute code conditionally. Consider the `i
 ```{r}
 #| eval: false
 if (logical_condition) {
-    # some code
+  # some code
 } else if (other_logical_condition) {
-    # some other code
+  # some other code
 } else {
-    # yet more code
+  # yet more code
 }
 ```
 
@@ -235,14 +232,14 @@ if (logical_condition) {
 ## function
 ```{r}
 middle <- function(x) {
-    mean_x <- mean(x, na.rm = TRUE)
-    median_x <- median(x, na.rm = TRUE)
-    seems_skewed <- (mean_x > 1.5*median_x) | (mean_x < (1/1.5)*median_x)
-    if (seems_skewed) {
-        median_x
-    } else {
-        mean_x
-    }
+  mean_x <- mean(x, na.rm = TRUE)
+  median_x <- median(x, na.rm = TRUE)
+  seems_skewed <- (mean_x > 1.5 * median_x) | (mean_x < (1 / 1.5) * median_x)
+  if (seems_skewed) {
+    median_x
+  } else {
+    mean_x
+  }
 }
 ```
 
@@ -315,6 +312,8 @@ There will be times when you will need to iterate a function multiple times.
 - alternatives to loops
 
 - a functional is better than a `for` loop is better than `while` is better than `repeat` (in terms of computing efficiency)
+
+- See the <a href = "https://rstudio.github.io/cheatsheets/html/purrr.html" target = "_blank">purrr cheatsheet</a>
 
 ## Benefits 
 
@@ -390,7 +389,7 @@ From [TidyTuesday Fast food entree data](https://github.com/rfordatascience/tidy
 
 ## Anonymous functions and shortcuts
 
-- use `~` to set a formula (when the function is neither a single name nor defined by `function(...) { ...} `)
+- use `\` as a shortcut for the word `function`, to set a formula (when the function is neither a single name nor defined by `function(...) { ...} `)
 - use `.x` to reference the input `map(.x = ..., .f = )`
 
 ```{r}
@@ -398,7 +397,7 @@ map_dbl(.x = fastfood, .f = function(dog) mean(dog, na.rm = TRUE))
 ```
 
 ```{r, eval=TRUE}
-map_dbl(.x = fastfood,  .f = ~mean(.x, na.rm = TRUE))
+map_dbl(.x = fastfood, .f = \(happy) mean(happy, na.rm = TRUE))
 ```
 
 ```{r}
@@ -420,9 +419,9 @@ Note that `.x` is the **name** of the first argument in `map()` (`.f` is the nam
 # the task
 map_dbl(fastfood, function(x) length(unique(x)))
 map_dbl(fastfood, function(unicorn) length(unique(unicorn)))
-map_dbl(fastfood, ~length(unique(.x)))
-map_dbl(fastfood, ~length(unique(..1)))
-map_dbl(fastfood, ~length(unique(.)))
+map_dbl(fastfood, \(x) length(unique(x)))
+map_dbl(fastfood, \(chirp) length(unique(chirp)))
+
 
 # not the task
 map_dbl(fastfood, length)
@@ -438,11 +437,11 @@ rm(x)
 ```{r}
 #| error: true
 #error
-map_dbl(fastfood, ~length)
+map_dbl(fastfood, \(x) length)
 #error
-map_dbl(fastfood, length(unique()))
+map_dbl(fastfood, \(x) length(unique()))
 #error
-map_dbl(fastfood, ~length(unique(x)))
+map_dbl(fastfood, \(y) length(unique(x)))
 ```
 
 
@@ -459,30 +458,30 @@ If the function outputs a data frame, then we can use `list_rbind()` and `list_c
 ## function
 ```{r}
 col_stats <- function(n) {
-  head(fastfood, n) |> 
-    select(calories, protein, vit_c) |> 
-    summarise_all(mean, na.rm = TRUE) |> 
+  head(fastfood, n) |>
+    select(calories, protein, vit_c) |>
+    summarise_all(mean, na.rm = TRUE) |>
     mutate(n = paste("N =", n))
 }
 ```
 
 ## `map()`
 ```{r}
-out1 <- map(c(10,20), col_stats)
+out1 <- map(c(10, 20), col_stats)
 
 out1
 ```
 
 ## `list_rbind()`
 ```{r}
-out2 <- map(c(10,20), col_stats) |> list_rbind()
+out2 <- map(c(10, 20), col_stats) |> list_rbind()
 
 out2
 ```
 
 ## `list_cbind()`
 ```{r}
-out3 <- map(c(10,20), col_stats) |> list_cbind()
+out3 <- map(c(10, 20), col_stats) |> list_cbind()
 
 out3
 ```
@@ -501,13 +500,13 @@ We've already described the difference between the columns. Now we cover the dif
 
 ## `map2_*()`
 
-- `map2_*()` has two arguments, `.x` and `.y`
+- `map2_*()` has two arguments, `.x` and `.y` (the arguments must be `.x` and `.y`, but the the function call can be on any variables)
 - raise each value of `.x` to the power of 2
 
 ```{r}
 map_dbl(
-  .x = c(1:5), 
-  .f = function(x) x ^ 2
+  .x = c(1:5),
+  .f = function(x) x^2
 )
 ```
 
@@ -515,9 +514,9 @@ map_dbl(
 
 ```{r}
 map2_dbl(
-  .x = c(1:5), 
-  .y = c(2:6), 
-  .f = ~ (.x ^ .y)
+  .x = c(1:5),
+  .y = c(2:6),
+  .f = \(a, b) (a^b)
 )
 ```
 
@@ -525,21 +524,22 @@ map2_dbl(
 
 ## `imap()` {-}
 
-- `imap()` is like `map2()`except that `.y` is derived from `names(.x)` if the data frame has names.
+- `imap()` is like `map2()`except that `.y` (i.e., the second argument) is derived from `names(.x)` if the data frame has names.
 
 - If not, `.y` is 1, 2, 3, ... $n$ where $n$ is the number of items in `.x`.  (A data frame has $n$ columns.)
 
 - These two calls produce the same result
 
 ```{r}
-imap_chr(.x = fastfood, 
-         .f = ~ paste(.y, "has a mean of", round(mean(.x), 1))) |> 
-head()
+imap_chr(.x = fastfood, .f = \(x, y) {
+  paste(y, "has a mean of", round(mean(x), 1))
+}) |>
+  head()
 
-map2_chr(.x = fastfood, 
-         .y = names(fastfood),
-         .f = ~ paste(.y, "has a mean of", round(mean(.x), 1))) |> 
-head()
+map2_chr(.x = fastfood, .y = names(fastfood), .f = \(x, y) {
+  paste(y, "has a mean of", round(mean(x), 1))
+}) |>
+  head()
 ```
 
 
@@ -552,10 +552,10 @@ head()
 ```{r}
 #| echo: false
 params <- tibble::tribble(
-  ~ n, ~ min, ~ max,
-   1,     1,    10,
-   2,    10,   100,
-   3,   100,  1000
+  ~n , ~min , ~max ,
+   1 ,    1 ,   10 ,
+   2 ,   10 ,  100 ,
+   3 ,  100 , 1000
 )
 ```
 
@@ -567,7 +567,7 @@ pmap(params, runif)
 Or use the pipe into `pmap()`:
 
 ```{r}
-params |> 
+params |>
   pmap(runif)
 ```
 
@@ -577,8 +577,8 @@ Interestingly, `runif()` will take either a scalar or a vector as its first argu
 
 ```{r}
 runif(n = 3)
-runif(n = c(1,3))
-runif(n = c(10000,12321412424))
+runif(n = c(1, 3))
+runif(n = c(10000, 12321412424))
 runif(n = c("rainbow", "unicorn"))
 ```
 
@@ -597,13 +597,13 @@ params
 ## pmap
 
 ```{r}
-params |> 
+params |>
   pmap(runif)
 ```
 
 ## map
 ```{r}
-params |> 
+params |>
   map(runif)
 ```
 
@@ -614,10 +614,11 @@ params |>
 
 ```{r}
 list(
-  n = c(1, 2, 3), 
-  min = c(1, 10, 100), 
-  max = c(10, 100, 1000)) |> 
-pmap(runif)
+  n = c(1, 2, 3),
+  min = c(1, 10, 100),
+  max = c(10, 100, 1000)
+) |>
+  pmap(runif)
 ```
 -->
 
@@ -626,14 +627,10 @@ pmap(runif)
 - I like to use `expand_grid()` when I want all possible parameter combinations.
 
 ```{r}
-expand_grid(n = c(1, 2, 3), 
-            min = c(1, 10),
-            max = c(10, 100)) 
+expand_grid(n = c(1, 2, 3), min = c(1, 10), max = c(10, 100))
 
-expand_grid(n = c(1, 2, 3), 
-            min = c(1, 10),
-            max = c(10, 100)) |> 
-pmap(runif)
+expand_grid(n = c(1, 2, 3), min = c(1, 10), max = c(10, 100)) |>
+  pmap(runif)
 ```
 
 
