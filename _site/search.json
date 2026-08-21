@@ -4,7 +4,7 @@
     "href": "syllabus.html",
     "title": "syllabus",
     "section": "",
-    "text": "Jo Hardin\n2351 Estella\njo.hardin@pomona.edu\nClass: Mondays & Wednesdays, 11-12:15pm\nEstella 2141\nOffice Hours: (Estella 2351)\nMonday: 1:30-4:30pm\nTuesday: 9-11am\nThursday: 1:30-3pm\nMentor Sessions:\nSunday: 8-10pm\nTuesday: 8-10pm\n\n\n\n\n\nArtwork by @allison_horst.\n\n\n\n\n\n\n\nFoundations of Data Science in R is a first course in data science. Data play an increasingly important role in many fields. Being able to understand data and the ethical implications in data driven decisions is paramount to being an informed member of society. As an introduction to data science with R, this course will introduce students to basic data science concepts. Prerequisite: CSCI004 or CSCI005 or CSCI051 or equivalent experience in programming.\n\n\n\n\n\n\nTipAnonymous Feedback\n\n\n\nAs someone who is, myself, constantly learning and growing in many ways, I welcome your feedback about the course, the classroom dynamics, or anything else you’d like me to know. There is a link on Canvas to an anonymous feedback form. Please feel free to provide me with feedback at any time!\n\n\n\n\n\nBy the end of the term, students will be able to:\n\nscrape, process, and clean data from the web\nwrangle data in a variety of formats\ncontextualize variation in data\nconstruct point and interval estimates using resampling techniques\ndesign accurate, clear and appropriate data graphics\nquery large relational databases (using SQL)\nwork fluently with regular expression\ncommunicate data-driven decisions\n\n\n\n\n\nInclusive teaching is intentional and reflective. Inclusive teaching builds community, is student-centered, acknowledges the whole student, and is accessible to all students. Inclusive teaching develops critical and creative thinkers who positively contribute to our community.\n\nThe above definition of inclusive teaching was developed by Pomona faculty over the past few years, and it is what I aim to practice in our classroom. Please contact me if you have any suggestions to improve the quality of the course materials.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:\n\nIf you have a name and/or set of pronouns that differ from those that appear in your official records, please let me know!\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. You can also relay information to me via your mentors. I want to be a resource for you.\n\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. As a participant in course discussions, you should also strive to honor the diversity of your classmates.\n\n\n\n\n\n Modern Data Science with R, 3rd edition by Baumer, Kaplan, and Horton.\nR for Data Science, 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\n\n\n\n\n\n\nTipDates\n\n\n\n\nQuizzes on Sep 23, Oct 7, Oct 26, Nov 11, Nov 23, and Dec 9 (in class)\n9.29.26 Project 1 due\n10.13.26 Project 2 due\n11.3.26 Project 3 due\n11.17.26 Project 4 due\n12.1.26 Project 5 due\n12.11.26 (Friday) or 12.18.26 (Friday) Project Presentations (9am-noon)\n12.18.26 Project 6 write-up due (on GitHub by midnight)\n\n\n\n\n\n\n\n\n\n\n\nBest and most comprehensive Git help: http://happygitwithr.com/\nGit within Positron: https://positron.posit.co/git.html\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nTutorials through the Coding Club\nGoogle for R\nHelpful cheatsheets from RStudio.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nPositron IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers. [Here is an example of extraneous messages and printed lists of numbers.]\n[3] Close to all problems completed with less than 75% correct. OR an assignment that didn’t make it all the way to Canvas as the correctly rendered pdf.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub.\n\n\n\n\n\nThere will be 5 mini-projects (due roughly every other week). You will also compile the projects, reflect on the process, and present your work to your classrmates. Project information is available here: DS 002R Projects\n\n\n\n\nGitHub will be used as a way to practice reproducible and collaborative science. There may be a slight learning curve, but knowing Git will be an extremely useful skill as you venture beyond this class.\nR will be used for all homework assignments. R is freely available at http://www.r-project.org/ and is already installed on college computers. Additionally, you need to install Positron in order to use Quarto, https://positron.posit.co/. If you are not already familiar with R, please work through some of the materials provided ASAP.\nYou are welcome to use Pomona’s Positron server at https://rstudio.campus.pomona.edu/ (or https://rstudio.pomona.edu if you are off campus). If you use the server, you can connect directly to your Git account without installing Git locally on your own computer. [If you are not a Pomona student, you will need to get an account from Pomona’s ITS. Go to ITS, tell them that you are taking a Pomona course, and ask for an account for using Positron.]\n\n\n\n\n\nThis class will be interactive, and your engagement is expected (every day in class). Although notes will be posted, your engagement is an integral part of the in-class learning process.\nIn class: after answering one question, wait until 5 other people have spoken before answering another question. [Feel free to ask as many questions as often as you like!]\nTo get full participation points, you will be expected to contribute at least one R tip of the day, sometime during the semester.\n\n\n\nThroughout the semester, you will be challenged, and you may find yourself stuck. Every single one of us has been there, I promise. Below, I’ve provided Pomona’s academic honesty policy. But before the policy, I’ve given some thoughts on cheating which I have taken from Nick Ball’s CHEM 147 Collective (thank you, Prof Ball!). Prof Ball gives us all something to think about when we are learning in a classroom as well as on our journey to become scientists and professionals:\n\n\n\n\n\n\nTipWhy Cheat?\n\n\n\nThere are many known reasons why we may feel the need to “cheat” on problem sets or exams:\n\nAn academic environment that values grades above learning.\nFinancial aid is critical for remaining in school that places undue pressure on maintaining a high GPA.\nNavigating school, work, and/or family obligations that have diverted focus from class.\nChallenges balancing coursework and mental health.\nBalancing academic, family, peer, or personal issues.\n\nBeing accused of cheating – whether it has occurred or not – can be devastating for students. The college requires me to respond to potential academic dishonesty with a process that is very long and damaging. As your instructor, I care about you and want to offer alternatives to prevent us from having to go through this process.\n\n\nIf you find yourself in a situation where “cheating” seems like the only option, please come talk to me. We will figure this out together.\n\n\nThe College expects students to understand and adhere to basic standards of honesty and academic integrity. These standards include but are not limited to the following:\n\nIn projects and assignments (including homework) prepared independently, students never intentionally represent the ideas or the language of others as their own, examples include but are not limited to plagiarism, failing to use citations, unapproved use of artificial intelligence and resubmitted personal work for another course.\nStudents do not destroy or alter either the work of other students or the educational resources and materials of the College.\nStudents neither give nor receive assistance with examinations.\nStudents do not represent work completed for one course as original work for another or deliberately disregard course rules and regulations.\nIn laboratory or research projects involving the collection of data, students accurately report data observed and do not alter or fabricate data for any reason\n\n\n\n\n\n\n\nTipAI use policy1\n\n\n\nIf you choose to use AI for any of the assignments for this class, you should pay attention to where you obtained any relevant information. Submitting work created by a generative AI as your own in any assignment is considered plagiarism, and therefore an academic integrity violation, just the same as copying work from any other source.\nAttribution\n\nAs with any other reference you might find, any directly copied text from generative AI should be in quotes and given a citation. Any summarized text from generative AI should be referenced.\nCite all AI tools when used or referred to in assigned work. For example, see how to cite generative AI in APA, MLA, or Chicago styles.\n\nPermitted\n\nClarifying concepts (after attempting to understand them yourself, and then checking course materials or other credible sources for accuracy)\nBrainstorming initial topic ideas or approaches (after you have spent some time thinking on your own)\nOrganizing and outlining your thoughts\nGrammar and spelling assistance\nAsking AI for practice questions or explanations of concepts (after attempting them yourself first), then checking your understanding against course materials\nUsing AI to generate examples, counterarguments, or alternative perspectives that help you develop more nuanced thinking\nDebugging code, checking syntax, or troubleshooting errors (with the expectation that you understand and can explain any code you submit)\n\nNot permitted\n\nHaving AI generate any sentences or paragraphs that appear in your final work without quotation marks and attribution\nUsing AI to write arguments, code, proofs, or problem solutions that you submit as your own\nAsking AI to outline or structure your assignment before you have developed your own approach\nUsing AI to summarize readings or course materials in place of doing the reading yourself\nSubmitting code (or full chunks of code) that has been written in whole by AI\n\n\n\n\n\n\n\nPlease email and / or set up a time to talk if you have any questions about or difficulty with the material, the computing, or the course. Talk to me as soon as possible if you find yourself struggling. The material will build on itself, so it will be much easier to catch up if the concepts get clarified earlier rather than later. This semester is going to be fun. Let’s do it.\n\n\n\n\nThe goals of the course including learning core content and becoming skilled at using analysis tools accurately and effectively. While sometimes quite helpful, there are ways that AI can get in the way of the learning, for example:\n\nLearning takes struggle, and LLMs often remove the struggle.\nAI will often be wrong, maybe because it doesn’t understand the prompt or maybe because it is hallucinating.\nLearning takes practice, particularly by building muscles related to creative and independent thinking. LLMs remove the practice.\n\nThere are also ways that AI can be ethically problematic, for example:\n\nLLM queries use large amounts of resources.\nLLMs are based on intellectual property (often illegally) taken from scholars, artists, and journalists.\nThe rise of LLMs impact the number of jobs available to people like you.\n\nI encourage you to reflect on your use of AI in this class and elsewhere. Is your use consistent with the learning that brings you to a place like Pomona College? Are you considering the ethical ramifications associated with using AI? See the academic honesty part of the syllabus for generative AI policy.\n\n\n\n\n\n\nTipGrading\n\n\n\n\n15% Homework\n60% Quizzes\n20% Projects & Final Presentation\n5% Class engagement"
+    "text": "Jo Hardin\n2351 Estella\njo.hardin@pomona.edu\nClass: Mondays & Wednesdays, 11-12:15pm\nEstella 2141\nOffice Hours: (Estella 2351)\nMonday: 1:30-4:30pm\nTuesday: 9-11am\nThursday: 1:30-3pm\nMentor Sessions:\nSunday: 8-10pm\nTuesday: 8-10pm\n\n\n\n\n\nArtwork by @allison_horst.\n\n\n\n\n\n\n\nFoundations of Data Science in R is a first course in data science. Data play an increasingly important role in many fields. Being able to understand data and the ethical implications in data driven decisions is paramount to being an informed member of society. As an introduction to data science with R, this course will introduce students to basic data science concepts. Prerequisite: CSCI004 or CSCI005 or CSCI051 or equivalent experience in programming.\n\n\n\n\n\n\nTipAnonymous Feedback\n\n\n\nAs someone who is, myself, constantly learning and growing in many ways, I welcome your feedback about the course, the classroom dynamics, or anything else you’d like me to know. There is a link on Canvas to an anonymous feedback form. Please feel free to provide me with feedback at any time!\n\n\n\n\n\nBy the end of the term, students will be able to:\n\nscrape, process, and clean data from the web\nwrangle data in a variety of formats\ncontextualize variation in data\nconstruct point and interval estimates using resampling techniques\ndesign accurate, clear and appropriate data graphics\nquery large relational databases (using SQL)\nwork fluently with regular expression\ncommunicate data-driven decisions\n\n\n\n\n\nInclusive teaching is intentional and reflective. Inclusive teaching builds community, is student-centered, acknowledges the whole student, and is accessible to all students. Inclusive teaching develops critical and creative thinkers who positively contribute to our community.\n\nThe above definition of inclusive teaching was developed by Pomona faculty over the past few years, and it is what I aim to practice in our classroom. Please contact me if you have any suggestions to improve the quality of the course materials.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities (including race, gender, class, sexuality, religion, ability, etc.) To help accomplish this:\n\nIf you have a name and/or set of pronouns that differ from those that appear in your official records, please let me know!\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. You can also relay information to me via your mentors. I want to be a resource for you.\n\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. As a participant in course discussions, you should also strive to honor the diversity of your classmates.\n\n\n\n\n\n Modern Data Science with R, 3rd edition by Baumer, Kaplan, and Horton.\nR for Data Science, 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\n\n\n\n\n\n\nTipDates\n\n\n\n\nQuizzes on Sep 23, Oct 7, Oct 26, Nov 11, Nov 23, and Dec 9 (in class)\n9.29.26 Project 1 due\n10.13.26 Project 2 due\n11.3.26 Project 3 due\n11.17.26 Project 4 due\n12.1.26 Project 5 due\n12.11.26 (Friday) or 12.18.26 (Friday) Project Presentations (9am-noon)\n12.18.26 Project 6 write-up due (on GitHub by midnight)\n\n\n\n\n\n\n\n\n\n\n\nBest and most comprehensive Git help: http://happygitwithr.com/\nGit within Positron: https://positron.posit.co/git.html\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nTutorials through the Coding Club\nGoogle for R\nHelpful cheatsheets from Positron.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nPositron IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers. [Here is an example of extraneous messages and printed lists of numbers.]\n[3] Close to all problems completed with less than 75% correct. OR an assignment that didn’t make it all the way to Canvas as the correctly rendered pdf.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub.\n\n\n\n\n\nThere will be 5 mini-projects (due roughly every other week). You will also compile the projects, reflect on the process, and present your work to your classrmates. Project information is available here: DS 002R Projects\n\n\n\n\nGitHub will be used as a way to practice reproducible and collaborative science. There may be a slight learning curve, but knowing Git will be an extremely useful skill as you venture beyond this class.\nR will be used for all homework assignments. R is freely available at http://www.r-project.org/ and is already installed on college computers. Additionally, you need to install Positron in order to use Quarto, https://positron.posit.co/. If you are not already familiar with R, please work through some of the materials provided ASAP.\nYou are welcome to use Pomona’s Positron server at https://rstudio.campus.pomona.edu/ (or https://rstudio.pomona.edu if you are off campus). If you use the server, you can connect directly to your Git account without installing Git locally on your own computer. [If you are not a Pomona student, you will need to get an account from Pomona’s ITS. Go to ITS, tell them that you are taking a Pomona course, and ask for an account for using Positron.]\n\n\n\n\n\nThis class will be interactive, and your engagement is expected (every day in class). Although notes will be posted, your engagement is an integral part of the in-class learning process.\nIn class: after answering one question, wait until 5 other people have spoken before answering another question. [Feel free to ask as many questions as often as you like!]\nTo get full participation points, you will be expected to contribute at least one R tip of the day, sometime during the semester.\n\n\n\nThroughout the semester, you will be challenged, and you may find yourself stuck. Every single one of us has been there, I promise. Below, I’ve provided Pomona’s academic honesty policy. But before the policy, I’ve given some thoughts on cheating which I have taken from Nick Ball’s CHEM 147 Collective (thank you, Prof Ball!). Prof Ball gives us all something to think about when we are learning in a classroom as well as on our journey to become scientists and professionals:\n\n\n\n\n\n\nTipWhy Cheat?\n\n\n\nThere are many known reasons why we may feel the need to “cheat” on problem sets or exams:\n\nAn academic environment that values grades above learning.\nFinancial aid is critical for remaining in school that places undue pressure on maintaining a high GPA.\nNavigating school, work, and/or family obligations that have diverted focus from class.\nChallenges balancing coursework and mental health.\nBalancing academic, family, peer, or personal issues.\n\nBeing accused of cheating – whether it has occurred or not – can be devastating for students. The college requires me to respond to potential academic dishonesty with a process that is very long and damaging. As your instructor, I care about you and want to offer alternatives to prevent us from having to go through this process.\n\n\nIf you find yourself in a situation where “cheating” seems like the only option, please come talk to me. We will figure this out together.\n\n\nThe College expects students to understand and adhere to basic standards of honesty and academic integrity. These standards include but are not limited to the following:\n\nIn projects and assignments (including homework) prepared independently, students never intentionally represent the ideas or the language of others as their own, examples include but are not limited to plagiarism, failing to use citations, unapproved use of artificial intelligence and resubmitted personal work for another course.\nStudents do not destroy or alter either the work of other students or the educational resources and materials of the College.\nStudents neither give nor receive assistance with examinations.\nStudents do not represent work completed for one course as original work for another or deliberately disregard course rules and regulations.\nIn laboratory or research projects involving the collection of data, students accurately report data observed and do not alter or fabricate data for any reason\n\n\n\n\n\n\n\nTipAI use policy1\n\n\n\nIf you choose to use AI for any of the assignments for this class, you should pay attention to where you obtained any relevant information. Submitting work created by a generative AI as your own in any assignment is considered plagiarism, and therefore an academic integrity violation, just the same as copying work from any other source.\nAttribution\n\nAs with any other reference you might find, any directly copied text from generative AI should be in quotes and given a citation. Any summarized text from generative AI should be referenced.\nCite all AI tools when used or referred to in assigned work. For example, see how to cite generative AI in APA, MLA, or Chicago styles.\n\nPermitted\n\nClarifying concepts (after attempting to understand them yourself, and then checking course materials or other credible sources for accuracy)\nBrainstorming initial topic ideas or approaches (after you have spent some time thinking on your own)\nOrganizing and outlining your thoughts\nGrammar and spelling assistance\nAsking AI for practice questions or explanations of concepts (after attempting them yourself first), then checking your understanding against course materials\nUsing AI to generate examples, counterarguments, or alternative perspectives that help you develop more nuanced thinking\nDebugging code, checking syntax, or troubleshooting errors (with the expectation that you understand and can explain any code you submit)\n\nNot permitted\n\nHaving AI generate any sentences or paragraphs that appear in your final work without quotation marks and attribution\nUsing AI to write arguments, code, proofs, or problem solutions that you submit as your own\nAsking AI to outline or structure your assignment before you have developed your own approach\nUsing AI to summarize readings or course materials in place of doing the reading yourself\nSubmitting code (or full chunks of code) that has been written in whole by AI\n\n\n\n\n\n\n\nPlease email and / or set up a time to talk if you have any questions about or difficulty with the material, the computing, or the course. Talk to me as soon as possible if you find yourself struggling. The material will build on itself, so it will be much easier to catch up if the concepts get clarified earlier rather than later. This semester is going to be fun. Let’s do it.\n\n\n\n\nThe goals of the course including learning core content and becoming skilled at using analysis tools accurately and effectively. While sometimes quite helpful, there are ways that AI can get in the way of the learning, for example:\n\nLearning takes struggle, and LLMs often remove the struggle.\nAI will often be wrong, maybe because it doesn’t understand the prompt or maybe because it is hallucinating.\nLearning takes practice, particularly by building muscles related to creative and independent thinking. LLMs remove the practice.\n\nThere are also ways that AI can be ethically problematic, for example:\n\nLLM queries use large amounts of resources.\nLLMs are based on intellectual property (often illegally) taken from scholars, artists, and journalists.\nThe rise of LLMs impact the number of jobs available to people like you.\n\nI encourage you to reflect on your use of AI in this class and elsewhere. Is your use consistent with the learning that brings you to a place like Pomona College? Are you considering the ethical ramifications associated with using AI? See the academic honesty part of the syllabus for generative AI policy.\n\n\n\n\n\n\nTipGrading\n\n\n\n\n15% Homework\n60% Quizzes\n20% Projects & Final Presentation\n5% Class engagement"
   },
   {
     "objectID": "syllabus.html#ds002r-fall-2026",
@@ -46,7 +46,7 @@
     "href": "syllabus.html#links-to-resources",
     "title": "syllabus",
     "section": "",
-    "text": "Best and most comprehensive Git help: http://happygitwithr.com/\nGit within Positron: https://positron.posit.co/git.html\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nTutorials through the Coding Club\nGoogle for R\nHelpful cheatsheets from RStudio.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nPositron IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers. [Here is an example of extraneous messages and printed lists of numbers.]\n[3] Close to all problems completed with less than 75% correct. OR an assignment that didn’t make it all the way to Canvas as the correctly rendered pdf.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub."
+    "text": "Best and most comprehensive Git help: http://happygitwithr.com/\nGit within Positron: https://positron.posit.co/git.html\nVersion control with Git\nMore on Git\nOnline Git book with lots of info\n\n\n\n\n\n\n\nA fantastic ggplot2 tutorial\nTutorials through the Coding Club\nGoogle for R\nHelpful cheatsheets from Positron.\n\ndata wrangling\nggplot2\nShiny\nQuarto\nPositron IDE\n\n\n\n\n\n\n\n\nW3 schools Introduction to SQL\nW3 schools SQL Exercises, Practice, Solution\nR packages for working with databases\nIntroduction to dbplyr\n\n\n\n\n\n\n\nstringr vignette\nstringr package\nJenny Bryan et al.’s STAT 545 notes\nregexpal\n\nRegExr\nRegexOne\n\n\n\n\nHomework assignments will be graded out of 5 points, which are based on a combination of accuracy and effort. Below are rough guidelines for grading.\n[5] All problems completed with detailed solutions provided and 75% or more of the problems are fully correct. Additionally, there are no extraneous messages, warnings, or printed lists of numbers.\n[4] All problems completed with detailed solutions and 50-75% correct; OR close to all problems completed and 75%-100% correct. Or all problems are completed and there are extraneous messages, warnings, or printed lists of numbers. [Here is an example of extraneous messages and printed lists of numbers.]\n[3] Close to all problems completed with less than 75% correct. OR an assignment that didn’t make it all the way to Canvas as the correctly rendered pdf.\n[2] More than half but fewer than all problems completed and &gt; 75% correct.\n[1] More than half but fewer than all problems completed and &lt; 75% correct; OR less than half of problems completed.\n[0] No work submitted, OR half or less than half of the problems submitted and without any detail/work shown to explain the solutions. You will get a zero if your file is not compiled and submitted on GitHub."
   },
   {
     "objectID": "syllabus.html#projects",
@@ -1992,7 +1992,7 @@
     "href": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-2",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births)) + \n  geom_point() +\n  labs(title = \"US Births in 2015\")\n\nggplot() +\n  geom_point(data = Births2015, \n             aes(x = date, y = births)) +\n  labs(title = \"US Births in 2015\")"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, aes(x = date, y = births)) +\n  geom_point() +\n  labs(title = \"US Births in 2015\")\n\nggplot() +\n  geom_point(data = Births2015, aes(x = date, y = births)) +\n  labs(title = \"US Births in 2015\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#layers-layer-0",
@@ -2006,21 +2006,21 @@
     "href": "slides/2026-09-07-dataviz.html#layers-layer-1",
     "title": "Better Data Visualizations",
     "section": "Layers: layer 1",
-    "text": "Layers: layer 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births))"
+    "text": "Layers: layer 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, aes(x = date, y = births))"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#layers-layer-2",
     "href": "slides/2026-09-07-dataviz.html#layers-layer-2",
     "title": "Better Data Visualizations",
     "section": "Layers: layer 2",
-    "text": "Layers: layer 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births)) + \n  geom_point()"
+    "text": "Layers: layer 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, aes(x = date, y = births)) +\n  geom_point()"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#layers-layer-3",
     "href": "slides/2026-09-07-dataviz.html#layers-layer-3",
     "title": "Better Data Visualizations",
     "section": "Layers: layer 3",
-    "text": "Layers: layer 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, \n       aes(x = date, y = births)) + \n  geom_point() +\n  labs(title = \"US Births in 2015\")"
+    "text": "Layers: layer 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, aes(x = date, y = births)) +\n  geom_point() +\n  labs(title = \"US Births in 2015\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-3",
@@ -2034,7 +2034,7 @@
     "href": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-4",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015,\n       aes(x = date,\n           y = births, \n           color = wday)) +\n  geom_point() +\n  labs(title = \"US Births in 2015\")"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, aes(x = date, y = births, color = wday)) +\n  geom_point() +\n  labs(title = \"US Births in 2015\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-5",
@@ -2048,7 +2048,7 @@
     "href": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-6",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nlines instead of dots!\n\nggplot(data = Births2015,\n         aes(x = date, \n             y = births,\n             color = wday)) +\n  geom_line() +\n  labs(title = \"US Births in 2015\")"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nlines instead of dots!\n\nggplot(data = Births2015, aes(x = date, y = births, color = wday)) +\n  geom_line() +\n  labs(title = \"US Births in 2015\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-7",
@@ -2062,28 +2062,28 @@
     "href": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-8",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nNow there are two layers: one with points and one with lines\n\nggplot(data = Births2015,\n       aes(x = date,\n           y = births,\n           color = wday)) + \n  geom_point() +  \n  geom_line() +\n  labs(title = \"US Births in 2015\")\n\n\nThe layers are placed one on top of the other: the points are below and the lines are above.\ndata and aes specified in ggplot() affect all geoms"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\nNow there are two layers: one with points and one with lines\n\nggplot(data = Births2015, aes(x = date, y = births, color = wday)) +\n  geom_point() +\n  geom_line() +\n  labs(title = \"US Births in 2015\")\n\n\nThe layers are placed one on top of the other: the points are below and the lines are above.\ndata and aes specified in ggplot() affect all geoms"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#what-does-this-code-do",
     "href": "slides/2026-09-07-dataviz.html#what-does-this-code-do",
     "title": "Better Data Visualizations",
     "section": "What does this code do?",
-    "text": "What does this code do?\n\nggplot(data = Births2015,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point() +\n  labs(title = \"US Births in 2015\")"
+    "text": "What does this code do?\n\nggplot(data = Births2015, aes(x = date, y = births, color = \"navy\")) +\n  geom_point() +\n  labs(title = \"US Births in 2015\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#what-does-this-code-do-1",
     "href": "slides/2026-09-07-dataviz.html#what-does-this-code-do-1",
     "title": "Better Data Visualizations",
     "section": "What does this code do?",
-    "text": "What does this code do?\n\nggplot(data = Births2015,\n       aes(x = date, y = births, color = \"navy\")) + \n  geom_point()  +\n  labs(title = \"US Births in 2015\")\n\n\nThis is mapping the color aesthetic to a new variable with only one value (“navy”).\nSo all the dots get set to the same color, but it’s not navy."
+    "text": "What does this code do?\n\nggplot(data = Births2015, aes(x = date, y = births, color = \"navy\")) +\n  geom_point() +\n  labs(title = \"US Births in 2015\")\n\n\nThis is mapping the color aesthetic to a new variable with only one value (“navy”).\nSo all the dots get set to the same color, but it’s not navy."
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#setting-vs.-mapping",
     "href": "slides/2026-09-07-dataviz.html#setting-vs.-mapping",
     "title": "Better Data Visualizations",
     "section": "Setting vs. Mapping",
-    "text": "Setting vs. Mapping\nIf we want to set the color to be navy for all of the dots, we do it outside the aes() designation:\n\nggplot(data = Births2015,\n       aes(x = date, y = births)) +   # map variables \n  geom_point(color = \"navy\")    +   # set attributes\n  labs(title = \"US Births in 2015\")\n\n\n\nNote that color = \"navy\" is now outside of the aesthetics list. That’s how ggplot2 distinguishes between mapping and setting."
+    "text": "Setting vs. Mapping\nIf we want to set the color to be navy for all of the dots, we do it outside the aes() designation:\n\nggplot(data = Births2015, aes(x = date, y = births)) + # map variables\n  geom_point(color = \"navy\") + # set attributes\n  labs(title = \"US Births in 2015\")\n\n\n\nNote that color = \"navy\" is now outside of the aesthetics list. That’s how ggplot2 distinguishes between mapping and setting."
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-9",
@@ -2097,7 +2097,7 @@
     "href": "slides/2026-09-07-dataviz.html#how-do-we-make-this-plot-10",
     "title": "Better Data Visualizations",
     "section": "How do we make this plot?",
-    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015,\n       aes(x = date,\n           y = births)) + \n  geom_line(aes(color = wday)) +      \n  geom_point(color = \"navy\")  +         \n  labs(title = \"US Births in 2015\")\n\n\nggplot() establishes the default data and aesthetics for the geoms, but each geom may change these defaults.\ngood practice: put into ggplot() the things that affect all (or most) of the layers; rest in geom_XXXX()"
+    "text": "How do we make this plot?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = Births2015, aes(x = date, y = births)) +\n  geom_line(aes(color = wday)) +\n  geom_point(color = \"navy\") +\n  labs(title = \"US Births in 2015\")\n\n\nggplot() establishes the default data and aesthetics for the geoms, but each geom may change these defaults.\ngood practice: put into ggplot() the things that affect all (or most) of the layers; rest in geom_XXXX()"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#setting-vs.-mapping-again",
@@ -2272,21 +2272,21 @@
     "href": "slides/2026-09-07-dataviz.html#other-geoms-1",
     "title": "Better Data Visualizations",
     "section": "Other geoms",
-    "text": "Other geoms\nhelp pages will tell you their aesthetics, default stats, etc.\n\n?geom_area             # for example"
+    "text": "Other geoms\nhelp pages will tell you their aesthetics, default stats, etc.\n\n?geom_area # for example"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#lets-try-geom_area",
     "href": "slides/2026-09-07-dataviz.html#lets-try-geom_area",
     "title": "Better Data Visualizations",
     "section": "Let’s try geom_area",
-    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births2015,\n       aes(x = date,\n           y = births, \n           fill = wday)) + \n  geom_area() +\n  labs(title = \"US Births in 2015\")"
+    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births2015, aes(x = date, y = births, fill = wday)) +\n  geom_area() +\n  labs(title = \"US Births in 2015\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#lets-try-geom_area-1",
     "href": "slides/2026-09-07-dataviz.html#lets-try-geom_area-1",
     "title": "Better Data Visualizations",
     "section": "Let’s try geom_area",
-    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births2015,\n       aes(x = date, y = births, fill = wday)) + \n  geom_area() +\n  labs(title = \"US Births in 2015\")\n\n\n\n\n\n\n\n\n\n… not a good plot\n\noverplotting is hiding much of the data\nextending y-axis to 0 may or may not be desirable."
+    "text": "Let’s try geom_area\n\n\n\nggplot(data = Births2015, aes(x = date, y = births, fill = wday)) +\n  geom_area() +\n  labs(title = \"US Births in 2015\")\n\n\n\n\n\n\n\n\n\n… not a good plot\n\noverplotting is hiding much of the data\nextending y-axis to 0 may or may not be desirable."
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#side-note-what-makes-a-plot-good",
@@ -2307,182 +2307,182 @@
     "href": "slides/2026-09-07-dataviz.html#who-are-the-people-in-the-study",
     "title": "Better Data Visualizations",
     "section": "Who are the people in the study?",
-    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance)) + \n  geom_bar() +\n  labs(title = \"HELP trial\")\n\n\nHmm. What’s up with y?"
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = substance)) +\n  geom_bar() +\n  labs(title = \"HELP trial\")\n\n\nHmm. What’s up with y?"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#who-are-the-people-in-the-study-1",
     "href": "slides/2026-09-07-dataviz.html#who-are-the-people-in-the-study-1",
     "title": "Better Data Visualizations",
     "section": "Who are the people in the study?",
-    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance)) + \n  geom_bar() +\n  labs(title = \"HELP trial\")\n\n\nHmm. What’s up with y?\n\nstat_bin() is being applied to the data before the geom_bar() gets to do its thing. Binning creates the y values."
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = substance)) +\n  geom_bar() +\n  labs(title = \"HELP trial\")\n\n\nHmm. What’s up with y?\n\nstat_bin() is being applied to the data before the geom_bar() gets to do its thing. Binning creates the y values."
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#who-are-the-people-in-the-study-2",
     "href": "slides/2026-09-07-dataviz.html#who-are-the-people-in-the-study-2",
     "title": "Better Data Visualizations",
     "section": "Who are the people in the study?",
-    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar() +\n  labs(title = \"HELP trial\")"
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = substance, fill = children)) +\n  geom_bar() +\n  labs(title = \"HELP trial\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#who-are-the-people-in-the-study-3",
     "href": "slides/2026-09-07-dataviz.html#who-are-the-people-in-the-study-3",
     "title": "Better Data Visualizations",
     "section": "Who are the people in the study?",
-    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(HELP_data,\n       aes(x = substance,\n           fill = children)) + \n  geom_bar(position = \"fill\") +\n  labs(title = \"HELP trial\",\n       y = \"actually, percent\")"
+    "text": "Who are the people in the study?\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(HELP_data, aes(x = substance, fill = children)) +\n  geom_bar(position = \"fill\") +\n  labs(title = \"HELP trial\", y = \"actually, percent\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-old-are-people-in-the-help-study",
     "href": "slides/2026-09-07-dataviz.html#how-old-are-people-in-the-help-study",
     "title": "Better Data Visualizations",
     "section": "How old are people in the HELP study?",
-    "text": "How old are people in the HELP study?\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram() +\n  labs(title = \"HELP trial\")\n\nNotice the messages\n\nstat_bin: Histograms are not mapping the raw data but binned data.\nstat_bin() performs the data transformation.\nbinwidth: a default binwidth has been selected, but we should really choose our own."
+    "text": "How old are people in the HELP study?\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_histogram() +\n  labs(title = \"HELP trial\")\n\nNotice the messages\n\nstat_bin: Histograms are not mapping the raw data but binned data.\nstat_bin() performs the data transformation.\nbinwidth: a default binwidth has been selected, but we should really choose our own."
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#setting-the-binwidth-manually",
     "href": "slides/2026-09-07-dataviz.html#setting-the-binwidth-manually",
     "title": "Better Data Visualizations",
     "section": "Setting the binwidth manually",
-    "text": "Setting the binwidth manually\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_histogram(binwidth = 2) +\n  labs(title = \"HELP trial\")"
+    "text": "Setting the binwidth manually\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_histogram(binwidth = 2) +\n  labs(title = \"HELP trial\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-old-are-people-in-the-help-study-other-geoms",
     "href": "slides/2026-09-07-dataviz.html#how-old-are-people-in-the-help-study-other-geoms",
     "title": "Better Data Visualizations",
     "section": "How old are people in the HELP study? – Other geoms",
-    "text": "How old are people in the HELP study? – Other geoms\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_freqpoly(binwidth = 2) +\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_density() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "How old are people in the HELP study? – Other geoms\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_freqpoly(binwidth = 2) +\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_density() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#selecting-stat-and-geom-manually",
     "href": "slides/2026-09-07-dataviz.html#selecting-stat-and-geom-manually",
     "title": "Better Data Visualizations",
     "section": "Selecting stat and geom manually",
-    "text": "Selecting stat and geom manually\nEvery geom comes with a default stat\n\nfor simple cases, the stat is stat_identity() which does nothing\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_line(stat = \"density\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Selecting stat and geom manually\nEvery geom comes with a default stat\n\nfor simple cases, the stat is stat_identity() which does nothing\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_line(stat = \"density\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#selecting-stat-and-geom-manually-1",
     "href": "slides/2026-09-07-dataviz.html#selecting-stat-and-geom-manually-1",
     "title": "Better Data Visualizations",
     "section": "Selecting stat and geom manually",
-    "text": "Selecting stat and geom manually\nEvery stat comes with a default geom, every geom with a default stat\n\nwe can specify stats instead of geom, if we prefer\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  stat_density(geom = \"line\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Selecting stat and geom manually\nEvery stat comes with a default geom, every geom with a default stat\n\nwe can specify stats instead of geom, if we prefer\nwe can mix and match geoms and stats however we like\n\n\nggplot(data = HELP_data, aes(x = age)) +\n  stat_density(geom = \"line\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#more-combinations",
     "href": "slides/2026-09-07-dataviz.html#more-combinations",
     "title": "Better Data Visualizations",
     "section": "More combinations",
-    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", binwidth = 3) + \n  geom_line(stat = \"bin\", binwidth = 3)  +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "More combinations\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_point(stat = \"bin\", binwidth = 3) +\n  geom_line(stat = \"bin\", binwidth = 3) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#more-combinations-1",
     "href": "slides/2026-09-07-dataviz.html#more-combinations-1",
     "title": "Better Data Visualizations",
     "section": "More combinations",
-    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_area(stat = \"bin\", binwidth = 3)  +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "More combinations\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_area(stat = \"bin\", binwidth = 3) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#more-combinations-2",
     "href": "slides/2026-09-07-dataviz.html#more-combinations-2",
     "title": "Better Data Visualizations",
     "section": "More combinations",
-    "text": "More combinations\n\nggplot(data = HELP_data,\n       aes(x = age)) + \n  geom_point(stat = \"bin\", \n             binwidth = 3, \n             aes(size = ..count..)) +\n  geom_line(stat = \"bin\", binwidth = 3) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "More combinations\n\nggplot(data = HELP_data, aes(x = age)) +\n  geom_point(stat = \"bin\", binwidth = 3, aes(size = ..count..)) +\n  geom_line(stat = \"bin\", binwidth = 3) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-much-drinking-i1",
     "href": "slides/2026-09-07-dataviz.html#how-much-drinking-i1",
     "title": "Better Data Visualizations",
     "section": "How much drinking? (i1)",
-    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_histogram() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt;\n  ggplot(aes(x = i1)) +\n  geom_histogram() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-much-drinking-i1-1",
     "href": "slides/2026-09-07-dataviz.html#how-much-drinking-i1-1",
     "title": "Better Data Visualizations",
     "section": "How much drinking? (i1)",
-    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_density() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt;\n  ggplot(aes(x = i1)) +\n  geom_density() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#how-much-drinking-i1-2",
     "href": "slides/2026-09-07-dataviz.html#how-much-drinking-i1-2",
     "title": "Better Data Visualizations",
     "section": "How much drinking? (i1)",
-    "text": "How much drinking? (i1)\n\nHELP_data |&gt; \n  ggplot(aes(x = i1)) + geom_area(stat = \"density\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "How much drinking? (i1)\n\nHELP_data |&gt;\n  ggplot(aes(x = i1)) +\n  geom_area(stat = \"density\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#covariates-adding-in-more-variables",
     "href": "slides/2026-09-07-dataviz.html#covariates-adding-in-more-variables",
     "title": "Better Data Visualizations",
     "section": "Covariates: Adding in more variables",
-    "text": "Covariates: Adding in more variables\nUsing color and linetype:\n\nggplot(data = HELP_data,\n       aes(x = i1,\n           color = substance,\n           linetype = children)) + \n  geom_line(stat = \"density\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Covariates: Adding in more variables\nUsing color and linetype:\n\nggplot(data = HELP_data, aes(x = i1, color = substance, linetype = children)) +\n  geom_line(stat = \"density\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#using-color-and-facets",
     "href": "slides/2026-09-07-dataviz.html#using-color-and-facets",
     "title": "Better Data Visualizations",
     "section": "Using color and facets",
-    "text": "Using color and facets\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( . ~ children ) +\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = i1, color = substance)) + \n  geom_line(stat = \"density\") + \n  facet_grid( children ~ . ) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Using color and facets\n\nggplot(data = HELP_data, aes(x = i1, color = substance)) +\n  geom_line(stat = \"density\") +\n  facet_grid(. ~ children) +\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = i1, color = substance)) +\n  geom_line(stat = \"density\") +\n  facet_grid(children ~ .) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#boxplots",
     "href": "slides/2026-09-07-dataviz.html#boxplots",
     "title": "Better Data Visualizations",
     "section": "Boxplots",
-    "text": "Boxplots\nBoxplots use stat_quantile() (five number summary).\nThe quantitative variable must be y, and there must be an additional x variable.\n\nHELP_data |&gt; \n  ggplot(aes(x = substance, y = age, color = children)) + \n  geom_boxplot() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Boxplots\nBoxplots use stat_quantile() (five number summary).\nThe quantitative variable must be y, and there must be an additional x variable.\n\nHELP_data |&gt;\n  ggplot(aes(x = substance, y = age, color = children)) +\n  geom_boxplot() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#horizontal-boxplots",
     "href": "slides/2026-09-07-dataviz.html#horizontal-boxplots",
     "title": "Better Data Visualizations",
     "section": "Horizontal boxplots",
-    "text": "Horizontal boxplots\nHorizontal boxplots are obtained by flipping the coordinate system:\n\ncoord_flip() may be used with other plots as well to reverse the roles of x and y on the plot.\n\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Horizontal boxplots\nHorizontal boxplots are obtained by flipping the coordinate system:\n\ncoord_flip() may be used with other plots as well to reverse the roles of x and y on the plot.\n\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot() +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#axes-scaling-with-boxplots",
     "href": "slides/2026-09-07-dataviz.html#axes-scaling-with-boxplots",
     "title": "Better Data Visualizations",
     "section": "Axes scaling with boxplots",
-    "text": "Axes scaling with boxplots\nWe can scale the continuous axis\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot() +\n  coord_trans(y = \"exp\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Axes scaling with boxplots\nWe can scale the continuous axis\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot() +\n  coord_trans(y = \"exp\") +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#give-me-some-space",
     "href": "slides/2026-09-07-dataviz.html#give-me-some-space",
     "title": "Better Data Visualizations",
     "section": "Give me some space",
-    "text": "Give me some space\nWe’ve triggered a new feature: dodge (for dodging things left/right). We can control how much if we set the dodge manually.\n\nggplot(data = HELP_data,\n       aes(x = substance, \n           y = age, \n           color = children)) + \n  geom_boxplot(position = position_dodge(width=1)) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Give me some space\nWe’ve triggered a new feature: dodge (for dodging things left/right). We can control how much if we set the dodge manually.\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot(position = position_dodge(width = 1)) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#issues-with-bigger-data",
     "href": "slides/2026-09-07-dataviz.html#issues-with-bigger-data",
     "title": "Better Data Visualizations",
     "section": "Issues with bigger data",
-    "text": "Issues with bigger data\n\nAlthough we can see a generally positive association (as we would expect), the overplotting may be hiding information.\n\n\nlibrary(NHANES)\ndim(NHANES)\n\n[1] 10000    76\n\nggplot(data = NHANES,\n       aes(x = Height, y = Weight)) +\n  geom_point() + \n  facet_grid( Gender ~ PregnantNow )"
+    "text": "Issues with bigger data\n\nAlthough we can see a generally positive association (as we would expect), the overplotting may be hiding information.\n\n\nlibrary(NHANES)\ndim(NHANES)\n\n[1] 10000    76\n\nggplot(data = NHANES, aes(x = Height, y = Weight)) +\n  geom_point() +\n  facet_grid(Gender ~ PregnantNow)"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#using-alpha-opacity",
     "href": "slides/2026-09-07-dataviz.html#using-alpha-opacity",
     "title": "Better Data Visualizations",
     "section": "Using alpha (opacity)",
-    "text": "Using alpha (opacity)\nOne way to deal with overplotting is to set the opacity low.\n\nggplot(data = NHANES,\n       aes(x = Height, y = Weight)) +\n  geom_point(alpha=0.01) + \n  facet_grid( Gender ~ PregnantNow )"
+    "text": "Using alpha (opacity)\nOne way to deal with overplotting is to set the opacity low.\n\nggplot(data = NHANES, aes(x = Height, y = Weight)) +\n  geom_point(alpha = 0.01) +\n  facet_grid(Gender ~ PregnantNow)"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#geom_density2d",
     "href": "slides/2026-09-07-dataviz.html#geom_density2d",
     "title": "Better Data Visualizations",
     "section": "geom_density2d",
-    "text": "geom_density2d\nAlternatively (or simultaneously) we might prefer a different geom altogether.\n\nggplot(data = NHANES,\n       aes(x = Height, y = Weight)) +\n  geom_density2d() + \n  facet_grid( Gender ~ PregnantNow )"
+    "text": "geom_density2d\nAlternatively (or simultaneously) we might prefer a different geom altogether.\n\nggplot(data = NHANES, aes(x = Height, y = Weight)) +\n  geom_density2d() +\n  facet_grid(Gender ~ PregnantNow)"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#multiple-layers",
     "href": "slides/2026-09-07-dataviz.html#multiple-layers",
     "title": "Better Data Visualizations",
     "section": "Multiple layers",
-    "text": "Multiple layers\n\n\n\nggplot(data = HELP_data, \n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6) +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_jitter(alpha=.6, width = 0.1) +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Multiple layers\n\n\n\nggplot(data = HELP_data, aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha = .6) +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")\n\n\n\n\n\n\n\n\n\n\nggplot(data = HELP_data, aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_jitter(alpha = .6, width = 0.1) +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#multiple-layers-1",
     "href": "slides/2026-09-07-dataviz.html#multiple-layers-1",
     "title": "Better Data Visualizations",
     "section": "Multiple layers",
-    "text": "Multiple layers\n\nggplot(data = HELP_data,\n       aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha=.6, \n             position = position_jitter(width=.1, height=0)) +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "Multiple layers\n\nggplot(data = HELP_data, aes(x = children, y = age)) +\n  geom_boxplot(outlier.size = 0) +\n  geom_point(alpha = .6, position = position_jitter(width = .1, height = 0)) +\n  coord_flip() +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#things-i-havent-mentioned-much",
@@ -2496,21 +2496,21 @@
     "href": "slides/2026-09-07-dataviz.html#themes",
     "title": "Better Data Visualizations",
     "section": "themes",
-    "text": "themes\n\nlibrary(ggthemes)\nggplot(Births2015, aes(x = date, y = births)) + \n  geom_point() + \n  theme_wsj()"
+    "text": "themes\n\nlibrary(ggthemes)\nggplot(Births2015, aes(x = date, y = births)) +\n  geom_point() +\n  theme_wsj()"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#jitterdodge",
     "href": "slides/2026-09-07-dataviz.html#jitterdodge",
     "title": "Better Data Visualizations",
     "section": "jitterdodge()",
-    "text": "jitterdodge()\n\nggplot(data = HELP_data, \n       aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge()) +\n  geom_point(aes(color = children, \n                 fill = children), \n             position = position_jitterdodge()) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "jitterdodge()\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge()) +\n  geom_point(\n    aes(color = children, fill = children),\n    position = position_jitterdodge()\n  ) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#a-little-bit-of-everything",
     "href": "slides/2026-09-07-dataviz.html#a-little-bit-of-everything",
     "title": "Better Data Visualizations",
     "section": "A little bit of everything",
-    "text": "A little bit of everything\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge(width=1)) +\n  geom_point(aes(fill = children), alpha=.5, \n             position = position_jitterdodge(dodge.width=1, jitter.width = 0.2)) + \n  facet_wrap(~homeless) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
+    "text": "A little bit of everything\n\nggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +\n  geom_boxplot(coef = 10, position = position_dodge(width = 1)) +\n  geom_point(\n    aes(fill = children),\n    alpha = .5,\n    position = position_jitterdodge(dodge.width = 1, jitter.width = 0.2)\n  ) +\n  facet_wrap(~homeless) +\n  labs(title = \"HELP clinical trial at detoxification unit\")"
   },
   {
     "objectID": "slides/2026-09-07-dataviz.html#want-to-learn-more",
@@ -2524,7 +2524,7 @@
     "href": "slides/2026-09-07-dataviz.html#whats-around-the-corner",
     "title": "Better Data Visualizations",
     "section": "What’s around the corner?",
-    "text": "What’s around the corner?\nshiny\n\ninteractive graphics / modeling\nhttps://shiny.rstudio.com/\n\nplotly\n\nPlotly is an R package for creating interactive web-based graphs via plotly’s JavaScript graphing library, plotly.js. The plotly R libary contains the ggplotly function , which will convert ggplot2 figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the style function.\n\n\nhttps://plot.ly/ggplot2/getting-started/\n\ngganimate\n\ngganimate tutorial"
+    "text": "What’s around the corner?\nshiny\n\ninteractive graphics / modeling\nhttps://shiny.posit.co/\n\nplotly\n\nPlotly is an R package for creating interactive web-based graphs via plotly’s JavaScript graphing library, plotly.js. The plotly R libary contains the ggplotly function , which will convert ggplot2 figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the style function.\n\n\nhttps://plot.ly/ggplot2/getting-started/\n\ngganimate\n\ngganimate tutorial"
   },
   {
     "objectID": "project6_old.html",
@@ -3063,7 +3063,7 @@
     "href": "slides/2026-08-31-intro.html#git-and-github-tips",
     "title": "Introduction to DS002R",
     "section": "Git and GitHub tips",
-    "text": "Git and GitHub tips\n\nThere are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.\nWe will be doing Git things and interfacing with GitHub through RStudio, but if you Google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
+    "text": "Git and GitHub tips\n\nThere are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.\nWe will be doing Git things and interfacing with GitHub through Positron, but if you Google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
   },
   {
     "objectID": "slides/2026-09-14-verbs.html#tidy-data",
@@ -4477,7 +4477,7 @@
     "href": "slides/2026-11-223-shiny.html#a-simple-shiny-app",
     "title": "Shiny",
     "section": "A simple Shiny App",
-    "text": "A simple Shiny App\nPut the following into a Shiny App using File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Shiny Web App ... as a file called app.R.\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  \"Hello, world!\"\n)\n\nserver &lt;- function(input, output, session) {\n}\n\nshinyApp(ui, server)"
+    "text": "A simple Shiny App\nPut the following into a Shiny App using File \\(\\rightarrow\\) New File \\(\\rightarrow\\) Shiny Web App ... as a file called app.R.\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  \"Hello, world!\"\n)\n\nserver &lt;- function(input, output, session) {}\n\nshinyApp(ui, server)"
   },
   {
     "objectID": "slides/2026-11-223-shiny.html#what-are-the-parts-of-a-shiny-app",
@@ -4491,7 +4491,7 @@
     "href": "slides/2026-11-223-shiny.html#how-to-run-a-shiny-app",
     "title": "Shiny",
     "section": "How to run a Shiny App?",
-    "text": "How to run a Shiny App?\n\n\n\nTo run Shiny\n\n\n\nClick the Run App button in the document toolbar.\n\n\n\n\n\n\n\n\n\n\n\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter.\nIf you’re not using RStudio, you can (source()) the whole document, or call shiny::runApp() with the path to the directory containing app.R."
+    "text": "How to run a Shiny App?\n\n\n\n\n\n\nTipTo run Shiny\n\n\n\n\nClick the Run App button in the document toolbar.\n\n\n\n\n\n\n\n\n\n\n\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter.\nIf you’re not using Positron, you can (source()) the whole document, or call shiny::runApp() with the path to the directory containing app.R."
   },
   {
     "objectID": "slides/2026-11-223-shiny.html#what-does-it-look-like",
@@ -4512,14 +4512,14 @@
     "href": "slides/2026-11-223-shiny.html#pieces",
     "title": "Shiny",
     "section": "Pieces",
-    "text": "Pieces\nShiny applications will be contained in one app.R file. The file contains two key components:\nui: code for the user interface. The user interface is the webpage that your user will interact with.\nserver: code for the computer part. What should the computer/server do with your inputs as the user changes them.\nThe last code at the bottom, shinyApp(ui = ui, server = server), will compile everything together to result in the interactive webpage.\nPress Run App at the top of RStudio and see what happens!"
+    "text": "Pieces\nShiny applications will be contained in one app.R file. The file contains two key components:\nui: code for the user interface. The user interface is the webpage that your user will interact with.\nserver: code for the computer part. What should the computer/server do with your inputs as the user changes them.\nThe last code at the bottom, shinyApp(ui = ui, server = server), will compile everything together to result in the interactive webpage.\nPress Run App at the top of Positron and see what happens!"
   },
   {
     "objectID": "slides/2026-11-223-shiny.html#pieces-1",
     "href": "slides/2026-11-223-shiny.html#pieces-1",
     "title": "Shiny",
     "section": "Pieces",
-    "text": "Pieces\n\nlibrary(shiny)\n\nshinyApp(\n  ui = list(\n    # new (to you) widgets go here\n  ),\n  \n  server = function(input, output, session) {\n    # somewhat familiar (to you) code goes here\n  }\n)"
+    "text": "Pieces\n\nlibrary(shiny)\n\nshinyApp(\n  ui = list(\n    # new (to you) widgets go here\n  ),\n\n  server = function(input, output, session) {\n    # somewhat familiar (to you) code goes here\n  }\n)"
   },
   {
     "objectID": "slides/2026-11-223-shiny.html#a-brief-widget-tour",
@@ -4533,14 +4533,14 @@
     "href": "slides/2026-11-223-shiny.html#the-default-shinny-app",
     "title": "Shiny",
     "section": "The default Shinny App",
-    "text": "The default Shinny App\n\n#\n# This is a Shiny web application. You can run the application by clicking\n# the 'Run App' button above.\n#\n# Find out more about building applications with Shiny here:\n#\n#    https://shiny.posit.co/\n#\n\nlibrary(shiny)\nlibrary(tidyverse)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n\n    # Application title\n    titlePanel(\"Old Faithful Geyser Data\"),\n\n    # Sidebar with a slider input for number of bins \n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"bins\",\n                        \"Number of bins:\",\n                        min = 1,\n                        max = 50,\n                        value = 30)\n        ),\n\n        # Show a plot of the generated distribution\n        mainPanel(\n           plotOutput(\"distPlot\")\n        )\n    )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n\n    output$distPlot &lt;- renderPlot({\n        faithful |&gt; \n           ggplot(aes(x = waiting)) + \n              geom_histogram(bins = input$bins,\n                             fill = \"darkgrey\",\n                             color = \"white\")  +\n              labs(x = \"Waiting time to next eruption (in mins)\",\n                   title = \"Histogram of waiting times\",\n                   y = \"\") + \n              theme_minimal()\n    })\n}\n\n# Run the application \nshinyApp(ui = ui, server = server)"
+    "text": "The default Shinny App\n\n#\n# This is a Shiny web application. You can run the application by clicking\n# the 'Run App' button above.\n#\n# Find out more about building applications with Shiny here:\n#\n#    https://shiny.posit.co/\n#\n\nlibrary(shiny)\nlibrary(tidyverse)\n\n# Define UI for application that draws a histogram\nui &lt;- fluidPage(\n  # Application title\n  titlePanel(\"Old Faithful Geyser Data\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"bins\", \"Number of bins:\", min = 1, max = 50, value = 30)\n    ),\n\n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n)\n\n# Define server logic required to draw a histogram\nserver &lt;- function(input, output) {\n  output$distPlot &lt;- renderPlot({\n    faithful |&gt;\n      ggplot(aes(x = waiting)) +\n      geom_histogram(bins = input$bins, fill = \"darkgrey\", color = \"white\") +\n      labs(\n        x = \"Waiting time to next eruption (in mins)\",\n        title = \"Histogram of waiting times\",\n        y = \"\"\n      ) +\n      theme_minimal()\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)"
   },
   {
     "objectID": "slides/2026-11-223-shiny.html#running-old-faithful",
     "href": "slides/2026-11-223-shiny.html#running-old-faithful",
     "title": "Shiny",
     "section": "Running Old Faithful",
-    "text": "Running Old Faithful\n\nRun in RStudio\nSee the app in action here: https://shiny.posit.co/r/gallery/start-simple/faithful/"
+    "text": "Running Old Faithful\n\nRun in Positron\nSee the app in action here: https://shiny.posit.co/r/gallery/start-simple/faithful/"
   },
   {
     "objectID": "slides/2026-11-223-shiny.html#reactive",
@@ -4604,5 +4604,40 @@
     "title": "superfluous material examples",
     "section": "Solutions",
     "text": "Solutions\nOne way to print only the top of the data frame is to use the head() function:\n\nsmokecancer |&gt; \n  head()\n\n      action     outcome\n1 non-smoker lung_cancer\n2 non-smoker lung_cancer\n3 non-smoker lung_cancer\n4 non-smoker lung_cancer\n5 non-smoker lung_cancer\n6 non-smoker lung_cancer\n\n\nAnother way to print only the top few rows is to change the object from a data.frame into a tibble (a tibble is like a data.frame but it has nice printing options). Note that one benefit of tibble() over head() is that the reader can see the size of the data frame (number of rows and columns).\n\nsmokecancer |&gt; \n  tibble()\n\n# A tibble: 120 × 2\n   action     outcome    \n   &lt;chr&gt;      &lt;chr&gt;      \n 1 non-smoker lung_cancer\n 2 non-smoker lung_cancer\n 3 non-smoker lung_cancer\n 4 non-smoker lung_cancer\n 5 non-smoker lung_cancer\n 6 non-smoker lung_cancer\n 7 non-smoker lung_cancer\n 8 non-smoker lung_cancer\n 9 non-smoker lung_cancer\n10 non-smoker lung_cancer\n# ℹ 110 more rows"
+  },
+  {
+    "objectID": "slides/2026-08-31-intro.html#r-and-positron-1",
+    "href": "slides/2026-08-31-intro.html#r-and-positron-1",
+    "title": "Introduction to DS002R",
+    "section": "R and Positron",
+    "text": "R and Positron\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nPositron is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the Positron IDE”\nPositron is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/2026-08-31-intro.html#r-vs.-positron",
+    "href": "slides/2026-08-31-intro.html#r-vs.-positron",
+    "title": "Introduction to DS002R",
+    "section": "R vs. Positron",
+    "text": "R vs. Positron\n\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/2026-08-31-intro.html#tour-r-positron",
+    "href": "slides/2026-08-31-intro.html#tour-r-positron",
+    "title": "Introduction to DS002R",
+    "section": "Tour: R + Positron",
+    "text": "Tour: R + Positron"
+  },
+  {
+    "objectID": "slides/2026-08-31-intro.html#tour-recap-r-positron",
+    "href": "slides/2026-08-31-intro.html#tour-recap-r-positron",
+    "title": "Introduction to DS002R",
+    "section": "Tour recap: R + Positron",
+    "text": "Tour recap: R + Positron"
+  },
+  {
+    "objectID": "slides/2026-11-223-shiny.html",
+    "href": "slides/2026-11-223-shiny.html",
+    "title": "Shiny",
+    "section": "",
+    "text": "Shiny examples\nparts of a Shiny file"
   }
 ]

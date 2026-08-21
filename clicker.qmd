@@ -45,7 +45,7 @@ library(lubridate)
 
 ---
 
-(@) R / R Studio / Quarto[^1]
+(@) R / Positron / Quarto[^1]
     (a) all good
     (b) started, progress is slow and steady
     (c) started, very stuck

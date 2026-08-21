@@ -180,13 +180,13 @@ knitr::include_graphics("../images/plotly.png")
 ```{r, echo=FALSE}
 library(mosaic)
 library(mosaicData)
-SAT |> subset(frac > 50) |>
-  ggplot(aes(x = state, y =  math)) + 
-  labs(x = "state",
-       y = "average SAT score") + 
+SAT |>
+  subset(frac > 50) |>
+  ggplot(aes(x = state, y = math)) +
+  labs(x = "state", y = "average SAT score") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  geom_point() + 
-  geom_linerange(aes(x = state, ymin=0, ymax = math))
+  geom_point() +
+  geom_linerange(aes(x = state, ymin = 0, ymax = math))
 ```
 :::
 
@@ -213,11 +213,10 @@ library(mosaicData)
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 SwimRecords |>
-  ggplot(aes(x = year, y = time, color = sex)) + 
-  geom_point() + 
+  ggplot(aes(x = year, y = time, color = sex)) +
+  geom_point() +
   geom_line() +
-  labs(title = "100m Swimming World Records",
-       y = "World Record Time (seconds)")
+  labs(title = "100m Swimming World Records", y = "World Record Time (seconds)")
 ```
 :::
 
@@ -238,10 +237,11 @@ SwimRecords |>
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
-HELPrct |> group_by(substance) |>
+HELPrct |>
+  group_by(substance) |>
   summarize(count = n()) |>
-  mutate(lab.ypos = cumsum(count) - 0.5*count) |>
-  ggplot(aes(x = "", y =count, fill = substance)) + 
+  mutate(lab.ypos = cumsum(count) - 0.5 * count) |>
+  ggplot(aes(x = "", y = count, fill = substance)) +
   geom_bar(width = 1, stat = "identity", color = "white") +
   coord_polar("y", start = 0) +
   geom_text(aes(y = lab.ypos, label = count), color = "white") +
@@ -301,7 +301,7 @@ head(Births2015)
 
 ```{r}
 #| echo: false
-head(Births2015) |> 
+head(Births2015) |>
   gt::gt()
 ```
 
@@ -314,7 +314,9 @@ Obtained from the National Center for Health Statistics, National Vital Statisti
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 ggplot(
-  data = Births2015, aes(x = date, y = births)) + 
+  data = Births2015,
+  aes(x = date, y = births)
+) +
   geom_point() +
   labs(title = "US Births in 2015")
 ```
@@ -337,7 +339,9 @@ Two Questions:
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
 ggplot(
-  data = Births2015, aes(x = date, y = births)) + 
+  data = Births2015,
+  aes(x = date, y = births)
+) +
   geom_point() +
   labs(title = "US Births in 2015")
 ```
@@ -365,7 +369,9 @@ ggplot(
 ::: {.column width="40%"}
 ```{r, echo=FALSE}
 ggplot(
-  data = Births2015, aes(x = date, y = births)) + 
+  data = Births2015,
+  aes(x = date, y = births)
+) +
   geom_point() +
   labs(title = "US Births in 2015")
 ```
@@ -376,14 +382,12 @@ ggplot(
 #| echo: true
 #| eval: false
 #| code-line-numbers: "1,2,7,8"
-ggplot(data = Births2015, 
-       aes(x = date, y = births)) + 
+ggplot(data = Births2015, aes(x = date, y = births)) +
   geom_point() +
   labs(title = "US Births in 2015")
 
 ggplot() +
-  geom_point(data = Births2015, 
-             aes(x = date, y = births)) +
+  geom_point(data = Births2015, aes(x = date, y = births)) +
   labs(title = "US Births in 2015")
 ```
 
@@ -405,7 +409,7 @@ ggplot()
 #| echo: true
 #| eval: false
 #| code-line-numbers: "1"
-ggplot() 
+ggplot()
 ```
 
 :::
@@ -425,8 +429,7 @@ ggplot(data = Births2015, aes(x = date, y = births))
 #| echo: true
 #| eval: false
 #| code-line-numbers: "1,2"
-ggplot(data = Births2015, 
-       aes(x = date, y = births)) 
+ggplot(data = Births2015, aes(x = date, y = births))
 ```
 
 :::
@@ -437,7 +440,7 @@ ggplot(data = Births2015,
 :::: {.columns} 
 ::: {.column width="40%"}
 ```{r, echo=FALSE}
-ggplot(data = Births2015, aes(x = date, y = births)) + 
+ggplot(data = Births2015, aes(x = date, y = births)) +
   geom_point()
 ```
 :::
@@ -447,8 +450,7 @@ ggplot(data = Births2015, aes(x = date, y = births)) +
 #| echo: true
 #| eval: false
 #| code-line-numbers: "3"
-ggplot(data = Births2015, 
-       aes(x = date, y = births)) + 
+ggplot(data = Births2015, aes(x = date, y = births)) +
   geom_point()
 ```
 
@@ -461,7 +463,7 @@ ggplot(data = Births2015,
 :::: {.columns} 
 ::: {.column width="40%"}
 ```{r, echo=FALSE}
-ggplot(data = Births2015, aes(x = date, y = births)) + 
+ggplot(data = Births2015, aes(x = date, y = births)) +
   geom_point() +
   labs(title = "US Births in 2015")
 ```
@@ -472,8 +474,7 @@ ggplot(data = Births2015, aes(x = date, y = births)) +
 #| echo: true
 #| eval: false
 #| code-line-numbers: "4"
-ggplot(data = Births2015, 
-       aes(x = date, y = births)) + 
+ggplot(data = Births2015, aes(x = date, y = births)) +
   geom_point() +
   labs(title = "US Births in 2015")
 ```
@@ -517,10 +518,7 @@ ggplot(data = Births2015) +
 #| echo: true
 #| eval: false
 #| code-line-numbers: "4"
-ggplot(data = Births2015,
-       aes(x = date,
-           y = births, 
-           color = wday)) +
+ggplot(data = Births2015, aes(x = date, y = births, color = wday)) +
   geom_point() +
   labs(title = "US Births in 2015")
 ```
@@ -557,10 +555,7 @@ lines instead of dots!
 #| echo: true
 #| eval: false
 #| code-line-numbers: "5"
-ggplot(data = Births2015,
-         aes(x = date, 
-             y = births,
-             color = wday)) +
+ggplot(data = Births2015, aes(x = date, y = births, color = wday)) +
   geom_line() +
   labs(title = "US Births in 2015")
 ```
@@ -573,9 +568,8 @@ ggplot(data = Births2015,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
-ggplot(data = Births2015, 
-       aes(x = date, y = births, color = wday)) + 
-  geom_point() + 
+ggplot(data = Births2015, aes(x = date, y = births, color = wday)) +
+  geom_point() +
   geom_line() +
   labs(title = "US Births in 2015")
 ```
@@ -588,9 +582,8 @@ ggplot(data = Births2015,
 ::: {.column width="50%"}
 ```{r}
 #| echo: false
-ggplot(data = Births2015, 
-       aes(x = date, y = births, color = wday)) + 
-  geom_point() + 
+ggplot(data = Births2015, aes(x = date, y = births, color = wday)) +
+  geom_point() +
   geom_line() +
   labs(title = "US Births in 2015")
 ```
@@ -604,11 +597,8 @@ lines
 #| echo: true
 #| eval: false
 #| code-line-numbers: "5,6"
-ggplot(data = Births2015,
-       aes(x = date,
-           y = births,
-           color = wday)) + 
-  geom_point() +  
+ggplot(data = Births2015, aes(x = date, y = births, color = wday)) +
+  geom_point() +
   geom_line() +
   labs(title = "US Births in 2015")
 ```
@@ -629,10 +619,9 @@ are *below* and the lines are *above*.
 #| echo: true
 #| eval: false
 #| code-line-numbers: "2"
-ggplot(data = Births2015,
-       aes(x = date, y = births, color = "navy")) + 
+ggplot(data = Births2015, aes(x = date, y = births, color = "navy")) +
   geom_point() +
-  labs(title = "US Births in 2015") 
+  labs(title = "US Births in 2015")
 ```
 
 
@@ -642,9 +631,8 @@ ggplot(data = Births2015,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "2"
-ggplot(data = Births2015,
-       aes(x = date, y = births, color = "navy")) + 
-  geom_point()  +
+ggplot(data = Births2015, aes(x = date, y = births, color = "navy")) +
+  geom_point() +
   labs(title = "US Births in 2015")
 ```
 
@@ -663,9 +651,8 @@ it outside the `aes()` designation:
 #| echo: true
 #| eval: true
 #| code-line-numbers: "2,3"
-ggplot(data = Births2015,
-       aes(x = date, y = births)) +   # map variables 
-  geom_point(color = "navy")    +   # set attributes
+ggplot(data = Births2015, aes(x = date, y = births)) + # map variables
+  geom_point(color = "navy") + # set attributes
   labs(title = "US Births in 2015")
 ```
 
@@ -679,10 +666,9 @@ ggplot(data = Births2015,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
-ggplot(data = Births2015,
-       aes(x = date, y = births)) + 
-  geom_line(aes(color = wday)) +       
-  geom_point(color = "navy")  +          
+ggplot(data = Births2015, aes(x = date, y = births)) +
+  geom_line(aes(color = wday)) +
+  geom_point(color = "navy") +
   labs(title = "US Births in 2015")
 ```
 :::
@@ -693,11 +679,9 @@ ggplot(data = Births2015,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, echo=FALSE}
-ggplot(data = Births2015,
-       aes(x = date,
-           y = births)) + 
-  geom_line(aes(color = wday)) +       
-  geom_point(color = "navy") +           
+ggplot(data = Births2015, aes(x = date, y = births)) +
+  geom_line(aes(color = wday)) +
+  geom_point(color = "navy") +
   labs(title = "US Births in 2015")
 ```
 :::
@@ -707,11 +691,9 @@ ggplot(data = Births2015,
 #| echo: true
 #| eval: false
 #| code-line-numbers: "4,5"
-ggplot(data = Births2015,
-       aes(x = date,
-           y = births)) + 
-  geom_line(aes(color = wday)) +      
-  geom_point(color = "navy")  +         
+ggplot(data = Births2015, aes(x = date, y = births)) +
+  geom_line(aes(color = wday)) +
+  geom_point(color = "navy") +
   labs(title = "US Births in 2015")
 ```
 
@@ -1085,7 +1067,7 @@ apropos("^geom_")
 help pages will tell you their aesthetics, default stats, etc.
 
 ```{r, eval=FALSE}
-?geom_area             # for example
+?geom_area # for example
 ```
 
 
@@ -1096,10 +1078,7 @@ help pages will tell you their aesthetics, default stats, etc.
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, eval=TRUE}
-ggplot(data = Births2015,
-       aes(x = date,
-           y = births, 
-           fill = wday)) + 
+ggplot(data = Births2015, aes(x = date, y = births, fill = wday)) +
   geom_area() +
   labs(title = "US Births in 2015")
 ```
@@ -1112,8 +1091,7 @@ ggplot(data = Births2015,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, eval=TRUE}
-ggplot(data = Births2015,
-       aes(x = date, y = births, fill = wday)) + 
+ggplot(data = Births2015, aes(x = date, y = births, fill = wday)) +
   geom_area() +
   labs(title = "US Births in 2015")
 ```
@@ -1158,12 +1136,12 @@ head(HELPrct)
 
 ```{r}
 #| echo: false
-head(HELPrct) |> 
+head(HELPrct) |>
   gt::gt()
 ```
 
 ```{r echo = FALSE}
-HELP_data <- left_join(HELPrct, HELPfull, by = c( "id" = "ID")) |>
+HELP_data <- left_join(HELPrct, HELPfull, by = c("id" = "ID")) |>
   filter(!is.na(A11E)) |>
   mutate(children = ifelse(A11E == 0, "no", "yes"))
 ```
@@ -1175,8 +1153,8 @@ HELP_data <- left_join(HELPrct, HELPfull, by = c( "id" = "ID")) |>
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r echo=FALSE}
-HELP_data |> 
-  ggplot(aes(x = substance)) + 
+HELP_data |>
+  ggplot(aes(x = substance)) +
   geom_bar() +
   labs(title = "HELP trial")
 ```
@@ -1188,8 +1166,7 @@ HELP_data |>
 #| echo: true
 #| eval: false
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = substance)) + 
+ggplot(data = HELP_data, aes(x = substance)) +
   geom_bar() +
   labs(title = "HELP trial")
 ```
@@ -1205,8 +1182,8 @@ ggplot(data = HELP_data,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r echo=FALSE}
-HELP_data |> 
-  ggplot(aes(x = substance)) + 
+HELP_data |>
+  ggplot(aes(x = substance)) +
   geom_bar() +
   labs(title = "HELP trial")
 ```
@@ -1218,8 +1195,7 @@ HELP_data |>
 #| echo: true
 #| eval: false
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = substance)) + 
+ggplot(data = HELP_data, aes(x = substance)) +
   geom_bar() +
   labs(title = "HELP trial")
 ```
@@ -1238,9 +1214,8 @@ ggplot(data = HELP_data,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
-HELP_data |> 
-  ggplot(aes(x = substance, 
-             fill = children)) + 
+HELP_data |>
+  ggplot(aes(x = substance, fill = children)) +
   geom_bar() +
   labs(title = "HELP trial")
 ```
@@ -1251,9 +1226,7 @@ HELP_data |>
 #| echo: true
 #| eval: false
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = substance,
-           fill = children)) + 
+ggplot(data = HELP_data, aes(x = substance, fill = children)) +
   geom_bar() +
   labs(title = "HELP trial")
 ```
@@ -1266,12 +1239,9 @@ ggplot(data = HELP_data,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
-ggplot(HELP_data,
-       aes(x = substance,
-           fill = children)) + 
+ggplot(HELP_data, aes(x = substance, fill = children)) +
   geom_bar(position = "fill") +
-  labs(title = "HELP trial",
-       y = "actually, percent")
+  labs(title = "HELP trial", y = "actually, percent")
 ```
 :::
 
@@ -1280,12 +1250,9 @@ ggplot(HELP_data,
 #| echo: true
 #| eval: false
 #| code-line-numbers: "4"
-ggplot(HELP_data,
-       aes(x = substance,
-           fill = children)) + 
+ggplot(HELP_data, aes(x = substance, fill = children)) +
   geom_bar(position = "fill") +
-  labs(title = "HELP trial",
-       y = "actually, percent")
+  labs(title = "HELP trial", y = "actually, percent")
 ```
 
 :::
@@ -1297,8 +1264,8 @@ ggplot(HELP_data,
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r, fig.height=1.5, message=TRUE, echo=FALSE}
-HELP_data |> 
-  ggplot(aes(x = age)) + 
+HELP_data |>
+  ggplot(aes(x = age)) +
   geom_histogram() +
   labs(title = "HELP trial")
 ```
@@ -1309,8 +1276,7 @@ HELP_data |>
 #| echo: true
 #| eval: false
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
+ggplot(data = HELP_data, aes(x = age)) +
   geom_histogram() +
   labs(title = "HELP trial")
 ```
@@ -1332,8 +1298,8 @@ really choose our own.
 :::: {.columns} 
 ::: {.column width="50%"}
 ```{r echo=FALSE}
-HELP_data |> 
-  ggplot(aes(x = age)) + 
+HELP_data |>
+  ggplot(aes(x = age)) +
   geom_histogram(binwidth = 2) +
   labs(title = "HELP trial")
 ```
@@ -1345,8 +1311,7 @@ HELP_data |>
 #| echo: true
 #| eval: false
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
+ggplot(data = HELP_data, aes(x = age)) +
   geom_histogram(binwidth = 2) +
   labs(title = "HELP trial")
 ```
@@ -1360,8 +1325,7 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
+ggplot(data = HELP_data, aes(x = age)) +
   geom_freqpoly(binwidth = 2) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1370,8 +1334,7 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
+ggplot(data = HELP_data, aes(x = age)) +
   geom_density() +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1387,8 +1350,7 @@ Every geom comes with a default stat
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
+ggplot(data = HELP_data, aes(x = age)) +
   geom_line(stat = "density") +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1405,8 +1367,7 @@ Every stat comes with a default geom, every geom with a default stat
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
+ggplot(data = HELP_data, aes(x = age)) +
   stat_density(geom = "line") +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1417,10 +1378,9 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3,4"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
-  geom_point(stat = "bin", binwidth = 3) + 
-  geom_line(stat = "bin", binwidth = 3)  +
+ggplot(data = HELP_data, aes(x = age)) +
+  geom_point(stat = "bin", binwidth = 3) +
+  geom_line(stat = "bin", binwidth = 3) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1431,9 +1391,8 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
-  geom_area(stat = "bin", binwidth = 3)  +
+ggplot(data = HELP_data, aes(x = age)) +
+  geom_area(stat = "bin", binwidth = 3) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1445,11 +1404,8 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3,4,5,6"
-ggplot(data = HELP_data,
-       aes(x = age)) + 
-  geom_point(stat = "bin", 
-             binwidth = 3, 
-             aes(size = ..count..)) +
+ggplot(data = HELP_data, aes(x = age)) +
+  geom_point(stat = "bin", binwidth = 3, aes(size = ..count..)) +
   geom_line(stat = "bin", binwidth = 3) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1459,8 +1415,9 @@ ggplot(data = HELP_data,
     
 
 ```{r, fig.height=1.5}
-HELP_data |> 
-  ggplot(aes(x = i1)) + geom_histogram() +
+HELP_data |>
+  ggplot(aes(x = i1)) +
+  geom_histogram() +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1469,8 +1426,9 @@ HELP_data |>
 ## How much drinking? (i1)
  
 ```{r, fig.height=1.5}
-HELP_data |> 
-  ggplot(aes(x = i1)) + geom_density() +
+HELP_data |>
+  ggplot(aes(x = i1)) +
+  geom_density() +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1479,8 +1437,9 @@ HELP_data |>
 ## How much drinking? (i1)
  
 ```{r, fig.height=1.5}
-HELP_data |> 
-  ggplot(aes(x = i1)) + geom_area(stat = "density") +
+HELP_data |>
+  ggplot(aes(x = i1)) +
+  geom_area(stat = "density") +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1496,10 +1455,7 @@ Using color and linetype:
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3,4"
-ggplot(data = HELP_data,
-       aes(x = i1,
-           color = substance,
-           linetype = children)) + 
+ggplot(data = HELP_data, aes(x = i1, color = substance, linetype = children)) +
   geom_line(stat = "density") +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1511,10 +1467,9 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "4"
-ggplot(data = HELP_data,
-       aes(x = i1, color = substance)) + 
-  geom_line(stat = "density") + 
-  facet_grid( . ~ children ) +
+ggplot(data = HELP_data, aes(x = i1, color = substance)) +
+  geom_line(stat = "density") +
+  facet_grid(. ~ children) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1523,10 +1478,9 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "4"
-ggplot(data = HELP_data,
-       aes(x = i1, color = substance)) + 
-  geom_line(stat = "density") + 
-  facet_grid( children ~ . ) +
+ggplot(data = HELP_data, aes(x = i1, color = substance)) +
+  geom_line(stat = "density") +
+  facet_grid(children ~ .) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1539,8 +1493,8 @@ The quantitative variable must be `y`, and there must be an
 additional `x` variable. 
 
 ```{r fig.height = 3.5}
-HELP_data |> 
-  ggplot(aes(x = substance, y = age, color = children)) + 
+HELP_data |>
+  ggplot(aes(x = substance, y = age, color = children)) +
   geom_boxplot() +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1558,10 +1512,7 @@ of `x` and `y` on the plot.
 #| echo: true
 #| eval: true
 #| code-line-numbers: "6"
-ggplot(data = HELP_data,
-       aes(x = substance, 
-           y = age, 
-           color = children)) + 
+ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
   geom_boxplot() +
   coord_flip() +
   labs(title = "HELP clinical trial at detoxification unit")
@@ -1575,10 +1526,7 @@ We can scale the continuous axis
 #| echo: true
 #| eval: true
 #| code-line-numbers: "6"
-ggplot(data = HELP_data,
-       aes(x = substance, 
-           y = age, 
-           color = children)) + 
+ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
   geom_boxplot() +
   coord_trans(y = "exp") +
   labs(title = "HELP clinical trial at detoxification unit")
@@ -1595,11 +1543,8 @@ We can control how much if we set the dodge manually.
 #| echo: true
 #| eval: true
 #| code-line-numbers: "5"
-ggplot(data = HELP_data,
-       aes(x = substance, 
-           y = age, 
-           color = children)) + 
-  geom_boxplot(position = position_dodge(width=1)) +
+ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
+  geom_boxplot(position = position_dodge(width = 1)) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1615,10 +1560,9 @@ expect), the overplotting may be hiding information.
 #| code-line-numbers: "6"
 library(NHANES)
 dim(NHANES)
-ggplot(data = NHANES,
-       aes(x = Height, y = Weight)) +
-  geom_point() + 
-  facet_grid( Gender ~ PregnantNow )
+ggplot(data = NHANES, aes(x = Height, y = Weight)) +
+  geom_point() +
+  facet_grid(Gender ~ PregnantNow)
 ```
 
 
@@ -1630,10 +1574,9 @@ One way to deal with overplotting is to set the opacity low.
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3"
-ggplot(data = NHANES,
-       aes(x = Height, y = Weight)) +
-  geom_point(alpha=0.01) + 
-  facet_grid( Gender ~ PregnantNow )
+ggplot(data = NHANES, aes(x = Height, y = Weight)) +
+  geom_point(alpha = 0.01) +
+  facet_grid(Gender ~ PregnantNow)
 ```
 
 
@@ -1646,10 +1589,9 @@ geom altogether.
 #| echo: true
 #| eval: true
 #| code-line-numbers: "3"
-ggplot(data = NHANES,
-       aes(x = Height, y = Weight)) +
-  geom_density2d() + 
-  facet_grid( Gender ~ PregnantNow )
+ggplot(data = NHANES, aes(x = Height, y = Weight)) +
+  geom_density2d() +
+  facet_grid(Gender ~ PregnantNow)
 ```
 
 
@@ -1661,10 +1603,9 @@ ggplot(data = NHANES,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "2,3"
-ggplot(data = HELP_data, 
-       aes(x = children, y = age)) +
+ggplot(data = HELP_data, aes(x = children, y = age)) +
   geom_boxplot(outlier.size = 0) +
-  geom_point(alpha=.6) +
+  geom_point(alpha = .6) +
   coord_flip() +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1675,10 +1616,9 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "4"
-ggplot(data = HELP_data,
-       aes(x = children, y = age)) +
+ggplot(data = HELP_data, aes(x = children, y = age)) +
   geom_boxplot(outlier.size = 0) +
-  geom_jitter(alpha=.6, width = 0.1) +
+  geom_jitter(alpha = .6, width = 0.1) +
   coord_flip() +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1692,11 +1632,9 @@ ggplot(data = HELP_data,
 #| echo: true
 #| eval: true
 #| code-line-numbers: "5"
-ggplot(data = HELP_data,
-       aes(x = children, y = age)) +
+ggplot(data = HELP_data, aes(x = children, y = age)) +
   geom_boxplot(outlier.size = 0) +
-  geom_point(alpha=.6, 
-             position = position_jitter(width=.1, height=0)) +
+  geom_point(alpha = .6, position = position_jitter(width = .1, height = 0)) +
   coord_flip() +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1720,8 +1658,8 @@ ggplot(data = HELP_data,
 #| eval: true
 #| code-line-numbers: "4"
 library(ggthemes)
-ggplot(Births2015, aes(x = date, y = births)) + 
-  geom_point() + 
+ggplot(Births2015, aes(x = date, y = births)) +
+  geom_point() +
   theme_wsj()
 ```
 
@@ -1734,12 +1672,12 @@ ggplot(Births2015, aes(x = date, y = births)) +
 #| echo: true
 #| eval: true
 #| code-line-numbers: "6"
-ggplot(data = HELP_data, 
-       aes(x = substance, y = age, color = children)) +
+ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
   geom_boxplot(coef = 10, position = position_dodge()) +
-  geom_point(aes(color = children, 
-                 fill = children), 
-             position = position_jitterdodge()) +
+  geom_point(
+    aes(color = children, fill = children),
+    position = position_jitterdodge()
+  ) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
 
@@ -1750,9 +1688,12 @@ ggplot(data = HELP_data,
 
 ```{r, fig.width=14}
 ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
-  geom_boxplot(coef = 10, position = position_dodge(width=1)) +
-  geom_point(aes(fill = children), alpha=.5, 
-             position = position_jitterdodge(dodge.width=1, jitter.width = 0.2)) + 
+  geom_boxplot(coef = 10, position = position_dodge(width = 1)) +
+  geom_point(
+    aes(fill = children),
+    alpha = .5,
+    position = position_jitterdodge(dodge.width = 1, jitter.width = 0.2)
+  ) +
   facet_wrap(~homeless) +
   labs(title = "HELP clinical trial at detoxification unit")
 ```
@@ -1774,7 +1715,7 @@ ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
 
 * interactive graphics / modeling
 
-* https://shiny.rstudio.com/
+* https://shiny.posit.co/
 
 `plotly` 
 

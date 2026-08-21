@@ -109,7 +109,7 @@ I (like many people) am still in the process of learning about diverse perspecti
 * A fantastic <a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/" target="_blank">ggplot2 tutorial</a>
 * Tutorials through the <a href="https://ourcodingclub.github.io/tutorials/" target="_blank">Coding Club</a>
 * <a href="http://www.rseek.org/" target="_blank">Google for R</a>
-* Helpful <a href="https://posit.co/resources/cheatsheets/" target="_blank">cheatsheets</a> from RStudio.
+* Helpful <a href="https://posit.co/resources/cheatsheets/" target="_blank">cheatsheets</a> from Positron.
    * <a href="https://rstudio.github.io/cheatsheets/html/data-transformation.html" target="_blank">data wrangling</a>
    * <a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html" target="_blank">ggplot2</a>
    * <a href="https://rstudio.github.io/cheatsheets/html/shiny.html" target="_blank">Shiny</a>
