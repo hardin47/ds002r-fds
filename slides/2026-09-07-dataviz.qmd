@@ -84,7 +84,7 @@ Yau (2013) gives us nine visual cues, and Wickham (2014) translates them into a 
 **Area** (numerical) how big (in two dimensions)?  Beware of improper scaling!  
 **Volume** (numerical) how big (in three dimensions)?  Beware of improper scaling!  
 **Shade** (either) to what extent?  how severely?  
-**Color** (either) to what extent? how severely? Beware of red/green color blindness.  
+**Color** (either) to what extent? how severely? Beware of red/green color blindness. Use color-vision-safe palettes like <a href = "https://ggplot2.tidyverse.org/reference/scale_viridis.html" target = "_blank">`viridis`</a> or < href = "https://malcolmbarrett.github.io/ggokabeito/" target = "_blank">`Okabe–Ito`</a>.
 
 2. Coordinate System: rectangular, polar, geographic, etc.
 
@@ -955,6 +955,7 @@ knitr::include_graphics("../images/fontsmatter.png")
 - Choose the best scale
 - Make the plot data / information rich
 - Use good captions, alt text, conclusions
+- Make your website accessible, <a href = "https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/#what-youll-like" target = "_blank">how to add alt text</a>. Feel free to use (and then check!!!) the <a href = "https://numbats.github.io/autoAlt/index.html" target = _blank">`autoAlt` package</a> in R which automatically generates alt text.
 
 
 
