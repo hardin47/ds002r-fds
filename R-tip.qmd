@@ -18,6 +18,9 @@ knitr::include_graphics("images/R_first_then.png")
 
 ```{r}
 #| echo: false
+
+# fmt: skip
+
 schedule <- tribble(
   ~`number`                  , ~tip              , ~`description`       , ~`misc` ,
   'Tip 1'                    , 'cmd + shift + i' , 'adds a new R chunk' ,

@@ -1,0 +1,45 @@
+---
+title: "Endangered data"
+description: |
+  Information on important data that have become endangered or extinct recently.
+format:
+  html:
+    html-math-method: katex
+execute: 
+  message: false
+  warning: false
+  echo: false
+---
+
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+#| echo: false
+
+# fmt: skip
+
+schedule <- tribble(
+  ~`dataset`, ~`data last updated`, ~`description`, ~`info last updated` ,
+  '<a href = "https://collegescorecard.ed.gov/data" target = "_blank">College Scorecard</a>'                    , '6-10-2026' , 'Data on student completion, debt and repayment, earnings, and more. Large amount of missing data so as to make the data unusable.' ,
+  '8-29-2026'
+)
+```
+
+
+
+```{r}
+#| echo: false
+#| column: body-outset
+# can also use column: screen-inset also the entire page??
+# can use column: page for the entire page
+# can use column: body-outset to bleed outside the center column of text
+schedule |>
+  gt::gt() |>
+  gt::fmt_markdown(columns = everything()) |>
+  gt::cols_width(dataset ~ px(100), everything() ~ px(200))
+```
+

@@ -32,6 +32,8 @@ website:
         href: clicker_study.qmd
       - text: "R tip"
         href: R-tip.qmd
+      - text: "Endangered Data"
+        href: endangered_data.qmd
       - text: "Project"
         menu: 
          - text: "semester mini-projects"

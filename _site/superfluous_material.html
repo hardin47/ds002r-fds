@@ -152,6 +152,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./R-tip.html"> 
 <span class="menu-text">R tip</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./endangered_data.html"> 
+<span class="menu-text">Endangered Data</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Project</span>
@@ -263,11 +267,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>A not okay way to look at a data frame</h1>
 <p>But sometimes, the formatting is such that the <strong>entire</strong> dataset is printed in the output!!! Having all the data print out isn’t helpful for your reader who is overwhelmed by pages of numbers.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>smokecancer <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">action =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"non-smoker"</span>, <span class="dv">51</span>), <span class="fu">rep</span>(<span class="st">"smoker"</span>, <span class="dv">69</span>)),</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">outcome =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"lung_cancer"</span>, <span class="dv">19</span>), <span class="fu">rep</span>(<span class="st">"healthy"</span>, <span class="dv">32</span>), </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                 <span class="fu">rep</span>(<span class="st">"lung_cancer"</span>, <span class="dv">41</span>), <span class="fu">rep</span>(<span class="st">"healthy"</span>, <span class="dv">28</span>)))</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>smokecancer</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>smokecancer <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">action =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"non-smoker"</span>, <span class="dv">51</span>), <span class="fu">rep</span>(<span class="st">"smoker"</span>, <span class="dv">69</span>)),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">outcome =</span> <span class="fu">c</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rep</span>(<span class="st">"lung_cancer"</span>, <span class="dv">19</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rep</span>(<span class="st">"healthy"</span>, <span class="dv">32</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rep</span>(<span class="st">"lung_cancer"</span>, <span class="dv">41</span>),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rep</span>(<span class="st">"healthy"</span>, <span class="dv">28</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>smokecancer</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        action     outcome
 1   non-smoker lung_cancer
@@ -396,7 +406,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
 <p>One way to print only the top of the data frame is to use the <code>head()</code> function:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>smokecancer <span class="sc">|&gt;</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>smokecancer <span class="sc">|&gt;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      action     outcome
@@ -410,7 +420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Another way to print only the top few rows is to change the object from a <code>data.frame</code> into a <code>tibble</code> (a <code>tibble</code> is like a <code>data.frame</code> but it has nice printing options). Note that one benefit of <code>tibble()</code> over <code>head()</code> is that the reader can see the size of the data frame (number of rows and columns).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>smokecancer <span class="sc">|&gt;</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>smokecancer <span class="sc">|&gt;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 120 × 2

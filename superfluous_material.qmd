@@ -25,9 +25,15 @@ flights
 But sometimes, the formatting is such that the **entire** dataset is printed in the output!!! Having all the data print out isn't helpful for your reader who is overwhelmed by pages of numbers.
 
 ```{r}
-smokecancer <- data.frame(action = c(rep("non-smoker", 51), rep("smoker", 69)),
-                     outcome = c(rep("lung_cancer", 19), rep("healthy", 32), 
-                                 rep("lung_cancer", 41), rep("healthy", 28)))
+smokecancer <- data.frame(
+  action = c(rep("non-smoker", 51), rep("smoker", 69)),
+  outcome = c(
+    rep("lung_cancer", 19),
+    rep("healthy", 32),
+    rep("lung_cancer", 41),
+    rep("healthy", 28)
+  )
+)
 
 smokecancer
 ```
@@ -37,7 +43,7 @@ smokecancer
 One way to print only the top of the data frame is to use the `head()` function:
 
 ```{r}
-smokecancer |> 
+smokecancer |>
   head()
 ```
 
@@ -45,7 +51,7 @@ smokecancer |>
 Another way to print only the top few rows is to change the object from a `data.frame` into a `tibble` (a `tibble` is like a `data.frame` but it has nice printing options). Note that one benefit of `tibble()` over `head()` is that the reader can see the size of the data frame (number of rows and columns).
 
 ```{r}
-smokecancer |> 
+smokecancer |>
   tibble()
 ```
 
@@ -59,7 +65,7 @@ This is what it looks like if you have set the messages to `true`. Again, not ve
 ```{r}
 #| echo: false
 
-detach("package:tidyverse", unload=TRUE)
+detach("package:tidyverse", unload = TRUE)
 ```
 
 
