@@ -23,8 +23,8 @@ knitr::include_graphics("images/R_first_then.png")
 
 schedule <- tribble(
   ~`number`                  , ~tip              , ~`description`       , ~`misc` ,
-  'Tip 1'                    , 'cmd + shift + i' , 'adds a new R chunk' ,
-  'cntrl + shift + i for PC'
+  'Tip 1'                    , 'cmd + shift + P' , 'Command Palette - does everything' ,
+  'cntrl + shift + P for windows'
 )
 ```
 
