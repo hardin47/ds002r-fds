@@ -330,11 +330,11 @@ HELPrct |>
 ::: {.column width="35%"}
 ```{r}
 #| echo: false
-library(mosaic)
-data(Births78)
-ggplot(data = Births78, aes(x = date, y = births, color = "navy")) +
+library(mosaicData)
+data(Births2015)
+ggplot(data = Births2015, aes(x = date, y = births, color = "navy")) +
   geom_point() +
-  labs(title = "US Births in 1978")
+  labs(title = "US Births in 2015")
 ```
 :::
 
@@ -342,9 +342,9 @@ ggplot(data = Births78, aes(x = date, y = births, color = "navy")) +
 ```{r}
 #| eval: false
 #| echo: true
-ggplot(data = Births78, aes(x = date, y = births, color = "navy")) +
+ggplot(data = Births2015, aes(x = date, y = births, color = "navy")) +
   geom_point() +
-  labs(title = "US Births in 1978")
+  labs(title = "US Births in 2015")
 ```
 :::
 
@@ -363,12 +363,12 @@ ggplot(data = Births78, aes(x = date, y = births, color = "navy")) +
 ```{r}
 #| echo: false
 #| out-width: 60%
-library(mosaic)
-data(Births78)
-ggplot(data = Births78, aes(x = date, y = births)) +
+library(mosaicData)
+data(Births2015)
+ggplot(data = Births2015, aes(x = date, y = births)) +
   geom_line(aes(color = wday)) +
   geom_point(color = "navy") +
-  labs(title = "US Births in 1978")
+  labs(title = "US Births in 2015")
 ```
      
 [^15]: a. dot color is specified as "navy", line color is specified as `wday`.

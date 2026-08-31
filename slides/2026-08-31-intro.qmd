@@ -32,7 +32,7 @@ options(pillar.width = 70)
 3. Tools
 
 ::: {.callout-important}
-Read about the <a href = "https://simplystatistics.org/posts/2019-01-09-how-data-scientists-think-a-mini-case-study/" target = "_blank">data science study</a> originally hosted on the podcast Not So Standard Deviations - Compromised Shoe Situation.
+Listen to the <a href = "https://drive.google.com/file/d/1mdaX6Q5DtYMKAujw5ot1LMcP0JLjC2fp/view?usp=sharing" target = "_blank">data science study</a> originally hosted on the podcast Not So Standard Deviations - Compromised Shoe Situation.
 :::
 
 ::: {.callout-important}
@@ -62,7 +62,7 @@ I need your GitHub user name - please email it to me.
 
 ::: {.column width="50%"}
 * office hours
-* mentor sessions
+* mentor sessions (Mon & Tues 8-10pm)
 * anonymous feedback
 * dates for assignments
 :::
@@ -267,7 +267,7 @@ Source: [Modern Dive](https://moderndive.com/1-getting-started.html).
 
 ## Tour recap: R + Positron
 
-![](../images/tour.png)
+![](../images/tour-positron.png)
 
 ## A short list (for now) of R essentials
 
@@ -343,7 +343,7 @@ dataframe$var_name
 
 ## Tour recap: Quarto
 
-![](../images/tour-quarto.png){fig-alt="Positron IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk." fig-align="center"}
+![](../images/tour-quarto-positron.png){fig-alt="Positron IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk." fig-align="center"}
 
 ## Environments
 
