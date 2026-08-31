@@ -28,27 +28,29 @@ schedule <- tribble(
 )
 ```
 
-
 ```{r}
 #| eval: false
 #| echo: false
 
+Positron: option + cmd + i  to get a new R cell
+
+
   'Tip 2', 'Tools -> Global Options... -> Appearance',
   'allows for dark mode, plus other options!', ' ',
   
-  'Tip 3', 'cmd + opt + c', 'runs the chunk', 'cntrl + opt + c on PC',
+  'Tip 3', 'cmd + opt + c', 'runs the cell', 'cntrl + opt + c on PC',
   
   'Tip 4', '<img src = "images/sort.jpg" width="50%">', 'within the viewer, sorts the data wrt a variable', 'click on the variable name',
   
   'Tip 5', 'cmd + shift + C', 'comments the line',
   'cntrl + shift + C for PC',
 
-  'Tip 6', 'cmd + shift + enter', 'runs the current chunk',
+  'Tip 6', 'cmd + shift + enter', 'runs the current cell',
   'cntrl + shift + enter for PC',
 
   'Tip 7', '<img src = "images/gear2.png">', 'changes the viewer output', 'gear near Render',
   
-  'Tip 8', 'cmd + shift + opt + j', 'window to jump between chunks', 'cntrl + shift + opt + j for PC',
+  'Tip 8', 'cmd + shift + opt + j', 'window to jump between cells', 'cntrl + shift + opt + j for PC',
   
   'Tip 9', 'cmd + shift + M', 'produces a pipe',  'cntrl + shift + M for PC <br> Tools -> Global Options... -> Code to get the native pipe',
   
@@ -62,7 +64,7 @@ schedule <- tribble(
   
   'Tip 14', 'up arrow (on keyboard)', 'brings back the previous line', 'works in Console or Terminal',
   
-  'Tip 15', 'tab complete', ' ', 'works in Console or in the R chunk',
+  'Tip 15', 'tab complete', ' ', 'works in Console or in the R cell',
   
   'Tip 16', '`usethis::use_github()`', ' ', 'make sure to direct to the correct folder!',
   
@@ -93,15 +95,15 @@ schedule <- tribble(
   'Tip 29', 'highlight code + cmd + i', 'resets indenting', ' '
   
 
-  'Tip 2', '<img src = "images/add_chunk.png">', 'adds a new R chunk',
+  'Tip 2', '<img src = "images/add_chunk.png">', 'adds a new R cell',
   'look for it at top of Quarto doc',
   
   'Tip 5', '`\\textcolor{red}{this text will be red}`', 'LaTeX formatting to change the text color', 'when render to pdf (different syntax for render to html)',
   
-  'Tip 6', '<img src = "images/gear1.png">', 'changes the figure size', 'gear in R chunk',
+  'Tip 6', '<img src = "images/gear1.png">', 'changes the figure size', 'gear in R cell',
   
   
-  'Tip 8', '`#| echo: false`', 'evaluates the chunk, but does not show the code', 'alternatively: `echo = FALSE` inside curly braces',
+  'Tip 8', '`#| echo: false`', 'evaluates the cell, but does not show the code', 'alternatively: `echo = FALSE` inside curly braces',
   
   'Tip 9', 'Tools -> Global Options... -> Spelling', 'allows for real-time spell check', ' ',
   
@@ -132,7 +134,7 @@ schedule <- tribble(
   
   'Tip 25', 'cntrl + l', 'clears the console', ' ',
 
-  'Tip 26', 'cmd + opt + o', 'collapse R chunks', 'cmd + opt + O to open them back up',
+  'Tip 26', 'cmd + opt + o', 'collapse R cells', 'cmd + opt + O to open them back up',
   
   'Tip 27', 'View(dataframe)', 'opens the dataframe as a new tab', "don't use in .qmd file",
   
