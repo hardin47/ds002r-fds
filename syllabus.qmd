@@ -217,6 +217,7 @@ Submitting work created by a generative AI as your own in any assignment is cons
 * Cite all AI tools when used or referred to in assigned work.  For example, see how to cite generative AI in <a href = "https://apastyle.apa.org/blog/how-to-cite-chatgpt" target = "_blank">APA</a>, <a href = "https://style.mla.org/citing-generative-ai/" target = "_blank">MLA</a>, or <a href = "https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Documentation/faq0422.html" target = "_blank">Chicago</a> styles. 
 
 **Permitted**  
+
 * Clarifying concepts (after attempting to understand them yourself, and then checking course materials or other credible sources for accuracy)
 * Organizing and outlining your thoughts
 * Grammar and spelling assistance
@@ -226,6 +227,7 @@ Submitting work created by a generative AI as your own in any assignment is cons
 * Asking for help understanding a concept (please include "do not generate code. only explain in words." to the prompt).
 
 **Not permitted**  
+
 * Having AI generate any sentences or paragraphs that appear in your final work without quotation marks and attribution
 * Using AI to write arguments, code, proofs, or problem solutions that you submit as your own
 * Generating code for an assignment (please include "do not generate code. only explain
