@@ -51,13 +51,13 @@ schedule <- tribble(
   ~`date`, ~`topic`, ~`class materials` , ~`due dates` , ~resources ,
   "Week 1 <br> 8.31.26",
   'intro + <br> R + Positron + <br> GitHub',
-  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/01-intro.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-08-31-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f26_DSproj.pdf" target = "_blank">WS 1 - DS project</a>',
+  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/01-intro.html" target = "_blank">Introduction</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/01-intro.html" target = "_blank"> MDSR Prologue</a> <br> {{< fa book-open >}} <a href = "https://www.openscapes.org/blog/2022/05/27/github-illustrated-series/" target = "_blank">Why Git? + monsters</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-08-31-intro.html" target = "_blank"> Introduction</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws1_ds2_f26_DSproj.pdf" target = "_blank">WS 1 - DS project</a> <br> <a href="https://ds002r-fds.netlify.app/handout/ws2_ds2_f26_ggplot.pdf" target = "_blank">WS 2 - ggplot</a>',
   ' ',
   '{{< fa comments >}} <a href = "https://drive.google.com/file/d/1mdaX6Q5DtYMKAujw5ot1LMcP0JLjC2fp/view?usp=sharing" target = "_blank">NSSD - Compromised Shoe Situation</a>',
 
   "Week 2 <br> 9.7.26",
   'data viz',
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="" target = "_blank"> Data Viz</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/visualize" target = "_blank"> R4DS Visualize</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/10-grammar-graphics.html" target = "_blank">graphics</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/11-ggplot.html" target = "_blank">ggplot</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-09-02-dataviz.html" target = "_blank"> Data Viz</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall206/repositories" target = "_blank">HW 1</a> - due 9.8.26',
   '{{< fa comments >}} Tufte. 1997. <a href = "https://www.edwardtufte.com/book/visual-and-statistical-thinking-displays-of-evidence-for-making-decisions/" target = "_blank">Visual and Statistical Thinking: Displays of Evidence for Making Decisions</a>' ,
 

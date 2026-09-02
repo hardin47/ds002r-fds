@@ -54,7 +54,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/index.html</loc>
-    <lastmod>2026-08-31T17:33:28.505Z</lastmod>
+    <lastmod>2026-09-02T17:16:34.017Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/github.html</loc>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/clicker_slides.html</loc>
-    <lastmod>2026-08-31T17:25:42.782Z</lastmod>
+    <lastmod>2026-09-02T17:12:57.194Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/R-tip.html</loc>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/clicker_study.html</loc>
-    <lastmod>2026-08-31T17:24:53.251Z</lastmod>
+    <lastmod>2026-09-02T17:13:36.318Z</lastmod>
   </url>
   <url>
     <loc>https://ds002r-fds.netlify.app/images/ma154-hwtest.html</loc>
@@ -139,5 +139,9 @@
   <url>
     <loc>https://ds002r-fds.netlify.app/endangered_data.html</loc>
     <lastmod>2026-08-30T05:06:38.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ds002r-fds.netlify.app/slides/2026-09-02-dataviz.html</loc>
+    <lastmod>2026-09-02T17:14:18.204Z</lastmod>
   </url>
 </urlset>

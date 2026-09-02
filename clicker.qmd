@@ -170,7 +170,6 @@ shup5 <- date()
 #| eval: false
 #| echo: true
 shup6 <- sqrt
-10
 ```
 
 [^8]: c. improper syntax for a function argument
