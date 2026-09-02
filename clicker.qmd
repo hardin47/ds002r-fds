@@ -341,7 +341,10 @@ ggplot(data = Births2015, aes(x = date, y = births, color = "navy")) +
 ```{r}
 #| eval: false
 #| echo: true
-ggplot(data = Births2015, aes(x = date, y = births, color = "navy")) +
+ggplot(
+  data = Births2015,
+  aes(x = date, y = births, color = "navy")
+) +
   geom_point() +
   labs(title = "US Births in 2015")
 ```
