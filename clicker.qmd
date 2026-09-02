@@ -9,7 +9,6 @@ to go along with <br>
 
 <!-- the two formats are html and revealjs -->
 
-test
 
 ```{=html}
 <style>
