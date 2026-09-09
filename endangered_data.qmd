@@ -24,7 +24,7 @@ library(tidyverse)
 
 schedule <- tribble(
   ~`dataset`, ~`data last updated`, ~`description`, ~`info last updated` ,
-  '<a href = "https://collegescorecard.ed.gov/data" target = "_blank">College Scorecard</a>'                    , '6-10-2026' , 'Data on student completion, debt and repayment, earnings, and more. Large amount of missing data so as to make the data unusable. <a href = "https://www.naicu.edu/policy-advocacy/issue-briefs/college-scorecard/" target = "_blank">History of the College Scorecard</a>.' ,
+  '<a href = "https://collegescorecard.ed.gov/data" target = "_blank">College Scorecard</a>', '6-10-2026' , 'Data on student completion, debt and repayment, earnings, and more. Large amount of missing data so as to make the data unusable. <a href = "https://www.naicu.edu/policy-advocacy/issue-briefs/college-scorecard/" target = "_blank">History of the College Scorecard</a>.',
   '8-29-2026'
 )
 ```
@@ -40,6 +40,11 @@ schedule <- tribble(
 schedule |>
   gt::gt() |>
   gt::fmt_markdown(columns = everything()) |>
-  gt::cols_width(dataset ~ px(100), everything() ~ px(200))
+  gt::cols_width(
+    description ~ px(300),
+    dataset ~ px(200),
+    everything() ~ px(150)
+  ) |>
+  gt::tab_options(table.width = gt::px(800))
 ```
 
