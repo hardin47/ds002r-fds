@@ -116,9 +116,8 @@ shup2 <- -"Hello to you!"
 ```{r}
 #| eval: false
 #| echo: true
-#| error: true
-3
-shup <- "Hello to you!"
+# fmt: skip file
+3shup <- "Hello to you!"
 ```
 
 [^5]: d. invalid object name
@@ -169,7 +168,8 @@ shup5 <- date()
 ```{r}
 #| eval: false
 #| echo: true
-shup6 <- sqrt
+# fmt: skip file
+shup6 <- sqrt 10
 ```
 
 [^8]: c. improper syntax for a function argument
@@ -451,11 +451,11 @@ ggplot(data = Births2015, aes(x = date, y = births)) +
 (@) What is the difference between `geom_bar()` and `geom_histogram()`?[^20c]
      (a) They are the different names for the same function.
      (b) `geom_bar()` is for numbers and `geom_histogram()` is for categorical variables.
-     (c) `geom_bar()` is for categorical variables and `geom_histogram()` is for nubmers.
+     (c) `geom_bar()` is for categorical variables and `geom_histogram()` is for numbers.
      (d) `geom_bar()` produces counts and `geom_histogram()` produces percentages.
      (e) `geom_bar()` produces percentages and `geom_histogram()` produces counts.
 
-[^20c]: c. `geom_bar()` is for categorical variables and `geom_histogram()` is for nubmers.
+[^20c]: c. `geom_bar()` is for categorical variables and `geom_histogram()` is for numbers.
 
 ---
 

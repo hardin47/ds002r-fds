@@ -73,7 +73,7 @@ knitr::include_graphics("../images/data_lego2.png")
 
 ## Grammar of graphics
 
-Yau (2013) gives us nine visual cues, and Wickham (2014) translates them into a language using `ggplot2`.  
+Yau (2013) gives us nine visual cues, and Wickham (2014) translates them into a language using **ggplot2**.  
 
 1. Visual Cues:  the aspects of the figure where we should focus.  
 **Position** (numerical) where in relation to other things?  
@@ -117,7 +117,7 @@ knitr::include_graphics("../images/Yau_viz_cues.png")
 ::::
 
 
-## Order Matters
+## Visual Cue Matters
 
 
 ```{r out.width = '100%', fig.align='center', echo=FALSE}
@@ -374,13 +374,13 @@ HELPrct |>
 ::::
 -->
 
-# Goals of `ggplot2`
+# Goals of **ggplot2(())
 
 What I will try to do
 
- * give a tour of `ggplot2`
+ * give a tour of **ggplot2**
  
- * explain how to think about plots the `ggplot2` way
+ * explain how to think about plots the **ggplot2** way
  
  * prepare/encourage you to learn more later
  
@@ -388,7 +388,7 @@ What I can't do in one session
 
  * show every bell and whistle
  
- * make you an expert at using `ggplot2`
+ * make you an expert at using **ggplot2**
  
 
 
@@ -721,10 +721,14 @@ lines instead of dots!
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "5"
+#| code-line-numbers: "9"
 ggplot(
   data = Births2015,
-  aes(x = date, y = births, color = wday)
+  aes(
+    x = date,
+    y = births,
+    color = wday
+  )
 ) +
   geom_line() +
   labs(title = "US Births in 2015")
@@ -752,7 +756,14 @@ ggplot(data = Births2015, aes(x = date, y = births, color = wday)) +
 ::: {.column width="50%"}
 ```{r}
 #| echo: false
-ggplot(data = Births2015, aes(x = date, y = births, color = wday)) +
+ggplot(
+  data = Births2015,
+  aes(
+    x = date,
+    y = births,
+    color = wday
+  )
+) +
   geom_point() +
   geom_line() +
   labs(title = "US Births in 2015")
@@ -766,10 +777,14 @@ lines
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "5,6"
+#| code-line-numbers: "9,10"
 ggplot(
   data = Births2015,
-  aes(x = date, y = births, color = wday)
+  aes(
+    x = date,
+    y = births,
+    color = wday
+  )
 ) +
   geom_point() +
   geom_line() +
@@ -839,7 +854,7 @@ ggplot(
 ```
 
 
-* Note that `color = "navy"` is now outside of the aesthetics list.  That's how `ggplot2` distinguishes between mapping and setting.
+* Note that `color = "navy"` is now outside of the aesthetics list.  That's how **ggplot2** distinguishes between mapping and setting.
 
 
 
@@ -884,7 +899,7 @@ ggplot(
 
 
 * `ggplot()` establishes the default data and aesthetics
-for the geoms, but each geom may change these defaults.
+for the geoms, but each geom may change the defaults.
 
 * good practice: put into `ggplot()` the things that affect all (or most) of the layers; rest in `geom_XXXX()`
 :::
@@ -914,7 +929,7 @@ a. `set` the **non-variable** information outside the aes (aesthetic) command
 ::: {.column width="60%"}
 * Avoid having other graph elements interfere with data
 * Use visually prominent symbols
-* Avoid over-plotting (One way to avoid over plotting: jitter the values)
+* Avoid over-plotting (One way to avoid over-plotting: jitter the values)
 * Different values of data may obscure each other
 * Include all or nearly all of the data
 * Fill data region
@@ -931,7 +946,7 @@ a. `set` the **non-variable** information outside the aes (aesthetic) command
 :::
 
 ::: {.column width="60%"}
-* Chart junk & stuff that adds no meaning, e.g. butterflies on top of barplots, background images
+* Chart junk & stuff that adds no meaning, e.g., butterflies on top of barplots, background images
 * Extra tick marks and grid lines
 * Unnecessary text and arrows
 * Decimal places beyond the measurement error or the level of difference
@@ -949,8 +964,8 @@ a. `set` the **non-variable** information outside the aes (aesthetic) command
 
 ::: {.column width="60%"}
 * Put juxtaposed plots on same scale
-* Make it easy to distinguish elements of superposed plots (e.g. color)
-* Emphasizes the important difference
+* Make it easy to distinguish elements (e.g., color)
+* Emphasize the important difference
 * Comparison: volume, area, height (be careful, volume can seem bigger than you mean it to)
 :::
 ::::
@@ -968,7 +983,7 @@ a. `set` the **non-variable** information outside the aes (aesthetic) command
 ::: {.column width="60%"}
 * Keep scales on x and y axes the same for both plots to facilitate the comparison
 * Zoom in to focus on the region that contains the bulk of the data
-* Keep the scale the same throughout the plot (i.e. don’t change it mid-axis)
+* Keep the scale the same throughout the plot (i.e., don't change it mid-axis)
 * Origin need not be on the scale
 * Choose a scale that improves resolution
 * Avoid jiggling the baseline
@@ -1034,9 +1049,9 @@ a. `set` the **non-variable** information outside the aes (aesthetic) command
 ::: {.column width="60%"}
 * Put major conclusions in graphical form
 * Provide reference information
-* Proof read for clarity and consistency
+* Proofread for clarity and consistency
 * Graphing is an iterative process
-* Multiplicity is OK, i.e. two plots of the same variable may provide different messages
+* Multiplicity is OK, i.e., two plots of the same variable may provide different messages
 * Make plots data rich
 :::
 ::::
@@ -1126,7 +1141,7 @@ knitr::include_graphics("../images/fontsmatter.png")
 
 - Avoid having other graph elements interfere with data
 - Use visually prominent symbols
-- Avoid over-plotting  (One way to avoid over plotting: jitter the values)
+- Avoid over-plotting  (One way to avoid over-plotting: jitter the values)
 - Different values of data may obscure each other
 - Include all or nearly all of the data
 - Fill data region
@@ -1905,7 +1920,7 @@ ggplot(data = HELP_data, aes(x = substance, y = age, color = children)) +
 
 `plotly` 
 
-> `Plotly` is an R package for creating interactive web-based graphs via plotly's JavaScript graphing library, `plotly.js`. The `plotly` R libary contains the `ggplotly` function , which will convert `ggplot2` figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the `style` function.
+> `Plotly` is an R package for creating interactive web-based graphs via plotly's JavaScript graphing library, `plotly.js`. The **plotly** R libary contains the `ggplotly` function , which will convert **ggplot2** figures into a Plotly object. Furthermore, you have the option of manipulating the Plotly object with the `style` function.
  
  * https://plot.ly/ggplot2/getting-started/
 

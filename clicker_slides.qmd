@@ -8,6 +8,8 @@ format:
     html-math-method: mathjax
     scrollable: true
 css: enumerate.css
+filters:
+  - remove-fmt-skip.lua
 ---
 
 ```{=html}

@@ -23,8 +23,36 @@ knitr::include_graphics("images/R_first_then.png")
 
 schedule <- tribble(
   ~`number`                  , ~tip              , ~`description`       , ~`misc` ,
-  'Tip 1'                    , 'cmd + shift + P' , 'Command Palette - does everything' ,
-  'cntrl + shift + P for windows'
+  'Tip 1', 
+  'cmd + shift + P', 
+  'Command Palette - does everything',
+  'cntrl + shift + P for Windows',
+
+  'Tip 2', 
+  'color = "#4CBB17" (kelly green!)', 
+  'in `ggplot2` use any color',
+  '',
+
+  'Tip 3', 
+  '`geom_bar()` vs `geom_col()`', 
+  'no `y` variable in `geom_bar()`',
+  '`geom_bar()` does the counting for you',
+
+  'Tip 4', 
+  '`position = "dodge"`', 
+  'use to show information that overlaps',
+  'available in many `geom_*()` functions',
+
+  'Tip 5', 
+  'keyboard up arrow', 
+  'brings back the previous line', 
+  'works in Console or Terminal',
+
+  'Tip 6', 
+  'highlight code + cmd + enter', 
+  'will run only the highlighted code',
+  'highlight code + cntrl + enter on Windows'
+
 )
 ```
 

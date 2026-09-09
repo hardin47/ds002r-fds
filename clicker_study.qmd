@@ -6,6 +6,8 @@ format:
     embed-resources: true
     code-line-numbers: true
     html-math-method: mathjax
+filters:
+  - remove-fmt-skip.lua
 ---
 
 ```{=html}

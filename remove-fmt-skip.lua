@@ -3,5 +3,6 @@ function CodeBlock(code)
         return nil
     end
     code.text = code.text:gsub("# fmt: skip\n", "")
+    code.text = code.text:gsub("# fmt: skip file\n", "")
     return code
 end
