@@ -1043,15 +1043,6 @@ a. `set` the **non-variable** information outside the aes (aesthetic) command
 
 
 
-# Examples in the wild
-
-* Tufte -- Cholera & Challenger
-* Fonts
-* NYT often does data viz quite well
-* W.E.B Du Bois
-
-
-
 ## Preliminaries
 
 1. Make the data stand out
@@ -1070,6 +1061,15 @@ Tufte lists two main motivational steps to working with graphics as part of an a
 1. "An essential analytic task in making decisions based on evidence is to understand how things work."
 
 2. "Making decisions based on evidence requires the appropriate display of that evidence."
+
+
+
+# Examples in the wild
+
+* Tufte -- Cholera & Challenger
+* Fonts
+* NYT often does data viz quite well
+* W.E.B Du Bois
 
 # Tufte
 
