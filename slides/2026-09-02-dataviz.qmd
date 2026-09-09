@@ -34,7 +34,7 @@ options(pillar.width = 70)
 ```
 
 
-# Agenda  9/3/25
+# Agenda  9/2/26
 
 1. NSSD
 2. grammar of graphics
@@ -1069,7 +1069,7 @@ Tufte lists two main motivational steps to working with graphics as part of an a
 
 1. "An essential analytic task in making decisions based on evidence is to understand how things work."
 
-2. Making decisions based on evidence requires the appropriate display of that evidence."
+2. "Making decisions based on evidence requires the appropriate display of that evidence."
 
 # Tufte
 
@@ -1078,7 +1078,7 @@ Tufte (1997) <a href = "https://www.edwardtufte.com/book/visual-and-statistical-
 
 ## Cholera - a picture tells 1000 words
 
-```{r fig.cap = "How many aspects of this graph can you point out which are relevant to figuring out that cholera infection was coming from a single pump?  Are there any distracting aspects?", out.width="65%", fig.align='center', echo=FALSE}
+```{r fig.cap = "How many aspects of this graph can you point out which are relevant to figuring out that cholera infection was coming from a single pump?  Are there any distracting aspects?", out.width="800px", echo=FALSE}
 knitr::include_graphics("../images/cholera1.jpg")
 ```
 
