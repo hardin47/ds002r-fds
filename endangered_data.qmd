@@ -42,9 +42,9 @@ schedule |>
   gt::fmt_markdown(columns = everything()) |>
   gt::cols_width(
     description ~ px(300),
-    dataset ~ px(200),
-    everything() ~ px(150)
+    dataset ~ px(250),
+    everything() ~ px(175)
   ) |>
-  gt::tab_options(table.width = gt::px(800))
+  gt::tab_options(table.width = gt::px(900))
 ```
 
