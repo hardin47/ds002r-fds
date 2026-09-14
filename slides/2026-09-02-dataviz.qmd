@@ -1078,6 +1078,29 @@ Tufte lists two main motivational steps to working with graphics as part of an a
 2. "Making decisions based on evidence requires the appropriate display of that evidence."
 
 
+## Advice on plotting, specific
+
+- Avoid having other graph elements interfere with data
+- Use visually prominent symbols
+- Avoid over-plotting  (One way to avoid over-plotting: jitter the values)
+- Different values of data may obscure each other
+- Include all or nearly all of the data
+- Fill data region
+
+
+
+## Advice on plotting, general
+
+- Eliminate superfluous material
+- Facilitate comparisons
+- Choose the best scale
+- Make the plot data / information rich
+- Use good captions, alt text, conclusions
+- Make your website accessible, <a href = "https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/#what-youll-like" target = "_blank">how to add alt text</a>. Feel free to use (and then check!!!) the <a href = "https://numbats.github.io/autoAlt/index.html" target = _blank">`autoAlt` package</a> in R which automatically generates alt text.
+
+
+
+
 
 # Examples in the wild
 
@@ -1134,29 +1157,6 @@ Note that the "improved" Challenger graphic was made by **Tufte**, not by the en
 ```{r, out.width = "500px", fig.alt = "image credit: Will Chase RStudio::conf 2020", echo=FALSE,fig.align = 'center'}
 knitr::include_graphics("../images/fontsmatter.png")
 ``` 
-
-
-
-## Advice on plotting, specific
-
-- Avoid having other graph elements interfere with data
-- Use visually prominent symbols
-- Avoid over-plotting  (One way to avoid over-plotting: jitter the values)
-- Different values of data may obscure each other
-- Include all or nearly all of the data
-- Fill data region
-
-
-
-## Advice on plotting, general
-
-- Eliminate superfluous material
-- Facilitate comparisons
-- Choose the best scale
-- Make the plot data / information rich
-- Use good captions, alt text, conclusions
-- Make your website accessible, <a href = "https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/#what-youll-like" target = "_blank">how to add alt text</a>. Feel free to use (and then check!!!) the <a href = "https://numbats.github.io/autoAlt/index.html" target = _blank">`autoAlt` package</a> in R which automatically generates alt text.
-
 
 
 
