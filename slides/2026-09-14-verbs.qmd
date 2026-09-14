@@ -1,7 +1,7 @@
 ---
 title: Data Wrangling
 author: "Jo Hardin"
-subtitle: "September 10, 2025"
+subtitle: "September 14, 2026"
 format:
   revealjs:
     incremental: false
@@ -26,7 +26,7 @@ options(pillar.width = 70)
 ```
 
 
-# Agenda  9/10/25
+# Agenda  9/14/26
 
 1. Tidy data
 2. Data verbs
@@ -68,7 +68,7 @@ knitr::include_graphics("../images/activedutyTidy.png")
 How would you wrangle each data example into a tidy format?
 
 1. the emails in your inbox  
-2. social media texts  
+2. social media posts  
 3. images  
 4. videos  
 5. audio files
