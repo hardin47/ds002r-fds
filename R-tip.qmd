@@ -51,7 +51,17 @@ schedule <- tribble(
   'Tip 6', 
   'highlight code + cmd + enter', 
   'will run only the highlighted code',
-  'highlight code + cntrl + enter on Windows'
+  'highlight code + cntrl + enter on Windows',
+
+  'Tip 7', 
+  '`scales = "free"`', 
+  'inside `facet_grid()` or `facet_wrap()` for allowing variable axes',
+  'also options of `"free_x"` or `"free_y"`',
+
+  'Tip 8', 
+  '`+ labs(shape = "The Species", color = "The Species)`', 
+  'change the label in `ggplot` for two aspects for the same label',
+  ''
 
 )
 ```
