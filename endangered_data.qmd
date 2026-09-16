@@ -24,8 +24,15 @@ library(tidyverse)
 
 schedule <- tribble(
   ~`dataset`, ~`data last updated`, ~`description`, ~`info last updated` ,
-  '<a href = "https://collegescorecard.ed.gov/data" target = "_blank">College Scorecard</a>', '6-10-2026' , 'Data on student completion, debt and repayment, earnings, and more. Large amount of missing data so as to make the data unusable. <a href = "https://www.naicu.edu/policy-advocacy/issue-briefs/college-scorecard/" target = "_blank">History of the College Scorecard</a>.',
-  '8-29-2026'
+  '<a href = "https://collegescorecard.ed.gov/data" target = "_blank">College Scorecard</a>', '
+  6-10-2026' , 
+  'Data on student completion, debt and repayment, earnings, and more. Large amount of missing data so as to make the data unusable. <a href = "https://www.naicu.edu/policy-advocacy/issue-briefs/college-scorecard/" target = "_blank">History of the College Scorecard</a>.',
+  '8-29-2026',
+
+  '<a href = "https://www.census.gov/programs-surveys/acs/data.html" target = "_blank">American Community Survey</a>', 
+  '<a href = "https://www.census.gov/programs-surveys/acs/news/data-releases.html" target = "_blank">9-11-2025</a>' , 
+  '<a href = "https://www.census.gov/programs-surveys/acs/about.html" target = "_blank">The American Community Survey (ACS)</a> is an ongoing survey that provides vital information on a yearly basis about <a href = "https://www.census.gov/programs-surveys/acs/guidance/subjects.html" target = "_blank">social, economic, housing, and demographic factors</a>. Information from the survey generates data that help inform how trillions of dollars in federal funds are distributed each year. As of <a href = "https://www.census.gov/programs-surveys/acs/news/updates.2026.html#form-dropdown-456855606" target = "_blank">August 6, 2026</a> the administration is banning any statistical representation of information (to avoid privacy violation) and is using coarsened information (e.g., "fewer than 50") instead. Additionally, from 2024 to 2025, approximately <a href = "https://www.govexec.com/workforce/2025/07/census-has-long-struggled-staffing-shortages-employees-say-trump-making-it-worse/406840/" target = "_blank">10% of the census workforce was laid off</a>.',
+  '9-15-2026'
 )
 ```
 
@@ -41,11 +48,11 @@ schedule |>
   gt::gt() |>
   gt::fmt_markdown(columns = everything()) |>
   gt::cols_width(
-    description ~ px(400),
-    dataset ~ px(300),
-    everything() ~ px(200)
+    description ~ gt::pct(64),
+    dataset ~ gt::pct(12),
+    everything() ~ gt::pct(12)
   ) |>
-  gt::tab_options(table.width = gt::px(900))
+  gt::tab_options(table.width = gt::pct(100))
 ```
 
 
