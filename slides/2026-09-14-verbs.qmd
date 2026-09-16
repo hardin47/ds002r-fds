@@ -29,7 +29,6 @@ options(pillar.width = 70)
 # Agenda  9/14/26
 
 1. Tidy data
-2. Data verbs
 
 
 # What are data?
@@ -73,6 +72,9 @@ How would you wrangle each data example into a tidy format?
 4. videos  
 5. audio files
 
+# Agenda  9/16/26
+
+1. Data verbs
  
 ## Tidy packages: the tidyverse
 
