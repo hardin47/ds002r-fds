@@ -300,6 +300,18 @@ The pipe syntax (`|> `) takes a data frame and sends it to the argument of a fun
 `x |>  f(y)` is the same as `f(x, y)`
 
 
+## Pipe in action
+
+```{r}
+sqrt(log(10))
+```
+
+is the same as
+```{r}
+10 |>
+  log() |>
+  sqrt()
+```
  
 
 ## Mornings
@@ -316,15 +328,8 @@ me_step5 <- commute(me_step4, transportation = bike)
 
 ## Mornings
 
-```{r}
-#| eval: false
-commute(
-  dress(
-    eat(exercise(dress(me, what = sports), how = running), choice = cereal),
-    what = school
-  ),
-  transportation = bike
-)
+```r
+commute(dress(eat(exercise(dress(me, what = sports), how = running), choice = cereal), what = school), transportation = bike)
 ```
 
  
