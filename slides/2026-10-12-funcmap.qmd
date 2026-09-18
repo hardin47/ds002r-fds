@@ -42,7 +42,7 @@ Here is a simple function to compute the absolute value.
 
 ```{r}
 my_abs <- function(x) {
-  return(ifelse(x >= 0, x, -1 * x))
+  return(if_else(x >= 0, x, -1 * x))
 }
 
 my_abs(-3)

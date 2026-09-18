@@ -62,7 +62,6 @@ schedule <- tribble(
   '`+ labs(shape = "The Species", color = "The Species)`', 
   'change the label in `ggplot` for two aspects for the same label',
   ''
-
 )
 ```
 

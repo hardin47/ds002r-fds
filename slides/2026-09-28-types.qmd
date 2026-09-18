@@ -127,12 +127,12 @@ We can use the `str_*()` functions inside the `mutate()` function.
 
 ```{r}
 #| echo: false
-titanic <- Titanic |> 
+titanic <- Titanic |>
   as.data.frame()
 ```
 
 ```{r}
-titanic |> 
+titanic |>
   mutate(class1 = str_sub(Class, 1, 1))
 ```
 
@@ -165,24 +165,24 @@ str_detect(fruits, "A")
 ## original data
 
 ```{r}
-starwars |> 
-  select(name, films) 
+starwars |>
+  select(name, films)
 ```
 
 ## unnested data
 
 ```{r}
-starwars |> 
-  select(name, films) |> 
+starwars |>
+  select(name, films) |>
   unnest_wider(films, names_sep = "")
 ```
 
 ## filtered unnested data
 
 ```{r}
-starwars |> 
-  filter(str_detect(films, "Empire")) |> 
-  select(name, films) |> 
+starwars |>
+  filter(str_detect(films, "Empire")) |>
+  select(name, films) |>
   unnest_wider(films, names_sep = "")
 ```
 :::
@@ -237,20 +237,20 @@ The **stringr** package within tidyverse contains lots of functions to help proc
 #| echo: false
 
 tribble(
-  ~`str function`, ~arguments, ~returns,
-"`str_view()`", "`x`", "the string",
-"`str_c()`", " ..., `sep`, `collapse`", "a new concatenated string",
-"`str_sub()`",	"`x`, `start`, `end`", "a modified string",
-"`str_replace()`",	"`x`, `pattern`, `replacement`",	"a modified string",
-"`str_replace_all()`",	"`x`, `pattern`, `replacement`", "a modified string",
-"`str_detect()`",	"`x`, `pattern`",	"TRUE/FALSE",
-"`str_to_lower()`",	"`x`", "a modified string",
-"`str_to_upper()`",	"`x`", "a modified string",
-"`str_length()`",	"`x`", "a number",
-"`str_count()`", "`x`, `pattern`", "an integer vector",
-"`str_extract()`", "`x`, `pattern`", "a character vector",
-"`str_extract_all()`", "`x`, `pattern`", "a list of character vectors"
-) |> 
+  ~`str function`       , ~arguments                      , ~returns                      ,
+  "`str_view()`"        , "`x`"                           , "the string"                  ,
+  "`str_c()`"           , " ..., `sep`, `collapse`"       , "a new concatenated string"   ,
+  "`str_sub()`"         , "`x`, `start`, `end`"           , "a modified string"           ,
+  "`str_replace()`"     , "`x`, `pattern`, `replacement`" , "a modified string"           ,
+  "`str_replace_all()`" , "`x`, `pattern`, `replacement`" , "a modified string"           ,
+  "`str_detect()`"      , "`x`, `pattern`"                , "TRUE/FALSE"                  ,
+  "`str_to_lower()`"    , "`x`"                           , "a modified string"           ,
+  "`str_to_upper()`"    , "`x`"                           , "a modified string"           ,
+  "`str_length()`"      , "`x`"                           , "a number"                    ,
+  "`str_count()`"       , "`x`, `pattern`"                , "an integer vector"           ,
+  "`str_extract()`"     , "`x`, `pattern`"                , "a character vector"          ,
+  "`str_extract_all()`" , "`x`, `pattern`"                , "a list of character vectors"
+) |>
   kableExtra::kable()
 ```
 
@@ -270,17 +270,17 @@ The `str_*()` functions work:
 ## data
 ```{r}
 set.seed(47)
-starbucks |> 
-  sample_n(10) |> 
+starbucks |>
+  sample_n(10) |>
   select(item, calories, fat, type)
 ```
 
 ## on factor
 ```{r}
 set.seed(47)
-starbucks |> 
-  sample_n(10) |> 
-  select(item, calories, fat, type) |> 
+starbucks |>
+  sample_n(10) |>
+  select(item, calories, fat, type) |>
   mutate(TYPE = str_to_upper(type))
 ```
 
@@ -288,9 +288,9 @@ starbucks |>
 
 ```{r}
 set.seed(47)
-starbucks |> 
-  sample_n(10) |> 
-  select(item, calories, fat, type) |> 
+starbucks |>
+  sample_n(10) |>
+  select(item, calories, fat, type) |>
   filter(str_detect(fat, "1"))
 ```
 
@@ -298,9 +298,9 @@ starbucks |>
 
 ```{r}
 set.seed(47)
-starbucks |> 
-  sample_n(10) |> 
-  select(item, calories, fat, type) |> 
+starbucks |>
+  sample_n(10) |>
+  select(item, calories, fat, type) |>
   mutate(newcal = str_replace(calories, "0", "&"))
 ```
 
@@ -346,8 +346,8 @@ openintro::dream
 
 ## Plot
 ```{r}
-dream |> 
-  ggplot(aes(x = ideology, fill = stance)) + 
+dream |>
+  ggplot(aes(x = ideology, fill = stance)) +
   geom_bar()
 ```
 
@@ -356,9 +356,9 @@ dream |>
 The `levels()` function reports the levels and their order.
 
 ```{r}
-dream |> 
-  select(ideology) |> 
-  pull() |>  # because levels() works only on vectors, not data frames
+dream |>
+  select(ideology) |>
+  pull() |> # because levels() works only on vectors, not data frames
   levels()
 ```
 
@@ -374,20 +374,22 @@ We can fix the order of the `ideology` variable.
 ## Code
 ```{r}
 #| eval: false
-dream |> 
-  mutate(ideology = fct_relevel(ideology, 
-                                c("Liberal", "Moderate", "Conservative"))) |> 
-  ggplot(aes(x = ideology, fill = stance)) + 
+dream |>
+  mutate(
+    ideology = fct_relevel(ideology, c("Liberal", "Moderate", "Conservative"))
+  ) |>
+  ggplot(aes(x = ideology, fill = stance)) +
   geom_bar()
 ```
 
 ## Plot
 ```{r}
 #| echo: false
-dream |> 
-  mutate(ideology = fct_relevel(ideology, 
-                                c("Liberal", "Moderate", "Conservative"))) |> 
-  ggplot(aes(x = ideology, fill = stance)) + 
+dream |>
+  mutate(
+    ideology = fct_relevel(ideology, c("Liberal", "Moderate", "Conservative"))
+  ) |>
+  ggplot(aes(x = ideology, fill = stance)) +
   geom_bar()
 ```
 :::
@@ -399,19 +401,21 @@ dream |>
 
 ## Data
 ```{r}
-starbucks |> 
+starbucks |>
   select(item, type, calories)
 ```
 
 ## Plot
 ```{r}
 #| echo: false
-starbucks |> 
-  ggplot(aes(x = type, y = calories)) + 
-  geom_point() + 
-  labs(x = "type of food",
-       y = "",
-       title = "Calories for food items at Starbucks")
+starbucks |>
+  ggplot(aes(x = type, y = calories)) +
+  geom_point() +
+  labs(
+    x = "type of food",
+    y = "",
+    title = "Calories for food items at Starbucks"
+  )
 ```
 :::
 
@@ -426,27 +430,29 @@ Lets say that we wanted to order the type of food item based on the average numb
 ## Code
 ```{r}
 #| eval: false
-starbucks |> 
-  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |> 
-  ggplot(aes(x = type, y = calories)) + 
-  geom_point() + 
-  labs(x = "type of food",
-       y = "",
-       title = "Calories for food items at Starbucks")
- 
+starbucks |>
+  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |>
+  ggplot(aes(x = type, y = calories)) +
+  geom_point() +
+  labs(
+    x = "type of food",
+    y = "",
+    title = "Calories for food items at Starbucks"
+  )
 ```
 
 ## Plot
 ```{r}
 #| echo: false
-starbucks |> 
-  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |> 
-  ggplot(aes(x = type, y = calories)) + 
-  geom_point() + 
-  labs(x = "type of food",
-       y = "",
-       title = "Calories for food items at Starbucks")
- 
+starbucks |>
+  mutate(type = fct_reorder(type, calories, .fun = "mean", .desc = TRUE)) |>
+  ggplot(aes(x = type, y = calories)) +
+  geom_point() +
+  labs(
+    x = "type of food",
+    y = "",
+    title = "Calories for food items at Starbucks"
+  )
 ```
 
 ## For funzies
@@ -455,9 +461,8 @@ starbucks |>
 #| echo: true
 #| error: true
 
-starbucks |> 
-  mutate(type = fct_reorder(fiber, calories, .fun = "mean", .desc = TRUE)) 
-
+starbucks |>
+  mutate(type = fct_reorder(fiber, calories, .fun = "mean", .desc = TRUE))
 ```
 :::
 
@@ -479,14 +484,19 @@ unclass(x)
 ## rewrite
 
 ```{r}
-new_fruit <- data.frame(words = x) |> 
-  mutate(x_recode = fct_recode(words, fruit = "apple", fruit = "banana"),
-         x_rewrite = ifelse(words == "apple", "fruit",
-                            ifelse(words == "banana", "fruit", words))) 
+new_fruit <- data.frame(words = x) |>
+  mutate(
+    x_recode = fct_recode(words, fruit = "apple", fruit = "banana"),
+    x_rewrite = if_else(
+      words == "apple",
+      "fruit",
+      if_else(words == "banana", "fruit", words)
+    )
+  )
 
 new_fruit
 
-new_fruit |> 
+new_fruit |>
   str()
 ```
 
@@ -546,12 +556,12 @@ as.character(f)
 as.numeric(f)
 ```
 
-## `ifelse()`
+## `if_else()`
 
 ... coerces everything to the lowest common denominator. That is, it strips the labels off the factor variable, uses the integers, and converts them to character strings.
 
 ```{r}
-ifelse(f == "cat", "meow", f)
+if_else(f == "cat", "meow", f)
 ```
 
 :::
@@ -563,15 +573,15 @@ ifelse(f == "cat", "meow", f)
 ## OG data
 
 ```{r}
-starbucks |> 
+starbucks |>
   select(item, calories, type)
 ```
 
 ## New factor 
 
 ```{r}
-starbucks |> 
-  mutate(item_fac = as.factor(item)) |> 
+starbucks |>
+  mutate(item_fac = as.factor(item)) |>
   select(item, calories, type, item_fac)
 ```
 :::
@@ -639,7 +649,7 @@ To create a date-time, add an underscore and one or more of "h", "m", and "s" to
 ```{r}
 ymd_hms("2025-02-19 11:45:59", tz = "America/Los_Angeles")
 
-mdy_hm("02/19/2025 15:01")  # default is UTC = GMT
+mdy_hm("02/19/2025 15:01") # default is UTC = GMT
 ```
 
 More <a href = "https://r4ds.hadley.nz/datetimes#time-zones" target = "_blank">information about time zones in R</a>.
@@ -689,8 +699,8 @@ rightnow
 
 day(rightnow)
 week(rightnow)
-month(rightnow, label=FALSE)
-month(rightnow, label=TRUE)
+month(rightnow, label = FALSE)
+month(rightnow, label = TRUE)
 year(rightnow)
 ```
 
@@ -703,8 +713,8 @@ hour(rightnow)
 
 yday(rightnow)
 mday(rightnow)
-wday(rightnow, label=FALSE)
-wday(rightnow, label=TRUE)
+wday(rightnow, label = FALSE)
+wday(rightnow, label = TRUE)
 ```
 
  
@@ -750,13 +760,12 @@ names(flights)
 Creating a date object from variables.
 
 ```{r message=FALSE}
-flightsWK <- flights |>  
-   mutate(ymdday = ymd(str_c(year, month, day, sep="-"))) |> 
-   mutate(weekdy = wday(ymdday, label=TRUE), 
-          whichweek = week(ymdday)) 
+flightsWK <- flights |>
+  mutate(ymdday = ymd(str_c(year, month, day, sep = "-"))) |>
+  mutate(weekdy = wday(ymdday, label = TRUE), whichweek = week(ymdday))
 
-flightsWK |>  select(year, month, day, ymdday, weekdy, whichweek, 
-                     dep_time, arr_time) 
+flightsWK |>
+  select(year, month, day, ymdday, weekdy, whichweek, dep_time, arr_time)
 ```
 
 

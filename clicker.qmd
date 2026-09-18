@@ -1905,7 +1905,7 @@ left_join(x_join, y_join, join_by(a, b))
 ---
 
 
-(@) In R the `ifelse()` function takes the arguments:[^68]
+(@) In R the `if_else()` function takes the arguments:[^68]
    a. question, yes, no
    b. question, no, yes
    c. statement, yes, no
@@ -1929,7 +1929,7 @@ left_join(x_join, y_join, join_by(a, b))
 #| echo: true
 data <- c(1, 30, 5, NA, 6)
 
-ifelse(data > 5, "cat", data)
+if_else(data > 5, "cat", data)
 ```
 
 [^69]: e.	"1", "cat", "5", NA, "cat"  (Note that the numbers were converted to character strings!)

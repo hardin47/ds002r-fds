@@ -437,7 +437,7 @@ Goal: to scrape the Taskmaster wiki into a data frame including task, descriptio
 results <- read_html("https://taskmaster.fandom.com/wiki/Series_11") |>
   html_element(".tmtable") |>
   html_table() |>
-  mutate(episode = ifelse(startsWith(Task, "Episode"), Task, NA)) |>
+  mutate(episode = if_else(startsWith(Task, "Episode"), Task, NA)) |>
   fill(episode, .direction = "down") |>
   filter(
     !startsWith(Task, "Episode"),
@@ -469,7 +469,7 @@ html_content <- result$parse$text$`*`
 results <- read_html(html_content) |>
   html_element(".tmtable") |>
   html_table() |>
-  mutate(episode = ifelse(startsWith(Task, "Episode"), Task, NA)) |>
+  mutate(episode = if_else(startsWith(Task, "Episode"), Task, NA)) |>
   fill(episode, .direction = "down") |>
   filter(
     !startsWith(Task, "Episode"),

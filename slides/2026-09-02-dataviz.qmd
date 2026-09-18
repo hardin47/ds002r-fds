@@ -1344,7 +1344,7 @@ head(HELPrct) |>
 ```{r echo = FALSE}
 HELP_data <- left_join(HELPrct, HELPfull, by = c("id" = "ID")) |>
   filter(!is.na(A11E)) |>
-  mutate(children = ifelse(A11E == 0, "no", "yes"))
+  mutate(children = if_else(A11E == 0, "no", "yes"))
 ```
 
 

@@ -56,10 +56,10 @@ knitr::include_graphics("../images/data_lego2.png")
 
 
 
-## Aside: `ifelse()`
+## Aside: `if_else()`
 ```{r}
 data.frame(value = c(-2:2)) |>
-  mutate(abs_value = ifelse(value >= 0, value, -value)) # abs val
+  mutate(abs_value = if_else(value >= 0, value, -value)) # abs val
 ```
 
 
@@ -134,7 +134,7 @@ meet_func <- function(nada) {
     jordan = runif(1, min = 0, max = 60)
   ) |>
     mutate(
-      result = ifelse(abs(alex - jordan) <= 10, "They meet", "They do not")
+      result = if_else(abs(alex - jordan) <= 10, "They meet", "They do not")
     )
 }
 ```
@@ -165,7 +165,7 @@ for (i in c(1:n)) {
         jordan = runif(1, min = 0, max = 60)
       ) |>
         mutate(
-          result = ifelse(abs(alex - jordan) <= 10, "They meet", "They do not")
+          result = if_else(abs(alex - jordan) <= 10, "They meet", "They do not")
         )
     )
 }
@@ -180,7 +180,7 @@ meet_vect <- data.frame(
   alex = runif(n, min = 0, max = 60),
   jordan = runif(n, min = 0, max = 60)
 ) |>
-  mutate(result = ifelse(abs(alex - jordan) <= 10, "They meet", "They do not"))
+  mutate(result = if_else(abs(alex - jordan) <= 10, "They meet", "They do not"))
 toc()
 ```
 
@@ -392,7 +392,7 @@ sum(duplicated(class_birthdays))
 class_duplicates <- function(unicorn) {
   class_birthdays <- sample(c(1:365), size = 28, replace = TRUE)
   num_duplicates <- sum(duplicated(class_birthdays))
-  return(ifelse(num_duplicates > 0, 1, 0))
+  return(if_else(num_duplicates > 0, 1, 0))
 }
 
 class_duplicates()
@@ -411,7 +411,7 @@ map_dbl(c(1:10), class_duplicates)
 class_duplicates <- function(class_size) {
   class_birthdays <- sample(c(1:365), size = class_size, replace = TRUE)
   num_duplicates <- sum(duplicated(class_birthdays))
-  return(ifelse(num_duplicates > 0, 1, 0))
+  return(if_else(num_duplicates > 0, 1, 0))
 }
 
 set.seed(47)
@@ -660,10 +660,10 @@ ggplot(new.college.data, aes(x = talent, y = predicted, color = color)) +
 ```{r echo=FALSE}
 new.college.data <- new.college.data |>
   mutate(
-    fp = ifelse(talent < 115 & predicted > 115, 1, 0),
-    tp = ifelse(talent > 115 & predicted > 115, 1, 0),
-    fn = ifelse(talent > 115 & predicted < 115, 1, 0),
-    tn = ifelse(talent < 115 & predicted < 115, 1, 0)
+    fp = if_else(talent < 115 & predicted > 115, 1, 0),
+    tp = if_else(talent > 115 & predicted > 115, 1, 0),
+    fn = if_else(talent > 115 & predicted < 115, 1, 0),
+    tn = if_else(talent < 115 & predicted < 115, 1, 0)
   )
 
 error.rates <- new.college.data |>
@@ -725,10 +725,10 @@ One model:
 ```{r echo = FALSE}
 new.college.data.glb <- new.college.data |>
   mutate(
-    fp = ifelse(talent < 115 & global.predicted > 115, 1, 0),
-    tp = ifelse(talent > 115 & global.predicted > 115, 1, 0),
-    fn = ifelse(talent > 115 & global.predicted < 115, 1, 0),
-    tn = ifelse(talent < 115 & global.predicted < 115, 1, 0)
+    fp = if_else(talent < 115 & global.predicted > 115, 1, 0),
+    tp = if_else(talent > 115 & global.predicted > 115, 1, 0),
+    fn = if_else(talent > 115 & global.predicted < 115, 1, 0),
+    tn = if_else(talent < 115 & global.predicted < 115, 1, 0)
   )
 
 error.rates <- new.college.data.glb |>
@@ -748,10 +748,10 @@ Two separate models:
 ```{r echo = FALSE}
 new.college.data.2mod <- new.college.data |>
   mutate(
-    fp = ifelse(talent < 115 & predicted > 115, 1, 0),
-    tp = ifelse(talent > 115 & predicted > 115, 1, 0),
-    fn = ifelse(talent > 115 & predicted < 115, 1, 0),
-    tn = ifelse(talent < 115 & predicted < 115, 1, 0)
+    fp = if_else(talent < 115 & predicted > 115, 1, 0),
+    tp = if_else(talent > 115 & predicted > 115, 1, 0),
+    fn = if_else(talent > 115 & predicted < 115, 1, 0),
+    tn = if_else(talent < 115 & predicted < 115, 1, 0)
   )
 
 error.rates <- new.college.data.2mod |>
