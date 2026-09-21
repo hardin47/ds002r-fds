@@ -861,6 +861,22 @@ sleep_wide |>
    d. Keith
    e. Impossible to know
 
+:::: {.columns}
+::: {.column width="25%"}
+```{r}
+#| echo: true
+band_members
+```
+:::
+
+:::{.column width="25%"}
+```{r}
+#| echo: true
+band_instruments
+```
+:::
+::::
+
 ```{r}
 #| echo: true
 #| eval: false
@@ -1080,7 +1096,7 @@ classes
 ---
 
 (@) Students on the roster taking at least one class outside their major.[^38e]
-     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (a) `roster |> inner_join(classes, by = "student_id") |> filter(major != subject)`
      (b) `classes |> anti_join(roster, by = "student_id")`
      (c) `roster |> anti_join(classes, by = "student_id")`
      (d) `roster |> full_join(classes, by = "student_id")`

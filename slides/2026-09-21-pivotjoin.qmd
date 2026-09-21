@@ -390,12 +390,14 @@ flights |>
 #| echo: false
 #| eval: true
 options(pillar.width = 30)
+set.seed(477404)
 ```
 
 
 ```{r}
 #| echo: true
-airports
+airports |>
+  sample_n(10)
 ```
 :::
 ::::
