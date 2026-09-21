@@ -1,7 +1,7 @@
 ---
-title: Pivoting and Joining
+title: Joining and Pivoting
 author: "Jo Hardin"
-subtitle: "September 15 + 17, 2025"
+subtitle: "September 21 + 23, 2026"
 format:
   revealjs:
     incremental: false
@@ -26,10 +26,9 @@ options(pillar.width = 70)
 ```
 
 
-# Agenda  9/15/25
+# Agenda  9/21/26
 
-1. Pivoting
-2. Joining
+1. Joining
 
 
 ## Data Exploration
@@ -37,148 +36,7 @@ options(pillar.width = 70)
 ```{r, out.width = "800px", echo=FALSE, fig.cap = "Based on [https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories), original source: [https://www.linkedin.com/learning/instructors/bill-shander](https://www.linkedin.com/learning/instructors/bill-shander)"}
 knitr::include_graphics("../images/data_lego2.png")
 ``` 
- 
-# `pivot`ing
- 
-```{r out.width = '47%', fig.align='center', echo=FALSE, fig.show='hold'}
-#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
-knitr::include_graphics("../images/tidyr-pivoting.gif")
-``` 
- 
-## From wide to long and long to wide
 
-* <mark>`pivot_longer()`</mark> makes the data frame "longer" -- many columns into a few columns (more rows):
-
-`pivot_longer(data,cols,names_to=,value_to=)`
-
-* <mark>`pivot_wider()`</mark> makes the data frame "wider" -- a few columns into many columns (fewer rows): 
-
-`pivot_wider(data,names_from=,values_from=)`
-
-
-## From wide to long and long to wide
-
-```{r out.width = '47%', fig.align='center', echo=FALSE, fig.show='hold'}
-knitr::include_graphics(c("../images/pivotlonger.png", "../images/pivotwider.png"))
-```
-
- 
-  
-## `pivot_longer`
-  
-`pivot_longer` will be demonstrated using datasets from <a href = "https://www.gapminder.org/" target = "_blank">GapMinder</a>.
-
-`litF` represents country, year, and <mark>female literacy rate</mark>. 
-
-```{r message=FALSE}
-library(googlesheets4)
-gs4_deauth()
-litF <- read_sheet("https://docs.google.com/spreadsheets/d/1hDinTIRHQIaZg1RUn6Z_6mo12PtKwEPFIz_mJVF6P5I/pub?gid=0")
-
-litF |> 
-  gt::gt()
-```
-
- 
-## `pivot_longer`
-  
-```{r}
-litF <- litF |> 
-  rename(country = starts_with("Adult")) |> 
-  pivot_longer(cols = -country,
-               names_to = "year", 
-               values_to = "litRateF") |> 
-  filter(!is.na(litRateF))
-
-litF |> 
-  gt::gt()
-```
-
-
- 
-  
-## `pivot_longer`
-  
-`GDP` represents country, year, and <mark>gdp</mark> (in fixed 2000 US$).
-
-```{r message=FALSE}
-GDP <- read_sheet("https://docs.google.com/spreadsheets/d/1RctTQmKB0hzbm1E8rGcufYdMshRdhmYdeL29nXqmvsc/pub?gid=0")
-
-GDP <- GDP |>  
-  rename(country = starts_with("Income")) |> 
-  pivot_longer(cols = -country, 
-               names_to = "year",
-               values_to = "gdp") |> 
-  filter(!is.na(gdp))
-
-GDP |> 
-  gt::gt()
-```
-
-
- 
-  
-## `pivot_wider()`
-
-`pivot_wider()`  will be demonstrated using the `paralympic_1500` dataset in the **openintro** R package.
-
-```{r}
-library(openintro)
-
-paralympic_1500 |> 
-  gt::gt()
-```
-
- 
-## `pivot_wider()` `paralympic_1500`
-
-
-```{r}
-paralympic_1500 |>  
-  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
-  select(year, type, time_min) |> 
-  gt::gt()
-```
-
-
-## `pivot_wider()` `paralympic_1500`
-
-
-```{r}
-paralympic_1500 |>  
-  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
-  select(year, type, time_min) |>
-  pivot_wider(names_from = type, values_from = time_min) |> 
-  gt::gt()
-```
-> https://www.paralympic.org/news/remarkable-finish-1500m-rio-2016
-
-
-## `pivot_wider()` `paralympic_1500`
- 
-  
-```{r}
-paralympic_1500 |>  
-  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
-  select(year, type, time_min) |>
-  pivot_wider(names_from = type, values_from = time_min) |>
-  filter(!is.na(T13)) |> 
-  arrange(Olympic) |> 
-  gt::gt()
-```
-
- 
-## `pivot_wider()` `paralympic_1500`
-  
-```{r}
-paralympic_1500 |>  
-  filter(division == "Men" & type %in% c("Olympic", "T13")) |> 
-  select(year, type, time_min) |>
-  pivot_wider(names_from = type, values_from = time_min) |> 
-  mutate(mintime = pmin(Olympic, T13, na.rm = TRUE)) |> 
-  arrange(mintime) |> 
-  gt::gt()
-```
 
 
 # `_join`ing
@@ -212,8 +70,8 @@ Good practice:  always specify the `by` argument when joining data frames.
 
 ```{r echo = FALSE}
 library(kableExtra)
-dates <- read_csv("../data/dates.csv") 
-dates[7,3] <- 2020
+dates <- read_csv("../data/dates.csv")
+dates[7, 3] <- 2020
 professions <- read_csv("../data/professions.csv")
 works <- read_csv("../data/works.csv")
 ```
@@ -226,7 +84,7 @@ From Mine: https://github.com/rstudio-education/datascience-box/tree/master/cour
 
 
 ```{r echo = FALSE}
-professions |> 
+professions |>
   kable()
 ```
  
@@ -258,8 +116,8 @@ works
 We'd like to put together the data to look like:
 
 ```{r echo=FALSE}
-professions |> 
-  left_join(dates, by = "name") |> 
+professions |>
+  left_join(dates, by = "name") |>
   left_join(works, by = "name")
 ```
 
@@ -283,7 +141,6 @@ nrow(works)
 names(professions)
 names(dates)
 names(works)
-
 ```
 :::
 ::::
@@ -301,7 +158,7 @@ For the next few slides...
 x <- tibble(
   id = c(1, 2, 3),
   value_x = c("x1", "x2", "x3")
-  )
+)
 ```
 ```{r}
 x
@@ -313,7 +170,7 @@ x
 y <- tibble(
   id = c(1, 2, 4),
   value_y = c("y1", "y2", "y4")
-  )
+)
 ```
 ```{r}
 y
@@ -346,8 +203,8 @@ left_join(x, y, by = "id")
 ## `left_join()`
 
 ```{r}
-professions |> 
-  left_join(dates, by = "name") 
+professions |>
+  left_join(dates, by = "name")
 ```
 
  
@@ -376,8 +233,8 @@ right_join(x, y, by = "id")
 
 
 ```{r}
-professions |> 
-  right_join(dates, by = "name") 
+professions |>
+  right_join(dates, by = "name")
 ```
 
  
@@ -405,8 +262,8 @@ full_join(x, y, by = "id")
 ## `full_join()`
 
 ```{r}
-dates |> 
-  full_join(works, by = "name") 
+dates |>
+  full_join(works, by = "name")
 ```
 
  
@@ -434,8 +291,8 @@ inner_join(x, y, by = "id")
 ## `inner_join()`
 
 ```{r}
-dates |> 
-  inner_join(works, by = "name") 
+dates |>
+  inner_join(works, by = "name")
 ```
 
  
@@ -463,8 +320,8 @@ semi_join(x, y, by = "id")
 ## `semi_join()`
 
 ```{r}
-dates |> 
-  semi_join(works, by = "name") 
+dates |>
+  semi_join(works, by = "name")
 ```
 
  
@@ -493,8 +350,8 @@ anti_join(x, y, by = "id")
 ## `anti_join()`
 
 ```{r}
-dates |> 
-  anti_join(works, by = "name") 
+dates |>
+  anti_join(works, by = "name")
 ```
 
  
@@ -502,8 +359,8 @@ dates |>
 ## Putting it all together
 
 ```{r}
-professions |> 
-  left_join(dates, by = "name") |> 
+professions |>
+  left_join(dates, by = "name") |>
   left_join(works, by = "name")
 ```
 
@@ -520,10 +377,10 @@ professions |>
 ::: {.column width="50%"}
 ```{r}
 #| echo: true
-flights |> 
-   select(origin, dest) |> 
-   distinct() |> 
-   arrange(dest)
+flights |>
+  select(origin, dest) |>
+  distinct() |>
+  arrange(dest)
 ```
 :::
 
@@ -558,16 +415,226 @@ options(pillar.width = 70)
 ```
 
 ```{r}
-flights |> 
-   select(origin, dest) |> 
-   distinct() |> 
-   arrange(dest) |> 
-   left_join(airports, by = c("dest" = "faa"))
+flights |>
+  select(origin, dest) |>
+  distinct() |>
+  arrange(dest) |>
+  left_join(airports, by = c("dest" = "faa"))
 ```
 
 :::::
 
-## Practice `litF` and `GDP` from Gapminder.
+# Agenda  9/23/26
+
+1. Pivoting
+ 
+# `pivot`ing
+ 
+```{r out.width = '47%', fig.align='center', echo=FALSE, fig.show='hold'}
+#| fig-cap: 'image credit: https://www.garrickadenbuie.com/project/tidyexplain/'
+knitr::include_graphics("../images/tidyr-pivoting.gif")
+``` 
+ 
+## From wide to long and long to wide
+
+* <mark>`pivot_longer()`</mark> makes the data frame "longer" -- many columns into a few columns (more rows):
+
+`pivot_longer(data,cols,names_to=,value_to=)`
+
+* <mark>`pivot_wider()`</mark> makes the data frame "wider" -- a few columns into many columns (fewer rows): 
+
+`pivot_wider(data,names_from=,values_from=)`
+
+
+## From wide to long and long to wide
+
+```{r out.width = '47%', fig.align='center', echo=FALSE, fig.show='hold'}
+knitr::include_graphics(c(
+  "../images/pivotlonger.png",
+  "../images/pivotwider.png"
+))
+```
+
+ 
+  
+## `pivot_longer`
+  
+`pivot_longer` will be demonstrated using datasets from <a href = "https://www.gapminder.org/" target = "_blank">GapMinder</a>.
+
+`litF` represents country, year, and <mark>female literacy rate</mark>. 
+
+```{r message=FALSE}
+library(googlesheets4)
+gs4_deauth()
+litF <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1hDinTIRHQIaZg1RUn6Z_6mo12PtKwEPFIz_mJVF6P5I/pub?gid=0"
+)
+```
+
+```{r}
+#| eval: false
+litF
+```
+
+```{r}
+#| echo: false
+litF |>
+  gt::gt()
+```
+
+ 
+## `pivot_longer`
+  
+```{r}
+litF <- litF |>
+  rename(country = starts_with("Adult")) |>
+  pivot_longer(cols = -country, names_to = "year", values_to = "litRateF") |>
+  filter(!is.na(litRateF))
+```
+
+
+```{r}
+#| eval: false
+litF
+```
+
+
+```{r}
+#| echo: false
+
+litF |>
+  gt::gt()
+```
+
+## `pivot_longer`
+  
+`GDP` represents country, year, and <mark>gdp</mark> (in fixed 2000 US$).
+
+```{r message=FALSE}
+GDP <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1RctTQmKB0hzbm1E8rGcufYdMshRdhmYdeL29nXqmvsc/pub?gid=0"
+)
+
+GDP <- GDP |>
+  rename(country = starts_with("Income")) |>
+  pivot_longer(cols = -country, names_to = "year", values_to = "gdp") |>
+  filter(!is.na(gdp))
+```
+
+```{r}
+#| eval: false
+GDP
+```
+
+
+```{r}
+#| echo: false
+GDP |>
+  gt::gt()
+```
+
+  
+## `pivot_wider()`
+
+`pivot_wider()`  will be demonstrated using the `paralympic_1500` dataset in the **openintro** R package.
+
+```{r}
+library(openintro)
+```
+
+```{r}
+#| eval: false
+paralympic_1500
+```
+
+```{r}
+#| echo: false
+paralympic_1500 |>
+  gt::gt()
+```
+
+
+## `pivot_wider()` `paralympic_1500`
+
+
+```{r}
+#| eval: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min)
+```
+
+```{r}
+#| echo: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  gt::gt()
+```
+
+## `pivot_wider()` `paralympic_1500`
+
+
+```{r}
+#| echo: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  gt::gt()
+```
+
+```{r}
+#| eval: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min)
+```
+
+> https://www.paralympic.org/news/remarkable-finish-1500m-rio-2016
+
+
+## `pivot_wider()` `paralympic_1500`
+ 
+  
+```{r}
+#| echo: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  filter(!is.na(T13)) |>
+  arrange(Olympic) |>
+  gt::gt()
+```
+
+ 
+## `pivot_wider()` `paralympic_1500`
+  
+```{r}
+#| eval: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  mutate(mintime = pmin(Olympic, T13, na.rm = TRUE)) |>
+  arrange(mintime)
+```
+
+```{r}
+#| echo: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  mutate(mintime = pmin(Olympic, T13, na.rm = TRUE)) |>
+  arrange(mintime) |>
+  gt::gt()
+```
+
+
+## Practice joining `litF` and `GDP` from Gapminder
 
 ::::: {.panel-tabset}
 
@@ -607,26 +674,26 @@ options(pillar.width = 70)
 ```
 
 ```{r}
-left_join(litF, GDP, by=c("country" = "country", "year" = "year"))
+left_join(litF, GDP, by = c("country" = "country", "year" = "year"))
 ```
 
 
 ## right
 ```{r}
-right_join(litF, GDP, by=c("country", "year"))
+right_join(litF, GDP, by = c("country", "year"))
 ```
 
 
 ## inner
 ```{r}
-inner_join(litF, GDP, by=c("country", "year"))
+inner_join(litF, GDP, by = c("country", "year"))
 ```
 
  
 
 ## full
 ```{r}
-full_join(litF, GDP, by=c("country", "year"))
+full_join(litF, GDP, by = c("country", "year"))
 ```
  
 :::::
@@ -640,3 +707,6 @@ knitr::include_graphics("../images/join.png")
 
 
 If you ever need to understand which join is the right join for you, try to find an image that will lay out what the function is doing.  I found this one that is quite good and is taken from the <a href = "https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti" target = "_blank">Statistics Globe blog</a>.
+
+
+
