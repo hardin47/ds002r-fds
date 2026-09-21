@@ -988,13 +988,13 @@ classes
 :::
 ::::
 
-[^38a]: c. `roster` |> anti_join(classes, by = "student_id")`
+[^38a]: c. `roster |> anti_join(classes, by = "student_id")`
 
 
 ---
 
 (@) All students on the roster and all enrollments.[^38b]
-     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (a) `roster |> inner_join(classes, by = "student_id") |> filter(major != subject)`
      (b) `classes |> anti_join(roster, by = "student_id")`
      (c) `roster |> anti_join(classes, by = "student_id")`
      (d) `roster |> full_join(classes, by = "student_id")`
@@ -1017,13 +1017,13 @@ classes
 :::
 ::::
 
-[^38b]: d. `roster` |> full_join(classes, by = "student_id")`
+[^38b]: d. `roster |> full_join(classes, by = "student_id")`
 
 
 ---
 
 (@) Students from the roster who are enrolled in at least one class.[^38c]
-     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (a) `roster |> inner_join(classes, by = "student_id") |> filter(major != subject)`
      (b) `classes |> anti_join(roster, by = "student_id")`
      (c) `roster |> anti_join(classes, by = "student_id")`
      (d) `roster |> full_join(classes, by = "student_id")`
@@ -1045,13 +1045,13 @@ classes
 :::
 ::::
 
-[^38c]: e.`roster |> semi_join(classes, by = "student_id")`
+[^38c]: e. `roster |> semi_join(classes, by = "student_id")`
 
 
 ---
 
 (@) Students in a class but not on the roster.[^38d]
-     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (a) `roster |> inner_join(classes, by = "student_id") |> filter(major != subject)`
      (b) `classes |> anti_join(roster, by = "student_id")`
      (c) `roster |> anti_join(classes, by = "student_id")`
      (d) `roster |> full_join(classes, by = "student_id")`
