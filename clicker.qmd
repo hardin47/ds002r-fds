@@ -942,7 +942,7 @@ band_members |>
 ---
 
 (@) Students on the roster but not in any class.[^38a]
-     (a) `roster` |> inner_join(classes, by = "student_id") |> filter(major != subject)`
+     (a) `roster |> inner_join(classes, by = "student_id") |> filter(major != subject)`
      (b) `classes |> anti_join(roster, by = "student_id")`
      (c) `roster |> anti_join(classes, by = "student_id")`
      (d) `roster |> full_join(classes, by = "student_id")`
