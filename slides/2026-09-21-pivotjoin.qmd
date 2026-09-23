@@ -576,6 +576,13 @@ paralympic_1500 |>
 
 ## `pivot_wider()` `paralympic_1500`
 
+```{r}
+#| eval: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min)
+```
 
 ```{r}
 #| echo: false
@@ -586,13 +593,7 @@ paralympic_1500 |>
   gt::gt()
 ```
 
-```{r}
-#| eval: false
-paralympic_1500 |>
-  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
-  select(year, type, time_min) |>
-  pivot_wider(names_from = type, values_from = time_min)
-```
+
 
 > https://www.paralympic.org/news/remarkable-finish-1500m-rio-2016
 
@@ -600,6 +601,16 @@ paralympic_1500 |>
 ## `pivot_wider()` `paralympic_1500`
  
   
+```{r}
+#| eval: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  filter(!is.na(T13)) |>
+  arrange(Olympic)
+```
+
 ```{r}
 #| echo: false
 paralympic_1500 |>
@@ -635,6 +646,38 @@ paralympic_1500 |>
   gt::gt()
 ```
 
+## to make a plot!
+
+::: {.panel-tabset}
+
+## code
+
+```{r}
+#| eval: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  ggplot(aes(x = Olympic, y = T13)) +
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0) +
+  labs(title = "Olympic 1500m times")
+```
+
+## plot
+
+```{r}
+#| echo: false
+paralympic_1500 |>
+  filter(division == "Men" & type %in% c("Olympic", "T13")) |>
+  select(year, type, time_min) |>
+  pivot_wider(names_from = type, values_from = time_min) |>
+  ggplot(aes(x = Olympic, y = T13)) +
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0) +
+  labs(title = "Olympic 1500m times")
+```
+:::
 
 ## Practice joining `litF` and `GDP` from Gapminder
 

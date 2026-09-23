@@ -1705,14 +1705,14 @@
     "href": "slides/2026-09-21-pivotjoin.html#pivot_wider-paralympic_1500-1",
     "title": "Joining and Pivoting",
     "section": "pivot_wider() paralympic_1500",
-    "text": "pivot_wider() paralympic_1500\n\n\n\n\n\n\n\n\nyear\nOlympic\nT13\n\n\n\n\n1896\n4.553333\nNA\n\n\n1900\n4.103333\nNA\n\n\n1904\n4.090000\nNA\n\n\n1908\n4.056667\nNA\n\n\n1912\n3.946667\nNA\n\n\n1920\n4.030000\nNA\n\n\n1924\n3.893333\nNA\n\n\n1928\n3.886667\nNA\n\n\n1932\n3.853333\nNA\n\n\n1936\n3.796667\nNA\n\n\n1948\n3.830000\nNA\n\n\n1952\n3.753333\nNA\n\n\n1956\n3.686667\nNA\n\n\n1960\n3.593333\nNA\n\n\n1964\n3.635000\nNA\n\n\n1968\n3.581833\nNA\n\n\n1972\n3.605000\nNA\n\n\n1976\n3.652833\nNA\n\n\n1980\n3.640000\nNA\n\n\n1984\n3.542167\n4.241833\n\n\n1988\n3.599333\n4.185500\n\n\n1992\n3.668667\n4.037333\n\n\n1996\n3.596333\n3.958833\n\n\n2000\n3.534500\n3.949500\n\n\n2004\n3.569833\n3.851500\n\n\n2008\n3.551833\n4.101833\n\n\n2012\n3.568000\n3.805167\n\n\n2016\n3.833333\n3.804833\n\n\n2020\n3.472000\n3.900667\n\n\n\n\n\n\n\n\nparalympic_1500 |&gt;\n  filter(division == \"Men\" & type %in% c(\"Olympic\", \"T13\")) |&gt;\n  select(year, type, time_min) |&gt;\n  pivot_wider(names_from = type, values_from = time_min)\n\n\nhttps://www.paralympic.org/news/remarkable-finish-1500m-rio-2016"
+    "text": "pivot_wider() paralympic_1500\n\nparalympic_1500 |&gt;\n  filter(division == \"Men\" & type %in% c(\"Olympic\", \"T13\")) |&gt;\n  select(year, type, time_min) |&gt;\n  pivot_wider(names_from = type, values_from = time_min)\n\n\n\n\n\n\n\n\n\nyear\nOlympic\nT13\n\n\n\n\n1896\n4.553333\nNA\n\n\n1900\n4.103333\nNA\n\n\n1904\n4.090000\nNA\n\n\n1908\n4.056667\nNA\n\n\n1912\n3.946667\nNA\n\n\n1920\n4.030000\nNA\n\n\n1924\n3.893333\nNA\n\n\n1928\n3.886667\nNA\n\n\n1932\n3.853333\nNA\n\n\n1936\n3.796667\nNA\n\n\n1948\n3.830000\nNA\n\n\n1952\n3.753333\nNA\n\n\n1956\n3.686667\nNA\n\n\n1960\n3.593333\nNA\n\n\n1964\n3.635000\nNA\n\n\n1968\n3.581833\nNA\n\n\n1972\n3.605000\nNA\n\n\n1976\n3.652833\nNA\n\n\n1980\n3.640000\nNA\n\n\n1984\n3.542167\n4.241833\n\n\n1988\n3.599333\n4.185500\n\n\n1992\n3.668667\n4.037333\n\n\n1996\n3.596333\n3.958833\n\n\n2000\n3.534500\n3.949500\n\n\n2004\n3.569833\n3.851500\n\n\n2008\n3.551833\n4.101833\n\n\n2012\n3.568000\n3.805167\n\n\n2016\n3.833333\n3.804833\n\n\n2020\n3.472000\n3.900667\n\n\n\n\n\n\n\n\nhttps://www.paralympic.org/news/remarkable-finish-1500m-rio-2016"
   },
   {
     "objectID": "slides/2026-09-21-pivotjoin.html#pivot_wider-paralympic_1500-2",
     "href": "slides/2026-09-21-pivotjoin.html#pivot_wider-paralympic_1500-2",
     "title": "Joining and Pivoting",
     "section": "pivot_wider() paralympic_1500",
-    "text": "pivot_wider() paralympic_1500\n\n\n\n\n\n\n\n\nyear\nOlympic\nT13\n\n\n\n\n2020\n3.472000\n3.900667\n\n\n2000\n3.534500\n3.949500\n\n\n1984\n3.542167\n4.241833\n\n\n2008\n3.551833\n4.101833\n\n\n2012\n3.568000\n3.805167\n\n\n2004\n3.569833\n3.851500\n\n\n1996\n3.596333\n3.958833\n\n\n1988\n3.599333\n4.185500\n\n\n1992\n3.668667\n4.037333\n\n\n2016\n3.833333\n3.804833"
+    "text": "pivot_wider() paralympic_1500\n\nparalympic_1500 |&gt;\n  filter(division == \"Men\" & type %in% c(\"Olympic\", \"T13\")) |&gt;\n  select(year, type, time_min) |&gt;\n  pivot_wider(names_from = type, values_from = time_min) |&gt;\n  filter(!is.na(T13)) |&gt;\n  arrange(Olympic)\n\n\n\n\n\n\n\n\n\nyear\nOlympic\nT13\n\n\n\n\n2020\n3.472000\n3.900667\n\n\n2000\n3.534500\n3.949500\n\n\n1984\n3.542167\n4.241833\n\n\n2008\n3.551833\n4.101833\n\n\n2012\n3.568000\n3.805167\n\n\n2004\n3.569833\n3.851500\n\n\n1996\n3.596333\n3.958833\n\n\n1988\n3.599333\n4.185500\n\n\n1992\n3.668667\n4.037333\n\n\n2016\n3.833333\n3.804833"
   },
   {
     "objectID": "slides/2026-09-21-pivotjoin.html#pivot_wider-paralympic_1500-3",
@@ -5584,5 +5584,12 @@
     "title": "Mini-Project 1",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nOne option is to use code folding so that the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code.↩︎"
+  },
+  {
+    "objectID": "slides/2026-09-21-pivotjoin.html#to-make-a-plot",
+    "href": "slides/2026-09-21-pivotjoin.html#to-make-a-plot",
+    "title": "Joining and Pivoting",
+    "section": "to make a plot!",
+    "text": "to make a plot!\n\ncodeplot\n\n\n\nparalympic_1500 |&gt;\n  filter(division == \"Men\" & type %in% c(\"Olympic\", \"T13\")) |&gt;\n  select(year, type, time_min) |&gt;\n  pivot_wider(names_from = type, values_from = time_min) |&gt;\n  ggplot(aes(x = Olympic, y = T13)) +\n  geom_point() +\n  geom_abline(slope = 1, intercept = 0) +\n  labs(title = \"Olympic 1500m times\")"
   }
 ]
