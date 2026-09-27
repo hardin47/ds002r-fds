@@ -246,6 +246,31 @@ format: html
            href: mariokart.html
          - text: "Campus Pride Index"
            href: pride.html</code></pre>
+<section id="instructions-for-tidytuesday" class="level4">
+<h4 class="anchored" data-anchor-id="instructions-for-tidytuesday">Instructions for TidyTuesday</h4>
+<ol type="1">
+<li><p>Go here and <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data" target="_blank">find a dataset</a>: (scroll to the bottom of each year to see the full list for that year)</p></li>
+<li><p>Let’s say you choose <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-03-18/readme.md" target="_blank">Palm Trees from March 18, 2025</a>:</p></li>
+<li><p>Look at the R cell right after the heading “The Data”</p></li>
+</ol>
+<div class="cell" data-preview="true">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/palmtrees.png" class="img-fluid figure-img" alt="Instructions for downloading TidyTuesday data from March 18, 2025 on palm trees." width="1049"></p>
+<figcaption>https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-03-18/readme.md</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Copy the last line of code into an R cell in a new Quarto file (maybe called <code>palmtrees.qmd​</code>).</li>
+</ol>
+<p><code>palmtrees &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-18/palmtrees.csv')</code></p>
+<ol start="5" type="1">
+<li>Then you will be able to work, within your Quarto doc, with the object called <code>palmtrees</code>.</li>
+</ol>
+</section>
 </section>
 <section id="sec-ferpa" class="level3">
 <h3 class="anchored" data-anchor-id="sec-ferpa">Caveat to personal website / FERPA</h3>

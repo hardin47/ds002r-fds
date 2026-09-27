@@ -62,6 +62,24 @@ website:
          - text: "Campus Pride Index"
            href: pride.html
 ````
+#### Instructions for TidyTuesday
+
+1. Go here and <a href = "https://github.com/rfordatascience/tidytuesday/tree/main/data" target = "_blank">find a dataset</a>: (scroll to the bottom of each year to see the full list for that year)
+
+2. Let's say you choose <a href = "https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-03-18/readme.md" target = "_blank">Palm Trees from March 18, 2025</a>: 
+
+3. Look at the R cell right after the heading "The Data"
+
+```{r fig.cap = "https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-03-18/readme.md", fig.alt = "Instructions for downloading TidyTuesday data from March 18, 2025 on palm trees.", preview = TRUE, echo = FALSE}
+knitr::include_graphics("images/palmtrees.png")
+```
+
+4. Copy the last line of code into an R cell in a new Quarto file (maybe called `palmtrees.qmd​`). 
+
+`palmtrees <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-18/palmtrees.csv')`
+
+5. Then you will be able to work, within your Quarto doc, with the object called `palmtrees`.
+
 
 ### Caveat to personal website / FERPA {#sec-ferpa}
 
