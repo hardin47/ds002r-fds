@@ -78,7 +78,7 @@ schedule <- tribble(
   'data types',
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/factors" target = "_blank"> R4DS Factors</a> <br> {{< fa book-open >}} <a href="https://r4ds.hadley.nz/strings" target = "_blank"> R4DS Strings</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/08-text-analysis.html" target = "_blank">Text analysis</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-09-28-types.html" target = "_blank">Data Types</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws7_ds2_f26_strings.pdf" target = "_blank">WS 7 - Strings</a>',
 
-  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project1">Project 1</a> - due 9.29.26',
+  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project1">Project 1</a> - due 9.30.26',
   ' ',
 
   "Week 6 <br> 10.5.26",
@@ -92,7 +92,7 @@ schedule <- tribble(
   'functions + <br> iteration',
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="" target = "_blank">functions + iteration</a>',
 
-  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 10.13.26',
+  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 10.14.26',
   ' ',
 
   "Week 8 <br> 10.19.26",
@@ -111,7 +111,7 @@ schedule <- tribble(
   "Week 10 <br> 11.2.26",
   'permutation tests',
   '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/13-permutation-tests.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="l" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="" target = "_blank">Data Science Ethics</a>',
-  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 11.3.26',
+  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 11.4.26',
   ' ',
 
   "Week 11 <br> 11.9.26",
@@ -124,7 +124,7 @@ schedule <- tribble(
   "Week 12 <br> 11.16.26",
   'SQL',
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/04-sql-in-R.html" target = "_blank">SQL</a> <br> {{< fa desktop >}} <a href="" target = "_blank">SQL DBMS</a> <br> {{< fa desktop >}} <a href="" target = "_blank">SQL statements</a>',
-  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.17.26',
+  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.8.26',
   ' ',
 
   "Week 13 <br> 11.23.26",
@@ -136,7 +136,7 @@ schedule <- tribble(
   "Week 14 <br> 11.30.26",
   'SQL',
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/06-sql-joins.html" target = "_blank">SQL joins</a> <br> {{< fa desktop >}} <a href="" target = "_blank">SQL joins</a>',
-  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project5">Project 5</a> - due 12.1.26',
+  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project5">Project 5</a> - due 12.2.26',
   ' ',
 
   "Week 15 <br> 12.7.26",
