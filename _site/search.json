@@ -3343,7 +3343,7 @@
     "href": "slides/2026-09-28-types.html#str_detect",
     "title": "Variable Types",
     "section": "str_detect()",
-    "text": "str_detect()\n\nfruits\n\n[1] \"Apple\"  \"Banana\" \"Pear\"  \n\nstr_detect(fruits, \"a\")\n\n[1] FALSE  TRUE  TRUE\n\nstr_detect(fruits, \"A\")\n\n[1]  TRUE FALSE FALSE"
+    "text": "str_detect()\nstr_detect(string, pattern, negate = FALSE) returns a logical vector with TRUE for each element of string that matches pattern and FALSE otherwise.\n\nfruits\n\n[1] \"Apple\"  \"Banana\" \"Pear\"  \n\nstr_detect(fruits, \"a\")\n\n[1] FALSE  TRUE  TRUE\n\nstr_detect(fruits, \"A\")\n\n[1]  TRUE FALSE FALSE"
   },
   {
     "objectID": "slides/2026-09-28-types.html#str_detect-in-pipeline",
@@ -3378,7 +3378,7 @@
     "href": "slides/2026-09-28-types.html#stringr-functions",
     "title": "Variable Types",
     "section": "stringr functions",
-    "text": "stringr functions\nThe stringr package within tidyverse contains lots of functions to help process strings. Letting x be a string variable…\n\n\n\n\n\n\n\n\n\n\nstr function\narguments\nreturns\n\n\n\n\nstr_view()\nx\nthe string\n\n\nstr_c()\n…, sep, collapse\na new concatenated string\n\n\nstr_sub()\nx, start, end\na modified string\n\n\nstr_replace()\nx, pattern, replacement\na modified string\n\n\nstr_replace_all()\nx, pattern, replacement\na modified string\n\n\nstr_detect()\nx, pattern\nTRUE/FALSE\n\n\nstr_to_lower()\nx\na modified string\n\n\nstr_to_upper()\nx\na modified string\n\n\nstr_length()\nx\na number\n\n\nstr_count()\nx, pattern\nan integer vector\n\n\nstr_extract()\nx, pattern\na character vector\n\n\nstr_extract_all()\nx, pattern\na list of character vectors\n\n\n\n\n\nUse the stringr cheat sheet."
+    "text": "stringr functions\nThe stringr package within tidyverse contains lots of functions to help process strings. Letting x be a string variable…\n\n\n\n\n\n\n\n\n\n\nstr function\narguments\nreturns\n\n\n\n\nstr_view()\nx\nthe string\n\n\nstr_c()\n…, sep, collapse\na new concatenated string\n\n\nstr_sub()\nx, start, end\na modified string\n\n\nstr_replace()\nx, pattern, replacement\na modified string\n\n\nstr_replace_all()\nx, pattern, replacement\na modified string\n\n\nstr_detect()\nx, pattern\nTRUE/FALSE\n\n\nstr_to_lower()\nx\na modified string\n\n\nstr_to_upper()\nx\na modified string\n\n\nstr_length()\nx\na number\n\n\nstr_count()\nx, pattern\nan integer vector\n\n\nstr_extract()\nx, pattern\na character vector\n\n\nstr_extract_all()\nx, pattern\na list of character vectors"
   },
   {
     "objectID": "slides/2026-09-28-types.html#starbucks-data",
@@ -3462,14 +3462,14 @@
     "href": "slides/2026-09-28-types.html#formatting-time-variables",
     "title": "Variable Types",
     "section": "Formatting time variables",
-    "text": "Formatting time variables\n\n\n\n\n\nimage credit: https://xkcd.com/1179/"
+    "text": "Formatting time variables\n\nimage credit: https://xkcd.com/1179/"
   },
   {
     "objectID": "slides/2026-09-28-types.html#what-time-is-it",
     "href": "slides/2026-09-28-types.html#what-time-is-it",
     "title": "Variable Types",
     "section": "What time is it?",
-    "text": "What time is it?\n\ntoday()\n\n[1] \"2026-09-17\"\n\nnow()\n\n[1] \"2026-09-17 14:20:10 PDT\""
+    "text": "What time is it?\n\ntoday()\n\n[1] \"2026-09-28\"\n\nnow()\n\n[1] \"2026-09-28 09:57:11 PDT\""
   },
   {
     "objectID": "slides/2026-09-28-types.html#creating-dates",
@@ -3518,21 +3518,21 @@
     "href": "slides/2026-09-28-types.html#basics-in-lubridate",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2026-09-17 14:20:10 PDT\"\n\nday(rightnow)\n\n[1] 17\n\nweek(rightnow)\n\n[1] 38\n\nmonth(rightnow, label = FALSE)\n\n[1] 9\n\nmonth(rightnow, label = TRUE)\n\n[1] Sep\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2026"
+    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2026-09-28 09:57:11 PDT\"\n\nday(rightnow)\n\n[1] 28\n\nweek(rightnow)\n\n[1] 39\n\nmonth(rightnow, label = FALSE)\n\n[1] 9\n\nmonth(rightnow, label = TRUE)\n\n[1] Sep\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2026"
   },
   {
     "objectID": "slides/2026-09-28-types.html#basics-in-lubridate-1",
     "href": "slides/2026-09-28-types.html#basics-in-lubridate-1",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 20\n\nhour(rightnow)\n\n[1] 14\n\nyday(rightnow)\n\n[1] 260\n\nmday(rightnow)\n\n[1] 17\n\nwday(rightnow, label = FALSE)\n\n[1] 5\n\nwday(rightnow, label = TRUE)\n\n[1] Thu\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
+    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 57\n\nhour(rightnow)\n\n[1] 9\n\nyday(rightnow)\n\n[1] 271\n\nmday(rightnow)\n\n[1] 28\n\nwday(rightnow, label = FALSE)\n\n[1] 2\n\nwday(rightnow, label = TRUE)\n\n[1] Mon\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
   },
   {
     "objectID": "slides/2026-09-28-types.html#working-with-a-date-object",
     "href": "slides/2026-09-28-types.html#working-with-a-date-object",
     "title": "Variable Types",
     "section": "Working with a date object",
-    "text": "Working with a date object\n\njan31 &lt;- ymd(\"2025-01-31\")\njan31 + months(0:11)\n\n [1] \"2025-01-31\" NA           \"2025-03-31\" NA           \"2025-05-31\"\n [6] NA           \"2025-07-31\" \"2025-08-31\" NA           \"2025-10-31\"\n[11] NA           \"2025-12-31\"\n\n\n. . .\n\nfloor_date(jan31, \"month\")\n\n[1] \"2025-01-01\"\n\nfloor_date(jan31, \"month\") + months(0:11) + days(31)\n\n [1] \"2025-02-01\" \"2025-03-04\" \"2025-04-01\" \"2025-05-02\" \"2025-06-01\"\n [6] \"2025-07-02\" \"2025-08-01\" \"2025-09-01\" \"2025-10-02\" \"2025-11-01\"\n[11] \"2025-12-02\" \"2026-01-01\"\n\n\n. . .\n\njan31 + months(0:11) + days(31)\n\n [1] \"2025-03-03\" NA           \"2025-05-01\" NA           \"2025-07-01\"\n [6] NA           \"2025-08-31\" \"2025-10-01\" NA           \"2025-12-01\"\n[11] NA           \"2026-01-31\"\n\n\n. . .\n\njan31 %m+% months(0:11)\n\n [1] \"2025-01-31\" \"2025-02-28\" \"2025-03-31\" \"2025-04-30\" \"2025-05-31\"\n [6] \"2025-06-30\" \"2025-07-31\" \"2025-08-31\" \"2025-09-30\" \"2025-10-31\"\n[11] \"2025-11-30\" \"2025-12-31\""
+    "text": "Working with a date object\n\njan31 &lt;- ymd(\"2025-01-31\")\njan31 + months(0:11)\n\n [1] \"2025-01-31\" NA           \"2025-03-31\" NA           \"2025-05-31\"\n [6] NA           \"2025-07-31\" \"2025-08-31\" NA           \"2025-10-31\"\n[11] NA           \"2025-12-31\"\n\n\n\n\nfloor_date(jan31, \"month\")\n\n[1] \"2025-01-01\"\n\nfloor_date(jan31, \"month\") + months(0:11) + days(31)\n\n [1] \"2025-02-01\" \"2025-03-04\" \"2025-04-01\" \"2025-05-02\" \"2025-06-01\"\n [6] \"2025-07-02\" \"2025-08-01\" \"2025-09-01\" \"2025-10-02\" \"2025-11-01\"\n[11] \"2025-12-02\" \"2026-01-01\"\n\n\n\n\n\njan31 + months(0:11) + days(31)\n\n [1] \"2025-03-03\" NA           \"2025-05-01\" NA           \"2025-07-01\"\n [6] NA           \"2025-08-31\" \"2025-10-01\" NA           \"2025-12-01\"\n[11] NA           \"2026-01-31\"\n\n\n\n\n\njan31 %m+% months(0:11)\n\n [1] \"2025-01-31\" \"2025-02-28\" \"2025-03-31\" \"2025-04-30\" \"2025-05-31\"\n [6] \"2025-06-30\" \"2025-07-31\" \"2025-08-31\" \"2025-09-30\" \"2025-10-31\"\n[11] \"2025-11-30\" \"2025-12-31\""
   },
   {
     "objectID": "slides/2026-09-28-types.html#nyc-flights",
@@ -5591,5 +5591,12 @@
     "title": "Joining and Pivoting",
     "section": "to make a plot!",
     "text": "to make a plot!\n\ncodeplot\n\n\n\nparalympic_1500 |&gt;\n  filter(division == \"Men\" & type %in% c(\"Olympic\", \"T13\")) |&gt;\n  select(year, type, time_min) |&gt;\n  pivot_wider(names_from = type, values_from = time_min) |&gt;\n  ggplot(aes(x = Olympic, y = T13)) +\n  geom_point() +\n  geom_abline(slope = 1, intercept = 0) +\n  labs(title = \"Olympic 1500m times\")"
+  },
+  {
+    "objectID": "slides/2026-09-28-types.html#stringr-functions-1",
+    "href": "slides/2026-09-28-types.html#stringr-functions-1",
+    "title": "Variable Types",
+    "section": "stringr functions",
+    "text": "stringr functions\nUse the stringr cheat sheet.\n\nimage credit: https://rstudio.github.io/cheatsheets/html/strings.html"
   }
 ]

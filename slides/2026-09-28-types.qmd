@@ -1,7 +1,7 @@
 ---
 title: Variable Types
 author: "Jo Hardin"
-subtitle: "September 22 + 24, 2025"
+subtitle: "September 28 + 30, 2026"
 format:
   revealjs:
     incremental: false
@@ -46,7 +46,7 @@ Some variable types:
 A variable's type determines the values that the variable can take on and the operations that can be performed on it.  Specifying variable types ensures the data's integrity and increases performance. 
 
 
-# Agenda  9/22/25
+# Agenda  9/28/26
 
 1. Character strings
 2. `str_*()` functions
@@ -148,6 +148,8 @@ str_replace_all(fruits, "a", "x")
 ```
 
 ## `str_detect()`
+
+`str_detect(string, pattern, negate = FALSE)` returns a **logical** vector with TRUE for each element of `string` that matches `pattern` and FALSE otherwise.
 
 ```{r}
 fruits
@@ -254,7 +256,14 @@ tribble(
   kableExtra::kable()
 ```
 
+
+## **stringr** functions
+
 Use the <a href = "https://rstudio.github.io/cheatsheets/html/strings.html" target = "_blank">**stringr** cheat sheet</a>. 
+
+```{r, out.width = "90%", fig.cap = "image credit: https://rstudio.github.io/cheatsheets/html/strings.html", fig.alt = "the stringr cheatsheet", echo=FALSE}
+knitr::include_graphics("../images/stringr.png")
+``` 
 
 
 # `str_*()` functions on non-strings?
@@ -308,7 +317,7 @@ starbucks |>
 :::
 
 
-# Agenda  9/24/25
+# Agenda  9/30/26
 
 1. Factor variables, `fct_*()` functions
 2. Time and date objects, **lubridate** package
