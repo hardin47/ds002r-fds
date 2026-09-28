@@ -81,7 +81,32 @@ schedule <- tribble(
   'Tip 12', 
   'opt + dash', 
   'shortcut for the assignment, `<-`',
-  'alt + dash on Windows'
+  'alt + dash on Windows',
+
+  'Tip 13', 
+  '`count()` counts items in groups', 
+  'not used inside a tidy verb',
+  'e.g., `penguins |> count(island)`',
+
+  'Tip 14', 
+  'need `&` with filter if you use `|`', 
+  'comma is a shortcut for and, unless you also have or',
+  '',
+
+  'Tip 15', 
+  'cntrl + L', 
+  'clears the console',
+  'e.g., if you do not like looking at the error messages',
+
+  'Tip 16', 
+  '`unique()`', 
+  'gives the unique values in a variable, cannot be used in a tidy pipeline',
+  'instead: `penguins |> distinct(species)`',
+
+  'Tip 17', 
+  'highlight code + cmd + shift + c', 
+  'comments lines to not render',
+  'cntl + shift + c on Windows'
 
 )
 ```
@@ -219,7 +244,7 @@ Positron: option + cmd + i  to get a new R cell
 schedule |>
   gt::gt() |>
   gt::fmt_markdown(columns = everything()) |>
-  gt::cols_width(number ~ px(100), everything() ~ px(200))
+  gt::cols_width(number ~ px(100), everything() ~ px(250))
 ```
 
 
