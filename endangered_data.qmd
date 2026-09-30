@@ -38,7 +38,12 @@ schedule <- tribble(
   '<a href = "https://ngmdb.usgs.gov/ngmdb/ngmdb_home.html" target = "_blank">National Geologic Map Database</a>', 
   '9-21-2026' , 
   '<a href = "https://ngmdb.usgs.gov/ngm-bin/ngm_compsearch.pl" target = "_blank">National Geologic Map Database (NGMD)</a> is set of maps created by the <a href = "https://en.wikipedia.org/wiki/United_States_Geological_Survey" target = "_blank">US Geological Survery (USGS)</a> to understand mineral, energy, and groundwater reserves; to track natural risks like earthquakes, landslides, sinkholes, and floods; to guid construction; and to understand millions of years of geological evolution. Major cuts to USGS have impact the agency&#39;s ability to create and sustain their maps and other databases. Organizations from the <a href = "https://esa.org/wp-content/uploads/2026/04/USGS-Coalition_Public-Statement_FY2027-PBR-Response_FINAL.pdf" target = "_blank">USGS Coalition</a> to the <a href = "https://thebaynet.com/usgs-faces-big-cuts-endangering-chesapeake-science/" target = "_blank">Chesapeake Bay Program</a> report some of the major impacts that the resulting cuts in funding will have.',
-  '9-21-2026'
+  '9-21-2026',
+
+  '<a href = "https://www.bls.gov/cpi/data.htm" target = "_blank">Consumer Price Index</a>', 
+  '8-01-2026' , 
+  '<a href = "https://www.bls.gov/cpi/" target = "_blank">The Consumer Price Index (CPI)</a> is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.CPI is collected by the Bureau of Labor Statistics (BLS) who <a href = "https://www.bls.gov/cpi/notices/2025/more-information-collection-reduction.htm" target = "_blank">suspended data collection</a> in 2025 in select areas (including Lincoln, NE, Provo, UT, and Buffalo, NY). CPI provides monthly snapshots of price changes to hundreds of products and <a href = "https://www.reuters.com/business/us-inflation-data-collection-hurt-by-trump-era-hiring-freeze-wsj-says-2025-06-04" target = "_blank"> provides a near-real-time estimate</a> of the state of inflation.',
+  '9-30-2026'
 
 
 )
