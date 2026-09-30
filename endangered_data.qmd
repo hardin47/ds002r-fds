@@ -41,7 +41,7 @@ schedule <- tribble(
   '9-21-2026',
 
   '<a href = "https://www.bls.gov/cpi/data.htm" target = "_blank">Consumer Price Index</a>', 
-  '8-01-2026' , 
+  '9-11-2026' , 
   '<a href = "https://www.bls.gov/cpi/" target = "_blank">The Consumer Price Index (CPI)</a> is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.CPI is collected by the Bureau of Labor Statistics (BLS) who <a href = "https://www.bls.gov/cpi/notices/2025/more-information-collection-reduction.htm" target = "_blank">suspended data collection</a> in 2025 in select areas (including Lincoln, NE, Provo, UT, and Buffalo, NY). CPI provides monthly snapshots of price changes to hundreds of products and <a href = "https://www.reuters.com/business/us-inflation-data-collection-hurt-by-trump-era-hiring-freeze-wsj-says-2025-06-04" target = "_blank"> provides a near-real-time estimate</a> of the state of inflation.',
   '9-30-2026'
 
