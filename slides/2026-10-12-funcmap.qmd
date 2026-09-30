@@ -1,7 +1,7 @@
 ---
 title: "Functions + Iteration"
 author: "Jo Hardin"
-subtitle: "October 6 + 8, 2025"
+subtitle: "October 12 + 14, 2026"
 format: 
   revealjs:
     incremental: false
@@ -23,7 +23,7 @@ options(pillar.width = 70)
 
 
 
-# Agenda  10/6/25
+# Agenda  10/12/26
 
 
 1. R functions
@@ -296,7 +296,7 @@ cv(runif(100, min = 0, max = 500))
 * Default arguments can be specified when the function is defined
 * The input to a function can be a function!
 
-# Agenda  10/8/25
+# Agenda  10/14/26
 
 1. The `map()` function
 2. Iterating functions

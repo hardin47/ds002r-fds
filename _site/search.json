@@ -1242,8 +1242,8 @@
     "objectID": "slides/2026-10-05-regex.html#regular-expressions",
     "href": "slides/2026-10-05-regex.html#regular-expressions",
     "title": "Regular Expressions",
-    "section": "",
-    "text": "A regular expression … is a sequence of characters that defines a search pattern. Usually such patterns are used by string searching algorithms for “find” or “find and replace” operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory."
+    "section": "Regular Expressions",
+    "text": "Regular Expressions\n\nA regular expression … is a sequence of characters that defines a search pattern. Usually such patterns are used by string searching algorithms for “find” or “find and replace” operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory."
   },
   {
     "objectID": "slides/2026-10-05-regex.html#escape-sequences",
@@ -1264,7 +1264,7 @@
     "href": "slides/2026-10-05-regex.html#str_-review",
     "title": "Regular Expressions",
     "section": "str_*() review:",
-    "text": "str_*() review:\n\n\n\n\n\nFrom the stringr cheat sheet: https://rstudio.github.io/cheatsheets/html/strings.html"
+    "text": "str_*() review:\n\nFrom the stringr cheat sheet: https://rstudio.github.io/cheatsheets/html/strings.html"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#str_-review-1",
@@ -1292,7 +1292,7 @@
     "href": "slides/2026-10-05-regex.html#position-of-pattern-within-the-string",
     "title": "Regular Expressions",
     "section": "Position of pattern within the string",
-    "text": "Position of pattern within the string\n\n^: matches the start of the string.\n\n$: matches the end of the string.\n\n\\b: matches the boundary of a word. Don’t confuse it with ^ $ which marks the edge of a string.1"
+    "text": "Position of pattern within the string\n\n^: matches the start of the string.\n\n$: matches the end of the string.\n\n\\b: matches the boundary of a word. Don’t confuse it with ^ $ which marks the edge of a string.1\n\nA word boundary is a position between a word character (typically [A-Za-z0-9_]) and a non-word character (anything that is not a word character, such as whitespace, punctuation, etc.)."
   },
   {
     "objectID": "slides/2026-10-05-regex.html#examples-of-positions",
@@ -1340,8 +1340,8 @@
     "objectID": "slides/2026-10-05-regex.html#examples-of-operators---solution",
     "href": "slides/2026-10-05-regex.html#examples-of-operators---solution",
     "title": "Regular Expressions",
-    "section": "Examples of operators - solution2",
-    "text": "Examples of operators - solution2\n\nstrings &lt;- c(\"^ab\", \"ab\", \"abc\", \"abd\", \"abe\", \"ab 12\", \"a|b\")\nstr_subset(strings, \"ab.\")\n\n[1] \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"ab[c-e]\")\n\n[1] \"abc\" \"abd\" \"abe\"\n\nstr_subset(strings, \"ab[^c]\")\n\n[1] \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"^ab\")\n\n[1] \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"\\\\^ab\")\n\n[1] \"^ab\"\n\nstr_subset(strings, \"abc|abd\")\n\n[1] \"abc\" \"abd\"\n\nstr_subset(strings, \"ab|c\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"ab | c\")\n\n[1] \"ab 12\"\n\nstr_subset(strings, \"(ab)|c\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"(ab|c)\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"a(b|c)\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"a[b|c]\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\" \"a|b\"  \n\nstr_extract(strings, \"a[b|c]\")\n\n[1] \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"a|\""
+    "section": "Examples of operators - solution1",
+    "text": "Examples of operators - solution1\n\nstrings &lt;- c(\"^ab\", \"ab\", \"abc\", \"abd\", \"abe\", \"ab 12\", \"a|b\")\nstr_subset(strings, \"ab.\")\n\n[1] \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"ab[c-e]\")\n\n[1] \"abc\" \"abd\" \"abe\"\n\nstr_subset(strings, \"ab[^c]\")\n\n[1] \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"^ab\")\n\n[1] \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"\\\\^ab\")\n\n[1] \"^ab\"\n\nstr_subset(strings, \"abc|abd\")\n\n[1] \"abc\" \"abd\"\n\nstr_subset(strings, \"ab|c\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"ab | c\")\n\n[1] \"ab 12\"\n\nstr_subset(strings, \"(ab)|c\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"(ab|c)\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"a(b|c)\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\"\n\nstr_subset(strings, \"a[b|c]\")\n\n[1] \"^ab\"   \"ab\"    \"abc\"   \"abd\"   \"abe\"   \"ab 12\" \"a|b\"  \n\nstr_extract(strings, \"a[b|c]\")\n\n[1] \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"ab\" \"a|\"\n\n\nit turns out that “ab|c” and “(ab)|c” and “(ab|c)” are all equivalent! Additionally, different regular expression parsers will treat spaces differently."
   },
   {
     "objectID": "slides/2026-10-05-regex.html#character-classes",
@@ -1432,21 +1432,21 @@
     "href": "slides/2026-10-05-regex.html#lookaround-1",
     "title": "Regular Expressions",
     "section": "Lookaround",
-    "text": "Lookaround\n\n\n\n\n\n\n\n\nFigure 1: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular-expression-lookahead-lookbehind-cheat-sheet/"
+    "text": "Lookaround\n\n\nFigure 1: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular-expression-lookahead-lookbehind-cheat-sheet/"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#example---taskmaster",
     "href": "slides/2026-10-05-regex.html#example---taskmaster",
     "title": "Regular Expressions",
     "section": "Example - Taskmaster",
-    "text": "Example - Taskmaster\nData scraped from the wiki site for the TV series, Taskmaster.\n\n\n\n\n\n\n\n\nFigure 2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11"
+    "text": "Example - Taskmaster\nData scraped from the wiki site for the TV series, Taskmaster.\n\n\nFigure 2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#scraping-and-wrangling-taskmaster",
     "href": "slides/2026-10-05-regex.html#scraping-and-wrangling-taskmaster",
     "title": "Regular Expressions",
     "section": "Scraping and wrangling Taskmaster",
-    "text": "Scraping and wrangling Taskmaster\nGoal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.3"
+    "text": "Scraping and wrangling Taskmaster\nGoal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.1\nThanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#scraping-and-wrangling-taskmaster-data---results",
@@ -1467,7 +1467,7 @@
     "href": "slides/2026-10-05-regex.html#cleaning-the-score-column",
     "title": "Regular Expressions",
     "section": "Cleaning the score column",
-    "text": "Cleaning the score column\n\nresults |&gt; select(score) |&gt; table()\n\nscore\n   –    ✔    ✘    0    1    2    3 3[1] 3[2] 3[3]    4 4[2] 4[3]    5   DQ \n   7    1    1   11   37   42   47    1    3    1   49    1    1   55   13 \n\n\nHow should the scores be stored? What is the cleaning task?\n\n\n\n\n\n\n\n\nFigure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11"
+    "text": "Cleaning the score column\n\nresults |&gt; select(score) |&gt; table()\n\nscore\n   –    ✔    ✘    0    1    2    3 3[1] 3[2] 3[3]    4 4[2] 4[3]    5   DQ \n   7    1    1   11   37   42   47    1    3    1   49    1    1   55   13 \n\n\nHow should the scores be stored? What is the cleaning task?\n\n\nFigure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#extracting-numeric-information",
@@ -1586,7 +1586,7 @@
     "href": "slides/2026-10-05-regex.html#lookaround-again",
     "title": "Regular Expressions",
     "section": "Lookaround (again)",
-    "text": "Lookaround (again)\n\n\n\n\n\n\n\n\nFigure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular-expression-lookahead-lookbehind-cheat-sheet/"
+    "text": "Lookaround (again)\n\n\nFigure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular-expression-lookahead-lookbehind-cheat-sheet/"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#lookbehinds",
@@ -2643,7 +2643,7 @@
     "href": "index.html",
     "title": "Schedule",
     "section": "",
-    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text .\nAttend class, review the  worksheet and solutions.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week, Tuesday at midnight). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.31.26\nintro +  R + Positron +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - ggplot\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.7.26\ndata viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.8.26\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.14.26\ndata viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - Tidy data   WS 5 - Data Verbs\n HW 2 - due 9.15.26\n\n\n\nWeek 4  9.21.26\ndata wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 6 - Joining\n HW 3 - due 9.22.26   Quiz 1 9.23.26\n\n\n\nWeek 5  9.28.26\ndata types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - Strings\n Project 1 - due 9.30.26\n\n\n\nWeek 6  10.5.26\nregular  expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions\n HW 4 - due 10.6.26   Quiz 2 10.7.26\n\n\n\nWeek 7  10.12.26\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration\n Project 2 - due 10.14.26\n\n\n\nWeek 8  10.19.26\nfall break +  code review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n\n\n\n\nWeek 9  10.26.26\nsimulations\n  MDSR Simulations   Simulations   Simulations\n HW 5 - due 10.27.26   Quiz 3  Monday  10.26.26\n\n\n\nWeek 10  11.2.26\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics\n Project 3 - due 11.4.26\n\n\n\nWeek 11  11.9.26\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 6 - due 11.10.26   Quiz 4 11.11.26\n\n\n\nWeek 12  11.16.26\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.8.26\n\n\n\nWeek 13  11.23.26\nShiny(?)+  Thanksgiving\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n HW 7 - due 11.24.26   Quiz 5  Monday  11.23.26 (or Thursday 11.19.26)\n\n\n\nWeek 14  11.30.26\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n Project 5 - due 12.2.26\n\n\n\nWeek 15  12.7.26\nShiny(?)\n Fin\n Quiz 6 12.9.26\npresentations (?) 12.11.26, 9am - noon\n\n\nWeek 16  12.14.26\n\n\n Project 6 - due 12.18.26\npresentations (?) 12.18.26, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
+    "text": "Here’s your roadmap for the semester! Each day, follow the general process outlined below:\n\nEnjoy the notes / text .\nAttend class, review the  worksheet and solutions.  Slides from class are linked below.\nDiscuss the reflection questions  and ethics considerations  (see the  class notes) with your classmates and professor.\nThe textbooks are  Modern Data Science with R (MDSR), 3rd edition by Baumer, Kaplan, and Horton and  R for Data Science (R4DS), 2nd edition by Wickham, Çetinkaya-Rundel, and Grolemund.\nHomework assignments are found at the GitHub course organization. Due dates are provided on each assignment (roughly every other week, Tuesday at midnight). See the course GitHub page for more information on how to find, complete, and submit assignments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndate\ntopic\nclass materials\ndue dates\nresources\n\n\n\n\nWeek 1  8.31.26\nintro +  R + Positron +  GitHub\n Introduction    MDSR Prologue   Why Git? + monsters    Introduction   WS 1 - DS project   WS 2 - ggplot\n\n NSSD - Compromised Shoe Situation\n\n\nWeek 2  9.7.26\ndata viz\n  R4DS Visualize   graphics   ggplot    Data Viz   WS 3 - Tufte\n HW 1 - due 9.8.26\n Tufte. 1997. Visual and Statistical Thinking: Displays of Evidence for Making Decisions\n\n\nWeek 3  9.14.26\ndata viz\n  R4DS Visualize   graphics   ggplot    Data Viz    Data Verbs   WS 4 - Tidy data   WS 5 - Data Verbs\n HW 2 - due 9.15.26\n\n\n\nWeek 4  9.21.26\ndata wrangling\n  R4DS Transform   wrangling    Pivot + Join   WS 6 - Joining\n HW 3 - due 9.22.26   Quiz 1 9.23.26\n\n\n\nWeek 5  9.28.26\ndata types\n  R4DS Factors    R4DS Strings   Text analysis   Data Types   WS 7 - Strings   WS 8 - Factors\n Project 1 - due 9.30.26\n\n\n\nWeek 6  10.5.26\nregular  expressions\n  R4DS Regular expressions   Regular expressions   Regular expressions\n HW 4 - due 10.6.26   Quiz 2 10.7.26\n\n\n\nWeek 7  10.12.26\nfunctions +  iteration\n  R4DS Fuctions    R4DS Iteration   Functions + Iteration   functions + iteration\n Project 2 - due 10.14.26\n\n\n\nWeek 8  10.19.26\nfall break +  code review +  reprex\n  reproducible examples    Tidyverse style guide   Reproducible examples   help me help you\n\n\n\n\nWeek 9  10.26.26\nsimulations\n  MDSR Simulations   Simulations   Simulations\n HW 5 - due 10.27.26   Quiz 3  Monday  10.26.26\n\n\n\nWeek 10  11.2.26\npermutation tests\n Permutation tests   Permutation tests   Data Science Ethics\n Project 3 - due 11.4.26\n\n\n\nWeek 11  11.9.26\nweb scraping\n R4DS Web scraping   Web scraping   Web scraping\n HW 6 - due 11.10.26   Quiz 4 11.11.26\n\n\n\nWeek 12  11.16.26\nSQL\n R4DS Databases   MDSR Database querying   SQL   SQL DBMS   SQL statements\n Project 4 - due 11.8.26\n\n\n\nWeek 13  11.23.26\nShiny(?)+  Thanksgiving\n Matering Shiny   MDSR Interactive web apps with Shiny   Shiny   Shiny\n HW 7 - due 11.24.26   Quiz 5  Monday  11.23.26 (or Thursday 11.19.26)\n\n\n\nWeek 14  11.30.26\nSQL\n R4DS Databases   MDSR Database querying   SQL joins   SQL joins\n Project 5 - due 12.2.26\n\n\n\nWeek 15  12.7.26\nShiny(?)\n Fin\n Quiz 6 12.9.26\npresentations (?) 12.11.26, 9am - noon\n\n\nWeek 16  12.14.26\n\n\n Project 6 - due 12.18.26\npresentations (?) 12.18.26, 9am - noon\n\n\n\n\n\n\n\n\n\n\nReuseCC-BY-SA-4.0"
   },
   {
     "objectID": "github.html",
@@ -3413,7 +3413,7 @@
     "href": "slides/2026-09-28-types.html#factor-and-character-variables",
     "title": "Variable Types",
     "section": "Factor and character variables",
-    "text": "Factor and character variables\n\nDataPlot\n\n\n\nstarbucks |&gt;\n  select(item, type, calories)\n\n# A tibble: 77 × 3\n   item                          type   calories\n   &lt;chr&gt;                         &lt;fct&gt;     &lt;int&gt;\n 1 \"8-Grain Roll\"                bakery      350\n 2 \"Apple Bran Muffin\"           bakery      350\n 3 \"Apple Fritter\"               bakery      420\n 4 \"Banana Nut Loaf\"             bakery      490\n 5 \"Birthday Cake Mini Doughnut\" bakery      130\n 6 \"Blueberry Oat Bar\"           bakery      370\n 7 \"Blueberry Scone\"             bakery      460\n 8 \"Bountiful Blueberry Muffin\"  bakery      370\n 9 \"Butter Croissant \"           bakery      310\n10 \"Cheese Danish\"               bakery      420\n# ℹ 67 more rows"
+    "text": "Factor and character variables\n\nDataPlot\n\n\n\nstarbucks |&gt;\n  select(item, type, calories, fiber)\n\n# A tibble: 77 × 4\n   item                          type   calories fiber\n   &lt;chr&gt;                         &lt;fct&gt;     &lt;int&gt; &lt;int&gt;\n 1 \"8-Grain Roll\"                bakery      350     5\n 2 \"Apple Bran Muffin\"           bakery      350     7\n 3 \"Apple Fritter\"               bakery      420     0\n 4 \"Banana Nut Loaf\"             bakery      490     4\n 5 \"Birthday Cake Mini Doughnut\" bakery      130     0\n 6 \"Blueberry Oat Bar\"           bakery      370     5\n 7 \"Blueberry Scone\"             bakery      460     2\n 8 \"Bountiful Blueberry Muffin\"  bakery      370     0\n 9 \"Butter Croissant \"           bakery      310     0\n10 \"Cheese Danish\"               bakery      420     0\n# ℹ 67 more rows"
   },
   {
     "objectID": "slides/2026-09-28-types.html#reorder-according-to-another-variable",
@@ -3427,14 +3427,14 @@
     "href": "slides/2026-09-28-types.html#what-really-are-levels",
     "title": "Variable Types",
     "section": "What really are levels?",
-    "text": "What really are levels?\n\nrecoderewritemistakeNULLspecial variables\n\n\n\nx &lt;- factor(c(\"apple\", \"bear\", \"dear\", \"banana\", \"apple\", \"apple\", \"dear\"))\nx\n\n[1] apple  bear   dear   banana apple  apple  dear  \nLevels: apple banana bear dear\n\nunclass(x)\n\n[1] 1 3 4 2 1 1 4\nattr(,\"levels\")\n[1] \"apple\"  \"banana\" \"bear\"   \"dear\"  \n\nx &lt;- fct_recode(x, fruit = \"apple\", fruit = \"banana\")\nx\n\n[1] fruit bear  dear  fruit fruit fruit dear \nLevels: fruit bear dear\n\nunclass(x)\n\n[1] 1 2 3 1 1 1 3\nattr(,\"levels\")\n[1] \"fruit\" \"bear\"  \"dear\" \n\n\n\n\n\nnew_fruit &lt;- data.frame(words = x) |&gt;\n  mutate(\n    x_recode = fct_recode(words, fruit = \"apple\", fruit = \"banana\"),\n    x_rewrite = if_else(\n      words == \"apple\",\n      \"fruit\",\n      if_else(words == \"banana\", \"fruit\", words)\n    )\n  )\n\nnew_fruit\n\n  words x_recode x_rewrite\n1 fruit    fruit     fruit\n2  bear     bear      bear\n3  dear     dear      dear\n4 fruit    fruit     fruit\n5 fruit    fruit     fruit\n6 fruit    fruit     fruit\n7  dear     dear      dear\n\nnew_fruit |&gt;\n  str()\n\n'data.frame':   7 obs. of  3 variables:\n $ words    : Factor w/ 3 levels \"fruit\",\"bear\",..: 1 2 3 1 1 1 3\n $ x_recode : Factor w/ 3 levels \"fruit\",\"bear\",..: 1 2 3 1 1 1 3\n $ x_rewrite: chr  \"fruit\" \"bear\" \"dear\" \"fruit\" ...\n\n\n\n\n\n# If you make a mistake you'll get a warning\nfct_recode(x, fruit = \"apple\", fruit = \"bananana\")\n\nWarning: Unknown levels in `f`: apple, bananana\n\n\n[1] fruit bear  dear  fruit fruit fruit dear \nLevels: fruit bear dear\n\n\n\n\n\n# If you name the level NULL it will be removed\nfct_recode(x, NULL = \"apple\", fruit = \"banana\")\n\n[1] fruit bear  dear  fruit fruit fruit dear \nLevels: fruit bear dear\n\n\n\n\n\n# Wrap the left hand side in quotes if it contains special variables\nfct_recode(x, \"an apple\" = \"apple\", \"a bear\" = \"bear\")\n\n[1] fruit  a bear dear   fruit  fruit  fruit  dear  \nLevels: fruit a bear dear"
+    "text": "What really are levels?\n\nrecoderewritemistakeNULLspecial variables\n\n\n\nx &lt;- factor(c(\"apple\", \"bear\", \"dear\", \"banana\", \"apple\", \"apple\", \"dear\"))\nx\n\n[1] apple  bear   dear   banana apple  apple  dear  \nLevels: apple banana bear dear\n\nunclass(x)\n\n[1] 1 3 4 2 1 1 4\nattr(,\"levels\")\n[1] \"apple\"  \"banana\" \"bear\"   \"dear\"  \n\nx &lt;- fct_recode(x, fruit = \"apple\", fruit = \"banana\")\nx\n\n[1] fruit bear  dear  fruit fruit fruit dear \nLevels: fruit bear dear\n\nunclass(x)\n\n[1] 1 2 3 1 1 1 3\nattr(,\"levels\")\n[1] \"fruit\" \"bear\"  \"dear\" \n\n\n\n\n\nnew_fruit &lt;- tibble(words = x) |&gt;\n  mutate(\n    x_recode = fct_recode(words, fruit = \"apple\", fruit = \"banana\"),\n    x_rewrite = if_else(\n      words == \"apple\",\n      \"fruit\",\n      if_else(words == \"banana\", \"fruit\", words)\n    )\n  )\n\nnew_fruit\n\n# A tibble: 7 × 3\n  words x_recode x_rewrite\n  &lt;fct&gt; &lt;fct&gt;    &lt;chr&gt;    \n1 fruit fruit    fruit    \n2 bear  bear     bear     \n3 dear  dear     dear     \n4 fruit fruit    fruit    \n5 fruit fruit    fruit    \n6 fruit fruit    fruit    \n7 dear  dear     dear     \n\nnew_fruit |&gt;\n  str()\n\ntibble [7 × 3] (S3: tbl_df/tbl/data.frame)\n $ words    : Factor w/ 3 levels \"fruit\",\"bear\",..: 1 2 3 1 1 1 3\n $ x_recode : Factor w/ 3 levels \"fruit\",\"bear\",..: 1 2 3 1 1 1 3\n $ x_rewrite: chr [1:7] \"fruit\" \"bear\" \"dear\" \"fruit\" ...\n\n\n\n\n\n# If you make a mistake you'll get a warning\nx &lt;- factor(c(\"apple\", \"bear\", \"dear\", \"banana\", \"apple\", \"apple\", \"dear\"))\nx\n\n[1] apple  bear   dear   banana apple  apple  dear  \nLevels: apple banana bear dear\n\nfct_recode(x, fruit = \"apple\", fruit = \"bananana\")\n\nWarning: Unknown levels in `f`: bananana\n\n\n[1] fruit  bear   dear   banana fruit  fruit  dear  \nLevels: fruit banana bear dear\n\n\n\n\n\n# If you name the level NULL it will be removed\nx &lt;- factor(c(\"apple\", \"bear\", \"dear\", \"banana\", \"apple\", \"apple\", \"dear\"))\nx\n\n[1] apple  bear   dear   banana apple  apple  dear  \nLevels: apple banana bear dear\n\nfct_recode(x, NULL = \"apple\", fruit = \"banana\")\n\n[1] &lt;NA&gt;  bear  dear  fruit &lt;NA&gt;  &lt;NA&gt;  dear \nLevels: fruit bear dear\n\n\n\n\n\n# Wrap the left hand side in quotes if it contains special variables\nx &lt;- factor(c(\"apple\", \"bear\", \"dear\", \"banana\", \"apple\", \"apple\", \"dear\"))\nx\n\n[1] apple  bear   dear   banana apple  apple  dear  \nLevels: apple banana bear dear\n\nfct_recode(x, \"an apple\" = \"apple\", \"a bear\" = \"bear\")\n\n[1] an apple a bear   dear     banana   an apple an apple dear    \nLevels: an apple banana a bear dear"
   },
   {
     "objectID": "slides/2026-09-28-types.html#change-factor-to-character",
     "href": "slides/2026-09-28-types.html#change-factor-to-character",
     "title": "Variable Types",
     "section": "Change factor to character",
-    "text": "Change factor to character\n\ndataas.character()as.numeric()if_else()\n\n\n\nf &lt;- factor(c(\"cat\", \"dog\", \"cat\"))\nf\n\n[1] cat dog cat\nLevels: cat dog\n\nunclass(f)\n\n[1] 1 2 1\nattr(,\"levels\")\n[1] \"cat\" \"dog\"\n\n\n\n\n… produces the labels because that is how the function is defined.\n\nas.character(f)\n\n[1] \"cat\" \"dog\" \"cat\"\n\n\n\n\n… produces the integer codes because that is how the function is defined.\n\nas.numeric(f)\n\n[1] 1 2 1\n\n\n\n\n… coerces everything to the lowest common denominator. That is, it strips the labels off the factor variable, uses the integers, and converts them to character strings.\n\nif_else(f == \"cat\", \"meow\", f)\n\n[1] \"meow\" \"dog\"  \"meow\""
+    "text": "Change factor to character\n\ndataas.character()as.numeric()\n\n\n\nf &lt;- factor(c(\"cat\", \"dog\", \"cat\"))\nf\n\n[1] cat dog cat\nLevels: cat dog\n\nunclass(f)\n\n[1] 1 2 1\nattr(,\"levels\")\n[1] \"cat\" \"dog\"\n\n\n\n\n… produces the labels because that is how the function is defined.\n\nas.character(f)\n\n[1] \"cat\" \"dog\" \"cat\"\n\n\n\n\n… produces the integer codes because that is how the function is defined.\n\nas.numeric(f)\n\n[1] 1 2 1"
   },
   {
     "objectID": "slides/2026-09-28-types.html#change-character-to-factor",
@@ -3469,21 +3469,21 @@
     "href": "slides/2026-09-28-types.html#what-time-is-it",
     "title": "Variable Types",
     "section": "What time is it?",
-    "text": "What time is it?\n\ntoday()\n\n[1] \"2026-09-28\"\n\nnow()\n\n[1] \"2026-09-28 09:57:11 PDT\""
+    "text": "What time is it?\n\ntoday()\n\n[1] \"2026-09-30\"\n\nnow()\n\n[1] \"2026-09-30 09:50:14 PDT\""
   },
   {
     "objectID": "slides/2026-09-28-types.html#creating-dates",
     "href": "slides/2026-09-28-types.html#creating-dates",
     "title": "Variable Types",
     "section": "Creating dates",
-    "text": "Creating dates\nymd() and friends create dates\n\nymd(\"2025-02-19\")\n\n[1] \"2025-02-19\"\n\nmdy(\"February 19th, 2025\")\n\n[1] \"2025-02-19\"\n\ndmy(\"19-Feb-2025\")\n\n[1] \"2025-02-19\""
+    "text": "Creating dates\nymd() and friends create dates\n\nymd(\"2026-09-30\")\n\n[1] \"2026-09-30\"\n\nmdy(\"September 30th, 2026\")\n\n[1] \"2026-09-30\"\n\ndmy(\"30-Sep-26\")\n\n[1] \"2026-09-30\""
   },
   {
     "objectID": "slides/2026-09-28-types.html#with-times",
     "href": "slides/2026-09-28-types.html#with-times",
     "title": "Variable Types",
     "section": "… with times",
-    "text": "… with times\nTo create a date-time, add an underscore and one or more of “h”, “m”, and “s” to the name of the parsing function:\n\nymd_hms(\"2025-02-19 11:45:59\", tz = \"America/Los_Angeles\")\n\n[1] \"2025-02-19 11:45:59 PST\"\n\nmdy_hm(\"02/19/2025 15:01\") # default is UTC = GMT\n\n[1] \"2025-02-19 15:01:00 UTC\"\n\n\nMore information about time zones in R."
+    "text": "… with times\nTo create a date-time, add an underscore and one or more of “h”, “m”, and “s” to the name of the parsing function:\n\nymd_hms(\"2026-09-30 11:45:59\", tz = \"America/Los_Angeles\")\n\n[1] \"2026-09-30 11:45:59 PDT\"\n\nmdy_hm(\"09/30/2026 15:01\") # default is UTC = GMT\n\n[1] \"2026-09-30 15:01:00 UTC\"\n\n\nMore information about time zones in R."
   },
   {
     "objectID": "slides/2026-09-28-types.html#lubridate",
@@ -3518,14 +3518,14 @@
     "href": "slides/2026-09-28-types.html#basics-in-lubridate",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2026-09-28 09:57:11 PDT\"\n\nday(rightnow)\n\n[1] 28\n\nweek(rightnow)\n\n[1] 39\n\nmonth(rightnow, label = FALSE)\n\n[1] 9\n\nmonth(rightnow, label = TRUE)\n\n[1] Sep\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2026"
+    "text": "basics in lubridate\n\nlibrary(lubridate)\nrightnow &lt;- now()\nrightnow\n\n[1] \"2026-09-30 09:50:14 PDT\"\n\nday(rightnow)\n\n[1] 30\n\nweek(rightnow)\n\n[1] 39\n\nmonth(rightnow, label = FALSE)\n\n[1] 9\n\nmonth(rightnow, label = TRUE)\n\n[1] Sep\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\nyear(rightnow)\n\n[1] 2026"
   },
   {
     "objectID": "slides/2026-09-28-types.html#basics-in-lubridate-1",
     "href": "slides/2026-09-28-types.html#basics-in-lubridate-1",
     "title": "Variable Types",
     "section": "basics in lubridate",
-    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 57\n\nhour(rightnow)\n\n[1] 9\n\nyday(rightnow)\n\n[1] 271\n\nmday(rightnow)\n\n[1] 28\n\nwday(rightnow, label = FALSE)\n\n[1] 2\n\nwday(rightnow, label = TRUE)\n\n[1] Mon\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
+    "text": "basics in lubridate\n\nminute(rightnow)\n\n[1] 50\n\nhour(rightnow)\n\n[1] 9\n\nyday(rightnow)\n\n[1] 273\n\nmday(rightnow)\n\n[1] 30\n\nwday(rightnow, label = FALSE)\n\n[1] 4\n\nwday(rightnow, label = TRUE)\n\n[1] Wed\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat"
   },
   {
     "objectID": "slides/2026-09-28-types.html#working-with-a-date-object",
@@ -3552,8 +3552,8 @@
     "objectID": "slides/2026-10-12-funcmap.html#data-conclusions",
     "href": "slides/2026-10-12-funcmap.html#data-conclusions",
     "title": "Functions + Iteration",
-    "section": "",
-    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "section": "Data Conclusions",
+    "text": "Data Conclusions\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2026-10-12-funcmap.html#function-components",
@@ -3630,14 +3630,14 @@
     "href": "slides/2026-10-12-funcmap.html#functions-in-the-tidyverse",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\n\nDon’t collapse\nFunctions that return the same number of rows as the original data frame are good to use inside mutate() and filter(). For example, you might want to capitalize the first word of every string:\n\nfirst_upper &lt;- function(x) {\n  str_sub(x, 1, 1) &lt;- str_to_upper(str_sub(x, 1, 1))\n  x\n}\n\nfirst_upper(c(\"hello\", \"goodbye\"))\n\n[1] \"Hello\"   \"Goodbye\""
+    "text": "Functions in the tidyverse\nDon’t collapse\nFunctions that return the same number of rows as the original data frame are good to use inside mutate() and filter(). For example, you might want to capitalize the first word of every string:\n\nfirst_upper &lt;- function(x) {\n  str_sub(x, 1, 1) &lt;- str_to_upper(str_sub(x, 1, 1))\n  x\n}\n\nfirst_upper(c(\"hello\", \"goodbye\"))\n\n[1] \"Hello\"   \"Goodbye\""
   },
   {
     "objectID": "slides/2026-10-12-funcmap.html#functions-in-the-tidyverse-1",
     "href": "slides/2026-10-12-funcmap.html#functions-in-the-tidyverse-1",
     "title": "Functions + Iteration",
     "section": "Functions in the tidyverse",
-    "text": "Functions in the tidyverse\n\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.614\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.642"
+    "text": "Functions in the tidyverse\nCollapse\nFunctions that collapse into a single value will work well in the summarize() step of the pipeline. For example, you may want to calculate the coefficient of variation which is the standard deviation divided by the mean.\n\ncv &lt;- function(x, na.rm = FALSE) {\n  sd(x, na.rm = na.rm) / mean(x, na.rm = na.rm)\n}\n\ncv(runif(100, min = 0, max = 50))\n\n[1] 0.614\n\ncv(runif(100, min = 0, max = 500))\n\n[1] 0.642"
   },
   {
     "objectID": "slides/2026-10-12-funcmap.html#functions-summary",
@@ -3672,7 +3672,7 @@
     "href": "slides/2026-10-12-funcmap.html#variations-of-map_-functions",
     "title": "Functions + Iteration",
     "section": "variations of map_ functions",
-    "text": "variations of map_ functions\n\n\nThe map functions are named by they output the produce. For example:\n\nmap(.x, .f) is the main mapping function and returns a list\nmap_dbl(.x, .f) returns a numeric (double) vector\nmap_chr(.x, .f) returns a character vector\nmap_lgl(.x, .f) returns a logical vector\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that the first argument is always the data object and the second object is always the function you want to iteratively apply to each element in the input object."
+    "text": "variations of map_ functions\n\n\nThe map functions are named by they output the produce. For example:\n\nmap(.x, .f) is the main mapping function and returns a list\nmap_dbl(.x, .f) returns a numeric (double) vector\nmap_chr(.x, .f) returns a character vector\nmap_lgl(.x, .f) returns a logical vector\n\n\n\n\n\n\n\n\n\n\n\n\nNote that the first argument is always the data object and the second object is always the function you want to iteratively apply to each element in the input object."
   },
   {
     "objectID": "slides/2026-10-12-funcmap.html#map-variants-output",
@@ -3714,7 +3714,7 @@
     "href": "slides/2026-10-12-funcmap.html#map_-variants-input",
     "title": "Functions + Iteration",
     "section": "map_*() variants (input)",
-    "text": "map_*() variants (input)\n\n\n\n\n\n\n\n\n\nWe’ve already described the difference between the columns. Now we cover the difference between the rows."
+    "text": "map_*() variants (input)\n\nWe’ve already described the difference between the columns. Now we cover the difference between the rows."
   },
   {
     "objectID": "slides/2026-10-12-funcmap.html#map2_",
@@ -5598,5 +5598,33 @@
     "title": "Variable Types",
     "section": "stringr functions",
     "text": "stringr functions\nUse the stringr cheat sheet.\n\nimage credit: https://rstudio.github.io/cheatsheets/html/strings.html"
+  },
+  {
+    "objectID": "slides/2026-09-28-types.html#tidy-packages-the-tidyverse",
+    "href": "slides/2026-09-28-types.html#tidy-packages-the-tidyverse",
+    "title": "Variable Types",
+    "section": "Tidy packages: the tidyverse",
+    "text": "Tidy packages: the tidyverse\n\n\n\n\nimage credit: https://www.tidyverse.org/."
+  },
+  {
+    "objectID": "slides/2026-09-28-types.html#if-and-else-is-tricky",
+    "href": "slides/2026-09-28-types.html#if-and-else-is-tricky",
+    "title": "Variable Types",
+    "section": "if and else is tricky!",
+    "text": "if and else is tricky!\n\ndataif_else()ifelse()\n\n\n\nstarwars_f\n\n# A tibble: 87 × 6\n   name               height  mass sex    gender    species\n   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;     &lt;fct&gt;  \n 1 Luke Skywalker        172    77 male   masculine Human  \n 2 C-3PO                 167    75 none   masculine Droid  \n 3 R2-D2                  96    32 none   masculine Droid  \n 4 Darth Vader           202   136 male   masculine Human  \n 5 Leia Organa           150    49 female feminine  Human  \n 6 Owen Lars             178   120 male   masculine Human  \n 7 Beru Whitesun Lars    165    75 female feminine  Human  \n 8 R5-D4                  97    32 none   masculine Droid  \n 9 Biggs Darklighter     183    84 male   masculine Human  \n10 Obi-Wan Kenobi        182    77 male   masculine Human  \n# ℹ 77 more rows\n\n\n\n\n… coerces everything to the lowest common denominator. That is, it strips the labels off the factor variable, uses the integers, and converts them to character strings.\nIf you replace with a factor, it will keep as a factor\n\nstarwars_f |&gt;\n  mutate(\n    sex2 = if_else(sex == \"none\", gender, sex),\n    sex3 = if_else(sex == \"none\", species, sex)\n  )\n\n# A tibble: 87 × 8\n   name               height  mass sex    gender   species sex2  sex3 \n   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;chr&gt;    &lt;fct&gt;   &lt;chr&gt; &lt;fct&gt;\n 1 Luke Skywalker        172    77 male   masculi… Human   male  male \n 2 C-3PO                 167    75 none   masculi… Droid   masc… Droid\n 3 R2-D2                  96    32 none   masculi… Droid   masc… Droid\n 4 Darth Vader           202   136 male   masculi… Human   male  male \n 5 Leia Organa           150    49 female feminine Human   fema… fema…\n 6 Owen Lars             178   120 male   masculi… Human   male  male \n 7 Beru Whitesun Lars    165    75 female feminine Human   fema… fema…\n 8 R5-D4                  97    32 none   masculi… Droid   masc… Droid\n 9 Biggs Darklighter     183    84 male   masculi… Human   male  male \n10 Obi-Wan Kenobi        182    77 male   masculi… Human   male  male \n# ℹ 77 more rows\n\n\n\n\nDoesn’t do what we expect it to do.\n\nstarwars_f |&gt;\n  mutate(\n    sex2 = if_else(sex == \"none\", gender, sex),\n    sex3 = if_else(sex == \"none\", species, sex),\n    sex4 = ifelse(sex == \"none\", gender, sex),\n    sex5 = ifelse(sex == \"none\", species, sex)\n  )\n\n# A tibble: 87 × 10\n   name      height  mass sex   gender species sex2  sex3  sex4   sex5\n   &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;fct&gt; &lt;chr&gt;  &lt;fct&gt;   &lt;chr&gt; &lt;fct&gt; &lt;chr&gt; &lt;int&gt;\n 1 Luke Sky…    172    77 male  mascu… Human   male  male  3         3\n 2 C-3PO        167    75 none  mascu… Droid   masc… Droid masc…     6\n 3 R2-D2         96    32 none  mascu… Droid   masc… Droid masc…     6\n 4 Darth Va…    202   136 male  mascu… Human   male  male  3         3\n 5 Leia Org…    150    49 fema… femin… Human   fema… fema… 1         1\n 6 Owen Lars    178   120 male  mascu… Human   male  male  3         3\n 7 Beru Whi…    165    75 fema… femin… Human   fema… fema… 1         1\n 8 R5-D4         97    32 none  mascu… Droid   masc… Droid masc…     6\n 9 Biggs Da…    183    84 male  mascu… Human   male  male  3         3\n10 Obi-Wan …    182    77 male  mascu… Human   male  male  3         3\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "slides/2026-09-28-types.html#forcats-functions-1",
+    "href": "slides/2026-09-28-types.html#forcats-functions-1",
+    "title": "Variable Types",
+    "section": "forcats functions",
+    "text": "forcats functions\nUse the forcats cheat sheet.\n\nimage credit: https://rstudio.github.io/cheatsheets/html/factors.html"
+  },
+  {
+    "objectID": "slides/2026-09-28-types.html#lubridate-functions",
+    "href": "slides/2026-09-28-types.html#lubridate-functions",
+    "title": "Variable Types",
+    "section": "lubridate functions",
+    "text": "lubridate functions\nUse the lubridate cheat sheet.\n\nimage credit: https://rstudio.github.io/cheatsheets/html/lubridate.html"
   }
 ]

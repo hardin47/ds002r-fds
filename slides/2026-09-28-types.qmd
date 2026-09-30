@@ -329,7 +329,7 @@ Factor variables are a special type of character string.
 The computer actually stores them as *integers* (?!?!!?) with a label (abbreviated as `<fct>` in tibbles). 
 
 * categorical variable
-* represented in discrete levels with an ordering
+* represented in discrete numerical levels with an ordering
 
 
 ## Where do we order?
@@ -411,7 +411,7 @@ dream |>
 ## Data
 ```{r}
 starbucks |>
-  select(item, type, calories)
+  select(item, type, calories, fiber)
 ```
 
 ## Plot
@@ -493,7 +493,7 @@ unclass(x)
 ## rewrite
 
 ```{r}
-new_fruit <- data.frame(words = x) |>
+new_fruit <- tibble(words = x) |>
   mutate(
     x_recode = fct_recode(words, fruit = "apple", fruit = "banana"),
     x_rewrite = if_else(
@@ -515,6 +515,8 @@ new_fruit |>
 ```{r}
 #| warning: true
 # If you make a mistake you'll get a warning
+x <- factor(c("apple", "bear", "dear", "banana", "apple", "apple", "dear"))
+x
 fct_recode(x, fruit = "apple", fruit = "bananana")
 ```
 
@@ -522,6 +524,8 @@ fct_recode(x, fruit = "apple", fruit = "bananana")
 
 ```{r}
 # If you name the level NULL it will be removed
+x <- factor(c("apple", "bear", "dear", "banana", "apple", "apple", "dear"))
+x
 fct_recode(x, NULL = "apple", fruit = "banana")
 ```
 
@@ -529,6 +533,8 @@ fct_recode(x, NULL = "apple", fruit = "banana")
 
 ```{r}
 # Wrap the left hand side in quotes if it contains special variables
+x <- factor(c("apple", "bear", "dear", "banana", "apple", "apple", "dear"))
+x
 fct_recode(x, "an apple" = "apple", "a bear" = "bear")
 ```
 
@@ -564,16 +570,56 @@ as.character(f)
 ```{r}
 as.numeric(f)
 ```
+:::
+
+
+## if and else is tricky!
+
+
+::: {.panel-tabset}
+
+## data
+
+```{r}
+#| echo: false
+
+starwars_f <- starwars |>
+  mutate(sex = factor(sex), species = factor(species)) |>
+  select(name, height, mass, sex, gender, species)
+```
+```{r}
+starwars_f
+```
 
 ## `if_else()`
 
 ... coerces everything to the lowest common denominator. That is, it strips the labels off the factor variable, uses the integers, and converts them to character strings.
 
+If you replace with a factor, it will keep as a factor
+
 ```{r}
-if_else(f == "cat", "meow", f)
+starwars_f |>
+  mutate(
+    sex2 = if_else(sex == "none", gender, sex),
+    sex3 = if_else(sex == "none", species, sex)
+  )
 ```
 
+## `ifelse()`
+
+Doesn't do what we expect it to do.
+
+```{r}
+starwars_f |>
+  mutate(
+    sex2 = if_else(sex == "none", gender, sex),
+    sex3 = if_else(sex == "none", species, sex),
+    sex4 = ifelse(sex == "none", gender, sex),
+    sex5 = ifelse(sex == "none", species, sex)
+  )
+```
 :::
+
 
 ## Change character to factor
 
@@ -613,6 +659,13 @@ The **forcats** package within tidyverse contains lots of functions to help proc
     - `fct_other()` = manually replace some levels with "other"
 
 
+## **forcats** functions
+
+Use the <a href = "https://rstudio.github.io/cheatsheets/html/factors.html" target = "_blank">**forcats** cheat sheet</a>. 
+
+```{r, out.width = "90%", fig.cap = "image credit: https://rstudio.github.io/cheatsheets/html/factors.html", fig.alt = "the forcats cheatsheet", echo=FALSE}
+knitr::include_graphics("../images/forcats.png")
+``` 
 
 # Time and date objects
 
@@ -647,18 +700,18 @@ now()
 `ymd()` and friends create dates
 
 ```{r}
-ymd("2025-02-19")
-mdy("February 19th, 2025")
-dmy("19-Feb-2025")
+ymd("2026-09-30")
+mdy("September 30th, 2026")
+dmy("30-Sep-26")
 ```
 ## ... with times
 
 To create a date-time, add an underscore and one or more of "h", "m", and "s" to the name of the parsing function:
 
 ```{r}
-ymd_hms("2025-02-19 11:45:59", tz = "America/Los_Angeles")
+ymd_hms("2026-09-30 11:45:59", tz = "America/Los_Angeles")
 
-mdy_hm("02/19/2025 15:01") # default is UTC = GMT
+mdy_hm("09/30/2026 15:01") # default is UTC = GMT
 ```
 
 More <a href = "https://r4ds.hadley.nz/datetimes#time-zones" target = "_blank">information about time zones in R</a>.
@@ -669,7 +722,7 @@ More <a href = "https://r4ds.hadley.nz/datetimes#time-zones" target = "_blank">i
 
 In particular, **lubridate** makes it very easy to work with days, times, and dates.  The base idea is to start with dates in a `ymd` (year month day) format and transform the information into whatever you want.  
 
-Examples from the <a href = "https://lubridate.tidyverse.org/reference/lubridate-package.html" target = "_blank">lubridate vignette</a>.
+Examples from the <a href = "https://rstudio.github.io/cheatsheets/html/lubridate.html" target = "_blank">lubridate vignette</a>.
 
  
 
@@ -777,7 +830,20 @@ flightsWK |>
   select(year, month, day, ymdday, weekdy, whichweek, dep_time, arr_time)
 ```
 
+## **lubridate** functions
 
+Use the <a href = "https://rstudio.github.io/cheatsheets/html/lubridate.html" target = "_blank">**lubridate** cheat sheet</a>. 
+
+```{r, out.width = "90%", fig.cap = "image credit: https://rstudio.github.io/cheatsheets/html/lubridate.html", fig.alt = "the lubridate cheatsheet", echo=FALSE}
+knitr::include_graphics("../images/lubridate.png")
+``` 
+
+## Tidy packages: the tidyverse
+
+
+```{r fig.cap = "image credit: https://www.tidyverse.org/.", fig.alt = "Image of hex stickers for the eight core tidyverse packages including ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, and forcats.", preview = TRUE, echo = FALSE}
+knitr::include_graphics("../images/tidyverse.png")
+```
  
 
 <!--

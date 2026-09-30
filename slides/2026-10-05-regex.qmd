@@ -1,7 +1,7 @@
 ---
 title: Regular Expressions
 author: "Jo Hardin"
-subtitle: "September 29 + October 1, 2025"
+subtitle: "October 5 + 7, 2026"
 format:
   revealjs:
     incremental: false
@@ -25,7 +25,7 @@ options(pillar.width = 70)
 ```
 
 
-# Agenda 9/29/25
+# Agenda 10/5/26
 
 1. What is a regular expression?
 2. Escape sequences, quantifiers, positions
@@ -376,7 +376,7 @@ str_extract(string, "\\b(Mary|Jane|Sue)\\b")
 ```
 
 
-# Agenda 10/1/25
+# Agenda 10/7/26
 
 1. Lookaround
 2. `str_*()` functions with regular expressions
