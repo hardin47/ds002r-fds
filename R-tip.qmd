@@ -101,12 +101,22 @@ schedule <- tribble(
   'Tip 16', 
   '`unique()`', 
   'gives the unique values in a variable, cannot be used in a tidy pipeline',
-  'instead: `penguins |> distinct(species)`',
+  'instead: `penguins |> distinct(species)',
 
   'Tip 17', 
   'highlight code + cmd + shift + c', 
   'comments lines to not render',
-  'cntl + shift + c on Windows'
+  'cntl + shift + c on Windows',
+
+  'Tip 18', 
+  '`alpha = 0.4`', 
+  'makes the plot item (e.g., point) transparent, e.g., 40% of the ink',
+  'can be used in `geom_point()`, `geom_text()`, and other geoms',
+
+  'Tip 19', 
+  'highlight code + cmd + [  (or highlight code + cmd + [)', 
+  'shifts the code left (or right)',
+  'highlight code + cntrl + [ on Windows'
 
 )
 ```
