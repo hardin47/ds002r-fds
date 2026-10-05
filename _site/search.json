@@ -1313,7 +1313,7 @@
     "href": "slides/2026-10-05-regex.html#bounding-words-vs.-phrases",
     "title": "Regular Expressions",
     "section": "Bounding words vs. phrases",
-    "text": "Bounding words vs. phrases\n\nstrings &lt;- c(\"apple\", \"applet\", \"pineapple\", \"apple pie\", \"I love apple pie\")\n\nstr_subset(strings, \"\\\\bapple\\\\b\")\nstr_subset(strings, \"^apple$\")\nstr_subset(strings, \"\\\\bapple pie\\\\b\")\nstr_subset(strings, \"^apple pie$\")"
+    "text": "Bounding words vs. phrases\n\nstrings &lt;- c(\"apple\", \"applet\", \"pineapple\", \"apple pie\", \"I love apple pie\")\n\nstr_subset(strings, \"\\\\bapple\\\\b\")\nstr_subset(strings, \"^apple$\")\nstr_subset(strings, \"\\\\bapple pie\\\\b\")\nstr_subset(strings, \"^apple pie$\")\n\nstr_extract(strings, \"\\\\bapple\\\\b\")\nstr_extract(strings, \"^apple$\")\nstr_extract(strings, \"\\\\bapple pie\\\\b\")\nstr_extract(strings, \"^apple pie$\")"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#bounding-words-vs.-phrases---solutions",

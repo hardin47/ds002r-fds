@@ -151,6 +151,11 @@ str_subset(strings, "\\bapple\\b")
 str_subset(strings, "^apple$")
 str_subset(strings, "\\bapple pie\\b")
 str_subset(strings, "^apple pie$")
+
+str_extract(strings, "\\bapple\\b")
+str_extract(strings, "^apple$")
+str_extract(strings, "\\bapple pie\\b")
+str_extract(strings, "^apple pie$")
 ```
 
 ## Bounding words vs. phrases - solutions
