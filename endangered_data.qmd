@@ -43,8 +43,12 @@ schedule <- tribble(
   '<a href = "https://www.bls.gov/cpi/data.htm" target = "_blank">Consumer Price Index</a>', 
   '9-11-2026' , 
   '<a href = "https://www.bls.gov/cpi/" target = "_blank">The Consumer Price Index (CPI)</a> is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.CPI is collected by the Bureau of Labor Statistics (BLS) who <a href = "https://www.bls.gov/cpi/notices/2025/more-information-collection-reduction.htm" target = "_blank">suspended data collection</a> in 2025 in select areas (including Lincoln, NE, Provo, UT, and Buffalo, NY). CPI provides monthly snapshots of price changes to hundreds of products and <a href = "https://www.reuters.com/business/us-inflation-data-collection-hurt-by-trump-era-hiring-freeze-wsj-says-2025-06-04" target = "_blank"> provides a near-real-time estimate</a> of the state of inflation.',
-  '9-30-2026'
+  '9-30-2026',
 
+  '<a href = "https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us" target = "_blank">Food Security Supplement (FSS) to the Current Population Survey (CPS)</a>', 
+  '12-31-2024' , 
+  'In September 2025, the <a href = "https://www.fna.usda.gov/newsroom/usda-0219.25" target = "_blank"> USDA terminated</a> the FSS as "redundant, costly, politicized, and extraneous". <a href = "https://frac.org/blog/threats-to-food-security-data-why-the-redundancy-claim-doesnt-hold-up" target = "_blank">Historically</a>, failing to measure hunger allows policy makers to downplay growing hardship.',
+  '10-05-2026'
 
 )
 ```
