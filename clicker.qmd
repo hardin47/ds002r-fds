@@ -1396,7 +1396,6 @@ str_extract("My dog is 10 years old", "\\d+")
     
 [^50]: a. 10 (because `\d+` matches at least one digit).
 
-
 ---
 
 (@) What will the result be for the following code?[^51]
@@ -1408,10 +1407,45 @@ str_extract("My dog is 10 years old", "\\d+")
 ```{r}
 #| eval: false
 #| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", "\\w")
+```
+
+[^51]: d. E (because `\w` matches any single word character).
+
+
+---
+
+(@) What will the result be for the following code?[^51a]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
+str_extract("Episode 2: The pie whisperer. (4 August 2015)", "\\w+")
+```
+
+[^51a]: c. Episode (because `\w` matches any single word character, and then `+` matches "at least" one word character, until we are done with the matching).
+
+
+
+---
+
+(@) What will the result be for the following code?[^51b]
+    (a) .
+    (b) Episode 2: The pie whisperer. (4 August 2015)
+    (c) Episode
+    (d) E
+
+```{r}
+#| eval: false
+#| echo: true
 str_extract("Episode 2: The pie whisperer. (4 August 2015)", ".")
 ```
 
-[^51]: d. E (because `.` matches anything, and returns only a single character).
+[^51b]: d. E (because `.` matches anything, and returns only a single character).
 
 ---
 
