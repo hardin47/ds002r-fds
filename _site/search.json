@@ -1411,14 +1411,14 @@
     "href": "slides/2026-10-05-regex.html#alternation-operator",
     "title": "Regular Expressions",
     "section": "Alternation operator",
-    "text": "Alternation operator\nThe “or” operator, | has the lowest precedence and parentheses have the highest precedence, which means that parentheses get evaluated before “or”.\n\nWhat is the difference between \\bMary|Jane|Sue\\b and \\b(Mary|Jane|Sue)\\b?\n\n\nstring &lt;- c(\"Mary\", \"Mar\", \"Janet\", \"jane\", \"Susan\", \"Sue\")\n\nstr_extract(string, \"\\\\bMary|Jane|Sue\\\\b\")\nstr_extract(string, \"\\\\b(Mary|Jane|Sue)\\\\b\")"
+    "text": "Alternation operator\nThe “or” operator, | has the lowest precedence and parentheses have the highest precedence, which means that parentheses get evaluated before “or”.\n\nWhat is the difference between \\bMary|Jane|Sue\\b and \\b(Mary|Jane|Sue)\\b?\n\n\nstring &lt;- c(\n  \"Mary\",\n  \"Mar\",\n  \"Janet\",\n  \"jane\",\n  \"Jane Jr.\",\n  \"Susan\",\n  \"Sue\",\n  \"SueLou\"\n)\n\nstr_extract(string, \"\\\\bMary|Jane|Sue\\\\b\")\nstr_extract(string, \"\\\\b(Mary|Jane|Sue)\\\\b\")"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#alternation-operator-1",
     "href": "slides/2026-10-05-regex.html#alternation-operator-1",
     "title": "Regular Expressions",
     "section": "Alternation operator",
-    "text": "Alternation operator\nThe “or” operator, | has the lowest precedence and parentheses have the highest precedence, which means that parentheses get evaluated before “or”.\n\nWhat is the difference between \\bMary|Jane|Sue\\b and \\b(Mary|Jane|Sue)\\b?\n\n\nstring &lt;- c(\"Mary\", \"Mar\", \"Janet\", \"jane\", \"Susan\", \"Sue\")\n\nstr_extract(string, \"\\\\bMary|Jane|Sue\\\\b\")\n\n[1] \"Mary\" NA     \"Jane\" NA     NA     \"Sue\" \n\nstr_extract(string, \"\\\\b(Mary|Jane|Sue)\\\\b\")\n\n[1] \"Mary\" NA     NA     NA     NA     \"Sue\""
+    "text": "Alternation operator\nThe “or” operator, | has the lowest precedence and parentheses have the highest precedence, which means that parentheses get evaluated before “or”.\n\nWhat is the difference between \\bMary|Jane|Sue\\b and \\b(Mary|Jane|Sue)\\b?\n\n\nstring &lt;- c(\n  \"Mary\",\n  \"Mar\",\n  \"Janet\",\n  \"jane\",\n  \"Jane Jr.\",\n  \"Susan\",\n  \"Sue\",\n  \"SueLou\"\n)\n\nstr_extract(string, \"\\\\bMary|Jane|Sue\\\\b\")\n\n[1] \"Mary\" NA     \"Jane\" NA     \"Jane\" NA     \"Sue\"  NA    \n\nstr_extract(string, \"\\\\b(Mary|Jane|Sue)\\\\b\")\n\n[1] \"Mary\" NA     NA     NA     \"Jane\" NA     \"Sue\"  NA"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#lookaround",

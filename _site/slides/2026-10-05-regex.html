@@ -1593,10 +1593,19 @@ Jo Hardin
 <li>What is the difference between <code>\bMary|Jane|Sue\b</code> and <code>\b(Mary|Jane|Sue)\b</code>?</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a aria-label="1"></a>string <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Mary&quot;</span>, <span class="st">&quot;Mar&quot;</span>, <span class="st">&quot;Janet&quot;</span>, <span class="st">&quot;jane&quot;</span>, <span class="st">&quot;Susan&quot;</span>, <span class="st">&quot;Sue&quot;</span>)</span>
-<span id="cb99-2"><a aria-label="2"></a></span>
-<span id="cb99-3"><a aria-label="3"></a><span class="fu">str_extract</span>(string, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">bMary|Jane|Sue</span><span class="sc">\\</span><span class="st">b&quot;</span>)</span>
-<span id="cb99-4"><a aria-label="4"></a><span class="fu">str_extract</span>(string, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">b(Mary|Jane|Sue)</span><span class="sc">\\</span><span class="st">b&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a aria-label="1"></a>string <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb99-2"><a aria-label="2"></a>  <span class="st">&quot;Mary&quot;</span>,</span>
+<span id="cb99-3"><a aria-label="3"></a>  <span class="st">&quot;Mar&quot;</span>,</span>
+<span id="cb99-4"><a aria-label="4"></a>  <span class="st">&quot;Janet&quot;</span>,</span>
+<span id="cb99-5"><a aria-label="5"></a>  <span class="st">&quot;jane&quot;</span>,</span>
+<span id="cb99-6"><a aria-label="6"></a>  <span class="st">&quot;Jane Jr.&quot;</span>,</span>
+<span id="cb99-7"><a aria-label="7"></a>  <span class="st">&quot;Susan&quot;</span>,</span>
+<span id="cb99-8"><a aria-label="8"></a>  <span class="st">&quot;Sue&quot;</span>,</span>
+<span id="cb99-9"><a aria-label="9"></a>  <span class="st">&quot;SueLou&quot;</span></span>
+<span id="cb99-10"><a aria-label="10"></a>)</span>
+<span id="cb99-11"><a aria-label="11"></a></span>
+<span id="cb99-12"><a aria-label="12"></a><span class="fu">str_extract</span>(string, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">bMary|Jane|Sue</span><span class="sc">\\</span><span class="st">b&quot;</span>)</span>
+<span id="cb99-13"><a aria-label="13"></a><span class="fu">str_extract</span>(string, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">b(Mary|Jane|Sue)</span><span class="sc">\\</span><span class="st">b&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="alternation-operator-1" class="slide level2">
@@ -1606,15 +1615,24 @@ Jo Hardin
 <li>What is the difference between <code>\bMary|Jane|Sue\b</code> and <code>\b(Mary|Jane|Sue)\b</code>?</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a aria-label="1"></a>string <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Mary&quot;</span>, <span class="st">&quot;Mar&quot;</span>, <span class="st">&quot;Janet&quot;</span>, <span class="st">&quot;jane&quot;</span>, <span class="st">&quot;Susan&quot;</span>, <span class="st">&quot;Sue&quot;</span>)</span>
-<span id="cb100-2"><a aria-label="2"></a></span>
-<span id="cb100-3"><a aria-label="3"></a><span class="fu">str_extract</span>(string, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">bMary|Jane|Sue</span><span class="sc">\\</span><span class="st">b&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a aria-label="1"></a>string <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb100-2"><a aria-label="2"></a>  <span class="st">&quot;Mary&quot;</span>,</span>
+<span id="cb100-3"><a aria-label="3"></a>  <span class="st">&quot;Mar&quot;</span>,</span>
+<span id="cb100-4"><a aria-label="4"></a>  <span class="st">&quot;Janet&quot;</span>,</span>
+<span id="cb100-5"><a aria-label="5"></a>  <span class="st">&quot;jane&quot;</span>,</span>
+<span id="cb100-6"><a aria-label="6"></a>  <span class="st">&quot;Jane Jr.&quot;</span>,</span>
+<span id="cb100-7"><a aria-label="7"></a>  <span class="st">&quot;Susan&quot;</span>,</span>
+<span id="cb100-8"><a aria-label="8"></a>  <span class="st">&quot;Sue&quot;</span>,</span>
+<span id="cb100-9"><a aria-label="9"></a>  <span class="st">&quot;SueLou&quot;</span></span>
+<span id="cb100-10"><a aria-label="10"></a>)</span>
+<span id="cb100-11"><a aria-label="11"></a></span>
+<span id="cb100-12"><a aria-label="12"></a><span class="fu">str_extract</span>(string, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">bMary|Jane|Sue</span><span class="sc">\\</span><span class="st">b&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;Mary&quot; NA     &quot;Jane&quot; NA     NA     &quot;Sue&quot; </code></pre>
+<pre><code>[1] &quot;Mary&quot; NA     &quot;Jane&quot; NA     &quot;Jane&quot; NA     &quot;Sue&quot;  NA    </code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a aria-label="1"></a><span class="fu">str_extract</span>(string, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">b(Mary|Jane|Sue)</span><span class="sc">\\</span><span class="st">b&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;Mary&quot; NA     NA     NA     NA     &quot;Sue&quot; </code></pre>
+<pre><code>[1] &quot;Mary&quot; NA     NA     NA     &quot;Jane&quot; NA     &quot;Sue&quot;  NA    </code></pre>
 </div>
 </div>
 </section></section>

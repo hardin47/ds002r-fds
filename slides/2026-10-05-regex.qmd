@@ -361,7 +361,16 @@ The "or" operator, `|` has the lowest precedence and parentheses have the highes
 
 ```{r}
 #| eval: false
-string <- c("Mary", "Mar", "Janet", "jane", "Susan", "Sue")
+string <- c(
+  "Mary",
+  "Mar",
+  "Janet",
+  "jane",
+  "Jane Jr.",
+  "Susan",
+  "Sue",
+  "SueLou"
+)
 
 str_extract(string, "\\bMary|Jane|Sue\\b")
 str_extract(string, "\\b(Mary|Jane|Sue)\\b")
@@ -374,7 +383,16 @@ The "or" operator, `|` has the lowest precedence and parentheses have the highes
 * What is the difference between `\bMary|Jane|Sue\b` and `\b(Mary|Jane|Sue)\b`?
 
 ```{r}
-string <- c("Mary", "Mar", "Janet", "jane", "Susan", "Sue")
+string <- c(
+  "Mary",
+  "Mar",
+  "Janet",
+  "jane",
+  "Jane Jr.",
+  "Susan",
+  "Sue",
+  "SueLou"
+)
 
 str_extract(string, "\\bMary|Jane|Sue\\b")
 str_extract(string, "\\b(Mary|Jane|Sue)\\b")
