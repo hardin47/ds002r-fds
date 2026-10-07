@@ -13,11 +13,12 @@ You will first find a data set containing string / character data.  The data cou
 Your analysis must contain the following elements:
 
 - at least 3 `str_*()` functions (3 different `str_*()` functions)
+- at least 1 `fct_*()` function
 - at least 3 regular expressions
 - at least 1 lookaround
 - at least 2 illustrative, well-labeled plots or tables
 - a description of what insights can be gained from your plots and tables
-- a reference / documentation of the data source.
+- a reference / documentation of the data source (same idea as in Project 1).
 
 
 Logistics:
@@ -32,7 +33,7 @@ Logistics:
 
 ### Some potential places to find text data
 
-I've gathered some potential datasets for you to work with.  All of the datasets below contain some or a lot of text.
+I've gathered some potential datasets for you to work with.  All of the datasets below contain some or a lot of text. Though you should also feel free to choose a dataset outside of the list below.
 
 * <a href = "https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-09-17/readme.md" target = "_blank"> Shakespeare Dialogue</a> 
 
@@ -70,7 +71,9 @@ devtools::install_github("Amherst-Statistics/DickinsonPoems")
     
 ```{r}
 #| eval: false
-read_csv("https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv")
+read_csv(
+  "https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw_da_qs.csv"
+)
 ```
 
 - <a href = "https://github.com/the-pudding/data" target = "_blank">Other articles from The Pudding</a>
@@ -80,7 +83,7 @@ read_csv("https://raw.githubusercontent.com/the-pudding/data/master/dearabby/raw
 ```{r}
 #| eval: false
 
-library(RTextTools) 
+library(RTextTools)
 data(NYTimes)
 as_tibble(NYTimes)
 ```
@@ -90,5 +93,5 @@ as_tibble(NYTimes)
 
 ### Timeline
 
-Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 8, 2025**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 2 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday October 14, 2026**.  For your website, you may add a new tab to your Quarto webpage or you may add the analysis under your "Data Viz" tab. Submit the new page's URL. [Remember, you should continue to work in the same folder that is connected to the GitHub website page. Do not create a new GitHub repository.]
 
