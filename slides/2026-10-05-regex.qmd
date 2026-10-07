@@ -434,10 +434,11 @@ library(data.table)
 
 Goal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.^[Thanks to Ciaran Evans at Wake Forest University for example and code,  https://sta279-f23.github.io/]
 
-
-# REVISIT HERE
 ```{r}
 #| eval: false
+#| echo: false
+
+# i think this is the old code, something changed... ????
 
 results <- read_html("https://taskmaster.fandom.com/wiki/Series_11") |>
   html_element(".tmtable") |>
@@ -487,6 +488,8 @@ results <- read_html(html_content) |>
   ) |>
   mutate(series = 11)
 ```
+
+
 ## Scraping and wrangling Taskmaster data - results
 
 ```{r}

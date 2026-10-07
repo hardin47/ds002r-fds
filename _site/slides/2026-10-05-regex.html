@@ -1652,64 +1652,43 @@ Figure 2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <section id="scraping-and-wrangling-taskmaster" class="slide level2 scrollable">
 <h2>Scraping and wrangling Taskmaster</h2>
 <p>Goal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.<sup>1</sup></p>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Thanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/</p></li></ol></aside></section></section>
-<section>
-<section id="revisit-here" class="title-slide slide level1 center">
-<h1>REVISIT HERE</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a aria-label="1"></a>results <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">&quot;https://taskmaster.fandom.com/wiki/Series_11&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb104-2"><a aria-label="2"></a>  <span class="fu">html_element</span>(<span class="st">&quot;.tmtable&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb104-3"><a aria-label="3"></a>  <span class="fu">html_table</span>() <span class="sc">|&gt;</span></span>
-<span id="cb104-4"><a aria-label="4"></a>  <span class="fu">mutate</span>(<span class="at">episode =</span> <span class="fu">if_else</span>(<span class="fu">startsWith</span>(Task, <span class="st">&quot;Episode&quot;</span>), Task, <span class="cn">NA</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb104-5"><a aria-label="5"></a>  <span class="fu">fill</span>(episode, <span class="at">.direction =</span> <span class="st">&quot;down&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb104-6"><a aria-label="6"></a>  <span class="fu">filter</span>(</span>
-<span id="cb104-7"><a aria-label="7"></a>    <span class="sc">!</span><span class="fu">startsWith</span>(Task, <span class="st">&quot;Episode&quot;</span>),</span>
-<span id="cb104-8"><a aria-label="8"></a>    <span class="sc">!</span>(Task <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Total&quot;</span>, <span class="st">&quot;Grand Total&quot;</span>))</span>
-<span id="cb104-9"><a aria-label="9"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb104-10"><a aria-label="10"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb104-11"><a aria-label="11"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(Task, Description, episode),</span>
-<span id="cb104-12"><a aria-label="12"></a>    <span class="at">names_to =</span> <span class="st">&quot;contestant&quot;</span>,</span>
-<span id="cb104-13"><a aria-label="13"></a>    <span class="at">values_to =</span> <span class="st">&quot;score&quot;</span></span>
-<span id="cb104-14"><a aria-label="14"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb104-15"><a aria-label="15"></a>  <span class="fu">mutate</span>(<span class="at">series =</span> <span class="dv">11</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a aria-label="1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb104-2"><a aria-label="2"></a>resp <span class="ot">&lt;-</span> <span class="fu">GET</span>(</span>
+<span id="cb104-3"><a aria-label="3"></a>  <span class="st">&quot;https://taskmaster.fandom.com/api.php&quot;</span>,</span>
+<span id="cb104-4"><a aria-label="4"></a>  <span class="at">query =</span> <span class="fu">list</span>(</span>
+<span id="cb104-5"><a aria-label="5"></a>    <span class="at">action =</span> <span class="st">&quot;parse&quot;</span>,</span>
+<span id="cb104-6"><a aria-label="6"></a>    <span class="at">page =</span> <span class="st">&quot;Series_11&quot;</span>,</span>
+<span id="cb104-7"><a aria-label="7"></a>    <span class="at">format =</span> <span class="st">&quot;json&quot;</span></span>
+<span id="cb104-8"><a aria-label="8"></a>  )</span>
+<span id="cb104-9"><a aria-label="9"></a>)</span>
+<span id="cb104-10"><a aria-label="10"></a></span>
+<span id="cb104-11"><a aria-label="11"></a>result <span class="ot">&lt;-</span> <span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">&quot;parsed&quot;</span>)</span>
+<span id="cb104-12"><a aria-label="12"></a>html_content <span class="ot">&lt;-</span> result<span class="sc">$</span>parse<span class="sc">$</span>text<span class="sc">$</span><span class="st">`</span><span class="at">*</span><span class="st">`</span></span>
+<span id="cb104-13"><a aria-label="13"></a></span>
+<span id="cb104-14"><a aria-label="14"></a>results <span class="ot">&lt;-</span> <span class="fu">read_html</span>(html_content) <span class="sc">|&gt;</span></span>
+<span id="cb104-15"><a aria-label="15"></a>  <span class="fu">html_element</span>(<span class="st">&quot;.tmtable&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb104-16"><a aria-label="16"></a>  <span class="fu">html_table</span>() <span class="sc">|&gt;</span></span>
+<span id="cb104-17"><a aria-label="17"></a>  <span class="fu">mutate</span>(<span class="at">episode =</span> <span class="fu">if_else</span>(<span class="fu">startsWith</span>(Task, <span class="st">&quot;Episode&quot;</span>), Task, <span class="cn">NA</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb104-18"><a aria-label="18"></a>  <span class="fu">fill</span>(episode, <span class="at">.direction =</span> <span class="st">&quot;down&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb104-19"><a aria-label="19"></a>  <span class="fu">filter</span>(</span>
+<span id="cb104-20"><a aria-label="20"></a>    <span class="sc">!</span><span class="fu">startsWith</span>(Task, <span class="st">&quot;Episode&quot;</span>),</span>
+<span id="cb104-21"><a aria-label="21"></a>    <span class="sc">!</span>(Task <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Total&quot;</span>, <span class="st">&quot;Grand Total&quot;</span>))</span>
+<span id="cb104-22"><a aria-label="22"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb104-23"><a aria-label="23"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb104-24"><a aria-label="24"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(Task, Description, episode),</span>
+<span id="cb104-25"><a aria-label="25"></a>    <span class="at">names_to =</span> <span class="st">&quot;contestant&quot;</span>,</span>
+<span id="cb104-26"><a aria-label="26"></a>    <span class="at">values_to =</span> <span class="st">&quot;score&quot;</span></span>
+<span id="cb104-27"><a aria-label="27"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb104-28"><a aria-label="28"></a>  <span class="fu">mutate</span>(<span class="at">series =</span> <span class="dv">11</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a aria-label="1"></a><span class="fu">library</span>(httr)</span>
-<span id="cb105-2"><a aria-label="2"></a>resp <span class="ot">&lt;-</span> <span class="fu">GET</span>(</span>
-<span id="cb105-3"><a aria-label="3"></a>  <span class="st">&quot;https://taskmaster.fandom.com/api.php&quot;</span>,</span>
-<span id="cb105-4"><a aria-label="4"></a>  <span class="at">query =</span> <span class="fu">list</span>(</span>
-<span id="cb105-5"><a aria-label="5"></a>    <span class="at">action =</span> <span class="st">&quot;parse&quot;</span>,</span>
-<span id="cb105-6"><a aria-label="6"></a>    <span class="at">page =</span> <span class="st">&quot;Series_11&quot;</span>,</span>
-<span id="cb105-7"><a aria-label="7"></a>    <span class="at">format =</span> <span class="st">&quot;json&quot;</span></span>
-<span id="cb105-8"><a aria-label="8"></a>  )</span>
-<span id="cb105-9"><a aria-label="9"></a>)</span>
-<span id="cb105-10"><a aria-label="10"></a></span>
-<span id="cb105-11"><a aria-label="11"></a>result <span class="ot">&lt;-</span> <span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">&quot;parsed&quot;</span>)</span>
-<span id="cb105-12"><a aria-label="12"></a>html_content <span class="ot">&lt;-</span> result<span class="sc">$</span>parse<span class="sc">$</span>text<span class="sc">$</span><span class="st">`</span><span class="at">*</span><span class="st">`</span></span>
-<span id="cb105-13"><a aria-label="13"></a></span>
-<span id="cb105-14"><a aria-label="14"></a>results <span class="ot">&lt;-</span> <span class="fu">read_html</span>(html_content) <span class="sc">|&gt;</span></span>
-<span id="cb105-15"><a aria-label="15"></a>  <span class="fu">html_element</span>(<span class="st">&quot;.tmtable&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb105-16"><a aria-label="16"></a>  <span class="fu">html_table</span>() <span class="sc">|&gt;</span></span>
-<span id="cb105-17"><a aria-label="17"></a>  <span class="fu">mutate</span>(<span class="at">episode =</span> <span class="fu">if_else</span>(<span class="fu">startsWith</span>(Task, <span class="st">&quot;Episode&quot;</span>), Task, <span class="cn">NA</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb105-18"><a aria-label="18"></a>  <span class="fu">fill</span>(episode, <span class="at">.direction =</span> <span class="st">&quot;down&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb105-19"><a aria-label="19"></a>  <span class="fu">filter</span>(</span>
-<span id="cb105-20"><a aria-label="20"></a>    <span class="sc">!</span><span class="fu">startsWith</span>(Task, <span class="st">&quot;Episode&quot;</span>),</span>
-<span id="cb105-21"><a aria-label="21"></a>    <span class="sc">!</span>(Task <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Total&quot;</span>, <span class="st">&quot;Grand Total&quot;</span>))</span>
-<span id="cb105-22"><a aria-label="22"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb105-23"><a aria-label="23"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb105-24"><a aria-label="24"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(Task, Description, episode),</span>
-<span id="cb105-25"><a aria-label="25"></a>    <span class="at">names_to =</span> <span class="st">&quot;contestant&quot;</span>,</span>
-<span id="cb105-26"><a aria-label="26"></a>    <span class="at">values_to =</span> <span class="st">&quot;score&quot;</span></span>
-<span id="cb105-27"><a aria-label="27"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb105-28"><a aria-label="28"></a>  <span class="fu">mutate</span>(<span class="at">series =</span> <span class="dv">11</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Thanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/</p></li></ol></aside></section>
 <section id="scraping-and-wrangling-taskmaster-data---results" class="slide level2">
 <h2>Scraping and wrangling Taskmaster data - results</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span></span>
-<span id="cb106-2"><a aria-label="2"></a>  <span class="fu">select</span>(Task, Description, episode, contestant, score, series) <span class="sc">|&gt;</span></span>
-<span id="cb106-3"><a aria-label="3"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span></span>
+<span id="cb105-2"><a aria-label="2"></a>  <span class="fu">select</span>(Task, Description, episode, contestant, score, series) <span class="sc">|&gt;</span></span>
+<span id="cb105-3"><a aria-label="3"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 6
    Task  Description                   episode contestant score series
@@ -1730,27 +1709,27 @@ Figure 2: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <section id="more-succinct-results" class="slide level2">
 <h2>more succinct results</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a aria-label="1"></a>   Task  Description         episode   contestant score series</span>
-<span id="cb108-2"><a aria-label="2"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Charlotte… <span class="dv">1</span>         <span class="dv">11</span></span>
-<span id="cb108-3"><a aria-label="3"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Jamali Ma… <span class="dv">2</span>         <span class="dv">11</span></span>
-<span id="cb108-4"><a aria-label="4"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Lee Mack   <span class="dv">4</span>         <span class="dv">11</span></span>
-<span id="cb108-5"><a aria-label="5"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Mike Wozn… <span class="dv">5</span>         <span class="dv">11</span></span>
-<span id="cb108-6"><a aria-label="6"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Sarah Ken… <span class="dv">3</span>         <span class="dv">11</span></span>
-<span id="cb108-7"><a aria-label="7"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Charlotte… <span class="dv">2</span>         <span class="dv">11</span></span>
-<span id="cb108-8"><a aria-label="8"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Jamali Ma… <span class="dv">3</span>[<span class="dv">1</span>]      <span class="dv">11</span></span>
-<span id="cb108-9"><a aria-label="9"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Lee Mack   <span class="dv">3</span>         <span class="dv">11</span></span>
-<span id="cb108-10"><a aria-label="10"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Mike Wozn… <span class="dv">5</span>         <span class="dv">11</span></span>
-<span id="cb108-11"><a aria-label="11"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Sarah Ken… <span class="dv">4</span>         <span class="dv">11</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb107"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a aria-label="1"></a>   Task  Description         episode   contestant score series</span>
+<span id="cb107-2"><a aria-label="2"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Charlotte… <span class="dv">1</span>         <span class="dv">11</span></span>
+<span id="cb107-3"><a aria-label="3"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Jamali Ma… <span class="dv">2</span>         <span class="dv">11</span></span>
+<span id="cb107-4"><a aria-label="4"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Lee Mack   <span class="dv">4</span>         <span class="dv">11</span></span>
+<span id="cb107-5"><a aria-label="5"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Mike Wozn… <span class="dv">5</span>         <span class="dv">11</span></span>
+<span id="cb107-6"><a aria-label="6"></a>  <span class="dv">1</span>     Prize<span class="sc">:</span> Best thing…  Episode <span class="dv">1</span>… Sarah Ken… <span class="dv">3</span>         <span class="dv">11</span></span>
+<span id="cb107-7"><a aria-label="7"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Charlotte… <span class="dv">2</span>         <span class="dv">11</span></span>
+<span id="cb107-8"><a aria-label="8"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Jamali Ma… <span class="dv">3</span>[<span class="dv">1</span>]      <span class="dv">11</span></span>
+<span id="cb107-9"><a aria-label="9"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Lee Mack   <span class="dv">3</span>         <span class="dv">11</span></span>
+<span id="cb107-10"><a aria-label="10"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Mike Wozn… <span class="dv">5</span>         <span class="dv">11</span></span>
+<span id="cb107-11"><a aria-label="11"></a>  <span class="dv">2</span>     Do the most…        Episode <span class="dv">1</span>… Sarah Ken… <span class="dv">4</span>         <span class="dv">11</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Currently, the <code>episode</code> column contains entries like</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a aria-label="1"></a><span class="st">&quot;Episode 1: It&#39;s not your fault. (18 March 2021)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a aria-label="1"></a><span class="st">&quot;Episode 1: It&#39;s not your fault. (18 March 2021)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="cleaning-the-score-column" class="slide level2">
 <h2>Cleaning the <code>score</code> column</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span> <span class="fu">select</span>(score) <span class="sc">|&gt;</span> <span class="fu">table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span> <span class="fu">select</span>(score) <span class="sc">|&gt;</span> <span class="fu">table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>score
    –    ✔    ✘    0    1    2    3 3[1] 3[2] 3[3]    4 4[2] 4[3]    5   DQ 
@@ -1766,11 +1745,11 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting numeric information</h2>
 <p>Suppose we have the following string:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a aria-label="1"></a><span class="st">&quot;3[1]&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a aria-label="1"></a><span class="st">&quot;3[1]&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>And we want to extract just the number “3”:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb113"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;3[1]&quot;</span>, <span class="st">&quot;3&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;3[1]&quot;</span>, <span class="st">&quot;3&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;3&quot;</code></pre>
 </div>
@@ -1780,31 +1759,31 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting numeric information</h2>
 <p>What if we don’t know which number to extract?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;3[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;3[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;3&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;4[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;4[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;4&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;10[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;10[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;1&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb121"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;10[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;10[1]&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;10&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb123"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;DQ&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;DQ&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
@@ -1814,13 +1793,13 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2><code>str_extract()</code></h2>
 <p><code>str_extract()</code> is an <strong>R</strong> function in the <strong>stringr</strong> package which can find <em>regular expressions</em> in strings of text.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb125"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;cat&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;cat&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb127"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb127-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;3&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb126"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;3&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;3&quot;</code></pre>
 </div>
@@ -1830,19 +1809,19 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Matching multiple options</h2>
 <p><code>str_extract()</code> returns the first match; <code>str_extract_all()</code> allows more than one match.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb129"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb129-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb128"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;cat&quot;</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb131"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb131-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb130"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;dog&quot;</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb133"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old, my cat is 3 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old, my cat is 3 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;dog&quot;</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb135"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a aria-label="1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;My dog is 10 years old, my cat is 3 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a aria-label="1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;My dog is 10 years old, my cat is 3 years old&quot;</span>, <span class="st">&quot;cat|dog&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] &quot;dog&quot; &quot;cat&quot;</code></pre>
@@ -1853,28 +1832,28 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Matching groups of characters</h2>
 <p>What if I want to extract a <em>number</em>?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb137"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;3&quot;</code></pre>
 </div>
 </div>
 <p>What will the result be for the following code?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb139"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="matching-groups-of-characters-1" class="slide level2">
 <h2>Matching groups of characters</h2>
 <p>What if I want to extract a <em>number</em>?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb139"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;3&quot;</code></pre>
 </div>
 </div>
 <p>What will the result be for the following code?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb142"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb141"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;1&quot;</code></pre>
 </div>
@@ -1884,21 +1863,21 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Matching groups of characters</h2>
 <p>What if I want to extract a <em>number</em>?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb144"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb143"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;3&quot;</code></pre>
 </div>
 </div>
 <p>What will the result be for the following code?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb146"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;1&quot;</code></pre>
 </div>
 </div>
 <p>The <code>+</code> symbol in a regular expression means “repeated one or more times”</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb148"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;My dog is 10 years old&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;10&quot;</code></pre>
 </div>
@@ -1907,8 +1886,8 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <section id="extracting-from-multiple-strings" class="slide level2">
 <h2>Extracting from multiple strings</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb150"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb150-1"><a aria-label="1"></a>strings <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;My dog is 10 years old&quot;</span>)</span>
-<span id="cb150-2"><a aria-label="2"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb149"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a aria-label="1"></a>strings <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;My dog is 10 years old&quot;</span>)</span>
+<span id="cb149-2"><a aria-label="2"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;3&quot;  &quot;10&quot;</code></pre>
 </div>
@@ -1918,23 +1897,23 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting from multiple strings</h2>
 <p>What if we have multiple instances across multiple strings? We need to be careful working with lists (instead of vectors).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb152"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a aria-label="1"></a>strings <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;My dog is 10 years old&quot;</span>)</span>
-<span id="cb152-2"><a aria-label="2"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span>
-<span id="cb152-3"><a aria-label="3"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span>
-<span id="cb152-4"><a aria-label="4"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span>
-<span id="cb152-5"><a aria-label="5"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb151"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb151-1"><a aria-label="1"></a>strings <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;My dog is 10 years old&quot;</span>)</span>
+<span id="cb151-2"><a aria-label="2"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span>
+<span id="cb151-3"><a aria-label="3"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span>
+<span id="cb151-4"><a aria-label="4"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span>
+<span id="cb151-5"><a aria-label="5"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="extracting-from-multiple-strings-2" class="slide level2">
 <h2>Extracting from multiple strings</h2>
 <p>What if we have multiple instances across multiple strings? We need to be careful working with lists (instead of vectors).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb153"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb153-1"><a aria-label="1"></a>strings <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;My dog is 10 years old&quot;</span>)</span>
-<span id="cb153-2"><a aria-label="2"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb152"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a aria-label="1"></a>strings <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;My cat is 3 years old&quot;</span>, <span class="st">&quot;My dog is 10 years old&quot;</span>)</span>
+<span id="cb152-2"><a aria-label="2"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;M&quot; &quot;M&quot;</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb155"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb155-1"><a aria-label="1"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb154"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a aria-label="1"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
  [1] &quot;M&quot; &quot;y&quot; &quot;c&quot; &quot;a&quot; &quot;t&quot; &quot;i&quot; &quot;s&quot; &quot;3&quot; &quot;y&quot; &quot;e&quot; &quot;a&quot; &quot;r&quot; &quot;s&quot; &quot;o&quot; &quot;l&quot; &quot;d&quot;
@@ -1942,11 +1921,11 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 [[2]]
  [1] &quot;M&quot; &quot;y&quot; &quot;d&quot; &quot;o&quot; &quot;g&quot; &quot;i&quot; &quot;s&quot; &quot;1&quot; &quot;0&quot; &quot;y&quot; &quot;e&quot; &quot;a&quot; &quot;r&quot; &quot;s&quot; &quot;o&quot; &quot;l&quot; &quot;d&quot;</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb157"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb157-1"><a aria-label="1"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb156"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a aria-label="1"></a><span class="fu">str_extract</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;My&quot; &quot;My&quot;</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb159"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb159-1"><a aria-label="1"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb158"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a aria-label="1"></a><span class="fu">str_extract_all</span>(strings, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] &quot;My&quot;    &quot;cat&quot;   &quot;is&quot;    &quot;3&quot;     &quot;years&quot; &quot;old&quot;  
@@ -1960,7 +1939,7 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting episode information</h2>
 <p>Currently, the <code>episode</code> column contains entries like:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb161"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a aria-label="1"></a><span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb160"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb160-1"><a aria-label="1"></a><span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>How would I extract just the episode number?</p>
 </section>
@@ -1968,11 +1947,11 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting episode information</h2>
 <p>Currently, the <code>episode</code> column contains entries like:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb162"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a aria-label="1"></a><span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb161"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a aria-label="1"></a><span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>How would I extract just the episode number?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb163"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb163-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb162"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;2&quot;</code></pre>
 </div>
@@ -1982,7 +1961,7 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting episode information</h2>
 <p>Currently, the <code>episode</code> column contains entries like:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb165-1"><a aria-label="1"></a><span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb164"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb164-1"><a aria-label="1"></a><span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>How would I extract the episode name?</p>
 <p>Goal: find a pattern to match: <em>anything</em> that starts with a <code>:</code>, ends with a <code>.</code></p>
@@ -1992,32 +1971,32 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting episode information</h2>
 <p>How can we find the period at the end of the sentence? What does each of these lines of code return?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb166"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb166-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb165-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb167"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb166"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb166-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb168"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb168-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb167"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="extracting-episode-information---solution" class="slide level2">
 <h2>Extracting episode information - solution</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb169"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb169-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb168"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb168-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;E&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb171"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb171-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb170"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb170-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</code></pre>
 </div>
 </div>
 <p>We use an <em>escape character</em> when we actually want to choose a period:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb173"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb173-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb172"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;.&quot;</code></pre>
 </div>
@@ -2027,7 +2006,7 @@ Figure 3: Taskmaster Wiki https://taskmaster.fandom.com/wiki/Series_11
 <h2>Extracting episode information</h2>
 <p>Goal: find a pattern to match: <em>anything</em> that starts with a <code>:</code>, ends with a <code>.</code></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb175"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb175-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;:.+</span><span class="sc">\\</span><span class="st">.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb174"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb174-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;:.+</span><span class="sc">\\</span><span class="st">.&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;: The pie whisperer.&quot;</code></pre>
 </div>
@@ -2043,13 +2022,13 @@ Figure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular
 <h2>Lookbehinds</h2>
 <p><code>(?&lt;=y)x</code> – <em>positive lookbehind</em> (matches ‘x’ when it is preceded by ‘y’)</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb177"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb177-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;(?&lt;=: ).+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb176"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb176-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;(?&lt;=: ).+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;The pie whisperer. (4 August 2015)&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb179"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb179-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;(?&lt;=</span><span class="sc">\\</span><span class="st">. ).+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb178"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb178-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;(?&lt;=</span><span class="sc">\\</span><span class="st">. ).+&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;(4 August 2015)&quot;</code></pre>
 </div>
@@ -2059,13 +2038,13 @@ Figure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular
 <h2>Lookaheads</h2>
 <p><code>x(?=y)</code> – <em>positive lookahead</em> (matches ‘x’ when it is followed by ‘y’)</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb181"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb181-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+(?=</span><span class="sc">\\</span><span class="st">.)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb180"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb180-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+(?=</span><span class="sc">\\</span><span class="st">.)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;Episode 2: The pie whisperer&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb183"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb183-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+(?=:)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb182"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb182-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;.+(?=:)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;Episode 2&quot;</code></pre>
 </div>
@@ -2075,7 +2054,7 @@ Figure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular
 <h2>Extracting episode information</h2>
 <p>Getting everything between the <code>:</code> and the <code>.</code></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb185"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb185-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;(?&lt;=: ).+(?=</span><span class="sc">\\</span><span class="st">.)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb184"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb184-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, <span class="st">&quot;(?&lt;=: ).+(?=</span><span class="sc">\\</span><span class="st">.)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;The pie whisperer&quot;</code></pre>
 </div>
@@ -2085,16 +2064,16 @@ Figure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular
 <h2>Extracting air date</h2>
 <p>I want to extract just the air date. What pattern do I want to match?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb187"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb187-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb186"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb186-1"><a aria-label="1"></a><span class="fu">str_extract</span>(<span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="extracting-air-date-1" class="slide level2">
 <h2>Extracting air date</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb188"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb188-1"><a aria-label="1"></a><span class="fu">str_extract</span>(</span>
-<span id="cb188-2"><a aria-label="2"></a>  <span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>,</span>
-<span id="cb188-3"><a aria-label="3"></a>  <span class="st">&quot;(?&lt;=</span><span class="sc">\\</span><span class="st">().+(?=</span><span class="sc">\\</span><span class="st">))&quot;</span></span>
-<span id="cb188-4"><a aria-label="4"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb187"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb187-1"><a aria-label="1"></a><span class="fu">str_extract</span>(</span>
+<span id="cb187-2"><a aria-label="2"></a>  <span class="st">&quot;Episode 2: The pie whisperer. (4 August 2015)&quot;</span>,</span>
+<span id="cb187-3"><a aria-label="3"></a>  <span class="st">&quot;(?&lt;=</span><span class="sc">\\</span><span class="st">().+(?=</span><span class="sc">\\</span><span class="st">))&quot;</span></span>
+<span id="cb187-4"><a aria-label="4"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;4 August 2015&quot;</code></pre>
 </div>
@@ -2126,14 +2105,14 @@ Figure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular
 <h2>Wrangling the episode info</h2>
 <p>One option:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb191"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb191-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span></span>
-<span id="cb191-2"><a aria-label="2"></a>  <span class="fu">select</span>(episode) <span class="sc">|&gt;</span></span>
-<span id="cb191-3"><a aria-label="3"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb191-4"><a aria-label="4"></a>    <span class="at">episode_name =</span> <span class="fu">str_extract</span>(episode, <span class="st">&quot;(?&lt;=: ).+(?=</span><span class="sc">\\</span><span class="st">.)&quot;</span>),</span>
-<span id="cb191-5"><a aria-label="5"></a>    <span class="at">air_date =</span> <span class="fu">str_extract</span>(episode, <span class="st">&quot;(?&lt;=</span><span class="sc">\\</span><span class="st">().+(?=</span><span class="sc">\\</span><span class="st">))&quot;</span>),</span>
-<span id="cb191-6"><a aria-label="6"></a>    <span class="at">episode =</span> <span class="fu">str_extract</span>(episode, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span>
-<span id="cb191-7"><a aria-label="7"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb191-8"><a aria-label="8"></a>  <span class="fu">mutate</span>(<span class="at">air_date2 =</span> <span class="fu">dmy</span>(air_date))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb190"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb190-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span></span>
+<span id="cb190-2"><a aria-label="2"></a>  <span class="fu">select</span>(episode) <span class="sc">|&gt;</span></span>
+<span id="cb190-3"><a aria-label="3"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb190-4"><a aria-label="4"></a>    <span class="at">episode_name =</span> <span class="fu">str_extract</span>(episode, <span class="st">&quot;(?&lt;=: ).+(?=</span><span class="sc">\\</span><span class="st">.)&quot;</span>),</span>
+<span id="cb190-5"><a aria-label="5"></a>    <span class="at">air_date =</span> <span class="fu">str_extract</span>(episode, <span class="st">&quot;(?&lt;=</span><span class="sc">\\</span><span class="st">().+(?=</span><span class="sc">\\</span><span class="st">))&quot;</span>),</span>
+<span id="cb190-6"><a aria-label="6"></a>    <span class="at">episode =</span> <span class="fu">str_extract</span>(episode, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span>
+<span id="cb190-7"><a aria-label="7"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb190-8"><a aria-label="8"></a>  <span class="fu">mutate</span>(<span class="at">air_date2 =</span> <span class="fu">dmy</span>(air_date))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 270 × 4
    episode episode_name        air_date      air_date2 
@@ -2156,20 +2135,20 @@ Figure 4: Image credit: Stefan Judis https://www.stefanjudis.com/blog/a-regular
 <h2>Wrangling the episode info</h2>
 <p>Another option:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb193"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb193-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span></span>
-<span id="cb193-2"><a aria-label="2"></a>  <span class="fu">separate_wider_regex</span>(</span>
-<span id="cb193-3"><a aria-label="3"></a>    episode,</span>
-<span id="cb193-4"><a aria-label="4"></a>    <span class="at">patterns =</span> <span class="fu">c</span>(</span>
-<span id="cb193-5"><a aria-label="5"></a>      <span class="st">&quot;.+ &quot;</span>,</span>
-<span id="cb193-6"><a aria-label="6"></a>      <span class="at">episode =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>,</span>
-<span id="cb193-7"><a aria-label="7"></a>      <span class="st">&quot;: &quot;</span>,</span>
-<span id="cb193-8"><a aria-label="8"></a>      <span class="at">episode_name =</span> <span class="st">&quot;.+&quot;</span>,</span>
-<span id="cb193-9"><a aria-label="9"></a>      <span class="st">&quot;</span><span class="sc">\\</span><span class="st">. </span><span class="sc">\\</span><span class="st">(&quot;</span>,</span>
-<span id="cb193-10"><a aria-label="10"></a>      <span class="at">air_date =</span> <span class="st">&quot;.+&quot;</span>,</span>
-<span id="cb193-11"><a aria-label="11"></a>      <span class="st">&quot;</span><span class="sc">\\</span><span class="st">)&quot;</span></span>
-<span id="cb193-12"><a aria-label="12"></a>    )</span>
-<span id="cb193-13"><a aria-label="13"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb193-14"><a aria-label="14"></a>  <span class="fu">mutate</span>(<span class="at">air_date2 =</span> <span class="fu">dmy</span>(air_date))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb192"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb192-1"><a aria-label="1"></a>results <span class="sc">|&gt;</span></span>
+<span id="cb192-2"><a aria-label="2"></a>  <span class="fu">separate_wider_regex</span>(</span>
+<span id="cb192-3"><a aria-label="3"></a>    episode,</span>
+<span id="cb192-4"><a aria-label="4"></a>    <span class="at">patterns =</span> <span class="fu">c</span>(</span>
+<span id="cb192-5"><a aria-label="5"></a>      <span class="st">&quot;.+ &quot;</span>,</span>
+<span id="cb192-6"><a aria-label="6"></a>      <span class="at">episode =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>,</span>
+<span id="cb192-7"><a aria-label="7"></a>      <span class="st">&quot;: &quot;</span>,</span>
+<span id="cb192-8"><a aria-label="8"></a>      <span class="at">episode_name =</span> <span class="st">&quot;.+&quot;</span>,</span>
+<span id="cb192-9"><a aria-label="9"></a>      <span class="st">&quot;</span><span class="sc">\\</span><span class="st">. </span><span class="sc">\\</span><span class="st">(&quot;</span>,</span>
+<span id="cb192-10"><a aria-label="10"></a>      <span class="at">air_date =</span> <span class="st">&quot;.+&quot;</span>,</span>
+<span id="cb192-11"><a aria-label="11"></a>      <span class="st">&quot;</span><span class="sc">\\</span><span class="st">)&quot;</span></span>
+<span id="cb192-12"><a aria-label="12"></a>    )</span>
+<span id="cb192-13"><a aria-label="13"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb192-14"><a aria-label="14"></a>  <span class="fu">mutate</span>(<span class="at">air_date2 =</span> <span class="fu">dmy</span>(air_date))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">

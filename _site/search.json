@@ -1446,7 +1446,7 @@
     "href": "slides/2026-10-05-regex.html#scraping-and-wrangling-taskmaster",
     "title": "Regular Expressions",
     "section": "Scraping and wrangling Taskmaster",
-    "text": "Scraping and wrangling Taskmaster\nGoal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.1\nThanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/"
+    "text": "Scraping and wrangling Taskmaster\nGoal: to scrape the Taskmaster wiki into a data frame including task, description, episode, episode name, air date, contestant, score, and series.1\n\nlibrary(httr)\nresp &lt;- GET(\n  \"https://taskmaster.fandom.com/api.php\",\n  query = list(\n    action = \"parse\",\n    page = \"Series_11\",\n    format = \"json\"\n  )\n)\n\nresult &lt;- content(resp, as = \"parsed\")\nhtml_content &lt;- result$parse$text$`*`\n\nresults &lt;- read_html(html_content) |&gt;\n  html_element(\".tmtable\") |&gt;\n  html_table() |&gt;\n  mutate(episode = if_else(startsWith(Task, \"Episode\"), Task, NA)) |&gt;\n  fill(episode, .direction = \"down\") |&gt;\n  filter(\n    !startsWith(Task, \"Episode\"),\n    !(Task %in% c(\"Total\", \"Grand Total\"))\n  ) |&gt;\n  pivot_longer(\n    cols = -c(Task, Description, episode),\n    names_to = \"contestant\",\n    values_to = \"score\"\n  ) |&gt;\n  mutate(series = 11)\n\nThanks to Ciaran Evans at Wake Forest University for example and code, https://sta279-f23.github.io/"
   },
   {
     "objectID": "slides/2026-10-05-regex.html#scraping-and-wrangling-taskmaster-data---results",
