@@ -223,6 +223,47 @@ colors()
 
 :::
 
+## Functions with default arguments
+
+Some functions have defaults for their arguments
+
+::: {.panel-tabset}
+
+## seq
+
+returns a sequence from 1 to 1
+```{r}
+seq()
+```
+
+## column
+
+returns an empty column
+
+```{r}
+c()
+```
+
+## data frame
+
+returns an empty data frame
+
+```{r}
+data.frame()
+```
+
+## tibble
+
+returns an empty data frame 
+
+```{r}
+tibble()
+```
+
+:::
+
+
+
 ## Returning a value
 
 ::: {.panel-tabset}
