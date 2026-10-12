@@ -16,7 +16,8 @@ execute:
 --- 
 
 
-```{r include=FALSE}
+```{r}
+#| echo: false
 source("../_common.R")
 options(pillar.width = 70)
 ```
@@ -27,6 +28,7 @@ options(pillar.width = 70)
 
 
 1. R functions
+2. The `map()` function (?)
 
 ## Data Conclusions
 
@@ -163,6 +165,62 @@ my_power()
 ```{r}
 my_power()
 ```
+:::
+
+## Functions without arguments
+
+Some functions don't need arguments.
+
+::: {.panel-tabset}
+
+## date
+
+date as a text string
+```{r}
+date()
+```
+
+## date
+
+date as a date object
+
+```{r}
+Sys.Date()
+```
+
+## time
+
+date-time object
+
+```{r}
+Sys.time()
+```
+
+
+## packages
+ 
+lists all installed packages
+
+```{r}
+installed.packages()
+```
+
+## citation
+
+how to cite R
+
+```{r}
+citation()
+```
+
+## colors
+
+all named colors
+
+```{r}
+colors()
+```
+
 :::
 
 ## Returning a value
