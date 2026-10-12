@@ -48,7 +48,27 @@ schedule <- tribble(
   '<a href = "https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us" target = "_blank">Food Security Supplement (FSS) to the Current Population Survey (CPS)</a>', 
   '12-31-2024' , 
   'In September 2025, the <a href = "https://www.fna.usda.gov/newsroom/usda-0219.25" target = "_blank"> USDA terminated</a> the FSS as "redundant, costly, politicized, and extraneous". <a href = "https://frac.org/blog/threats-to-food-security-data-why-the-redundancy-claim-doesnt-hold-up" target = "_blank">Historically</a>, failing to measure hunger allows policy makers to downplay growing hardship.',
-  '10-05-2026'
+  '10-05-2026',
+
+  '<a href = "https://www.consumerfinance.gov/data-research/consumer-complaints/" target = "_blank">Consumer Financial Protection Bureau (CFPB) Consumer Complaint Database</a>', 
+  '08-14-2026' , 
+  'The <a href = "https://www.consumerfinance.gov/about-us/newsroom/the-cfpb-to-cease-discretionary-publication-of-complaint-narratives-and-visualizations/" target = "_blank">CFPB removed</a> the free-text descriptions consumers write about what happened, in their own words, and the charts and trend views in the database’s web interface.',
+  '10-12-2026'
+
+)
+```
+
+
+```{r}
+#| eval: false
+#| echo: false
+
+https://dataindex.us/terminations-tracker
+
+https://www.iea.nl/studies/iea/pirls/2026
+
+Caveats: The United States has participated in every PIRLS cycle since 2001 and does not appear on IEA's published participant list for 2026, which IEA gives as 64 education systems. The contract covering PIRLS, PIAAC, and PISA was terminated for convenience on February 12, 2025 and reinstated on March 6, 2025 in a modification titled for the international assessment program; no record reinstating the PIRLS scope has been located. NCES has issued no notice cancelling U.S. participation and we have received no statement from the Department — this entry records absence from the participant list, not an announced withdrawal. Date terminated reflects the reinstatement modification that excluded PIRLS. All prior PIRLS rounds remain available.
+
 
 )
 ```
