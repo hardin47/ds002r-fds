@@ -706,6 +706,9 @@ params |>
 ```
 
 ## map
+
+generate 3 random uniforms between 0 and 1
+
 ```{r}
 params |>
   map(runif)
