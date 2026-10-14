@@ -1258,7 +1258,7 @@ Jo Hardin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a aria-label="1"></a><span class="fu">date</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;Mon Oct 12 10:26:12 2026&quot;</code></pre>
+<pre><code>[1] &quot;Wed Oct 14 09:28:50 2026&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -1267,7 +1267,7 @@ Jo Hardin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a aria-label="1"></a><span class="fu">Sys.Date</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;2026-10-12&quot;</code></pre>
+<pre><code>[1] &quot;2026-10-14&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -1276,7 +1276,7 @@ Jo Hardin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a aria-label="1"></a><span class="fu">Sys.time</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;2026-10-12 10:26:12 PDT&quot;</code></pre>
+<pre><code>[1] &quot;2026-10-14 09:28:50 PDT&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -6374,6 +6374,10 @@ Caused by error:
 </div>
 </div>
 </section>
+<section id="what-does-anonymous-mean" class="slide level2">
+<h2>What does anonymous mean?</h2>
+<p>It means that the function doesn’t have a name.</p>
+</section>
 <section id="the-same-thing-many-ways" class="slide level2">
 <h2>The same thing, many ways</h2>
 <p>Note that <code>.x</code> is the <strong>name</strong> of the first argument in <code>map()</code> (<code>.f</code> is the name of the second argument).</p>
@@ -6665,6 +6669,7 @@ Caused by error in `.f()`:
 <pre><code>[1] 0.310 0.685</code></pre>
 </div>
 </div>
+<p>See <code>?runif</code>: “n number of observations. If <code>length(n) &gt; 1</code>, the length is taken to be the number required.”</p>
 </section>
 <section id="pmap-vs-map" class="slide level2">
 <h2><code>pmap()</code> vs <code>map()</code></h2>

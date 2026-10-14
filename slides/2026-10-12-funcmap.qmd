@@ -507,6 +507,9 @@ map_dbl(.x = fastfood, .f = mean, na.rm = TRUE)
 map_dbl(.x = fastfood, .f = mean)
 ```
 
+## What does anonymous mean?
+
+It means that the function doesn't have a name.
 
 ## The same thing, many ways 
 
@@ -680,6 +683,8 @@ runif(n = c(1, 3))
 runif(n = c(10000, 12321412424))
 runif(n = c("rainbow", "unicorn"))
 ```
+
+See `?runif`:  "n number of observations. If `length(n) > 1`, the length is taken to be the number required."
 
 ## `pmap()` vs `map()`
 
