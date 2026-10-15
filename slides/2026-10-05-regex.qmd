@@ -178,7 +178,8 @@ str_extract(strings, "^apple pie$")
 
 
   * `.`: matches any single character, including letters, numbers, punctuation, and spaces (not new line)
-  * `[...]`: a character list, matches **any one of the characters** inside the square brackets. A `-` inside the brackets specifies a range of characters.   
+  * `[...]`: a character list, matches **any one of the characters** inside the square brackets. A `-` inside the brackets specifies a range of characters.  
+  * Note: if the dash `-` is last in the character list, it will match to a dash:  `[A-Z-]` 
   * `[^...]`: an inverted character list, similar to `[...]`, but matches any characters __except__ those inside the square brackets.  
   * `\`: suppress the special meaning of metacharacters in regular expression, i.e. `$ * + . ? [ ] ^ { } | ( ) \`. Since `\` itself needs to be escaped in R, we need to escape metacharacters with double backslash like `\\$`.   
   * `|`: an "or" operator, matches patterns on either side of the `|`.  
@@ -245,8 +246,10 @@ Character classes allow specifying entire classes of characters, such as numbers
   * `\s`: whitespace.  
   * `\S`: not whitespace.  
   * `[:punct:]`: punctuation characters, ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~.
+
+  <!--
   * `[:graph:]`: graphical (human readable) characters: equivalent to `[[:alnum:][:punct:]]`.
-  * `[:print:]`: printable characters, equivalent to `[[:alnum:][:punct:]\\s]`.
+  * `[:print:]`: printable characters, equivalent to `[[:alnum:][:punct:]\\s]`.-->
   
 ## Case sensitivity
 

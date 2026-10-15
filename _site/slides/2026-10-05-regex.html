@@ -1332,6 +1332,7 @@ Jo Hardin
 <li><code>.</code>: matches any single character, including letters, numbers, punctuation, and spaces (not new line)</li>
 <li><code>[...]</code>: a character list, matches <strong>any one of the characters</strong> inside the square brackets. A <code>-</code> inside the brackets specifies a range of characters.<br>
 </li>
+<li>Note: if the dash <code>-</code> is last in the character list, it will match to a dash: <code>[A-Z-]</code></li>
 <li><code>[^...]</code>: an inverted character list, similar to <code>[...]</code>, but matches any characters <strong>except</strong> those inside the square brackets.<br>
 </li>
 <li><code>\</code>: suppress the special meaning of metacharacters in regular expression, i.e. <code>$ * + . ? [ ] ^ { } | ( ) \</code>. Since <code>\</code> itself needs to be escaped in R, we need to escape metacharacters with double backslash like <code>\\$</code>.<br>
@@ -1448,9 +1449,10 @@ Jo Hardin
 <li><code>\S</code>: not whitespace.<br>
 </li>
 <li><code>[:punct:]</code>: punctuation characters, ! ” # $ % &amp; ’ ( ) * + , - . / : ; &lt; = &gt; ? @ [  ] ^ _ ` { | } ~.</li>
-<li><code>[:graph:]</code>: graphical (human readable) characters: equivalent to <code>[[:alnum:][:punct:]]</code>.</li>
-<li><code>[:print:]</code>: printable characters, equivalent to <code>[[:alnum:][:punct:]\\s]</code>.</li>
 </ul>
+<p><!--
+  * `[:graph:]`: graphical (human readable) characters: equivalent to `[[:alnum:][:punct:]]`.
+  * `[:print:]`: printable characters, equivalent to `[[:alnum:][:punct:]\\s]`.--></p>
 </section>
 <section id="case-sensitivity" class="slide level2">
 <h2>Case sensitivity</h2>
