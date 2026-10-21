@@ -90,14 +90,14 @@ schedule <- tribble(
 
   "Week 7 <br> 10.12.26",
   'functions + <br> iteration',
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-10-12-funcmap.html" target = "_blank">functions + iteration</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws10_ds2_f26_funcs.pdf" target = "_blank">WS 10 - functions</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/functions" target = "_blank"> R4DS Fuctions</a> <br>  {{< fa book-open >}} <a href="https://r4ds.hadley.nz/iteration" target = "_blank"> R4DS Iteration</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Functions + Iteration</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-10-12-funcmap.html" target = "_blank">functions + iteration</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws10_ds2_f26_funcs.pdf" target = "_blank">WS 10 - functions</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws11_ds2_f26_map.pdf" target = "_blank">WS 11 - map</a>',
 
   '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project2">Project 2</a> - due 10.14.26',
   ' ',
 
   "Week 8 <br> 10.19.26",
   'fall break + <br> code review + <br> reprex',
-  '{{< fa book-open >}} <a href="https://www.tidyverse.org/help/" target = "_blank"> reproducible examples</a> <br>  {{< fa book-open >}} <a href="https://style.tidyverse.org/" target = "_blank"> Tidyverse style guide</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/16-reprex.html" target = "_blank">Reproducible examples</a> <br> {{< fa desktop >}} <a href="" target = "_blank">help me help you</a>',
+  '{{< fa book-open >}} <a href="https://www.tidyverse.org/help/" target = "_blank"> reproducible examples</a> <br>  {{< fa book-open >}} <a href="https://style.tidyverse.org/" target = "_blank"> Tidyverse style guide</a> <br>  {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/16-reprex.html" target = "_blank">Reproducible examples</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-10-19-help.html" target = "_blank">help me help you</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws12_ds2_f26_reprex.pdf" target = "_blank">WS 12 - reprex</a>',
   ' ',
   ' ',
 

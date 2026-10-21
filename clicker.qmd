@@ -1818,6 +1818,8 @@ jan31 + months(0:11) + days(31)
 ```{r}
 #| eval: false
 #| echo: true
+
+# fmt: skip file
 # 1
 day_one
 day_1
@@ -1843,12 +1845,14 @@ mean <- function(x) sum(x)
 ```{r}
 #| eval: false
 #| echo: true
+
+# fmt: skip file
 # 1
 mean(x, na.rm = TRUE)
 
 # 2
-mean(x, na.rm = TRUE)
-mean(x, na.rm = TRUE)
+mean (x, na.rm = TRUE)
+mean( x, na.rm = TRUE )
 ```
    
 [^67b]: a. 1
@@ -1863,13 +1867,14 @@ mean(x, na.rm = TRUE)
 #| eval: false
 #| echo: true
 
+# fmt: skip file
 # 1
 height <- feet * 12 + inches
 mean(x, na.rm = TRUE)
 
 # 2
-height <- (feet * 12) + inches
-mean(x, na.rm = TRUE)
+height<-(feet*12)+inches
+mean(x,na.rm=TRUE)
 ```
 
 [^67c]: b. 2
@@ -1883,6 +1888,8 @@ mean(x, na.rm = TRUE)
 ```{r}
 #| eval: false
 #| echo: true
+
+# fmt: skip file
 # 1
 do_something_very_complicated(
   something = "that",
@@ -1891,13 +1898,7 @@ do_something_very_complicated(
 )
 
 # 2
-do_something_very_complicated(
-  "that",
-  requires,
-  many,
-  arguments,
-  "some of which may be long"
-)
+do_something_very_complicated("that", requires, many, arguments, "some of which may be long")
 ```
 
 [^67d]: a. 1
@@ -1913,6 +1914,7 @@ do_something_very_complicated(
 #| eval: false
 #| echo: true
 
+# fmt: skip file
 # 1
 iris |>
   summarise(
@@ -1923,11 +1925,7 @@ iris |>
 
 # 2
 iris |>
-  summarise(
-    Sepal.Length = mean(Sepal.Length),
-    Sepal.Width = mean(Sepal.Width),
-    .by = Species
-  )
+  summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)
 ```
 
 [^67e]: b. 2

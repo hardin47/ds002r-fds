@@ -1,7 +1,7 @@
 ---
 title: "Help me help you"
 author: "Jo Hardin"
-subtitle: "October 15, 2025"
+subtitle: "October 21, 2026"
 format: 
   revealjs:
     incremental: false
@@ -15,7 +15,7 @@ execute:
 --- 
 
 
-# Agenda 10/15/25
+# Agenda 10/21/26
 
 1. Reproducible examples (`reprex()`)
 2. Code style
@@ -66,16 +66,16 @@ jan31 + months(0:11) + days(31)
 Code: 
 ```{r}
 #| eval: false
-  jan31 <- ymd("2021-01-31")
-  jan31 + months(0:11) + days(31)
+jan31 <- ymd("2021-01-31")
+jan31 + months(0:11) + days(31)
 ```
 
 Output of `reprex()`:
 ```{r}
 #| eval: false
-  jan31 <- ymd("2021-01-31")
+jan31 <- ymd("2021-01-31")
 #> Error in ymd("2021-01-31"): could not find function "ymd"
-  jan31 + months(0:11) + days(31)
+jan31 + months(0:11) + days(31)
 #> Error in eval(expr, envir, enclos): object 'jan31' not found
 ```
 
@@ -84,23 +84,23 @@ Output of `reprex()`:
 Code:
 ```{r}
 #| eval: false
-  library(lubridate)
-  jan31 <- ymd("2021-01-31")
-  jan31 + months(0:11) + days(31)
+library(lubridate)
+jan31 <- ymd("2021-01-31")
+jan31 + months(0:11) + days(31)
 ```
 
 Output of `reprex()`:
 ```{r}
 #| eval: false
 
-  library(lubridate)
-#> 
+library(lubridate)
+#>
 #> Attaching package: 'lubridate'
 #> The following objects are masked from 'package:base':
-#> 
+#>
 #>     date, intersect, setdiff, union
-  jan31 <- ymd("2021-01-31")
-  jan31 + months(0:11) + days(31)
+jan31 <- ymd("2021-01-31")
+jan31 + months(0:11) + days(31)
 #>  [1] "2021-03-03" NA           "2021-05-01" NA           "2021-07-01"
 #>  [6] NA           "2021-08-31" "2021-10-01" NA           "2021-12-01"
 #> [11] NA           "2022-01-31"
@@ -172,6 +172,8 @@ Do not put spaces inside or outside parentheses for regular function calls.
 
 ```{r}
 #| eval: false
+
+# fmt: skip file
 # Good
 mean(x, na.rm = TRUE)
 
@@ -187,13 +189,15 @@ Most infix operators (`==`, `+`, `-`, `<-`, etc.) should always be surrounded by
 
 ```{r}
 #| eval: false
+
+# fmt: skip file
 # Good
 height <- (feet * 12) + inches
 mean(x, na.rm = TRUE)
 
 # Bad
-height<-feet*12+inches
-mean(x, na.rm=TRUE)
+height<-(feet*12)+inches
+mean(x,na.rm=TRUE)
 ```
 
 ## Long function calls
@@ -202,6 +206,8 @@ If a function call is too long to fit on a single line, use one line each for th
 
 ```{r}
 #| eval: false
+
+# fmt: skip file
 # Good
 do_something_very_complicated(
   something = "that",
@@ -210,9 +216,7 @@ do_something_very_complicated(
 )
 
 # Bad
-do_something_very_complicated("that", requires, many, arguments,
-                              "some of which may be long"
-                              )
+do_something_very_complicated("that", requires, many, arguments, "some of which may be long")
 ```
 
 
@@ -222,6 +226,8 @@ If the arguments to a function don't all fit on one line, put each argument on i
 
 ```{r}
 #| eval: false
+
+# fmt: skip file
 # Good
 iris |>
   summarise(
@@ -235,12 +241,7 @@ iris |>
   summarise(Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)
 
 # Also bad
-summarise(
-  iris,
-  Sepal.Length = mean(Sepal.Length),
-  Sepal.Width = mean(Sepal.Width),
-  .by = Species
-)
+summarise(iris, Sepal.Length = mean(Sepal.Length), Sepal.Width = mean(Sepal.Width), .by = Species)
 ```
 
 ## Short lines (piping)
