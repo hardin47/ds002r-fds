@@ -595,7 +595,14 @@ out3
 
 ## `map_*()` variants (input)
 
-```{r,echo=FALSE,warning=FALSE,message=FALSE}
+|                      | List     | Logical       | Numeric       | Character     |
+|----------------------|----------|---------------|---------------|---------------|
+| One argument         | `map()`  | `map_lgl()`   | `map_dbl()`   | `map_chr()`   |
+| Two arguments        | `map2()` | `map2_lgl()`  | `map2_dbl()`  | `map2_chr()`  |
+| One argument + index | `imap()` | `imap_lgl()`  | `imap_dbl()`  | `imap_chr()`  |
+| N arguments          | `pmap()` | `pmap_lgl()`  | `pmap_dbl()`  | `pmap_chr()`  |
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE, eval = FALSE}
 knitr::include_graphics(path = '../images/map_variants.png')
 ```
 We've already described the difference between the columns. Now we cover the difference between the rows.
