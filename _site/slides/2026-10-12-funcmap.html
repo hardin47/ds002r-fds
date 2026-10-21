@@ -1258,7 +1258,7 @@ Jo Hardin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a aria-label="1"></a><span class="fu">date</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;Tue Oct 20 20:07:57 2026&quot;</code></pre>
+<pre><code>[1] &quot;Wed Oct 21 14:32:02 2026&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -1267,7 +1267,7 @@ Jo Hardin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a aria-label="1"></a><span class="fu">Sys.Date</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;2026-10-20&quot;</code></pre>
+<pre><code>[1] &quot;2026-10-21&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -1276,7 +1276,7 @@ Jo Hardin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a aria-label="1"></a><span class="fu">Sys.time</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;2026-10-20 20:07:57 PDT&quot;</code></pre>
+<pre><code>[1] &quot;2026-10-21 14:32:02 PDT&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -6655,17 +6655,17 @@ Caused by error in `.f()`:
 <h2><code>pmap()</code></h2>
 <ul>
 <li><p>you can pass a named list or dataframe as arguments to a function</p></li>
-<li><p>for example <code>runif()</code> has the parameters <code>n</code>, <code>min</code> and <code>max</code></p></li>
+<li><p>for example <code>runif()</code> has the parameters <code>n</code>, <code>min</code> and <code>max</code> (in any order)</p></li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb123"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a aria-label="1"></a>params</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
-      n   min   max
+    min   max     n
   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     1     1    10
-2     2    10   100
-3     3   100  1000</code></pre>
+1     1    10     1
+2    10   100     2
+3   100  1000     3</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb125"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb125-1"><a aria-label="1"></a><span class="fu">pmap</span>(params, runif)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -6729,11 +6729,11 @@ Caused by error in `.f()`:
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb137"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a aria-label="1"></a>params</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
-      n   min   max
+    min   max     n
   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     1     1    10
-2     2    10   100
-3     3   100  1000</code></pre>
+1     1    10     1
+2    10   100     2
+3   100  1000     3</code></pre>
 </div>
 </div>
 </div>
@@ -6759,13 +6759,13 @@ Caused by error in `.f()`:
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb141"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a aria-label="1"></a>params <span class="sc">|&gt;</span></span>
 <span id="cb141-2"><a aria-label="2"></a>  <span class="fu">map</span>(runif)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$n
+<pre><code>$min
 [1] 0.213 0.365 0.715
 
-$min
+$max
 [1] 0.383 0.175 0.876
 
-$max
+$n
 [1] 0.481 0.916 0.185</code></pre>
 </div>
 </div>

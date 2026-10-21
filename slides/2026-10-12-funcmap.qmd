@@ -656,15 +656,15 @@ map2_chr(.x = fastfood, .y = names(fastfood), .f = \(x, y) {
 
 - you can pass a named list or dataframe as arguments to a function
 
-- for example `runif()` has the parameters `n`, `min` and `max`
+- for example `runif()` has the parameters `n`, `min` and `max` (in any order)
 
 ```{r}
 #| echo: false
 params <- tibble::tribble(
-  ~n , ~min , ~max ,
-   1 ,    1 ,   10 ,
-   2 ,   10 ,  100 ,
-   3 ,  100 , 1000
+  ~min , ~max , ~n ,
+     1 ,   10 ,  1 ,
+    10 ,  100 ,  2 ,
+   100 , 1000 ,  3
 )
 ```
 
