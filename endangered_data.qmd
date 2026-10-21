@@ -53,7 +53,17 @@ schedule <- tribble(
   '<a href = "https://www.consumerfinance.gov/data-research/consumer-complaints/" target = "_blank">Consumer Financial Protection Bureau (CFPB) Consumer Complaint Database</a>', 
   '08-14-2026' , 
   'The <a href = "https://www.consumerfinance.gov/about-us/newsroom/the-cfpb-to-cease-discretionary-publication-of-complaint-narratives-and-visualizations/" target = "_blank">CFPB removed</a> the free-text descriptions consumers write about what happened, in their own words, and the charts and trend views in the database’s web interface.',
-  '10-12-2026'
+  '10-12-2026',
+
+    '<a href = "https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-us" target = "_blank">Food Security Supplement (FSS) to the Current Population Survey (CPS)</a>', 
+  '12-31-2024' , 
+  'In September 2025, the <a href = "https://www.fna.usda.gov/newsroom/usda-0219.25" target = "_blank"> USDA terminated</a> the FSS as "redundant, costly, politicized, and extraneous". <a href = "https://frac.org/blog/threats-to-food-security-data-why-the-redundancy-claim-doesnt-hold-up" target = "_blank">Historically</a>, failing to measure hunger allows policy makers to downplay growing hardship.',
+  '10-05-2026',
+
+  '<a href = "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Farm_Labor/" target = "_blank">Agricultural Labor Survey<a/>', 
+  '08-28-2025' , 
+  '<a href = "https://www.federalregister.gov/documents/2025/09/03/2025-16831/discontinuance-of-information-collections" target = "_blank">National Agricultural Statistics Service (NASS)</a> canceled the Agricultural Labor Survey. The Agricultural Labor Survey <a href = "https://www.michiganfarmnews.com/usda-to-end-farm-labor-survey-in-landmark-step-toward-h-2a-aewr-modernization" target = "_blank">had been used</a> to calculate the minimum wage for H-2A workers. Losing the 150-year-old data baseline reduces transparency and harms long-term wage and labor tracking.',
+  '10-21-2026'
 
 )
 ```
