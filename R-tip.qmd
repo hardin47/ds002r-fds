@@ -116,7 +116,12 @@ schedule <- tribble(
   'Tip 19', 
   'highlight code + cmd + [  (or highlight code + cmd + [)', 
   'shifts the code left (or right)',
-  'highlight code + cntrl + [ on Windows'
+  'highlight code + cntrl + [ on Windows',
+
+  'Tip 20', 
+  'upper right of qmd, toggle to visual editor', 
+  'spell check w visual editor',
+  'cmd + , then type "spell"'
 
 )
 ```
