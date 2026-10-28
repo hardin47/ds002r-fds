@@ -63,7 +63,12 @@ schedule <- tribble(
   '<a href = "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Farm_Labor/" target = "_blank">Agricultural Labor Survey<a/>', 
   '08-28-2025' , 
   '<a href = "https://www.federalregister.gov/documents/2025/09/03/2025-16831/discontinuance-of-information-collections" target = "_blank">National Agricultural Statistics Service (NASS)</a> canceled the Agricultural Labor Survey. The Agricultural Labor Survey <a href = "https://www.michiganfarmnews.com/usda-to-end-farm-labor-survey-in-landmark-step-toward-h-2a-aewr-modernization" target = "_blank">had been used</a> to calculate the minimum wage for H-2A workers. Losing the 150-year-old data baseline reduces transparency and harms long-term wage and labor tracking.',
-  '10-21-2026'
+  '10-21-2026',
+
+  '<a href = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/WFMZWP" target = "_blank">Billion-Dollar Weather and Climate Disasters<a/>', 
+  '12-31-2024' , 
+  'NOAA <a href = "https://www.ncei.noaa.gov/access/billions/" target = "_blank">reports</a> that "in alignment with evolving priorities, statutory mandates, and staffing changes, NOAA&#39;s National Centers for Environmental Information (NCEI) will no longer be updating the Billion Dollar Weather and Climate Disasters product."',
+  '10-28-2026'
 
 )
 ```
