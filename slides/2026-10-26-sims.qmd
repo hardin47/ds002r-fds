@@ -1,7 +1,7 @@
 ---
 title: "Simulations"
 author: "Jo Hardin"
-subtitle: "October 20 + 22, 2025"
+subtitle: "October 28, 2026"
 format: 
   revealjs:
     incremental: false
@@ -18,7 +18,7 @@ bibliography:
 --- 
 
 
-# Agenda  10/20/25
+# Agenda  10/28/26
 
 1. Why simulate?
 2. Simulating to calculate probabilities
@@ -196,7 +196,6 @@ The results themselves are equivalent.  Differing values due to randomness in th
 ## `map()`
 
 ```{r}
-
 meet_map |>
   group_by(result) |>
   summarize(number = n()) |>
@@ -471,10 +470,6 @@ map(c(1:num_stud_upper), birth_match_prob, reps = num_class) |>
 * use meaningful names
 * add comments
 
-
-# Agenda  10/22/25
-
-1. Simulating for model sensitivity
 
 
 ## Simulate to...

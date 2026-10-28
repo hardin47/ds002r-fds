@@ -3762,15 +3762,15 @@
     "objectID": "slides/2026-10-26-sims.html#data-conclusions",
     "href": "slides/2026-10-26-sims.html#data-conclusions",
     "title": "Simulations",
-    "section": "",
-    "text": "Based on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
+    "section": "Data Conclusions",
+    "text": "Data Conclusions\n\nBased on https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories, original source: https://www.linkedin.com/learning/instructors/bill-shander"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#simulate-to",
     "href": "slides/2026-10-26-sims.html#simulate-to",
     "title": "Simulations",
-    "section": "",
-    "text": "… estimate probabilities (easier than calculus).\n… understand complicated models."
+    "section": "Simulate to…",
+    "text": "Simulate to…\n\n\n… estimate probabilities (easier than calculus).\n… understand complicated models."
   },
   {
     "objectID": "slides/2026-10-26-sims.html#aside-ifelse",
@@ -3783,50 +3783,50 @@
     "objectID": "slides/2026-10-26-sims.html#aside-case_when",
     "href": "slides/2026-10-26-sims.html#aside-case_when",
     "title": "Simulations",
-    "section": "",
-    "text": "set.seed(4747)\ndiamonds |&gt;\n  select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(\n    price_cat = case_when(\n      price &gt; 10000 ~ \"expensive\",\n      price &gt; 1500 ~ \"medium\",\n      TRUE ~ \"inexpensive\"\n    )\n  )\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive"
+    "section": "Aside: case_when()",
+    "text": "Aside: case_when()\n\nset.seed(4747)\ndiamonds |&gt;\n  select(carat, cut, color, price) |&gt;\n  sample_n(20) |&gt;\n  mutate(\n    price_cat = case_when(\n      price &gt; 10000 ~ \"expensive\",\n      price &gt; 1500 ~ \"medium\",\n      TRUE ~ \"inexpensive\"\n    )\n  )\n\n# A tibble: 20 × 5\n   carat cut       color price price_cat  \n   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;int&gt; &lt;chr&gt;      \n 1  1.23 Very Good F     10276 expensive  \n 2  0.35 Premium   H       706 inexpensive\n 3  0.7  Good      E      2782 medium     \n 4  0.4  Ideal     D      1637 medium     \n 5  0.53 Ideal     G      1255 inexpensive\n 6  2.22 Ideal     G     14637 expensive  \n 7  0.3  Ideal     G       878 inexpensive\n 8  1.05 Ideal     H      4223 medium     \n 9  0.53 Premium   E      1654 medium     \n10  1.7  Ideal     H      7068 medium     \n11  0.31 Good      E       698 inexpensive\n12  0.31 Ideal     F       840 inexpensive\n13  1.03 Ideal     H      4900 medium     \n14  0.31 Premium   G       698 inexpensive\n15  1.56 Premium   G      8858 medium     \n16  1.71 Premium   G     11032 expensive  \n17  1    Good      E      5345 medium     \n18  1.86 Ideal     J     10312 expensive  \n19  1.08 Very Good E      3726 medium     \n20  0.31 Premium   E       698 inexpensive"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#aside-sample",
     "href": "slides/2026-10-26-sims.html#aside-sample",
     "title": "Simulations",
-    "section": "",
-    "text": "sampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, size = 5, replace = FALSE) # sample (e.g., from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, size = 5, replace = TRUE) # sample (e.g., from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, size = 10, replace = FALSE) # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, size = 10, replace = TRUE) # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
+    "section": "Aside: sample()",
+    "text": "Aside: sample()\nsampling, shuffling, and resampling: sample()\n\nset.seed(47)\nalph &lt;- letters[1:10]\nalph\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\"\n\nsample(alph, size = 5, replace = FALSE) # sample (e.g., from a population)\n\n[1] \"i\" \"b\" \"g\" \"d\" \"a\"\n\nsample(alph, size = 5, replace = TRUE) # sample (e.g., from a population)\n\n[1] \"j\" \"g\" \"f\" \"i\" \"f\"\n\nsample(alph, size = 10, replace = FALSE) # shuffle\n\n [1] \"f\" \"h\" \"i\" \"e\" \"g\" \"d\" \"c\" \"j\" \"b\" \"a\"\n\nsample(alph, size = 10, replace = TRUE) # resample\n\n [1] \"e\" \"j\" \"e\" \"b\" \"e\" \"c\" \"f\" \"a\" \"e\" \"a\""
   },
   {
     "objectID": "slides/2026-10-26-sims.html#aside-set.seed",
     "href": "slides/2026-10-26-sims.html#aside-set.seed",
     "title": "Simulations",
-    "section": "",
-    "text": "What if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470"
+    "section": "Aside: set.seed()",
+    "text": "Aside: set.seed()\nWhat if we want to be able to generate the same random numbers (here on the interval from 0 to 1) over and over?\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470\n\nset.seed(123)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.2875775 0.7883051 0.4089769 0.8830174\n\nset.seed(4747)\nrunif(4, 0, 1) # random uniform numbers\n\n[1] 0.1949071 0.3390270 0.5147919 0.4516470"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#example-1-alex-jordan",
     "href": "slides/2026-10-26-sims.html#example-1-alex-jordan",
     "title": "Simulations",
-    "section": "",
-    "text": "Consider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer et al. 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?"
+    "section": "Example 1: Alex & Jordan",
+    "text": "Example 1: Alex & Jordan\nConsider a situation where Alex and Jordan plan to meet to study in their college campus center (Mosteller 1987; Baumer et al. 2021). They are both impatient people who will wait only 10 minutes for the other before leaving.\nBut their planning was incomplete. Alex said, “Meet me between 7 and 8 tonight at the student center.” When should Jordan plan to arrive at the campus center? And what is the probability that they actually meet?"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#simulate-their-meeting",
     "href": "slides/2026-10-26-sims.html#simulate-their-meeting",
     "title": "Simulations",
-    "section": "",
-    "text": "Assume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada) {\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)\n  ) |&gt;\n    mutate(\n      result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n    )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt;\n  map(meet_func) |&gt;\n  list_rbind()\ntoc()\n\n34.212 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor (i in c(1:n)) {\n  meet_for &lt;- meet_for |&gt;\n    rbind(\n      data.frame(\n        alex = runif(1, min = 0, max = 60),\n        jordan = runif(1, min = 0, max = 60)\n      ) |&gt;\n        mutate(\n          result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n        )\n    )\n}\ntoc()\n\n149.679 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)\n) |&gt;\n  mutate(result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\"))\ntoc()\n\n0.002 sec elapsed"
+    "section": "Simulate their meeting",
+    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada) {\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)\n  ) |&gt;\n    mutate(\n      result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n    )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt;\n  map(meet_func) |&gt;\n  list_rbind()\ntoc()\n\n35.334 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor (i in c(1:n)) {\n  meet_for &lt;- meet_for |&gt;\n    rbind(\n      data.frame(\n        alex = runif(1, min = 0, max = 60),\n        jordan = runif(1, min = 0, max = 60)\n      ) |&gt;\n        mutate(\n          result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n        )\n    )\n}\ntoc()\n\n143.648 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)\n) |&gt;\n  mutate(result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\"))\ntoc()\n\n0.002 sec elapsed"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#results",
     "href": "slides/2026-10-26-sims.html#results",
     "title": "Simulations",
-    "section": "",
-    "text": "The results themselves are equivalent. Differing values due to randomness in the simulation.\n\nmap()for() loopvectorized\n\n\n\nmeet_map |&gt;\n  group_by(result) |&gt;\n  summarize(number = n()) |&gt;\n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt;\n  group_by(result) |&gt;\n  summarize(number = n()) |&gt;\n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306\n\n\n\n\n\nmeet_vect |&gt;\n  group_by(result) |&gt;\n  summarize(number = n()) |&gt;\n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305"
+    "section": "Results",
+    "text": "Results\nThe results themselves are equivalent. Differing values due to randomness in the simulation.\n\nmap()for() loopvectorized\n\n\n\nmeet_map |&gt;\n  group_by(result) |&gt;\n  summarize(number = n()) |&gt;\n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69600      0.696\n2 They meet    30400      0.304\n\n\n\n\n\nmeet_for |&gt;\n  group_by(result) |&gt;\n  summarize(number = n()) |&gt;\n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69408      0.694\n2 They meet    30592      0.306\n\n\n\n\n\nmeet_vect |&gt;\n  group_by(result) |&gt;\n  summarize(number = n()) |&gt;\n  mutate(proprotion = number / sum(number))\n\n# A tibble: 2 × 3\n  result      number proprotion\n  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;\n1 They do not  69529      0.695\n2 They meet    30471      0.305"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#visualizing-the-meet-up",
     "href": "slides/2026-10-26-sims.html#visualizing-the-meet-up",
     "title": "Simulations",
-    "section": "",
-    "text": "meet_map |&gt;\n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) +\n  geom_abline(intercept = 10, slope = 1) +\n  geom_abline(intercept = -10, slope = 1) +\n  scale_color_brewer(palette = \"Paired\")"
+    "section": "Visualizing the meet up",
+    "text": "Visualizing the meet up\n\nmeet_map |&gt;\n  ggplot(aes(x = jordan, y = alex, color = result)) +\n  geom_point(alpha = 0.3) +\n  geom_abline(intercept = 10, slope = 1) +\n  geom_abline(intercept = -10, slope = 1) +\n  scale_color_brewer(palette = \"Paired\")"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#step-1-representing-the-hats",
@@ -5456,8 +5456,8 @@
     "objectID": "slides/2026-10-26-sims.html#aside-if_else",
     "href": "slides/2026-10-26-sims.html#aside-if_else",
     "title": "Simulations",
-    "section": "",
-    "text": "data.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = if_else(value &gt;= 0, value, -value)) # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
+    "section": "Aside: if_else()",
+    "text": "Aside: if_else()\n\ndata.frame(value = c(-2:2)) |&gt;\n  mutate(abs_value = if_else(value &gt;= 0, value, -value)) # abs val\n\n  value abs_value\n1    -2         2\n2    -1         1\n3     0         0\n4     1         1\n5     2         2"
   },
   {
     "objectID": "slides/2026-10-05-regex.html",
