@@ -299,9 +299,11 @@ hat_match(47)
 ## Iterate
 
 ```{r}
-map_lgl(c(1:10), \(z) hat_match(n = 10))
+map_lgl(c(1:8), hat_match)
 
-map_lgl(c(1:10), \(z) hat_match(n = 10)) |>
+map_lgl(c(1:8), \(z) hat_match(n = 10))
+
+map_lgl(c(1:8), \(z) hat_match(n = 10)) |>
   mean()
 ```
 
