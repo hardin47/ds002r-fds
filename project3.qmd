@@ -17,27 +17,27 @@ d) (needs some background in introductory statistics) investigates the effects o
 
 Your simulation study should contain the following elements:
 
-- at least 1 function you've written
+- at least 1 function that you wrote
 - at least 1 `map()` variant
 - a description of the simulation. Help the reader follow what you are doing, that is, what does your function do? why would you map it? etc.
 - at least 1 illustrative, well-labeled plot
-- a description of what insights can be gained from your plot(s)
+- a description of what insights can be gained from your plot(s) / results
 
 Logistics:
 
-- work in your website .Rproj, do not start a new R Project.
-- start by describing what you plan to do (3-4 sentences). end with a description of what you did (3-4 sentences).  That is, use words to guide the reader through your analysis.
+- start by describing what you plan to do (3-4 sentences) and end with a description of what you did (3-4 sentences).  That is, use words to guide the reader through your analysis.
 - please include all your code used in the analysis (but feel free to use code folding^[code folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code]).
 - make sure that all graphs are well-labeled (including x and y axes, title of the graph, and accurate and succinct labels for color and fill).
 - do not include error or warning messages (see HW YAML for code).
 - include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
 - if you used data, include the source of the data. Include both where **you** got the data (e.g., the TidyTuesday URL) and also the original provenance of the information.
-- if you are working with a (local) copy of the .csv file (as opposed to, for example, a link to the dataset on TidyTuesday's GitHub site), then the .csv file should live in **your** GitHub repository for your website. And you should read the data in from that local copy. That is, the dataset should not live in your Downloads.
+- if you are working with a (local) copy of the .csv file (as opposed to, for example, a link to the dataset on TidyTuesday's GitHub site), then the .csv file should live in **your** GitHub repository for your website. And you should read the data in from that local copy. That is, the dataset should not live in your Downloads on your computer.
 
 
 
 
 ### Timeline
 
-Project 3 must be submitted on Canvas (not Gradescope) by **11:59 PM on Thursday October 30, 2025**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 3 should be submitted on Canvas (not Gradescope) by **11:59 PM on Thursday November 5, 2026**. For your website, you may add a new tab to your Quarto webpage or you may add the analysis under your "Data Viz" tab. Submit the new page's URL. [Remember, you should continue to work in the same folder that is connected to the GitHub website page. Do not create a new GitHub repository.]
+
 
