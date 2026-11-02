@@ -121,7 +121,17 @@ schedule <- tribble(
   'Tip 20', 
   'upper right of qmd, toggle to visual editor', 
   'spell check w visual editor',
-  'cmd + , then type "spell"'
+  'cmd + , then type "spell"',
+
+  'Tip 21', 
+  '`reprex()` does not work on the server', 
+  'can do, e.g., `reprex(rnorm(10))`',
+  'only on server, not on your personal computer',
+
+  'Tip 22', 
+  'right click on a function, peek', 
+  'will provide the function definition',
+  'works best for a function you wrote'
 
 )
 ```
