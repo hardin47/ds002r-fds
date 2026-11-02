@@ -103,14 +103,14 @@ schedule <- tribble(
 
   "Week 9 <br> 10.26.26",
   'simulations',
-  '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Simulations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-10-26-sims.html" target = "_blank">Simulations</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws13_ds2_f26_probsim.pdf" target = "_blank">WS 12 - simulations</a>',
+  '{{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/13-simulation.html" target = "_blank"> MDSR Simulations</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/12-iteration.html" target = "_blank">Simulations</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-10-26-sims.html" target = "_blank">Simulations</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws13_ds2_f26_probsim.pdf" target = "_blank">WS 13 - simulations</a>',
   '{{< fa code >}} <a href="https://github.com/orgs/ST47S-FODS-Fall206/repositories" target = "_blank">HW 5</a> - due 10.27.26 <br> <i class="fa-regular fa-circle-question"></i> Quiz 3 <b> Monday </b> 10.26.26',
 
   ' ',
 
   "Week 10 <br> 11.2.26",
   'permutation tests',
-  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/13-permutation-tests.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="l" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="" target = "_blank">Data Science Ethics</a>',
+  '{{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/13-permutation-tests.html" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="l" target = "_blank">Permutation tests</a> <br> {{< fa desktop >}} <a href="" target = "_blank">Data Science Ethics</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws14_ds2_f26_helper.pdf" target = "_blank">WS 14 - hyp test</a>',
   '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project3">Project 3</a> - due 11.5.26 (Thursday)',
   ' ',
 

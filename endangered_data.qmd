@@ -68,7 +68,14 @@ schedule <- tribble(
   '<a href = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/WFMZWP" target = "_blank">Billion-Dollar Weather and Climate Disasters<a/>', 
   '12-31-2024' , 
   'NOAA <a href = "https://www.ncei.noaa.gov/access/billions/" target = "_blank">reports</a> that "in alignment with evolving priorities, statutory mandates, and staffing changes, NOAA&#39;s National Centers for Environmental Information (NCEI) will no longer be updating the Billion Dollar Weather and Climate Disasters product."',
-  '10-28-2026'
+  '10-28-2026',
+
+  '<a href = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/WFMZWP" target = "_blank">U.S. Census<a/>', 
+  '11-02-2026' , 
+  'Substantial rule changes have been <a href = "https://handsoffourcens.us/" target = "_blank">proposed</a> for the 2030 census. The proposals address who would be included in counts used for congressional apportionment, how residence would be determined, and which demographic questions could appear on the decennial census questionnaire. You can read the proposal and the Census Bureau’s rationale in the <a href = "https://www.federalregister.gov/documents/2026/09/10/2026-18481/decennial-census-of-the-population-of-americans-proposed-residence-criteria-and-proposed-regulations" target = "_blank">Federal Register</a>. Some of the big changes: **Many residents would no longer count**: International students, work-visa holders, refugees, asylees, and other residents would be dropped from the apportionment count for the first time.
+**People counted in the wrong place**: A new January 3 to April 1 "enumeration period" and a tax-records test for where you live would miscount snowbirds, movers, rural P.O. box filers, college students, and service members.
+**No race or ethnicity data**: Asked in some form in every census since 1790, race and ethnicity questions would be prohibited. Nearly every other survey is weighted to census counts, so the loss would ripple through public health, civil rights, and business data.',
+  '11-02-2026'
 
 )
 ```
