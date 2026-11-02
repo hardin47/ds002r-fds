@@ -1,7 +1,7 @@
 ---
-title: "Permutation Tests"
+title: "Hypothesis Testing"
 author: "Jo Hardin"
-subtitle: "October 27 + 29, 2025"
+subtitle: "November 2 + 4, 2026"
 format: 
   revealjs:
     incremental: false
@@ -26,8 +26,8 @@ options(pillar.width = 70)
 ```
 
 
-# Agenda  10/27/25
-1. Hypothesis testing
+# Agenda  11/2/26
+1. Hypothesis testing (one sample)
 
 
 # Hypothesis testing
@@ -89,11 +89,10 @@ set.seed(47)
 Infants <- read.delim("http://www.rossmanchance.com/iscam3/data/InfantData.txt")
 
 # find the observed number of babies who chose the helper
-help_obs <- Infants |> 
-  summarize(prop_help = mean(choice == "helper")) |> 
+help_obs <- Infants |>
+  summarize(prop_help = mean(choice == "helper")) |>
   pull()
 help_obs
-
 ```
 
 ## Computation
@@ -104,13 +103,16 @@ Find the sampling distribution under the condition that the null hypothesis is t
 
 ## function
 ```{r}
-
-# write a function to simulate a set of infants who are 
+# write a function to simulate a set of infants who are
 # equally likely to choose the helper or the hinderer
 
-random_choice <- function(rep, num_babies){
-  choice = sample(c("helper", "hinderer"), size = num_babies,
-                  replace = TRUE, prob = c(0.5, 0.5))
+random_choice <- function(rep, num_babies) {
+  choice <- sample(
+    c("helper", "hinderer"),
+    size = num_babies,
+    replace = TRUE,
+    prob = c(0.5, 0.5)
+  )
   return(mean(choice == "helper"))
 }
 ```
@@ -121,8 +123,7 @@ random_choice <- function(rep, num_babies){
 map_dbl(c(1:10), random_choice, num_babies = 16)
 
 num_exper <- 5000
-help_random <- map_dbl(c(1:num_exper), random_choice, 
-                            num_babies = 16)
+help_random <- map_dbl(c(1:num_exper), random_choice, num_babies = 16)
 ```
 
 ## viz
@@ -130,14 +131,15 @@ help_random <- map_dbl(c(1:num_exper), random_choice,
 #| echo: false
 
 # visualize null sampling distribution
-help_random |> 
-  data.frame() |> 
-  ggplot(aes(x = help_random)) + 
-  geom_histogram() + 
-  labs(x = "proportion of babies who chose the helper",
-       title = "sampling distribution when null hypothesis is true",
-       subtitle = "that is, no inherent preference for helper or hinderer")
-
+help_random |>
+  data.frame() |>
+  ggplot(aes(x = help_random)) +
+  geom_histogram(binwidth = 0.02) +
+  labs(
+    x = "proportion of babies who chose the helper",
+    title = "sampling distribution when null hypothesis is true",
+    subtitle = "that is, no inherent preference for helper or hinderer"
+  )
 ```
 
 ## viz code
@@ -145,14 +147,15 @@ help_random |>
 #| eval: false
 
 # visualize null sampling distribution
-help_random |> 
-  data.frame() |> 
-  ggplot(aes(x = help_random)) + 
-  geom_histogram() + 
-  labs(x = "proportion of babies who chose the helper",
-       title = "sampling distribution when null hypothesis is true",
-       subtitle = "that is, no inherent preference for helper or hinderer")
-
+help_random |>
+  data.frame() |>
+  ggplot(aes(x = help_random)) +
+  geom_histogram(binwidth = 0.02) +
+  labs(
+    x = "proportion of babies who chose the helper",
+    title = "sampling distribution when null hypothesis is true",
+    subtitle = "that is, no inherent preference for helper or hinderer"
+  )
 ```
 
 :::
@@ -169,15 +172,16 @@ Are the null values consistent with the observed value?
 #| echo: false
 
 # visualize null sampling distribution
-help_random |> 
-  data.frame() |> 
-  ggplot(aes(x = help_random)) + 
-  geom_histogram() + 
-  geom_vline(xintercept = help_obs, color = "red") + 
-  labs(x = "proportion of babies who chose the helper",
-       title = "sampling distribution when null hypothesis is true",
-       subtitle = "that is, no inherent preference for helper or hinderer")
-
+help_random |>
+  data.frame() |>
+  ggplot(aes(x = help_random)) +
+  geom_histogram(binwidth = 0.02) +
+  geom_vline(xintercept = help_obs, color = "red") +
+  labs(
+    x = "proportion of babies who chose the helper",
+    title = "sampling distribution when null hypothesis is true",
+    subtitle = "that is, no inherent preference for helper or hinderer"
+  )
 ```
 
 ## p-value
@@ -192,14 +196,16 @@ sum(help_random >= help_obs) / num_exper
 #| eval: false
 
 # visualize null sampling distribution
-help_random |> 
-  data.frame() |> 
-  ggplot(aes(x = help_random)) + 
-  geom_histogram() + 
-  geom_vline(xintercept = help_obs, color = "red") + 
-  labs(x = "proportion of babies who chose the helper",
-       title = "sampling distribution when null hypothesis is true",
-       subtitle = "that is, no inherent preference for helper or hinderer")
+help_random |>
+  data.frame() |>
+  ggplot(aes(x = help_random)) +
+  geom_histogram(binwidth = 0.02) +
+  geom_vline(xintercept = help_obs, color = "red") +
+  labs(
+    x = "proportion of babies who chose the helper",
+    title = "sampling distribution when null hypothesis is true",
+    subtitle = "that is, no inherent preference for helper or hinderer"
+  )
 ```
 
 :::
@@ -232,7 +238,7 @@ help_random |>
 
 
 
-# Agenda 10/29/25
+# Agenda 11/4/26
 1. Two variable permutation tests
 
 Same hypothesis testing ideas: now we have **two** variables and we permute one of them to make the null hypothesis true.
@@ -291,17 +297,16 @@ hsb2
 ## Summary of the variables
 
 ```{r}
-hsb2 |> 
-  group_by(schtyp) |> 
-  summarize(ave_math = mean(math),
-            med_math = median(math))
+hsb2 |>
+  group_by(schtyp) |>
+  summarize(ave_math = mean(math), med_math = median(math))
 ```
 
 ## Visualize the relationship of interest
 
 ```{r}
-hsb2 |> 
-  ggplot(aes(x = schtyp, y = math)) + 
+hsb2 |>
+  ggplot(aes(x = schtyp, y = math)) +
   geom_boxplot()
 ```
 
@@ -310,41 +315,41 @@ hsb2 |>
 For fun, we are calculating both the difference in averages as well as the difference in medians.  That is, we have **two** different observed summary statistics to work with.
 
 ```{r}
-hsb2 |> 
-  group_by(schtyp) |> 
-  summarize(ave_math = mean(math),
-            med_math = median(math))
+hsb2 |>
+  group_by(schtyp) |>
+  summarize(ave_math = mean(math), med_math = median(math))
 
-hsb2 |> 
-  group_by(schtyp) |> 
-  summarize(ave_math = mean(math),
-            med_math = median(math)) |> 
-  summarize(ave_diff = diff(ave_math),
-            med_diff = diff(med_math))
-
+hsb2 |>
+  group_by(schtyp) |>
+  summarize(ave_math = mean(math), med_math = median(math)) |>
+  summarize(ave_diff = diff(ave_math), med_diff = diff(med_math))
 ```
 
 
 ## Generate a null sampling distribution.
 
 ```{r}
-perm_data <- function(rep, data){
-  data |> 
-    select(schtyp, math) |> 
-    mutate(math_perm = sample(math, replace = FALSE)) |> 
-    group_by(schtyp) |> 
-    summarize(obs_ave = mean(math),
-              obs_med = median(math),
-              perm_ave = mean(math_perm),
-              perm_med = median(math_perm)) |> 
-    summarize(obs_ave_diff = diff(obs_ave),
-              obs_med_diff = diff(obs_med),
-              perm_ave_diff = diff(perm_ave),
-              perm_med_diff = diff(perm_med),
-              rep = rep)
+perm_data <- function(rep, data) {
+  data |>
+    select(schtyp, math) |>
+    mutate(math_perm = sample(math, replace = FALSE)) |>
+    group_by(schtyp) |>
+    summarize(
+      obs_ave = mean(math),
+      obs_med = median(math),
+      perm_ave = mean(math_perm),
+      perm_med = median(math_perm)
+    ) |>
+    summarize(
+      obs_ave_diff = diff(obs_ave),
+      obs_med_diff = diff(obs_med),
+      perm_ave_diff = diff(perm_ave),
+      perm_med_diff = diff(perm_med),
+      rep = rep
+    )
 }
 
-map(c(1:10), perm_data, data = hsb2) |> 
+map(c(1:10), perm_data, data = hsb2) |>
   list_rbind()
 ```
 
@@ -353,13 +358,13 @@ map(c(1:10), perm_data, data = hsb2) |>
 
 ```{r}
 set.seed(47)
-perm_stats <- 
-  map(c(1:500), perm_data, data = hsb2) |> 
-  list_rbind() 
+perm_stats <-
+  map(c(1:500), perm_data, data = hsb2) |>
+  list_rbind()
 
-perm_stats |> 
-  ggplot(aes(x = perm_ave_diff)) + 
-  geom_histogram() + 
+perm_stats |>
+  ggplot(aes(x = perm_ave_diff)) +
+  geom_histogram(binwidth = 0.25) +
   geom_vline(aes(xintercept = obs_ave_diff), color = "red")
 ```
 
@@ -367,18 +372,20 @@ perm_stats |>
 ## Visualize the null sampling distribution (median)
 
 ```{r}
-perm_stats |> 
-  ggplot(aes(x = perm_med_diff)) + 
-  geom_histogram() + 
+perm_stats |>
+  ggplot(aes(x = perm_med_diff)) +
+  geom_histogram(binwidth = 0.25) +
   geom_vline(aes(xintercept = obs_med_diff), color = "red")
 ```
 
 ## p-value
 
 ```{r}
-perm_stats |> 
-  summarize(p_val_ave = mean(perm_ave_diff > obs_ave_diff),
-            p_val_med = mean(perm_med_diff > obs_med_diff))
+perm_stats |>
+  summarize(
+    p_val_ave = mean(perm_ave_diff > obs_ave_diff),
+    p_val_med = mean(perm_med_diff > obs_med_diff)
+  )
 ```
 
 
@@ -399,24 +406,28 @@ $H_0: \mu_{private} = \mu_{public}$ and $H_A: \mu_{private} \ne \mu_{public}$
 ```{r}
 #| echo: false
 #| fig-align: 'center'
-perm_stats |> 
-  ggplot(aes(x = perm_ave_diff)) + 
-  geom_histogram() + 
-  geom_vline(aes(xintercept = obs_ave_diff), color = "red")  +
-    geom_vline(aes(xintercept = -obs_ave_diff), color = "red")
+perm_stats |>
+  ggplot(aes(x = perm_ave_diff)) +
+  geom_histogram(binwidth = 0.25) +
+  geom_vline(aes(xintercept = obs_ave_diff), color = "red") +
+  geom_vline(aes(xintercept = -obs_ave_diff), color = "red")
 ```
 
 ## Two-sided p-value
 
 
 ```{r}
-perm_stats |> 
-    summarize(p_val_ave = 
-                mean(perm_ave_diff > obs_ave_diff | 
-                       perm_ave_diff < -obs_ave_diff),
-              p_val_med = 
-              mean(perm_med_diff > obs_med_diff | 
-                     perm_med_diff < -obs_med_diff))
+perm_stats |>
+       summarize(
+              p_val_ave = mean(
+                     perm_ave_diff > obs_ave_diff |
+                            perm_ave_diff < -obs_ave_diff
+              ),
+              p_val_med = mean(
+                     perm_med_diff > obs_med_diff |
+                            perm_med_diff < -obs_med_diff
+              )
+       )
 ```
 
 ## Two-sided conclusion

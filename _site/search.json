@@ -940,189 +940,189 @@
   {
     "objectID": "slides/2026-11-02-perm.html#example-helper-or-hinderer",
     "href": "slides/2026-11-02-perm.html#example-helper-or-hinderer",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Example: helper or hinderer",
     "text": "Example: helper or hinderer\n\nIn a study reported in the November 2007 issue of Nature, researchers investigated whether infants take into account an individual’s actions towards others in evaluating that individual as appealing or aversive, perhaps laying for the foundation for social interaction (Hamlin et al. 2007). In other words, do children who aren’t even yet talking still form impressions as to someone’s friendliness based on their actions? In one component of the study, 10-month-old infants were shown a “climber” character (a piece of wood with “googly” eyes glued onto it) that could not make it up a hill in two tries. Then the infants were shown two scenarios for the climber’s next try, one where the climber was pushed to the top of the hill by another character (the “helper” toy) and one where the climber was pushed back down the hill by another character (the “hinderer” toy). The infant was alternately shown these two scenarios several times. Then the child was presented with both pieces of wood (the helper and the hinderer characters) and asked to pick one to play with."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#example-helper-or-hinderer-1",
     "href": "slides/2026-11-02-perm.html#example-helper-or-hinderer-1",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Example: helper or hinderer",
     "text": "Example: helper or hinderer\n\nInfant videos\n“Social evaluation by preverbal infants”, Nature 2007"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#parts-of-a-hypothesis-test",
     "href": "slides/2026-11-02-perm.html#parts-of-a-hypothesis-test",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Parts of a hypothesis test",
     "text": "Parts of a hypothesis test\n\nWhat are the observational units?\n\ninfants\n\nWhat is the variable? What type of variable?\n\nchoice of helper or hindered: categorical\n\nWhat is the statistic?\n\n\\(\\hat{p}\\) = proportion of infants who chose helper = 14/16 = 0.875\n\nWhat is the parameter?\n\np = proportion of all infants who might choose helper (not measurable!)"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#hypotheses",
     "href": "slides/2026-11-02-perm.html#hypotheses",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Hypotheses",
     "text": "Hypotheses\n\\(H_0\\): Null hypothesis. Babies (or rather, the population of babies under consideration) have no inherent preference for the helper or the hinderer shape.\n\\(H_A\\): Alternative hypothesis. Babies (or rather, the population of babies under consideration) are more likely to prefer the helper shape over the hinderer shape."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#p-value",
     "href": "slides/2026-11-02-perm.html#p-value",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "p-value",
     "text": "p-value\n\np-value is the probability of our data or more extreme if nothing interesting is going on.\n\n\n\n\n\n\n\n\n\ncompletely arbitrary cutoff\n\\(\\rightarrow\\)\ngenerally accepted conclusion\n\n\n\n\np-value \\(&gt;\\) 0.10\n\\(\\rightarrow\\)\nno evidence against the null model\n\n\n0.05 \\(&lt;\\) p-value \\(&lt;\\) 0.10\n\\(\\rightarrow\\)\nmoderate evidence against the null model\n\n\n0.01 \\(&lt;\\) p-value \\(&lt;\\) 0.05\n\\(\\rightarrow\\)\nstrong evidence against the null model\n\n\np-value \\(&lt;\\) 0.01\n\\(\\rightarrow\\)\nvery strong evidence against the null model"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#computation",
     "href": "slides/2026-11-02-perm.html#computation",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Computation",
-    "text": "Computation\nFirst find the statistic\n\n# to control the randomness\nset.seed(47)\n\n# first create a data frame with the Infant data\nInfants &lt;- read.delim(\"http://www.rossmanchance.com/iscam3/data/InfantData.txt\")\n\n# find the observed number of babies who chose the helper\nhelp_obs &lt;- Infants |&gt; \n  summarize(prop_help = mean(choice == \"helper\")) |&gt; \n  pull()\nhelp_obs\n\n[1] 0.875"
+    "text": "Computation\nFirst find the statistic\n\n# to control the randomness\nset.seed(47)\n\n# first create a data frame with the Infant data\nInfants &lt;- read.delim(\"http://www.rossmanchance.com/iscam3/data/InfantData.txt\")\n\n# find the observed number of babies who chose the helper\nhelp_obs &lt;- Infants |&gt;\n  summarize(prop_help = mean(choice == \"helper\")) |&gt;\n  pull()\nhelp_obs\n\n[1] 0.875"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#computation-1",
     "href": "slides/2026-11-02-perm.html#computation-1",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Computation",
-    "text": "Computation\nFind the sampling distribution under the condition that the null hypothesis is true.\n\nfunctionrepeatvizviz code\n\n\n\n# write a function to simulate a set of infants who are \n# equally likely to choose the helper or the hinderer\n\nrandom_choice &lt;- function(rep, num_babies){\n  choice = sample(c(\"helper\", \"hinderer\"), size = num_babies,\n                  replace = TRUE, prob = c(0.5, 0.5))\n  return(mean(choice == \"helper\"))\n}\n\n\n\n\n# repeat the function many times\nmap_dbl(c(1:10), random_choice, num_babies = 16)\n\n [1] 0.6875 0.3750 0.4375 0.3750 0.5000 0.5000 0.6250 0.4375 0.6875 0.6250\n\nnum_exper &lt;- 5000\nhelp_random &lt;- map_dbl(c(1:num_exper), random_choice, \n                            num_babies = 16)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# visualize null sampling distribution\nhelp_random |&gt; \n  data.frame() |&gt; \n  ggplot(aes(x = help_random)) + \n  geom_histogram() + \n  labs(x = \"proportion of babies who chose the helper\",\n       title = \"sampling distribution when null hypothesis is true\",\n       subtitle = \"that is, no inherent preference for helper or hinderer\")"
+    "text": "Computation\nFind the sampling distribution under the condition that the null hypothesis is true.\n\nfunctionrepeatvizviz code\n\n\n\n# write a function to simulate a set of infants who are\n# equally likely to choose the helper or the hinderer\n\nrandom_choice &lt;- function(rep, num_babies) {\n  choice &lt;- sample(\n    c(\"helper\", \"hinderer\"),\n    size = num_babies,\n    replace = TRUE,\n    prob = c(0.5, 0.5)\n  )\n  return(mean(choice == \"helper\"))\n}\n\n\n\n\n# repeat the function many times\nmap_dbl(c(1:10), random_choice, num_babies = 16)\n\n [1] 0.6875 0.3750 0.4375 0.3750 0.5000 0.5000 0.6250 0.4375 0.6875 0.6250\n\nnum_exper &lt;- 5000\nhelp_random &lt;- map_dbl(c(1:num_exper), random_choice, num_babies = 16)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# visualize null sampling distribution\nhelp_random |&gt;\n  data.frame() |&gt;\n  ggplot(aes(x = help_random)) +\n  geom_histogram(binwidth = 0.02) +\n  labs(\n    x = \"proportion of babies who chose the helper\",\n    title = \"sampling distribution when null hypothesis is true\",\n    subtitle = \"that is, no inherent preference for helper or hinderer\"\n  )"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#computation-2",
     "href": "slides/2026-11-02-perm.html#computation-2",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Computation",
-    "text": "Computation\nAre the null values consistent with the observed value?\n\nvizp-valueviz code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# the p-value!\nsum(help_random &gt;= help_obs) / num_exper\n\n[1] 0.0022\n\n\n\n\n\n# visualize null sampling distribution\nhelp_random |&gt; \n  data.frame() |&gt; \n  ggplot(aes(x = help_random)) + \n  geom_histogram() + \n  geom_vline(xintercept = help_obs, color = \"red\") + \n  labs(x = \"proportion of babies who chose the helper\",\n       title = \"sampling distribution when null hypothesis is true\",\n       subtitle = \"that is, no inherent preference for helper or hinderer\")"
+    "text": "Computation\nAre the null values consistent with the observed value?\n\nvizp-valueviz code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# the p-value!\nsum(help_random &gt;= help_obs) / num_exper\n\n[1] 0.0022\n\n\n\n\n\n# visualize null sampling distribution\nhelp_random |&gt;\n  data.frame() |&gt;\n  ggplot(aes(x = help_random)) +\n  geom_histogram(binwidth = 0.02) +\n  geom_vline(xintercept = help_obs, color = \"red\") +\n  labs(\n    x = \"proportion of babies who chose the helper\",\n    title = \"sampling distribution when null hypothesis is true\",\n    subtitle = \"that is, no inherent preference for helper or hinderer\"\n  )"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#all-together-structure-of-a-hypothesis-test",
     "href": "slides/2026-11-02-perm.html#all-together-structure-of-a-hypothesis-test",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "All together: structure of a hypothesis test",
     "text": "All together: structure of a hypothesis test\n\ndecide on a research question (which will determine the test)\ncollect data, specify the variables of interest\nstate the null (and alternative) hypothesis values (often statements about parameters)\n\nthe null claim is the science we want to reject\nthe alternative claim is the science we want to demonstrate\n\ngenerate a (null) sampling distribution to describe the variability of the statistic that was calculated along the way\nvisualize the distribution of the statistics under the null model\nget p-value to measure the consistency of the observed statistic and the possible values of the statistic under the null model\nmake a conclusion using words that describe the research setting"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#hypotheses-1",
     "href": "slides/2026-11-02-perm.html#hypotheses-1",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Hypotheses",
     "text": "Hypotheses\n\nHypothesis Testing compares data to the expectation of a specific null hypothesis. If the data are unusual, assuming that the null hypothesis is true, then the null hypothesis is rejected.\nThe Null Hypothesis, \\(H_0\\), is a specific statement about a population made for the purposes of argument. A good null hypothesis is a statement that would be interesting to reject.\nThe Alternative Hypothesis, \\(H_A\\), is a specific statement about a population that is in the researcher’s interest to demonstrate. Typically, the alternative hypothesis contains all the values of the population that are not included in the null hypothesis.\nIn a two-sided (or two-tailed) test, the alternative hypothesis includes values on both sides of the value specified by the null hypothesis.\nIn a one-sided (or one-tailed) test, the alternative hypothesis includes parameter values on only one side of the value specified by the null hypothesis. \\(H_0\\) is rejected only if the data depart from it in the direction stated by \\(H_A\\)."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#statistics-without-the-agonizing-pain",
     "href": "slides/2026-11-02-perm.html#statistics-without-the-agonizing-pain",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Statistics Without the Agonizing Pain",
     "text": "Statistics Without the Agonizing Pain\n\nJohn Rauser of Pintrest (now Amazon), speaking at Strata + Hadoop 2014. https://blog.revolutionanalytics.com/2014/10/statistics-doesnt-have-to-be-that-hard.html"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#logic-of-hypothesis-tests",
     "href": "slides/2026-11-02-perm.html#logic-of-hypothesis-tests",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Logic of hypothesis tests",
     "text": "Logic of hypothesis tests\n\nChoose a statistic that measures the effect.\nConstruct the sampling distribution under \\(H_0\\).\nLocate the observed statistic in the null sampling distribution.\np-value is the probability of the observed data or more extreme if the null hypothesis is true"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#logic-of-permutation-tests",
     "href": "slides/2026-11-02-perm.html#logic-of-permutation-tests",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Logic of permutation tests",
     "text": "Logic of permutation tests\n\nChoose a test statistic.\nShuffle the data (force the null hypothesis to be true). Using the shuffled statistics, create a null sampling distribution of the test statistic (under \\(H_0\\)).\nFind the observed test statistic on the null sampling distribution.\nCompute the p-value (observed data or more extreme). The p-value can be one or two-sided."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#applet-for-two-sample-permutation-tests",
     "href": "slides/2026-11-02-perm.html#applet-for-two-sample-permutation-tests",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Applet for two sample permutation tests",
     "text": "Applet for two sample permutation tests\n\npermutation test for two samples from Rossman Chance applets."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#high-school-beyond-survey",
     "href": "slides/2026-11-02-perm.html#high-school-beyond-survey",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "High School & Beyond survey",
     "text": "High School & Beyond survey\nData: 200 randomly selected observations from the High School and Beyond survey, conducted on high school seniors by the National Center for Educational Statistics.\nResearch Question: in the population, do private school kids have a higher math score on average?\n\\[H_0: \\mu_{private} = \\mu_{public}\\] \\[H_A: \\mu_{private} &gt; \\mu_{public}\\]\n\\(\\mu\\) is the average math score in the population.\n\nlibrary(openintro)\nhsb2\n\n# A tibble: 200 × 11\n      id gender race      ses   schtyp prog   read write  math science\n   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;\n 1    70 male   white     low   public gene…    57    52    41      47\n 2   121 female white     midd… public voca…    68    59    53      63\n 3    86 male   white     high  public gene…    44    33    54      58\n 4   141 male   white     high  public voca…    63    44    47      53\n 5   172 male   white     midd… public acad…    47    52    57      53\n 6   113 male   white     midd… public acad…    44    52    51      63\n 7    50 male   african … midd… public gene…    50    59    42      53\n 8    11 male   hispanic  midd… public acad…    34    46    45      39\n 9    84 male   white     midd… public gene…    63    57    54      58\n10    48 male   african … midd… public acad…    57    55    52      50\n# ℹ 190 more rows\n# ℹ 1 more variable: socst &lt;int&gt;"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#summary-of-the-variables",
     "href": "slides/2026-11-02-perm.html#summary-of-the-variables",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Summary of the variables",
-    "text": "Summary of the variables\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5"
+    "text": "Summary of the variables\n\nhsb2 |&gt;\n  group_by(schtyp) |&gt;\n  summarize(ave_math = mean(math), med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#visualize-the-relationship-of-interest",
     "href": "slides/2026-11-02-perm.html#visualize-the-relationship-of-interest",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Visualize the relationship of interest",
-    "text": "Visualize the relationship of interest\n\nhsb2 |&gt; \n  ggplot(aes(x = schtyp, y = math)) + \n  geom_boxplot()"
+    "text": "Visualize the relationship of interest\n\nhsb2 |&gt;\n  ggplot(aes(x = schtyp, y = math)) +\n  geom_boxplot()"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#calculate-the-observed-statistics",
     "href": "slides/2026-11-02-perm.html#calculate-the-observed-statistics",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Calculate the observed statistic(s)",
-    "text": "Calculate the observed statistic(s)\nFor fun, we are calculating both the difference in averages as well as the difference in medians. That is, we have two different observed summary statistics to work with.\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5\n\nhsb2 |&gt; \n  group_by(schtyp) |&gt; \n  summarize(ave_math = mean(math),\n            med_math = median(math)) |&gt; \n  summarize(ave_diff = diff(ave_math),\n            med_diff = diff(med_math))\n\n# A tibble: 1 × 2\n  ave_diff med_diff\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     2.51      1.5"
+    "text": "Calculate the observed statistic(s)\nFor fun, we are calculating both the difference in averages as well as the difference in medians. That is, we have two different observed summary statistics to work with.\n\nhsb2 |&gt;\n  group_by(schtyp) |&gt;\n  summarize(ave_math = mean(math), med_math = median(math))\n\n# A tibble: 2 × 3\n  schtyp  ave_math med_math\n  &lt;fct&gt;      &lt;dbl&gt;    &lt;dbl&gt;\n1 public      52.2     52  \n2 private     54.8     53.5\n\nhsb2 |&gt;\n  group_by(schtyp) |&gt;\n  summarize(ave_math = mean(math), med_math = median(math)) |&gt;\n  summarize(ave_diff = diff(ave_math), med_diff = diff(med_math))\n\n# A tibble: 1 × 2\n  ave_diff med_diff\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     2.51      1.5"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#generate-a-null-sampling-distribution.",
     "href": "slides/2026-11-02-perm.html#generate-a-null-sampling-distribution.",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Generate a null sampling distribution.",
-    "text": "Generate a null sampling distribution.\n\nperm_data &lt;- function(rep, data){\n  data |&gt; \n    select(schtyp, math) |&gt; \n    mutate(math_perm = sample(math, replace = FALSE)) |&gt; \n    group_by(schtyp) |&gt; \n    summarize(obs_ave = mean(math),\n              obs_med = median(math),\n              perm_ave = mean(math_perm),\n              perm_med = median(math_perm)) |&gt; \n    summarize(obs_ave_diff = diff(obs_ave),\n              obs_med_diff = diff(obs_med),\n              perm_ave_diff = diff(perm_ave),\n              perm_med_diff = diff(perm_med),\n              rep = rep)\n}\n\nmap(c(1:10), perm_data, data = hsb2) |&gt; \n  list_rbind()\n\n# A tibble: 10 × 5\n   obs_ave_diff obs_med_diff perm_ave_diff perm_med_diff   rep\n          &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt; &lt;int&gt;\n 1         2.51          1.5         2.62            2.5     1\n 2         2.51          1.5         0.757          -1       2\n 3         2.51          1.5         1.65            2       3\n 4         2.51          1.5        -0.805          -0.5     4\n 5         2.51          1.5         1.80            2.5     5\n 6         2.51          1.5         2.92            3       6\n 7         2.51          1.5         1.91            2.5     7\n 8         2.51          1.5        -2.55           -3.5     8\n 9         2.51          1.5        -1.21           -3       9\n10         2.51          1.5         1.32            1      10"
+    "text": "Generate a null sampling distribution.\n\nperm_data &lt;- function(rep, data) {\n  data |&gt;\n    select(schtyp, math) |&gt;\n    mutate(math_perm = sample(math, replace = FALSE)) |&gt;\n    group_by(schtyp) |&gt;\n    summarize(\n      obs_ave = mean(math),\n      obs_med = median(math),\n      perm_ave = mean(math_perm),\n      perm_med = median(math_perm)\n    ) |&gt;\n    summarize(\n      obs_ave_diff = diff(obs_ave),\n      obs_med_diff = diff(obs_med),\n      perm_ave_diff = diff(perm_ave),\n      perm_med_diff = diff(perm_med),\n      rep = rep\n    )\n}\n\nmap(c(1:10), perm_data, data = hsb2) |&gt;\n  list_rbind()\n\n# A tibble: 10 × 5\n   obs_ave_diff obs_med_diff perm_ave_diff perm_med_diff   rep\n          &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt; &lt;int&gt;\n 1         2.51          1.5         2.62            2.5     1\n 2         2.51          1.5         0.757          -1       2\n 3         2.51          1.5         1.65            2       3\n 4         2.51          1.5        -0.805          -0.5     4\n 5         2.51          1.5         1.80            2.5     5\n 6         2.51          1.5         2.92            3       6\n 7         2.51          1.5         1.91            2.5     7\n 8         2.51          1.5        -2.55           -3.5     8\n 9         2.51          1.5        -1.21           -3       9\n10         2.51          1.5         1.32            1      10"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#visualize-the-null-sampling-distribution-average",
     "href": "slides/2026-11-02-perm.html#visualize-the-null-sampling-distribution-average",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Visualize the null sampling distribution (average)",
-    "text": "Visualize the null sampling distribution (average)\n\nset.seed(47)\nperm_stats &lt;- \n  map(c(1:500), perm_data, data = hsb2) |&gt; \n  list_rbind() \n\nperm_stats |&gt; \n  ggplot(aes(x = perm_ave_diff)) + \n  geom_histogram() + \n  geom_vline(aes(xintercept = obs_ave_diff), color = \"red\")"
+    "text": "Visualize the null sampling distribution (average)\n\nset.seed(47)\nperm_stats &lt;-\n  map(c(1:500), perm_data, data = hsb2) |&gt;\n  list_rbind()\n\nperm_stats |&gt;\n  ggplot(aes(x = perm_ave_diff)) +\n  geom_histogram(binwidth = 0.25) +\n  geom_vline(aes(xintercept = obs_ave_diff), color = \"red\")"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#visualize-the-null-sampling-distribution-median",
     "href": "slides/2026-11-02-perm.html#visualize-the-null-sampling-distribution-median",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Visualize the null sampling distribution (median)",
-    "text": "Visualize the null sampling distribution (median)\n\nperm_stats |&gt; \n  ggplot(aes(x = perm_med_diff)) + \n  geom_histogram() + \n  geom_vline(aes(xintercept = obs_med_diff), color = \"red\")"
+    "text": "Visualize the null sampling distribution (median)\n\nperm_stats |&gt;\n  ggplot(aes(x = perm_med_diff)) +\n  geom_histogram(binwidth = 0.25) +\n  geom_vline(aes(xintercept = obs_med_diff), color = \"red\")"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#p-value-2",
     "href": "slides/2026-11-02-perm.html#p-value-2",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "p-value",
-    "text": "p-value\n\nperm_stats |&gt; \n  summarize(p_val_ave = mean(perm_ave_diff &gt; obs_ave_diff),\n            p_val_med = mean(perm_med_diff &gt; obs_med_diff))\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.086      0.27"
+    "text": "p-value\n\nperm_stats |&gt;\n  summarize(\n    p_val_ave = mean(perm_ave_diff &gt; obs_ave_diff),\n    p_val_med = mean(perm_med_diff &gt; obs_med_diff)\n  )\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.086      0.27"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#conclusion",
     "href": "slides/2026-11-02-perm.html#conclusion",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Conclusion",
     "text": "Conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that in the population the average math scores for private school kids is larger than the average math scores for public school kids (p-value = 0.086).\nWe cannot claim that in the population the median math scores for private school kids is larger than the median math scores for public school kids (p-value = 0.27)."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#two-sided-test",
     "href": "slides/2026-11-02-perm.html#two-sided-test",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Two-sided test:",
     "text": "Two-sided test:\n\\(H_0: \\mu_{private} = \\mu_{public}\\) and \\(H_A: \\mu_{private} \\ne \\mu_{public}\\)"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#two-sided-p-value",
     "href": "slides/2026-11-02-perm.html#two-sided-p-value",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Two-sided p-value",
-    "text": "Two-sided p-value\n\nperm_stats |&gt; \n    summarize(p_val_ave = \n                mean(perm_ave_diff &gt; obs_ave_diff | \n                       perm_ave_diff &lt; -obs_ave_diff),\n              p_val_med = \n              mean(perm_med_diff &gt; obs_med_diff | \n                     perm_med_diff &lt; -obs_med_diff))\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.154     0.534"
+    "text": "Two-sided p-value\n\nperm_stats |&gt;\n       summarize(\n              p_val_ave = mean(\n                     perm_ave_diff &gt; obs_ave_diff |\n                            perm_ave_diff &lt; -obs_ave_diff\n              ),\n              p_val_med = mean(\n                     perm_med_diff &gt; obs_med_diff |\n                            perm_med_diff &lt; -obs_med_diff\n              )\n       )\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.154     0.534"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#two-sided-conclusion",
     "href": "slides/2026-11-02-perm.html#two-sided-conclusion",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "Two-sided conclusion",
     "text": "Two-sided conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that there is a difference in average math scores in the population (p-value = 0.154).\nWe cannot claim that there is a difference in median math scores int he population (p-value = 0.534)."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#references",
     "href": "slides/2026-11-02-perm.html#references",
-    "title": "Permutation Tests",
+    "title": "Hypothesis Testing",
     "section": "References",
     "text": "References\n\n\n\n\nHamlin, J. Kiley, Karen Wynn, and Paul Bloom. 2007. “Social Evaluation by Preverbal Infants.” Nature 450: 557–59."
   },
@@ -3812,7 +3812,7 @@
     "href": "slides/2026-10-26-sims.html#simulate-their-meeting",
     "title": "Simulations",
     "section": "Simulate their meeting",
-    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada) {\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)\n  ) |&gt;\n    mutate(\n      result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n    )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt;\n  map(meet_func) |&gt;\n  list_rbind()\ntoc()\n\n35.915 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor (i in c(1:n)) {\n  meet_for &lt;- meet_for |&gt;\n    rbind(\n      data.frame(\n        alex = runif(1, min = 0, max = 60),\n        jordan = runif(1, min = 0, max = 60)\n      ) |&gt;\n        mutate(\n          result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n        )\n    )\n}\ntoc()\n\n144.341 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)\n) |&gt;\n  mutate(result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\"))\ntoc()\n\n0.002 sec elapsed"
+    "text": "Simulate their meeting\nAssume that Alex and Jordan are both equally likely to arrive at the campus center anywhere between 7pm and 8pm.\n\nfunctionmap()for() loopvectorized\n\n\n\nmeet_func &lt;- function(nada) {\n  data.frame(\n    alex = runif(1, min = 0, max = 60),\n    jordan = runif(1, min = 0, max = 60)\n  ) |&gt;\n    mutate(\n      result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n    )\n}\n\n\n\n\nn &lt;- 100000\n\ntic()\nmeet_map &lt;- 1:n |&gt;\n  map(meet_func) |&gt;\n  list_rbind()\ntoc()\n\n36.152 sec elapsed\n\n\n\n\n\ntic()\nmeet_for &lt;- data.frame()\nfor (i in c(1:n)) {\n  meet_for &lt;- meet_for |&gt;\n    rbind(\n      data.frame(\n        alex = runif(1, min = 0, max = 60),\n        jordan = runif(1, min = 0, max = 60)\n      ) |&gt;\n        mutate(\n          result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\")\n        )\n    )\n}\ntoc()\n\n145.938 sec elapsed\n\n\n\n\n\ntic()\nmeet_vect &lt;- data.frame(\n  alex = runif(n, min = 0, max = 60),\n  jordan = runif(n, min = 0, max = 60)\n) |&gt;\n  mutate(result = if_else(abs(alex - jordan) &lt;= 10, \"They meet\", \"They do not\"))\ntoc()\n\n0.002 sec elapsed"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#results",
@@ -4085,21 +4085,21 @@
     "href": "slides/2026-10-26-sims.html#asset-allocation-1",
     "title": "Simulations",
     "section": "Asset allocation",
-    "text": "Asset allocation\nTask: to model an asset allocation problem where you decide what portion of wealth should be allocated to risk-free investment or high-risk investment\n\nthe function calculates returns based on different asset allocations.\n\n\ncalculate_return &lt;- function(step, alpha) {\n  risk_free_rate &lt;- 1.03\n  risky_rate &lt;- rnorm(1, mean = 0, sd = 1) * 0.05 + 1\n  return(data.frame(\n    step = step,\n    return_rate = (1 - alpha) * risk_free_rate + alpha * risky_rate\n  ))\n}\n\ncalculate_return(\"unicorn\", 0.47)\n\n     step return_rate\n1 unicorn    1.034815"
+    "text": "Asset allocation\nTask: to model an asset allocation problem where you decide what portion of wealth should be allocated to risk-free investment or high-risk investment\n\nthe function calculates returns based on different asset allocations.\n\n\ncalculate_return &lt;- function(step, alpha) {\n  risk_free_rate &lt;- 1.03\n  risky_rate &lt;- rnorm(1, mean = 1.05, sd = 0.1)\n  return(data.frame(\n    step = step,\n    return_rate = (1 - alpha) * risk_free_rate + alpha * risky_rate\n  ))\n}\n\ncalculate_return(\"unicorn\", 0.47)\n\n     step return_rate\n1 unicorn    1.077229"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#let-alpha-0.5",
     "href": "slides/2026-10-26-sims.html#let-alpha-0.5",
     "title": "Simulations",
     "section": "Let alpha = 0.5",
-    "text": "Let alpha = 0.5\n(half risky, half risk free)\n\ndecision_steps &lt;- 12\n\npmap(\n  data.frame(step = c(1:decision_steps), alpha = rep(0.5, decision_steps)),\n  calculate_return\n) |&gt;\n  list_rbind()\n\n   step return_rate\n1     1   1.0244265\n2     2   0.9740712\n3     3   1.0111959\n4     4   1.0382488\n5     5   1.0019058\n6     6   0.9847674\n7     7   1.0296142\n8     8   0.9924038\n9     9   1.0381949\n10   10   1.0088956\n11   11   1.0370043\n12   12   1.0107057"
+    "text": "Let alpha = 0.5\nhalf risky, half risk free; each year modeled independently\n\ndecision_steps &lt;- 12\n\npmap(\n  data.frame(step = c(1:decision_steps), alpha = rep(0.5, decision_steps)),\n  calculate_return\n) |&gt;\n  list_rbind()\n\n   step return_rate\n1     1   1.0588529\n2     2   0.9581425\n3     3   1.0323918\n4     4   1.0864976\n5     5   1.0138117\n6     6   0.9795349\n7     7   1.0692285\n8     8   0.9948075\n9     9   1.0863899\n10   10   1.0277911\n11   11   1.0840087\n12   12   1.0314113"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#many-runs",
     "href": "slides/2026-10-26-sims.html#many-runs",
     "title": "Simulations",
     "section": "Many runs",
-    "text": "Many runs\n\nruns &lt;- 10\ndecision_steps &lt;- 12\n\nrun_func &lt;- function(run, steps, alpha) {\n  pmap(\n    data.frame(step = c(1:steps), alpha = rep(alpha, steps)),\n    calculate_return\n  ) |&gt;\n    list_rbind() |&gt;\n    cbind(run_number = as.factor(run))\n}\n\nrun_func(\"happy\", 12, 0.5)\n\n   step return_rate run_number\n1     1   0.9972576      happy\n2     2   1.0503818      happy\n3     3   1.0133106      happy\n4     4   1.0305766      happy\n5     5   1.0424264      happy\n6     6   1.0278066      happy\n7     7   1.0088744      happy\n8     8   1.0280513      happy\n9     9   1.0270015      happy\n10   10   1.0495620      happy\n11   11   1.0483569      happy\n12   12   1.0089000      happy\n\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind()\n\n    step return_rate run_number\n1      1   1.0037332          1\n2      2   1.0305053          1\n3      3   1.0177365          1\n4      4   0.9851848          1\n5      5   1.0200471          1\n6      6   0.9777514          1\n7      7   1.0139097          1\n8      8   1.0394459          1\n9      9   1.0311656          1\n10    10   1.0111325          1\n11    11   1.0600142          1\n12    12   0.9529528          1\n13     1   1.0511925          2\n14     2   1.0188551          2\n15     3   1.0546398          2\n16     4   1.0286009          2\n17     5   1.0090312          2\n18     6   1.0116230          2\n19     7   0.9982508          2\n20     8   1.0397553          2\n21     9   0.9748453          2\n22    10   0.9994628          2\n23    11   1.0325967          2\n24    12   1.0265163          2\n25     1   0.9846161          3\n26     2   1.0106626          3\n27     3   1.0085478          3\n28     4   1.0253148          3\n29     5   0.9879959          3\n30     6   1.0761028          3\n31     7   1.0095107          3\n32     8   1.0417969          3\n33     9   1.0299429          3\n34    10   1.0483370          3\n35    11   1.0039636          3\n36    12   1.0177251          3\n37     1   0.9957903          4\n38     2   1.0446025          4\n39     3   1.0151633          4\n40     4   1.0208127          4\n41     5   1.0138992          4\n42     6   1.0241599          4\n43     7   0.9636553          4\n44     8   1.0330971          4\n45     9   1.0707355          4\n46    10   1.0341161          4\n47    11   1.0076286          4\n48    12   1.0437015          4\n49     1   1.0166442          5\n50     2   1.0424126          5\n51     3   0.9944647          5\n52     4   0.9669553          5\n53     5   1.0152975          5\n54     6   1.0145272          5\n55     7   1.0372179          5\n56     8   1.0407917          5\n57     9   0.9811040          5\n58    10   1.0213106          5\n59    11   0.9962674          5\n60    12   1.0518327          5\n61     1   0.9804384          6\n62     2   1.0313983          6\n63     3   1.0456102          6\n64     4   1.0019782          6\n65     5   0.9848773          6\n66     6   1.0166534          6\n67     7   1.0338028          6\n68     8   1.0222348          6\n69     9   0.9802758          6\n70    10   1.0156817          6\n71    11   1.0424656          6\n72    12   1.0575701          6\n73     1   1.0750144          7\n74     2   1.0058097          7\n75     3   0.9927478          7\n76     4   1.0009444          7\n77     5   1.0055233          7\n78     6   1.0573874          7\n79     7   0.9575212          7\n80     8   0.9957913          7\n81     9   1.0893832          7\n82    10   1.0135442          7\n83    11   1.0152496          7\n84    12   1.0331392          7\n85     1   1.0304361          8\n86     2   1.0111527          8\n87     3   1.0077437          8\n88     4   1.0031964          8\n89     5   1.0507032          8\n90     6   0.9713326          8\n91     7   1.0101054          8\n92     8   1.0556004          8\n93     9   0.9991680          8\n94    10   1.0232786          8\n95    11   1.0182200          8\n96    12   0.9987042          8\n97     1   1.0250592          9\n98     2   1.0300056          9\n99     3   0.9890955          9\n100    4   1.0395173          9\n101    5   1.0147912          9\n102    6   1.0243437          9\n103    7   0.9964191          9\n104    8   1.0782102          9\n105    9   0.9746246          9\n106   10   1.0194040          9\n107   11   1.0383502          9\n108   12   1.0508320          9\n109    1   1.0563048         10\n110    2   0.9850083         10\n111    3   1.0395162         10\n112    4   0.9711030         10\n113    5   1.0193429         10\n114    6   1.0259306         10\n115    7   0.9889117         10\n116    8   1.0418063         10\n117    9   1.0055857         10\n118   10   1.0155720         10\n119   11   1.0350093         10\n120   12   0.9916229         10"
+    "text": "Many runs\nlots of years, lots of different people\n\nruns &lt;- 10\ndecision_steps &lt;- 12\n\nrun_func &lt;- function(run, steps, alpha) {\n  pmap(\n    data.frame(step = c(1:steps), alpha = rep(alpha, steps)),\n    calculate_return\n  ) |&gt;\n    list_rbind() |&gt;\n    cbind(run_number = as.factor(run))\n}\n\nrun_func(\"happy\", 12, 0.5)\n\n   step return_rate run_number\n1     1    1.004515      happy\n2     2    1.110764      happy\n3     3    1.036621      happy\n4     4    1.071153      happy\n5     5    1.094853      happy\n6     6    1.065613      happy\n7     7    1.027749      happy\n8     8    1.066103      happy\n9     9    1.064003      happy\n10   10    1.109124      happy\n11   11    1.106714      happy\n12   12    1.027800      happy\n\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind()\n\n    step return_rate run_number\n1      1   1.0174664          1\n2      2   1.0710106          1\n3      3   1.0454731          1\n4      4   0.9803695          1\n5      5   1.0500943          1\n6      6   0.9655029          1\n7      7   1.0378193          1\n8      8   1.0888919          1\n9      9   1.0723313          1\n10    10   1.0322651          1\n11    11   1.1300284          1\n12    12   0.9159055          1\n13     1   1.1123850          2\n14     2   1.0477103          2\n15     3   1.1192795          2\n16     4   1.0672017          2\n17     5   1.0280624          2\n18     6   1.0332460          2\n19     7   1.0065015          2\n20     8   1.0895105          2\n21     9   0.9596906          2\n22    10   1.0089257          2\n23    11   1.0751935          2\n24    12   1.0630326          2\n25     1   0.9792322          3\n26     2   1.0313252          3\n27     3   1.0270956          3\n28     4   1.0606295          3\n29     5   0.9859917          3\n30     6   1.1622055          3\n31     7   1.0290213          3\n32     8   1.0935939          3\n33     9   1.0698857          3\n34    10   1.1066740          3\n35    11   1.0179271          3\n36    12   1.0454501          3\n37     1   1.0015805          4\n38     2   1.0992049          4\n39     3   1.0403266          4\n40     4   1.0516253          4\n41     5   1.0377984          4\n42     6   1.0583199          4\n43     7   0.9373106          4\n44     8   1.0761941          4\n45     9   1.1514711          4\n46    10   1.0782322          4\n47    11   1.0252572          4\n48    12   1.0974029          4\n49     1   1.0432885          5\n50     2   1.0948252          5\n51     3   0.9989295          5\n52     4   0.9439107          5\n53     5   1.0405949          5\n54     6   1.0390544          5\n55     7   1.0844358          5\n56     8   1.0915834          5\n57     9   0.9722081          5\n58    10   1.0526213          5\n59    11   1.0025348          5\n60    12   1.1136654          5\n61     1   0.9708767          6\n62     2   1.0727966          6\n63     3   1.1012203          6\n64     4   1.0139564          6\n65     5   0.9797545          6\n66     6   1.0433068          6\n67     7   1.0776056          6\n68     8   1.0544697          6\n69     9   0.9705515          6\n70    10   1.0413634          6\n71    11   1.0949313          6\n72    12   1.1251401          6\n73     1   1.1600289          7\n74     2   1.0216195          7\n75     3   0.9954956          7\n76     4   1.0118888          7\n77     5   1.0210465          7\n78     6   1.1247748          7\n79     7   0.9250424          7\n80     8   1.0015825          7\n81     9   1.1887665          7\n82    10   1.0370884          7\n83    11   1.0404991          7\n84    12   1.0762785          7\n85     1   1.0708723          8\n86     2   1.0323054          8\n87     3   1.0254874          8\n88     4   1.0163928          8\n89     5   1.1114064          8\n90     6   0.9526653          8\n91     7   1.0302109          8\n92     8   1.1212008          8\n93     9   1.0083360          8\n94    10   1.0565572          8\n95    11   1.0464400          8\n96    12   1.0074085          8\n97     1   1.0601184          9\n98     2   1.0700111          9\n99     3   0.9881909          9\n100    4   1.0890347          9\n101    5   1.0395824          9\n102    6   1.0586875          9\n103    7   1.0028382          9\n104    8   1.1664203          9\n105    9   0.9592491          9\n106   10   1.0488079          9\n107   11   1.0867003          9\n108   12   1.1116641          9\n109    1   1.1226097         10\n110    2   0.9800166         10\n111    3   1.0890325         10\n112    4   0.9522060         10\n113    5   1.0486859         10\n114    6   1.0618611         10\n115    7   0.9878234         10\n116    8   1.0936126         10\n117    9   1.0211715         10\n118   10   1.0411440         10\n119   11   1.0800186         10\n120   12   0.9932459         10"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#cummulative-product",
@@ -4113,28 +4113,28 @@
     "href": "slides/2026-10-26-sims.html#cummulative-rates",
     "title": "Simulations",
     "section": "Cummulative rates",
-    "text": "Cummulative rates\n\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate))\n\n# A tibble: 120 × 4\n# Groups:   run_number [10]\n    step return_rate run_number compound_return\n   &lt;int&gt;       &lt;dbl&gt; &lt;fct&gt;                &lt;dbl&gt;\n 1     1       0.984 1                    0.984\n 2     2       1.01  1                    0.990\n 3     3       1.04  1                    1.03 \n 4     4       0.987 1                    1.02 \n 5     5       1.04  1                    1.05 \n 6     6       1.04  1                    1.09 \n 7     7       0.994 1                    1.09 \n 8     8       1.01  1                    1.10 \n 9     9       1.01  1                    1.12 \n10    10       0.994 1                    1.11 \n# ℹ 110 more rows"
+    "text": "Cummulative rates\n\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate))\n\n# A tibble: 120 × 4\n# Groups:   run_number [10]\n    step return_rate run_number compound_return\n   &lt;int&gt;       &lt;dbl&gt; &lt;fct&gt;                &lt;dbl&gt;\n 1     1       0.979 1                    0.979\n 2     2       1.02  1                    1.00 \n 3     3       1.09  1                    1.09 \n 4     4       0.984 1                    1.07 \n 5     5       1.08  1                    1.16 \n 6     6       1.09  1                    1.26 \n 7     7       0.998 1                    1.26 \n 8     8       1.03  1                    1.30 \n 9     9       1.04  1                    1.35 \n10    10       0.998 1                    1.35 \n# ℹ 110 more rows"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#returns-over-time",
     "href": "slides/2026-10-26-sims.html#returns-over-time",
     "title": "Simulations",
     "section": "Returns over time",
-    "text": "Returns over time\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
+    "text": "Returns over time\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#change-the-allocation",
     "href": "slides/2026-10-26-sims.html#change-the-allocation",
     "title": "Simulations",
     "section": "Change the allocation",
-    "text": "Change the allocation\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.1) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.1\")"
+    "text": "Change the allocation\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.1) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.1\")"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#change-the-allocation-1",
     "href": "slides/2026-10-26-sims.html#change-the-allocation-1",
     "title": "Simulations",
     "section": "Change the allocation",
-    "text": "Change the allocation\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.9) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.9\")"
+    "text": "Change the allocation\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func, steps = decision_steps, alpha = 0.9) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.9\")"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#change-the-return",
@@ -4148,7 +4148,7 @@
     "href": "slides/2026-10-26-sims.html#does-the-change-impact-long-term",
     "title": "Simulations",
     "section": "Does the change impact long-term?",
-    "text": "Does the change impact long-term?\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func_sd10, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
+    "text": "Does the change impact long-term?\n\ngraphcode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nruns &lt;- 20\nmap(c(1:runs), run_func_sd10, steps = decision_steps, alpha = 0.5) |&gt;\n  list_rbind() |&gt;\n  group_by(run_number) |&gt;\n  mutate(compound_return = cumprod(return_rate)) |&gt;\n  ggplot(aes(x = step, y = compound_return)) +\n  geom_line(aes(color = run_number)) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  scale_x_continuous(breaks = seq(1, 12)) +\n  labs(title = \"Simulations of returns from asset allocation, alpha = 0.5\")"
   },
   {
     "objectID": "slides/2026-10-26-sims.html#references",
@@ -5675,5 +5675,12 @@
     "title": "Project 3",
     "section": "Footnotes",
     "text": "Footnotes\n\n\ncode folding allows the user can see the code if they want to: https://quarto.org/docs/output-formats/html-code.html#folding-code↩︎"
+  },
+  {
+    "objectID": "slides/2026-10-26-sims.html#change-the-volatility-of-returns",
+    "href": "slides/2026-10-26-sims.html#change-the-volatility-of-returns",
+    "title": "Simulations",
+    "section": "Change the volatility of returns",
+    "text": "Change the volatility of returns\nThe standard deviation is now three times bigger.\n\ncalculate return raterun function\n\n\n\ncalculate_return_sd10 &lt;- function(step, alpha) {\n  risk_free_rate &lt;- 1.03\n  risky_rate &lt;- rnorm(1, mean = 1.05, sd = 0.3)\n  return(data.frame(\n    step = step,\n    return_rate = (1 - alpha) * risk_free_rate + alpha * risky_rate\n  ))\n}\n\ncalculate_return(\"unicorn\", 0.47)\n\n     step return_rate\n1 unicorn   0.9816421\n\n\n\n\n\nrun_func_sd10 &lt;- function(run, steps, alpha) {\n  pmap(\n    data.frame(step = c(1:steps), alpha = rep(alpha, steps)),\n    calculate_return_sd10\n  ) |&gt;\n    list_rbind() |&gt;\n    cbind(run_number = as.factor(run))\n}"
   }
 ]

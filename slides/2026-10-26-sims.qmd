@@ -565,7 +565,8 @@ college.data <- data.frame(
 ggplot(college.data, aes(x = grades, y = SAT, color = color)) +
   geom_point(size = 0.5) +
   scale_color_identity(name = "Color Group", guide = "legend") +
-  geom_abline(intercept = 0, slope = 1)
+  geom_abline(intercept = 0, slope = 1) +
+  theme_minimal()
 ```
 
 
@@ -633,7 +634,8 @@ ggplot(new.college.data, aes(x = talent, y = predicted, color = color)) +
   geom_point(size = 0.5) +
   geom_hline(yintercept = 115) +
   geom_vline(xintercept = 115) +
-  scale_color_identity(name = "Color Group", guide = "legend")
+  scale_color_identity(name = "Color Group", guide = "legend") +
+  theme_minimal()
 ```
 
 
@@ -648,7 +650,8 @@ ggplot(new.college.data, aes(x = talent, y = predicted, color = color)) +
   geom_point(size = 0.5) +
   geom_hline(yintercept = 115) +
   geom_vline(xintercept = 115) +
-  scale_color_identity(name = "Color Group", guide = "legend")
+  scale_color_identity(name = "Color Group", guide = "legend") +
+  theme_minimal()
 ```
 :::
 
@@ -713,7 +716,8 @@ ggplot(new.college.data, aes(x = talent, y = global.predicted, color = color)) +
   geom_point(size = 0.5) +
   geom_hline(yintercept = 115) +
   geom_vline(xintercept = 115) +
-  scale_color_identity(name = "Color Group", guide = "legend")
+  scale_color_identity(name = "Color Group", guide = "legend") +
+  theme_minimal()
 ```
 :::
 
@@ -820,7 +824,7 @@ Task: to model an asset allocation problem where you decide what portion of weal
 ```{r}
 calculate_return <- function(step, alpha) {
   risk_free_rate <- 1.03
-  risky_rate <- rnorm(1, mean = 0, sd = 1) * 0.05 + 1
+  risky_rate <- rnorm(1, mean = 1.05, sd = 0.1)
   return(data.frame(
     step = step,
     return_rate = (1 - alpha) * risk_free_rate + alpha * risky_rate
@@ -832,7 +836,7 @@ calculate_return("unicorn", 0.47)
 
 ## Let alpha = 0.5
 
-(half risky, half risk free)
+half risky, half risk free; each year modeled independently
 
 ```{r}
 decision_steps <- 12
@@ -846,6 +850,8 @@ pmap(
 
 
 ## Many runs
+
+lots of years, lots of different people
 
 ```{r}
 runs <- 10
@@ -903,6 +909,7 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
@@ -921,6 +928,7 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.5) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
@@ -943,6 +951,7 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.1) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.1")
@@ -959,6 +968,7 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.1) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.1")
@@ -982,6 +992,7 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.9) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.9")
@@ -999,6 +1010,7 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.9) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.9")
@@ -1007,7 +1019,9 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.9) |>
 :::
 
 
-## Change the return
+## Change the volatility of returns
+
+The standard deviation is now three times bigger.
 
 ::: {.panel-tabset}
 
@@ -1016,7 +1030,7 @@ map(c(1:runs), run_func, steps = decision_steps, alpha = 0.9) |>
 #| code-line-numbers: "3"
 calculate_return_sd10 <- function(step, alpha) {
   risk_free_rate <- 1.03
-  risky_rate <- rnorm(1, mean = 0, sd = 10) * 0.05 + 1
+  risky_rate <- rnorm(1, mean = 1.05, sd = 0.3)
   return(data.frame(
     step = step,
     return_rate = (1 - alpha) * risk_free_rate + alpha * risky_rate
@@ -1060,6 +1074,7 @@ map(c(1:runs), run_func_sd10, steps = decision_steps, alpha = 0.5) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
@@ -1076,6 +1091,7 @@ map(c(1:runs), run_func_sd10, steps = decision_steps, alpha = 0.5) |>
   mutate(compound_return = cumprod(return_rate)) |>
   ggplot(aes(x = step, y = compound_return)) +
   geom_line(aes(color = run_number)) +
+  theme_minimal() +
   theme(legend.position = "none") +
   scale_x_continuous(breaks = seq(1, 12)) +
   labs(title = "Simulations of returns from asset allocation, alpha = 0.5")
