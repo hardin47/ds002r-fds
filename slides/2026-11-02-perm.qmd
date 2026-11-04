@@ -51,6 +51,7 @@ these two scenarios several times. Then the child was presented with both pieces
 
 
 ## Parts of a hypothesis test
+(don't need to know the following terms)
 
 * What are the observational units?
     - infants
@@ -80,7 +81,7 @@ $H_A$: Alternative hypothesis. Babies (or rather, the population of babies under
 
 ## Computation
 
-First find the statistic
+First find the observed statistic (here the proportion of babies who chose the helper)
 ```{r echo=TRUE, eval=TRUE}
 # to control the randomness
 set.seed(47)
@@ -225,6 +226,7 @@ help_random |>
 * make a conclusion using words that describe the research setting
 
 ## Hypotheses
+(don't need to know the following terms)
 
 * **Hypothesis Testing** compares data to the expectation of a specific null hypothesis.  If the data are unusual, assuming that the null hypothesis is true, then the null hypothesis is rejected.  
 
@@ -439,6 +441,152 @@ There is no evidence to reject the null hypothesis.
 We cannot claim that there is a **difference** in average math scores in the population (p-value = 0.154).
 
 We cannot claim that there is a **difference** in median math scores int he population (p-value = 0.534).
+
+# Line-up protocol
+
+What if we permute one variable - will the graphical display look different from the visualization on the OG data?
+
+## Line-up for math scores
+
+Where are the original data? 
+
+19 boxplots from permuted school type. 1 boxplot of OG data.
+
+
+```{r}
+#| fig-align: 'center'
+#| fig-width: 6
+#| echo: false
+
+set.seed(1234)
+library(nullabor)
+
+lineup_hsb2 <- lineup(method = null_permute("schtyp"), true = hsb2)
+
+lineup_hsb2 |>
+     ggplot(aes(fill = schtyp, y = math)) +
+     geom_boxplot() +
+     theme_minimal() +
+     labs(x = "math score", y = "", fill = "school\ntype") +
+     facet_wrap(~.sample, ncol = 5) +
+     theme(
+          strip.background = element_blank(),
+          strip.text = element_text(face = "bold"),
+          axis.text.x = element_blank()
+     ) +
+     scale_fill_manual(values = RColorBrewer::brewer.pal(8, "Dark2")[c(3, 4)])
+```
+
+
+## Line-up for math scores
+
+Where are the original data? 
+
+19 boxplots from permuted school type. 1 boxplot of OG data.
+
+It's hard to tell!  Maybe we can't reject the "nothing is going on" claim.
+
+
+```{r}
+#| fig-align: 'center'
+#| fig-width: 6
+#| echo: false
+
+set.seed(1234)
+library(nullabor)
+
+lineup_hsb2 <- lineup(method = null_permute("schtyp"), true = hsb2)
+
+lineup_hsb2 |>
+     ggplot(aes(fill = schtyp, y = math)) +
+     geom_boxplot() +
+     theme_minimal() +
+     labs(x = "math score", y = "", fill = "school\ntype") +
+     facet_wrap(~.sample, ncol = 5) +
+     theme(
+          strip.background = element_blank(),
+          strip.text = element_text(face = "bold"),
+          axis.text.x = element_blank()
+     ) +
+     scale_fill_manual(values = RColorBrewer::brewer.pal(8, "Dark2")[c(3, 4)])
+```
+
+
+## Line-up for Olympic / Paralympic 1500
+
+Where are the original data? 
+
+19 boxplots from permuted race type. 1 boxplot of OG data.
+
+
+```{r}
+#| fig-align: 'center'
+#| fig-width: 6
+#| echo: false
+
+set.seed(1234)
+filter_1500 <- paralympic_1500 |>
+     filter(type %in% c("Olympic", "T13"), year >= 1984, division == "Men")
+
+lineup_1500 <- lineup(method = null_permute("type"), true = filter_1500)
+
+lineup_1500 |>
+     ggplot(aes(fill = type, y = time_min)) +
+     geom_boxplot() +
+     theme_minimal() +
+     labs(y = "", y = "", fill = "race\ntype", title = "1500 time (min)") +
+     facet_wrap(~.sample, ncol = 5) +
+     theme(
+          strip.background = element_blank(),
+          strip.text = element_text(face = "bold"),
+          axis.text.x = element_blank()
+     ) +
+     scale_fill_manual(
+          values = RColorBrewer::brewer.pal(8, "Dark2")[c(3, 4, 5, 6)]
+     )
+```
+
+
+## Line-up for Olympic / Paralympic 1500
+
+Where are the original data? 
+
+19 boxplots from permuted race type. 1 boxplot of OG data.
+
+
+Obviously #8 is the OG data!
+
+
+```{r}
+#| fig-align: 'center'
+#| fig-width: 6
+#| echo: false
+
+set.seed(1234)
+library(openintro)
+
+filter_1500 <- paralympic_1500 |>
+     filter(type %in% c("Olympic", "T13"), year >= 1984, division == "Men")
+
+lineup_1500 <- lineup(method = null_permute("type"), true = filter_1500)
+
+lineup_1500 |>
+     ggplot(aes(fill = type, y = time_min)) +
+     geom_boxplot() +
+     theme_minimal() +
+     labs(y = "", y = "", fill = "race\ntype", title = "1500 time (min)") +
+     facet_wrap(~.sample, ncol = 5) +
+     theme(
+          strip.background = element_blank(),
+          strip.text = element_text(face = "bold"),
+          axis.text.x = element_blank()
+     ) +
+     scale_fill_manual(
+          values = RColorBrewer::brewer.pal(8, "Dark2")[c(3, 4, 5, 6)]
+     )
+```
+
+
 
 ## References
 
