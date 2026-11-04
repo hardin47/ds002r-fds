@@ -2410,6 +2410,86 @@ data.frame(perm_diff = rnorm(200)) |>
 
 ---
 
+(@) Where is the original data?[^88a]
+::: {.columns}
+::: {.column width=50%}
+  a. 6
+  b. 10
+  c. 13
+  d. 14
+  e. 19
+:::
+
+::: {.column width=50%}  
+```{r}
+#| echo: false
+set.seed(1234)
+library(nullabor)
+
+lineup_hsb2 <- lineup(method = null_permute("schtyp"), true = hsb2, pos = 13)
+
+lineup_hsb2 |>
+  ggplot(aes(fill = schtyp, y = math)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(x = "math score", y = "", fill = "school\ntype") +
+  facet_wrap(~.sample, ncol = 5) +
+  theme(
+    strip.background = element_blank(),
+    strip.text = element_text(face = "bold"),
+    axis.text.x = element_blank()
+  ) +
+  scale_fill_manual(values = RColorBrewer::brewer.pal(8, "Dark2")[c(3, 4)])
+```
+:::
+::::
+
+[^88a]: c. It is 13, but I only know that because I set it!
+
+---
+
+(@) Where is the original data?[^88a]
+::: {.columns}
+::: {.column width=50%}
+  a. 1
+  b. 5
+  c. 8
+  d. 11
+  e. 16
+:::
+
+::: {.column width=50%}  
+```{r}
+#| echo: false
+set.seed(1234)
+filter_1500 <- paralympic_1500 |>
+     filter(type %in% c("Olympic", "T13"), year >= 1984, division == "Men")
+
+lineup_1500 <- lineup(method = null_permute("type"), true = filter_1500)
+
+lineup_1500 |>
+     ggplot(aes(fill = type, y = time_min)) +
+     geom_boxplot() +
+     theme_minimal() +
+     labs(y = "", y = "", fill = "race\ntype", title = "1500 time (min)") +
+     facet_wrap(~.sample, ncol = 5) +
+     theme(
+          strip.background = element_blank(),
+          strip.text = element_text(face = "bold"),
+          axis.text.x = element_blank()
+     ) +
+     scale_fill_manual(
+          values = RColorBrewer::brewer.pal(8, "Dark2")[c(3, 4, 5, 6)]
+     )
+
+```
+:::
+::::
+
+[^88a]: c. 8th plot.
+
+---
+
 (@) What is misleading here?[^89a]
     a. Very low data-to-ink ratio?^[data-to-ink ratio measures how much ink is being used for the data (data-ink) as compared to how much ink is because used on the entire plot (labels, etc.)]
     b. Non-intuitive sorting?

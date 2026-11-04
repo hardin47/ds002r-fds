@@ -461,7 +461,7 @@ Where are the original data?
 set.seed(1234)
 library(nullabor)
 
-lineup_hsb2 <- lineup(method = null_permute("schtyp"), true = hsb2)
+lineup_hsb2 <- lineup(method = null_permute("schtyp"), true = hsb2, pos = 13)
 
 lineup_hsb2 |>
      ggplot(aes(fill = schtyp, y = math)) +
@@ -495,7 +495,7 @@ It's hard to tell!  Maybe we can't reject the "nothing is going on" claim.
 set.seed(1234)
 library(nullabor)
 
-lineup_hsb2 <- lineup(method = null_permute("schtyp"), true = hsb2)
+lineup_hsb2 <- lineup(method = null_permute("schtyp"), true = hsb2, pos = 13)
 
 lineup_hsb2 |>
      ggplot(aes(fill = schtyp, y = math)) +
