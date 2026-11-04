@@ -2355,7 +2355,7 @@ sum(hats == random_hats) > 0
 
 (@) The histogram is a null sampling distribution for the difference in two means.  The red line is the observed value from the data.  To compute the p-value, which area should be considered?[^88]
 
-::: {.columns}
+:::: {.columns}
 ::: {.column width=50%}
   a. The area to the left.
   b. The area to the right.
@@ -2382,9 +2382,9 @@ data.frame(perm_diff = rnorm(200)) |>
 
 ---
 
-(@) The histogram is a null sampling distribution for the difference in two means.  The red line is the observed value from the data.  The alternative hypothesis is $H_A: \mu_1 - \mu_2 \ne 0$. To compute the p-value, which area should be considered?[^89]
+(@) The histogram is a null sampling distribution for the difference in two means.  The red line is the observed value from the data. For the p-value, which area should be considered if the alternative hypothesis is $H_A: \mu_1 - \mu_2 \ne 0$?[^89]
 
-::: {.columns}
+:::: {.columns}
 ::: {.column width=50%}
   a. The area to the left.
   b. The area to the right.
@@ -2411,7 +2411,8 @@ data.frame(perm_diff = rnorm(200)) |>
 ---
 
 (@) Where is the original data?[^88a]
-::: {.columns}
+
+:::: {.columns}
 ::: {.column width=50%}
   a. 6
   b. 10
@@ -2449,7 +2450,8 @@ lineup_hsb2 |>
 ---
 
 (@) Where is the original data?[^88a]
-::: {.columns}
+
+:::: {.columns}
 ::: {.column width=50%}
   a. 1
   b. 5
