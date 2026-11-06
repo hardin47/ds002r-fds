@@ -385,8 +385,8 @@ perm_stats |>
 ```{r}
 perm_stats |>
   summarize(
-    p_val_ave = mean(perm_ave_diff > obs_ave_diff),
-    p_val_med = mean(perm_med_diff > obs_med_diff)
+    p_val_ave = mean(perm_ave_diff >= obs_ave_diff),
+    p_val_med = mean(perm_med_diff >= obs_med_diff)
   )
 ```
 
@@ -397,9 +397,9 @@ From these data, the observed differences seem to be consistent with the distrib
 
 There is no evidence to reject the null hypothesis.
 
-We cannot claim that in the population the **average** math scores for private school kids is larger than the **average** math scores for public school kids (p-value = 0.086).
+We cannot claim that in the population the **average** math scores for private school kids is larger than the **average** math scores for public school kids (p-value = 0.094).
 
-We cannot claim that in the population the **median** math scores for private school kids is larger than the **median** math scores for public school kids (p-value = 0.27).
+We cannot claim that in the population the **median** math scores for private school kids is larger than the **median** math scores for public school kids (p-value = 0.356).
 
 ## Two-sided test:
 
@@ -422,11 +422,11 @@ perm_stats |>
 perm_stats |>
        summarize(
               p_val_ave = mean(
-                     perm_ave_diff > obs_ave_diff |
+                     perm_ave_diff >= obs_ave_diff |
                             perm_ave_diff < -obs_ave_diff
               ),
               p_val_med = mean(
-                     perm_med_diff > obs_med_diff |
+                     perm_med_diff >= obs_med_diff |
                             perm_med_diff < -obs_med_diff
               )
        )
@@ -438,9 +438,9 @@ From these data, the observed differences seem to be consistent with the distrib
 
 There is no evidence to reject the null hypothesis.
 
-We cannot claim that there is a **difference** in average math scores in the population (p-value = 0.154).
+We cannot claim that there is a **difference** in average math scores in the population (p-value = 0.162).
 
-We cannot claim that there is a **difference** in median math scores int he population (p-value = 0.534).
+We cannot claim that there is a **difference** in median math scores int he population (p-value = 0.62).
 
 # Line-up protocol
 

@@ -1089,14 +1089,14 @@
     "href": "slides/2026-11-02-perm.html#p-value-2",
     "title": "Hypothesis Testing",
     "section": "p-value",
-    "text": "p-value\n\nperm_stats |&gt;\n  summarize(\n    p_val_ave = mean(perm_ave_diff &gt; obs_ave_diff),\n    p_val_med = mean(perm_med_diff &gt; obs_med_diff)\n  )\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.086      0.27"
+    "text": "p-value\n\nperm_stats |&gt;\n  summarize(\n    p_val_ave = mean(perm_ave_diff &gt;= obs_ave_diff),\n    p_val_med = mean(perm_med_diff &gt;= obs_med_diff)\n  )\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.094     0.356"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#conclusion",
     "href": "slides/2026-11-02-perm.html#conclusion",
     "title": "Hypothesis Testing",
     "section": "Conclusion",
-    "text": "Conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that in the population the average math scores for private school kids is larger than the average math scores for public school kids (p-value = 0.086).\nWe cannot claim that in the population the median math scores for private school kids is larger than the median math scores for public school kids (p-value = 0.27)."
+    "text": "Conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that in the population the average math scores for private school kids is larger than the average math scores for public school kids (p-value = 0.094).\nWe cannot claim that in the population the median math scores for private school kids is larger than the median math scores for public school kids (p-value = 0.356)."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#two-sided-test",
@@ -1110,14 +1110,14 @@
     "href": "slides/2026-11-02-perm.html#two-sided-p-value",
     "title": "Hypothesis Testing",
     "section": "Two-sided p-value",
-    "text": "Two-sided p-value\n\nperm_stats |&gt;\n       summarize(\n              p_val_ave = mean(\n                     perm_ave_diff &gt; obs_ave_diff |\n                            perm_ave_diff &lt; -obs_ave_diff\n              ),\n              p_val_med = mean(\n                     perm_med_diff &gt; obs_med_diff |\n                            perm_med_diff &lt; -obs_med_diff\n              )\n       )\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.154     0.534"
+    "text": "Two-sided p-value\n\nperm_stats |&gt;\n       summarize(\n              p_val_ave = mean(\n                     perm_ave_diff &gt;= obs_ave_diff |\n                            perm_ave_diff &lt; -obs_ave_diff\n              ),\n              p_val_med = mean(\n                     perm_med_diff &gt;= obs_med_diff |\n                            perm_med_diff &lt; -obs_med_diff\n              )\n       )\n\n# A tibble: 1 × 2\n  p_val_ave p_val_med\n      &lt;dbl&gt;     &lt;dbl&gt;\n1     0.162      0.62"
   },
   {
     "objectID": "slides/2026-11-02-perm.html#two-sided-conclusion",
     "href": "slides/2026-11-02-perm.html#two-sided-conclusion",
     "title": "Hypothesis Testing",
     "section": "Two-sided conclusion",
-    "text": "Two-sided conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that there is a difference in average math scores in the population (p-value = 0.154).\nWe cannot claim that there is a difference in median math scores int he population (p-value = 0.534)."
+    "text": "Two-sided conclusion\nFrom these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.\nThere is no evidence to reject the null hypothesis.\nWe cannot claim that there is a difference in average math scores in the population (p-value = 0.162).\nWe cannot claim that there is a difference in median math scores int he population (p-value = 0.62)."
   },
   {
     "objectID": "slides/2026-11-02-perm.html#references",
@@ -5710,5 +5710,61 @@
     "title": "Hypothesis Testing",
     "section": "Line-up for Olympic / Paralympic 1500",
     "text": "Line-up for Olympic / Paralympic 1500\nWhere are the original data?\n19 boxplots from permuted race type. 1 boxplot of OG data.\nObviously #8 is the OG data!"
+  },
+  {
+    "objectID": "project4.html",
+    "href": "project4.html",
+    "title": "Project 4",
+    "section": "",
+    "text": "Project 4 examines ethics and power in the data science context. You will investigate a particular data science ethical quandary and the power dynamics within. Our work is grounded in the following two quotes from Data Feminism. The first asks about who and the second asks about why."
+  },
+  {
+    "objectID": "project4.html#your-task",
+    "href": "project4.html#your-task",
+    "title": "Project 4",
+    "section": "Your task",
+    "text": "Your task\n\nFirst, find an ethical dilemma with a data science component. Please take on only one ethical dilemma, it is too difficult to compare multiple dilemmsas in one short blog entry. There are many examples below, and within each example you should start with the reference provided (or the one that you found) and then find at least one more article (possibly from another angle? or go find the privacy policy / user agreement if there is one!) to expand your understanding of the topic. It should be clear from your report what information came from which article. Feel free to choose an example different from those below.\nDescribe the example / scenario as if to someone who is not at all familiar with the setting. In particular, it should be clear both what is the data science component and what is the ethical dilemma.\nRespond to at least 4 of the items below (from the list of questions or from the Data Values and Principles manifesto). Include four separate paragraphs that explain both the issue (e.g., consent) and how the issue played out in the data science example. Note: totally fine if there are items that were done well in your example.\nGiven what you described in #3 (above), summarize by explaining why it matters. Who benefits? Who is neglected or harmed? Were the ethical violations in the interest of profit? Surveillance? Power?"
+  },
+  {
+    "objectID": "project4.html#questions-to-respond-to",
+    "href": "project4.html#questions-to-respond-to",
+    "title": "Project 4",
+    "section": "Questions to respond to",
+    "text": "Questions to respond to\n\nWhat is the permission structure for using the data? Was it followed?\nWhat was the consent structure for recruiting participants? Were the participants aware of the ways their data would be used for research? Was informed consent possible? Can you provide informed consent for applications that are yet foreseen?\nWhat was the data collection process? Were the observations collected ethically? Are there missing observations?\nWere the data made publicly available? Why? How? On what platform?\nIs the data identifiable? All of it? Some of it? In what way? Are the data sufficiently anonymized or old to be free of ethical concerns? Is anonymity guaranteed?\nHow were the variables collected? Were they accurately recorded? Is there any missing data?\nWho was measured? Are those individuals representative of the people to whom we’d like to generalize / apply the algorithm? Should we analyze data if we do not know how the data were collected?\nIs the data being used in unintended ways to the original study?\nShould race be used as a variable? Is it a proxy for something else (e.g., amount of melanin in the skin, stress of navigating microaggressions, zip-code, etc.)? What about gender?\nData Values and Principles manifesto\n\n\nAs data teams, we aim to…\n\n\n\nUse data to improve life for our users, customers, organizations, and communities.\nCreate reproducible and extensible work.\nBuild teams with diverse ideas, backgrounds, and strengths.\nPrioritize the continuous collection and availability of discussions and metadata.\nClearly identify the questions and objectives that drive each project and use to guide both planning and refinement.\nBe open to changing our methods and conclusions in response to new knowledge.\nRecognize and mitigate bias in ourselves and in the data we use.\nPresent our work in ways that empower others to make better-informed decisions.\nConsider carefully the ethical implications of choices we make when using data, and the impacts of our work on individuals and society.\nRespect and invite fair criticism while promoting the identification and open discussion of errors, risks, and unintended consequences of our work.\nProtect the privacy and security of individuals represented in our data.\nHelp others to understand the most useful and appropriate applications of data to solve real-world problems."
+  },
+  {
+    "objectID": "project4.html#logistics",
+    "href": "project4.html#logistics",
+    "title": "Project 4",
+    "section": "Logistics",
+    "text": "Logistics\n\ncreate a new Quarto file (just like you did for previous projects) and type words into it, even though there is no code.\nno code is expected. If, for some reason, you include code, follow the same practices as in previous projects: explain what you are doing, show your code, no messages or warnings, etc.\ninclude the full citations for your references (of which there should be at least two), not just the hyperlink. If you do not know how to create or format a citation, as me or AI about how to correctly cite a reference.\nmake it clear which information came from which resource."
+  },
+  {
+    "objectID": "project4.html#timeline",
+    "href": "project4.html#timeline",
+    "title": "Project 4",
+    "section": "Timeline",
+    "text": "Timeline\nProject 4 must be submitted on Canvas (not Gradescope) by 11:59 PM on Wednesday November 18. You will add a tab to your Quarto webpage and submit the new page’s URL. [Remember, you should continue to work in the same folder that is connected to the GitHub website page. Do not create a new GitHub repository.]"
+  },
+  {
+    "objectID": "project4.html#potential-examples",
+    "href": "project4.html#potential-examples",
+    "title": "Project 4",
+    "section": "Potential examples",
+    "text": "Potential examples\n(Feel free to find your own example if you prefer.)\n\nBiobank samples from the Havasupai lawsuit (informed consent, among other things). Van Assche, K., Gutwirth, S., and Sterckx, S. (2013), Protecting Dignitary Interests of Biobank Research Participants: Lessons from Havasupai Tribe v Arizona Board of Regents, Law, Innovation and Technology, 5, 54–84.\nFacebook emotional contagion experiment (patient consent, among other things). Kramer, A. D., Guillory, J. E., and Hancock, J. T. (2014), Experimental Evidence of Massive-Scale Emotional Contagion through Social Networks, Proceedings of the National Academy of Sciences of the United States of America, 111, 8788–8790.\nOK Cupid data release (privacy and publicly available data). Xiao, T., and Ma, Y. (2021), A Letter to the Journal of Statistics and Data Science Education — A Call for Review of ‘OkCupid Data for Introductory Statistics and Data Science Courses’ by Albert Y. Kim and Adriana Escobedo-Land, Journal of Statistics and Data Science Education, 29, 214–215.\nTaxis dataset with 173 million cab rides (poorly anonymized data). Goodin, D. (2014) Poorly anonymized logs reveal NYC cab drivers’ detailed whereabouts, Ars Technical.\nNetflix “de-anonymized” + link to IMDB (poorly anonymized data). Leetaru, K. (2016), The Big Data Era of Mosaicked Deidentification: Can We Anonymize Data Anymore?, Forbes.\nCOMPAS (Correctional Offender Management Profiling for Alternative Sanctions) (biased algorithm). Angwin, J., Larson, J., Mattu, S., and Kirchner, L. (2016), Machine Bias, ProPublica.\nTarget (what if the algorithm is good at predicting something you don’t want predicted?). Duhigg, C. (2012), How Companies Learn Your Secrets, The New York Times Magazine.\nAmazon hiring algorithm (who has moral responsibility?) Dastin, J. (2018), “Amazon Scraps Secret AI Recruiting Tool that Showed Bias Against Women, Reuters.\nAirlines respond differently, depending on who is tweeting (should the algorithm be used?). Gunarathne, P., Rui, H., and Seidmann, A. (2022). Racial Bias in Customer Service: Evidence from Twitter, Information Systems Research: 33, 43-54. n.b., log into the Claremont Colleges Library and search for the title. The library has the digital copy available.\nThe Allegheny Family Screening Tool is specifically designed to predict the risk that a child will be placed in foster care in the two years after being investigated (what if the marginalized community is overrepresented?). Ho, S. and Burke, G. (2022). An Algorithm That Screens for Child Neglect Raises Concerns, Pulitzer Center.\nTraining facial recognition software from publicly available data (what if the marginalized community is underrepresented?). Buolamwini, J. and Gebru, T. (2018). Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification, Proceedings of Machine Learning Research: 81, 77-91.\nAmazon’s Ring cameras end their partnership with police. Stephen Ragan (2024) Amazon Drops Neighborhood Surveillance Program, ACLU of Illinois.\nShotSpotter leak brings to light secretive police surveillance technology. David Gwidt (2024) ShotSpotter Leak Shows That Surveillance Tech is Used to Overpolice Black and Brown Communities, ACLU of Wisconsin.\nBreaking down the operational changes of Flock cameras. Chad Marlow (2026) Despite ‘New’ Updates, Flock’s Creepy Cameras Remain Major Civil Liberties Threat&gt;, ACLU.\nHealth systems are under legal scrutiny for using AI to make care decisions. Naomi Diaz (2026) 3 lawsuits testing where AI accountability lands in healthcare, Becker’s Healthcare."
+  },
+  {
+    "objectID": "project4.html#footnotes",
+    "href": "project4.html#footnotes",
+    "title": "Project 4",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nhrgx0zws6h↩︎\nhttps://data-feminism.mitpress.mit.edu/pub/vi8obxh7#nifnaq2jmn9↩︎"
+  },
+  {
+    "objectID": "project4.html#potential-questions-to-respond-to",
+    "href": "project4.html#potential-questions-to-respond-to",
+    "title": "Project 4",
+    "section": "Potential questions to respond to:",
+    "text": "Potential questions to respond to:\n\nWhat is the permission structure for using the data? Was it followed?\nWhat was the consent structure for recruiting participants? Were the participants aware of the ways their data would be used for research? Was informed consent possible? Can you provide informed consent for applications that are yet foreseen?\nWhat was the data collection process? Were the observations collected ethically? Are there missing observations?\nWere the data made publicly available? Why? How? On what platform?\nIs the data identifiable? All of it? Some of it? In what way? Are the data sufficiently anonymized or old to be free of ethical concerns? Is anonymity guaranteed?\nHow were the variables collected? Were they accurately recorded? Is there any missing data?\nWho was measured? Are those individuals representative of the people to whom we’d like to generalize / apply the algorithm? Should we analyze data if we do not know how the data were collected?\nIs the data being used in unintended ways to the original study?\nShould race be used as a variable? Is it a proxy for something else (e.g., amount of melanin in the skin, stress of navigating microaggressions, zip-code, etc.)? What about gender?\nData Values and Principles manifesto\n\n\nAs data teams, we aim to…\n\n\n\nUse data to improve life for our users, customers, organizations, and communities.\nCreate reproducible and extensible work.\nBuild teams with diverse ideas, backgrounds, and strengths.\nPrioritize the continuous collection and availability of discussions and metadata.\nClearly identify the questions and objectives that drive each project and use to guide both planning and refinement.\nBe open to changing our methods and conclusions in response to new knowledge.\nRecognize and mitigate bias in ourselves and in the data we use.\nPresent our work in ways that empower others to make better-informed decisions.\nConsider carefully the ethical implications of choices we make when using data, and the impacts of our work on individuals and society.\nRespect and invite fair criticism while promoting the identification and open discussion of errors, risks, and unintended consequences of our work.\nProtect the privacy and security of individuals represented in our data.\nHelp others to understand the most useful and appropriate applications of data to solve real-world problems."
   }
 ]

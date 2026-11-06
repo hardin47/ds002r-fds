@@ -14,16 +14,16 @@ Project 4 examines ethics and power in the data science context. You will invest
 
 ## Your task
 
-1. First, find an ethical dilemma with a data science component. Please take on only one ethical dilemma, it is too difficult to compare multiple dilemmsas in one short blog entry. There are many examples below, and within each example you should start with the reference provided and find **at least one more article** (possibly from another angle? or go find the privacy policy / user agreement if there is one!) to expand your understanding of the topic. It should be clear from your report what information came from which article. Feel free to choose an example different from those below.
+1. First, find an ethical dilemma with a data science component. Please take on only one ethical dilemma, it is too difficult to compare multiple dilemmsas in one short blog entry. There are many examples below, and within each example you should start with the reference provided (or the one that you found) and then find **at least one more article** (possibly from another angle? or go find the privacy policy / user agreement if there is one!) to expand your understanding of the topic. It should be clear from your report what information came from which article. Feel free to choose an example different from those below.
 
 2. Describe the example / scenario as if to someone who is not at all familiar with the setting. In particular, it should be clear both what is the data science component and what is the ethical dilemma.
 
-3. Respond to at least 4 of the items below (from the list of questions or the Data Values and Principles Manifesto). Four separate paragraphs that explain both the issue (e.g., consent) and how the issue played out in the data science example. Note: totally fine if there are items that were done *well* in your example.
+3. Respond to at least 4 of the items below (from the list of questions or from the <a href = "https://datapractices.org/manifesto/" target = "_blank">Data Values and Principles manifesto</a>). Include **four separate paragraphs** that explain both the issue (e.g., consent) and how the issue played out in the data science example. Note: totally fine if there are items that were done *well* in your example.
 
 4. Given what you described in #3 (above), summarize by explaining why it matters. Who benefits? Who is neglected or harmed? Were the ethical violations in the interest of profit? Surveillance? Power?
 
 
-## Questions to respond to
+## Potential questions to respond to:
 
 * What is the permission structure for using the data? Was it followed?
 
@@ -64,16 +64,15 @@ Project 4 examines ethics and power in the data science context. You will invest
 
 ## Logistics
 
-- work in your website .Rproj, do not start a new R Project.
-- create a new Quarto file (just like you did for previous projects), and type words into it, even though there is no code.
+- create a new Quarto file (just like you did for previous projects) and type words into it, even though there is no code.
 - no code is expected. If, for some reason, you include code, follow the same practices as in previous projects: explain what you are doing, show your code, no messages or warnings, etc.
-- include the full citations for your references (of which there should be at least two), not just the hyperlink. If you do not know how to create or format a citation, as me or chatGPT.
+- include the full citations for your references (of which there should be at least two), not just the hyperlink. If you do not know how to create or format a citation, as me or AI about how to correctly cite a reference.
 - make it clear which information came from which resource.
 
 
 ## Timeline
 
-Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday November 12**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in your website Rproj. Do not start a new R Project.]
+Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesday November 18**.  You will add a tab to your Quarto webpage and submit the new page's URL. [Remember, you should continue to work in the same folder that is connected to the GitHub website page. Do not create a new GitHub repository.]
 
 
 ## Potential examples
@@ -102,4 +101,11 @@ Project 4 must be submitted on Canvas (not Gradescope) by **11:59 PM on Wednesda
 
 * Training facial recognition software from publicly available data (what if the marginalized community is underrepresented?). Buolamwini, J. and Gebru, T. (2018). <a href = "https://proceedings.mlr.press/v81/buolamwini18a.html" target = "_blank">Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification</a>, Proceedings of Machine Learning Research: 81, 77-91.
 
+* Amazon's Ring cameras end their partnership with police. Stephen Ragan (2024) <a href = "https://www.aclu-il.org/news/amazon-drops-neighborhood-surveillance-program/" target = "_blank">Amazon Drops Neighborhood Surveillance Program</a>, ACLU of Illinois.
 
+* ShotSpotter leak brings to light secretive police surveillance technology. David Gwidt (2024) <a href = "https://www.aclu-wi.org/news/shotspotter-leak-shows-surveillance-tech-used-overpolice-black-and-brown-communities/" target = "_blank">ShotSpotter Leak Shows That Surveillance Tech is Used to Overpolice Black and Brown Communities</a>, ACLU of Wisconsin.
+
+
+* Breaking down the operational changes of Flock cameras. Chad Marlow (2026) <a href = "https://www.aclu.org/news/privacy-technology/tracking-alpr-cameras/despite-new-updates-flocks-creepy-cameras-remain-major-civil-liberties-threat" target = "_blank">Despite 'New' Updates, Flock's Creepy Cameras Remain Major Civil Liberties Threat></a>, ACLU.
+
+* Health systems are under legal scrutiny for using AI to make care decisions. Naomi Diaz (2026) <a href = "https://www.beckershospitalreview.com/healthcare-information-technology/ai/4-lawsuits-testing-where-ai-accountability-lands-in-healthcare/" target = "_blank">3 lawsuits testing where AI accountability lands in healthcare</a>, Becker's Healthcare.

@@ -1523,14 +1523,14 @@ Jo Hardin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a aria-label="1"></a>perm_stats <span class="sc">|&gt;</span></span>
 <span id="cb24-2"><a aria-label="2"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb24-3"><a aria-label="3"></a>    <span class="at">p_val_ave =</span> <span class="fu">mean</span>(perm_ave_diff <span class="sc">&gt;</span> obs_ave_diff),</span>
-<span id="cb24-4"><a aria-label="4"></a>    <span class="at">p_val_med =</span> <span class="fu">mean</span>(perm_med_diff <span class="sc">&gt;</span> obs_med_diff)</span>
+<span id="cb24-3"><a aria-label="3"></a>    <span class="at">p_val_ave =</span> <span class="fu">mean</span>(perm_ave_diff <span class="sc">&gt;=</span> obs_ave_diff),</span>
+<span id="cb24-4"><a aria-label="4"></a>    <span class="at">p_val_med =</span> <span class="fu">mean</span>(perm_med_diff <span class="sc">&gt;=</span> obs_med_diff)</span>
 <span id="cb24-5"><a aria-label="5"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   p_val_ave p_val_med
       &lt;dbl&gt;     &lt;dbl&gt;
-1     0.086      0.27</code></pre>
+1     0.094     0.356</code></pre>
 </div>
 </div>
 </section>
@@ -1538,8 +1538,8 @@ Jo Hardin
 <h2>Conclusion</h2>
 <p>From these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.</p>
 <p>There is no evidence to reject the null hypothesis.</p>
-<p>We cannot claim that in the population the <strong>average</strong> math scores for private school kids is larger than the <strong>average</strong> math scores for public school kids (p-value = 0.086).</p>
-<p>We cannot claim that in the population the <strong>median</strong> math scores for private school kids is larger than the <strong>median</strong> math scores for public school kids (p-value = 0.27).</p>
+<p>We cannot claim that in the population the <strong>average</strong> math scores for private school kids is larger than the <strong>average</strong> math scores for public school kids (p-value = 0.094).</p>
+<p>We cannot claim that in the population the <strong>median</strong> math scores for private school kids is larger than the <strong>median</strong> math scores for public school kids (p-value = 0.356).</p>
 </section>
 <section id="two-sided-test" class="slide level2">
 <h2>Two-sided test:</h2>
@@ -1552,11 +1552,11 @@ Jo Hardin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a aria-label="1"></a>perm_stats <span class="sc">|&gt;</span></span>
 <span id="cb26-2"><a aria-label="2"></a>       <span class="fu">summarize</span>(</span>
 <span id="cb26-3"><a aria-label="3"></a>              <span class="at">p_val_ave =</span> <span class="fu">mean</span>(</span>
-<span id="cb26-4"><a aria-label="4"></a>                     perm_ave_diff <span class="sc">&gt;</span> obs_ave_diff <span class="sc">|</span></span>
+<span id="cb26-4"><a aria-label="4"></a>                     perm_ave_diff <span class="sc">&gt;=</span> obs_ave_diff <span class="sc">|</span></span>
 <span id="cb26-5"><a aria-label="5"></a>                            perm_ave_diff <span class="sc">&lt;</span> <span class="sc">-</span>obs_ave_diff</span>
 <span id="cb26-6"><a aria-label="6"></a>              ),</span>
 <span id="cb26-7"><a aria-label="7"></a>              <span class="at">p_val_med =</span> <span class="fu">mean</span>(</span>
-<span id="cb26-8"><a aria-label="8"></a>                     perm_med_diff <span class="sc">&gt;</span> obs_med_diff <span class="sc">|</span></span>
+<span id="cb26-8"><a aria-label="8"></a>                     perm_med_diff <span class="sc">&gt;=</span> obs_med_diff <span class="sc">|</span></span>
 <span id="cb26-9"><a aria-label="9"></a>                            perm_med_diff <span class="sc">&lt;</span> <span class="sc">-</span>obs_med_diff</span>
 <span id="cb26-10"><a aria-label="10"></a>              )</span>
 <span id="cb26-11"><a aria-label="11"></a>       )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1564,7 +1564,7 @@ Jo Hardin
 <pre><code># A tibble: 1 × 2
   p_val_ave p_val_med
       &lt;dbl&gt;     &lt;dbl&gt;
-1     0.154     0.534</code></pre>
+1     0.162      0.62</code></pre>
 </div>
 </div>
 </section>
@@ -1572,8 +1572,8 @@ Jo Hardin
 <h2>Two-sided conclusion</h2>
 <p>From these data, the observed differences seem to be consistent with the distribution of differences in the null sampling distribution.</p>
 <p>There is no evidence to reject the null hypothesis.</p>
-<p>We cannot claim that there is a <strong>difference</strong> in average math scores in the population (p-value = 0.154).</p>
-<p>We cannot claim that there is a <strong>difference</strong> in median math scores int he population (p-value = 0.534).</p>
+<p>We cannot claim that there is a <strong>difference</strong> in average math scores in the population (p-value = 0.162).</p>
+<p>We cannot claim that there is a <strong>difference</strong> in median math scores int he population (p-value = 0.62).</p>
 </section></section>
 <section>
 <section id="line-up-protocol" class="title-slide slide level1 center">
