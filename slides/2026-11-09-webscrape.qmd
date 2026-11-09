@@ -370,11 +370,11 @@ Core functions:
 
 -   `html_text()` / `html_text2()` - extract element's text content.
 
--   `html_name` - extract a element's name(s).
+-   `html_name()` - extract a element's name(s).
 
--   `html_attrs` - extract all attributes.
+-   `html_attrs()` - extract all attributes.
 
--   `html_attr` - extract attribute value(s) by name.
+-   `html_attr()` - extract attribute value(s) by name.
 
 ## html & rvest {.smaller}
 
@@ -497,6 +497,26 @@ read_html(html) |> html_elements("div.name")
 ```{r}
 read_html(html) |> html_elements("#first")
 ```
+
+## CSS classes and ids (cont.)
+
+One `id` but many `class`es
+
+```{html}
+<div id="results">
+    <p class="price">$10</p>
+    <p class="price">$25</p>
+    <p class="price sale">$5</p>
+</div>
+```
+
+```{r}
+#| eval: false
+
+page |> html_element("#results") # returns one element
+page |> html_elements(".price") # returns all matching elements
+```
+
 
 ## Text with `html_text()` vs. `html_text2()`
 
