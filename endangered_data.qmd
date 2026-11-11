@@ -75,7 +75,13 @@ schedule <- tribble(
   'Substantial rule changes have been <a href = "https://handsoffourcens.us/" target = "_blank">proposed</a> for the 2030 census. The proposals address who would be included in counts used for congressional apportionment, how residence would be determined, and which demographic questions could appear on the decennial census questionnaire. You can read the proposal and the Census Bureau’s rationale in the <a href = "https://www.federalregister.gov/documents/2026/09/10/2026-18481/decennial-census-of-the-population-of-americans-proposed-residence-criteria-and-proposed-regulations" target = "_blank">Federal Register</a>. Some of the big changes: **Many residents would no longer count**: International students, work-visa holders, refugees, asylees, and other residents would be dropped from the apportionment count for the first time.
 **People counted in the wrong place**: A new January 3 to April 1 "enumeration period" and a tax-records test for where you live would miscount snowbirds, movers, rural P.O. box filers, college students, and service members.
 **No race or ethnicity data**: Asked in some form in every census since 1790, race and ethnicity questions would be prohibited. Nearly every other survey is weighted to census counts, so the loss would ripple through public health, civil rights, and business data.',
-  '11-02-2026'
+  '11-02-2026',
+
+  '<a href = "https://www.justice.gov/archives/opa/pr/fact-sheet-national-law-enforcement-accountability-database" target = "_blank">National Law Enforcement Accountability Database (NLEAD)<a/>', 
+  '12-19-2024' , 
+  'From <a href = "https://www.congress.gov/crs-product/IN12515" target = "_blank">The Library of Congress</a>: The National Law Enforcement Accountability Database (NLEAD) was a centralized repository of official records documenting instances of misconduct related to federal law enforcement officers (LEOs) that was operated by the Department of Justice (DOJ). On January 20, 2025, President Trump <a href = "https://www.whitehouse.gov/presidential-actions/2025/01/initial-rescissions-of-harmful-executive-orders-and-actions/" target = "_blanl">issued an executive order</a> that rescinded <a href = "https://www.govinfo.gov/content/pkg/FR-2022-05-31/pdf/2022-11810.pdf" target = "_blank">E.O. 14074</a> ("Advancing Effective, Accountable Policing and Criminal Justice Practices To Enhance Public Trust and Public Safety"), which was issued by President Biden on May 25, 2022. Among other things, E.O. 14074 directed the Attorney General (AG) to establish NLEAD. With the rescission of E.O. 14074, DOJ announced that NLEAD "is no longer active" and has been decommissioned "in accordance with federal standards."',
+  '11-11-2026'
+
 
 )
 ```
