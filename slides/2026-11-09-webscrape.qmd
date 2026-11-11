@@ -580,18 +580,47 @@ read_html(html_table) |>
   html_table()
 ```
 
+##  `html_attrs()` vs. `html_atrr()`
+
+```{r}
+html <- minimal_html(
+  "
+  <p><a href='https://en.wikipedia.org/wiki/Cat' class = 'link' target = '_blank'>cats</a></p>
+  <p><a href='https://en.wikipedia.org/wiki/Dog' class = 'link'>dogs</a></p>
+"
+)
+html
+```
+
+```{r}
+html |> html_elements("a")
+```
+
+```{r}
+html |> html_elements("a") |> html_attrs()
+```
+
+```{r}
+#| error: true
+
+html |> html_elements("a") |> html_attr()
+```
+
+```{r}
+html |> html_elements("a") |> html_attr("href")
+```
 
 ##  `html_attr()`
 
 extracts data from attributes:
 
-(n.b., the `<a>` tag refers to "anchor" and is used to create hyperlinks)
+(`<a>` tag refers to "anchor" and is used to create hyperlinks)
 
 ```{r}
 html <- minimal_html(
   "
-  <p><a href='https://en.wikipedia.org/wiki/Cat'>cats</a></p>
-  <p><a href='https://en.wikipedia.org/wiki/Dog'>dogs</a></p>
+  <p><a href='https://en.wikipedia.org/wiki/Cat' class = 'link' target = '_blank'>cats</a></p>
+  <p><a href='https://en.wikipedia.org/wiki/Dog' class = 'link'>dogs</a></p>
 "
 )
 html
