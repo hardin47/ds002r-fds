@@ -599,6 +599,11 @@ html
 
 ```{r}
 html |>
+  html_elements("href")
+```
+
+```{r}
+html |>
   html_attr("href")
 ```
 

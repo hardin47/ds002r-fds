@@ -1676,22 +1676,29 @@ Somewhere in between?</p>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb46-2"><a aria-label="2"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb46-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{xml_nodeset (0)}</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a aria-label="2"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb48-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;[href]&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb48-3"><a aria-label="3"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
+<span id="cb50-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;[href]&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb50-3"><a aria-label="3"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;https://en.wikipedia.org/wiki/Cat&quot; &quot;https://en.wikipedia.org/wiki/Dog&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb50-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
+<span id="cb52-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_nodeset (2)}
 [1] &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cat&quot;&gt;cats&lt;/a&gt;&lt;/p&gt;
@@ -1699,9 +1706,9 @@ Somewhere in between?</p>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb52-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb52-3"><a aria-label="3"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
+<span id="cb54-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb54-3"><a aria-label="3"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_nodeset (2)}
 [1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Cat&quot;&gt;cats&lt;/a&gt;
@@ -1709,34 +1716,34 @@ Somewhere in between?</p>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb54-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb54-3"><a aria-label="3"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb54-4"><a aria-label="4"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] &quot;https://en.wikipedia.org/wiki/Cat&quot; &quot;https://en.wikipedia.org/wiki/Dog&quot;</code></pre>
-</div>
-</div>
-<div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb56-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p a&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb56-3"><a aria-label="3"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb56-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb56-3"><a aria-label="3"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb56-4"><a aria-label="4"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;https://en.wikipedia.org/wiki/Cat&quot; &quot;https://en.wikipedia.org/wiki/Dog&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb58-2"><a aria-label="2"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb58-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;p a&quot;</span>) <span class="sc">|&gt;</span></span>
 <span id="cb58-3"><a aria-label="3"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;https://en.wikipedia.org/wiki/Cat&quot; &quot;https://en.wikipedia.org/wiki/Dog&quot;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
+<span id="cb60-2"><a aria-label="2"></a>  <span class="fu">html_element</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb60-3"><a aria-label="3"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;https://en.wikipedia.org/wiki/Cat&quot;</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
-<span id="cb60-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb60-3"><a aria-label="3"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a aria-label="1"></a>html <span class="sc">|&gt;</span></span>
+<span id="cb62-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;a&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb62-3"><a aria-label="3"></a>  <span class="fu">html_attr</span>(<span class="st">&quot;href&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;https://en.wikipedia.org/wiki/Cat&quot; &quot;https://en.wikipedia.org/wiki/Dog&quot;</code></pre>
 </div>
@@ -1784,8 +1791,8 @@ Somewhere in between?</p>
 <section id="read-in-the-entire-page" class="slide level2 smaller">
 <h2>Read in the entire page</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a aria-label="1"></a>tsl_page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">&quot;https://tsl.news/category/opinions/&quot;</span>)</span>
-<span id="cb63-2"><a aria-label="2"></a>tsl_page</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a aria-label="1"></a>tsl_page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">&quot;https://tsl.news/category/opinions/&quot;</span>)</span>
+<span id="cb65-2"><a aria-label="2"></a>tsl_page</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{html_document}
 &lt;html lang=&quot;en-US&quot;&gt;
@@ -1795,11 +1802,11 @@ Somewhere in between?</p>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a aria-label="1"></a><span class="fu">typeof</span>(tsl_page)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a aria-label="1"></a><span class="fu">typeof</span>(tsl_page)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;list&quot;</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a aria-label="1"></a><span class="fu">class</span>(tsl_page)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a aria-label="1"></a><span class="fu">class</span>(tsl_page)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;xml_document&quot; &quot;xml_node&quot;    </code></pre>
 </div>
@@ -1812,8 +1819,8 @@ Somewhere in between?</p>
 <section id="scrape-title-and-save-as-title" class="slide level2 smaller">
 <h2>Scrape title and save as <code>title</code></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a aria-label="1"></a>tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb69-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.entry-title a&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a aria-label="1"></a>tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb71-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.entry-title a&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_nodeset (10)}
  [1] &lt;a href=&quot;https://tsl.news/opinion-dont-let-the-midterms-fool-you-elites- ...
@@ -1830,11 +1837,11 @@ Somewhere in between?</p>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a aria-label="1"></a>title <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb71-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.entry-title a&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb71-3"><a aria-label="3"></a>  <span class="fu">html_text</span>()</span>
-<span id="cb71-4"><a aria-label="4"></a></span>
-<span id="cb71-5"><a aria-label="5"></a>title</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a aria-label="1"></a>title <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb73-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.entry-title a&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb73-3"><a aria-label="3"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb73-4"><a aria-label="4"></a></span>
+<span id="cb73-5"><a aria-label="5"></a>title</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] &quot;OPINION: Don’t let the midterms fool you — Oligarchs and their money-backed media campaigns are still driving our backsliding democracy&quot;
  [2] &quot;OPINION: The blue tsunami is forcing Democrats to do their least favorite thing — actually govern&quot;                                      
@@ -1847,10 +1854,10 @@ Somewhere in between?</p>
  [9] &quot;OPINION: Too elite for the label: Why Nara Smith rejects the ‘tradwife’ brand&quot;                                                          
 [10] &quot;OPINION: We created Elizabeth Holmes. Why can’t we let her go?&quot;                                                                         </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a aria-label="1"></a>title <span class="ot">&lt;-</span> title <span class="sc">|&gt;</span></span>
-<span id="cb73-2"><a aria-label="2"></a>  <span class="fu">str_remove</span>(<span class="st">&quot;OPINION: &quot;</span>)</span>
-<span id="cb73-3"><a aria-label="3"></a></span>
-<span id="cb73-4"><a aria-label="4"></a>title</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a aria-label="1"></a>title <span class="ot">&lt;-</span> title <span class="sc">|&gt;</span></span>
+<span id="cb75-2"><a aria-label="2"></a>  <span class="fu">str_remove</span>(<span class="st">&quot;OPINION: &quot;</span>)</span>
+<span id="cb75-3"><a aria-label="3"></a></span>
+<span id="cb75-4"><a aria-label="4"></a>title</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] &quot;Don’t let the midterms fool you — Oligarchs and their money-backed media campaigns are still driving our backsliding democracy&quot;
  [2] &quot;The blue tsunami is forcing Democrats to do their least favorite thing — actually govern&quot;                                      
@@ -1869,10 +1876,10 @@ Somewhere in between?</p>
 <section id="scrape-author-and-save-as-author" class="slide level2">
 <h2>Scrape author and save as <code>author</code></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a aria-label="1"></a>author <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb75-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;span.author&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb75-3"><a aria-label="3"></a>  <span class="fu">html_text</span>()</span>
-<span id="cb75-4"><a aria-label="4"></a>author</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a aria-label="1"></a>author <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb77-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;span.author&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb77-3"><a aria-label="3"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb77-4"><a aria-label="4"></a>author</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] &quot;By Olivia Brinkman Schooler&quot; &quot;By Jun Kwon&quot;                
  [3] &quot;By Elena Gutierrez&quot;          &quot;By Luca Davis&quot;              
@@ -1882,10 +1889,10 @@ Somewhere in between?</p>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a aria-label="1"></a>author <span class="ot">&lt;-</span> author <span class="sc">|&gt;</span></span>
-<span id="cb77-2"><a aria-label="2"></a>  <span class="fu">str_replace</span>(<span class="st">&quot;By &quot;</span>, <span class="st">&quot;&quot;</span>)</span>
-<span id="cb77-3"><a aria-label="3"></a></span>
-<span id="cb77-4"><a aria-label="4"></a>author</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a aria-label="1"></a>author <span class="ot">&lt;-</span> author <span class="sc">|&gt;</span></span>
+<span id="cb79-2"><a aria-label="2"></a>  <span class="fu">str_replace</span>(<span class="st">&quot;By &quot;</span>, <span class="st">&quot;&quot;</span>)</span>
+<span id="cb79-3"><a aria-label="3"></a></span>
+<span id="cb79-4"><a aria-label="4"></a>author</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] &quot;Olivia Brinkman Schooler&quot; &quot;Jun Kwon&quot;                
  [3] &quot;Elena Gutierrez&quot;          &quot;Luca Davis&quot;              
@@ -1898,10 +1905,10 @@ Somewhere in between?</p>
 <section id="scrape-date-and-save-as-date" class="slide level2">
 <h2>Scrape date and save as <code>date</code></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a aria-label="1"></a>date <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb79-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.published&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb79-3"><a aria-label="3"></a>  <span class="fu">html_text</span>()</span>
-<span id="cb79-4"><a aria-label="4"></a>date</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a aria-label="1"></a>date <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb81-2"><a aria-label="2"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.published&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb81-3"><a aria-label="3"></a>  <span class="fu">html_text</span>()</span>
+<span id="cb81-4"><a aria-label="4"></a>date</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] &quot;November 6, 2026 3:07 am&quot;  &quot;November 6, 2026 3:05 am&quot; 
  [3] &quot;November 6, 2026 1:54 am&quot;  &quot;November 6, 2026 12:58 am&quot;
@@ -1909,9 +1916,9 @@ Somewhere in between?</p>
  [7] &quot;October 29, 2026 2:32 am&quot;  &quot;October 29, 2026 2:02 am&quot; 
  [9] &quot;October 29, 2026 1:31 am&quot;  &quot;October 29, 2026 1:04 am&quot; </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a aria-label="1"></a>date <span class="ot">&lt;-</span> date <span class="sc">|&gt;</span></span>
-<span id="cb81-2"><a aria-label="2"></a>  lubridate<span class="sc">::</span><span class="fu">mdy_hm</span>(<span class="at">tz =</span> <span class="st">&quot;America/Los_Angeles&quot;</span>)</span>
-<span id="cb81-3"><a aria-label="3"></a>date</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a aria-label="1"></a>date <span class="ot">&lt;-</span> date <span class="sc">|&gt;</span></span>
+<span id="cb83-2"><a aria-label="2"></a>  lubridate<span class="sc">::</span><span class="fu">mdy_hm</span>(<span class="at">tz =</span> <span class="st">&quot;America/Los_Angeles&quot;</span>)</span>
+<span id="cb83-3"><a aria-label="3"></a>date</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] &quot;2026-11-06 03:07:00 PST&quot; &quot;2026-11-06 03:05:00 PST&quot;
  [3] &quot;2026-11-06 01:54:00 PST&quot; &quot;2026-11-06 00:58:00 PST&quot;
@@ -1924,13 +1931,13 @@ Somewhere in between?</p>
 <section id="create-a-new-data-frame" class="slide level2 smaller">
 <h2>Create a new data frame</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a aria-label="1"></a>tsl_opinion <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb83-2"><a aria-label="2"></a>  title,</span>
-<span id="cb83-3"><a aria-label="3"></a>  author,</span>
-<span id="cb83-4"><a aria-label="4"></a>  date</span>
-<span id="cb83-5"><a aria-label="5"></a>)</span>
-<span id="cb83-6"><a aria-label="6"></a></span>
-<span id="cb83-7"><a aria-label="7"></a>tsl_opinion</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a aria-label="1"></a>tsl_opinion <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb85-2"><a aria-label="2"></a>  title,</span>
+<span id="cb85-3"><a aria-label="3"></a>  author,</span>
+<span id="cb85-4"><a aria-label="4"></a>  date</span>
+<span id="cb85-5"><a aria-label="5"></a>)</span>
+<span id="cb85-6"><a aria-label="6"></a></span>
+<span id="cb85-7"><a aria-label="7"></a>tsl_opinion</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 3
   title                                     author date               
@@ -1948,43 +1955,43 @@ Somewhere in between?</p>
 <section id="opinion-titles" class="slide level2">
 <h2>Opinion titles</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a aria-label="1"></a>tsl_opinions <span class="ot">&lt;-</span> <span class="cf">function</span>(i) {</span>
-<span id="cb85-2"><a aria-label="2"></a>  tsl_page <span class="ot">&lt;-</span> rvest<span class="sc">::</span><span class="fu">read_html</span>(<span class="fu">paste0</span>(</span>
-<span id="cb85-3"><a aria-label="3"></a>    <span class="st">&quot;https://tsl.news/category/opinions/page/&quot;</span>,</span>
-<span id="cb85-4"><a aria-label="4"></a>    i</span>
-<span id="cb85-5"><a aria-label="5"></a>  ))</span>
-<span id="cb85-6"><a aria-label="6"></a></span>
-<span id="cb85-7"><a aria-label="7"></a>  title <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb85-8"><a aria-label="8"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;.entry-title a&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb85-9"><a aria-label="9"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
-<span id="cb85-10"><a aria-label="10"></a>    <span class="fu">str_remove</span>(<span class="st">&quot;OPINION: &quot;</span>)</span>
-<span id="cb85-11"><a aria-label="11"></a></span>
-<span id="cb85-12"><a aria-label="12"></a>  author <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb85-13"><a aria-label="13"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;span.author&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb85-14"><a aria-label="14"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
-<span id="cb85-15"><a aria-label="15"></a>    <span class="fu">tibble</span>() <span class="sc">|&gt;</span></span>
-<span id="cb85-16"><a aria-label="16"></a>    <span class="fu">set_names</span>(<span class="at">nm =</span> <span class="st">&quot;authors&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb85-17"><a aria-label="17"></a>    <span class="fu">mutate</span>(<span class="at">authors =</span> <span class="fu">str_replace</span>(authors, <span class="st">&quot;By &quot;</span>, <span class="st">&quot;&quot;</span>))</span>
-<span id="cb85-18"><a aria-label="18"></a></span>
-<span id="cb85-19"><a aria-label="19"></a>  date <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb85-20"><a aria-label="20"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;.published&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb85-21"><a aria-label="21"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
-<span id="cb85-22"><a aria-label="22"></a>    lubridate<span class="sc">::</span><span class="fu">mdy_hm</span>(<span class="at">tz =</span> <span class="st">&quot;America/Los_Angeles&quot;</span>)</span>
-<span id="cb85-23"><a aria-label="23"></a></span>
-<span id="cb85-24"><a aria-label="24"></a>  first_p <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
-<span id="cb85-25"><a aria-label="25"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;.entry-content p:nth-child(1)&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb85-26"><a aria-label="26"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
-<span id="cb85-27"><a aria-label="27"></a>    <span class="fu">tolower</span>()</span>
-<span id="cb85-28"><a aria-label="28"></a></span>
-<span id="cb85-29"><a aria-label="29"></a>  <span class="fu">tibble</span>(</span>
-<span id="cb85-30"><a aria-label="30"></a>    title,</span>
-<span id="cb85-31"><a aria-label="31"></a>    author,</span>
-<span id="cb85-32"><a aria-label="32"></a>    date,</span>
-<span id="cb85-33"><a aria-label="33"></a>    first_p</span>
-<span id="cb85-34"><a aria-label="34"></a>  )</span>
-<span id="cb85-35"><a aria-label="35"></a>}</span>
-<span id="cb85-36"><a aria-label="36"></a></span>
-<span id="cb85-37"><a aria-label="37"></a>tsl_opinion_titles <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>) <span class="sc">|&gt;</span> purrr<span class="sc">::</span><span class="fu">map</span>(tsl_opinions) <span class="sc">|&gt;</span> <span class="fu">list_rbind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a aria-label="1"></a>tsl_opinions <span class="ot">&lt;-</span> <span class="cf">function</span>(i) {</span>
+<span id="cb87-2"><a aria-label="2"></a>  tsl_page <span class="ot">&lt;-</span> rvest<span class="sc">::</span><span class="fu">read_html</span>(<span class="fu">paste0</span>(</span>
+<span id="cb87-3"><a aria-label="3"></a>    <span class="st">&quot;https://tsl.news/category/opinions/page/&quot;</span>,</span>
+<span id="cb87-4"><a aria-label="4"></a>    i</span>
+<span id="cb87-5"><a aria-label="5"></a>  ))</span>
+<span id="cb87-6"><a aria-label="6"></a></span>
+<span id="cb87-7"><a aria-label="7"></a>  title <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb87-8"><a aria-label="8"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;.entry-title a&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb87-9"><a aria-label="9"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
+<span id="cb87-10"><a aria-label="10"></a>    <span class="fu">str_remove</span>(<span class="st">&quot;OPINION: &quot;</span>)</span>
+<span id="cb87-11"><a aria-label="11"></a></span>
+<span id="cb87-12"><a aria-label="12"></a>  author <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb87-13"><a aria-label="13"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;span.author&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb87-14"><a aria-label="14"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
+<span id="cb87-15"><a aria-label="15"></a>    <span class="fu">tibble</span>() <span class="sc">|&gt;</span></span>
+<span id="cb87-16"><a aria-label="16"></a>    <span class="fu">set_names</span>(<span class="at">nm =</span> <span class="st">&quot;authors&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb87-17"><a aria-label="17"></a>    <span class="fu">mutate</span>(<span class="at">authors =</span> <span class="fu">str_replace</span>(authors, <span class="st">&quot;By &quot;</span>, <span class="st">&quot;&quot;</span>))</span>
+<span id="cb87-18"><a aria-label="18"></a></span>
+<span id="cb87-19"><a aria-label="19"></a>  date <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb87-20"><a aria-label="20"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;.published&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb87-21"><a aria-label="21"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
+<span id="cb87-22"><a aria-label="22"></a>    lubridate<span class="sc">::</span><span class="fu">mdy_hm</span>(<span class="at">tz =</span> <span class="st">&quot;America/Los_Angeles&quot;</span>)</span>
+<span id="cb87-23"><a aria-label="23"></a></span>
+<span id="cb87-24"><a aria-label="24"></a>  first_p <span class="ot">&lt;-</span> tsl_page <span class="sc">|&gt;</span></span>
+<span id="cb87-25"><a aria-label="25"></a>    <span class="fu">html_elements</span>(<span class="st">&quot;.entry-content p:nth-child(1)&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb87-26"><a aria-label="26"></a>    <span class="fu">html_text</span>() <span class="sc">|&gt;</span></span>
+<span id="cb87-27"><a aria-label="27"></a>    <span class="fu">tolower</span>()</span>
+<span id="cb87-28"><a aria-label="28"></a></span>
+<span id="cb87-29"><a aria-label="29"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb87-30"><a aria-label="30"></a>    title,</span>
+<span id="cb87-31"><a aria-label="31"></a>    author,</span>
+<span id="cb87-32"><a aria-label="32"></a>    date,</span>
+<span id="cb87-33"><a aria-label="33"></a>    first_p</span>
+<span id="cb87-34"><a aria-label="34"></a>  )</span>
+<span id="cb87-35"><a aria-label="35"></a>}</span>
+<span id="cb87-36"><a aria-label="36"></a></span>
+<span id="cb87-37"><a aria-label="37"></a>tsl_opinion_titles <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>) <span class="sc">|&gt;</span> purrr<span class="sc">::</span><span class="fu">map</span>(tsl_opinions) <span class="sc">|&gt;</span> <span class="fu">list_rbind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section>
 <section>
@@ -1995,14 +2002,14 @@ Somewhere in between?</p>
 <section id="check-if-you-are-allowed" class="slide level2">
 <h2>Check if you are allowed!</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a aria-label="1"></a><span class="fu">library</span>(robotstxt)</span>
-<span id="cb86-2"><a aria-label="2"></a><span class="fu">paths_allowed</span>(<span class="st">&quot;https://tsl.news/category/opinions/&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a aria-label="1"></a><span class="fu">library</span>(robotstxt)</span>
+<span id="cb88-2"><a aria-label="2"></a><span class="fu">paths_allowed</span>(<span class="st">&quot;https://tsl.news/category/opinions/&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a aria-label="1"></a><span class="fu">paths_allowed</span>(<span class="st">&quot;http://www.facebook.com&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a aria-label="1"></a><span class="fu">paths_allowed</span>(<span class="st">&quot;http://www.facebook.com&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
