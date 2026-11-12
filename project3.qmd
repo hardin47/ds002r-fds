@@ -36,6 +36,7 @@ Logistics:
 - include a few sentences describing each of your plots or tables.  That is, tell the reader what they see when they look at the plot. Your narrative description should be in the text part of the qmd file, not as a comment in an R chunk.
 - if you used data, include the source of the data. Include both where **you** got the data (e.g., the TidyTuesday URL) and also the original provenance of the information (i.e., more than just the URL).
 - if you are working with a (local) copy of the .csv file (as opposed to, for example, a link to the dataset on TidyTuesday's GitHub site), then the .csv file should live in **your** GitHub repository for your website. And you should read the data in from that local copy. That is, the dataset should not live in your Downloads on your computer.
+- you may not repeat any of the simulations that were already completed in the class notes.
 
 
 
