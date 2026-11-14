@@ -123,7 +123,7 @@ schedule <- tribble(
   "Week 12 <br> 11.16.26",
   'SQL',
   '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/04-sql-in-R.html" target = "_blank">SQL</a> <br> {{< fa desktop >}} <a href="" target = "_blank">SQL DBMS</a> <br> {{< fa desktop >}} <a href="" target = "_blank">SQL statements</a>',
-  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.8.26',
+  '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.25.26',
   ' ',
 
   "Week 13 <br> 11.23.26",

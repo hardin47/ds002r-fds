@@ -5,6 +5,7 @@ description: |
 format: html
 ---
 
+## ADD: a readme to the GitHub repo for your website
 
 The plan for project 6 is to update your website (and projects within) so that it puts your best foot forward for anyone who might be looking at it. That is, you should remove all of the information about the class and make it a website about you and your work more generally.
 
