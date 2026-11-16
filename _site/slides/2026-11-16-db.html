@@ -1065,7 +1065,7 @@ margin-right: 0; }
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Databases and <strong>dbplyr</strong> and <strong>SQL</strong>, oh my!</h1>
-  <p class="subtitle">November 10, 2025</p>
+  <p class="subtitle">November 16, 2026</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1076,8 +1076,8 @@ Jo Hardin
 </div>
 
 </section>
-<section id="agenda-111025" class="title-slide slide level1 center scrollable">
-<h1>Agenda 11/10/25</h1>
+<section id="agenda-111626" class="title-slide slide level1 center scrollable">
+<h1>Agenda 11/16/26</h1>
 <ol type="1">
 <li>Databases</li>
 <li>SQL connections</li>
@@ -1181,7 +1181,7 @@ Jo Hardin
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a><span class="fu">head</span>(carriers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># Source:   SQL [?? x 2]
+<pre><code># A query:  ?? x 2
 # Database: mysql  [mdsr_public@mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com:3306/airlines]
   carrier name                         
   &lt;chr&gt;   &lt;chr&gt;                        
@@ -1227,7 +1227,7 @@ Jo Hardin
 <span id="cb12-2"><a aria-label="2"></a>  <span class="fu">object.size</span>() <span class="sc">|&gt;</span></span>
 <span id="cb12-3"><a aria-label="3"></a>  <span class="fu">print</span>(<span class="at">units =</span> <span class="st">&quot;Kb&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>5.3 Kb</code></pre>
+<pre><code>7.4 Kb</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-label="1"></a>carriers_tibble <span class="sc">|&gt;</span></span>
 <span id="cb14-2"><a aria-label="2"></a>  <span class="fu">object.size</span>() <span class="sc">|&gt;</span></span>
@@ -1279,7 +1279,7 @@ Jo Hardin
 <span id="cb19-3"><a aria-label="3"></a></span>
 <span id="cb19-4"><a aria-label="4"></a>yrs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># Source:   SQL [?? x 2]
+<pre><code># A query:  ?? x 2
 # Database: mysql  [mdsr_public@mdsr.crcbo51tmesf.us-east-2.rds.amazonaws.com:3306/airlines]
   min_year max_year
      &lt;int&gt;    &lt;int&gt;
@@ -1315,7 +1315,7 @@ FROM `flights`</code></pre>
 <span id="cb23-8"><a aria-label="8"></a>dplyr<span class="sc">::</span><span class="fu">show_query</span>(la_bos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;SQL&gt;
-SELECT `flights`.*
+SELECT *
 FROM `flights`
 WHERE (`year` = 2015.0 AND ((`origin` = &#39;LAX&#39; AND `dest` = &#39;BOS&#39;) OR (`origin` = &#39;BOS&#39; AND `dest` = &#39;LAX&#39;)))</code></pre>
 </div>
@@ -1330,7 +1330,7 @@ WHERE (`year` = 2015.0 AND ((`origin` = &#39;LAX&#39; AND `dest` = &#39;BOS&#39;
 <span id="cb25-4"><a aria-label="4"></a>dplyr<span class="sc">::</span><span class="fu">show_query</span>(flights_head)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;SQL&gt;
-SELECT `flights`.*
+SELECT *
 FROM `flights`
 LIMIT 8</code></pre>
 </div>
@@ -1716,20 +1716,25 @@ ORDER BY `num_flights`</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a aria-label="1"></a><span class="fu">dbDisconnect</span>(con_air, <span class="at">shutdown =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<!--
+# Using **SQL** in **DBeaver**
+
+(we won't use **DBeaver** but info is here, FYI)
+
+* **DBeaver** is a free **SQL** client that supports **MySQL**.
+
+* A "client" means that the software is just for **SQL** (and not for running models or making visualizations, like **R**).
+
+* writing **SQL** code in **R** has some benefits (e.g., piping results tables into **ggplot2** for visualizations).
+
+* using a **SQL** client that is designed for **SQL** queries has benefits as well.  
+
+* to use **DBeaver**, <a href = "https://dbeaver.io/download/" target = "_blank">download the client</a> onto your computer and open it from your Applications.
+
+-->
+
+
 </section></section>
-<section id="using-sql-in-dbeaver" class="title-slide slide level1 center">
-<h1>Using <strong>SQL</strong> in <strong>DBeaver</strong></h1>
-<p>(we won’t use <strong>DBeaver</strong> but info is here, FYI)</p>
-<ul>
-<li><p><strong>DBeaver</strong> is a free <strong>SQL</strong> client that supports <strong>MySQL</strong>.</p></li>
-<li><p>A “client” means that the software is just for <strong>SQL</strong> (and not for running models or making visualizations, like <strong>R</strong>).</p></li>
-<li><p>writing <strong>SQL</strong> code in <strong>R</strong> has some benefits (e.g., piping results tables into <strong>ggplot2</strong> for visualizations).</p></li>
-<li><p>using a <strong>SQL</strong> client that is designed for <strong>SQL</strong> queries has benefits as well.</p></li>
-<li><p>to use <strong>DBeaver</strong>, <a href="https://dbeaver.io/download/" target="_blank">download the client</a> onto your computer and open it from your Applications.</p></li>
-</ul>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

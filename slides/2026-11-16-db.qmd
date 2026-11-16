@@ -1,7 +1,7 @@
 ---
 title: Databases and **dbplyr** and **SQL**, oh my!
 author: "Jo Hardin"
-subtitle: "November 10, 2025"
+subtitle: "November 16, 2026"
 format: 
   revealjs:
     incremental: false
@@ -27,7 +27,7 @@ fontawesome::fa_html_dependency()
 options(pillar.width = 60)
 ```
 
-# Agenda  11/10/25
+# Agenda  11/16/26
 
 1. Databases
 2. SQL connections
@@ -312,7 +312,7 @@ Always a good idea to terminate the **SQL** connection when you are done with it
 dbDisconnect(con_air, shutdown = TRUE)
 ```
 
-
+<!--
 # Using **SQL** in **DBeaver**
 
 (we won't use **DBeaver** but info is here, FYI)
@@ -327,4 +327,4 @@ dbDisconnect(con_air, shutdown = TRUE)
 
 * to use **DBeaver**, <a href = "https://dbeaver.io/download/" target = "_blank">download the client</a> onto your computer and open it from your Applications.
 
-
+-->

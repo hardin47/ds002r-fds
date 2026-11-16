@@ -213,6 +213,7 @@ If you choose to use AI for any of the assignments for this class, you should pa
 Submitting work created by a generative AI as your own in any assignment is considered plagiarism, and therefore an academic integrity violation, just the same as copying work from any other source.
 
 **Attribution**  
+
 * As with any other reference you might find, any directly copied text from generative AI should be in quotes and given a citation. Any summarized text from generative AI should be referenced.
 * Cite all AI tools when used or referred to in assigned work.  For example, see how to cite generative AI in <a href = "https://apastyle.apa.org/blog/how-to-cite-chatgpt" target = "_blank">APA</a>, <a href = "https://style.mla.org/citing-generative-ai/" target = "_blank">MLA</a>, or <a href = "https://www.chicagomanualofstyle.org/qanda/data/faq/topics/Documentation/faq0422.html" target = "_blank">Chicago</a> styles. 
 

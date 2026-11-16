@@ -122,7 +122,7 @@ schedule <- tribble(
 
   "Week 12 <br> 11.16.26",
   'SQL',
-  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/04-sql-in-R.html" target = "_blank">SQL</a> <br> {{< fa desktop >}} <a href="" target = "_blank">SQL DBMS</a> <br> {{< fa desktop >}} <a href="" target = "_blank">SQL statements</a>',
+  '{{< fa book-open >}} <a href="https://r4ds.hadley.nz/databases.html" target = "_blank">R4DS Databases</a> <br> {{< fa book-open >}} <a href="https://mdsr-book.github.io/mdsr3e/15-sqlI.html" target = "_blank">MDSR Database querying</a> <br> {{< fa book-open >}} <a href="https://st47s.com/DS002R/Notes/04-sql-in-R.html" target = "_blank">SQL</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-11-16-db.html" target = "_blank">SQL DBMS</a> <br> {{< fa desktop >}} <a href="https://ds002r-fds.netlify.app/slides/2026-11-18-clauses.html" target = "_blank">SQL statements</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws17_ds2_f26_sql1.pdf" target = "_blank">WS 17 - databases</a> <br> {{< fa pencil >}} <a href="https://ds002r-fds.netlify.app/handout/ws18_ds2_f26_sql2.pdf" target = "_blank">WS 18 - queries</a>',
   '<i class="fa-solid fa-chart-column"></i> <a href="https://ds002r-fds.netlify.app/project4">Project 4</a> - due 11.25.26',
   ' ',
 

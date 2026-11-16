@@ -1,7 +1,7 @@
 ---
 title: SQL statements
 author: "Jo Hardin"
-subtitle: "November 12, 2025"
+subtitle: "November 18, 2026"
 format: 
   revealjs:
     incremental: false
@@ -24,7 +24,7 @@ fontawesome::fa_html_dependency()
 options(pillar.width = 70)
 ```
 
-# Agenda  11/12/25
+# Agenda  11/18/26
 
 1. structure of **SQL** tables
 2. **SQL** keywords
