@@ -34,6 +34,12 @@ options(pillar.width = 60)
 3. SQL in Quarto (3 ways)
 
 
+## Data Acquisition
+
+```{r, out.width = "800px", echo=FALSE, fig.cap = "Based on [https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories](https://www.effectivedatastorytelling.com/post/a-deeper-dive-into-lego-bricks-and-data-stories), original source: [https://www.linkedin.com/learning/instructors/bill-shander](https://www.linkedin.com/learning/instructors/bill-shander)"}
+knitr::include_graphics("../images/data_lego2.png")
+```
+
 # **SQL**:\n Structured Query Language
 
 ## What is a database?
