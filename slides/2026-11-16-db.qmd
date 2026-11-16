@@ -168,14 +168,6 @@ carriers_tibble |>
 
 
 
-## What is **SQL**?
-
-* **SQL** is a programming language for working with relational databases.
-* **SQL** has been around since the 1970s, but has, unfortunately, many different dialects.
-* To connect to the **mdsr** database (via **R**), use **MySQL**.
-
-
-
 # Using **SQL** in Quarto
 
 We will write **SQL** code in three distinct ways:
