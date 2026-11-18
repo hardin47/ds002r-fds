@@ -396,7 +396,7 @@
     "href": "slides/2026-11-18-clauses.html#select-from",
     "title": "SQL statements",
     "section": "SELECT … FROM",
-    "text": "SELECT … FROM\n\nstart with a SELECT, include a corresponding FROM\ncolumns may be specified or * returns every column\n\nThe shortest SQL query is the following SELECT clause. Do not run this clause!!! The ca_los_angeles_2020_04_01 table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.\n\nDO\nNOT\nRUN:SELECT * FROM\nca_los_angeles_2020_04_01"
+    "text": "SELECT … FROM\n\nstart with a SELECT, include a corresponding FROM\ncolumns may be specified or * returns every column\n\nThe shortest SQL query is the following SELECT clause. Do not run this clause!!! The ca_los_angeles_2020_04_01 table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.\n\nDO NOT RUN:\n\nSELECT * \nFROM ca_los_angeles_2020_04_01"
   },
   {
     "objectID": "slides/2026-11-18-clauses.html#select-from-1",
@@ -627,7 +627,7 @@
     "href": "slides/2026-11-18-clauses.html#saving-sql-queries-as-r-objects",
     "title": "SQL statements",
     "section": "Saving SQL queries as R objects",
-    "text": "Saving SQL queries as R objects\nIf you are working in R to run SQL queries, you may want to use the query output for further analysis or visualizations.\n\nuse #| output.var: \"name_of_variable\" inside the {sql} chunk.\nname_of_variable will then be available to be used in the R environment.\n\n\n```{sql}\n--| connection: con_traffic\n--| output.var: \"new_table\"\n\nSELECT *, DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 1000;\n```"
+    "text": "Saving SQL queries as R objects\nIf you are working in R to run SQL queries, you may want to use the query output for further analysis or visualizations.\n\nuse --| output.var: \"name_of_variable\" inside the {sql} chunk.\nname_of_variable will then be available to be used in the R environment.\n\n\n```{sql}\n--| connection: con_traffic\n--| output.var: \"new_table\"\n\nSELECT *, DAYNAME(date) AS wday\nFROM la_new_orleans_2020_04_01\nLIMIT 0, 1000;\n```"
   },
   {
     "objectID": "slides/2026-11-18-clauses.html#saving-sql-queries-as-r-objects-1",

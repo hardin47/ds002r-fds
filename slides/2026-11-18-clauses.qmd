@@ -145,10 +145,10 @@ The shortest **SQL** query is the following `SELECT` clause.  Do not run this cl
 ```{r}
 #| eval: false
 
-DO
-NOT
-RUN:SELECT * FROM
-ca_los_angeles_2020_04_01
+DO NOT RUN:
+
+SELECT * 
+FROM ca_los_angeles_2020_04_01
 ```
 
 ## SELECT ... FROM {.scrollable}
@@ -696,7 +696,7 @@ There is a lot here. I'm not sure it's worth teaching at this early pass. But ma
 
 If you are working in **R** to run **SQL** queries, you may want to use the query output for further analysis or visualizations. 
 
-* use `#| output.var: "name_of_variable"` inside the `{sql}` chunk. 
+* use `--| output.var: "name_of_variable"` inside the `{sql}` chunk. 
 * `name_of_variable` will then be available to be used in the R environment.
 
 

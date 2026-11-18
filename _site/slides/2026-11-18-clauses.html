@@ -1473,10 +1473,10 @@ Jo Hardin
 </ul>
 <p>The shortest <strong>SQL</strong> query is the following <code>SELECT</code> clause. Do not run this clause!!! The <code>ca_los_angeles_2020_04_01</code> table has 5 million rows, and we do not want to look at them (print to screen) simultaneously.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>DO</span>
-<span id="cb5-2"><a aria-label="2"></a>NOT</span>
-<span id="cb5-3"><a aria-label="3"></a>RUN<span class="sc">:</span>SELECT <span class="sc">*</span> FROM</span>
-<span id="cb5-4"><a aria-label="4"></a>ca_los_angeles_2020_04_01</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>DO NOT RUN<span class="sc">:</span></span>
+<span id="cb5-2"><a aria-label="2"></a></span>
+<span id="cb5-3"><a aria-label="3"></a>SELECT <span class="sc">*</span> </span>
+<span id="cb5-4"><a aria-label="4"></a>FROM ca_los_angeles_2020_04_01</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="select-from-1" class="slide level2 scrollable">
@@ -4018,7 +4018,7 @@ There is a lot here. I'm not sure it's worth teaching at this early pass. But ma
 <h2>Saving <strong>SQL</strong> queries as <strong>R</strong> objects</h2>
 <p>If you are working in <strong>R</strong> to run <strong>SQL</strong> queries, you may want to use the query output for further analysis or visualizations.</p>
 <ul>
-<li>use <code>#| output.var: &quot;name_of_variable&quot;</code> inside the <code>{sql}</code> chunk.</li>
+<li>use <code>--| output.var: &quot;name_of_variable&quot;</code> inside the <code>{sql}</code> chunk.</li>
 <li><code>name_of_variable</code> will then be available to be used in the R environment.</li>
 </ul>
 <div class="cell" data-output.var="new_table">
