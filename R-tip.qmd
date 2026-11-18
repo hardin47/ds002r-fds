@@ -131,7 +131,12 @@ schedule <- tribble(
   'Tip 22', 
   'right click on a function, peek', 
   'will provide the function definition',
-  'works best for a function you wrote'
+  'works best for a function you wrote',
+
+  'Tip 23', 
+  'turn (back) on autocomplete', 
+  'cntrl + space',
+  'both Windows and Mac'
 
 )
 ```
