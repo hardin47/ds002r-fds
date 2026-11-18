@@ -2754,11 +2754,11 @@ knitr::include_graphics("images/GAheatmap2.jpeg")
 ---
 
 (@) Which keyword selects values within a range?[^112]
-    (a) `BEWTEEN`
+    (a) `BETWEEN`
     (b) `WITHIN`
     (c) `RANGE`
 
-[^112]: a. `BEWTEEN`
+[^112]: a. `BETWEEN`
 
 ---
 
