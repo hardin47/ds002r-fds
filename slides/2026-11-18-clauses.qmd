@@ -104,8 +104,9 @@ DESCRIBE ca_los_angeles_2020_04_01;
 
 # **SQL** bits
 
-* A **SQL** *query* is a **SQL** *statement* that typically starts in `SELECT` and ends in `;`
-* **SQL** *keywords* are like data verbs in the **tidyverse**
+* A **SQL** *statement* is any complete **SQL** command.
+* A **SQL** *query* is a special **SQL** *statement* that asks for data. Typically, it starts in `SELECT` and ends in `;`.
+* **SQL** *keywords* are like data verbs in the **tidyverse**.
 * A **SQL** *clause* is the keyword + relevant information. E.g., `FROM ca_los_angeles_2020_04_01` or `WHERE search_conducted = 1 AND vehicle_make = "Subaru"`
 * Exactly one **SQL** *statement* can be sent to the remote database in a **SQL** chunk.
 
